@@ -4,7 +4,7 @@ defmodule GoogleAds.MixProject do
   def project do
     [
       app: :google_ads,
-      version: "0.1.0",
+      version: "0.2.0",
       elixir: "~> 1.9",
       start_permanent: Mix.env() == :prod,
       deps: deps()
@@ -21,7 +21,7 @@ defmodule GoogleAds.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:protobuf, "~> 0.6.2"},
+      {:protobuf, "~> 0.7.1"},
       {:google_protos, "~> 0.1"},
       {:cowboy,
        git: "https://github.com/elixir-grpc/cowboy.git", tag: "grpc-2.6.3", override: true},
