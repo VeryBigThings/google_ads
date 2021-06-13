@@ -28,7 +28,7 @@ defmodule Google.Ads.Googleads.V8.Resources.ClickView do
     :keyword_info
   ]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :gclid, 8, optional: true, type: :string
   field :area_of_interest, 3, required: true, type: Google.Ads.Googleads.V8.Common.ClickLocation
 

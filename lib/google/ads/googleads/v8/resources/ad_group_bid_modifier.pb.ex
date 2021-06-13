@@ -24,7 +24,7 @@ defmodule Google.Ads.Googleads.V8.Resources.AdGroupBidModifier do
   ]
 
   oneof :criterion, 0
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :ad_group, 13, optional: true, type: :string
   field :criterion_id, 14, optional: true, type: :int64
   field :bid_modifier, 15, optional: true, type: :double

@@ -22,7 +22,7 @@ defmodule Google.Ads.Googleads.V8.Resources.PaymentsAccount do
     :paying_manager_customer
   ]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :payments_account_id, 8, optional: true, type: :string
   field :name, 9, optional: true, type: :string
   field :currency_code, 10, optional: true, type: :string

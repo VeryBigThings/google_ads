@@ -49,7 +49,7 @@ defmodule Google.Ads.Googleads.V8.Resources.AccountBudgetProposal do
   oneof :approved_end_time, 2
   oneof :proposed_spending_limit, 3
   oneof :approved_spending_limit, 4
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :id, 25, optional: true, type: :int64
   field :billing_setup, 26, optional: true, type: :string
   field :account_budget, 27, optional: true, type: :string

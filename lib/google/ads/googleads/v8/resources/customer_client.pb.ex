@@ -30,7 +30,7 @@ defmodule Google.Ads.Googleads.V8.Resources.CustomerClient do
     :applied_labels
   ]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :client_customer, 12, optional: true, type: :string
   field :hidden, 13, optional: true, type: :bool
   field :level, 14, optional: true, type: :int64

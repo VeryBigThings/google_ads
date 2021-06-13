@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Resources.MerchantCenterLink do
 
   defstruct [:resource_name, :id, :merchant_center_account_name, :status]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :id, 6, optional: true, type: :int64
   field :merchant_center_account_name, 7, optional: true, type: :string
 

@@ -25,7 +25,7 @@ defmodule Google.Ads.Googleads.V8.Resources.KeywordPlanCampaign do
     :geo_targets
   ]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :keyword_plan, 9, optional: true, type: :string
   field :id, 10, optional: true, type: :int64
   field :name, 11, optional: true, type: :string

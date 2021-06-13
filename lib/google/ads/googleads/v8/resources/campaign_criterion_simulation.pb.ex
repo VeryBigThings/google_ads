@@ -26,7 +26,7 @@ defmodule Google.Ads.Googleads.V8.Resources.CampaignCriterionSimulation do
   ]
 
   oneof :point_list, 0
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :campaign_id, 9, optional: true, type: :int64
   field :criterion_id, 10, optional: true, type: :int64
 

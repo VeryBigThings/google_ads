@@ -14,7 +14,7 @@ defmodule Google.Ads.Googleads.V8.Resources.CustomInterest do
 
   defstruct [:resource_name, :id, :status, :name, :type, :description, :members]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :id, 8, optional: true, type: :int64
 
   field :status, 3,

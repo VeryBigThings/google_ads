@@ -98,7 +98,7 @@ defmodule Google.Ads.Googleads.V8.Resources.Invoice do
     :account_budget_summaries
   ]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :id, 25, optional: true, type: :string
 
   field :type, 3,

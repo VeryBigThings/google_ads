@@ -54,7 +54,7 @@ defmodule Google.Ads.Googleads.V8.Resources.UserList do
   ]
 
   oneof :user_list, 0
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :id, 25, optional: true, type: :int64
   field :read_only, 26, optional: true, type: :bool
   field :name, 27, optional: true, type: :string

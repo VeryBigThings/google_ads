@@ -9,6 +9,6 @@ defmodule Google.Ads.Googleads.V8.Resources.LandingPageView do
 
   defstruct [:resource_name, :unexpanded_final_url]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :unexpanded_final_url, 3, optional: true, type: :string
 end

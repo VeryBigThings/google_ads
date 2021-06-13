@@ -10,7 +10,7 @@ defmodule Google.Ads.Googleads.V8.Resources.CampaignLabel do
 
   defstruct [:resource_name, :campaign, :label]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :campaign, 4, optional: true, type: :string
   field :label, 5, optional: true, type: :string
 end

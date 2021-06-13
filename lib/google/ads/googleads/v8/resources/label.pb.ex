@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Resources.Label do
 
   defstruct [:resource_name, :id, :name, :status, :text_label]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :id, 6, optional: true, type: :int64
   field :name, 7, optional: true, type: :string
 

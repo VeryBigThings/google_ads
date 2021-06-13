@@ -29,7 +29,7 @@ defmodule Google.Ads.Googleads.V8.Resources.FeedItem do
     :policy_infos
   ]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :feed, 11, optional: true, type: :string
   field :id, 12, optional: true, type: :int64
   field :start_date_time, 13, optional: true, type: :string

@@ -22,7 +22,7 @@ defmodule Google.Ads.Googleads.V8.Resources.FeedItemTarget do
   ]
 
   oneof :target, 0
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :feed_item, 12, optional: true, type: :string
 
   field :feed_item_target_type, 3,

@@ -24,7 +24,7 @@ defmodule Google.Ads.Googleads.V8.Resources.CampaignDraft do
     :long_running_operation
   ]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :draft_id, 9, optional: true, type: :int64
   field :base_campaign, 10, optional: true, type: :string
   field :name, 11, optional: true, type: :string

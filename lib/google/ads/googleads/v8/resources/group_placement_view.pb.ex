@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Resources.GroupPlacementView do
 
   defstruct [:resource_name, :placement, :display_name, :target_url, :placement_type]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :placement, 6, optional: true, type: :string
   field :display_name, 7, optional: true, type: :string
   field :target_url, 8, optional: true, type: :string

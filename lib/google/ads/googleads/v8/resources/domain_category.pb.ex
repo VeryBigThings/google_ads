@@ -26,7 +26,7 @@ defmodule Google.Ads.Googleads.V8.Resources.DomainCategory do
     :recommended_cpc_bid_micros
   ]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :campaign, 10, optional: true, type: :string
   field :category, 11, optional: true, type: :string
   field :language_code, 12, optional: true, type: :string

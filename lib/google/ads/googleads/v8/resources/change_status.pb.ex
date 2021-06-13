@@ -38,7 +38,7 @@ defmodule Google.Ads.Googleads.V8.Resources.ChangeStatus do
     :ad_group_bid_modifier
   ]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :last_change_date_time, 24, optional: true, type: :string
 
   field :resource_type, 4,

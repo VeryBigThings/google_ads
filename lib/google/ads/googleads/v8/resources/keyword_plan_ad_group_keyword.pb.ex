@@ -22,7 +22,7 @@ defmodule Google.Ads.Googleads.V8.Resources.KeywordPlanAdGroupKeyword do
     :negative
   ]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :keyword_plan_ad_group, 8, optional: true, type: :string
   field :id, 9, optional: true, type: :int64
   field :text, 10, optional: true, type: :string

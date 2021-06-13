@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Resources.CurrencyConstant do
 
   defstruct [:resource_name, :code, :name, :symbol, :billable_unit_micros]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :code, 6, optional: true, type: :string
   field :name, 7, optional: true, type: :string
   field :symbol, 8, optional: true, type: :string

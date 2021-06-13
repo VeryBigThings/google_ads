@@ -69,7 +69,7 @@ defmodule Google.Ads.Googleads.V8.Resources.AdGroup do
     :excluded_parent_asset_field_types
   ]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :id, 34, optional: true, type: :int64
   field :name, 35, optional: true, type: :string
 

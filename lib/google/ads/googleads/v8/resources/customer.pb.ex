@@ -48,7 +48,7 @@ defmodule Google.Ads.Googleads.V8.Resources.Customer do
     :optimization_score_weight
   ]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :id, 19, optional: true, type: :int64
   field :descriptive_name, 20, optional: true, type: :string
   field :currency_code, 21, optional: true, type: :string

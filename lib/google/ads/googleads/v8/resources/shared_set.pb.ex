@@ -14,7 +14,7 @@ defmodule Google.Ads.Googleads.V8.Resources.SharedSet do
 
   defstruct [:resource_name, :id, :type, :name, :status, :member_count, :reference_count]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :id, 8, optional: true, type: :int64
 
   field :type, 3,

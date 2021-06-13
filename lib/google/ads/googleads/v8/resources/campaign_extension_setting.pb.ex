@@ -13,7 +13,7 @@ defmodule Google.Ads.Googleads.V8.Resources.CampaignExtensionSetting do
 
   defstruct [:resource_name, :extension_type, :campaign, :extension_feed_items, :device]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
 
   field :extension_type, 2,
     optional: true,

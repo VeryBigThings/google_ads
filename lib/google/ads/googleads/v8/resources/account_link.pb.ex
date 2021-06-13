@@ -13,7 +13,7 @@ defmodule Google.Ads.Googleads.V8.Resources.AccountLink do
   defstruct [:linked_account, :resource_name, :account_link_id, :status, :type]
 
   oneof :linked_account, 0
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :account_link_id, 8, optional: true, type: :int64
 
   field :status, 3,

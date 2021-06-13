@@ -15,7 +15,7 @@ defmodule Google.Ads.Googleads.V8.Resources.AdGroupFeed do
 
   defstruct [:resource_name, :feed, :ad_group, :placeholder_types, :matching_function, :status]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :feed, 7, optional: true, type: :string
   field :ad_group, 8, optional: true, type: :string
 

@@ -24,7 +24,7 @@ defmodule Google.Ads.Googleads.V8.Resources.AdGroupSimulation do
   ]
 
   oneof :point_list, 0
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :ad_group_id, 12, optional: true, type: :int64
 
   field :type, 3,

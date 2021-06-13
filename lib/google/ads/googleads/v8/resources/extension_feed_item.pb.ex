@@ -34,7 +34,7 @@ defmodule Google.Ads.Googleads.V8.Resources.ExtensionFeedItem do
 
   oneof :extension, 0
   oneof :serving_resource_targeting, 1
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :id, 25, optional: true, type: :int64
 
   field :extension_type, 13,

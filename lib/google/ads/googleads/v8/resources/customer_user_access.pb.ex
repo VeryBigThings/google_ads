@@ -20,7 +20,7 @@ defmodule Google.Ads.Googleads.V8.Resources.CustomerUserAccess do
     :inviter_user_email_address
   ]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :user_id, 2, required: true, type: :int64
   field :email_address, 3, optional: true, type: :string
 

@@ -43,7 +43,7 @@ defmodule Google.Ads.Googleads.V8.Resources.CampaignBudget do
     :type
   ]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :id, 19, optional: true, type: :int64
   field :name, 20, optional: true, type: :string
   field :amount_micros, 21, optional: true, type: :int64

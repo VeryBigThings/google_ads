@@ -23,7 +23,7 @@ defmodule Google.Ads.Googleads.V8.Resources.AdGroupAdAssetView do
     :performance_label
   ]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :ad_group_ad, 9, optional: true, type: :string
   field :asset, 10, optional: true, type: :string
 

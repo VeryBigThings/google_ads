@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Resources.CustomerClientLink do
 
   defstruct [:resource_name, :client_customer, :manager_link_id, :status, :hidden]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :client_customer, 7, optional: true, type: :string
   field :manager_link_id, 8, optional: true, type: :int64
 

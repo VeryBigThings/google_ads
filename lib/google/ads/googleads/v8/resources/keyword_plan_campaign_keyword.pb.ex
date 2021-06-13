@@ -13,7 +13,7 @@ defmodule Google.Ads.Googleads.V8.Resources.KeywordPlanCampaignKeyword do
 
   defstruct [:resource_name, :keyword_plan_campaign, :id, :text, :match_type, :negative]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :keyword_plan_campaign, 8, optional: true, type: :string
   field :id, 9, optional: true, type: :int64
   field :text, 10, optional: true, type: :string

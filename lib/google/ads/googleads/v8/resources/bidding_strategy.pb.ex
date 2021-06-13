@@ -30,7 +30,7 @@ defmodule Google.Ads.Googleads.V8.Resources.BiddingStrategy do
   ]
 
   oneof :scheme, 0
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :id, 16, optional: true, type: :int64
   field :name, 17, optional: true, type: :string
 

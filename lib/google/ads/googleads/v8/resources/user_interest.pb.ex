@@ -23,7 +23,7 @@ defmodule Google.Ads.Googleads.V8.Resources.UserInterest do
     :availabilities
   ]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
 
   field :taxonomy_type, 2,
     required: true,

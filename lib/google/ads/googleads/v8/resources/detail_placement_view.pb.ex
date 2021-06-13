@@ -20,7 +20,7 @@ defmodule Google.Ads.Googleads.V8.Resources.DetailPlacementView do
     :placement_type
   ]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :placement, 7, optional: true, type: :string
   field :display_name, 8, optional: true, type: :string
   field :group_placement_target_url, 9, optional: true, type: :string

@@ -113,7 +113,7 @@ defmodule Google.Ads.Googleads.V8.Resources.AccessibleBiddingStrategy do
   ]
 
   oneof :scheme, 0
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :id, 2, required: true, type: :int64
   field :name, 3, required: true, type: :string
 

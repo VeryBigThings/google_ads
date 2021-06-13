@@ -353,7 +353,7 @@ defmodule Google.Ads.Googleads.V8.Resources.Recommendation do
   ]
 
   oneof :recommendation, 0
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
 
   field :type, 2,
     required: true,

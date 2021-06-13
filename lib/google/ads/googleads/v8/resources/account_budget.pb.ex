@@ -108,7 +108,7 @@ defmodule Google.Ads.Googleads.V8.Resources.AccountBudget do
   oneof :proposed_spending_limit, 2
   oneof :approved_spending_limit, 3
   oneof :adjusted_spending_limit, 4
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :id, 23, optional: true, type: :int64
   field :billing_setup, 24, optional: true, type: :string
 

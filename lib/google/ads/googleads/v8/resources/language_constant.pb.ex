@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Resources.LanguageConstant do
 
   defstruct [:resource_name, :id, :code, :name, :targetable]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :id, 6, optional: true, type: :int64
   field :code, 7, optional: true, type: :string
   field :name, 8, optional: true, type: :string

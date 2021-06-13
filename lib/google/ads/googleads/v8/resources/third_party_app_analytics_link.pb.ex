@@ -9,6 +9,6 @@ defmodule Google.Ads.Googleads.V8.Resources.ThirdPartyAppAnalyticsLink do
 
   defstruct [:resource_name, :shareable_link_id]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :shareable_link_id, 3, optional: true, type: :string
 end

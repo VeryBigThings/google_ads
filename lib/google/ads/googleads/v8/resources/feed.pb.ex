@@ -109,7 +109,7 @@ defmodule Google.Ads.Googleads.V8.Resources.Feed do
   ]
 
   oneof :system_feed_generation_data, 0
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :id, 11, optional: true, type: :int64
   field :name, 12, optional: true, type: :string
   field :attributes, 4, repeated: true, type: Google.Ads.Googleads.V8.Resources.FeedAttribute

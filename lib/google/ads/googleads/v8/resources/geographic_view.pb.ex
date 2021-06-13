@@ -10,7 +10,7 @@ defmodule Google.Ads.Googleads.V8.Resources.GeographicView do
 
   defstruct [:resource_name, :location_type, :country_criterion_id]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
 
   field :location_type, 3,
     required: true,

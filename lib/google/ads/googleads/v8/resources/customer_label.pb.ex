@@ -10,7 +10,7 @@ defmodule Google.Ads.Googleads.V8.Resources.CustomerLabel do
 
   defstruct [:resource_name, :customer, :label]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :customer, 4, optional: true, type: :string
   field :label, 5, optional: true, type: :string
 end

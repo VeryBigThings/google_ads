@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Resources.SearchTermView do
 
   defstruct [:resource_name, :search_term, :ad_group, :status]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :search_term, 5, optional: true, type: :string
   field :ad_group, 6, optional: true, type: :string
 

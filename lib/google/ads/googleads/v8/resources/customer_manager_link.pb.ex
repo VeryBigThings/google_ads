@@ -11,7 +11,7 @@ defmodule Google.Ads.Googleads.V8.Resources.CustomerManagerLink do
 
   defstruct [:resource_name, :manager_customer, :manager_link_id, :status]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :manager_customer, 6, optional: true, type: :string
   field :manager_link_id, 7, optional: true, type: :int64
 

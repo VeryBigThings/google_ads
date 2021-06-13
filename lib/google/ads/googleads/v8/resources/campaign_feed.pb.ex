@@ -15,7 +15,7 @@ defmodule Google.Ads.Googleads.V8.Resources.CampaignFeed do
 
   defstruct [:resource_name, :feed, :campaign, :placeholder_types, :matching_function, :status]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :feed, 7, optional: true, type: :string
   field :campaign, 8, optional: true, type: :string
 

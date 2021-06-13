@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Resources.CampaignAsset do
 
   defstruct [:resource_name, :campaign, :asset, :field_type, :status]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :campaign, 6, optional: true, type: :string
   field :asset, 7, optional: true, type: :string
 

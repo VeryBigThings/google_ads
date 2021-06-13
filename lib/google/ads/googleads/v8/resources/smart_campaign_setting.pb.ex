@@ -37,7 +37,7 @@ defmodule Google.Ads.Googleads.V8.Resources.SmartCampaignSetting do
   ]
 
   oneof :business_setting, 0
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :campaign, 2, required: true, type: :string
 
   field :phone_number, 3,

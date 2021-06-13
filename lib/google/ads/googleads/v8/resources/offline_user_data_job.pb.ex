@@ -18,7 +18,7 @@ defmodule Google.Ads.Googleads.V8.Resources.OfflineUserDataJob do
   defstruct [:metadata, :resource_name, :id, :external_id, :type, :status, :failure_reason]
 
   oneof :metadata, 0
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
   field :id, 9, optional: true, type: :int64
   field :external_id, 10, optional: true, type: :int64
 

@@ -14,7 +14,7 @@ defmodule Google.Ads.Googleads.V8.Resources.AdGroupAd do
 
   defstruct [:resource_name, :status, :ad_group, :ad, :policy_summary, :ad_strength, :labels]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, optional: true, type: :string
 
   field :status, 3,
     required: true,
