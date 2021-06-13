@@ -74,17 +74,17 @@ defmodule Google.Ads.Googleads.V8.Resources.AdGroup do
   field :name, 35, optional: true, type: :string
 
   field :status, 5,
-    required: true,
+    optional: true,
     type: Google.Ads.Googleads.V8.Enums.AdGroupStatusEnum.AdGroupStatus,
     enum: true
 
   field :type, 12,
-    required: true,
+    optional: true,
     type: Google.Ads.Googleads.V8.Enums.AdGroupTypeEnum.AdGroupType,
     enum: true
 
   field :ad_rotation_mode, 22,
-    required: true,
+    optional: true,
     type: Google.Ads.Googleads.V8.Enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode,
     enum: true
 
@@ -105,31 +105,31 @@ defmodule Google.Ads.Googleads.V8.Resources.AdGroup do
   field :percent_cpc_bid_micros, 45, optional: true, type: :int64
 
   field :explorer_auto_optimizer_setting, 21,
-    required: true,
+    optional: true,
     type: Google.Ads.Googleads.V8.Common.ExplorerAutoOptimizerSetting
 
   field :display_custom_bid_dimension, 23,
-    required: true,
+    optional: true,
     type: Google.Ads.Googleads.V8.Enums.TargetingDimensionEnum.TargetingDimension,
     enum: true
 
   field :final_url_suffix, 46, optional: true, type: :string
 
   field :targeting_setting, 25,
-    required: true,
+    optional: true,
     type: Google.Ads.Googleads.V8.Common.TargetingSetting
 
   field :effective_target_cpa_micros, 47, optional: true, type: :int64
 
   field :effective_target_cpa_source, 29,
-    required: true,
+    optional: true,
     type: Google.Ads.Googleads.V8.Enums.BiddingSourceEnum.BiddingSource,
     enum: true
 
   field :effective_target_roas, 48, optional: true, type: :double
 
   field :effective_target_roas_source, 32,
-    required: true,
+    optional: true,
     type: Google.Ads.Googleads.V8.Enums.BiddingSourceEnum.BiddingSource,
     enum: true
 
