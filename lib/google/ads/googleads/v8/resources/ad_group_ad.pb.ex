@@ -17,19 +17,19 @@ defmodule Google.Ads.Googleads.V8.Resources.AdGroupAd do
   field :resource_name, 1, optional: true, type: :string
 
   field :status, 3,
-    required: true,
+    optional: true,
     type: Google.Ads.Googleads.V8.Enums.AdGroupAdStatusEnum.AdGroupAdStatus,
     enum: true
 
   field :ad_group, 9, optional: true, type: :string
-  field :ad, 5, required: true, type: Google.Ads.Googleads.V8.Resources.Ad
+  field :ad, 5, optional: true, type: Google.Ads.Googleads.V8.Resources.Ad
 
   field :policy_summary, 6,
-    required: true,
+    optional: true,
     type: Google.Ads.Googleads.V8.Resources.AdGroupAdPolicySummary
 
   field :ad_strength, 7,
-    required: true,
+    optional: true,
     type: Google.Ads.Googleads.V8.Enums.AdStrengthEnum.AdStrength,
     enum: true
 
@@ -55,12 +55,12 @@ defmodule Google.Ads.Googleads.V8.Resources.AdGroupAdPolicySummary do
     type: Google.Ads.Googleads.V8.Common.PolicyTopicEntry
 
   field :review_status, 2,
-    required: true,
+    optional: true,
     type: Google.Ads.Googleads.V8.Enums.PolicyReviewStatusEnum.PolicyReviewStatus,
     enum: true
 
   field :approval_status, 3,
-    required: true,
+    optional: true,
     type: Google.Ads.Googleads.V8.Enums.PolicyApprovalStatusEnum.PolicyApprovalStatus,
     enum: true
 end
