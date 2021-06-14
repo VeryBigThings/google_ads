@@ -26,7 +26,7 @@ defmodule Google.Ads.Googleads.V8.Resources.UserInterest do
   field :resource_name, 1, optional: true, type: :string
 
   field :taxonomy_type, 2,
-    required: true,
+    optional: true,
     type: Google.Ads.Googleads.V8.Enums.UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType,
     enum: true
 
