@@ -1,6 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Services.GetAssetRequest do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           resource_name: String.t()
@@ -8,12 +8,12 @@ defmodule Google.Ads.Googleads.V8.Services.GetAssetRequest do
 
   defstruct [:resource_name]
 
-  field :resource_name, 1, type: :string
+  field :resource_name, 1, required: true, type: :string
 end
 
 defmodule Google.Ads.Googleads.V8.Services.MutateAssetsRequest do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           customer_id: String.t(),
@@ -26,20 +26,21 @@ defmodule Google.Ads.Googleads.V8.Services.MutateAssetsRequest do
 
   defstruct [:customer_id, :operations, :partial_failure, :response_content_type, :validate_only]
 
-  field :customer_id, 1, type: :string
+  field :customer_id, 1, required: true, type: :string
   field :operations, 2, repeated: true, type: Google.Ads.Googleads.V8.Services.AssetOperation
-  field :partial_failure, 5, type: :bool
+  field :partial_failure, 5, optional: true, type: :bool
 
   field :response_content_type, 3,
+    optional: true,
     type: Google.Ads.Googleads.V8.Enums.ResponseContentTypeEnum.ResponseContentType,
     enum: true
 
-  field :validate_only, 4, type: :bool
+  field :validate_only, 4, optional: true, type: :bool
 end
 
 defmodule Google.Ads.Googleads.V8.Services.AssetOperation do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           operation: {atom, any},
@@ -49,14 +50,14 @@ defmodule Google.Ads.Googleads.V8.Services.AssetOperation do
   defstruct [:operation, :update_mask]
 
   oneof :operation, 0
-  field :update_mask, 3, type: Google.Protobuf.FieldMask
-  field :create, 1, type: Google.Ads.Googleads.V8.Resources.Asset, oneof: 0
-  field :update, 2, type: Google.Ads.Googleads.V8.Resources.Asset, oneof: 0
+  field :update_mask, 3, optional: true, type: Google.Protobuf.FieldMask
+  field :create, 1, optional: true, type: Google.Ads.Googleads.V8.Resources.Asset, oneof: 0
+  field :update, 2, optional: true, type: Google.Ads.Googleads.V8.Resources.Asset, oneof: 0
 end
 
 defmodule Google.Ads.Googleads.V8.Services.MutateAssetsResponse do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           partial_failure_error: Google.Rpc.Status.t() | nil,
@@ -65,13 +66,13 @@ defmodule Google.Ads.Googleads.V8.Services.MutateAssetsResponse do
 
   defstruct [:partial_failure_error, :results]
 
-  field :partial_failure_error, 3, type: Google.Rpc.Status
+  field :partial_failure_error, 3, optional: true, type: Google.Rpc.Status
   field :results, 2, repeated: true, type: Google.Ads.Googleads.V8.Services.MutateAssetResult
 end
 
 defmodule Google.Ads.Googleads.V8.Services.MutateAssetResult do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           resource_name: String.t(),
@@ -80,8 +81,8 @@ defmodule Google.Ads.Googleads.V8.Services.MutateAssetResult do
 
   defstruct [:resource_name, :asset]
 
-  field :resource_name, 1, type: :string
-  field :asset, 2, type: Google.Ads.Googleads.V8.Resources.Asset
+  field :resource_name, 1, optional: true, type: :string
+  field :asset, 2, optional: true, type: Google.Ads.Googleads.V8.Resources.Asset
 end
 
 defmodule Google.Ads.Googleads.V8.Services.AssetService.Service do

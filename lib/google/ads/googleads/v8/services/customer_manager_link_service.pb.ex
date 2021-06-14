@@ -1,6 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Services.GetCustomerManagerLinkRequest do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           resource_name: String.t()
@@ -8,12 +8,12 @@ defmodule Google.Ads.Googleads.V8.Services.GetCustomerManagerLinkRequest do
 
   defstruct [:resource_name]
 
-  field :resource_name, 1, type: :string
+  field :resource_name, 1, required: true, type: :string
 end
 
 defmodule Google.Ads.Googleads.V8.Services.MutateCustomerManagerLinkRequest do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           customer_id: String.t(),
@@ -23,18 +23,18 @@ defmodule Google.Ads.Googleads.V8.Services.MutateCustomerManagerLinkRequest do
 
   defstruct [:customer_id, :operations, :validate_only]
 
-  field :customer_id, 1, type: :string
+  field :customer_id, 1, required: true, type: :string
 
   field :operations, 2,
     repeated: true,
     type: Google.Ads.Googleads.V8.Services.CustomerManagerLinkOperation
 
-  field :validate_only, 3, type: :bool
+  field :validate_only, 3, optional: true, type: :bool
 end
 
 defmodule Google.Ads.Googleads.V8.Services.MoveManagerLinkRequest do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           customer_id: String.t(),
@@ -45,15 +45,15 @@ defmodule Google.Ads.Googleads.V8.Services.MoveManagerLinkRequest do
 
   defstruct [:customer_id, :previous_customer_manager_link, :new_manager, :validate_only]
 
-  field :customer_id, 1, type: :string
-  field :previous_customer_manager_link, 2, type: :string
-  field :new_manager, 3, type: :string
-  field :validate_only, 4, type: :bool
+  field :customer_id, 1, required: true, type: :string
+  field :previous_customer_manager_link, 2, required: true, type: :string
+  field :new_manager, 3, required: true, type: :string
+  field :validate_only, 4, optional: true, type: :bool
 end
 
 defmodule Google.Ads.Googleads.V8.Services.CustomerManagerLinkOperation do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           operation: {atom, any},
@@ -63,13 +63,17 @@ defmodule Google.Ads.Googleads.V8.Services.CustomerManagerLinkOperation do
   defstruct [:operation, :update_mask]
 
   oneof :operation, 0
-  field :update_mask, 4, type: Google.Protobuf.FieldMask
-  field :update, 2, type: Google.Ads.Googleads.V8.Resources.CustomerManagerLink, oneof: 0
+  field :update_mask, 4, optional: true, type: Google.Protobuf.FieldMask
+
+  field :update, 2,
+    optional: true,
+    type: Google.Ads.Googleads.V8.Resources.CustomerManagerLink,
+    oneof: 0
 end
 
 defmodule Google.Ads.Googleads.V8.Services.MutateCustomerManagerLinkResponse do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           results: [Google.Ads.Googleads.V8.Services.MutateCustomerManagerLinkResult.t()]
@@ -84,7 +88,7 @@ end
 
 defmodule Google.Ads.Googleads.V8.Services.MoveManagerLinkResponse do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           resource_name: String.t()
@@ -92,12 +96,12 @@ defmodule Google.Ads.Googleads.V8.Services.MoveManagerLinkResponse do
 
   defstruct [:resource_name]
 
-  field :resource_name, 1, type: :string
+  field :resource_name, 1, optional: true, type: :string
 end
 
 defmodule Google.Ads.Googleads.V8.Services.MutateCustomerManagerLinkResult do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           resource_name: String.t()
@@ -105,7 +109,7 @@ defmodule Google.Ads.Googleads.V8.Services.MutateCustomerManagerLinkResult do
 
   defstruct [:resource_name]
 
-  field :resource_name, 1, type: :string
+  field :resource_name, 1, optional: true, type: :string
 end
 
 defmodule Google.Ads.Googleads.V8.Services.CustomerManagerLinkService.Service do

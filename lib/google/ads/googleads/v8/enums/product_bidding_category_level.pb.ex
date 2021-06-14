@@ -1,6 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto3
+  use Protobuf, enum: true, syntax: :proto2
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :LEVEL1 | :LEVEL2 | :LEVEL3 | :LEVEL4 | :LEVEL5
 
   field :UNSPECIFIED, 0
@@ -20,7 +20,7 @@ end
 
 defmodule Google.Ads.Googleads.V8.Enums.ProductBiddingCategoryLevelEnum do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
   @type t :: %__MODULE__{}
 
   defstruct []

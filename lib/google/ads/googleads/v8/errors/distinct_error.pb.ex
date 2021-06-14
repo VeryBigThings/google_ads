@@ -1,6 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Errors.DistinctErrorEnum.DistinctError do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto3
+  use Protobuf, enum: true, syntax: :proto2
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :DUPLICATE_ELEMENT | :DUPLICATE_TYPE
 
   field :UNSPECIFIED, 0
@@ -14,7 +14,7 @@ end
 
 defmodule Google.Ads.Googleads.V8.Errors.DistinctErrorEnum do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
   @type t :: %__MODULE__{}
 
   defstruct []

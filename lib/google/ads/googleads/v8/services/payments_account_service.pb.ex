@@ -1,6 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Services.ListPaymentsAccountsRequest do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           customer_id: String.t()
@@ -8,12 +8,12 @@ defmodule Google.Ads.Googleads.V8.Services.ListPaymentsAccountsRequest do
 
   defstruct [:customer_id]
 
-  field :customer_id, 1, type: :string
+  field :customer_id, 1, required: true, type: :string
 end
 
 defmodule Google.Ads.Googleads.V8.Services.ListPaymentsAccountsResponse do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           payments_accounts: [Google.Ads.Googleads.V8.Resources.PaymentsAccount.t()]

@@ -1,6 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Services.GetMediaFileRequest do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           resource_name: String.t()
@@ -8,12 +8,12 @@ defmodule Google.Ads.Googleads.V8.Services.GetMediaFileRequest do
 
   defstruct [:resource_name]
 
-  field :resource_name, 1, type: :string
+  field :resource_name, 1, required: true, type: :string
 end
 
 defmodule Google.Ads.Googleads.V8.Services.MutateMediaFilesRequest do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           customer_id: String.t(),
@@ -26,19 +26,20 @@ defmodule Google.Ads.Googleads.V8.Services.MutateMediaFilesRequest do
 
   defstruct [:customer_id, :operations, :partial_failure, :validate_only, :response_content_type]
 
-  field :customer_id, 1, type: :string
+  field :customer_id, 1, required: true, type: :string
   field :operations, 2, repeated: true, type: Google.Ads.Googleads.V8.Services.MediaFileOperation
-  field :partial_failure, 3, type: :bool
-  field :validate_only, 4, type: :bool
+  field :partial_failure, 3, optional: true, type: :bool
+  field :validate_only, 4, optional: true, type: :bool
 
   field :response_content_type, 5,
+    optional: true,
     type: Google.Ads.Googleads.V8.Enums.ResponseContentTypeEnum.ResponseContentType,
     enum: true
 end
 
 defmodule Google.Ads.Googleads.V8.Services.MediaFileOperation do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           operation: {atom, any}
@@ -47,12 +48,12 @@ defmodule Google.Ads.Googleads.V8.Services.MediaFileOperation do
   defstruct [:operation]
 
   oneof :operation, 0
-  field :create, 1, type: Google.Ads.Googleads.V8.Resources.MediaFile, oneof: 0
+  field :create, 1, optional: true, type: Google.Ads.Googleads.V8.Resources.MediaFile, oneof: 0
 end
 
 defmodule Google.Ads.Googleads.V8.Services.MutateMediaFilesResponse do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           partial_failure_error: Google.Rpc.Status.t() | nil,
@@ -61,13 +62,13 @@ defmodule Google.Ads.Googleads.V8.Services.MutateMediaFilesResponse do
 
   defstruct [:partial_failure_error, :results]
 
-  field :partial_failure_error, 3, type: Google.Rpc.Status
+  field :partial_failure_error, 3, optional: true, type: Google.Rpc.Status
   field :results, 2, repeated: true, type: Google.Ads.Googleads.V8.Services.MutateMediaFileResult
 end
 
 defmodule Google.Ads.Googleads.V8.Services.MutateMediaFileResult do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           resource_name: String.t(),
@@ -76,8 +77,8 @@ defmodule Google.Ads.Googleads.V8.Services.MutateMediaFileResult do
 
   defstruct [:resource_name, :media_file]
 
-  field :resource_name, 1, type: :string
-  field :media_file, 2, type: Google.Ads.Googleads.V8.Resources.MediaFile
+  field :resource_name, 1, optional: true, type: :string
+  field :media_file, 2, optional: true, type: Google.Ads.Googleads.V8.Resources.MediaFile
 end
 
 defmodule Google.Ads.Googleads.V8.Services.MediaFileService.Service do

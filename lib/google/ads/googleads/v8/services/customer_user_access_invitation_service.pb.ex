@@ -1,6 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Services.GetCustomerUserAccessInvitationRequest do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           resource_name: String.t()
@@ -8,12 +8,12 @@ defmodule Google.Ads.Googleads.V8.Services.GetCustomerUserAccessInvitationReques
 
   defstruct [:resource_name]
 
-  field :resource_name, 1, type: :string
+  field :resource_name, 1, required: true, type: :string
 end
 
 defmodule Google.Ads.Googleads.V8.Services.MutateCustomerUserAccessInvitationRequest do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           customer_id: String.t(),
@@ -23,15 +23,16 @@ defmodule Google.Ads.Googleads.V8.Services.MutateCustomerUserAccessInvitationReq
 
   defstruct [:customer_id, :operation]
 
-  field :customer_id, 1, type: :string
+  field :customer_id, 1, required: true, type: :string
 
   field :operation, 2,
+    required: true,
     type: Google.Ads.Googleads.V8.Services.CustomerUserAccessInvitationOperation
 end
 
 defmodule Google.Ads.Googleads.V8.Services.CustomerUserAccessInvitationOperation do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           operation: {atom, any}
@@ -40,13 +41,18 @@ defmodule Google.Ads.Googleads.V8.Services.CustomerUserAccessInvitationOperation
   defstruct [:operation]
 
   oneof :operation, 0
-  field :create, 1, type: Google.Ads.Googleads.V8.Resources.CustomerUserAccessInvitation, oneof: 0
-  field :remove, 2, type: :string, oneof: 0
+
+  field :create, 1,
+    optional: true,
+    type: Google.Ads.Googleads.V8.Resources.CustomerUserAccessInvitation,
+    oneof: 0
+
+  field :remove, 2, optional: true, type: :string, oneof: 0
 end
 
 defmodule Google.Ads.Googleads.V8.Services.MutateCustomerUserAccessInvitationResponse do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           result:
@@ -56,12 +62,13 @@ defmodule Google.Ads.Googleads.V8.Services.MutateCustomerUserAccessInvitationRes
   defstruct [:result]
 
   field :result, 1,
+    optional: true,
     type: Google.Ads.Googleads.V8.Services.MutateCustomerUserAccessInvitationResult
 end
 
 defmodule Google.Ads.Googleads.V8.Services.MutateCustomerUserAccessInvitationResult do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           resource_name: String.t()
@@ -69,7 +76,7 @@ defmodule Google.Ads.Googleads.V8.Services.MutateCustomerUserAccessInvitationRes
 
   defstruct [:resource_name]
 
-  field :resource_name, 1, type: :string
+  field :resource_name, 1, optional: true, type: :string
 end
 
 defmodule Google.Ads.Googleads.V8.Services.CustomerUserAccessInvitationService.Service do

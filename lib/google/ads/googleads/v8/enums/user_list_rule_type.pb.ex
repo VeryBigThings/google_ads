@@ -1,6 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Enums.UserListRuleTypeEnum.UserListRuleType do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto3
+  use Protobuf, enum: true, syntax: :proto2
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :AND_OF_ORS | :OR_OF_ANDS
 
   field :UNSPECIFIED, 0
@@ -14,7 +14,7 @@ end
 
 defmodule Google.Ads.Googleads.V8.Enums.UserListRuleTypeEnum do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
   @type t :: %__MODULE__{}
 
   defstruct []

@@ -1,6 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Services.GetAdRequest do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           resource_name: String.t()
@@ -8,12 +8,12 @@ defmodule Google.Ads.Googleads.V8.Services.GetAdRequest do
 
   defstruct [:resource_name]
 
-  field :resource_name, 1, type: :string
+  field :resource_name, 1, required: true, type: :string
 end
 
 defmodule Google.Ads.Googleads.V8.Services.MutateAdsRequest do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           customer_id: String.t(),
@@ -26,20 +26,21 @@ defmodule Google.Ads.Googleads.V8.Services.MutateAdsRequest do
 
   defstruct [:customer_id, :operations, :partial_failure, :response_content_type, :validate_only]
 
-  field :customer_id, 1, type: :string
+  field :customer_id, 1, required: true, type: :string
   field :operations, 2, repeated: true, type: Google.Ads.Googleads.V8.Services.AdOperation
-  field :partial_failure, 4, type: :bool
+  field :partial_failure, 4, optional: true, type: :bool
 
   field :response_content_type, 5,
+    optional: true,
     type: Google.Ads.Googleads.V8.Enums.ResponseContentTypeEnum.ResponseContentType,
     enum: true
 
-  field :validate_only, 3, type: :bool
+  field :validate_only, 3, optional: true, type: :bool
 end
 
 defmodule Google.Ads.Googleads.V8.Services.AdOperation do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           operation: {atom, any},
@@ -51,17 +52,18 @@ defmodule Google.Ads.Googleads.V8.Services.AdOperation do
   defstruct [:operation, :update_mask, :policy_validation_parameter]
 
   oneof :operation, 0
-  field :update_mask, 2, type: Google.Protobuf.FieldMask
+  field :update_mask, 2, optional: true, type: Google.Protobuf.FieldMask
 
   field :policy_validation_parameter, 3,
+    optional: true,
     type: Google.Ads.Googleads.V8.Common.PolicyValidationParameter
 
-  field :update, 1, type: Google.Ads.Googleads.V8.Resources.Ad, oneof: 0
+  field :update, 1, optional: true, type: Google.Ads.Googleads.V8.Resources.Ad, oneof: 0
 end
 
 defmodule Google.Ads.Googleads.V8.Services.MutateAdsResponse do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           partial_failure_error: Google.Rpc.Status.t() | nil,
@@ -70,13 +72,13 @@ defmodule Google.Ads.Googleads.V8.Services.MutateAdsResponse do
 
   defstruct [:partial_failure_error, :results]
 
-  field :partial_failure_error, 3, type: Google.Rpc.Status
+  field :partial_failure_error, 3, optional: true, type: Google.Rpc.Status
   field :results, 2, repeated: true, type: Google.Ads.Googleads.V8.Services.MutateAdResult
 end
 
 defmodule Google.Ads.Googleads.V8.Services.MutateAdResult do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           resource_name: String.t(),
@@ -85,8 +87,8 @@ defmodule Google.Ads.Googleads.V8.Services.MutateAdResult do
 
   defstruct [:resource_name, :ad]
 
-  field :resource_name, 1, type: :string
-  field :ad, 2, type: Google.Ads.Googleads.V8.Resources.Ad
+  field :resource_name, 1, optional: true, type: :string
+  field :ad, 2, optional: true, type: Google.Ads.Googleads.V8.Resources.Ad
 end
 
 defmodule Google.Ads.Googleads.V8.Services.AdService.Service do

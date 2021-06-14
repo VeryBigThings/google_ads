@@ -1,6 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Services.GetCampaignDraftRequest do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           resource_name: String.t()
@@ -8,12 +8,12 @@ defmodule Google.Ads.Googleads.V8.Services.GetCampaignDraftRequest do
 
   defstruct [:resource_name]
 
-  field :resource_name, 1, type: :string
+  field :resource_name, 1, required: true, type: :string
 end
 
 defmodule Google.Ads.Googleads.V8.Services.MutateCampaignDraftsRequest do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           customer_id: String.t(),
@@ -26,23 +26,24 @@ defmodule Google.Ads.Googleads.V8.Services.MutateCampaignDraftsRequest do
 
   defstruct [:customer_id, :operations, :partial_failure, :validate_only, :response_content_type]
 
-  field :customer_id, 1, type: :string
+  field :customer_id, 1, required: true, type: :string
 
   field :operations, 2,
     repeated: true,
     type: Google.Ads.Googleads.V8.Services.CampaignDraftOperation
 
-  field :partial_failure, 3, type: :bool
-  field :validate_only, 4, type: :bool
+  field :partial_failure, 3, optional: true, type: :bool
+  field :validate_only, 4, optional: true, type: :bool
 
   field :response_content_type, 5,
+    optional: true,
     type: Google.Ads.Googleads.V8.Enums.ResponseContentTypeEnum.ResponseContentType,
     enum: true
 end
 
 defmodule Google.Ads.Googleads.V8.Services.PromoteCampaignDraftRequest do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           campaign_draft: String.t(),
@@ -51,13 +52,13 @@ defmodule Google.Ads.Googleads.V8.Services.PromoteCampaignDraftRequest do
 
   defstruct [:campaign_draft, :validate_only]
 
-  field :campaign_draft, 1, type: :string
-  field :validate_only, 2, type: :bool
+  field :campaign_draft, 1, required: true, type: :string
+  field :validate_only, 2, optional: true, type: :bool
 end
 
 defmodule Google.Ads.Googleads.V8.Services.CampaignDraftOperation do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           operation: {atom, any},
@@ -67,15 +68,24 @@ defmodule Google.Ads.Googleads.V8.Services.CampaignDraftOperation do
   defstruct [:operation, :update_mask]
 
   oneof :operation, 0
-  field :update_mask, 4, type: Google.Protobuf.FieldMask
-  field :create, 1, type: Google.Ads.Googleads.V8.Resources.CampaignDraft, oneof: 0
-  field :update, 2, type: Google.Ads.Googleads.V8.Resources.CampaignDraft, oneof: 0
-  field :remove, 3, type: :string, oneof: 0
+  field :update_mask, 4, optional: true, type: Google.Protobuf.FieldMask
+
+  field :create, 1,
+    optional: true,
+    type: Google.Ads.Googleads.V8.Resources.CampaignDraft,
+    oneof: 0
+
+  field :update, 2,
+    optional: true,
+    type: Google.Ads.Googleads.V8.Resources.CampaignDraft,
+    oneof: 0
+
+  field :remove, 3, optional: true, type: :string, oneof: 0
 end
 
 defmodule Google.Ads.Googleads.V8.Services.MutateCampaignDraftsResponse do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           partial_failure_error: Google.Rpc.Status.t() | nil,
@@ -84,7 +94,7 @@ defmodule Google.Ads.Googleads.V8.Services.MutateCampaignDraftsResponse do
 
   defstruct [:partial_failure_error, :results]
 
-  field :partial_failure_error, 3, type: Google.Rpc.Status
+  field :partial_failure_error, 3, optional: true, type: Google.Rpc.Status
 
   field :results, 2,
     repeated: true,
@@ -93,7 +103,7 @@ end
 
 defmodule Google.Ads.Googleads.V8.Services.MutateCampaignDraftResult do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           resource_name: String.t(),
@@ -102,13 +112,13 @@ defmodule Google.Ads.Googleads.V8.Services.MutateCampaignDraftResult do
 
   defstruct [:resource_name, :campaign_draft]
 
-  field :resource_name, 1, type: :string
-  field :campaign_draft, 2, type: Google.Ads.Googleads.V8.Resources.CampaignDraft
+  field :resource_name, 1, optional: true, type: :string
+  field :campaign_draft, 2, optional: true, type: Google.Ads.Googleads.V8.Resources.CampaignDraft
 end
 
 defmodule Google.Ads.Googleads.V8.Services.ListCampaignDraftAsyncErrorsRequest do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           resource_name: String.t(),
@@ -118,14 +128,14 @@ defmodule Google.Ads.Googleads.V8.Services.ListCampaignDraftAsyncErrorsRequest d
 
   defstruct [:resource_name, :page_token, :page_size]
 
-  field :resource_name, 1, type: :string
-  field :page_token, 2, type: :string
-  field :page_size, 3, type: :int32
+  field :resource_name, 1, required: true, type: :string
+  field :page_token, 2, optional: true, type: :string
+  field :page_size, 3, optional: true, type: :int32
 end
 
 defmodule Google.Ads.Googleads.V8.Services.ListCampaignDraftAsyncErrorsResponse do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           errors: [Google.Rpc.Status.t()],
@@ -135,7 +145,7 @@ defmodule Google.Ads.Googleads.V8.Services.ListCampaignDraftAsyncErrorsResponse 
   defstruct [:errors, :next_page_token]
 
   field :errors, 1, repeated: true, type: Google.Rpc.Status
-  field :next_page_token, 2, type: :string
+  field :next_page_token, 2, optional: true, type: :string
 end
 
 defmodule Google.Ads.Googleads.V8.Services.CampaignDraftService.Service do

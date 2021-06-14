@@ -1,6 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Services.GetThirdPartyAppAnalyticsLinkRequest do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           resource_name: String.t()
@@ -8,12 +8,12 @@ defmodule Google.Ads.Googleads.V8.Services.GetThirdPartyAppAnalyticsLinkRequest 
 
   defstruct [:resource_name]
 
-  field :resource_name, 1, type: :string
+  field :resource_name, 1, optional: true, type: :string
 end
 
 defmodule Google.Ads.Googleads.V8.Services.RegenerateShareableLinkIdRequest do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           resource_name: String.t()
@@ -21,12 +21,12 @@ defmodule Google.Ads.Googleads.V8.Services.RegenerateShareableLinkIdRequest do
 
   defstruct [:resource_name]
 
-  field :resource_name, 1, type: :string
+  field :resource_name, 1, optional: true, type: :string
 end
 
 defmodule Google.Ads.Googleads.V8.Services.RegenerateShareableLinkIdResponse do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
   @type t :: %__MODULE__{}
 
   defstruct []

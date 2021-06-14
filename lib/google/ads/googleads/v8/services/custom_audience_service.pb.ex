@@ -1,6 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Services.GetCustomAudienceRequest do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           resource_name: String.t()
@@ -8,12 +8,12 @@ defmodule Google.Ads.Googleads.V8.Services.GetCustomAudienceRequest do
 
   defstruct [:resource_name]
 
-  field :resource_name, 1, type: :string
+  field :resource_name, 1, required: true, type: :string
 end
 
 defmodule Google.Ads.Googleads.V8.Services.MutateCustomAudiencesRequest do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           customer_id: String.t(),
@@ -23,18 +23,18 @@ defmodule Google.Ads.Googleads.V8.Services.MutateCustomAudiencesRequest do
 
   defstruct [:customer_id, :operations, :validate_only]
 
-  field :customer_id, 1, type: :string
+  field :customer_id, 1, required: true, type: :string
 
   field :operations, 2,
     repeated: true,
     type: Google.Ads.Googleads.V8.Services.CustomAudienceOperation
 
-  field :validate_only, 3, type: :bool
+  field :validate_only, 3, optional: true, type: :bool
 end
 
 defmodule Google.Ads.Googleads.V8.Services.CustomAudienceOperation do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           operation: {atom, any},
@@ -44,15 +44,24 @@ defmodule Google.Ads.Googleads.V8.Services.CustomAudienceOperation do
   defstruct [:operation, :update_mask]
 
   oneof :operation, 0
-  field :update_mask, 4, type: Google.Protobuf.FieldMask
-  field :create, 1, type: Google.Ads.Googleads.V8.Resources.CustomAudience, oneof: 0
-  field :update, 2, type: Google.Ads.Googleads.V8.Resources.CustomAudience, oneof: 0
-  field :remove, 3, type: :string, oneof: 0
+  field :update_mask, 4, optional: true, type: Google.Protobuf.FieldMask
+
+  field :create, 1,
+    optional: true,
+    type: Google.Ads.Googleads.V8.Resources.CustomAudience,
+    oneof: 0
+
+  field :update, 2,
+    optional: true,
+    type: Google.Ads.Googleads.V8.Resources.CustomAudience,
+    oneof: 0
+
+  field :remove, 3, optional: true, type: :string, oneof: 0
 end
 
 defmodule Google.Ads.Googleads.V8.Services.MutateCustomAudiencesResponse do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           results: [Google.Ads.Googleads.V8.Services.MutateCustomAudienceResult.t()]
@@ -67,7 +76,7 @@ end
 
 defmodule Google.Ads.Googleads.V8.Services.MutateCustomAudienceResult do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           resource_name: String.t()
@@ -75,7 +84,7 @@ defmodule Google.Ads.Googleads.V8.Services.MutateCustomAudienceResult do
 
   defstruct [:resource_name]
 
-  field :resource_name, 1, type: :string
+  field :resource_name, 1, optional: true, type: :string
 end
 
 defmodule Google.Ads.Googleads.V8.Services.CustomAudienceService.Service do

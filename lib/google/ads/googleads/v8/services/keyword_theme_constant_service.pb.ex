@@ -1,6 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Services.GetKeywordThemeConstantRequest do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           resource_name: String.t()
@@ -8,12 +8,12 @@ defmodule Google.Ads.Googleads.V8.Services.GetKeywordThemeConstantRequest do
 
   defstruct [:resource_name]
 
-  field :resource_name, 1, type: :string
+  field :resource_name, 1, required: true, type: :string
 end
 
 defmodule Google.Ads.Googleads.V8.Services.SuggestKeywordThemeConstantsRequest do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           query_text: String.t(),
@@ -23,14 +23,14 @@ defmodule Google.Ads.Googleads.V8.Services.SuggestKeywordThemeConstantsRequest d
 
   defstruct [:query_text, :country_code, :language_code]
 
-  field :query_text, 1, type: :string
-  field :country_code, 2, type: :string
-  field :language_code, 3, type: :string
+  field :query_text, 1, optional: true, type: :string
+  field :country_code, 2, optional: true, type: :string
+  field :language_code, 3, optional: true, type: :string
 end
 
 defmodule Google.Ads.Googleads.V8.Services.SuggestKeywordThemeConstantsResponse do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           keyword_theme_constants: [Google.Ads.Googleads.V8.Resources.KeywordThemeConstant.t()]

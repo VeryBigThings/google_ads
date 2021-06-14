@@ -1,6 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Services.GetCampaignCriterionSimulationRequest do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           resource_name: String.t()
@@ -8,7 +8,7 @@ defmodule Google.Ads.Googleads.V8.Services.GetCampaignCriterionSimulationRequest
 
   defstruct [:resource_name]
 
-  field :resource_name, 1, type: :string
+  field :resource_name, 1, required: true, type: :string
 end
 
 defmodule Google.Ads.Googleads.V8.Services.CampaignCriterionSimulationService.Service do

@@ -1,6 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Errors.MediaBundleErrorEnum.MediaBundleError do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto3
+  use Protobuf, enum: true, syntax: :proto2
 
   @type t ::
           integer
@@ -80,7 +80,7 @@ end
 
 defmodule Google.Ads.Googleads.V8.Errors.MediaBundleErrorEnum do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
   @type t :: %__MODULE__{}
 
   defstruct []

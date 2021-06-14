@@ -1,6 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Resources.LocationView do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           resource_name: String.t()
@@ -8,5 +8,5 @@ defmodule Google.Ads.Googleads.V8.Resources.LocationView do
 
   defstruct [:resource_name]
 
-  field :resource_name, 1, type: :string
+  field :resource_name, 1, optional: true, type: :string
 end

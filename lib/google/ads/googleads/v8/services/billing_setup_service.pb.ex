@@ -1,6 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Services.GetBillingSetupRequest do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           resource_name: String.t()
@@ -8,12 +8,12 @@ defmodule Google.Ads.Googleads.V8.Services.GetBillingSetupRequest do
 
   defstruct [:resource_name]
 
-  field :resource_name, 1, type: :string
+  field :resource_name, 1, required: true, type: :string
 end
 
 defmodule Google.Ads.Googleads.V8.Services.MutateBillingSetupRequest do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           customer_id: String.t(),
@@ -22,13 +22,16 @@ defmodule Google.Ads.Googleads.V8.Services.MutateBillingSetupRequest do
 
   defstruct [:customer_id, :operation]
 
-  field :customer_id, 1, type: :string
-  field :operation, 2, type: Google.Ads.Googleads.V8.Services.BillingSetupOperation
+  field :customer_id, 1, required: true, type: :string
+
+  field :operation, 2,
+    required: true,
+    type: Google.Ads.Googleads.V8.Services.BillingSetupOperation
 end
 
 defmodule Google.Ads.Googleads.V8.Services.BillingSetupOperation do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           operation: {atom, any}
@@ -37,13 +40,13 @@ defmodule Google.Ads.Googleads.V8.Services.BillingSetupOperation do
   defstruct [:operation]
 
   oneof :operation, 0
-  field :create, 2, type: Google.Ads.Googleads.V8.Resources.BillingSetup, oneof: 0
-  field :remove, 1, type: :string, oneof: 0
+  field :create, 2, optional: true, type: Google.Ads.Googleads.V8.Resources.BillingSetup, oneof: 0
+  field :remove, 1, optional: true, type: :string, oneof: 0
 end
 
 defmodule Google.Ads.Googleads.V8.Services.MutateBillingSetupResponse do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           result: Google.Ads.Googleads.V8.Services.MutateBillingSetupResult.t() | nil
@@ -51,12 +54,14 @@ defmodule Google.Ads.Googleads.V8.Services.MutateBillingSetupResponse do
 
   defstruct [:result]
 
-  field :result, 1, type: Google.Ads.Googleads.V8.Services.MutateBillingSetupResult
+  field :result, 1,
+    optional: true,
+    type: Google.Ads.Googleads.V8.Services.MutateBillingSetupResult
 end
 
 defmodule Google.Ads.Googleads.V8.Services.MutateBillingSetupResult do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           resource_name: String.t()
@@ -64,7 +69,7 @@ defmodule Google.Ads.Googleads.V8.Services.MutateBillingSetupResult do
 
   defstruct [:resource_name]
 
-  field :resource_name, 1, type: :string
+  field :resource_name, 1, optional: true, type: :string
 end
 
 defmodule Google.Ads.Googleads.V8.Services.BillingSetupService.Service do

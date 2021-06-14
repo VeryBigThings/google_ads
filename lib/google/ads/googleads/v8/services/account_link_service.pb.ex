@@ -1,6 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Services.GetAccountLinkRequest do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           resource_name: String.t()
@@ -8,12 +8,12 @@ defmodule Google.Ads.Googleads.V8.Services.GetAccountLinkRequest do
 
   defstruct [:resource_name]
 
-  field :resource_name, 1, type: :string
+  field :resource_name, 1, required: true, type: :string
 end
 
 defmodule Google.Ads.Googleads.V8.Services.CreateAccountLinkRequest do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           customer_id: String.t(),
@@ -22,13 +22,13 @@ defmodule Google.Ads.Googleads.V8.Services.CreateAccountLinkRequest do
 
   defstruct [:customer_id, :account_link]
 
-  field :customer_id, 1, type: :string
-  field :account_link, 2, type: Google.Ads.Googleads.V8.Resources.AccountLink
+  field :customer_id, 1, required: true, type: :string
+  field :account_link, 2, required: true, type: Google.Ads.Googleads.V8.Resources.AccountLink
 end
 
 defmodule Google.Ads.Googleads.V8.Services.CreateAccountLinkResponse do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           resource_name: String.t()
@@ -36,12 +36,12 @@ defmodule Google.Ads.Googleads.V8.Services.CreateAccountLinkResponse do
 
   defstruct [:resource_name]
 
-  field :resource_name, 1, type: :string
+  field :resource_name, 1, optional: true, type: :string
 end
 
 defmodule Google.Ads.Googleads.V8.Services.MutateAccountLinkRequest do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           customer_id: String.t(),
@@ -52,15 +52,15 @@ defmodule Google.Ads.Googleads.V8.Services.MutateAccountLinkRequest do
 
   defstruct [:customer_id, :operation, :partial_failure, :validate_only]
 
-  field :customer_id, 1, type: :string
-  field :operation, 2, type: Google.Ads.Googleads.V8.Services.AccountLinkOperation
-  field :partial_failure, 3, type: :bool
-  field :validate_only, 4, type: :bool
+  field :customer_id, 1, required: true, type: :string
+  field :operation, 2, required: true, type: Google.Ads.Googleads.V8.Services.AccountLinkOperation
+  field :partial_failure, 3, optional: true, type: :bool
+  field :validate_only, 4, optional: true, type: :bool
 end
 
 defmodule Google.Ads.Googleads.V8.Services.AccountLinkOperation do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           operation: {atom, any},
@@ -70,14 +70,14 @@ defmodule Google.Ads.Googleads.V8.Services.AccountLinkOperation do
   defstruct [:operation, :update_mask]
 
   oneof :operation, 0
-  field :update_mask, 4, type: Google.Protobuf.FieldMask
-  field :update, 2, type: Google.Ads.Googleads.V8.Resources.AccountLink, oneof: 0
-  field :remove, 3, type: :string, oneof: 0
+  field :update_mask, 4, optional: true, type: Google.Protobuf.FieldMask
+  field :update, 2, optional: true, type: Google.Ads.Googleads.V8.Resources.AccountLink, oneof: 0
+  field :remove, 3, optional: true, type: :string, oneof: 0
 end
 
 defmodule Google.Ads.Googleads.V8.Services.MutateAccountLinkResponse do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           result: Google.Ads.Googleads.V8.Services.MutateAccountLinkResult.t() | nil
@@ -85,12 +85,12 @@ defmodule Google.Ads.Googleads.V8.Services.MutateAccountLinkResponse do
 
   defstruct [:result]
 
-  field :result, 1, type: Google.Ads.Googleads.V8.Services.MutateAccountLinkResult
+  field :result, 1, optional: true, type: Google.Ads.Googleads.V8.Services.MutateAccountLinkResult
 end
 
 defmodule Google.Ads.Googleads.V8.Services.MutateAccountLinkResult do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, syntax: :proto2
 
   @type t :: %__MODULE__{
           resource_name: String.t()
@@ -98,7 +98,7 @@ defmodule Google.Ads.Googleads.V8.Services.MutateAccountLinkResult do
 
   defstruct [:resource_name]
 
-  field :resource_name, 1, type: :string
+  field :resource_name, 1, optional: true, type: :string
 end
 
 defmodule Google.Ads.Googleads.V8.Services.AccountLinkService.Service do
