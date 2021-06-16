@@ -18,14 +18,14 @@ defmodule Google.Ads.Googleads.V8.Resources.CustomInterest do
   field :id, 8, optional: true, type: :int64
 
   field :status, 3,
-    required: true,
+    optional: true,
     type: Google.Ads.Googleads.V8.Enums.CustomInterestStatusEnum.CustomInterestStatus,
     enum: true
 
   field :name, 9, optional: true, type: :string
 
   field :type, 5,
-    required: true,
+    optional: true,
     type: Google.Ads.Googleads.V8.Enums.CustomInterestTypeEnum.CustomInterestType,
     enum: true
 
