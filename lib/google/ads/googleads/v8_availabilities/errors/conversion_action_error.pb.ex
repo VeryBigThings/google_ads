@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.ConversionActionErrorEnum.ConversionActionError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.ConversionActionErrorEnum.ConversionActionError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -42,7 +42,7 @@ defmodule Google.Ads.Googleads.V8.Errors.ConversionActionErrorEnum.ConversionAct
   field :UPDATE_NOT_SUPPORTED, 11
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.ConversionActionErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.ConversionActionErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

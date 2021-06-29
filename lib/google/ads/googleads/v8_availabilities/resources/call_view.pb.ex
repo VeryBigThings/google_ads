@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.CallView do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.CallView do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -10,10 +10,10 @@ defmodule Google.Ads.Googleads.V8.Resources.CallView do
           start_call_date_time: String.t(),
           end_call_date_time: String.t(),
           call_tracking_display_location:
-            Google.Ads.Googleads.V8.Enums.CallTrackingDisplayLocationEnum.CallTrackingDisplayLocation.t(),
-          type: Google.Ads.Googleads.V8.Enums.CallTypeEnum.CallType.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.CallTrackingDisplayLocationEnum.CallTrackingDisplayLocation.t(),
+          type: Google.Ads.Googleads.V8Availabilities.Enums.CallTypeEnum.CallType.t(),
           call_status:
-            Google.Ads.Googleads.V8.Enums.GoogleVoiceCallStatusEnum.GoogleVoiceCallStatus.t()
+            Google.Ads.Googleads.V8Availabilities.Enums.GoogleVoiceCallStatusEnum.GoogleVoiceCallStatus.t()
         }
 
   defstruct [
@@ -37,12 +37,12 @@ defmodule Google.Ads.Googleads.V8.Resources.CallView do
 
   field :call_tracking_display_location, 7,
     type:
-      Google.Ads.Googleads.V8.Enums.CallTrackingDisplayLocationEnum.CallTrackingDisplayLocation,
+      Google.Ads.Googleads.V8Availabilities.Enums.CallTrackingDisplayLocationEnum.CallTrackingDisplayLocation,
     enum: true
 
-  field :type, 8, type: Google.Ads.Googleads.V8.Enums.CallTypeEnum.CallType, enum: true
+  field :type, 8, type: Google.Ads.Googleads.V8Availabilities.Enums.CallTypeEnum.CallType, enum: true
 
   field :call_status, 9,
-    type: Google.Ads.Googleads.V8.Enums.GoogleVoiceCallStatusEnum.GoogleVoiceCallStatus,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.GoogleVoiceCallStatusEnum.GoogleVoiceCallStatus,
     enum: true
 end

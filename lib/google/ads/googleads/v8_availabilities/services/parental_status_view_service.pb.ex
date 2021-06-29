@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetParentalStatusViewRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetParentalStatusViewRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,16 +11,16 @@ defmodule Google.Ads.Googleads.V8.Services.GetParentalStatusViewRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.ParentalStatusViewService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.ParentalStatusViewService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.ParentalStatusViewService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.ParentalStatusViewService"
 
   rpc :GetParentalStatusView,
-      Google.Ads.Googleads.V8.Services.GetParentalStatusViewRequest,
-      Google.Ads.Googleads.V8.Resources.ParentalStatusView
+      Google.Ads.Googleads.V8Availabilities.Services.GetParentalStatusViewRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.ParentalStatusView
 end
 
-defmodule Google.Ads.Googleads.V8.Services.ParentalStatusViewService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.ParentalStatusViewService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.ParentalStatusViewService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.ParentalStatusViewService.Service
 end

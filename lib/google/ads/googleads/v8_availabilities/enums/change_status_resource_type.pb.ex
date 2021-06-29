@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -42,7 +42,7 @@ defmodule Google.Ads.Googleads.V8.Enums.ChangeStatusResourceTypeEnum.ChangeStatu
   field :AD_GROUP_BID_MODIFIER, 13
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.ChangeStatusResourceTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ChangeStatusResourceTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.SharedSetTypeEnum.SharedSetType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.SharedSetTypeEnum.SharedSetType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :NEGATIVE_KEYWORDS | :NEGATIVE_PLACEMENTS
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Enums.SharedSetTypeEnum.SharedSetType do
   field :NEGATIVE_PLACEMENTS, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.SharedSetTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.SharedSetTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

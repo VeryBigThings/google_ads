@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.KeywordPlanCampaignKeyword do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.KeywordPlanCampaignKeyword do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -7,7 +7,7 @@ defmodule Google.Ads.Googleads.V8.Resources.KeywordPlanCampaignKeyword do
           keyword_plan_campaign: String.t(),
           id: integer,
           text: String.t(),
-          match_type: Google.Ads.Googleads.V8.Enums.KeywordMatchTypeEnum.KeywordMatchType.t(),
+          match_type: Google.Ads.Googleads.V8Availabilities.Enums.KeywordMatchTypeEnum.KeywordMatchType.t(),
           negative: boolean
         }
 
@@ -19,7 +19,7 @@ defmodule Google.Ads.Googleads.V8.Resources.KeywordPlanCampaignKeyword do
   field :text, 10, type: :string
 
   field :match_type, 5,
-    type: Google.Ads.Googleads.V8.Enums.KeywordMatchTypeEnum.KeywordMatchType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.KeywordMatchTypeEnum.KeywordMatchType,
     enum: true
 
   field :negative, 11, type: :bool

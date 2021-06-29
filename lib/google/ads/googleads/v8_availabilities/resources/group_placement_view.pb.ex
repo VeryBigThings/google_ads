@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.GroupPlacementView do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.GroupPlacementView do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -7,7 +7,7 @@ defmodule Google.Ads.Googleads.V8.Resources.GroupPlacementView do
           placement: String.t(),
           display_name: String.t(),
           target_url: String.t(),
-          placement_type: Google.Ads.Googleads.V8.Enums.PlacementTypeEnum.PlacementType.t()
+          placement_type: Google.Ads.Googleads.V8Availabilities.Enums.PlacementTypeEnum.PlacementType.t()
         }
 
   defstruct [:resource_name, :placement, :display_name, :target_url, :placement_type]
@@ -18,6 +18,6 @@ defmodule Google.Ads.Googleads.V8.Resources.GroupPlacementView do
   field :target_url, 8, type: :string
 
   field :placement_type, 5,
-    type: Google.Ads.Googleads.V8.Enums.PlacementTypeEnum.PlacementType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.PlacementTypeEnum.PlacementType,
     enum: true
 end

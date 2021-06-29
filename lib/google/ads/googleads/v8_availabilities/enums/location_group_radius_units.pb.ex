@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :METERS | :MILES | :MILLI_MILES
@@ -14,7 +14,7 @@ defmodule Google.Ads.Googleads.V8.Enums.LocationGroupRadiusUnitsEnum.LocationGro
   field :MILLI_MILES, 4
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.LocationGroupRadiusUnitsEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.LocationGroupRadiusUnitsEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

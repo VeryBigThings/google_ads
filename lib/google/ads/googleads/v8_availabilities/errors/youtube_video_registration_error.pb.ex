@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.YoutubeVideoRegistrationErrorEnum.YoutubeVideoRegistrationError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.YoutubeVideoRegistrationErrorEnum.YoutubeVideoRegistrationError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -21,7 +21,7 @@ defmodule Google.Ads.Googleads.V8.Errors.YoutubeVideoRegistrationErrorEnum.Youtu
   field :VIDEO_NOT_ELIGIBLE, 4
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.YoutubeVideoRegistrationErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.YoutubeVideoRegistrationErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

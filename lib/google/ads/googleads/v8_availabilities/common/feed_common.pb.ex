@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Common.Money do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.Money do
   @moduledoc false
   use Protobuf, syntax: :proto3
 

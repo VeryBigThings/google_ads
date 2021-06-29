@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -90,7 +90,7 @@ defmodule Google.Ads.Googleads.V8.Enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange 
   field :AGE_RANGE_65_UP, 503_006
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.ReachPlanAgeRangeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ReachPlanAgeRangeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

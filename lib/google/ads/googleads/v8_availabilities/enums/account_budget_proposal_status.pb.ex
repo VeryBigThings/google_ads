@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.AccountBudgetProposalStatusEnum.AccountBudgetProposalStatus do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AccountBudgetProposalStatusEnum.AccountBudgetProposalStatus do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -27,7 +27,7 @@ defmodule Google.Ads.Googleads.V8.Enums.AccountBudgetProposalStatusEnum.AccountB
   field :REJECTED, 6
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.AccountBudgetProposalStatusEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AccountBudgetProposalStatusEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

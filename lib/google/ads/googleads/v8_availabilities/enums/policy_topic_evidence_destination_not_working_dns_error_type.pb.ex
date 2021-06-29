@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :HOSTNAME_NOT_FOUND | :GOOGLE_CRAWLER_DNS_ISSUE
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Enums.PolicyTopicEvidenceDestinationNotWorking
   field :GOOGLE_CRAWLER_DNS_ISSUE, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

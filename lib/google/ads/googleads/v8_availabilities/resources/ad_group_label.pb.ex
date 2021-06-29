@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.AdGroupLabel do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.AdGroupLabel do
   @moduledoc false
   use Protobuf, syntax: :proto3
 

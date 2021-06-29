@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.ManagerLinkErrorEnum.ManagerLinkError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.ManagerLinkErrorEnum.ManagerLinkError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -63,7 +63,7 @@ defmodule Google.Ads.Googleads.V8.Errors.ManagerLinkErrorEnum.ManagerLinkError d
   field :INVALID_CHANGE, 18
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.ManagerLinkErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.ManagerLinkErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

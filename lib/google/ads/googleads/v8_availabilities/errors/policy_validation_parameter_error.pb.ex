@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.PolicyValidationParameterErrorEnum.PolicyValidationParameterError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.PolicyValidationParameterErrorEnum.PolicyValidationParameterError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -21,7 +21,7 @@ defmodule Google.Ads.Googleads.V8.Errors.PolicyValidationParameterErrorEnum.Poli
   field :CANNOT_SET_BOTH_IGNORABLE_POLICY_TOPICS_AND_EXEMPT_POLICY_VIOLATION_KEYS, 4
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.PolicyValidationParameterErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.PolicyValidationParameterErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

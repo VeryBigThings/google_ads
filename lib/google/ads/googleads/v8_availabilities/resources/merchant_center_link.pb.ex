@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.MerchantCenterLink do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.MerchantCenterLink do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -7,7 +7,7 @@ defmodule Google.Ads.Googleads.V8.Resources.MerchantCenterLink do
           id: integer,
           merchant_center_account_name: String.t(),
           status:
-            Google.Ads.Googleads.V8.Enums.MerchantCenterLinkStatusEnum.MerchantCenterLinkStatus.t()
+            Google.Ads.Googleads.V8Availabilities.Enums.MerchantCenterLinkStatusEnum.MerchantCenterLinkStatus.t()
         }
 
   defstruct [:resource_name, :id, :merchant_center_account_name, :status]
@@ -17,6 +17,6 @@ defmodule Google.Ads.Googleads.V8.Resources.MerchantCenterLink do
   field :merchant_center_account_name, 7, type: :string
 
   field :status, 5,
-    type: Google.Ads.Googleads.V8.Enums.MerchantCenterLinkStatusEnum.MerchantCenterLinkStatus,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.MerchantCenterLinkStatusEnum.MerchantCenterLinkStatus,
     enum: true
 end

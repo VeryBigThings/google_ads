@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetHotelPerformanceViewRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetHotelPerformanceViewRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,16 +11,16 @@ defmodule Google.Ads.Googleads.V8.Services.GetHotelPerformanceViewRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.HotelPerformanceViewService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.HotelPerformanceViewService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.HotelPerformanceViewService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.HotelPerformanceViewService"
 
   rpc :GetHotelPerformanceView,
-      Google.Ads.Googleads.V8.Services.GetHotelPerformanceViewRequest,
-      Google.Ads.Googleads.V8.Resources.HotelPerformanceView
+      Google.Ads.Googleads.V8Availabilities.Services.GetHotelPerformanceViewRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.HotelPerformanceView
 end
 
-defmodule Google.Ads.Googleads.V8.Services.HotelPerformanceViewService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.HotelPerformanceViewService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.HotelPerformanceViewService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.HotelPerformanceViewService.Service
 end

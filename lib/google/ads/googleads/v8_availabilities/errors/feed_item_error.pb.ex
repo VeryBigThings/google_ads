@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.FeedItemErrorEnum.FeedItemError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.FeedItemErrorEnum.FeedItemError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -39,7 +39,7 @@ defmodule Google.Ads.Googleads.V8.Errors.FeedItemErrorEnum.FeedItemError do
   field :SIZE_TOO_LARGE_FOR_MULTI_VALUE_ATTRIBUTE, 10
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.FeedItemErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.FeedItemErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

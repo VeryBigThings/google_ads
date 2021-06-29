@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.CarrierConstant do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.CarrierConstant do
   @moduledoc false
   use Protobuf, syntax: :proto3
 

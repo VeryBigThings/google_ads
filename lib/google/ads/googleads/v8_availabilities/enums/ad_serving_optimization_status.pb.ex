@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.AdServingOptimizationStatusEnum.AdServingOptimizationStatus do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AdServingOptimizationStatusEnum.AdServingOptimizationStatus do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -27,7 +27,7 @@ defmodule Google.Ads.Googleads.V8.Enums.AdServingOptimizationStatusEnum.AdServin
   field :UNAVAILABLE, 6
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.AdServingOptimizationStatusEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AdServingOptimizationStatusEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

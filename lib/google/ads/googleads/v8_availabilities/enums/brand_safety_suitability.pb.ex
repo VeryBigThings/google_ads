@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.BrandSafetySuitabilityEnum.BrandSafetySuitability do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.BrandSafetySuitabilityEnum.BrandSafetySuitability do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -21,7 +21,7 @@ defmodule Google.Ads.Googleads.V8.Enums.BrandSafetySuitabilityEnum.BrandSafetySu
   field :LIMITED_INVENTORY, 4
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.BrandSafetySuitabilityEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.BrandSafetySuitabilityEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

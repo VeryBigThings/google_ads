@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.FlightPlaceholderFieldEnum.FlightPlaceholderField do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.FlightPlaceholderFieldEnum.FlightPlaceholderField do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -63,7 +63,7 @@ defmodule Google.Ads.Googleads.V8.Enums.FlightPlaceholderFieldEnum.FlightPlaceho
   field :IOS_APP_STORE_ID, 18
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.FlightPlaceholderFieldEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.FlightPlaceholderFieldEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

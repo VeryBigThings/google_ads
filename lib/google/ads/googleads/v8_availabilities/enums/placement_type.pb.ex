@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.PlacementTypeEnum.PlacementType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.PlacementTypeEnum.PlacementType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -27,7 +27,7 @@ defmodule Google.Ads.Googleads.V8.Enums.PlacementTypeEnum.PlacementType do
   field :YOUTUBE_CHANNEL, 6
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.PlacementTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.PlacementTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

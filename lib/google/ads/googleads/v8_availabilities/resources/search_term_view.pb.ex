@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.SearchTermView do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.SearchTermView do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -7,7 +7,7 @@ defmodule Google.Ads.Googleads.V8.Resources.SearchTermView do
           search_term: String.t(),
           ad_group: String.t(),
           status:
-            Google.Ads.Googleads.V8.Enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus.t()
+            Google.Ads.Googleads.V8Availabilities.Enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus.t()
         }
 
   defstruct [:resource_name, :search_term, :ad_group, :status]
@@ -17,6 +17,6 @@ defmodule Google.Ads.Googleads.V8.Resources.SearchTermView do
   field :ad_group, 6, type: :string
 
   field :status, 4,
-    type: Google.Ads.Googleads.V8.Enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus,
     enum: true
 end

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.LocationPlaceholderFieldEnum.LocationPlaceholderField do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.LocationPlaceholderFieldEnum.LocationPlaceholderField do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -36,7 +36,7 @@ defmodule Google.Ads.Googleads.V8.Enums.LocationPlaceholderFieldEnum.LocationPla
   field :PHONE_NUMBER, 9
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.LocationPlaceholderFieldEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.LocationPlaceholderFieldEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

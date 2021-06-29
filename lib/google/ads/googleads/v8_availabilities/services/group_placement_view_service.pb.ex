@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetGroupPlacementViewRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetGroupPlacementViewRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,16 +11,16 @@ defmodule Google.Ads.Googleads.V8.Services.GetGroupPlacementViewRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.GroupPlacementViewService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GroupPlacementViewService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.GroupPlacementViewService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.GroupPlacementViewService"
 
   rpc :GetGroupPlacementView,
-      Google.Ads.Googleads.V8.Services.GetGroupPlacementViewRequest,
-      Google.Ads.Googleads.V8.Resources.GroupPlacementView
+      Google.Ads.Googleads.V8Availabilities.Services.GetGroupPlacementViewRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.GroupPlacementView
 end
 
-defmodule Google.Ads.Googleads.V8.Services.GroupPlacementViewService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GroupPlacementViewService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.GroupPlacementViewService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.GroupPlacementViewService.Service
 end

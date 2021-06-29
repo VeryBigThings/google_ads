@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.AccessRoleEnum.AccessRole do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AccessRoleEnum.AccessRole do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :ADMIN | :STANDARD | :READ_ONLY | :EMAIL_ONLY
@@ -16,7 +16,7 @@ defmodule Google.Ads.Googleads.V8.Enums.AccessRoleEnum.AccessRole do
   field :EMAIL_ONLY, 5
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.AccessRoleEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AccessRoleEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

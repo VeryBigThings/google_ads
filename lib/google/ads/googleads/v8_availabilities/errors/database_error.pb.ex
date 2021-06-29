@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.DatabaseErrorEnum.DatabaseError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.DatabaseErrorEnum.DatabaseError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -21,7 +21,7 @@ defmodule Google.Ads.Googleads.V8.Errors.DatabaseErrorEnum.DatabaseError do
   field :REQUEST_TOO_LARGE, 4
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.DatabaseErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.DatabaseErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

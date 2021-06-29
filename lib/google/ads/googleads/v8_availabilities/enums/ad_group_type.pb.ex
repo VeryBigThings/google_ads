@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.AdGroupTypeEnum.AdGroupType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AdGroupTypeEnum.AdGroupType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -60,7 +60,7 @@ defmodule Google.Ads.Googleads.V8.Enums.AdGroupTypeEnum.AdGroupType do
   field :SMART_CAMPAIGN_ADS, 18
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.AdGroupTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AdGroupTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

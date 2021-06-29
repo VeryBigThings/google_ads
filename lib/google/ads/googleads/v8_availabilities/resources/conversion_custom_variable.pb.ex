@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.ConversionCustomVariable do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.ConversionCustomVariable do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -8,7 +8,7 @@ defmodule Google.Ads.Googleads.V8.Resources.ConversionCustomVariable do
           name: String.t(),
           tag: String.t(),
           status:
-            Google.Ads.Googleads.V8.Enums.ConversionCustomVariableStatusEnum.ConversionCustomVariableStatus.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.ConversionCustomVariableStatusEnum.ConversionCustomVariableStatus.t(),
           owner_customer: String.t()
         }
 
@@ -21,7 +21,7 @@ defmodule Google.Ads.Googleads.V8.Resources.ConversionCustomVariable do
 
   field :status, 5,
     type:
-      Google.Ads.Googleads.V8.Enums.ConversionCustomVariableStatusEnum.ConversionCustomVariableStatus,
+      Google.Ads.Googleads.V8Availabilities.Enums.ConversionCustomVariableStatusEnum.ConversionCustomVariableStatus,
     enum: true
 
   field :owner_customer, 6, type: :string

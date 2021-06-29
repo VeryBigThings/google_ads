@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.PolicyTopicEntryTypeEnum.PolicyTopicEntryType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.PolicyTopicEntryTypeEnum.PolicyTopicEntryType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -30,7 +30,7 @@ defmodule Google.Ads.Googleads.V8.Enums.PolicyTopicEntryTypeEnum.PolicyTopicEntr
   field :AREA_OF_INTEREST_ONLY, 7
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.PolicyTopicEntryTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.PolicyTopicEntryTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.FeedMappingStatusEnum.FeedMappingStatus do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.FeedMappingStatusEnum.FeedMappingStatus do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :ENABLED | :REMOVED
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Enums.FeedMappingStatusEnum.FeedMappingStatus 
   field :REMOVED, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.FeedMappingStatusEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.FeedMappingStatusEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

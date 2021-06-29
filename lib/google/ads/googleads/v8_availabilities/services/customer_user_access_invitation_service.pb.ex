@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetCustomerUserAccessInvitationRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetCustomerUserAccessInvitationRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,14 +11,14 @@ defmodule Google.Ads.Googleads.V8.Services.GetCustomerUserAccessInvitationReques
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateCustomerUserAccessInvitationRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateCustomerUserAccessInvitationRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           customer_id: String.t(),
           operation:
-            Google.Ads.Googleads.V8.Services.CustomerUserAccessInvitationOperation.t() | nil
+            Google.Ads.Googleads.V8Availabilities.Services.CustomerUserAccessInvitationOperation.t() | nil
         }
 
   defstruct [:customer_id, :operation]
@@ -26,10 +26,10 @@ defmodule Google.Ads.Googleads.V8.Services.MutateCustomerUserAccessInvitationReq
   field :customer_id, 1, type: :string
 
   field :operation, 2,
-    type: Google.Ads.Googleads.V8.Services.CustomerUserAccessInvitationOperation
+    type: Google.Ads.Googleads.V8Availabilities.Services.CustomerUserAccessInvitationOperation
 end
 
-defmodule Google.Ads.Googleads.V8.Services.CustomerUserAccessInvitationOperation do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.CustomerUserAccessInvitationOperation do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -41,26 +41,26 @@ defmodule Google.Ads.Googleads.V8.Services.CustomerUserAccessInvitationOperation
 
   oneof :operation, 0
 
-  field :create, 1, type: Google.Ads.Googleads.V8.Resources.CustomerUserAccessInvitation, oneof: 0
+  field :create, 1, type: Google.Ads.Googleads.V8Availabilities.Resources.CustomerUserAccessInvitation, oneof: 0
   field :remove, 2, type: :string, oneof: 0
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateCustomerUserAccessInvitationResponse do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateCustomerUserAccessInvitationResponse do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           result:
-            Google.Ads.Googleads.V8.Services.MutateCustomerUserAccessInvitationResult.t() | nil
+            Google.Ads.Googleads.V8Availabilities.Services.MutateCustomerUserAccessInvitationResult.t() | nil
         }
 
   defstruct [:result]
 
   field :result, 1,
-    type: Google.Ads.Googleads.V8.Services.MutateCustomerUserAccessInvitationResult
+    type: Google.Ads.Googleads.V8Availabilities.Services.MutateCustomerUserAccessInvitationResult
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateCustomerUserAccessInvitationResult do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateCustomerUserAccessInvitationResult do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -73,21 +73,21 @@ defmodule Google.Ads.Googleads.V8.Services.MutateCustomerUserAccessInvitationRes
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.CustomerUserAccessInvitationService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.CustomerUserAccessInvitationService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.CustomerUserAccessInvitationService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.CustomerUserAccessInvitationService"
 
   rpc :GetCustomerUserAccessInvitation,
-      Google.Ads.Googleads.V8.Services.GetCustomerUserAccessInvitationRequest,
-      Google.Ads.Googleads.V8.Resources.CustomerUserAccessInvitation
+      Google.Ads.Googleads.V8Availabilities.Services.GetCustomerUserAccessInvitationRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.CustomerUserAccessInvitation
 
   rpc :MutateCustomerUserAccessInvitation,
-      Google.Ads.Googleads.V8.Services.MutateCustomerUserAccessInvitationRequest,
-      Google.Ads.Googleads.V8.Services.MutateCustomerUserAccessInvitationResponse
+      Google.Ads.Googleads.V8Availabilities.Services.MutateCustomerUserAccessInvitationRequest,
+      Google.Ads.Googleads.V8Availabilities.Services.MutateCustomerUserAccessInvitationResponse
 end
 
-defmodule Google.Ads.Googleads.V8.Services.CustomerUserAccessInvitationService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.CustomerUserAccessInvitationService.Stub do
   @moduledoc false
   use GRPC.Stub,
-    service: Google.Ads.Googleads.V8.Services.CustomerUserAccessInvitationService.Service
+    service: Google.Ads.Googleads.V8Availabilities.Services.CustomerUserAccessInvitationService.Service
 end

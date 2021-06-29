@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.CampaignDraftErrorEnum.CampaignDraftError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.CampaignDraftErrorEnum.CampaignDraftError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -42,7 +42,7 @@ defmodule Google.Ads.Googleads.V8.Errors.CampaignDraftErrorEnum.CampaignDraftErr
   field :LIST_ERRORS_FOR_PROMOTED_DRAFT_ONLY, 11
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.CampaignDraftErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.CampaignDraftErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

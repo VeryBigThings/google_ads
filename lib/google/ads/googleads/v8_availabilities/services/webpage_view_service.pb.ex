@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetWebpageViewRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetWebpageViewRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,16 +11,16 @@ defmodule Google.Ads.Googleads.V8.Services.GetWebpageViewRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.WebpageViewService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.WebpageViewService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.WebpageViewService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.WebpageViewService"
 
   rpc :GetWebpageView,
-      Google.Ads.Googleads.V8.Services.GetWebpageViewRequest,
-      Google.Ads.Googleads.V8.Resources.WebpageView
+      Google.Ads.Googleads.V8Availabilities.Services.GetWebpageViewRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.WebpageView
 end
 
-defmodule Google.Ads.Googleads.V8.Services.WebpageViewService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.WebpageViewService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.WebpageViewService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.WebpageViewService.Service
 end

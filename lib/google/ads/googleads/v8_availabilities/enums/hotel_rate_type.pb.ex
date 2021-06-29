@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.HotelRateTypeEnum.HotelRateType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.HotelRateTypeEnum.HotelRateType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -24,7 +24,7 @@ defmodule Google.Ads.Googleads.V8.Enums.HotelRateTypeEnum.HotelRateType do
   field :PRIVATE_RATE, 5
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.HotelRateTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.HotelRateTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.CampaignSharedSet do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.CampaignSharedSet do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -7,7 +7,7 @@ defmodule Google.Ads.Googleads.V8.Resources.CampaignSharedSet do
           campaign: String.t(),
           shared_set: String.t(),
           status:
-            Google.Ads.Googleads.V8.Enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus.t()
+            Google.Ads.Googleads.V8Availabilities.Enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus.t()
         }
 
   defstruct [:resource_name, :campaign, :shared_set, :status]
@@ -17,6 +17,6 @@ defmodule Google.Ads.Googleads.V8.Resources.CampaignSharedSet do
   field :shared_set, 6, type: :string
 
   field :status, 2,
-    type: Google.Ads.Googleads.V8.Enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus,
     enum: true
 end

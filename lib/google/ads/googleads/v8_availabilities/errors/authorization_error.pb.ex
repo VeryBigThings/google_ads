@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.AuthorizationErrorEnum.AuthorizationError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.AuthorizationErrorEnum.AuthorizationError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -51,7 +51,7 @@ defmodule Google.Ads.Googleads.V8.Errors.AuthorizationErrorEnum.AuthorizationErr
   field :ACCESS_DENIED_FOR_ACCOUNT_TYPE, 25
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.AuthorizationErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.AuthorizationErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

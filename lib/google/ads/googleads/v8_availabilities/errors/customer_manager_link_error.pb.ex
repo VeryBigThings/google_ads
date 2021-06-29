@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.CustomerManagerLinkErrorEnum.CustomerManagerLinkError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.CustomerManagerLinkErrorEnum.CustomerManagerLinkError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -39,7 +39,7 @@ defmodule Google.Ads.Googleads.V8.Errors.CustomerManagerLinkErrorEnum.CustomerMa
   field :TEST_ACCOUNT_LINKS_TOO_MANY_CHILD_ACCOUNTS, 10
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.CustomerManagerLinkErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.CustomerManagerLinkErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

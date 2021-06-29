@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.ProductTypeLevelEnum.ProductTypeLevel do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ProductTypeLevelEnum.ProductTypeLevel do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :LEVEL1 | :LEVEL2 | :LEVEL3 | :LEVEL4 | :LEVEL5
@@ -18,7 +18,7 @@ defmodule Google.Ads.Googleads.V8.Enums.ProductTypeLevelEnum.ProductTypeLevel do
   field :LEVEL5, 11
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.ProductTypeLevelEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ProductTypeLevelEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

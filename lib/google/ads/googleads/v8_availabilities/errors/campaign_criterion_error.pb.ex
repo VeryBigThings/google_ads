@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.CampaignCriterionErrorEnum.CampaignCriterionError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.CampaignCriterionErrorEnum.CampaignCriterionError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -60,7 +60,7 @@ defmodule Google.Ads.Googleads.V8.Errors.CampaignCriterionErrorEnum.CampaignCrit
   field :CANNOT_TARGET_MULTIPLE_PROXIMITY_CRITERIA_FOR_SMART_CAMPAIGN, 17
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.CampaignCriterionErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.CampaignCriterionErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

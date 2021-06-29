@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.DistanceBucketEnum.DistanceBucket do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.DistanceBucketEnum.DistanceBucket do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -93,7 +93,7 @@ defmodule Google.Ads.Googleads.V8.Enums.DistanceBucketEnum.DistanceBucket do
   field :BEYOND_40MILES, 28
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.DistanceBucketEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.DistanceBucketEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.ManagerLinkStatusEnum.ManagerLinkStatus do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ManagerLinkStatusEnum.ManagerLinkStatus do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -27,7 +27,7 @@ defmodule Google.Ads.Googleads.V8.Enums.ManagerLinkStatusEnum.ManagerLinkStatus 
   field :CANCELED, 6
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.ManagerLinkStatusEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ManagerLinkStatusEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

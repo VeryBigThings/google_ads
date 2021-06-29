@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.CombinedAudienceStatusEnum.CombinedAudienceStatus do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.CombinedAudienceStatusEnum.CombinedAudienceStatus do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :ENABLED | :REMOVED
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Enums.CombinedAudienceStatusEnum.CombinedAudie
   field :REMOVED, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.CombinedAudienceStatusEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.CombinedAudienceStatusEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

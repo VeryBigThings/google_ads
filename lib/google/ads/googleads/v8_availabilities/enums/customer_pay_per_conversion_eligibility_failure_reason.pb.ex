@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -33,7 +33,7 @@ defmodule Google.Ads.Googleads.V8.Enums.CustomerPayPerConversionEligibilityFailu
   field :OTHER, 8
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.CustomerPayPerConversionEligibilityFailureReasonEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.CustomerPayPerConversionEligibilityFailureReasonEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

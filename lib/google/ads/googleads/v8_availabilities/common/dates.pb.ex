@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Common.DateRange do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.DateRange do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -13,32 +13,32 @@ defmodule Google.Ads.Googleads.V8.Common.DateRange do
   field :end_date, 4, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.YearMonthRange do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.YearMonthRange do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          start: Google.Ads.Googleads.V8.Common.YearMonth.t() | nil,
-          end: Google.Ads.Googleads.V8.Common.YearMonth.t() | nil
+          start: Google.Ads.Googleads.V8Availabilities.Common.YearMonth.t() | nil,
+          end: Google.Ads.Googleads.V8Availabilities.Common.YearMonth.t() | nil
         }
 
   defstruct [:start, :end]
 
-  field :start, 1, type: Google.Ads.Googleads.V8.Common.YearMonth
-  field :end, 2, type: Google.Ads.Googleads.V8.Common.YearMonth
+  field :start, 1, type: Google.Ads.Googleads.V8Availabilities.Common.YearMonth
+  field :end, 2, type: Google.Ads.Googleads.V8Availabilities.Common.YearMonth
 end
 
-defmodule Google.Ads.Googleads.V8.Common.YearMonth do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.YearMonth do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           year: integer,
-          month: Google.Ads.Googleads.V8.Enums.MonthOfYearEnum.MonthOfYear.t()
+          month: Google.Ads.Googleads.V8Availabilities.Enums.MonthOfYearEnum.MonthOfYear.t()
         }
 
   defstruct [:year, :month]
 
   field :year, 1, type: :int64
-  field :month, 2, type: Google.Ads.Googleads.V8.Enums.MonthOfYearEnum.MonthOfYear, enum: true
+  field :month, 2, type: Google.Ads.Googleads.V8Availabilities.Enums.MonthOfYearEnum.MonthOfYear, enum: true
 end

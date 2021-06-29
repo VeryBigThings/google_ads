@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetUserLocationViewRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetUserLocationViewRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,16 +11,16 @@ defmodule Google.Ads.Googleads.V8.Services.GetUserLocationViewRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.UserLocationViewService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.UserLocationViewService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.UserLocationViewService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.UserLocationViewService"
 
   rpc :GetUserLocationView,
-      Google.Ads.Googleads.V8.Services.GetUserLocationViewRequest,
-      Google.Ads.Googleads.V8.Resources.UserLocationView
+      Google.Ads.Googleads.V8Availabilities.Services.GetUserLocationViewRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.UserLocationView
 end
 
-defmodule Google.Ads.Googleads.V8.Services.UserLocationViewService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.UserLocationViewService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.UserLocationViewService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.UserLocationViewService.Service
 end

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -60,7 +60,7 @@ defmodule Google.Ads.Googleads.V8.Enums.AdvertisingChannelSubTypeEnum.Advertisin
   field :VIDEO_SEQUENCE, 17
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.AdvertisingChannelSubTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AdvertisingChannelSubTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.FeedAttributeReferenceErrorEnum.FeedAttributeReferenceError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.FeedAttributeReferenceErrorEnum.FeedAttributeReferenceError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -21,7 +21,7 @@ defmodule Google.Ads.Googleads.V8.Errors.FeedAttributeReferenceErrorEnum.FeedAtt
   field :INVALID_FEED_ATTRIBUTE_NAME, 4
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.FeedAttributeReferenceErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.FeedAttributeReferenceErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

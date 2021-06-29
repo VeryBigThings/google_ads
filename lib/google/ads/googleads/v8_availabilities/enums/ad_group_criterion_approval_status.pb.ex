@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -24,7 +24,7 @@ defmodule Google.Ads.Googleads.V8.Enums.AdGroupCriterionApprovalStatusEnum.AdGro
   field :UNDER_REVIEW, 5
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.AdGroupCriterionApprovalStatusEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AdGroupCriterionApprovalStatusEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

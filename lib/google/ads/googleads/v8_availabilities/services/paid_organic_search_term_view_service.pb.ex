@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetPaidOrganicSearchTermViewRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetPaidOrganicSearchTermViewRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,17 +11,17 @@ defmodule Google.Ads.Googleads.V8.Services.GetPaidOrganicSearchTermViewRequest d
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.PaidOrganicSearchTermViewService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.PaidOrganicSearchTermViewService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.PaidOrganicSearchTermViewService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.PaidOrganicSearchTermViewService"
 
   rpc :GetPaidOrganicSearchTermView,
-      Google.Ads.Googleads.V8.Services.GetPaidOrganicSearchTermViewRequest,
-      Google.Ads.Googleads.V8.Resources.PaidOrganicSearchTermView
+      Google.Ads.Googleads.V8Availabilities.Services.GetPaidOrganicSearchTermViewRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.PaidOrganicSearchTermView
 end
 
-defmodule Google.Ads.Googleads.V8.Services.PaidOrganicSearchTermViewService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.PaidOrganicSearchTermViewService.Stub do
   @moduledoc false
   use GRPC.Stub,
-    service: Google.Ads.Googleads.V8.Services.PaidOrganicSearchTermViewService.Service
+    service: Google.Ads.Googleads.V8Availabilities.Services.PaidOrganicSearchTermViewService.Service
 end

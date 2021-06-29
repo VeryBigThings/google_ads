@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.CampaignDraft do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.CampaignDraft do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -8,7 +8,7 @@ defmodule Google.Ads.Googleads.V8.Resources.CampaignDraft do
           base_campaign: String.t(),
           name: String.t(),
           draft_campaign: String.t(),
-          status: Google.Ads.Googleads.V8.Enums.CampaignDraftStatusEnum.CampaignDraftStatus.t(),
+          status: Google.Ads.Googleads.V8Availabilities.Enums.CampaignDraftStatusEnum.CampaignDraftStatus.t(),
           has_experiment_running: boolean,
           long_running_operation: String.t()
         }
@@ -31,7 +31,7 @@ defmodule Google.Ads.Googleads.V8.Resources.CampaignDraft do
   field :draft_campaign, 12, type: :string
 
   field :status, 6,
-    type: Google.Ads.Googleads.V8.Enums.CampaignDraftStatusEnum.CampaignDraftStatus,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.CampaignDraftStatusEnum.CampaignDraftStatus,
     enum: true
 
   field :has_experiment_running, 13, type: :bool

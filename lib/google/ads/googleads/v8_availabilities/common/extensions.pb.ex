@@ -1,15 +1,15 @@
-defmodule Google.Ads.Googleads.V8.Common.AppFeedItem do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.AppFeedItem do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           link_text: String.t(),
           app_id: String.t(),
-          app_store: Google.Ads.Googleads.V8.Enums.AppStoreEnum.AppStore.t(),
+          app_store: Google.Ads.Googleads.V8Availabilities.Enums.AppStoreEnum.AppStore.t(),
           final_urls: [String.t()],
           final_mobile_urls: [String.t()],
           tracking_url_template: String.t(),
-          url_custom_parameters: [Google.Ads.Googleads.V8.Common.CustomParameter.t()],
+          url_custom_parameters: [Google.Ads.Googleads.V8Availabilities.Common.CustomParameter.t()],
           final_url_suffix: String.t()
         }
 
@@ -26,19 +26,19 @@ defmodule Google.Ads.Googleads.V8.Common.AppFeedItem do
 
   field :link_text, 9, type: :string
   field :app_id, 10, type: :string
-  field :app_store, 3, type: Google.Ads.Googleads.V8.Enums.AppStoreEnum.AppStore, enum: true
+  field :app_store, 3, type: Google.Ads.Googleads.V8Availabilities.Enums.AppStoreEnum.AppStore, enum: true
   field :final_urls, 11, repeated: true, type: :string
   field :final_mobile_urls, 12, repeated: true, type: :string
   field :tracking_url_template, 13, type: :string
 
   field :url_custom_parameters, 7,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Common.CustomParameter
+    type: Google.Ads.Googleads.V8Availabilities.Common.CustomParameter
 
   field :final_url_suffix, 14, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.CallFeedItem do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.CallFeedItem do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -49,7 +49,7 @@ defmodule Google.Ads.Googleads.V8.Common.CallFeedItem do
           call_conversion_action: String.t(),
           call_conversion_tracking_disabled: boolean,
           call_conversion_reporting_state:
-            Google.Ads.Googleads.V8.Enums.CallConversionReportingStateEnum.CallConversionReportingState.t()
+            Google.Ads.Googleads.V8Availabilities.Enums.CallConversionReportingStateEnum.CallConversionReportingState.t()
         }
 
   defstruct [
@@ -69,11 +69,11 @@ defmodule Google.Ads.Googleads.V8.Common.CallFeedItem do
 
   field :call_conversion_reporting_state, 6,
     type:
-      Google.Ads.Googleads.V8.Enums.CallConversionReportingStateEnum.CallConversionReportingState,
+      Google.Ads.Googleads.V8Availabilities.Enums.CallConversionReportingStateEnum.CallConversionReportingState,
     enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Common.CalloutFeedItem do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.CalloutFeedItem do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -86,7 +86,7 @@ defmodule Google.Ads.Googleads.V8.Common.CalloutFeedItem do
   field :callout_text, 2, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.LocationFeedItem do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.LocationFeedItem do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -122,7 +122,7 @@ defmodule Google.Ads.Googleads.V8.Common.LocationFeedItem do
   field :phone_number, 16, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.AffiliateLocationFeedItem do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.AffiliateLocationFeedItem do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -164,7 +164,7 @@ defmodule Google.Ads.Googleads.V8.Common.AffiliateLocationFeedItem do
   field :chain_name, 20, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.TextMessageFeedItem do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.TextMessageFeedItem do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -185,17 +185,17 @@ defmodule Google.Ads.Googleads.V8.Common.TextMessageFeedItem do
   field :extension_text, 10, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.PriceFeedItem do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.PriceFeedItem do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          type: Google.Ads.Googleads.V8.Enums.PriceExtensionTypeEnum.PriceExtensionType.t(),
+          type: Google.Ads.Googleads.V8Availabilities.Enums.PriceExtensionTypeEnum.PriceExtensionType.t(),
           price_qualifier:
-            Google.Ads.Googleads.V8.Enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier.t(),
           tracking_url_template: String.t(),
           language_code: String.t(),
-          price_offerings: [Google.Ads.Googleads.V8.Common.PriceOffer.t()],
+          price_offerings: [Google.Ads.Googleads.V8Availabilities.Common.PriceOffer.t()],
           final_url_suffix: String.t()
         }
 
@@ -209,30 +209,30 @@ defmodule Google.Ads.Googleads.V8.Common.PriceFeedItem do
   ]
 
   field :type, 1,
-    type: Google.Ads.Googleads.V8.Enums.PriceExtensionTypeEnum.PriceExtensionType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.PriceExtensionTypeEnum.PriceExtensionType,
     enum: true
 
   field :price_qualifier, 2,
     type:
-      Google.Ads.Googleads.V8.Enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier,
+      Google.Ads.Googleads.V8Availabilities.Enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier,
     enum: true
 
   field :tracking_url_template, 7, type: :string
   field :language_code, 8, type: :string
-  field :price_offerings, 5, repeated: true, type: Google.Ads.Googleads.V8.Common.PriceOffer
+  field :price_offerings, 5, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Common.PriceOffer
   field :final_url_suffix, 9, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.PriceOffer do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.PriceOffer do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           header: String.t(),
           description: String.t(),
-          price: Google.Ads.Googleads.V8.Common.Money.t() | nil,
+          price: Google.Ads.Googleads.V8Availabilities.Common.Money.t() | nil,
           unit:
-            Google.Ads.Googleads.V8.Enums.PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit.t(),
           final_urls: [String.t()],
           final_mobile_urls: [String.t()]
         }
@@ -241,17 +241,17 @@ defmodule Google.Ads.Googleads.V8.Common.PriceOffer do
 
   field :header, 7, type: :string
   field :description, 8, type: :string
-  field :price, 3, type: Google.Ads.Googleads.V8.Common.Money
+  field :price, 3, type: Google.Ads.Googleads.V8Availabilities.Common.Money
 
   field :unit, 4,
-    type: Google.Ads.Googleads.V8.Enums.PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit,
     enum: true
 
   field :final_urls, 9, repeated: true, type: :string
   field :final_mobile_urls, 10, repeated: true, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.PromotionFeedItem do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.PromotionFeedItem do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -260,15 +260,15 @@ defmodule Google.Ads.Googleads.V8.Common.PromotionFeedItem do
           promotion_trigger: {atom, any},
           promotion_target: String.t(),
           discount_modifier:
-            Google.Ads.Googleads.V8.Enums.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier.t(),
           promotion_start_date: String.t(),
           promotion_end_date: String.t(),
           occasion:
-            Google.Ads.Googleads.V8.Enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion.t(),
           final_urls: [String.t()],
           final_mobile_urls: [String.t()],
           tracking_url_template: String.t(),
-          url_custom_parameters: [Google.Ads.Googleads.V8.Common.CustomParameter.t()],
+          url_custom_parameters: [Google.Ads.Googleads.V8Availabilities.Common.CustomParameter.t()],
           final_url_suffix: String.t(),
           language_code: String.t()
         }
@@ -296,14 +296,14 @@ defmodule Google.Ads.Googleads.V8.Common.PromotionFeedItem do
 
   field :discount_modifier, 2,
     type:
-      Google.Ads.Googleads.V8.Enums.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier,
+      Google.Ads.Googleads.V8Availabilities.Enums.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier,
     enum: true
 
   field :promotion_start_date, 19, type: :string
   field :promotion_end_date, 20, type: :string
 
   field :occasion, 9,
-    type: Google.Ads.Googleads.V8.Enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion,
     enum: true
 
   field :final_urls, 21, repeated: true, type: :string
@@ -312,17 +312,17 @@ defmodule Google.Ads.Googleads.V8.Common.PromotionFeedItem do
 
   field :url_custom_parameters, 13,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Common.CustomParameter
+    type: Google.Ads.Googleads.V8Availabilities.Common.CustomParameter
 
   field :final_url_suffix, 24, type: :string
   field :language_code, 25, type: :string
   field :percent_off, 17, type: :int64, oneof: 0
-  field :money_amount_off, 4, type: Google.Ads.Googleads.V8.Common.Money, oneof: 0
+  field :money_amount_off, 4, type: Google.Ads.Googleads.V8Availabilities.Common.Money, oneof: 0
   field :promotion_code, 18, type: :string, oneof: 1
-  field :orders_over_amount, 6, type: Google.Ads.Googleads.V8.Common.Money, oneof: 1
+  field :orders_over_amount, 6, type: Google.Ads.Googleads.V8Availabilities.Common.Money, oneof: 1
 end
 
-defmodule Google.Ads.Googleads.V8.Common.StructuredSnippetFeedItem do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.StructuredSnippetFeedItem do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -337,7 +337,7 @@ defmodule Google.Ads.Googleads.V8.Common.StructuredSnippetFeedItem do
   field :values, 4, repeated: true, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.SitelinkFeedItem do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.SitelinkFeedItem do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -348,7 +348,7 @@ defmodule Google.Ads.Googleads.V8.Common.SitelinkFeedItem do
           final_urls: [String.t()],
           final_mobile_urls: [String.t()],
           tracking_url_template: String.t(),
-          url_custom_parameters: [Google.Ads.Googleads.V8.Common.CustomParameter.t()],
+          url_custom_parameters: [Google.Ads.Googleads.V8Availabilities.Common.CustomParameter.t()],
           final_url_suffix: String.t()
         }
 
@@ -372,12 +372,12 @@ defmodule Google.Ads.Googleads.V8.Common.SitelinkFeedItem do
 
   field :url_custom_parameters, 7,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Common.CustomParameter
+    type: Google.Ads.Googleads.V8Availabilities.Common.CustomParameter
 
   field :final_url_suffix, 15, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.HotelCalloutFeedItem do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.HotelCalloutFeedItem do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -392,7 +392,7 @@ defmodule Google.Ads.Googleads.V8.Common.HotelCalloutFeedItem do
   field :language_code, 4, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.ImageFeedItem do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.ImageFeedItem do
   @moduledoc false
   use Protobuf, syntax: :proto3
 

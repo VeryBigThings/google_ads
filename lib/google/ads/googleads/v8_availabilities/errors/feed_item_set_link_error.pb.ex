@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.FeedItemSetLinkErrorEnum.FeedItemSetLinkError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.FeedItemSetLinkErrorEnum.FeedItemSetLinkError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -18,7 +18,7 @@ defmodule Google.Ads.Googleads.V8.Errors.FeedItemSetLinkErrorEnum.FeedItemSetLin
   field :NO_MUTATE_ALLOWED_FOR_DYNAMIC_SET, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.FeedItemSetLinkErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.FeedItemSetLinkErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

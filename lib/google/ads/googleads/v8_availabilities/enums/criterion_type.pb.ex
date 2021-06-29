@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.CriterionTypeEnum.CriterionType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.CriterionTypeEnum.CriterionType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -111,7 +111,7 @@ defmodule Google.Ads.Googleads.V8.Enums.CriterionTypeEnum.CriterionType do
   field :KEYWORD_THEME, 34
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.CriterionTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.CriterionTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

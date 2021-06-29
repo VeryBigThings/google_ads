@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetAccountBudgetProposalRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetAccountBudgetProposalRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,24 +11,24 @@ defmodule Google.Ads.Googleads.V8.Services.GetAccountBudgetProposalRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateAccountBudgetProposalRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateAccountBudgetProposalRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           customer_id: String.t(),
-          operation: Google.Ads.Googleads.V8.Services.AccountBudgetProposalOperation.t() | nil,
+          operation: Google.Ads.Googleads.V8Availabilities.Services.AccountBudgetProposalOperation.t() | nil,
           validate_only: boolean
         }
 
   defstruct [:customer_id, :operation, :validate_only]
 
   field :customer_id, 1, type: :string
-  field :operation, 2, type: Google.Ads.Googleads.V8.Services.AccountBudgetProposalOperation
+  field :operation, 2, type: Google.Ads.Googleads.V8Availabilities.Services.AccountBudgetProposalOperation
   field :validate_only, 3, type: :bool
 end
 
-defmodule Google.Ads.Googleads.V8.Services.AccountBudgetProposalOperation do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.AccountBudgetProposalOperation do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -42,24 +42,24 @@ defmodule Google.Ads.Googleads.V8.Services.AccountBudgetProposalOperation do
   oneof :operation, 0
 
   field :update_mask, 3, type: Google.Protobuf.FieldMask
-  field :create, 2, type: Google.Ads.Googleads.V8.Resources.AccountBudgetProposal, oneof: 0
+  field :create, 2, type: Google.Ads.Googleads.V8Availabilities.Resources.AccountBudgetProposal, oneof: 0
   field :remove, 1, type: :string, oneof: 0
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateAccountBudgetProposalResponse do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateAccountBudgetProposalResponse do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          result: Google.Ads.Googleads.V8.Services.MutateAccountBudgetProposalResult.t() | nil
+          result: Google.Ads.Googleads.V8Availabilities.Services.MutateAccountBudgetProposalResult.t() | nil
         }
 
   defstruct [:result]
 
-  field :result, 2, type: Google.Ads.Googleads.V8.Services.MutateAccountBudgetProposalResult
+  field :result, 2, type: Google.Ads.Googleads.V8Availabilities.Services.MutateAccountBudgetProposalResult
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateAccountBudgetProposalResult do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateAccountBudgetProposalResult do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -72,20 +72,20 @@ defmodule Google.Ads.Googleads.V8.Services.MutateAccountBudgetProposalResult do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.AccountBudgetProposalService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.AccountBudgetProposalService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.AccountBudgetProposalService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.AccountBudgetProposalService"
 
   rpc :GetAccountBudgetProposal,
-      Google.Ads.Googleads.V8.Services.GetAccountBudgetProposalRequest,
-      Google.Ads.Googleads.V8.Resources.AccountBudgetProposal
+      Google.Ads.Googleads.V8Availabilities.Services.GetAccountBudgetProposalRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.AccountBudgetProposal
 
   rpc :MutateAccountBudgetProposal,
-      Google.Ads.Googleads.V8.Services.MutateAccountBudgetProposalRequest,
-      Google.Ads.Googleads.V8.Services.MutateAccountBudgetProposalResponse
+      Google.Ads.Googleads.V8Availabilities.Services.MutateAccountBudgetProposalRequest,
+      Google.Ads.Googleads.V8Availabilities.Services.MutateAccountBudgetProposalResponse
 end
 
-defmodule Google.Ads.Googleads.V8.Services.AccountBudgetProposalService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.AccountBudgetProposalService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.AccountBudgetProposalService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.AccountBudgetProposalService.Service
 end

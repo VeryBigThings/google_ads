@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.DomainCategory do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.DomainCategory do
   @moduledoc false
   use Protobuf, syntax: :proto3
 

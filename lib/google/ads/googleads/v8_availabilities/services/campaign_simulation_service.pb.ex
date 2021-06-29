@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetCampaignSimulationRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetCampaignSimulationRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,16 +11,16 @@ defmodule Google.Ads.Googleads.V8.Services.GetCampaignSimulationRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.CampaignSimulationService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.CampaignSimulationService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.CampaignSimulationService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.CampaignSimulationService"
 
   rpc :GetCampaignSimulation,
-      Google.Ads.Googleads.V8.Services.GetCampaignSimulationRequest,
-      Google.Ads.Googleads.V8.Resources.CampaignSimulation
+      Google.Ads.Googleads.V8Availabilities.Services.GetCampaignSimulationRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.CampaignSimulation
 end
 
-defmodule Google.Ads.Googleads.V8.Services.CampaignSimulationService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.CampaignSimulationService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.CampaignSimulationService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.CampaignSimulationService.Service
 end

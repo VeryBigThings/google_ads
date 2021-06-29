@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.InternalErrorEnum.InternalError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.InternalErrorEnum.InternalError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -24,7 +24,7 @@ defmodule Google.Ads.Googleads.V8.Errors.InternalErrorEnum.InternalError do
   field :DEADLINE_EXCEEDED, 5
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.InternalErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.InternalErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.MediaTypeEnum.MediaType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.MediaTypeEnum.MediaType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -30,7 +30,7 @@ defmodule Google.Ads.Googleads.V8.Enums.MediaTypeEnum.MediaType do
   field :DYNAMIC_IMAGE, 7
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.MediaTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.MediaTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

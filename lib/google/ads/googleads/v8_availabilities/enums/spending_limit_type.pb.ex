@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.SpendingLimitTypeEnum.SpendingLimitType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.SpendingLimitTypeEnum.SpendingLimitType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :INFINITE
@@ -10,7 +10,7 @@ defmodule Google.Ads.Googleads.V8.Enums.SpendingLimitTypeEnum.SpendingLimitType 
   field :INFINITE, 2
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.SpendingLimitTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.SpendingLimitTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

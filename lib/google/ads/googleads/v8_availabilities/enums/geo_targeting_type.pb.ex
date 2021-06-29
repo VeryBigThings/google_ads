@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.GeoTargetingTypeEnum.GeoTargetingType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.GeoTargetingTypeEnum.GeoTargetingType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :AREA_OF_INTEREST | :LOCATION_OF_PRESENCE
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Enums.GeoTargetingTypeEnum.GeoTargetingType do
   field :LOCATION_OF_PRESENCE, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.GeoTargetingTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.GeoTargetingTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.FeedItemTargetErrorEnum.FeedItemTargetError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.FeedItemTargetErrorEnum.FeedItemTargetError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -36,7 +36,7 @@ defmodule Google.Ads.Googleads.V8.Errors.FeedItemTargetErrorEnum.FeedItemTargetE
   field :DUPLICATE_KEYWORD, 9
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.FeedItemTargetErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.FeedItemTargetErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

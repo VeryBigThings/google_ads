@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.ImageErrorEnum.ImageError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.ImageErrorEnum.ImageError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -129,7 +129,7 @@ defmodule Google.Ads.Googleads.V8.Errors.ImageErrorEnum.ImageError do
   field :FORMAT_NOT_ALLOWED, 40
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.ImageErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.ImageErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

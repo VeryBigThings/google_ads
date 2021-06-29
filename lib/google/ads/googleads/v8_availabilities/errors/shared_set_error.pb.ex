@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.SharedSetErrorEnum.SharedSetError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.SharedSetErrorEnum.SharedSetError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -24,7 +24,7 @@ defmodule Google.Ads.Googleads.V8.Errors.SharedSetErrorEnum.SharedSetError do
   field :SHARED_SET_IN_USE, 5
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.SharedSetErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.SharedSetErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

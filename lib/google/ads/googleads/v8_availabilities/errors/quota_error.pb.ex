@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.QuotaErrorEnum.QuotaError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.QuotaErrorEnum.QuotaError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -21,7 +21,7 @@ defmodule Google.Ads.Googleads.V8.Errors.QuotaErrorEnum.QuotaError do
   field :RESOURCE_TEMPORARILY_EXHAUSTED, 4
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.QuotaErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.QuotaErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

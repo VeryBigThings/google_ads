@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :AD_VARIATIONS
@@ -10,7 +10,7 @@ defmodule Google.Ads.Googleads.V8.Enums.SystemManagedResourceSourceEnum.SystemMa
   field :AD_VARIATIONS, 2
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.SystemManagedResourceSourceEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.SystemManagedResourceSourceEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

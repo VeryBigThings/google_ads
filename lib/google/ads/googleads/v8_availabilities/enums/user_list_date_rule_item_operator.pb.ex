@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :EQUALS | :NOT_EQUALS | :BEFORE | :AFTER
@@ -16,7 +16,7 @@ defmodule Google.Ads.Googleads.V8.Enums.UserListDateRuleItemOperatorEnum.UserLis
   field :AFTER, 5
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.UserListDateRuleItemOperatorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.UserListDateRuleItemOperatorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

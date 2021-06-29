@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetMobileAppCategoryConstantRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetMobileAppCategoryConstantRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,17 +11,17 @@ defmodule Google.Ads.Googleads.V8.Services.GetMobileAppCategoryConstantRequest d
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MobileAppCategoryConstantService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MobileAppCategoryConstantService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.MobileAppCategoryConstantService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.MobileAppCategoryConstantService"
 
   rpc :GetMobileAppCategoryConstant,
-      Google.Ads.Googleads.V8.Services.GetMobileAppCategoryConstantRequest,
-      Google.Ads.Googleads.V8.Resources.MobileAppCategoryConstant
+      Google.Ads.Googleads.V8Availabilities.Services.GetMobileAppCategoryConstantRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.MobileAppCategoryConstant
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MobileAppCategoryConstantService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MobileAppCategoryConstantService.Stub do
   @moduledoc false
   use GRPC.Stub,
-    service: Google.Ads.Googleads.V8.Services.MobileAppCategoryConstantService.Service
+    service: Google.Ads.Googleads.V8Availabilities.Services.MobileAppCategoryConstantService.Service
 end

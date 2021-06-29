@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.CustomInterestMemberTypeEnum.CustomInterestMemberType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.CustomInterestMemberTypeEnum.CustomInterestMemberType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :KEYWORD | :URL
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Enums.CustomInterestMemberTypeEnum.CustomInter
   field :URL, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.CustomInterestMemberTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.CustomInterestMemberTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

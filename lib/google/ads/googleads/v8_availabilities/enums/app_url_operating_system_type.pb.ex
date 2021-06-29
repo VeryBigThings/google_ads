@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :IOS | :ANDROID
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Enums.AppUrlOperatingSystemTypeEnum.AppUrlOper
   field :ANDROID, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.AppUrlOperatingSystemTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AppUrlOperatingSystemTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

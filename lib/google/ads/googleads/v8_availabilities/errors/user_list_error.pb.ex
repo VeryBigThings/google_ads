@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.UserListErrorEnum.UserListError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.UserListErrorEnum.UserListError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -90,7 +90,7 @@ defmodule Google.Ads.Googleads.V8.Errors.UserListErrorEnum.UserListError do
   field :CAN_NOT_MIX_CRM_BASED_IN_LOGICAL_LIST_WITH_OTHER_LISTS, 36
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.UserListErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.UserListErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

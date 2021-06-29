@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :RESOURCE | :ATTRIBUTE | :SEGMENT | :METRIC
@@ -16,7 +16,7 @@ defmodule Google.Ads.Googleads.V8.Enums.GoogleAdsFieldCategoryEnum.GoogleAdsFiel
   field :METRIC, 6
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.GoogleAdsFieldCategoryEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.GoogleAdsFieldCategoryEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

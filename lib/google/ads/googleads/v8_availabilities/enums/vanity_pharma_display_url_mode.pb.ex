@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :MANUFACTURER_WEBSITE_URL | :WEBSITE_DESCRIPTION
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Enums.VanityPharmaDisplayUrlModeEnum.VanityPha
   field :WEBSITE_DESCRIPTION, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.VanityPharmaDisplayUrlModeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.VanityPharmaDisplayUrlModeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

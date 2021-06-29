@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.ResourceAccessDeniedErrorEnum.ResourceAccessDeniedError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.ResourceAccessDeniedErrorEnum.ResourceAccessDeniedError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :WRITE_ACCESS_DENIED
@@ -10,7 +10,7 @@ defmodule Google.Ads.Googleads.V8.Errors.ResourceAccessDeniedErrorEnum.ResourceA
   field :WRITE_ACCESS_DENIED, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.ResourceAccessDeniedErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.ResourceAccessDeniedErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

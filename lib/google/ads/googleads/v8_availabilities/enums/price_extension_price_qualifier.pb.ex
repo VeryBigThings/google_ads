@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :FROM | :UP_TO | :AVERAGE
@@ -14,7 +14,7 @@ defmodule Google.Ads.Googleads.V8.Enums.PriceExtensionPriceQualifierEnum.PriceEx
   field :AVERAGE, 4
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.PriceExtensionPriceQualifierEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.PriceExtensionPriceQualifierEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

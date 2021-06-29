@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.OperationAccessDeniedErrorEnum.OperationAccessDeniedError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.OperationAccessDeniedErrorEnum.OperationAccessDeniedError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -42,7 +42,7 @@ defmodule Google.Ads.Googleads.V8.Errors.OperationAccessDeniedErrorEnum.Operatio
   field :MUTATE_NOT_PERMITTED_FOR_CUSTOMER, 11
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.OperationAccessDeniedErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.OperationAccessDeniedErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

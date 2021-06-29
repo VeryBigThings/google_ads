@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.ExternalConversionSourceEnum.ExternalConversionSource do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ExternalConversionSourceEnum.ExternalConversionSource do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -93,7 +93,7 @@ defmodule Google.Ads.Googleads.V8.Enums.ExternalConversionSourceEnum.ExternalCon
   field :FIREBASE_SEARCH_ADS_360, 33
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.ExternalConversionSourceEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ExternalConversionSourceEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

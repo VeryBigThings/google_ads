@@ -1,11 +1,11 @@
-defmodule Google.Ads.Googleads.V8.Common.TagSnippet do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.TagSnippet do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          type: Google.Ads.Googleads.V8.Enums.TrackingCodeTypeEnum.TrackingCodeType.t(),
+          type: Google.Ads.Googleads.V8Availabilities.Enums.TrackingCodeTypeEnum.TrackingCodeType.t(),
           page_format:
-            Google.Ads.Googleads.V8.Enums.TrackingCodePageFormatEnum.TrackingCodePageFormat.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.TrackingCodePageFormatEnum.TrackingCodePageFormat.t(),
           global_site_tag: String.t(),
           event_snippet: String.t()
         }
@@ -13,11 +13,11 @@ defmodule Google.Ads.Googleads.V8.Common.TagSnippet do
   defstruct [:type, :page_format, :global_site_tag, :event_snippet]
 
   field :type, 1,
-    type: Google.Ads.Googleads.V8.Enums.TrackingCodeTypeEnum.TrackingCodeType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.TrackingCodeTypeEnum.TrackingCodeType,
     enum: true
 
   field :page_format, 2,
-    type: Google.Ads.Googleads.V8.Enums.TrackingCodePageFormatEnum.TrackingCodePageFormat,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.TrackingCodePageFormatEnum.TrackingCodePageFormat,
     enum: true
 
   field :global_site_tag, 5, type: :string

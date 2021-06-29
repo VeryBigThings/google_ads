@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.CampaignFeedErrorEnum.CampaignFeedError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.CampaignFeedErrorEnum.CampaignFeedError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -33,7 +33,7 @@ defmodule Google.Ads.Googleads.V8.Errors.CampaignFeedErrorEnum.CampaignFeedError
   field :NO_EXISTING_LOCATION_CUSTOMER_FEED, 9
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.CampaignFeedErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.CampaignFeedErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

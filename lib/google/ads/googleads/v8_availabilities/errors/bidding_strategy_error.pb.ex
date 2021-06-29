@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.BiddingStrategyErrorEnum.BiddingStrategyError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.BiddingStrategyErrorEnum.BiddingStrategyError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -27,7 +27,7 @@ defmodule Google.Ads.Googleads.V8.Errors.BiddingStrategyErrorEnum.BiddingStrateg
   field :INCOMPATIBLE_BIDDING_STRATEGY_AND_BIDDING_STRATEGY_GOAL_TYPE, 6
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.BiddingStrategyErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.BiddingStrategyErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

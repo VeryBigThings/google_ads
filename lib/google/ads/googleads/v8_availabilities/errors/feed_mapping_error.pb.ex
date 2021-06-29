@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.FeedMappingErrorEnum.FeedMappingError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.FeedMappingErrorEnum.FeedMappingError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -63,7 +63,7 @@ defmodule Google.Ads.Googleads.V8.Errors.FeedMappingErrorEnum.FeedMappingError d
   field :ATTRIBUTE_FIELD_MAPPING_MISSING_FIELD, 19
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.FeedMappingErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.FeedMappingErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.AdParameterErrorEnum.AdParameterError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.AdParameterErrorEnum.AdParameterError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -18,7 +18,7 @@ defmodule Google.Ads.Googleads.V8.Errors.AdParameterErrorEnum.AdParameterError d
   field :INVALID_INSERTION_TEXT_FORMAT, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.AdParameterErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.AdParameterErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

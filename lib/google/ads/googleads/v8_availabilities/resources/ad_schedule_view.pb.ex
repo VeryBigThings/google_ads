@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.AdScheduleView do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.AdScheduleView do
   @moduledoc false
   use Protobuf, syntax: :proto3
 

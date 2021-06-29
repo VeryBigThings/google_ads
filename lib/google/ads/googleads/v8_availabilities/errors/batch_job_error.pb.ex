@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.BatchJobErrorEnum.BatchJobError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.BatchJobErrorEnum.BatchJobError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -30,7 +30,7 @@ defmodule Google.Ads.Googleads.V8.Errors.BatchJobErrorEnum.BatchJobError do
   field :CAN_ONLY_REMOVE_PENDING_JOB, 7
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.BatchJobErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.BatchJobErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

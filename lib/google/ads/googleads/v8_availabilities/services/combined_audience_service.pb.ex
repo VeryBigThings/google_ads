@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetCombinedAudienceRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetCombinedAudienceRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,16 +11,16 @@ defmodule Google.Ads.Googleads.V8.Services.GetCombinedAudienceRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.CombinedAudienceService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.CombinedAudienceService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.CombinedAudienceService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.CombinedAudienceService"
 
   rpc :GetCombinedAudience,
-      Google.Ads.Googleads.V8.Services.GetCombinedAudienceRequest,
-      Google.Ads.Googleads.V8.Resources.CombinedAudience
+      Google.Ads.Googleads.V8Availabilities.Services.GetCombinedAudienceRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.CombinedAudience
 end
 
-defmodule Google.Ads.Googleads.V8.Services.CombinedAudienceService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.CombinedAudienceService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.CombinedAudienceService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.CombinedAudienceService.Service
 end

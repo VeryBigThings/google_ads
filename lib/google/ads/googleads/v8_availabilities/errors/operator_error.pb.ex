@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.OperatorErrorEnum.OperatorError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.OperatorErrorEnum.OperatorError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :OPERATOR_NOT_SUPPORTED
@@ -10,7 +10,7 @@ defmodule Google.Ads.Googleads.V8.Errors.OperatorErrorEnum.OperatorError do
   field :OPERATOR_NOT_SUPPORTED, 2
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.OperatorErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.OperatorErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

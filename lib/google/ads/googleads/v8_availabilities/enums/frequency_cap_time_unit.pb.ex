@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :DAY | :WEEK | :MONTH
@@ -14,7 +14,7 @@ defmodule Google.Ads.Googleads.V8.Enums.FrequencyCapTimeUnitEnum.FrequencyCapTim
   field :MONTH, 4
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.FrequencyCapTimeUnitEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.FrequencyCapTimeUnitEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

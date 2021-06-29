@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.PaymentsAccount do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.PaymentsAccount do
   @moduledoc false
   use Protobuf, syntax: :proto3
 

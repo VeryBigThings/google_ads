@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.BiddingErrorEnum.BiddingError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.BiddingErrorEnum.BiddingError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -84,7 +84,7 @@ defmodule Google.Ads.Googleads.V8.Errors.BiddingErrorEnum.BiddingError do
   field :BIDDING_STRATEGY_TYPE_INCOMPATIBLE_WITH_SHARED_BUDGET, 37
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.BiddingErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.BiddingErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

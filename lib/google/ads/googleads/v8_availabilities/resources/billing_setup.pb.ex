@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.BillingSetup.PaymentsAccountInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.BillingSetup.PaymentsAccountInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -25,7 +25,7 @@ defmodule Google.Ads.Googleads.V8.Resources.BillingSetup.PaymentsAccountInfo do
   field :secondary_payments_profile_id, 10, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.BillingSetup do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.BillingSetup do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -34,10 +34,10 @@ defmodule Google.Ads.Googleads.V8.Resources.BillingSetup do
           end_time: {atom, any},
           resource_name: String.t(),
           id: integer,
-          status: Google.Ads.Googleads.V8.Enums.BillingSetupStatusEnum.BillingSetupStatus.t(),
+          status: Google.Ads.Googleads.V8Availabilities.Enums.BillingSetupStatusEnum.BillingSetupStatus.t(),
           payments_account: String.t(),
           payments_account_info:
-            Google.Ads.Googleads.V8.Resources.BillingSetup.PaymentsAccountInfo.t() | nil
+            Google.Ads.Googleads.V8Availabilities.Resources.BillingSetup.PaymentsAccountInfo.t() | nil
         }
 
   defstruct [
@@ -57,25 +57,25 @@ defmodule Google.Ads.Googleads.V8.Resources.BillingSetup do
   field :id, 15, type: :int64
 
   field :status, 3,
-    type: Google.Ads.Googleads.V8.Enums.BillingSetupStatusEnum.BillingSetupStatus,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.BillingSetupStatusEnum.BillingSetupStatus,
     enum: true
 
   field :payments_account, 18, type: :string
 
   field :payments_account_info, 12,
-    type: Google.Ads.Googleads.V8.Resources.BillingSetup.PaymentsAccountInfo
+    type: Google.Ads.Googleads.V8Availabilities.Resources.BillingSetup.PaymentsAccountInfo
 
   field :start_date_time, 16, type: :string, oneof: 0
 
   field :start_time_type, 10,
-    type: Google.Ads.Googleads.V8.Enums.TimeTypeEnum.TimeType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.TimeTypeEnum.TimeType,
     enum: true,
     oneof: 0
 
   field :end_date_time, 17, type: :string, oneof: 1
 
   field :end_time_type, 14,
-    type: Google.Ads.Googleads.V8.Enums.TimeTypeEnum.TimeType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.TimeTypeEnum.TimeType,
     enum: true,
     oneof: 1
 end

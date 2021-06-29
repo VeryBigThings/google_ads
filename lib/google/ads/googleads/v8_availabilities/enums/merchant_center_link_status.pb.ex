@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.MerchantCenterLinkStatusEnum.MerchantCenterLinkStatus do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.MerchantCenterLinkStatusEnum.MerchantCenterLinkStatus do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :ENABLED | :PENDING
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Enums.MerchantCenterLinkStatusEnum.MerchantCen
   field :PENDING, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.MerchantCenterLinkStatusEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.MerchantCenterLinkStatusEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

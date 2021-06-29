@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetRemarketingActionRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetRemarketingActionRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,13 +11,13 @@ defmodule Google.Ads.Googleads.V8.Services.GetRemarketingActionRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateRemarketingActionsRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateRemarketingActionsRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           customer_id: String.t(),
-          operations: [Google.Ads.Googleads.V8.Services.RemarketingActionOperation.t()],
+          operations: [Google.Ads.Googleads.V8Availabilities.Services.RemarketingActionOperation.t()],
           partial_failure: boolean,
           validate_only: boolean
         }
@@ -28,13 +28,13 @@ defmodule Google.Ads.Googleads.V8.Services.MutateRemarketingActionsRequest do
 
   field :operations, 2,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Services.RemarketingActionOperation
+    type: Google.Ads.Googleads.V8Availabilities.Services.RemarketingActionOperation
 
   field :partial_failure, 3, type: :bool
   field :validate_only, 4, type: :bool
 end
 
-defmodule Google.Ads.Googleads.V8.Services.RemarketingActionOperation do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.RemarketingActionOperation do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -48,17 +48,17 @@ defmodule Google.Ads.Googleads.V8.Services.RemarketingActionOperation do
   oneof :operation, 0
 
   field :update_mask, 4, type: Google.Protobuf.FieldMask
-  field :create, 1, type: Google.Ads.Googleads.V8.Resources.RemarketingAction, oneof: 0
-  field :update, 2, type: Google.Ads.Googleads.V8.Resources.RemarketingAction, oneof: 0
+  field :create, 1, type: Google.Ads.Googleads.V8Availabilities.Resources.RemarketingAction, oneof: 0
+  field :update, 2, type: Google.Ads.Googleads.V8Availabilities.Resources.RemarketingAction, oneof: 0
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateRemarketingActionsResponse do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateRemarketingActionsResponse do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           partial_failure_error: Google.Rpc.Status.t() | nil,
-          results: [Google.Ads.Googleads.V8.Services.MutateRemarketingActionResult.t()]
+          results: [Google.Ads.Googleads.V8Availabilities.Services.MutateRemarketingActionResult.t()]
         }
 
   defstruct [:partial_failure_error, :results]
@@ -67,10 +67,10 @@ defmodule Google.Ads.Googleads.V8.Services.MutateRemarketingActionsResponse do
 
   field :results, 2,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Services.MutateRemarketingActionResult
+    type: Google.Ads.Googleads.V8Availabilities.Services.MutateRemarketingActionResult
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateRemarketingActionResult do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateRemarketingActionResult do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -83,20 +83,20 @@ defmodule Google.Ads.Googleads.V8.Services.MutateRemarketingActionResult do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.RemarketingActionService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.RemarketingActionService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.RemarketingActionService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.RemarketingActionService"
 
   rpc :GetRemarketingAction,
-      Google.Ads.Googleads.V8.Services.GetRemarketingActionRequest,
-      Google.Ads.Googleads.V8.Resources.RemarketingAction
+      Google.Ads.Googleads.V8Availabilities.Services.GetRemarketingActionRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.RemarketingAction
 
   rpc :MutateRemarketingActions,
-      Google.Ads.Googleads.V8.Services.MutateRemarketingActionsRequest,
-      Google.Ads.Googleads.V8.Services.MutateRemarketingActionsResponse
+      Google.Ads.Googleads.V8Availabilities.Services.MutateRemarketingActionsRequest,
+      Google.Ads.Googleads.V8Availabilities.Services.MutateRemarketingActionsResponse
 end
 
-defmodule Google.Ads.Googleads.V8.Services.RemarketingActionService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.RemarketingActionService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.RemarketingActionService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.RemarketingActionService.Service
 end

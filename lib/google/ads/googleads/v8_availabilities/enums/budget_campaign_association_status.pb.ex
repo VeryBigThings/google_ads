@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.BudgetCampaignAssociationStatusEnum.BudgetCampaignAssociationStatus do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.BudgetCampaignAssociationStatusEnum.BudgetCampaignAssociationStatus do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :ENABLED | :REMOVED
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Enums.BudgetCampaignAssociationStatusEnum.Budg
   field :REMOVED, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.BudgetCampaignAssociationStatusEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.BudgetCampaignAssociationStatusEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

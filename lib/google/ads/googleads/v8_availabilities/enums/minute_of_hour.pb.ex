@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.MinuteOfHourEnum.MinuteOfHour do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.MinuteOfHourEnum.MinuteOfHour do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :ZERO | :FIFTEEN | :THIRTY | :FORTY_FIVE
@@ -16,7 +16,7 @@ defmodule Google.Ads.Googleads.V8.Enums.MinuteOfHourEnum.MinuteOfHour do
   field :FORTY_FIVE, 5
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.MinuteOfHourEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.MinuteOfHourEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

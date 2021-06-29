@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.CallConversionReportingStateEnum.CallConversionReportingState do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.CallConversionReportingStateEnum.CallConversionReportingState do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -21,7 +21,7 @@ defmodule Google.Ads.Googleads.V8.Enums.CallConversionReportingStateEnum.CallCon
   field :USE_RESOURCE_LEVEL_CALL_CONVERSION_ACTION, 4
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.CallConversionReportingStateEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.CallConversionReportingStateEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

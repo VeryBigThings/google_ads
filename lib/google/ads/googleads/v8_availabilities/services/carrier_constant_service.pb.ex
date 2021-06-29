@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetCarrierConstantRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetCarrierConstantRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,16 +11,16 @@ defmodule Google.Ads.Googleads.V8.Services.GetCarrierConstantRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.CarrierConstantService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.CarrierConstantService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.CarrierConstantService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.CarrierConstantService"
 
   rpc :GetCarrierConstant,
-      Google.Ads.Googleads.V8.Services.GetCarrierConstantRequest,
-      Google.Ads.Googleads.V8.Resources.CarrierConstant
+      Google.Ads.Googleads.V8Availabilities.Services.GetCarrierConstantRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.CarrierConstant
 end
 
-defmodule Google.Ads.Googleads.V8.Services.CarrierConstantService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.CarrierConstantService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.CarrierConstantService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.CarrierConstantService.Service
 end

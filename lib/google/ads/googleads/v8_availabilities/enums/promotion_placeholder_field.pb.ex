@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.PromotionPlaceholderFieldEnum.PromotionPlaceholderField do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.PromotionPlaceholderFieldEnum.PromotionPlaceholderField do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -54,7 +54,7 @@ defmodule Google.Ads.Googleads.V8.Enums.PromotionPlaceholderFieldEnum.PromotionP
   field :FINAL_URL_SUFFIX, 15
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.PromotionPlaceholderFieldEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.PromotionPlaceholderFieldEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

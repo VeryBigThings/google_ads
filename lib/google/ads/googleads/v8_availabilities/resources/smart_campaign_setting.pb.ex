@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.SmartCampaignSetting.PhoneNumber do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.SmartCampaignSetting.PhoneNumber do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -13,7 +13,7 @@ defmodule Google.Ads.Googleads.V8.Resources.SmartCampaignSetting.PhoneNumber do
   field :country_code, 2, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.SmartCampaignSetting do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.SmartCampaignSetting do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -22,7 +22,7 @@ defmodule Google.Ads.Googleads.V8.Resources.SmartCampaignSetting do
           resource_name: String.t(),
           campaign: String.t(),
           phone_number:
-            Google.Ads.Googleads.V8.Resources.SmartCampaignSetting.PhoneNumber.t() | nil,
+            Google.Ads.Googleads.V8Availabilities.Resources.SmartCampaignSetting.PhoneNumber.t() | nil,
           final_url: String.t(),
           advertising_language_code: String.t()
         }
@@ -40,7 +40,7 @@ defmodule Google.Ads.Googleads.V8.Resources.SmartCampaignSetting do
 
   field :resource_name, 1, type: :string
   field :campaign, 2, type: :string
-  field :phone_number, 3, type: Google.Ads.Googleads.V8.Resources.SmartCampaignSetting.PhoneNumber
+  field :phone_number, 3, type: Google.Ads.Googleads.V8Availabilities.Resources.SmartCampaignSetting.PhoneNumber
   field :final_url, 4, type: :string
   field :advertising_language_code, 7, type: :string
   field :business_name, 5, type: :string, oneof: 0

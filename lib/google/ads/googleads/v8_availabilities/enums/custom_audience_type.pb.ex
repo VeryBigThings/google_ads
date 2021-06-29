@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.CustomAudienceTypeEnum.CustomAudienceType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.CustomAudienceTypeEnum.CustomAudienceType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :AUTO | :INTEREST | :PURCHASE_INTENT | :SEARCH
@@ -16,7 +16,7 @@ defmodule Google.Ads.Googleads.V8.Enums.CustomAudienceTypeEnum.CustomAudienceTyp
   field :SEARCH, 5
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.CustomAudienceTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.CustomAudienceTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.FeedAttributeOperation.Operator do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.FeedAttributeOperation.Operator do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :ADD
@@ -10,7 +10,7 @@ defmodule Google.Ads.Googleads.V8.Resources.FeedAttributeOperation.Operator do
   field :ADD, 2
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.Feed.PlacesLocationFeedData.OAuthInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.Feed.PlacesLocationFeedData.OAuthInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -27,13 +27,13 @@ defmodule Google.Ads.Googleads.V8.Resources.Feed.PlacesLocationFeedData.OAuthInf
   field :http_authorization_header, 6, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.Feed.PlacesLocationFeedData do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.Feed.PlacesLocationFeedData do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           oauth_info:
-            Google.Ads.Googleads.V8.Resources.Feed.PlacesLocationFeedData.OAuthInfo.t() | nil,
+            Google.Ads.Googleads.V8Availabilities.Resources.Feed.PlacesLocationFeedData.OAuthInfo.t() | nil,
           email_address: String.t(),
           business_account_id: String.t(),
           business_name_filter: String.t(),
@@ -51,7 +51,7 @@ defmodule Google.Ads.Googleads.V8.Resources.Feed.PlacesLocationFeedData do
   ]
 
   field :oauth_info, 1,
-    type: Google.Ads.Googleads.V8.Resources.Feed.PlacesLocationFeedData.OAuthInfo
+    type: Google.Ads.Googleads.V8Availabilities.Resources.Feed.PlacesLocationFeedData.OAuthInfo
 
   field :email_address, 7, type: :string
   field :business_account_id, 8, type: :string
@@ -60,14 +60,14 @@ defmodule Google.Ads.Googleads.V8.Resources.Feed.PlacesLocationFeedData do
   field :label_filters, 12, repeated: true, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.Feed.AffiliateLocationFeedData do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.Feed.AffiliateLocationFeedData do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           chain_ids: [integer],
           relationship_type:
-            Google.Ads.Googleads.V8.Enums.AffiliateLocationFeedRelationshipTypeEnum.AffiliateLocationFeedRelationshipType.t()
+            Google.Ads.Googleads.V8Availabilities.Enums.AffiliateLocationFeedRelationshipTypeEnum.AffiliateLocationFeedRelationshipType.t()
         }
 
   defstruct [:chain_ids, :relationship_type]
@@ -76,11 +76,11 @@ defmodule Google.Ads.Googleads.V8.Resources.Feed.AffiliateLocationFeedData do
 
   field :relationship_type, 2,
     type:
-      Google.Ads.Googleads.V8.Enums.AffiliateLocationFeedRelationshipTypeEnum.AffiliateLocationFeedRelationshipType,
+      Google.Ads.Googleads.V8Availabilities.Enums.AffiliateLocationFeedRelationshipTypeEnum.AffiliateLocationFeedRelationshipType,
     enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.Feed do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.Feed do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -89,10 +89,10 @@ defmodule Google.Ads.Googleads.V8.Resources.Feed do
           resource_name: String.t(),
           id: integer,
           name: String.t(),
-          attributes: [Google.Ads.Googleads.V8.Resources.FeedAttribute.t()],
-          attribute_operations: [Google.Ads.Googleads.V8.Resources.FeedAttributeOperation.t()],
-          origin: Google.Ads.Googleads.V8.Enums.FeedOriginEnum.FeedOrigin.t(),
-          status: Google.Ads.Googleads.V8.Enums.FeedStatusEnum.FeedStatus.t()
+          attributes: [Google.Ads.Googleads.V8Availabilities.Resources.FeedAttribute.t()],
+          attribute_operations: [Google.Ads.Googleads.V8Availabilities.Resources.FeedAttributeOperation.t()],
+          origin: Google.Ads.Googleads.V8Availabilities.Enums.FeedOriginEnum.FeedOrigin.t(),
+          status: Google.Ads.Googleads.V8Availabilities.Enums.FeedStatusEnum.FeedStatus.t()
         }
 
   defstruct [
@@ -111,32 +111,32 @@ defmodule Google.Ads.Googleads.V8.Resources.Feed do
   field :resource_name, 1, type: :string
   field :id, 11, type: :int64
   field :name, 12, type: :string
-  field :attributes, 4, repeated: true, type: Google.Ads.Googleads.V8.Resources.FeedAttribute
+  field :attributes, 4, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Resources.FeedAttribute
 
   field :attribute_operations, 9,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Resources.FeedAttributeOperation
+    type: Google.Ads.Googleads.V8Availabilities.Resources.FeedAttributeOperation
 
-  field :origin, 5, type: Google.Ads.Googleads.V8.Enums.FeedOriginEnum.FeedOrigin, enum: true
-  field :status, 8, type: Google.Ads.Googleads.V8.Enums.FeedStatusEnum.FeedStatus, enum: true
+  field :origin, 5, type: Google.Ads.Googleads.V8Availabilities.Enums.FeedOriginEnum.FeedOrigin, enum: true
+  field :status, 8, type: Google.Ads.Googleads.V8Availabilities.Enums.FeedStatusEnum.FeedStatus, enum: true
 
   field :places_location_feed_data, 6,
-    type: Google.Ads.Googleads.V8.Resources.Feed.PlacesLocationFeedData,
+    type: Google.Ads.Googleads.V8Availabilities.Resources.Feed.PlacesLocationFeedData,
     oneof: 0
 
   field :affiliate_location_feed_data, 7,
-    type: Google.Ads.Googleads.V8.Resources.Feed.AffiliateLocationFeedData,
+    type: Google.Ads.Googleads.V8Availabilities.Resources.Feed.AffiliateLocationFeedData,
     oneof: 0
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.FeedAttribute do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.FeedAttribute do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           id: integer,
           name: String.t(),
-          type: Google.Ads.Googleads.V8.Enums.FeedAttributeTypeEnum.FeedAttributeType.t(),
+          type: Google.Ads.Googleads.V8Availabilities.Enums.FeedAttributeTypeEnum.FeedAttributeType.t(),
           is_part_of_key: boolean
         }
 
@@ -146,26 +146,26 @@ defmodule Google.Ads.Googleads.V8.Resources.FeedAttribute do
   field :name, 6, type: :string
 
   field :type, 3,
-    type: Google.Ads.Googleads.V8.Enums.FeedAttributeTypeEnum.FeedAttributeType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.FeedAttributeTypeEnum.FeedAttributeType,
     enum: true
 
   field :is_part_of_key, 7, type: :bool
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.FeedAttributeOperation do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.FeedAttributeOperation do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          operator: Google.Ads.Googleads.V8.Resources.FeedAttributeOperation.Operator.t(),
-          value: Google.Ads.Googleads.V8.Resources.FeedAttribute.t() | nil
+          operator: Google.Ads.Googleads.V8Availabilities.Resources.FeedAttributeOperation.Operator.t(),
+          value: Google.Ads.Googleads.V8Availabilities.Resources.FeedAttribute.t() | nil
         }
 
   defstruct [:operator, :value]
 
   field :operator, 1,
-    type: Google.Ads.Googleads.V8.Resources.FeedAttributeOperation.Operator,
+    type: Google.Ads.Googleads.V8Availabilities.Resources.FeedAttributeOperation.Operator,
     enum: true
 
-  field :value, 2, type: Google.Ads.Googleads.V8.Resources.FeedAttribute
+  field :value, 2, type: Google.Ads.Googleads.V8Availabilities.Resources.FeedAttribute
 end

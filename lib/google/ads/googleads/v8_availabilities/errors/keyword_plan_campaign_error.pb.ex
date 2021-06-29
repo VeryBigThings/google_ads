@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.KeywordPlanCampaignErrorEnum.KeywordPlanCampaignError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.KeywordPlanCampaignErrorEnum.KeywordPlanCampaignError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -30,7 +30,7 @@ defmodule Google.Ads.Googleads.V8.Errors.KeywordPlanCampaignErrorEnum.KeywordPla
   field :MAX_LANGUAGES_EXCEEDED, 7
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.KeywordPlanCampaignErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.KeywordPlanCampaignErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

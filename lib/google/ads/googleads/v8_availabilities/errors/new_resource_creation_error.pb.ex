@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.NewResourceCreationErrorEnum.NewResourceCreationError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.NewResourceCreationErrorEnum.NewResourceCreationError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -21,7 +21,7 @@ defmodule Google.Ads.Googleads.V8.Errors.NewResourceCreationErrorEnum.NewResourc
   field :TEMP_ID_RESOURCE_HAD_ERRORS, 4
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.NewResourceCreationErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.NewResourceCreationErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

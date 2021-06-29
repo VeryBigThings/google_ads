@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.CampaignExperimentTypeEnum.CampaignExperimentType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.CampaignExperimentTypeEnum.CampaignExperimentType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :BASE | :DRAFT | :EXPERIMENT
@@ -14,7 +14,7 @@ defmodule Google.Ads.Googleads.V8.Enums.CampaignExperimentTypeEnum.CampaignExper
   field :EXPERIMENT, 4
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.CampaignExperimentTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.CampaignExperimentTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

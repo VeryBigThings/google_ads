@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetCustomerManagerLinkRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetCustomerManagerLinkRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,13 +11,13 @@ defmodule Google.Ads.Googleads.V8.Services.GetCustomerManagerLinkRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateCustomerManagerLinkRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateCustomerManagerLinkRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           customer_id: String.t(),
-          operations: [Google.Ads.Googleads.V8.Services.CustomerManagerLinkOperation.t()],
+          operations: [Google.Ads.Googleads.V8Availabilities.Services.CustomerManagerLinkOperation.t()],
           validate_only: boolean
         }
 
@@ -27,12 +27,12 @@ defmodule Google.Ads.Googleads.V8.Services.MutateCustomerManagerLinkRequest do
 
   field :operations, 2,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Services.CustomerManagerLinkOperation
+    type: Google.Ads.Googleads.V8Availabilities.Services.CustomerManagerLinkOperation
 
   field :validate_only, 3, type: :bool
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MoveManagerLinkRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MoveManagerLinkRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -51,7 +51,7 @@ defmodule Google.Ads.Googleads.V8.Services.MoveManagerLinkRequest do
   field :validate_only, 4, type: :bool
 end
 
-defmodule Google.Ads.Googleads.V8.Services.CustomerManagerLinkOperation do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.CustomerManagerLinkOperation do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -65,25 +65,25 @@ defmodule Google.Ads.Googleads.V8.Services.CustomerManagerLinkOperation do
   oneof :operation, 0
 
   field :update_mask, 4, type: Google.Protobuf.FieldMask
-  field :update, 2, type: Google.Ads.Googleads.V8.Resources.CustomerManagerLink, oneof: 0
+  field :update, 2, type: Google.Ads.Googleads.V8Availabilities.Resources.CustomerManagerLink, oneof: 0
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateCustomerManagerLinkResponse do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateCustomerManagerLinkResponse do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          results: [Google.Ads.Googleads.V8.Services.MutateCustomerManagerLinkResult.t()]
+          results: [Google.Ads.Googleads.V8Availabilities.Services.MutateCustomerManagerLinkResult.t()]
         }
 
   defstruct [:results]
 
   field :results, 1,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Services.MutateCustomerManagerLinkResult
+    type: Google.Ads.Googleads.V8Availabilities.Services.MutateCustomerManagerLinkResult
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MoveManagerLinkResponse do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MoveManagerLinkResponse do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -96,7 +96,7 @@ defmodule Google.Ads.Googleads.V8.Services.MoveManagerLinkResponse do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateCustomerManagerLinkResult do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateCustomerManagerLinkResult do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -109,24 +109,24 @@ defmodule Google.Ads.Googleads.V8.Services.MutateCustomerManagerLinkResult do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.CustomerManagerLinkService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.CustomerManagerLinkService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.CustomerManagerLinkService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.CustomerManagerLinkService"
 
   rpc :GetCustomerManagerLink,
-      Google.Ads.Googleads.V8.Services.GetCustomerManagerLinkRequest,
-      Google.Ads.Googleads.V8.Resources.CustomerManagerLink
+      Google.Ads.Googleads.V8Availabilities.Services.GetCustomerManagerLinkRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.CustomerManagerLink
 
   rpc :MutateCustomerManagerLink,
-      Google.Ads.Googleads.V8.Services.MutateCustomerManagerLinkRequest,
-      Google.Ads.Googleads.V8.Services.MutateCustomerManagerLinkResponse
+      Google.Ads.Googleads.V8Availabilities.Services.MutateCustomerManagerLinkRequest,
+      Google.Ads.Googleads.V8Availabilities.Services.MutateCustomerManagerLinkResponse
 
   rpc :MoveManagerLink,
-      Google.Ads.Googleads.V8.Services.MoveManagerLinkRequest,
-      Google.Ads.Googleads.V8.Services.MoveManagerLinkResponse
+      Google.Ads.Googleads.V8Availabilities.Services.MoveManagerLinkRequest,
+      Google.Ads.Googleads.V8Availabilities.Services.MoveManagerLinkResponse
 end
 
-defmodule Google.Ads.Googleads.V8.Services.CustomerManagerLinkService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.CustomerManagerLinkService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.CustomerManagerLinkService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.CustomerManagerLinkService.Service
 end

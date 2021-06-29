@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.ConversionUploadErrorEnum.ConversionUploadError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.ConversionUploadErrorEnum.ConversionUploadError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -90,7 +90,7 @@ defmodule Google.Ads.Googleads.V8.Errors.ConversionUploadErrorEnum.ConversionUpl
   field :CONVERSION_NOT_COMPLIANT_WITH_ATT_POLICY, 32
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.ConversionUploadErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.ConversionUploadErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :EQUALS_TO | :GREATER_THAN_EQUALS_TO
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Enums.OperatingSystemVersionOperatorTypeEnum.O
   field :GREATER_THAN_EQUALS_TO, 4
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.OperatingSystemVersionOperatorTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.OperatingSystemVersionOperatorTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

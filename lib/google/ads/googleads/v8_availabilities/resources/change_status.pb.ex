@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.ChangeStatus do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.ChangeStatus do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -6,11 +6,11 @@ defmodule Google.Ads.Googleads.V8.Resources.ChangeStatus do
           resource_name: String.t(),
           last_change_date_time: String.t(),
           resource_type:
-            Google.Ads.Googleads.V8.Enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType.t(),
           campaign: String.t(),
           ad_group: String.t(),
           resource_status:
-            Google.Ads.Googleads.V8.Enums.ChangeStatusOperationEnum.ChangeStatusOperation.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.ChangeStatusOperationEnum.ChangeStatusOperation.t(),
           ad_group_ad: String.t(),
           ad_group_criterion: String.t(),
           campaign_criterion: String.t(),
@@ -42,14 +42,14 @@ defmodule Google.Ads.Googleads.V8.Resources.ChangeStatus do
   field :last_change_date_time, 24, type: :string
 
   field :resource_type, 4,
-    type: Google.Ads.Googleads.V8.Enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType,
     enum: true
 
   field :campaign, 17, type: :string
   field :ad_group, 18, type: :string
 
   field :resource_status, 8,
-    type: Google.Ads.Googleads.V8.Enums.ChangeStatusOperationEnum.ChangeStatusOperation,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.ChangeStatusOperationEnum.ChangeStatusOperation,
     enum: true
 
   field :ad_group_ad, 25, type: :string

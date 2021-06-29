@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.DataDrivenModelStatusEnum.DataDrivenModelStatus do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.DataDrivenModelStatusEnum.DataDrivenModelStatus do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :AVAILABLE | :STALE | :EXPIRED | :NEVER_GENERATED
@@ -16,7 +16,7 @@ defmodule Google.Ads.Googleads.V8.Enums.DataDrivenModelStatusEnum.DataDrivenMode
   field :NEVER_GENERATED, 5
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.DataDrivenModelStatusEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.DataDrivenModelStatusEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

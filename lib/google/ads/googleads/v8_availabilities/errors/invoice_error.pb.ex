@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.InvoiceErrorEnum.InvoiceError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.InvoiceErrorEnum.InvoiceError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -21,7 +21,7 @@ defmodule Google.Ads.Googleads.V8.Errors.InvoiceErrorEnum.InvoiceError do
   field :BILLING_SETUP_NOT_APPROVED, 4
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.InvoiceErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.InvoiceErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

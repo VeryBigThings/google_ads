@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.AccessReasonEnum.AccessReason do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AccessReasonEnum.AccessReason do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -27,7 +27,7 @@ defmodule Google.Ads.Googleads.V8.Enums.AccessReasonEnum.AccessReason do
   field :AFFILIATED, 6
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.AccessReasonEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AccessReasonEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

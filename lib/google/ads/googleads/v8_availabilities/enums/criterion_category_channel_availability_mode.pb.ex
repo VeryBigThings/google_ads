@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -21,7 +21,7 @@ defmodule Google.Ads.Googleads.V8.Enums.CriterionCategoryChannelAvailabilityMode
   field :CHANNEL_TYPE_AND_SUBSET_SUBTYPES, 4
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.CriterionCategoryChannelAvailabilityModeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.CriterionCategoryChannelAvailabilityModeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

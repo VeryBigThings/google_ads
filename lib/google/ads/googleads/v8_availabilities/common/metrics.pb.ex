@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Common.Metrics do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.Metrics do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -75,12 +75,12 @@ defmodule Google.Ads.Googleads.V8.Common.Metrics do
           hotel_price_difference_percentage: float | :infinity | :negative_infinity | :nan,
           hotel_eligible_impressions: integer,
           historical_creative_quality_score:
-            Google.Ads.Googleads.V8.Enums.QualityScoreBucketEnum.QualityScoreBucket.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.QualityScoreBucketEnum.QualityScoreBucket.t(),
           historical_landing_page_quality_score:
-            Google.Ads.Googleads.V8.Enums.QualityScoreBucketEnum.QualityScoreBucket.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.QualityScoreBucketEnum.QualityScoreBucket.t(),
           historical_quality_score: integer,
           historical_search_predicted_ctr:
-            Google.Ads.Googleads.V8.Enums.QualityScoreBucketEnum.QualityScoreBucket.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.QualityScoreBucketEnum.QualityScoreBucket.t(),
           gmail_forwards: integer,
           gmail_saves: integer,
           gmail_secondary_clicks: integer,
@@ -89,7 +89,7 @@ defmodule Google.Ads.Googleads.V8.Common.Metrics do
           interaction_rate: float | :infinity | :negative_infinity | :nan,
           interactions: integer,
           interaction_event_types: [
-            [Google.Ads.Googleads.V8.Enums.InteractionEventTypeEnum.InteractionEventType.t()]
+            [Google.Ads.Googleads.V8Availabilities.Enums.InteractionEventTypeEnum.InteractionEventType.t()]
           ],
           invalid_click_rate: float | :infinity | :negative_infinity | :nan,
           invalid_clicks: integer,
@@ -336,17 +336,17 @@ defmodule Google.Ads.Googleads.V8.Common.Metrics do
   field :hotel_eligible_impressions, 215, type: :int64
 
   field :historical_creative_quality_score, 80,
-    type: Google.Ads.Googleads.V8.Enums.QualityScoreBucketEnum.QualityScoreBucket,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.QualityScoreBucketEnum.QualityScoreBucket,
     enum: true
 
   field :historical_landing_page_quality_score, 81,
-    type: Google.Ads.Googleads.V8.Enums.QualityScoreBucketEnum.QualityScoreBucket,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.QualityScoreBucketEnum.QualityScoreBucket,
     enum: true
 
   field :historical_quality_score, 216, type: :int64
 
   field :historical_search_predicted_ctr, 83,
-    type: Google.Ads.Googleads.V8.Enums.QualityScoreBucketEnum.QualityScoreBucket,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.QualityScoreBucketEnum.QualityScoreBucket,
     enum: true
 
   field :gmail_forwards, 217, type: :int64
@@ -359,7 +359,7 @@ defmodule Google.Ads.Googleads.V8.Common.Metrics do
 
   field :interaction_event_types, 100,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Enums.InteractionEventTypeEnum.InteractionEventType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.InteractionEventTypeEnum.InteractionEventType,
     enum: true
 
   field :invalid_click_rate, 224, type: :double

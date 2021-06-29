@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.CampaignCriterionStatusEnum.CampaignCriterionStatus do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.CampaignCriterionStatusEnum.CampaignCriterionStatus do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :ENABLED | :PAUSED | :REMOVED
@@ -14,7 +14,7 @@ defmodule Google.Ads.Googleads.V8.Enums.CampaignCriterionStatusEnum.CampaignCrit
   field :REMOVED, 4
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.CampaignCriterionStatusEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.CampaignCriterionStatusEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

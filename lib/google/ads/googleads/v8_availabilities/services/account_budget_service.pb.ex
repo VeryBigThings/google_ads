@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetAccountBudgetRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetAccountBudgetRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,16 +11,16 @@ defmodule Google.Ads.Googleads.V8.Services.GetAccountBudgetRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.AccountBudgetService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.AccountBudgetService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.AccountBudgetService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.AccountBudgetService"
 
   rpc :GetAccountBudget,
-      Google.Ads.Googleads.V8.Services.GetAccountBudgetRequest,
-      Google.Ads.Googleads.V8.Resources.AccountBudget
+      Google.Ads.Googleads.V8Availabilities.Services.GetAccountBudgetRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.AccountBudget
 end
 
-defmodule Google.Ads.Googleads.V8.Services.AccountBudgetService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.AccountBudgetService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.AccountBudgetService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.AccountBudgetService.Service
 end

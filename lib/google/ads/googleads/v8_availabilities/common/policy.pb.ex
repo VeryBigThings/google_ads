@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Common.PolicyViolationKey do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.PolicyViolationKey do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -13,13 +13,13 @@ defmodule Google.Ads.Googleads.V8.Common.PolicyViolationKey do
   field :violating_text, 4, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.PolicyValidationParameter do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.PolicyValidationParameter do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           ignorable_policy_topics: [String.t()],
-          exempt_policy_violation_keys: [Google.Ads.Googleads.V8.Common.PolicyViolationKey.t()]
+          exempt_policy_violation_keys: [Google.Ads.Googleads.V8Availabilities.Common.PolicyViolationKey.t()]
         }
 
   defstruct [:ignorable_policy_topics, :exempt_policy_violation_keys]
@@ -28,18 +28,18 @@ defmodule Google.Ads.Googleads.V8.Common.PolicyValidationParameter do
 
   field :exempt_policy_violation_keys, 2,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Common.PolicyViolationKey
+    type: Google.Ads.Googleads.V8Availabilities.Common.PolicyViolationKey
 end
 
-defmodule Google.Ads.Googleads.V8.Common.PolicyTopicEntry do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.PolicyTopicEntry do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           topic: String.t(),
-          type: Google.Ads.Googleads.V8.Enums.PolicyTopicEntryTypeEnum.PolicyTopicEntryType.t(),
-          evidences: [Google.Ads.Googleads.V8.Common.PolicyTopicEvidence.t()],
-          constraints: [Google.Ads.Googleads.V8.Common.PolicyTopicConstraint.t()]
+          type: Google.Ads.Googleads.V8Availabilities.Enums.PolicyTopicEntryTypeEnum.PolicyTopicEntryType.t(),
+          evidences: [Google.Ads.Googleads.V8Availabilities.Common.PolicyTopicEvidence.t()],
+          constraints: [Google.Ads.Googleads.V8Availabilities.Common.PolicyTopicConstraint.t()]
         }
 
   defstruct [:topic, :type, :evidences, :constraints]
@@ -47,17 +47,17 @@ defmodule Google.Ads.Googleads.V8.Common.PolicyTopicEntry do
   field :topic, 5, type: :string
 
   field :type, 2,
-    type: Google.Ads.Googleads.V8.Enums.PolicyTopicEntryTypeEnum.PolicyTopicEntryType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.PolicyTopicEntryTypeEnum.PolicyTopicEntryType,
     enum: true
 
-  field :evidences, 3, repeated: true, type: Google.Ads.Googleads.V8.Common.PolicyTopicEvidence
+  field :evidences, 3, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Common.PolicyTopicEvidence
 
   field :constraints, 4,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Common.PolicyTopicConstraint
+    type: Google.Ads.Googleads.V8Availabilities.Common.PolicyTopicConstraint
 end
 
-defmodule Google.Ads.Googleads.V8.Common.PolicyTopicEvidence.TextList do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.PolicyTopicEvidence.TextList do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -70,7 +70,7 @@ defmodule Google.Ads.Googleads.V8.Common.PolicyTopicEvidence.TextList do
   field :texts, 2, repeated: true, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.PolicyTopicEvidence.WebsiteList do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.PolicyTopicEvidence.WebsiteList do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -83,7 +83,7 @@ defmodule Google.Ads.Googleads.V8.Common.PolicyTopicEvidence.WebsiteList do
   field :websites, 2, repeated: true, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.PolicyTopicEvidence.DestinationTextList do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.PolicyTopicEvidence.DestinationTextList do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -96,14 +96,14 @@ defmodule Google.Ads.Googleads.V8.Common.PolicyTopicEvidence.DestinationTextList
   field :destination_texts, 2, repeated: true, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.PolicyTopicEvidence.DestinationMismatch do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.PolicyTopicEvidence.DestinationMismatch do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           url_types: [
             [
-              Google.Ads.Googleads.V8.Enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType.t()
+              Google.Ads.Googleads.V8Availabilities.Enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType.t()
             ]
           ]
         }
@@ -113,11 +113,11 @@ defmodule Google.Ads.Googleads.V8.Common.PolicyTopicEvidence.DestinationMismatch
   field :url_types, 1,
     repeated: true,
     type:
-      Google.Ads.Googleads.V8.Enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType,
+      Google.Ads.Googleads.V8Availabilities.Enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType,
     enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Common.PolicyTopicEvidence.DestinationNotWorking do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.PolicyTopicEvidence.DestinationNotWorking do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -125,7 +125,7 @@ defmodule Google.Ads.Googleads.V8.Common.PolicyTopicEvidence.DestinationNotWorki
           reason: {atom, any},
           expanded_url: String.t(),
           device:
-            Google.Ads.Googleads.V8.Enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice.t(),
           last_checked_date_time: String.t()
         }
 
@@ -137,21 +137,21 @@ defmodule Google.Ads.Googleads.V8.Common.PolicyTopicEvidence.DestinationNotWorki
 
   field :device, 4,
     type:
-      Google.Ads.Googleads.V8.Enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice,
+      Google.Ads.Googleads.V8Availabilities.Enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice,
     enum: true
 
   field :last_checked_date_time, 8, type: :string
 
   field :dns_error_type, 1,
     type:
-      Google.Ads.Googleads.V8.Enums.PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType,
+      Google.Ads.Googleads.V8Availabilities.Enums.PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType,
     enum: true,
     oneof: 0
 
   field :http_error_code, 6, type: :int64, oneof: 0
 end
 
-defmodule Google.Ads.Googleads.V8.Common.PolicyTopicEvidence do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.PolicyTopicEvidence do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -164,32 +164,32 @@ defmodule Google.Ads.Googleads.V8.Common.PolicyTopicEvidence do
   oneof :value, 0
 
   field :website_list, 3,
-    type: Google.Ads.Googleads.V8.Common.PolicyTopicEvidence.WebsiteList,
+    type: Google.Ads.Googleads.V8Availabilities.Common.PolicyTopicEvidence.WebsiteList,
     oneof: 0
 
-  field :text_list, 4, type: Google.Ads.Googleads.V8.Common.PolicyTopicEvidence.TextList, oneof: 0
+  field :text_list, 4, type: Google.Ads.Googleads.V8Availabilities.Common.PolicyTopicEvidence.TextList, oneof: 0
   field :language_code, 9, type: :string, oneof: 0
 
   field :destination_text_list, 6,
-    type: Google.Ads.Googleads.V8.Common.PolicyTopicEvidence.DestinationTextList,
+    type: Google.Ads.Googleads.V8Availabilities.Common.PolicyTopicEvidence.DestinationTextList,
     oneof: 0
 
   field :destination_mismatch, 7,
-    type: Google.Ads.Googleads.V8.Common.PolicyTopicEvidence.DestinationMismatch,
+    type: Google.Ads.Googleads.V8Availabilities.Common.PolicyTopicEvidence.DestinationMismatch,
     oneof: 0
 
   field :destination_not_working, 8,
-    type: Google.Ads.Googleads.V8.Common.PolicyTopicEvidence.DestinationNotWorking,
+    type: Google.Ads.Googleads.V8Availabilities.Common.PolicyTopicEvidence.DestinationNotWorking,
     oneof: 0
 end
 
-defmodule Google.Ads.Googleads.V8.Common.PolicyTopicConstraint.CountryConstraintList do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.PolicyTopicConstraint.CountryConstraintList do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           total_targeted_countries: integer,
-          countries: [Google.Ads.Googleads.V8.Common.PolicyTopicConstraint.CountryConstraint.t()]
+          countries: [Google.Ads.Googleads.V8Availabilities.Common.PolicyTopicConstraint.CountryConstraint.t()]
         }
 
   defstruct [:total_targeted_countries, :countries]
@@ -198,10 +198,10 @@ defmodule Google.Ads.Googleads.V8.Common.PolicyTopicConstraint.CountryConstraint
 
   field :countries, 2,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Common.PolicyTopicConstraint.CountryConstraint
+    type: Google.Ads.Googleads.V8Availabilities.Common.PolicyTopicConstraint.CountryConstraint
 end
 
-defmodule Google.Ads.Googleads.V8.Common.PolicyTopicConstraint.ResellerConstraint do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.PolicyTopicConstraint.ResellerConstraint do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}
@@ -209,7 +209,7 @@ defmodule Google.Ads.Googleads.V8.Common.PolicyTopicConstraint.ResellerConstrain
   defstruct []
 end
 
-defmodule Google.Ads.Googleads.V8.Common.PolicyTopicConstraint.CountryConstraint do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.PolicyTopicConstraint.CountryConstraint do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -222,7 +222,7 @@ defmodule Google.Ads.Googleads.V8.Common.PolicyTopicConstraint.CountryConstraint
   field :country_criterion, 2, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.PolicyTopicConstraint do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.PolicyTopicConstraint do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -235,18 +235,18 @@ defmodule Google.Ads.Googleads.V8.Common.PolicyTopicConstraint do
   oneof :value, 0
 
   field :country_constraint_list, 1,
-    type: Google.Ads.Googleads.V8.Common.PolicyTopicConstraint.CountryConstraintList,
+    type: Google.Ads.Googleads.V8Availabilities.Common.PolicyTopicConstraint.CountryConstraintList,
     oneof: 0
 
   field :reseller_constraint, 2,
-    type: Google.Ads.Googleads.V8.Common.PolicyTopicConstraint.ResellerConstraint,
+    type: Google.Ads.Googleads.V8Availabilities.Common.PolicyTopicConstraint.ResellerConstraint,
     oneof: 0
 
   field :certificate_missing_in_country_list, 3,
-    type: Google.Ads.Googleads.V8.Common.PolicyTopicConstraint.CountryConstraintList,
+    type: Google.Ads.Googleads.V8Availabilities.Common.PolicyTopicConstraint.CountryConstraintList,
     oneof: 0
 
   field :certificate_domain_mismatch_in_country_list, 4,
-    type: Google.Ads.Googleads.V8.Common.PolicyTopicConstraint.CountryConstraintList,
+    type: Google.Ads.Googleads.V8Availabilities.Common.PolicyTopicConstraint.CountryConstraintList,
     oneof: 0
 end

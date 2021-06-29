@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.FunctionErrorEnum.FunctionError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.FunctionErrorEnum.FunctionError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -60,7 +60,7 @@ defmodule Google.Ads.Googleads.V8.Errors.FunctionErrorEnum.FunctionError do
   field :INVALID_ATTRIBUTE_NAME, 17
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.FunctionErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.FunctionErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

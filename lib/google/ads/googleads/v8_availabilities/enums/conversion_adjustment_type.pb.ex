@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :RETRACTION | :RESTATEMENT
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Enums.ConversionAdjustmentTypeEnum.ConversionA
   field :RESTATEMENT, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.ConversionAdjustmentTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ConversionAdjustmentTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

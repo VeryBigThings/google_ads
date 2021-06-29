@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.AdTypeEnum.AdType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AdTypeEnum.AdType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -93,7 +93,7 @@ defmodule Google.Ads.Googleads.V8.Enums.AdTypeEnum.AdType do
   field :CALL_AD, 32
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.AdTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AdTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

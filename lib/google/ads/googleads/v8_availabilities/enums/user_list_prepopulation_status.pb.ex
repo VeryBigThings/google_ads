@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :REQUESTED | :FINISHED | :FAILED
@@ -14,7 +14,7 @@ defmodule Google.Ads.Googleads.V8.Enums.UserListPrepopulationStatusEnum.UserList
   field :FAILED, 4
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.UserListPrepopulationStatusEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.UserListPrepopulationStatusEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

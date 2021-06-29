@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :ACTIVE | :OBSOLETE
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Enums.ProductBiddingCategoryStatusEnum.Product
   field :OBSOLETE, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.ProductBiddingCategoryStatusEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ProductBiddingCategoryStatusEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

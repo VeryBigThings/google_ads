@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.GoogleAdsField do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.GoogleAdsField do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -6,7 +6,7 @@ defmodule Google.Ads.Googleads.V8.Resources.GoogleAdsField do
           resource_name: String.t(),
           name: String.t(),
           category:
-            Google.Ads.Googleads.V8.Enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory.t(),
           selectable: boolean,
           filterable: boolean,
           sortable: boolean,
@@ -16,7 +16,7 @@ defmodule Google.Ads.Googleads.V8.Resources.GoogleAdsField do
           segments: [String.t()],
           enum_values: [String.t()],
           data_type:
-            Google.Ads.Googleads.V8.Enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType.t(),
           type_url: String.t(),
           is_repeated: boolean
         }
@@ -42,7 +42,7 @@ defmodule Google.Ads.Googleads.V8.Resources.GoogleAdsField do
   field :name, 21, type: :string
 
   field :category, 3,
-    type: Google.Ads.Googleads.V8.Enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory,
     enum: true
 
   field :selectable, 22, type: :bool
@@ -55,7 +55,7 @@ defmodule Google.Ads.Googleads.V8.Resources.GoogleAdsField do
   field :enum_values, 29, repeated: true, type: :string
 
   field :data_type, 12,
-    type: Google.Ads.Googleads.V8.Enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType,
     enum: true
 
   field :type_url, 30, type: :string

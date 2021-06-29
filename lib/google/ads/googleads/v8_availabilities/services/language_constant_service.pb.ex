@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetLanguageConstantRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetLanguageConstantRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,16 +11,16 @@ defmodule Google.Ads.Googleads.V8.Services.GetLanguageConstantRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.LanguageConstantService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.LanguageConstantService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.LanguageConstantService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.LanguageConstantService"
 
   rpc :GetLanguageConstant,
-      Google.Ads.Googleads.V8.Services.GetLanguageConstantRequest,
-      Google.Ads.Googleads.V8.Resources.LanguageConstant
+      Google.Ads.Googleads.V8Availabilities.Services.GetLanguageConstantRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.LanguageConstant
 end
 
-defmodule Google.Ads.Googleads.V8.Services.LanguageConstantService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.LanguageConstantService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.LanguageConstantService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.LanguageConstantService.Service
 end

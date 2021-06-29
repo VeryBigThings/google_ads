@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.ThirdPartyAppAnalyticsLinkErrorEnum.ThirdPartyAppAnalyticsLinkError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.ThirdPartyAppAnalyticsLinkErrorEnum.ThirdPartyAppAnalyticsLinkError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -24,7 +24,7 @@ defmodule Google.Ads.Googleads.V8.Errors.ThirdPartyAppAnalyticsLinkErrorEnum.Thi
   field :CANNOT_REGENERATE_SHAREABLE_LINK_ID_FOR_REMOVED_LINK, 5
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.ThirdPartyAppAnalyticsLinkErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.ThirdPartyAppAnalyticsLinkErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

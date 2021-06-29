@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.PriceExtensionPriceUnitEnum.PriceExtensionPriceUnit do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -30,7 +30,7 @@ defmodule Google.Ads.Googleads.V8.Enums.PriceExtensionPriceUnitEnum.PriceExtensi
   field :PER_NIGHT, 7
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.PriceExtensionPriceUnitEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.PriceExtensionPriceUnitEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.KeywordThemeConstant do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.KeywordThemeConstant do
   @moduledoc false
   use Protobuf, syntax: :proto3
 

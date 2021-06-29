@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.OfflineUserDataJobFailureReasonEnum.OfflineUserDataJobFailureReason do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.OfflineUserDataJobFailureReasonEnum.OfflineUserDataJobFailureReason do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -18,7 +18,7 @@ defmodule Google.Ads.Googleads.V8.Enums.OfflineUserDataJobFailureReasonEnum.Offl
   field :INSUFFICIENT_TRANSACTIONS, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.OfflineUserDataJobFailureReasonEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.OfflineUserDataJobFailureReasonEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

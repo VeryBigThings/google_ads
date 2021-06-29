@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.ResourceChangeOperationEnum.ResourceChangeOperation do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ResourceChangeOperationEnum.ResourceChangeOperation do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :CREATE | :UPDATE | :REMOVE
@@ -14,7 +14,7 @@ defmodule Google.Ads.Googleads.V8.Enums.ResourceChangeOperationEnum.ResourceChan
   field :REMOVE, 4
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.ResourceChangeOperationEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ResourceChangeOperationEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

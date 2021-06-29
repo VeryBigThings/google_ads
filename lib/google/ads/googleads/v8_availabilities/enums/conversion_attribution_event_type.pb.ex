@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.ConversionAttributionEventTypeEnum.ConversionAttributionEventType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ConversionAttributionEventTypeEnum.ConversionAttributionEventType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :IMPRESSION | :INTERACTION
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Enums.ConversionAttributionEventTypeEnum.Conve
   field :INTERACTION, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.ConversionAttributionEventTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ConversionAttributionEventTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

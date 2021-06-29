@@ -1,10 +1,10 @@
-defmodule Google.Ads.Googleads.V8.Common.KeywordInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.KeywordInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           text: String.t(),
-          match_type: Google.Ads.Googleads.V8.Enums.KeywordMatchTypeEnum.KeywordMatchType.t()
+          match_type: Google.Ads.Googleads.V8Availabilities.Enums.KeywordMatchTypeEnum.KeywordMatchType.t()
         }
 
   defstruct [:text, :match_type]
@@ -12,11 +12,11 @@ defmodule Google.Ads.Googleads.V8.Common.KeywordInfo do
   field :text, 3, type: :string
 
   field :match_type, 2,
-    type: Google.Ads.Googleads.V8.Enums.KeywordMatchTypeEnum.KeywordMatchType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.KeywordMatchTypeEnum.KeywordMatchType,
     enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Common.PlacementInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.PlacementInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -29,7 +29,7 @@ defmodule Google.Ads.Googleads.V8.Common.PlacementInfo do
   field :url, 2, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.MobileAppCategoryInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.MobileAppCategoryInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -42,7 +42,7 @@ defmodule Google.Ads.Googleads.V8.Common.MobileAppCategoryInfo do
   field :mobile_app_category_constant, 2, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.MobileApplicationInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.MobileApplicationInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -57,7 +57,7 @@ defmodule Google.Ads.Googleads.V8.Common.MobileApplicationInfo do
   field :name, 5, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.LocationInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.LocationInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -70,68 +70,68 @@ defmodule Google.Ads.Googleads.V8.Common.LocationInfo do
   field :geo_target_constant, 2, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.DeviceInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.DeviceInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          type: Google.Ads.Googleads.V8.Enums.DeviceEnum.Device.t()
+          type: Google.Ads.Googleads.V8Availabilities.Enums.DeviceEnum.Device.t()
         }
 
   defstruct [:type]
 
-  field :type, 1, type: Google.Ads.Googleads.V8.Enums.DeviceEnum.Device, enum: true
+  field :type, 1, type: Google.Ads.Googleads.V8Availabilities.Enums.DeviceEnum.Device, enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Common.PreferredContentInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.PreferredContentInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          type: Google.Ads.Googleads.V8.Enums.PreferredContentTypeEnum.PreferredContentType.t()
+          type: Google.Ads.Googleads.V8Availabilities.Enums.PreferredContentTypeEnum.PreferredContentType.t()
         }
 
   defstruct [:type]
 
   field :type, 2,
-    type: Google.Ads.Googleads.V8.Enums.PreferredContentTypeEnum.PreferredContentType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.PreferredContentTypeEnum.PreferredContentType,
     enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Common.ListingGroupInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.ListingGroupInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          type: Google.Ads.Googleads.V8.Enums.ListingGroupTypeEnum.ListingGroupType.t(),
-          case_value: Google.Ads.Googleads.V8.Common.ListingDimensionInfo.t() | nil,
+          type: Google.Ads.Googleads.V8Availabilities.Enums.ListingGroupTypeEnum.ListingGroupType.t(),
+          case_value: Google.Ads.Googleads.V8Availabilities.Common.ListingDimensionInfo.t() | nil,
           parent_ad_group_criterion: String.t()
         }
 
   defstruct [:type, :case_value, :parent_ad_group_criterion]
 
   field :type, 1,
-    type: Google.Ads.Googleads.V8.Enums.ListingGroupTypeEnum.ListingGroupType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.ListingGroupTypeEnum.ListingGroupType,
     enum: true
 
-  field :case_value, 2, type: Google.Ads.Googleads.V8.Common.ListingDimensionInfo
+  field :case_value, 2, type: Google.Ads.Googleads.V8Availabilities.Common.ListingDimensionInfo
   field :parent_ad_group_criterion, 4, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.ListingScopeInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.ListingScopeInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          dimensions: [Google.Ads.Googleads.V8.Common.ListingDimensionInfo.t()]
+          dimensions: [Google.Ads.Googleads.V8Availabilities.Common.ListingDimensionInfo.t()]
         }
 
   defstruct [:dimensions]
 
-  field :dimensions, 2, repeated: true, type: Google.Ads.Googleads.V8.Common.ListingDimensionInfo
+  field :dimensions, 2, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Common.ListingDimensionInfo
 end
 
-defmodule Google.Ads.Googleads.V8.Common.ListingDimensionInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.ListingDimensionInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -143,44 +143,44 @@ defmodule Google.Ads.Googleads.V8.Common.ListingDimensionInfo do
 
   oneof :dimension, 0
 
-  field :hotel_id, 2, type: Google.Ads.Googleads.V8.Common.HotelIdInfo, oneof: 0
-  field :hotel_class, 3, type: Google.Ads.Googleads.V8.Common.HotelClassInfo, oneof: 0
+  field :hotel_id, 2, type: Google.Ads.Googleads.V8Availabilities.Common.HotelIdInfo, oneof: 0
+  field :hotel_class, 3, type: Google.Ads.Googleads.V8Availabilities.Common.HotelClassInfo, oneof: 0
 
   field :hotel_country_region, 4,
-    type: Google.Ads.Googleads.V8.Common.HotelCountryRegionInfo,
+    type: Google.Ads.Googleads.V8Availabilities.Common.HotelCountryRegionInfo,
     oneof: 0
 
-  field :hotel_state, 5, type: Google.Ads.Googleads.V8.Common.HotelStateInfo, oneof: 0
-  field :hotel_city, 6, type: Google.Ads.Googleads.V8.Common.HotelCityInfo, oneof: 0
+  field :hotel_state, 5, type: Google.Ads.Googleads.V8Availabilities.Common.HotelStateInfo, oneof: 0
+  field :hotel_city, 6, type: Google.Ads.Googleads.V8Availabilities.Common.HotelCityInfo, oneof: 0
 
   field :product_bidding_category, 13,
-    type: Google.Ads.Googleads.V8.Common.ProductBiddingCategoryInfo,
+    type: Google.Ads.Googleads.V8Availabilities.Common.ProductBiddingCategoryInfo,
     oneof: 0
 
-  field :product_brand, 15, type: Google.Ads.Googleads.V8.Common.ProductBrandInfo, oneof: 0
-  field :product_channel, 8, type: Google.Ads.Googleads.V8.Common.ProductChannelInfo, oneof: 0
+  field :product_brand, 15, type: Google.Ads.Googleads.V8Availabilities.Common.ProductBrandInfo, oneof: 0
+  field :product_channel, 8, type: Google.Ads.Googleads.V8Availabilities.Common.ProductChannelInfo, oneof: 0
 
   field :product_channel_exclusivity, 9,
-    type: Google.Ads.Googleads.V8.Common.ProductChannelExclusivityInfo,
+    type: Google.Ads.Googleads.V8Availabilities.Common.ProductChannelExclusivityInfo,
     oneof: 0
 
   field :product_condition, 10,
-    type: Google.Ads.Googleads.V8.Common.ProductConditionInfo,
+    type: Google.Ads.Googleads.V8Availabilities.Common.ProductConditionInfo,
     oneof: 0
 
   field :product_custom_attribute, 16,
-    type: Google.Ads.Googleads.V8.Common.ProductCustomAttributeInfo,
+    type: Google.Ads.Googleads.V8Availabilities.Common.ProductCustomAttributeInfo,
     oneof: 0
 
-  field :product_item_id, 11, type: Google.Ads.Googleads.V8.Common.ProductItemIdInfo, oneof: 0
-  field :product_type, 12, type: Google.Ads.Googleads.V8.Common.ProductTypeInfo, oneof: 0
+  field :product_item_id, 11, type: Google.Ads.Googleads.V8Availabilities.Common.ProductItemIdInfo, oneof: 0
+  field :product_type, 12, type: Google.Ads.Googleads.V8Availabilities.Common.ProductTypeInfo, oneof: 0
 
   field :unknown_listing_dimension, 14,
-    type: Google.Ads.Googleads.V8.Common.UnknownListingDimensionInfo,
+    type: Google.Ads.Googleads.V8Availabilities.Common.UnknownListingDimensionInfo,
     oneof: 0
 end
 
-defmodule Google.Ads.Googleads.V8.Common.HotelIdInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.HotelIdInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -193,7 +193,7 @@ defmodule Google.Ads.Googleads.V8.Common.HotelIdInfo do
   field :value, 2, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.HotelClassInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.HotelClassInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -206,7 +206,7 @@ defmodule Google.Ads.Googleads.V8.Common.HotelClassInfo do
   field :value, 2, type: :int64
 end
 
-defmodule Google.Ads.Googleads.V8.Common.HotelCountryRegionInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.HotelCountryRegionInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -219,7 +219,7 @@ defmodule Google.Ads.Googleads.V8.Common.HotelCountryRegionInfo do
   field :country_region_criterion, 2, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.HotelStateInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.HotelStateInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -232,7 +232,7 @@ defmodule Google.Ads.Googleads.V8.Common.HotelStateInfo do
   field :state_criterion, 2, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.HotelCityInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.HotelCityInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -245,7 +245,7 @@ defmodule Google.Ads.Googleads.V8.Common.HotelCityInfo do
   field :city_criterion, 2, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.ProductBiddingCategoryInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.ProductBiddingCategoryInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -253,7 +253,7 @@ defmodule Google.Ads.Googleads.V8.Common.ProductBiddingCategoryInfo do
           id: integer,
           country_code: String.t(),
           level:
-            Google.Ads.Googleads.V8.Enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel.t()
+            Google.Ads.Googleads.V8Availabilities.Enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel.t()
         }
 
   defstruct [:id, :country_code, :level]
@@ -263,11 +263,11 @@ defmodule Google.Ads.Googleads.V8.Common.ProductBiddingCategoryInfo do
 
   field :level, 3,
     type:
-      Google.Ads.Googleads.V8.Enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel,
+      Google.Ads.Googleads.V8Availabilities.Enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel,
     enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Common.ProductBrandInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.ProductBrandInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -280,60 +280,60 @@ defmodule Google.Ads.Googleads.V8.Common.ProductBrandInfo do
   field :value, 2, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.ProductChannelInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.ProductChannelInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          channel: Google.Ads.Googleads.V8.Enums.ProductChannelEnum.ProductChannel.t()
+          channel: Google.Ads.Googleads.V8Availabilities.Enums.ProductChannelEnum.ProductChannel.t()
         }
 
   defstruct [:channel]
 
   field :channel, 1,
-    type: Google.Ads.Googleads.V8.Enums.ProductChannelEnum.ProductChannel,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.ProductChannelEnum.ProductChannel,
     enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Common.ProductChannelExclusivityInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.ProductChannelExclusivityInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           channel_exclusivity:
-            Google.Ads.Googleads.V8.Enums.ProductChannelExclusivityEnum.ProductChannelExclusivity.t()
+            Google.Ads.Googleads.V8Availabilities.Enums.ProductChannelExclusivityEnum.ProductChannelExclusivity.t()
         }
 
   defstruct [:channel_exclusivity]
 
   field :channel_exclusivity, 1,
-    type: Google.Ads.Googleads.V8.Enums.ProductChannelExclusivityEnum.ProductChannelExclusivity,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.ProductChannelExclusivityEnum.ProductChannelExclusivity,
     enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Common.ProductConditionInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.ProductConditionInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          condition: Google.Ads.Googleads.V8.Enums.ProductConditionEnum.ProductCondition.t()
+          condition: Google.Ads.Googleads.V8Availabilities.Enums.ProductConditionEnum.ProductCondition.t()
         }
 
   defstruct [:condition]
 
   field :condition, 1,
-    type: Google.Ads.Googleads.V8.Enums.ProductConditionEnum.ProductCondition,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.ProductConditionEnum.ProductCondition,
     enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Common.ProductCustomAttributeInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.ProductCustomAttributeInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           value: String.t(),
           index:
-            Google.Ads.Googleads.V8.Enums.ProductCustomAttributeIndexEnum.ProductCustomAttributeIndex.t()
+            Google.Ads.Googleads.V8Availabilities.Enums.ProductCustomAttributeIndexEnum.ProductCustomAttributeIndex.t()
         }
 
   defstruct [:value, :index]
@@ -342,11 +342,11 @@ defmodule Google.Ads.Googleads.V8.Common.ProductCustomAttributeInfo do
 
   field :index, 2,
     type:
-      Google.Ads.Googleads.V8.Enums.ProductCustomAttributeIndexEnum.ProductCustomAttributeIndex,
+      Google.Ads.Googleads.V8Availabilities.Enums.ProductCustomAttributeIndexEnum.ProductCustomAttributeIndex,
     enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Common.ProductItemIdInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.ProductItemIdInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -359,13 +359,13 @@ defmodule Google.Ads.Googleads.V8.Common.ProductItemIdInfo do
   field :value, 2, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.ProductTypeInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.ProductTypeInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           value: String.t(),
-          level: Google.Ads.Googleads.V8.Enums.ProductTypeLevelEnum.ProductTypeLevel.t()
+          level: Google.Ads.Googleads.V8Availabilities.Enums.ProductTypeLevelEnum.ProductTypeLevel.t()
         }
 
   defstruct [:value, :level]
@@ -373,11 +373,11 @@ defmodule Google.Ads.Googleads.V8.Common.ProductTypeInfo do
   field :value, 3, type: :string
 
   field :level, 2,
-    type: Google.Ads.Googleads.V8.Enums.ProductTypeLevelEnum.ProductTypeLevel,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.ProductTypeLevelEnum.ProductTypeLevel,
     enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Common.UnknownListingDimensionInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.UnknownListingDimensionInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}
@@ -385,23 +385,23 @@ defmodule Google.Ads.Googleads.V8.Common.UnknownListingDimensionInfo do
   defstruct []
 end
 
-defmodule Google.Ads.Googleads.V8.Common.HotelDateSelectionTypeInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.HotelDateSelectionTypeInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           type:
-            Google.Ads.Googleads.V8.Enums.HotelDateSelectionTypeEnum.HotelDateSelectionType.t()
+            Google.Ads.Googleads.V8Availabilities.Enums.HotelDateSelectionTypeEnum.HotelDateSelectionType.t()
         }
 
   defstruct [:type]
 
   field :type, 1,
-    type: Google.Ads.Googleads.V8.Enums.HotelDateSelectionTypeEnum.HotelDateSelectionType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.HotelDateSelectionTypeEnum.HotelDateSelectionType,
     enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Common.HotelAdvanceBookingWindowInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.HotelAdvanceBookingWindowInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -416,7 +416,7 @@ defmodule Google.Ads.Googleads.V8.Common.HotelAdvanceBookingWindowInfo do
   field :max_days, 4, type: :int64
 end
 
-defmodule Google.Ads.Googleads.V8.Common.HotelLengthOfStayInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.HotelLengthOfStayInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -431,7 +431,7 @@ defmodule Google.Ads.Googleads.V8.Common.HotelLengthOfStayInfo do
   field :max_nights, 4, type: :int64
 end
 
-defmodule Google.Ads.Googleads.V8.Common.HotelCheckInDateRangeInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.HotelCheckInDateRangeInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -446,118 +446,118 @@ defmodule Google.Ads.Googleads.V8.Common.HotelCheckInDateRangeInfo do
   field :end_date, 2, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.HotelCheckInDayInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.HotelCheckInDayInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          day_of_week: Google.Ads.Googleads.V8.Enums.DayOfWeekEnum.DayOfWeek.t()
+          day_of_week: Google.Ads.Googleads.V8Availabilities.Enums.DayOfWeekEnum.DayOfWeek.t()
         }
 
   defstruct [:day_of_week]
 
-  field :day_of_week, 1, type: Google.Ads.Googleads.V8.Enums.DayOfWeekEnum.DayOfWeek, enum: true
+  field :day_of_week, 1, type: Google.Ads.Googleads.V8Availabilities.Enums.DayOfWeekEnum.DayOfWeek, enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Common.InteractionTypeInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.InteractionTypeInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          type: Google.Ads.Googleads.V8.Enums.InteractionTypeEnum.InteractionType.t()
+          type: Google.Ads.Googleads.V8Availabilities.Enums.InteractionTypeEnum.InteractionType.t()
         }
 
   defstruct [:type]
 
   field :type, 1,
-    type: Google.Ads.Googleads.V8.Enums.InteractionTypeEnum.InteractionType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.InteractionTypeEnum.InteractionType,
     enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Common.AdScheduleInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.AdScheduleInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          start_minute: Google.Ads.Googleads.V8.Enums.MinuteOfHourEnum.MinuteOfHour.t(),
-          end_minute: Google.Ads.Googleads.V8.Enums.MinuteOfHourEnum.MinuteOfHour.t(),
+          start_minute: Google.Ads.Googleads.V8Availabilities.Enums.MinuteOfHourEnum.MinuteOfHour.t(),
+          end_minute: Google.Ads.Googleads.V8Availabilities.Enums.MinuteOfHourEnum.MinuteOfHour.t(),
           start_hour: integer,
           end_hour: integer,
-          day_of_week: Google.Ads.Googleads.V8.Enums.DayOfWeekEnum.DayOfWeek.t()
+          day_of_week: Google.Ads.Googleads.V8Availabilities.Enums.DayOfWeekEnum.DayOfWeek.t()
         }
 
   defstruct [:start_minute, :end_minute, :start_hour, :end_hour, :day_of_week]
 
   field :start_minute, 1,
-    type: Google.Ads.Googleads.V8.Enums.MinuteOfHourEnum.MinuteOfHour,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.MinuteOfHourEnum.MinuteOfHour,
     enum: true
 
   field :end_minute, 2,
-    type: Google.Ads.Googleads.V8.Enums.MinuteOfHourEnum.MinuteOfHour,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.MinuteOfHourEnum.MinuteOfHour,
     enum: true
 
   field :start_hour, 6, type: :int32
   field :end_hour, 7, type: :int32
-  field :day_of_week, 5, type: Google.Ads.Googleads.V8.Enums.DayOfWeekEnum.DayOfWeek, enum: true
+  field :day_of_week, 5, type: Google.Ads.Googleads.V8Availabilities.Enums.DayOfWeekEnum.DayOfWeek, enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Common.AgeRangeInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.AgeRangeInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          type: Google.Ads.Googleads.V8.Enums.AgeRangeTypeEnum.AgeRangeType.t()
+          type: Google.Ads.Googleads.V8Availabilities.Enums.AgeRangeTypeEnum.AgeRangeType.t()
         }
 
   defstruct [:type]
 
-  field :type, 1, type: Google.Ads.Googleads.V8.Enums.AgeRangeTypeEnum.AgeRangeType, enum: true
+  field :type, 1, type: Google.Ads.Googleads.V8Availabilities.Enums.AgeRangeTypeEnum.AgeRangeType, enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Common.GenderInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.GenderInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          type: Google.Ads.Googleads.V8.Enums.GenderTypeEnum.GenderType.t()
+          type: Google.Ads.Googleads.V8Availabilities.Enums.GenderTypeEnum.GenderType.t()
         }
 
   defstruct [:type]
 
-  field :type, 1, type: Google.Ads.Googleads.V8.Enums.GenderTypeEnum.GenderType, enum: true
+  field :type, 1, type: Google.Ads.Googleads.V8Availabilities.Enums.GenderTypeEnum.GenderType, enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Common.IncomeRangeInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.IncomeRangeInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          type: Google.Ads.Googleads.V8.Enums.IncomeRangeTypeEnum.IncomeRangeType.t()
-        }
-
-  defstruct [:type]
-
-  field :type, 1,
-    type: Google.Ads.Googleads.V8.Enums.IncomeRangeTypeEnum.IncomeRangeType,
-    enum: true
-end
-
-defmodule Google.Ads.Googleads.V8.Common.ParentalStatusInfo do
-  @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          type: Google.Ads.Googleads.V8.Enums.ParentalStatusTypeEnum.ParentalStatusType.t()
+          type: Google.Ads.Googleads.V8Availabilities.Enums.IncomeRangeTypeEnum.IncomeRangeType.t()
         }
 
   defstruct [:type]
 
   field :type, 1,
-    type: Google.Ads.Googleads.V8.Enums.ParentalStatusTypeEnum.ParentalStatusType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.IncomeRangeTypeEnum.IncomeRangeType,
     enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Common.YouTubeVideoInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.ParentalStatusInfo do
+  @moduledoc false
+  use Protobuf, syntax: :proto3
+
+  @type t :: %__MODULE__{
+          type: Google.Ads.Googleads.V8Availabilities.Enums.ParentalStatusTypeEnum.ParentalStatusType.t()
+        }
+
+  defstruct [:type]
+
+  field :type, 1,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.ParentalStatusTypeEnum.ParentalStatusType,
+    enum: true
+end
+
+defmodule Google.Ads.Googleads.V8Availabilities.Common.YouTubeVideoInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -570,7 +570,7 @@ defmodule Google.Ads.Googleads.V8.Common.YouTubeVideoInfo do
   field :video_id, 2, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.YouTubeChannelInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.YouTubeChannelInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -583,7 +583,7 @@ defmodule Google.Ads.Googleads.V8.Common.YouTubeChannelInfo do
   field :channel_id, 2, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.UserListInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.UserListInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -596,31 +596,31 @@ defmodule Google.Ads.Googleads.V8.Common.UserListInfo do
   field :user_list, 2, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.ProximityInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.ProximityInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          geo_point: Google.Ads.Googleads.V8.Common.GeoPointInfo.t() | nil,
+          geo_point: Google.Ads.Googleads.V8Availabilities.Common.GeoPointInfo.t() | nil,
           radius: float | :infinity | :negative_infinity | :nan,
           radius_units:
-            Google.Ads.Googleads.V8.Enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits.t(),
-          address: Google.Ads.Googleads.V8.Common.AddressInfo.t() | nil
+            Google.Ads.Googleads.V8Availabilities.Enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits.t(),
+          address: Google.Ads.Googleads.V8Availabilities.Common.AddressInfo.t() | nil
         }
 
   defstruct [:geo_point, :radius, :radius_units, :address]
 
-  field :geo_point, 1, type: Google.Ads.Googleads.V8.Common.GeoPointInfo
+  field :geo_point, 1, type: Google.Ads.Googleads.V8Availabilities.Common.GeoPointInfo
   field :radius, 5, type: :double
 
   field :radius_units, 3,
-    type: Google.Ads.Googleads.V8.Enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits,
     enum: true
 
-  field :address, 4, type: Google.Ads.Googleads.V8.Common.AddressInfo
+  field :address, 4, type: Google.Ads.Googleads.V8Availabilities.Common.AddressInfo
 end
 
-defmodule Google.Ads.Googleads.V8.Common.GeoPointInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.GeoPointInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -635,7 +635,7 @@ defmodule Google.Ads.Googleads.V8.Common.GeoPointInfo do
   field :latitude_in_micro_degrees, 4, type: :int32
 end
 
-defmodule Google.Ads.Googleads.V8.Common.AddressInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.AddressInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -668,7 +668,7 @@ defmodule Google.Ads.Googleads.V8.Common.AddressInfo do
   field :city_name, 14, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.TopicInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.TopicInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -683,7 +683,7 @@ defmodule Google.Ads.Googleads.V8.Common.TopicInfo do
   field :path, 4, repeated: true, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.LanguageInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.LanguageInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -696,7 +696,7 @@ defmodule Google.Ads.Googleads.V8.Common.LanguageInfo do
   field :language_constant, 2, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.IpBlockInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.IpBlockInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -709,22 +709,22 @@ defmodule Google.Ads.Googleads.V8.Common.IpBlockInfo do
   field :ip_address, 2, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.ContentLabelInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.ContentLabelInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          type: Google.Ads.Googleads.V8.Enums.ContentLabelTypeEnum.ContentLabelType.t()
+          type: Google.Ads.Googleads.V8Availabilities.Enums.ContentLabelTypeEnum.ContentLabelType.t()
         }
 
   defstruct [:type]
 
   field :type, 1,
-    type: Google.Ads.Googleads.V8.Enums.ContentLabelTypeEnum.ContentLabelType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.ContentLabelTypeEnum.ContentLabelType,
     enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Common.CarrierInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.CarrierInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -737,7 +737,7 @@ defmodule Google.Ads.Googleads.V8.Common.CarrierInfo do
   field :carrier_constant, 2, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.UserInterestInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.UserInterestInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -750,51 +750,51 @@ defmodule Google.Ads.Googleads.V8.Common.UserInterestInfo do
   field :user_interest_category, 2, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.WebpageInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.WebpageInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           criterion_name: String.t(),
-          conditions: [Google.Ads.Googleads.V8.Common.WebpageConditionInfo.t()],
+          conditions: [Google.Ads.Googleads.V8Availabilities.Common.WebpageConditionInfo.t()],
           coverage_percentage: float | :infinity | :negative_infinity | :nan,
-          sample: Google.Ads.Googleads.V8.Common.WebpageSampleInfo.t() | nil
+          sample: Google.Ads.Googleads.V8Availabilities.Common.WebpageSampleInfo.t() | nil
         }
 
   defstruct [:criterion_name, :conditions, :coverage_percentage, :sample]
 
   field :criterion_name, 3, type: :string
-  field :conditions, 2, repeated: true, type: Google.Ads.Googleads.V8.Common.WebpageConditionInfo
+  field :conditions, 2, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Common.WebpageConditionInfo
   field :coverage_percentage, 4, type: :double
-  field :sample, 5, type: Google.Ads.Googleads.V8.Common.WebpageSampleInfo
+  field :sample, 5, type: Google.Ads.Googleads.V8Availabilities.Common.WebpageSampleInfo
 end
 
-defmodule Google.Ads.Googleads.V8.Common.WebpageConditionInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.WebpageConditionInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           operand:
-            Google.Ads.Googleads.V8.Enums.WebpageConditionOperandEnum.WebpageConditionOperand.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.WebpageConditionOperandEnum.WebpageConditionOperand.t(),
           operator:
-            Google.Ads.Googleads.V8.Enums.WebpageConditionOperatorEnum.WebpageConditionOperator.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.WebpageConditionOperatorEnum.WebpageConditionOperator.t(),
           argument: String.t()
         }
 
   defstruct [:operand, :operator, :argument]
 
   field :operand, 1,
-    type: Google.Ads.Googleads.V8.Enums.WebpageConditionOperandEnum.WebpageConditionOperand,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.WebpageConditionOperandEnum.WebpageConditionOperand,
     enum: true
 
   field :operator, 2,
-    type: Google.Ads.Googleads.V8.Enums.WebpageConditionOperatorEnum.WebpageConditionOperator,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.WebpageConditionOperatorEnum.WebpageConditionOperator,
     enum: true
 
   field :argument, 4, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.WebpageSampleInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.WebpageSampleInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -807,7 +807,7 @@ defmodule Google.Ads.Googleads.V8.Common.WebpageSampleInfo do
   field :sample_urls, 1, repeated: true, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.OperatingSystemVersionInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.OperatingSystemVersionInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -820,22 +820,22 @@ defmodule Google.Ads.Googleads.V8.Common.OperatingSystemVersionInfo do
   field :operating_system_version_constant, 2, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.AppPaymentModelInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.AppPaymentModelInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          type: Google.Ads.Googleads.V8.Enums.AppPaymentModelTypeEnum.AppPaymentModelType.t()
+          type: Google.Ads.Googleads.V8Availabilities.Enums.AppPaymentModelTypeEnum.AppPaymentModelType.t()
         }
 
   defstruct [:type]
 
   field :type, 1,
-    type: Google.Ads.Googleads.V8.Enums.AppPaymentModelTypeEnum.AppPaymentModelType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.AppPaymentModelTypeEnum.AppPaymentModelType,
     enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Common.MobileDeviceInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.MobileDeviceInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -848,7 +848,7 @@ defmodule Google.Ads.Googleads.V8.Common.MobileDeviceInfo do
   field :mobile_device_constant, 2, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.CustomAffinityInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.CustomAffinityInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -861,7 +861,7 @@ defmodule Google.Ads.Googleads.V8.Common.CustomAffinityInfo do
   field :custom_affinity, 2, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.CustomIntentInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.CustomIntentInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -874,7 +874,7 @@ defmodule Google.Ads.Googleads.V8.Common.CustomIntentInfo do
   field :custom_intent, 2, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.LocationGroupInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.LocationGroupInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -883,7 +883,7 @@ defmodule Google.Ads.Googleads.V8.Common.LocationGroupInfo do
           geo_target_constants: [String.t()],
           radius: integer,
           radius_units:
-            Google.Ads.Googleads.V8.Enums.LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits.t(),
           feed_item_sets: [String.t()]
         }
 
@@ -894,13 +894,13 @@ defmodule Google.Ads.Googleads.V8.Common.LocationGroupInfo do
   field :radius, 7, type: :int64
 
   field :radius_units, 4,
-    type: Google.Ads.Googleads.V8.Enums.LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits,
     enum: true
 
   field :feed_item_sets, 8, repeated: true, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.CustomAudienceInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.CustomAudienceInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -913,7 +913,7 @@ defmodule Google.Ads.Googleads.V8.Common.CustomAudienceInfo do
   field :custom_audience, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.CombinedAudienceInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.CombinedAudienceInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -926,7 +926,7 @@ defmodule Google.Ads.Googleads.V8.Common.CombinedAudienceInfo do
   field :combined_audience, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.KeywordThemeInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.KeywordThemeInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 

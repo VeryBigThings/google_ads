@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.CampaignAsset do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.CampaignAsset do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -6,8 +6,8 @@ defmodule Google.Ads.Googleads.V8.Resources.CampaignAsset do
           resource_name: String.t(),
           campaign: String.t(),
           asset: String.t(),
-          field_type: Google.Ads.Googleads.V8.Enums.AssetFieldTypeEnum.AssetFieldType.t(),
-          status: Google.Ads.Googleads.V8.Enums.AssetLinkStatusEnum.AssetLinkStatus.t()
+          field_type: Google.Ads.Googleads.V8Availabilities.Enums.AssetFieldTypeEnum.AssetFieldType.t(),
+          status: Google.Ads.Googleads.V8Availabilities.Enums.AssetLinkStatusEnum.AssetLinkStatus.t()
         }
 
   defstruct [:resource_name, :campaign, :asset, :field_type, :status]
@@ -17,10 +17,10 @@ defmodule Google.Ads.Googleads.V8.Resources.CampaignAsset do
   field :asset, 7, type: :string
 
   field :field_type, 4,
-    type: Google.Ads.Googleads.V8.Enums.AssetFieldTypeEnum.AssetFieldType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.AssetFieldTypeEnum.AssetFieldType,
     enum: true
 
   field :status, 5,
-    type: Google.Ads.Googleads.V8.Enums.AssetLinkStatusEnum.AssetLinkStatus,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.AssetLinkStatusEnum.AssetLinkStatus,
     enum: true
 end

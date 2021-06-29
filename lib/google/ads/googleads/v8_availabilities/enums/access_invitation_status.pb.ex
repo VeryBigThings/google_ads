@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.AccessInvitationStatusEnum.AccessInvitationStatus do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AccessInvitationStatusEnum.AccessInvitationStatus do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :PENDING | :DECLINED | :EXPIRED
@@ -14,7 +14,7 @@ defmodule Google.Ads.Googleads.V8.Enums.AccessInvitationStatusEnum.AccessInvitat
   field :EXPIRED, 4
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.AccessInvitationStatusEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AccessInvitationStatusEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

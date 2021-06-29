@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.AccountBudgetStatusEnum.AccountBudgetStatus do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AccountBudgetStatusEnum.AccountBudgetStatus do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :PENDING | :APPROVED | :CANCELLED
@@ -14,7 +14,7 @@ defmodule Google.Ads.Googleads.V8.Enums.AccountBudgetStatusEnum.AccountBudgetSta
   field :CANCELLED, 4
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.AccountBudgetStatusEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AccountBudgetStatusEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

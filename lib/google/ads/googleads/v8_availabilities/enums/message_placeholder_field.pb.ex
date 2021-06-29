@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.MessagePlaceholderFieldEnum.MessagePlaceholderField do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.MessagePlaceholderFieldEnum.MessagePlaceholderField do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -27,7 +27,7 @@ defmodule Google.Ads.Googleads.V8.Enums.MessagePlaceholderFieldEnum.MessagePlace
   field :MESSAGE_TEXT, 6
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.MessagePlaceholderFieldEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.MessagePlaceholderFieldEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.BiddingStrategyTypeEnum.BiddingStrategyType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.BiddingStrategyTypeEnum.BiddingStrategyType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -57,7 +57,7 @@ defmodule Google.Ads.Googleads.V8.Enums.BiddingStrategyTypeEnum.BiddingStrategyT
   field :TARGET_SPEND, 9
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.BiddingStrategyTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.BiddingStrategyTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

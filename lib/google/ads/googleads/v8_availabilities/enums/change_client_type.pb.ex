@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.ChangeClientTypeEnum.ChangeClientType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ChangeClientTypeEnum.ChangeClientType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -48,7 +48,7 @@ defmodule Google.Ads.Googleads.V8.Enums.ChangeClientTypeEnum.ChangeClientType do
   field :OTHER, 13
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.ChangeClientTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ChangeClientTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

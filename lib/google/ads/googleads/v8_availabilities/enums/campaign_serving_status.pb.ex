@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.CampaignServingStatusEnum.CampaignServingStatus do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.CampaignServingStatusEnum.CampaignServingStatus do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :SERVING | :NONE | :ENDED | :PENDING | :SUSPENDED
@@ -18,7 +18,7 @@ defmodule Google.Ads.Googleads.V8.Enums.CampaignServingStatusEnum.CampaignServin
   field :SUSPENDED, 6
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.CampaignServingStatusEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.CampaignServingStatusEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

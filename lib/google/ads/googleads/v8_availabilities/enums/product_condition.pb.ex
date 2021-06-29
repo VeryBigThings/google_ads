@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.ProductConditionEnum.ProductCondition do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ProductConditionEnum.ProductCondition do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :NEW | :REFURBISHED | :USED
@@ -14,7 +14,7 @@ defmodule Google.Ads.Googleads.V8.Enums.ProductConditionEnum.ProductCondition do
   field :USED, 5
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.ProductConditionEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ProductConditionEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

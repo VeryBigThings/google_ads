@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.TrackingCodeTypeEnum.TrackingCodeType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.TrackingCodeTypeEnum.TrackingCodeType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -24,7 +24,7 @@ defmodule Google.Ads.Googleads.V8.Enums.TrackingCodeTypeEnum.TrackingCodeType do
   field :WEBSITE_CALL, 5
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.TrackingCodeTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.TrackingCodeTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

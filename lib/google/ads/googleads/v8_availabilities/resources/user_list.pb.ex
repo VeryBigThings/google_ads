@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.UserList do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.UserList do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -10,21 +10,21 @@ defmodule Google.Ads.Googleads.V8.Resources.UserList do
           name: String.t(),
           description: String.t(),
           membership_status:
-            Google.Ads.Googleads.V8.Enums.UserListMembershipStatusEnum.UserListMembershipStatus.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.UserListMembershipStatusEnum.UserListMembershipStatus.t(),
           integration_code: String.t(),
           membership_life_span: integer,
           size_for_display: integer,
           size_range_for_display:
-            Google.Ads.Googleads.V8.Enums.UserListSizeRangeEnum.UserListSizeRange.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.UserListSizeRangeEnum.UserListSizeRange.t(),
           size_for_search: integer,
           size_range_for_search:
-            Google.Ads.Googleads.V8.Enums.UserListSizeRangeEnum.UserListSizeRange.t(),
-          type: Google.Ads.Googleads.V8.Enums.UserListTypeEnum.UserListType.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.UserListSizeRangeEnum.UserListSizeRange.t(),
+          type: Google.Ads.Googleads.V8Availabilities.Enums.UserListTypeEnum.UserListType.t(),
           closing_reason:
-            Google.Ads.Googleads.V8.Enums.UserListClosingReasonEnum.UserListClosingReason.t(),
-          access_reason: Google.Ads.Googleads.V8.Enums.AccessReasonEnum.AccessReason.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.UserListClosingReasonEnum.UserListClosingReason.t(),
+          access_reason: Google.Ads.Googleads.V8Availabilities.Enums.AccessReasonEnum.AccessReason.t(),
           account_user_list_status:
-            Google.Ads.Googleads.V8.Enums.UserListAccessStatusEnum.UserListAccessStatus.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.UserListAccessStatusEnum.UserListAccessStatus.t(),
           eligible_for_search: boolean,
           eligible_for_display: boolean,
           match_rate_percentage: integer
@@ -62,7 +62,7 @@ defmodule Google.Ads.Googleads.V8.Resources.UserList do
   field :description, 28, type: :string
 
   field :membership_status, 6,
-    type: Google.Ads.Googleads.V8.Enums.UserListMembershipStatusEnum.UserListMembershipStatus,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.UserListMembershipStatusEnum.UserListMembershipStatus,
     enum: true
 
   field :integration_code, 29, type: :string
@@ -70,27 +70,27 @@ defmodule Google.Ads.Googleads.V8.Resources.UserList do
   field :size_for_display, 31, type: :int64
 
   field :size_range_for_display, 10,
-    type: Google.Ads.Googleads.V8.Enums.UserListSizeRangeEnum.UserListSizeRange,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.UserListSizeRangeEnum.UserListSizeRange,
     enum: true
 
   field :size_for_search, 32, type: :int64
 
   field :size_range_for_search, 12,
-    type: Google.Ads.Googleads.V8.Enums.UserListSizeRangeEnum.UserListSizeRange,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.UserListSizeRangeEnum.UserListSizeRange,
     enum: true
 
-  field :type, 13, type: Google.Ads.Googleads.V8.Enums.UserListTypeEnum.UserListType, enum: true
+  field :type, 13, type: Google.Ads.Googleads.V8Availabilities.Enums.UserListTypeEnum.UserListType, enum: true
 
   field :closing_reason, 14,
-    type: Google.Ads.Googleads.V8.Enums.UserListClosingReasonEnum.UserListClosingReason,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.UserListClosingReasonEnum.UserListClosingReason,
     enum: true
 
   field :access_reason, 15,
-    type: Google.Ads.Googleads.V8.Enums.AccessReasonEnum.AccessReason,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.AccessReasonEnum.AccessReason,
     enum: true
 
   field :account_user_list_status, 16,
-    type: Google.Ads.Googleads.V8.Enums.UserListAccessStatusEnum.UserListAccessStatus,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.UserListAccessStatusEnum.UserListAccessStatus,
     enum: true
 
   field :eligible_for_search, 33, type: :bool
@@ -98,15 +98,15 @@ defmodule Google.Ads.Googleads.V8.Resources.UserList do
   field :match_rate_percentage, 24, type: :int32
 
   field :crm_based_user_list, 19,
-    type: Google.Ads.Googleads.V8.Common.CrmBasedUserListInfo,
+    type: Google.Ads.Googleads.V8Availabilities.Common.CrmBasedUserListInfo,
     oneof: 0
 
-  field :similar_user_list, 20, type: Google.Ads.Googleads.V8.Common.SimilarUserListInfo, oneof: 0
+  field :similar_user_list, 20, type: Google.Ads.Googleads.V8Availabilities.Common.SimilarUserListInfo, oneof: 0
 
   field :rule_based_user_list, 21,
-    type: Google.Ads.Googleads.V8.Common.RuleBasedUserListInfo,
+    type: Google.Ads.Googleads.V8Availabilities.Common.RuleBasedUserListInfo,
     oneof: 0
 
-  field :logical_user_list, 22, type: Google.Ads.Googleads.V8.Common.LogicalUserListInfo, oneof: 0
-  field :basic_user_list, 23, type: Google.Ads.Googleads.V8.Common.BasicUserListInfo, oneof: 0
+  field :logical_user_list, 22, type: Google.Ads.Googleads.V8Availabilities.Common.LogicalUserListInfo, oneof: 0
+  field :basic_user_list, 23, type: Google.Ads.Googleads.V8Availabilities.Common.BasicUserListInfo, oneof: 0
 end

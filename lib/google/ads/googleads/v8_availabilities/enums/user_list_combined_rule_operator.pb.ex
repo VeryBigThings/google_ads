@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.UserListCombinedRuleOperatorEnum.UserListCombinedRuleOperator do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.UserListCombinedRuleOperatorEnum.UserListCombinedRuleOperator do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :AND | :AND_NOT
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Enums.UserListCombinedRuleOperatorEnum.UserLis
   field :AND_NOT, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.UserListCombinedRuleOperatorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.UserListCombinedRuleOperatorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

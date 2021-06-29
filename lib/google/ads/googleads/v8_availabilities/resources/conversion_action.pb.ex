@@ -1,26 +1,26 @@
-defmodule Google.Ads.Googleads.V8.Resources.ConversionAction.AttributionModelSettings do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.ConversionAction.AttributionModelSettings do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           attribution_model:
-            Google.Ads.Googleads.V8.Enums.AttributionModelEnum.AttributionModel.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.AttributionModelEnum.AttributionModel.t(),
           data_driven_model_status:
-            Google.Ads.Googleads.V8.Enums.DataDrivenModelStatusEnum.DataDrivenModelStatus.t()
+            Google.Ads.Googleads.V8Availabilities.Enums.DataDrivenModelStatusEnum.DataDrivenModelStatus.t()
         }
 
   defstruct [:attribution_model, :data_driven_model_status]
 
   field :attribution_model, 1,
-    type: Google.Ads.Googleads.V8.Enums.AttributionModelEnum.AttributionModel,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.AttributionModelEnum.AttributionModel,
     enum: true
 
   field :data_driven_model_status, 2,
-    type: Google.Ads.Googleads.V8.Enums.DataDrivenModelStatusEnum.DataDrivenModelStatus,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.DataDrivenModelStatusEnum.DataDrivenModelStatus,
     enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.ConversionAction.ValueSettings do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.ConversionAction.ValueSettings do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -37,7 +37,7 @@ defmodule Google.Ads.Googleads.V8.Resources.ConversionAction.ValueSettings do
   field :always_use_default_value, 6, type: :bool
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.ConversionAction.ThirdPartyAppAnalyticsSettings do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.ConversionAction.ThirdPartyAppAnalyticsSettings do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -52,7 +52,7 @@ defmodule Google.Ads.Googleads.V8.Resources.ConversionAction.ThirdPartyAppAnalyt
   field :provider_name, 3, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.ConversionAction.FirebaseSettings do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.ConversionAction.FirebaseSettings do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -67,7 +67,7 @@ defmodule Google.Ads.Googleads.V8.Resources.ConversionAction.FirebaseSettings do
   field :project_id, 4, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.ConversionAction do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.ConversionAction do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -76,29 +76,29 @@ defmodule Google.Ads.Googleads.V8.Resources.ConversionAction do
           id: integer,
           name: String.t(),
           status:
-            Google.Ads.Googleads.V8.Enums.ConversionActionStatusEnum.ConversionActionStatus.t(),
-          type: Google.Ads.Googleads.V8.Enums.ConversionActionTypeEnum.ConversionActionType.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.ConversionActionStatusEnum.ConversionActionStatus.t(),
+          type: Google.Ads.Googleads.V8Availabilities.Enums.ConversionActionTypeEnum.ConversionActionType.t(),
           category:
-            Google.Ads.Googleads.V8.Enums.ConversionActionCategoryEnum.ConversionActionCategory.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.ConversionActionCategoryEnum.ConversionActionCategory.t(),
           owner_customer: String.t(),
           include_in_conversions_metric: boolean,
           click_through_lookback_window_days: integer,
           view_through_lookback_window_days: integer,
           value_settings:
-            Google.Ads.Googleads.V8.Resources.ConversionAction.ValueSettings.t() | nil,
+            Google.Ads.Googleads.V8Availabilities.Resources.ConversionAction.ValueSettings.t() | nil,
           counting_type:
-            Google.Ads.Googleads.V8.Enums.ConversionActionCountingTypeEnum.ConversionActionCountingType.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.ConversionActionCountingTypeEnum.ConversionActionCountingType.t(),
           attribution_model_settings:
-            Google.Ads.Googleads.V8.Resources.ConversionAction.AttributionModelSettings.t() | nil,
-          tag_snippets: [Google.Ads.Googleads.V8.Common.TagSnippet.t()],
+            Google.Ads.Googleads.V8Availabilities.Resources.ConversionAction.AttributionModelSettings.t() | nil,
+          tag_snippets: [Google.Ads.Googleads.V8Availabilities.Common.TagSnippet.t()],
           phone_call_duration_seconds: integer,
           app_id: String.t(),
           mobile_app_vendor:
-            Google.Ads.Googleads.V8.Enums.MobileAppVendorEnum.MobileAppVendor.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.MobileAppVendorEnum.MobileAppVendor.t(),
           firebase_settings:
-            Google.Ads.Googleads.V8.Resources.ConversionAction.FirebaseSettings.t() | nil,
+            Google.Ads.Googleads.V8Availabilities.Resources.ConversionAction.FirebaseSettings.t() | nil,
           third_party_app_analytics_settings:
-            Google.Ads.Googleads.V8.Resources.ConversionAction.ThirdPartyAppAnalyticsSettings.t()
+            Google.Ads.Googleads.V8Availabilities.Resources.ConversionAction.ThirdPartyAppAnalyticsSettings.t()
             | nil
         }
 
@@ -129,15 +129,15 @@ defmodule Google.Ads.Googleads.V8.Resources.ConversionAction do
   field :name, 22, type: :string
 
   field :status, 4,
-    type: Google.Ads.Googleads.V8.Enums.ConversionActionStatusEnum.ConversionActionStatus,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.ConversionActionStatusEnum.ConversionActionStatus,
     enum: true
 
   field :type, 5,
-    type: Google.Ads.Googleads.V8.Enums.ConversionActionTypeEnum.ConversionActionType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.ConversionActionTypeEnum.ConversionActionType,
     enum: true
 
   field :category, 6,
-    type: Google.Ads.Googleads.V8.Enums.ConversionActionCategoryEnum.ConversionActionCategory,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.ConversionActionCategoryEnum.ConversionActionCategory,
     enum: true
 
   field :owner_customer, 23, type: :string
@@ -146,27 +146,27 @@ defmodule Google.Ads.Googleads.V8.Resources.ConversionAction do
   field :view_through_lookback_window_days, 26, type: :int64
 
   field :value_settings, 11,
-    type: Google.Ads.Googleads.V8.Resources.ConversionAction.ValueSettings
+    type: Google.Ads.Googleads.V8Availabilities.Resources.ConversionAction.ValueSettings
 
   field :counting_type, 12,
     type:
-      Google.Ads.Googleads.V8.Enums.ConversionActionCountingTypeEnum.ConversionActionCountingType,
+      Google.Ads.Googleads.V8Availabilities.Enums.ConversionActionCountingTypeEnum.ConversionActionCountingType,
     enum: true
 
   field :attribution_model_settings, 13,
-    type: Google.Ads.Googleads.V8.Resources.ConversionAction.AttributionModelSettings
+    type: Google.Ads.Googleads.V8Availabilities.Resources.ConversionAction.AttributionModelSettings
 
-  field :tag_snippets, 14, repeated: true, type: Google.Ads.Googleads.V8.Common.TagSnippet
+  field :tag_snippets, 14, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Common.TagSnippet
   field :phone_call_duration_seconds, 27, type: :int64
   field :app_id, 28, type: :string
 
   field :mobile_app_vendor, 17,
-    type: Google.Ads.Googleads.V8.Enums.MobileAppVendorEnum.MobileAppVendor,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.MobileAppVendorEnum.MobileAppVendor,
     enum: true
 
   field :firebase_settings, 18,
-    type: Google.Ads.Googleads.V8.Resources.ConversionAction.FirebaseSettings
+    type: Google.Ads.Googleads.V8Availabilities.Resources.ConversionAction.FirebaseSettings
 
   field :third_party_app_analytics_settings, 19,
-    type: Google.Ads.Googleads.V8.Resources.ConversionAction.ThirdPartyAppAnalyticsSettings
+    type: Google.Ads.Googleads.V8Availabilities.Resources.ConversionAction.ThirdPartyAppAnalyticsSettings
 end

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Common.RealTimeBiddingSetting do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.RealTimeBiddingSetting do
   @moduledoc false
   use Protobuf, syntax: :proto3
 

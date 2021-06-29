@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.MobileDeviceTypeEnum.MobileDeviceType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.MobileDeviceTypeEnum.MobileDeviceType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :MOBILE | :TABLET
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Enums.MobileDeviceTypeEnum.MobileDeviceType do
   field :TABLET, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.MobileDeviceTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.MobileDeviceTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

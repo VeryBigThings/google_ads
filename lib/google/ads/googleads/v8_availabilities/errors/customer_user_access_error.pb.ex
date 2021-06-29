@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.CustomerUserAccessErrorEnum.CustomerUserAccessError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.CustomerUserAccessErrorEnum.CustomerUserAccessError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -27,7 +27,7 @@ defmodule Google.Ads.Googleads.V8.Errors.CustomerUserAccessErrorEnum.CustomerUse
   field :LAST_ADMIN_USER_OF_MANAGER, 6
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.CustomerUserAccessErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.CustomerUserAccessErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

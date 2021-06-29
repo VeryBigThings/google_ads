@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.GeoTargetConstant do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.GeoTargetConstant do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -9,7 +9,7 @@ defmodule Google.Ads.Googleads.V8.Resources.GeoTargetConstant do
           country_code: String.t(),
           target_type: String.t(),
           status:
-            Google.Ads.Googleads.V8.Enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus.t(),
           canonical_name: String.t(),
           parent_geo_target: String.t()
         }
@@ -32,7 +32,7 @@ defmodule Google.Ads.Googleads.V8.Resources.GeoTargetConstant do
   field :target_type, 13, type: :string
 
   field :status, 7,
-    type: Google.Ads.Googleads.V8.Enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus,
     enum: true
 
   field :canonical_name, 14, type: :string

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.AssetLinkStatusEnum.AssetLinkStatus do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AssetLinkStatusEnum.AssetLinkStatus do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :ENABLED | :REMOVED | :PAUSED
@@ -14,7 +14,7 @@ defmodule Google.Ads.Googleads.V8.Enums.AssetLinkStatusEnum.AssetLinkStatus do
   field :PAUSED, 4
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.AssetLinkStatusEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AssetLinkStatusEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

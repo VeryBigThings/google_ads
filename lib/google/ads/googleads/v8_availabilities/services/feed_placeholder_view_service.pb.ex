@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetFeedPlaceholderViewRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetFeedPlaceholderViewRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,16 +11,16 @@ defmodule Google.Ads.Googleads.V8.Services.GetFeedPlaceholderViewRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.FeedPlaceholderViewService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.FeedPlaceholderViewService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.FeedPlaceholderViewService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.FeedPlaceholderViewService"
 
   rpc :GetFeedPlaceholderView,
-      Google.Ads.Googleads.V8.Services.GetFeedPlaceholderViewRequest,
-      Google.Ads.Googleads.V8.Resources.FeedPlaceholderView
+      Google.Ads.Googleads.V8Availabilities.Services.GetFeedPlaceholderViewRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.FeedPlaceholderView
 end
 
-defmodule Google.Ads.Googleads.V8.Services.FeedPlaceholderViewService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.FeedPlaceholderViewService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.FeedPlaceholderViewService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.FeedPlaceholderViewService.Service
 end

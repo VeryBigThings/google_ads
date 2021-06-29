@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.EducationPlaceholderFieldEnum.EducationPlaceholderField do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.EducationPlaceholderFieldEnum.EducationPlaceholderField do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -63,7 +63,7 @@ defmodule Google.Ads.Googleads.V8.Enums.EducationPlaceholderFieldEnum.EducationP
   field :IOS_APP_STORE_ID, 18
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.EducationPlaceholderFieldEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.EducationPlaceholderFieldEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

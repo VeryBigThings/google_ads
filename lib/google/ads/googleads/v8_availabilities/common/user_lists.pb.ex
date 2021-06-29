@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Common.SimilarUserListInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.SimilarUserListInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,16 +11,16 @@ defmodule Google.Ads.Googleads.V8.Common.SimilarUserListInfo do
   field :seed_user_list, 2, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.CrmBasedUserListInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.CrmBasedUserListInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           app_id: String.t(),
           upload_key_type:
-            Google.Ads.Googleads.V8.Enums.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType.t(),
           data_source_type:
-            Google.Ads.Googleads.V8.Enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType.t()
+            Google.Ads.Googleads.V8Availabilities.Enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType.t()
         }
 
   defstruct [:app_id, :upload_key_type, :data_source_type]
@@ -28,48 +28,48 @@ defmodule Google.Ads.Googleads.V8.Common.CrmBasedUserListInfo do
   field :app_id, 4, type: :string
 
   field :upload_key_type, 2,
-    type: Google.Ads.Googleads.V8.Enums.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType,
     enum: true
 
   field :data_source_type, 3,
-    type: Google.Ads.Googleads.V8.Enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType,
     enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Common.UserListRuleInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.UserListRuleInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          rule_type: Google.Ads.Googleads.V8.Enums.UserListRuleTypeEnum.UserListRuleType.t(),
-          rule_item_groups: [Google.Ads.Googleads.V8.Common.UserListRuleItemGroupInfo.t()]
+          rule_type: Google.Ads.Googleads.V8Availabilities.Enums.UserListRuleTypeEnum.UserListRuleType.t(),
+          rule_item_groups: [Google.Ads.Googleads.V8Availabilities.Common.UserListRuleItemGroupInfo.t()]
         }
 
   defstruct [:rule_type, :rule_item_groups]
 
   field :rule_type, 1,
-    type: Google.Ads.Googleads.V8.Enums.UserListRuleTypeEnum.UserListRuleType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.UserListRuleTypeEnum.UserListRuleType,
     enum: true
 
   field :rule_item_groups, 2,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Common.UserListRuleItemGroupInfo
+    type: Google.Ads.Googleads.V8Availabilities.Common.UserListRuleItemGroupInfo
 end
 
-defmodule Google.Ads.Googleads.V8.Common.UserListRuleItemGroupInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.UserListRuleItemGroupInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          rule_items: [Google.Ads.Googleads.V8.Common.UserListRuleItemInfo.t()]
+          rule_items: [Google.Ads.Googleads.V8Availabilities.Common.UserListRuleItemInfo.t()]
         }
 
   defstruct [:rule_items]
 
-  field :rule_items, 1, repeated: true, type: Google.Ads.Googleads.V8.Common.UserListRuleItemInfo
+  field :rule_items, 1, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Common.UserListRuleItemInfo
 end
 
-defmodule Google.Ads.Googleads.V8.Common.UserListRuleItemInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.UserListRuleItemInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -85,25 +85,25 @@ defmodule Google.Ads.Googleads.V8.Common.UserListRuleItemInfo do
   field :name, 5, type: :string
 
   field :number_rule_item, 2,
-    type: Google.Ads.Googleads.V8.Common.UserListNumberRuleItemInfo,
+    type: Google.Ads.Googleads.V8Availabilities.Common.UserListNumberRuleItemInfo,
     oneof: 0
 
   field :string_rule_item, 3,
-    type: Google.Ads.Googleads.V8.Common.UserListStringRuleItemInfo,
+    type: Google.Ads.Googleads.V8Availabilities.Common.UserListStringRuleItemInfo,
     oneof: 0
 
   field :date_rule_item, 4,
-    type: Google.Ads.Googleads.V8.Common.UserListDateRuleItemInfo,
+    type: Google.Ads.Googleads.V8Availabilities.Common.UserListDateRuleItemInfo,
     oneof: 0
 end
 
-defmodule Google.Ads.Googleads.V8.Common.UserListDateRuleItemInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.UserListDateRuleItemInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           operator:
-            Google.Ads.Googleads.V8.Enums.UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator.t(),
           value: String.t(),
           offset_in_days: integer
         }
@@ -112,20 +112,20 @@ defmodule Google.Ads.Googleads.V8.Common.UserListDateRuleItemInfo do
 
   field :operator, 1,
     type:
-      Google.Ads.Googleads.V8.Enums.UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator,
+      Google.Ads.Googleads.V8Availabilities.Enums.UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator,
     enum: true
 
   field :value, 4, type: :string
   field :offset_in_days, 5, type: :int64
 end
 
-defmodule Google.Ads.Googleads.V8.Common.UserListNumberRuleItemInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.UserListNumberRuleItemInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           operator:
-            Google.Ads.Googleads.V8.Enums.UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator.t(),
           value: float | :infinity | :negative_infinity | :nan
         }
 
@@ -133,19 +133,19 @@ defmodule Google.Ads.Googleads.V8.Common.UserListNumberRuleItemInfo do
 
   field :operator, 1,
     type:
-      Google.Ads.Googleads.V8.Enums.UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator,
+      Google.Ads.Googleads.V8Availabilities.Enums.UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator,
     enum: true
 
   field :value, 3, type: :double
 end
 
-defmodule Google.Ads.Googleads.V8.Common.UserListStringRuleItemInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.UserListStringRuleItemInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           operator:
-            Google.Ads.Googleads.V8.Enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator.t(),
           value: String.t()
         }
 
@@ -153,72 +153,72 @@ defmodule Google.Ads.Googleads.V8.Common.UserListStringRuleItemInfo do
 
   field :operator, 1,
     type:
-      Google.Ads.Googleads.V8.Enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator,
+      Google.Ads.Googleads.V8Availabilities.Enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator,
     enum: true
 
   field :value, 3, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.CombinedRuleUserListInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.CombinedRuleUserListInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          left_operand: Google.Ads.Googleads.V8.Common.UserListRuleInfo.t() | nil,
-          right_operand: Google.Ads.Googleads.V8.Common.UserListRuleInfo.t() | nil,
+          left_operand: Google.Ads.Googleads.V8Availabilities.Common.UserListRuleInfo.t() | nil,
+          right_operand: Google.Ads.Googleads.V8Availabilities.Common.UserListRuleInfo.t() | nil,
           rule_operator:
-            Google.Ads.Googleads.V8.Enums.UserListCombinedRuleOperatorEnum.UserListCombinedRuleOperator.t()
+            Google.Ads.Googleads.V8Availabilities.Enums.UserListCombinedRuleOperatorEnum.UserListCombinedRuleOperator.t()
         }
 
   defstruct [:left_operand, :right_operand, :rule_operator]
 
-  field :left_operand, 1, type: Google.Ads.Googleads.V8.Common.UserListRuleInfo
-  field :right_operand, 2, type: Google.Ads.Googleads.V8.Common.UserListRuleInfo
+  field :left_operand, 1, type: Google.Ads.Googleads.V8Availabilities.Common.UserListRuleInfo
+  field :right_operand, 2, type: Google.Ads.Googleads.V8Availabilities.Common.UserListRuleInfo
 
   field :rule_operator, 3,
     type:
-      Google.Ads.Googleads.V8.Enums.UserListCombinedRuleOperatorEnum.UserListCombinedRuleOperator,
+      Google.Ads.Googleads.V8Availabilities.Enums.UserListCombinedRuleOperatorEnum.UserListCombinedRuleOperator,
     enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Common.DateSpecificRuleUserListInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.DateSpecificRuleUserListInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          rule: Google.Ads.Googleads.V8.Common.UserListRuleInfo.t() | nil,
+          rule: Google.Ads.Googleads.V8Availabilities.Common.UserListRuleInfo.t() | nil,
           start_date: String.t(),
           end_date: String.t()
         }
 
   defstruct [:rule, :start_date, :end_date]
 
-  field :rule, 1, type: Google.Ads.Googleads.V8.Common.UserListRuleInfo
+  field :rule, 1, type: Google.Ads.Googleads.V8Availabilities.Common.UserListRuleInfo
   field :start_date, 4, type: :string
   field :end_date, 5, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.ExpressionRuleUserListInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.ExpressionRuleUserListInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          rule: Google.Ads.Googleads.V8.Common.UserListRuleInfo.t() | nil
+          rule: Google.Ads.Googleads.V8Availabilities.Common.UserListRuleInfo.t() | nil
         }
 
   defstruct [:rule]
 
-  field :rule, 1, type: Google.Ads.Googleads.V8.Common.UserListRuleInfo
+  field :rule, 1, type: Google.Ads.Googleads.V8Availabilities.Common.UserListRuleInfo
 end
 
-defmodule Google.Ads.Googleads.V8.Common.RuleBasedUserListInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.RuleBasedUserListInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           rule_based_user_list: {atom, any},
           prepopulation_status:
-            Google.Ads.Googleads.V8.Enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus.t()
+            Google.Ads.Googleads.V8Availabilities.Enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus.t()
         }
 
   defstruct [:rule_based_user_list, :prepopulation_status]
@@ -227,58 +227,58 @@ defmodule Google.Ads.Googleads.V8.Common.RuleBasedUserListInfo do
 
   field :prepopulation_status, 1,
     type:
-      Google.Ads.Googleads.V8.Enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus,
+      Google.Ads.Googleads.V8Availabilities.Enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus,
     enum: true
 
   field :combined_rule_user_list, 2,
-    type: Google.Ads.Googleads.V8.Common.CombinedRuleUserListInfo,
+    type: Google.Ads.Googleads.V8Availabilities.Common.CombinedRuleUserListInfo,
     oneof: 0
 
   field :date_specific_rule_user_list, 3,
-    type: Google.Ads.Googleads.V8.Common.DateSpecificRuleUserListInfo,
+    type: Google.Ads.Googleads.V8Availabilities.Common.DateSpecificRuleUserListInfo,
     oneof: 0
 
   field :expression_rule_user_list, 4,
-    type: Google.Ads.Googleads.V8.Common.ExpressionRuleUserListInfo,
+    type: Google.Ads.Googleads.V8Availabilities.Common.ExpressionRuleUserListInfo,
     oneof: 0
 end
 
-defmodule Google.Ads.Googleads.V8.Common.LogicalUserListInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.LogicalUserListInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          rules: [Google.Ads.Googleads.V8.Common.UserListLogicalRuleInfo.t()]
+          rules: [Google.Ads.Googleads.V8Availabilities.Common.UserListLogicalRuleInfo.t()]
         }
 
   defstruct [:rules]
 
-  field :rules, 1, repeated: true, type: Google.Ads.Googleads.V8.Common.UserListLogicalRuleInfo
+  field :rules, 1, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Common.UserListLogicalRuleInfo
 end
 
-defmodule Google.Ads.Googleads.V8.Common.UserListLogicalRuleInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.UserListLogicalRuleInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           operator:
-            Google.Ads.Googleads.V8.Enums.UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator.t(),
-          rule_operands: [Google.Ads.Googleads.V8.Common.LogicalUserListOperandInfo.t()]
+            Google.Ads.Googleads.V8Availabilities.Enums.UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator.t(),
+          rule_operands: [Google.Ads.Googleads.V8Availabilities.Common.LogicalUserListOperandInfo.t()]
         }
 
   defstruct [:operator, :rule_operands]
 
   field :operator, 1,
     type:
-      Google.Ads.Googleads.V8.Enums.UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator,
+      Google.Ads.Googleads.V8Availabilities.Enums.UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator,
     enum: true
 
   field :rule_operands, 2,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Common.LogicalUserListOperandInfo
+    type: Google.Ads.Googleads.V8Availabilities.Common.LogicalUserListOperandInfo
 end
 
-defmodule Google.Ads.Googleads.V8.Common.LogicalUserListOperandInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.LogicalUserListOperandInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -291,20 +291,20 @@ defmodule Google.Ads.Googleads.V8.Common.LogicalUserListOperandInfo do
   field :user_list, 2, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.BasicUserListInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.BasicUserListInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          actions: [Google.Ads.Googleads.V8.Common.UserListActionInfo.t()]
+          actions: [Google.Ads.Googleads.V8Availabilities.Common.UserListActionInfo.t()]
         }
 
   defstruct [:actions]
 
-  field :actions, 1, repeated: true, type: Google.Ads.Googleads.V8.Common.UserListActionInfo
+  field :actions, 1, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Common.UserListActionInfo
 end
 
-defmodule Google.Ads.Googleads.V8.Common.UserListActionInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.UserListActionInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 

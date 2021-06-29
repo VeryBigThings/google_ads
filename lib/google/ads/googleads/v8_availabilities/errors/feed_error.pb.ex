@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.FeedErrorEnum.FeedError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.FeedErrorEnum.FeedError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -78,7 +78,7 @@ defmodule Google.Ads.Googleads.V8.Errors.FeedErrorEnum.FeedError do
   field :CANNOT_HAVE_LOCATION_AND_AFFILIATE_LOCATION_FEEDS, 23
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.FeedErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.FeedErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

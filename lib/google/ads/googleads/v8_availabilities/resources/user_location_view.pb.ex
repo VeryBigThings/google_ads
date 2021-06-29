@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.UserLocationView do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.UserLocationView do
   @moduledoc false
   use Protobuf, syntax: :proto3
 

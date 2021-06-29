@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.CalloutPlaceholderFieldEnum.CalloutPlaceholderField do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.CalloutPlaceholderFieldEnum.CalloutPlaceholderField do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :CALLOUT_TEXT
@@ -10,7 +10,7 @@ defmodule Google.Ads.Googleads.V8.Enums.CalloutPlaceholderFieldEnum.CalloutPlace
   field :CALLOUT_TEXT, 2
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.CalloutPlaceholderFieldEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.CalloutPlaceholderFieldEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

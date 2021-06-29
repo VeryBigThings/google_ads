@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -192,7 +192,7 @@ defmodule Google.Ads.Googleads.V8.Enums.LeadFormFieldUserInputTypeEnum.LeadFormF
   field :TRAVEL_ACCOMMODATION, 1047
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.LeadFormFieldUserInputTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.LeadFormFieldUserInputTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

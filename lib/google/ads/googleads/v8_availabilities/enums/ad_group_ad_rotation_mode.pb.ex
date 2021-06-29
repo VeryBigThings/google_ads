@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :OPTIMIZE | :ROTATE_FOREVER
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Enums.AdGroupAdRotationModeEnum.AdGroupAdRotat
   field :ROTATE_FOREVER, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.AdGroupAdRotationModeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AdGroupAdRotationModeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

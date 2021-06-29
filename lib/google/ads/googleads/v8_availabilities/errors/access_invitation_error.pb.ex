@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.AccessInvitationErrorEnum.AccessInvitationError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.AccessInvitationErrorEnum.AccessInvitationError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -36,7 +36,7 @@ defmodule Google.Ads.Googleads.V8.Errors.AccessInvitationErrorEnum.AccessInvitat
   field :EMAIL_DOMAIN_POLICY_VIOLATED, 9
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.AccessInvitationErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.AccessInvitationErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

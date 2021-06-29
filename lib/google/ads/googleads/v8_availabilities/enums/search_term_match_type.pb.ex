@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.SearchTermMatchTypeEnum.SearchTermMatchType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.SearchTermMatchTypeEnum.SearchTermMatchType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -27,7 +27,7 @@ defmodule Google.Ads.Googleads.V8.Enums.SearchTermMatchTypeEnum.SearchTermMatchT
   field :NEAR_PHRASE, 6
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.SearchTermMatchTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.SearchTermMatchTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

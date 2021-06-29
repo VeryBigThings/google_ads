@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.GenderTypeEnum.GenderType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.GenderTypeEnum.GenderType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :MALE | :FEMALE | :UNDETERMINED
@@ -14,7 +14,7 @@ defmodule Google.Ads.Googleads.V8.Enums.GenderTypeEnum.GenderType do
   field :UNDETERMINED, 20
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.GenderTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.GenderTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

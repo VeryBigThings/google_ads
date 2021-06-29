@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.RecommendationTypeEnum.RecommendationType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.RecommendationTypeEnum.RecommendationType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -66,7 +66,7 @@ defmodule Google.Ads.Googleads.V8.Enums.RecommendationTypeEnum.RecommendationTyp
   field :MARGINAL_ROI_CAMPAIGN_BUDGET, 19
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.RecommendationTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.RecommendationTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

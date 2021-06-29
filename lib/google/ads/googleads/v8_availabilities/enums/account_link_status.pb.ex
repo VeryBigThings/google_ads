@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.AccountLinkStatusEnum.AccountLinkStatus do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AccountLinkStatusEnum.AccountLinkStatus do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -30,7 +30,7 @@ defmodule Google.Ads.Googleads.V8.Enums.AccountLinkStatusEnum.AccountLinkStatus 
   field :REVOKED, 7
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.AccountLinkStatusEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AccountLinkStatusEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

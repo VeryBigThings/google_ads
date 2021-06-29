@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.AccountLink do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.AccountLink do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -6,8 +6,8 @@ defmodule Google.Ads.Googleads.V8.Resources.AccountLink do
           linked_account: {atom, any},
           resource_name: String.t(),
           account_link_id: integer,
-          status: Google.Ads.Googleads.V8.Enums.AccountLinkStatusEnum.AccountLinkStatus.t(),
-          type: Google.Ads.Googleads.V8.Enums.LinkedAccountTypeEnum.LinkedAccountType.t()
+          status: Google.Ads.Googleads.V8Availabilities.Enums.AccountLinkStatusEnum.AccountLinkStatus.t(),
+          type: Google.Ads.Googleads.V8Availabilities.Enums.LinkedAccountTypeEnum.LinkedAccountType.t()
         }
 
   defstruct [:linked_account, :resource_name, :account_link_id, :status, :type]
@@ -18,32 +18,32 @@ defmodule Google.Ads.Googleads.V8.Resources.AccountLink do
   field :account_link_id, 8, type: :int64
 
   field :status, 3,
-    type: Google.Ads.Googleads.V8.Enums.AccountLinkStatusEnum.AccountLinkStatus,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.AccountLinkStatusEnum.AccountLinkStatus,
     enum: true
 
   field :type, 4,
-    type: Google.Ads.Googleads.V8.Enums.LinkedAccountTypeEnum.LinkedAccountType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.LinkedAccountTypeEnum.LinkedAccountType,
     enum: true
 
   field :third_party_app_analytics, 5,
-    type: Google.Ads.Googleads.V8.Resources.ThirdPartyAppAnalyticsLinkIdentifier,
+    type: Google.Ads.Googleads.V8Availabilities.Resources.ThirdPartyAppAnalyticsLinkIdentifier,
     oneof: 0
 
   field :data_partner, 6,
-    type: Google.Ads.Googleads.V8.Resources.DataPartnerLinkIdentifier,
+    type: Google.Ads.Googleads.V8Availabilities.Resources.DataPartnerLinkIdentifier,
     oneof: 0
 
-  field :google_ads, 7, type: Google.Ads.Googleads.V8.Resources.GoogleAdsLinkIdentifier, oneof: 0
+  field :google_ads, 7, type: Google.Ads.Googleads.V8Availabilities.Resources.GoogleAdsLinkIdentifier, oneof: 0
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.ThirdPartyAppAnalyticsLinkIdentifier do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.ThirdPartyAppAnalyticsLinkIdentifier do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           app_analytics_provider_id: integer,
           app_id: String.t(),
-          app_vendor: Google.Ads.Googleads.V8.Enums.MobileAppVendorEnum.MobileAppVendor.t()
+          app_vendor: Google.Ads.Googleads.V8Availabilities.Enums.MobileAppVendorEnum.MobileAppVendor.t()
         }
 
   defstruct [:app_analytics_provider_id, :app_id, :app_vendor]
@@ -52,11 +52,11 @@ defmodule Google.Ads.Googleads.V8.Resources.ThirdPartyAppAnalyticsLinkIdentifier
   field :app_id, 5, type: :string
 
   field :app_vendor, 3,
-    type: Google.Ads.Googleads.V8.Enums.MobileAppVendorEnum.MobileAppVendor,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.MobileAppVendorEnum.MobileAppVendor,
     enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.DataPartnerLinkIdentifier do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.DataPartnerLinkIdentifier do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -69,7 +69,7 @@ defmodule Google.Ads.Googleads.V8.Resources.DataPartnerLinkIdentifier do
   field :data_partner_id, 1, type: :int64
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.GoogleAdsLinkIdentifier do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.GoogleAdsLinkIdentifier do
   @moduledoc false
   use Protobuf, syntax: :proto3
 

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :ENABLED | :PAUSED | :REMOVED
@@ -14,7 +14,7 @@ defmodule Google.Ads.Googleads.V8.Enums.AdGroupCriterionStatusEnum.AdGroupCriter
   field :REMOVED, 4
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.AdGroupCriterionStatusEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AdGroupCriterionStatusEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

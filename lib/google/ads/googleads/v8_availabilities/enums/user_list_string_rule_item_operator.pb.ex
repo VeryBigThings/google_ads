@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -36,7 +36,7 @@ defmodule Google.Ads.Googleads.V8.Enums.UserListStringRuleItemOperatorEnum.UserL
   field :NOT_ENDS_WITH, 9
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.UserListStringRuleItemOperatorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.UserListStringRuleItemOperatorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

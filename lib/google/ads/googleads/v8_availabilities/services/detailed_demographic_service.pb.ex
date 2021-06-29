@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetDetailedDemographicRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetDetailedDemographicRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,16 +11,16 @@ defmodule Google.Ads.Googleads.V8.Services.GetDetailedDemographicRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.DetailedDemographicService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.DetailedDemographicService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.DetailedDemographicService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.DetailedDemographicService"
 
   rpc :GetDetailedDemographic,
-      Google.Ads.Googleads.V8.Services.GetDetailedDemographicRequest,
-      Google.Ads.Googleads.V8.Resources.DetailedDemographic
+      Google.Ads.Googleads.V8Availabilities.Services.GetDetailedDemographicRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.DetailedDemographic
 end
 
-defmodule Google.Ads.Googleads.V8.Services.DetailedDemographicService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.DetailedDemographicService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.DetailedDemographicService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.DetailedDemographicService.Service
 end

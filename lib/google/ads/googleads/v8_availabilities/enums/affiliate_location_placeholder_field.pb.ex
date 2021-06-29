@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -45,7 +45,7 @@ defmodule Google.Ads.Googleads.V8.Enums.AffiliateLocationPlaceholderFieldEnum.Af
   field :CHAIN_NAME, 12
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.AffiliateLocationPlaceholderFieldEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AffiliateLocationPlaceholderFieldEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.MediaBundleErrorEnum.MediaBundleError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.MediaBundleErrorEnum.MediaBundleError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -78,7 +78,7 @@ defmodule Google.Ads.Googleads.V8.Errors.MediaBundleErrorEnum.MediaBundleError d
   field :CUSTOM_EXIT_NOT_ALLOWED, 24
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.MediaBundleErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.MediaBundleErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

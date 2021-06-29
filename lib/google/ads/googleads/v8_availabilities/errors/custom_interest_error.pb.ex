@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.CustomInterestErrorEnum.CustomInterestError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.CustomInterestErrorEnum.CustomInterestError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -33,7 +33,7 @@ defmodule Google.Ads.Googleads.V8.Errors.CustomInterestErrorEnum.CustomInterestE
   field :CANNOT_CHANGE_TYPE, 8
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.CustomInterestErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.CustomInterestErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

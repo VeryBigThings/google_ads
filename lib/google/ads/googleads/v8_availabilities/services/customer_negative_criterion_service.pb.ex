@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetCustomerNegativeCriterionRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetCustomerNegativeCriterionRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,17 +11,17 @@ defmodule Google.Ads.Googleads.V8.Services.GetCustomerNegativeCriterionRequest d
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateCustomerNegativeCriteriaRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateCustomerNegativeCriteriaRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           customer_id: String.t(),
-          operations: [Google.Ads.Googleads.V8.Services.CustomerNegativeCriterionOperation.t()],
+          operations: [Google.Ads.Googleads.V8Availabilities.Services.CustomerNegativeCriterionOperation.t()],
           partial_failure: boolean,
           validate_only: boolean,
           response_content_type:
-            Google.Ads.Googleads.V8.Enums.ResponseContentTypeEnum.ResponseContentType.t()
+            Google.Ads.Googleads.V8Availabilities.Enums.ResponseContentTypeEnum.ResponseContentType.t()
         }
 
   defstruct [:customer_id, :operations, :partial_failure, :validate_only, :response_content_type]
@@ -30,17 +30,17 @@ defmodule Google.Ads.Googleads.V8.Services.MutateCustomerNegativeCriteriaRequest
 
   field :operations, 2,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Services.CustomerNegativeCriterionOperation
+    type: Google.Ads.Googleads.V8Availabilities.Services.CustomerNegativeCriterionOperation
 
   field :partial_failure, 3, type: :bool
   field :validate_only, 4, type: :bool
 
   field :response_content_type, 5,
-    type: Google.Ads.Googleads.V8.Enums.ResponseContentTypeEnum.ResponseContentType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.ResponseContentTypeEnum.ResponseContentType,
     enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Services.CustomerNegativeCriterionOperation do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.CustomerNegativeCriterionOperation do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -52,17 +52,17 @@ defmodule Google.Ads.Googleads.V8.Services.CustomerNegativeCriterionOperation do
 
   oneof :operation, 0
 
-  field :create, 1, type: Google.Ads.Googleads.V8.Resources.CustomerNegativeCriterion, oneof: 0
+  field :create, 1, type: Google.Ads.Googleads.V8Availabilities.Resources.CustomerNegativeCriterion, oneof: 0
   field :remove, 2, type: :string, oneof: 0
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateCustomerNegativeCriteriaResponse do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateCustomerNegativeCriteriaResponse do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           partial_failure_error: Google.Rpc.Status.t() | nil,
-          results: [Google.Ads.Googleads.V8.Services.MutateCustomerNegativeCriteriaResult.t()]
+          results: [Google.Ads.Googleads.V8Availabilities.Services.MutateCustomerNegativeCriteriaResult.t()]
         }
 
   defstruct [:partial_failure_error, :results]
@@ -71,17 +71,17 @@ defmodule Google.Ads.Googleads.V8.Services.MutateCustomerNegativeCriteriaRespons
 
   field :results, 2,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Services.MutateCustomerNegativeCriteriaResult
+    type: Google.Ads.Googleads.V8Availabilities.Services.MutateCustomerNegativeCriteriaResult
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateCustomerNegativeCriteriaResult do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateCustomerNegativeCriteriaResult do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           resource_name: String.t(),
           customer_negative_criterion:
-            Google.Ads.Googleads.V8.Resources.CustomerNegativeCriterion.t() | nil
+            Google.Ads.Googleads.V8Availabilities.Resources.CustomerNegativeCriterion.t() | nil
         }
 
   defstruct [:resource_name, :customer_negative_criterion]
@@ -89,24 +89,24 @@ defmodule Google.Ads.Googleads.V8.Services.MutateCustomerNegativeCriteriaResult 
   field :resource_name, 1, type: :string
 
   field :customer_negative_criterion, 2,
-    type: Google.Ads.Googleads.V8.Resources.CustomerNegativeCriterion
+    type: Google.Ads.Googleads.V8Availabilities.Resources.CustomerNegativeCriterion
 end
 
-defmodule Google.Ads.Googleads.V8.Services.CustomerNegativeCriterionService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.CustomerNegativeCriterionService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.CustomerNegativeCriterionService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.CustomerNegativeCriterionService"
 
   rpc :GetCustomerNegativeCriterion,
-      Google.Ads.Googleads.V8.Services.GetCustomerNegativeCriterionRequest,
-      Google.Ads.Googleads.V8.Resources.CustomerNegativeCriterion
+      Google.Ads.Googleads.V8Availabilities.Services.GetCustomerNegativeCriterionRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.CustomerNegativeCriterion
 
   rpc :MutateCustomerNegativeCriteria,
-      Google.Ads.Googleads.V8.Services.MutateCustomerNegativeCriteriaRequest,
-      Google.Ads.Googleads.V8.Services.MutateCustomerNegativeCriteriaResponse
+      Google.Ads.Googleads.V8Availabilities.Services.MutateCustomerNegativeCriteriaRequest,
+      Google.Ads.Googleads.V8Availabilities.Services.MutateCustomerNegativeCriteriaResponse
 end
 
-defmodule Google.Ads.Googleads.V8.Services.CustomerNegativeCriterionService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.CustomerNegativeCriterionService.Stub do
   @moduledoc false
   use GRPC.Stub,
-    service: Google.Ads.Googleads.V8.Services.CustomerNegativeCriterionService.Service
+    service: Google.Ads.Googleads.V8Availabilities.Services.CustomerNegativeCriterionService.Service
 end

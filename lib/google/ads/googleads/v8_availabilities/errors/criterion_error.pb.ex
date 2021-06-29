@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.CriterionErrorEnum.CriterionError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.CriterionErrorEnum.CriterionError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -387,7 +387,7 @@ defmodule Google.Ads.Googleads.V8.Errors.CriterionErrorEnum.CriterionError do
   field :HOTEL_CHECK_IN_DATE_RANGE_REVERSED, 134
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.CriterionErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.CriterionErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

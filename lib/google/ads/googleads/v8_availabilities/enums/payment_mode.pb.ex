@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.PaymentModeEnum.PaymentMode do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.PaymentModeEnum.PaymentMode do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -24,7 +24,7 @@ defmodule Google.Ads.Googleads.V8.Enums.PaymentModeEnum.PaymentMode do
   field :GUEST_STAY, 7
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.PaymentModeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.PaymentModeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

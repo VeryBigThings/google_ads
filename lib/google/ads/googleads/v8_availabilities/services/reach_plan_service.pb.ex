@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.ListPlannableLocationsRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.ListPlannableLocationsRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}
@@ -6,22 +6,22 @@ defmodule Google.Ads.Googleads.V8.Services.ListPlannableLocationsRequest do
   defstruct []
 end
 
-defmodule Google.Ads.Googleads.V8.Services.ListPlannableLocationsResponse do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.ListPlannableLocationsResponse do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          plannable_locations: [Google.Ads.Googleads.V8.Services.PlannableLocation.t()]
+          plannable_locations: [Google.Ads.Googleads.V8Availabilities.Services.PlannableLocation.t()]
         }
 
   defstruct [:plannable_locations]
 
   field :plannable_locations, 1,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Services.PlannableLocation
+    type: Google.Ads.Googleads.V8Availabilities.Services.PlannableLocation
 end
 
-defmodule Google.Ads.Googleads.V8.Services.PlannableLocation do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.PlannableLocation do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -38,7 +38,7 @@ defmodule Google.Ads.Googleads.V8.Services.PlannableLocation do
   field :parent_country_id, 6, type: :int64
 end
 
-defmodule Google.Ads.Googleads.V8.Services.ListPlannableProductsRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.ListPlannableProductsRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -51,68 +51,68 @@ defmodule Google.Ads.Googleads.V8.Services.ListPlannableProductsRequest do
   field :plannable_location_id, 2, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.ListPlannableProductsResponse do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.ListPlannableProductsResponse do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          product_metadata: [Google.Ads.Googleads.V8.Services.ProductMetadata.t()]
+          product_metadata: [Google.Ads.Googleads.V8Availabilities.Services.ProductMetadata.t()]
         }
 
   defstruct [:product_metadata]
 
   field :product_metadata, 1,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Services.ProductMetadata
+    type: Google.Ads.Googleads.V8Availabilities.Services.ProductMetadata
 end
 
-defmodule Google.Ads.Googleads.V8.Services.ProductMetadata do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.ProductMetadata do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           plannable_product_code: String.t(),
           plannable_product_name: String.t(),
-          plannable_targeting: Google.Ads.Googleads.V8.Services.PlannableTargeting.t() | nil
+          plannable_targeting: Google.Ads.Googleads.V8Availabilities.Services.PlannableTargeting.t() | nil
         }
 
   defstruct [:plannable_product_code, :plannable_product_name, :plannable_targeting]
 
   field :plannable_product_code, 4, type: :string
   field :plannable_product_name, 3, type: :string
-  field :plannable_targeting, 2, type: Google.Ads.Googleads.V8.Services.PlannableTargeting
+  field :plannable_targeting, 2, type: Google.Ads.Googleads.V8Availabilities.Services.PlannableTargeting
 end
 
-defmodule Google.Ads.Googleads.V8.Services.PlannableTargeting do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.PlannableTargeting do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           age_ranges: [
-            [Google.Ads.Googleads.V8.Enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange.t()]
+            [Google.Ads.Googleads.V8Availabilities.Enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange.t()]
           ],
-          genders: [Google.Ads.Googleads.V8.Common.GenderInfo.t()],
-          devices: [Google.Ads.Googleads.V8.Common.DeviceInfo.t()],
-          networks: [[Google.Ads.Googleads.V8.Enums.ReachPlanNetworkEnum.ReachPlanNetwork.t()]]
+          genders: [Google.Ads.Googleads.V8Availabilities.Common.GenderInfo.t()],
+          devices: [Google.Ads.Googleads.V8Availabilities.Common.DeviceInfo.t()],
+          networks: [[Google.Ads.Googleads.V8Availabilities.Enums.ReachPlanNetworkEnum.ReachPlanNetwork.t()]]
         }
 
   defstruct [:age_ranges, :genders, :devices, :networks]
 
   field :age_ranges, 1,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange,
     enum: true
 
-  field :genders, 2, repeated: true, type: Google.Ads.Googleads.V8.Common.GenderInfo
-  field :devices, 3, repeated: true, type: Google.Ads.Googleads.V8.Common.DeviceInfo
+  field :genders, 2, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Common.GenderInfo
+  field :devices, 3, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Common.DeviceInfo
 
   field :networks, 4,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Enums.ReachPlanNetworkEnum.ReachPlanNetwork,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.ReachPlanNetworkEnum.ReachPlanNetwork,
     enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Services.GenerateProductMixIdeasRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GenerateProductMixIdeasRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -121,7 +121,7 @@ defmodule Google.Ads.Googleads.V8.Services.GenerateProductMixIdeasRequest do
           plannable_location_id: String.t(),
           currency_code: String.t(),
           budget_micros: integer,
-          preferences: Google.Ads.Googleads.V8.Services.Preferences.t() | nil
+          preferences: Google.Ads.Googleads.V8Availabilities.Services.Preferences.t() | nil
         }
 
   defstruct [:customer_id, :plannable_location_id, :currency_code, :budget_micros, :preferences]
@@ -130,17 +130,17 @@ defmodule Google.Ads.Googleads.V8.Services.GenerateProductMixIdeasRequest do
   field :plannable_location_id, 6, type: :string
   field :currency_code, 7, type: :string
   field :budget_micros, 8, type: :int64
-  field :preferences, 5, type: Google.Ads.Googleads.V8.Services.Preferences
+  field :preferences, 5, type: Google.Ads.Googleads.V8Availabilities.Services.Preferences
 end
 
-defmodule Google.Ads.Googleads.V8.Services.Preferences do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.Preferences do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           is_skippable: boolean,
           starts_with_sound: boolean,
-          ad_length: Google.Ads.Googleads.V8.Enums.ReachPlanAdLengthEnum.ReachPlanAdLength.t(),
+          ad_length: Google.Ads.Googleads.V8Availabilities.Enums.ReachPlanAdLengthEnum.ReachPlanAdLength.t(),
           top_content_only: boolean,
           has_guaranteed_price: boolean
         }
@@ -157,29 +157,29 @@ defmodule Google.Ads.Googleads.V8.Services.Preferences do
   field :starts_with_sound, 7, type: :bool
 
   field :ad_length, 3,
-    type: Google.Ads.Googleads.V8.Enums.ReachPlanAdLengthEnum.ReachPlanAdLength,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.ReachPlanAdLengthEnum.ReachPlanAdLength,
     enum: true
 
   field :top_content_only, 8, type: :bool
   field :has_guaranteed_price, 9, type: :bool
 end
 
-defmodule Google.Ads.Googleads.V8.Services.GenerateProductMixIdeasResponse do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GenerateProductMixIdeasResponse do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          product_allocation: [Google.Ads.Googleads.V8.Services.ProductAllocation.t()]
+          product_allocation: [Google.Ads.Googleads.V8Availabilities.Services.ProductAllocation.t()]
         }
 
   defstruct [:product_allocation]
 
   field :product_allocation, 1,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Services.ProductAllocation
+    type: Google.Ads.Googleads.V8Availabilities.Services.ProductAllocation
 end
 
-defmodule Google.Ads.Googleads.V8.Services.ProductAllocation do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.ProductAllocation do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -194,19 +194,19 @@ defmodule Google.Ads.Googleads.V8.Services.ProductAllocation do
   field :budget_micros, 4, type: :int64
 end
 
-defmodule Google.Ads.Googleads.V8.Services.GenerateReachForecastRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GenerateReachForecastRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           customer_id: String.t(),
           currency_code: String.t(),
-          campaign_duration: Google.Ads.Googleads.V8.Services.CampaignDuration.t() | nil,
+          campaign_duration: Google.Ads.Googleads.V8Availabilities.Services.CampaignDuration.t() | nil,
           cookie_frequency_cap: integer,
-          cookie_frequency_cap_setting: Google.Ads.Googleads.V8.Services.FrequencyCap.t() | nil,
+          cookie_frequency_cap_setting: Google.Ads.Googleads.V8Availabilities.Services.FrequencyCap.t() | nil,
           min_effective_frequency: integer,
-          targeting: Google.Ads.Googleads.V8.Services.Targeting.t() | nil,
-          planned_products: [Google.Ads.Googleads.V8.Services.PlannedProduct.t()]
+          targeting: Google.Ads.Googleads.V8Availabilities.Services.Targeting.t() | nil,
+          planned_products: [Google.Ads.Googleads.V8Availabilities.Services.PlannedProduct.t()]
         }
 
   defstruct [
@@ -222,25 +222,25 @@ defmodule Google.Ads.Googleads.V8.Services.GenerateReachForecastRequest do
 
   field :customer_id, 1, type: :string
   field :currency_code, 9, type: :string
-  field :campaign_duration, 3, type: Google.Ads.Googleads.V8.Services.CampaignDuration
+  field :campaign_duration, 3, type: Google.Ads.Googleads.V8Availabilities.Services.CampaignDuration
   field :cookie_frequency_cap, 10, type: :int32
-  field :cookie_frequency_cap_setting, 8, type: Google.Ads.Googleads.V8.Services.FrequencyCap
+  field :cookie_frequency_cap_setting, 8, type: Google.Ads.Googleads.V8Availabilities.Services.FrequencyCap
   field :min_effective_frequency, 11, type: :int32
-  field :targeting, 6, type: Google.Ads.Googleads.V8.Services.Targeting
+  field :targeting, 6, type: Google.Ads.Googleads.V8Availabilities.Services.Targeting
 
   field :planned_products, 7,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Services.PlannedProduct
+    type: Google.Ads.Googleads.V8Availabilities.Services.PlannedProduct
 end
 
-defmodule Google.Ads.Googleads.V8.Services.FrequencyCap do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.FrequencyCap do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           impressions: integer,
           time_unit:
-            Google.Ads.Googleads.V8.Enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit.t()
+            Google.Ads.Googleads.V8Availabilities.Enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit.t()
         }
 
   defstruct [:impressions, :time_unit]
@@ -248,20 +248,20 @@ defmodule Google.Ads.Googleads.V8.Services.FrequencyCap do
   field :impressions, 3, type: :int32
 
   field :time_unit, 2,
-    type: Google.Ads.Googleads.V8.Enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit,
     enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Services.Targeting do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.Targeting do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           plannable_location_id: String.t(),
-          age_range: Google.Ads.Googleads.V8.Enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange.t(),
-          genders: [Google.Ads.Googleads.V8.Common.GenderInfo.t()],
-          devices: [Google.Ads.Googleads.V8.Common.DeviceInfo.t()],
-          network: Google.Ads.Googleads.V8.Enums.ReachPlanNetworkEnum.ReachPlanNetwork.t()
+          age_range: Google.Ads.Googleads.V8Availabilities.Enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange.t(),
+          genders: [Google.Ads.Googleads.V8Availabilities.Common.GenderInfo.t()],
+          devices: [Google.Ads.Googleads.V8Availabilities.Common.DeviceInfo.t()],
+          network: Google.Ads.Googleads.V8Availabilities.Enums.ReachPlanNetworkEnum.ReachPlanNetwork.t()
         }
 
   defstruct [:plannable_location_id, :age_range, :genders, :devices, :network]
@@ -269,18 +269,18 @@ defmodule Google.Ads.Googleads.V8.Services.Targeting do
   field :plannable_location_id, 6, type: :string
 
   field :age_range, 2,
-    type: Google.Ads.Googleads.V8.Enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange,
     enum: true
 
-  field :genders, 3, repeated: true, type: Google.Ads.Googleads.V8.Common.GenderInfo
-  field :devices, 4, repeated: true, type: Google.Ads.Googleads.V8.Common.DeviceInfo
+  field :genders, 3, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Common.GenderInfo
+  field :devices, 4, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Common.DeviceInfo
 
   field :network, 5,
-    type: Google.Ads.Googleads.V8.Enums.ReachPlanNetworkEnum.ReachPlanNetwork,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.ReachPlanNetworkEnum.ReachPlanNetwork,
     enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Services.CampaignDuration do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.CampaignDuration do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -293,7 +293,7 @@ defmodule Google.Ads.Googleads.V8.Services.CampaignDuration do
   field :duration_in_days, 2, type: :int32
 end
 
-defmodule Google.Ads.Googleads.V8.Services.PlannedProduct do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.PlannedProduct do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -308,60 +308,60 @@ defmodule Google.Ads.Googleads.V8.Services.PlannedProduct do
   field :budget_micros, 4, type: :int64
 end
 
-defmodule Google.Ads.Googleads.V8.Services.GenerateReachForecastResponse do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GenerateReachForecastResponse do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           on_target_audience_metrics:
-            Google.Ads.Googleads.V8.Services.OnTargetAudienceMetrics.t() | nil,
-          reach_curve: Google.Ads.Googleads.V8.Services.ReachCurve.t() | nil
+            Google.Ads.Googleads.V8Availabilities.Services.OnTargetAudienceMetrics.t() | nil,
+          reach_curve: Google.Ads.Googleads.V8Availabilities.Services.ReachCurve.t() | nil
         }
 
   defstruct [:on_target_audience_metrics, :reach_curve]
 
   field :on_target_audience_metrics, 1,
-    type: Google.Ads.Googleads.V8.Services.OnTargetAudienceMetrics
+    type: Google.Ads.Googleads.V8Availabilities.Services.OnTargetAudienceMetrics
 
-  field :reach_curve, 2, type: Google.Ads.Googleads.V8.Services.ReachCurve
+  field :reach_curve, 2, type: Google.Ads.Googleads.V8Availabilities.Services.ReachCurve
 end
 
-defmodule Google.Ads.Googleads.V8.Services.ReachCurve do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.ReachCurve do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          reach_forecasts: [Google.Ads.Googleads.V8.Services.ReachForecast.t()]
+          reach_forecasts: [Google.Ads.Googleads.V8Availabilities.Services.ReachForecast.t()]
         }
 
   defstruct [:reach_forecasts]
 
-  field :reach_forecasts, 1, repeated: true, type: Google.Ads.Googleads.V8.Services.ReachForecast
+  field :reach_forecasts, 1, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Services.ReachForecast
 end
 
-defmodule Google.Ads.Googleads.V8.Services.ReachForecast do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.ReachForecast do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           cost_micros: integer,
-          forecast: Google.Ads.Googleads.V8.Services.Forecast.t() | nil,
+          forecast: Google.Ads.Googleads.V8Availabilities.Services.Forecast.t() | nil,
           planned_product_reach_forecasts: [
-            Google.Ads.Googleads.V8.Services.PlannedProductReachForecast.t()
+            Google.Ads.Googleads.V8Availabilities.Services.PlannedProductReachForecast.t()
           ]
         }
 
   defstruct [:cost_micros, :forecast, :planned_product_reach_forecasts]
 
   field :cost_micros, 5, type: :int64
-  field :forecast, 2, type: Google.Ads.Googleads.V8.Services.Forecast
+  field :forecast, 2, type: Google.Ads.Googleads.V8Availabilities.Services.Forecast
 
   field :planned_product_reach_forecasts, 4,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Services.PlannedProductReachForecast
+    type: Google.Ads.Googleads.V8Availabilities.Services.PlannedProductReachForecast
 end
 
-defmodule Google.Ads.Googleads.V8.Services.Forecast do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.Forecast do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -388,7 +388,7 @@ defmodule Google.Ads.Googleads.V8.Services.Forecast do
   field :viewable_impressions, 9, type: :int64
 end
 
-defmodule Google.Ads.Googleads.V8.Services.PlannedProductReachForecast do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.PlannedProductReachForecast do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -396,7 +396,7 @@ defmodule Google.Ads.Googleads.V8.Services.PlannedProductReachForecast do
           plannable_product_code: String.t(),
           cost_micros: integer,
           planned_product_forecast:
-            Google.Ads.Googleads.V8.Services.PlannedProductForecast.t() | nil
+            Google.Ads.Googleads.V8Availabilities.Services.PlannedProductForecast.t() | nil
         }
 
   defstruct [:plannable_product_code, :cost_micros, :planned_product_forecast]
@@ -405,10 +405,10 @@ defmodule Google.Ads.Googleads.V8.Services.PlannedProductReachForecast do
   field :cost_micros, 2, type: :int64
 
   field :planned_product_forecast, 3,
-    type: Google.Ads.Googleads.V8.Services.PlannedProductForecast
+    type: Google.Ads.Googleads.V8Availabilities.Services.PlannedProductForecast
 end
 
-defmodule Google.Ads.Googleads.V8.Services.PlannedProductForecast do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.PlannedProductForecast do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -435,7 +435,7 @@ defmodule Google.Ads.Googleads.V8.Services.PlannedProductForecast do
   field :viewable_impressions, 5, type: :int64
 end
 
-defmodule Google.Ads.Googleads.V8.Services.OnTargetAudienceMetrics do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.OnTargetAudienceMetrics do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -450,28 +450,28 @@ defmodule Google.Ads.Googleads.V8.Services.OnTargetAudienceMetrics do
   field :census_audience_size, 4, type: :int64
 end
 
-defmodule Google.Ads.Googleads.V8.Services.ReachPlanService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.ReachPlanService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.ReachPlanService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.ReachPlanService"
 
   rpc :ListPlannableLocations,
-      Google.Ads.Googleads.V8.Services.ListPlannableLocationsRequest,
-      Google.Ads.Googleads.V8.Services.ListPlannableLocationsResponse
+      Google.Ads.Googleads.V8Availabilities.Services.ListPlannableLocationsRequest,
+      Google.Ads.Googleads.V8Availabilities.Services.ListPlannableLocationsResponse
 
   rpc :ListPlannableProducts,
-      Google.Ads.Googleads.V8.Services.ListPlannableProductsRequest,
-      Google.Ads.Googleads.V8.Services.ListPlannableProductsResponse
+      Google.Ads.Googleads.V8Availabilities.Services.ListPlannableProductsRequest,
+      Google.Ads.Googleads.V8Availabilities.Services.ListPlannableProductsResponse
 
   rpc :GenerateProductMixIdeas,
-      Google.Ads.Googleads.V8.Services.GenerateProductMixIdeasRequest,
-      Google.Ads.Googleads.V8.Services.GenerateProductMixIdeasResponse
+      Google.Ads.Googleads.V8Availabilities.Services.GenerateProductMixIdeasRequest,
+      Google.Ads.Googleads.V8Availabilities.Services.GenerateProductMixIdeasResponse
 
   rpc :GenerateReachForecast,
-      Google.Ads.Googleads.V8.Services.GenerateReachForecastRequest,
-      Google.Ads.Googleads.V8.Services.GenerateReachForecastResponse
+      Google.Ads.Googleads.V8Availabilities.Services.GenerateReachForecastRequest,
+      Google.Ads.Googleads.V8Availabilities.Services.GenerateReachForecastResponse
 end
 
-defmodule Google.Ads.Googleads.V8.Services.ReachPlanService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.ReachPlanService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.ReachPlanService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.ReachPlanService.Service
 end

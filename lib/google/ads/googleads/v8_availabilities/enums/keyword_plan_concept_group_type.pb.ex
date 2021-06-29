@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.KeywordPlanConceptGroupTypeEnum.KeywordPlanConceptGroupType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.KeywordPlanConceptGroupTypeEnum.KeywordPlanConceptGroupType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :BRAND | :OTHER_BRANDS | :NON_BRAND
@@ -14,7 +14,7 @@ defmodule Google.Ads.Googleads.V8.Enums.KeywordPlanConceptGroupTypeEnum.KeywordP
   field :NON_BRAND, 4
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.KeywordPlanConceptGroupTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.KeywordPlanConceptGroupTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

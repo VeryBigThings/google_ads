@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.ResourceLimitTypeEnum.ResourceLimitType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ResourceLimitTypeEnum.ResourceLimitType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -273,7 +273,7 @@ defmodule Google.Ads.Googleads.V8.Enums.ResourceLimitTypeEnum.ResourceLimitType 
   field :HOTEL_CHECK_IN_DATE_RANGE_BID_MODIFIERS_PER_AD_GROUP, 132
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.ResourceLimitTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ResourceLimitTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

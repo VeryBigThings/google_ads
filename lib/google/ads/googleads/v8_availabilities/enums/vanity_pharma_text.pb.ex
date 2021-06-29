@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.VanityPharmaTextEnum.VanityPharmaText do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.VanityPharmaTextEnum.VanityPharmaText do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -48,7 +48,7 @@ defmodule Google.Ads.Googleads.V8.Enums.VanityPharmaTextEnum.VanityPharmaText do
   field :PRESCRIPTION_VACCINE_WEBSITE_ES, 13
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.VanityPharmaTextEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.VanityPharmaTextEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

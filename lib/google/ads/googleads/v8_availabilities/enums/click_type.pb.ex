@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.ClickTypeEnum.ClickType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ClickTypeEnum.ClickType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -171,7 +171,7 @@ defmodule Google.Ads.Googleads.V8.Enums.ClickTypeEnum.ClickType do
   field :SHOPPING_COMPARISON_LISTING, 56
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.ClickTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ClickTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

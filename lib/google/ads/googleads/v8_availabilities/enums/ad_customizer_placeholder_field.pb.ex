@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :INTEGER | :PRICE | :DATE | :STRING
@@ -16,7 +16,7 @@ defmodule Google.Ads.Googleads.V8.Enums.AdCustomizerPlaceholderFieldEnum.AdCusto
   field :STRING, 5
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.AdCustomizerPlaceholderFieldEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AdCustomizerPlaceholderFieldEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

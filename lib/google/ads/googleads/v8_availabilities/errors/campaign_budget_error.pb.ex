@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.CampaignBudgetErrorEnum.CampaignBudgetError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.CampaignBudgetErrorEnum.CampaignBudgetError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -60,7 +60,7 @@ defmodule Google.Ads.Googleads.V8.Errors.CampaignBudgetErrorEnum.CampaignBudgetE
   field :TOTAL_BUDGET_AMOUNT_MUST_BE_UNSET_FOR_BUDGET_PERIOD_DAILY, 18
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.CampaignBudgetErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.CampaignBudgetErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

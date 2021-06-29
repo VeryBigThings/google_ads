@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.UrlFieldErrorEnum.UrlFieldError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.UrlFieldErrorEnum.UrlFieldError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -168,7 +168,7 @@ defmodule Google.Ads.Googleads.V8.Errors.UrlFieldErrorEnum.UrlFieldError do
   field :NULL_CUSTOM_PARAMETER_VALUE, 57
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.UrlFieldErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.UrlFieldErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

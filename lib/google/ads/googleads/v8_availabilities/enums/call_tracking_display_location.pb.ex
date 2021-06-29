@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.CallTrackingDisplayLocationEnum.CallTrackingDisplayLocation do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.CallTrackingDisplayLocationEnum.CallTrackingDisplayLocation do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :AD | :LANDING_PAGE
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Enums.CallTrackingDisplayLocationEnum.CallTrac
   field :LANDING_PAGE, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.CallTrackingDisplayLocationEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.CallTrackingDisplayLocationEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

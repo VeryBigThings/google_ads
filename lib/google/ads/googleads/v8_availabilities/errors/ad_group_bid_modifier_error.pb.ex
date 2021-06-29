@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -18,7 +18,7 @@ defmodule Google.Ads.Googleads.V8.Errors.AdGroupBidModifierErrorEnum.AdGroupBidM
   field :CANNOT_OVERRIDE_OPTED_OUT_CAMPAIGN_CRITERION_BID_MODIFIER, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.AdGroupBidModifierErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.AdGroupBidModifierErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

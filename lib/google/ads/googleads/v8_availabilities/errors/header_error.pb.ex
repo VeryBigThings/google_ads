@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.HeaderErrorEnum.HeaderError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.HeaderErrorEnum.HeaderError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -18,7 +18,7 @@ defmodule Google.Ads.Googleads.V8.Errors.HeaderErrorEnum.HeaderError do
   field :INVALID_LINKED_CUSTOMER_ID, 7
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.HeaderErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.HeaderErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

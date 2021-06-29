@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetProductBiddingCategoryConstantRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetProductBiddingCategoryConstantRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,17 +11,17 @@ defmodule Google.Ads.Googleads.V8.Services.GetProductBiddingCategoryConstantRequ
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.ProductBiddingCategoryConstantService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.ProductBiddingCategoryConstantService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.ProductBiddingCategoryConstantService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.ProductBiddingCategoryConstantService"
 
   rpc :GetProductBiddingCategoryConstant,
-      Google.Ads.Googleads.V8.Services.GetProductBiddingCategoryConstantRequest,
-      Google.Ads.Googleads.V8.Resources.ProductBiddingCategoryConstant
+      Google.Ads.Googleads.V8Availabilities.Services.GetProductBiddingCategoryConstantRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.ProductBiddingCategoryConstant
 end
 
-defmodule Google.Ads.Googleads.V8.Services.ProductBiddingCategoryConstantService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.ProductBiddingCategoryConstantService.Stub do
   @moduledoc false
   use GRPC.Stub,
-    service: Google.Ads.Googleads.V8.Services.ProductBiddingCategoryConstantService.Service
+    service: Google.Ads.Googleads.V8Availabilities.Services.ProductBiddingCategoryConstantService.Service
 end

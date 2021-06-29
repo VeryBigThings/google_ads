@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.MediaFileErrorEnum.MediaFileError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.MediaFileErrorEnum.MediaFileError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -81,7 +81,7 @@ defmodule Google.Ads.Googleads.V8.Errors.MediaFileErrorEnum.MediaFileError do
   field :YOU_TUBE_VIDEO_NOT_FOUND, 24
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.MediaFileErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.MediaFileErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

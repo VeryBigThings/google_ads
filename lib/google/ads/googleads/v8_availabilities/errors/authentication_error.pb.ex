@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.AuthenticationErrorEnum.AuthenticationError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.AuthenticationErrorEnum.AuthenticationError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -66,7 +66,7 @@ defmodule Google.Ads.Googleads.V8.Errors.AuthenticationErrorEnum.AuthenticationE
   field :ADVANCED_PROTECTION_NOT_ENROLLED, 24
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.AuthenticationErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.AuthenticationErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

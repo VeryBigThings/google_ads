@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.RecommendationErrorEnum.RecommendationError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.RecommendationErrorEnum.RecommendationError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -54,7 +54,7 @@ defmodule Google.Ads.Googleads.V8.Errors.RecommendationErrorEnum.RecommendationE
   field :INVALID_APPLY_REQUEST, 15
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.RecommendationErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.RecommendationErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

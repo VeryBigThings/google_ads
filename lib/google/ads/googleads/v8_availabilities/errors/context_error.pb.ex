@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.ContextErrorEnum.ContextError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.ContextErrorEnum.ContextError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -18,7 +18,7 @@ defmodule Google.Ads.Googleads.V8.Errors.ContextErrorEnum.ContextError do
   field :OPERATION_NOT_PERMITTED_FOR_REMOVED_RESOURCE, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.ContextErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.ContextErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

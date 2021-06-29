@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.FeedMappingCriterionTypeEnum.FeedMappingCriterionType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.FeedMappingCriterionTypeEnum.FeedMappingCriterionType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :LOCATION_EXTENSION_TARGETING | :DSA_PAGE_FEED
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Enums.FeedMappingCriterionTypeEnum.FeedMapping
   field :DSA_PAGE_FEED, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.FeedMappingCriterionTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.FeedMappingCriterionTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

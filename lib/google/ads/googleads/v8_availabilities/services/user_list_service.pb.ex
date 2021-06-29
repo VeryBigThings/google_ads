@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetUserListRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetUserListRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,13 +11,13 @@ defmodule Google.Ads.Googleads.V8.Services.GetUserListRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateUserListsRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateUserListsRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           customer_id: String.t(),
-          operations: [Google.Ads.Googleads.V8.Services.UserListOperation.t()],
+          operations: [Google.Ads.Googleads.V8Availabilities.Services.UserListOperation.t()],
           partial_failure: boolean,
           validate_only: boolean
         }
@@ -25,12 +25,12 @@ defmodule Google.Ads.Googleads.V8.Services.MutateUserListsRequest do
   defstruct [:customer_id, :operations, :partial_failure, :validate_only]
 
   field :customer_id, 1, type: :string
-  field :operations, 2, repeated: true, type: Google.Ads.Googleads.V8.Services.UserListOperation
+  field :operations, 2, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Services.UserListOperation
   field :partial_failure, 3, type: :bool
   field :validate_only, 4, type: :bool
 end
 
-defmodule Google.Ads.Googleads.V8.Services.UserListOperation do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.UserListOperation do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -44,27 +44,27 @@ defmodule Google.Ads.Googleads.V8.Services.UserListOperation do
   oneof :operation, 0
 
   field :update_mask, 4, type: Google.Protobuf.FieldMask
-  field :create, 1, type: Google.Ads.Googleads.V8.Resources.UserList, oneof: 0
-  field :update, 2, type: Google.Ads.Googleads.V8.Resources.UserList, oneof: 0
+  field :create, 1, type: Google.Ads.Googleads.V8Availabilities.Resources.UserList, oneof: 0
+  field :update, 2, type: Google.Ads.Googleads.V8Availabilities.Resources.UserList, oneof: 0
   field :remove, 3, type: :string, oneof: 0
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateUserListsResponse do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateUserListsResponse do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           partial_failure_error: Google.Rpc.Status.t() | nil,
-          results: [Google.Ads.Googleads.V8.Services.MutateUserListResult.t()]
+          results: [Google.Ads.Googleads.V8Availabilities.Services.MutateUserListResult.t()]
         }
 
   defstruct [:partial_failure_error, :results]
 
   field :partial_failure_error, 3, type: Google.Rpc.Status
-  field :results, 2, repeated: true, type: Google.Ads.Googleads.V8.Services.MutateUserListResult
+  field :results, 2, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Services.MutateUserListResult
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateUserListResult do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateUserListResult do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -77,20 +77,20 @@ defmodule Google.Ads.Googleads.V8.Services.MutateUserListResult do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.UserListService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.UserListService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.UserListService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.UserListService"
 
   rpc :GetUserList,
-      Google.Ads.Googleads.V8.Services.GetUserListRequest,
-      Google.Ads.Googleads.V8.Resources.UserList
+      Google.Ads.Googleads.V8Availabilities.Services.GetUserListRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.UserList
 
   rpc :MutateUserLists,
-      Google.Ads.Googleads.V8.Services.MutateUserListsRequest,
-      Google.Ads.Googleads.V8.Services.MutateUserListsResponse
+      Google.Ads.Googleads.V8Availabilities.Services.MutateUserListsRequest,
+      Google.Ads.Googleads.V8Availabilities.Services.MutateUserListsResponse
 end
 
-defmodule Google.Ads.Googleads.V8.Services.UserListService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.UserListService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.UserListService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.UserListService.Service
 end

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.CallPlaceholderFieldEnum.CallPlaceholderField do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.CallPlaceholderFieldEnum.CallPlaceholderField do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -27,7 +27,7 @@ defmodule Google.Ads.Googleads.V8.Enums.CallPlaceholderFieldEnum.CallPlaceholder
   field :CONVERSION_REPORTING_STATE, 6
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.CallPlaceholderFieldEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.CallPlaceholderFieldEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

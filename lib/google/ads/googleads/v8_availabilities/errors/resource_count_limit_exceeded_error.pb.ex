@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.ResourceCountLimitExceededErrorEnum.ResourceCountLimitExceededError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.ResourceCountLimitExceededErrorEnum.ResourceCountLimitExceededError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -39,7 +39,7 @@ defmodule Google.Ads.Googleads.V8.Errors.ResourceCountLimitExceededErrorEnum.Res
   field :RESOURCE_LIMIT, 10
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.ResourceCountLimitExceededErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.ResourceCountLimitExceededErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

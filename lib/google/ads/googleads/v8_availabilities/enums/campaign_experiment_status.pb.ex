@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.CampaignExperimentStatusEnum.CampaignExperimentStatus do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.CampaignExperimentStatusEnum.CampaignExperimentStatus do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -39,7 +39,7 @@ defmodule Google.Ads.Googleads.V8.Enums.CampaignExperimentStatusEnum.CampaignExp
   field :ENDED_MANUALLY, 10
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.CampaignExperimentStatusEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.CampaignExperimentStatusEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

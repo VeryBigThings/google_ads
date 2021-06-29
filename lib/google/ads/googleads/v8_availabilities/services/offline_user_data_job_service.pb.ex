@@ -1,21 +1,21 @@
-defmodule Google.Ads.Googleads.V8.Services.CreateOfflineUserDataJobRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.CreateOfflineUserDataJobRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           customer_id: String.t(),
-          job: Google.Ads.Googleads.V8.Resources.OfflineUserDataJob.t() | nil,
+          job: Google.Ads.Googleads.V8Availabilities.Resources.OfflineUserDataJob.t() | nil,
           validate_only: boolean
         }
 
   defstruct [:customer_id, :job, :validate_only]
 
   field :customer_id, 1, type: :string
-  field :job, 2, type: Google.Ads.Googleads.V8.Resources.OfflineUserDataJob
+  field :job, 2, type: Google.Ads.Googleads.V8Availabilities.Resources.OfflineUserDataJob
   field :validate_only, 3, type: :bool
 end
 
-defmodule Google.Ads.Googleads.V8.Services.CreateOfflineUserDataJobResponse do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.CreateOfflineUserDataJobResponse do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -28,7 +28,7 @@ defmodule Google.Ads.Googleads.V8.Services.CreateOfflineUserDataJobResponse do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.GetOfflineUserDataJobRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetOfflineUserDataJobRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -41,7 +41,7 @@ defmodule Google.Ads.Googleads.V8.Services.GetOfflineUserDataJobRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.RunOfflineUserDataJobRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.RunOfflineUserDataJobRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -56,14 +56,14 @@ defmodule Google.Ads.Googleads.V8.Services.RunOfflineUserDataJobRequest do
   field :validate_only, 2, type: :bool
 end
 
-defmodule Google.Ads.Googleads.V8.Services.AddOfflineUserDataJobOperationsRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.AddOfflineUserDataJobOperationsRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           resource_name: String.t(),
           enable_partial_failure: boolean,
-          operations: [Google.Ads.Googleads.V8.Services.OfflineUserDataJobOperation.t()],
+          operations: [Google.Ads.Googleads.V8Availabilities.Services.OfflineUserDataJobOperation.t()],
           validate_only: boolean
         }
 
@@ -74,12 +74,12 @@ defmodule Google.Ads.Googleads.V8.Services.AddOfflineUserDataJobOperationsReques
 
   field :operations, 3,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Services.OfflineUserDataJobOperation
+    type: Google.Ads.Googleads.V8Availabilities.Services.OfflineUserDataJobOperation
 
   field :validate_only, 5, type: :bool
 end
 
-defmodule Google.Ads.Googleads.V8.Services.OfflineUserDataJobOperation do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.OfflineUserDataJobOperation do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -91,12 +91,12 @@ defmodule Google.Ads.Googleads.V8.Services.OfflineUserDataJobOperation do
 
   oneof :operation, 0
 
-  field :create, 1, type: Google.Ads.Googleads.V8.Common.UserData, oneof: 0
-  field :remove, 2, type: Google.Ads.Googleads.V8.Common.UserData, oneof: 0
+  field :create, 1, type: Google.Ads.Googleads.V8Availabilities.Common.UserData, oneof: 0
+  field :remove, 2, type: Google.Ads.Googleads.V8Availabilities.Common.UserData, oneof: 0
   field :remove_all, 3, type: :bool, oneof: 0
 end
 
-defmodule Google.Ads.Googleads.V8.Services.AddOfflineUserDataJobOperationsResponse do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.AddOfflineUserDataJobOperationsResponse do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -109,28 +109,28 @@ defmodule Google.Ads.Googleads.V8.Services.AddOfflineUserDataJobOperationsRespon
   field :partial_failure_error, 1, type: Google.Rpc.Status
 end
 
-defmodule Google.Ads.Googleads.V8.Services.OfflineUserDataJobService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.OfflineUserDataJobService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.OfflineUserDataJobService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.OfflineUserDataJobService"
 
   rpc :CreateOfflineUserDataJob,
-      Google.Ads.Googleads.V8.Services.CreateOfflineUserDataJobRequest,
-      Google.Ads.Googleads.V8.Services.CreateOfflineUserDataJobResponse
+      Google.Ads.Googleads.V8Availabilities.Services.CreateOfflineUserDataJobRequest,
+      Google.Ads.Googleads.V8Availabilities.Services.CreateOfflineUserDataJobResponse
 
   rpc :GetOfflineUserDataJob,
-      Google.Ads.Googleads.V8.Services.GetOfflineUserDataJobRequest,
-      Google.Ads.Googleads.V8.Resources.OfflineUserDataJob
+      Google.Ads.Googleads.V8Availabilities.Services.GetOfflineUserDataJobRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.OfflineUserDataJob
 
   rpc :AddOfflineUserDataJobOperations,
-      Google.Ads.Googleads.V8.Services.AddOfflineUserDataJobOperationsRequest,
-      Google.Ads.Googleads.V8.Services.AddOfflineUserDataJobOperationsResponse
+      Google.Ads.Googleads.V8Availabilities.Services.AddOfflineUserDataJobOperationsRequest,
+      Google.Ads.Googleads.V8Availabilities.Services.AddOfflineUserDataJobOperationsResponse
 
   rpc :RunOfflineUserDataJob,
-      Google.Ads.Googleads.V8.Services.RunOfflineUserDataJobRequest,
+      Google.Ads.Googleads.V8Availabilities.Services.RunOfflineUserDataJobRequest,
       Google.Longrunning.Operation
 end
 
-defmodule Google.Ads.Googleads.V8.Services.OfflineUserDataJobService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.OfflineUserDataJobService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.OfflineUserDataJobService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.OfflineUserDataJobService.Service
 end

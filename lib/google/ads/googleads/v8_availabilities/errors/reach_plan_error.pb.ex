@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.ReachPlanErrorEnum.ReachPlanError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.ReachPlanErrorEnum.ReachPlanError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :NOT_FORECASTABLE_MISSING_RATE
@@ -10,7 +10,7 @@ defmodule Google.Ads.Googleads.V8.Errors.ReachPlanErrorEnum.ReachPlanError do
   field :NOT_FORECASTABLE_MISSING_RATE, 2
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.ReachPlanErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.ReachPlanErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

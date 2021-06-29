@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.DateRangeErrorEnum.DateRangeError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.DateRangeErrorEnum.DateRangeError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -27,7 +27,7 @@ defmodule Google.Ads.Googleads.V8.Errors.DateRangeErrorEnum.DateRangeError do
   field :CANNOT_MODIFY_START_DATE_IF_ALREADY_STARTED, 6
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.DateRangeErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.DateRangeErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

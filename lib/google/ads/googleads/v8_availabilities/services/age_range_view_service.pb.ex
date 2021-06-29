@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetAgeRangeViewRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetAgeRangeViewRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,16 +11,16 @@ defmodule Google.Ads.Googleads.V8.Services.GetAgeRangeViewRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.AgeRangeViewService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.AgeRangeViewService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.AgeRangeViewService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.AgeRangeViewService"
 
   rpc :GetAgeRangeView,
-      Google.Ads.Googleads.V8.Services.GetAgeRangeViewRequest,
-      Google.Ads.Googleads.V8.Resources.AgeRangeView
+      Google.Ads.Googleads.V8Availabilities.Services.GetAgeRangeViewRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.AgeRangeView
 end
 
-defmodule Google.Ads.Googleads.V8.Services.AgeRangeViewService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.AgeRangeViewService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.AgeRangeViewService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.AgeRangeViewService.Service
 end

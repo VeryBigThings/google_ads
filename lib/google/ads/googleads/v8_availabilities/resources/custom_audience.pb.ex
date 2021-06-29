@@ -1,15 +1,15 @@
-defmodule Google.Ads.Googleads.V8.Resources.CustomAudience do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.CustomAudience do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           resource_name: String.t(),
           id: integer,
-          status: Google.Ads.Googleads.V8.Enums.CustomAudienceStatusEnum.CustomAudienceStatus.t(),
+          status: Google.Ads.Googleads.V8Availabilities.Enums.CustomAudienceStatusEnum.CustomAudienceStatus.t(),
           name: String.t(),
-          type: Google.Ads.Googleads.V8.Enums.CustomAudienceTypeEnum.CustomAudienceType.t(),
+          type: Google.Ads.Googleads.V8Availabilities.Enums.CustomAudienceTypeEnum.CustomAudienceType.t(),
           description: String.t(),
-          members: [Google.Ads.Googleads.V8.Resources.CustomAudienceMember.t()]
+          members: [Google.Ads.Googleads.V8Availabilities.Resources.CustomAudienceMember.t()]
         }
 
   defstruct [:resource_name, :id, :status, :name, :type, :description, :members]
@@ -18,27 +18,27 @@ defmodule Google.Ads.Googleads.V8.Resources.CustomAudience do
   field :id, 2, type: :int64
 
   field :status, 3,
-    type: Google.Ads.Googleads.V8.Enums.CustomAudienceStatusEnum.CustomAudienceStatus,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.CustomAudienceStatusEnum.CustomAudienceStatus,
     enum: true
 
   field :name, 4, type: :string
 
   field :type, 5,
-    type: Google.Ads.Googleads.V8.Enums.CustomAudienceTypeEnum.CustomAudienceType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.CustomAudienceTypeEnum.CustomAudienceType,
     enum: true
 
   field :description, 6, type: :string
-  field :members, 7, repeated: true, type: Google.Ads.Googleads.V8.Resources.CustomAudienceMember
+  field :members, 7, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Resources.CustomAudienceMember
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.CustomAudienceMember do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.CustomAudienceMember do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           value: {atom, any},
           member_type:
-            Google.Ads.Googleads.V8.Enums.CustomAudienceMemberTypeEnum.CustomAudienceMemberType.t()
+            Google.Ads.Googleads.V8Availabilities.Enums.CustomAudienceMemberTypeEnum.CustomAudienceMemberType.t()
         }
 
   defstruct [:value, :member_type]
@@ -46,7 +46,7 @@ defmodule Google.Ads.Googleads.V8.Resources.CustomAudienceMember do
   oneof :value, 0
 
   field :member_type, 1,
-    type: Google.Ads.Googleads.V8.Enums.CustomAudienceMemberTypeEnum.CustomAudienceMemberType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.CustomAudienceMemberTypeEnum.CustomAudienceMemberType,
     enum: true
 
   field :keyword, 2, type: :string, oneof: 0

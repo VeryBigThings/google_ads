@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.ChangeEventErrorEnum.ChangeEventError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.ChangeEventErrorEnum.ChangeEventError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -27,7 +27,7 @@ defmodule Google.Ads.Googleads.V8.Errors.ChangeEventErrorEnum.ChangeEventError d
   field :INVALID_LIMIT_CLAUSE, 6
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.ChangeEventErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.ChangeEventErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

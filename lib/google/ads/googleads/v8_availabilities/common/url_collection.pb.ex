@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Common.UrlCollection do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.UrlCollection do
   @moduledoc false
   use Protobuf, syntax: :proto3
 

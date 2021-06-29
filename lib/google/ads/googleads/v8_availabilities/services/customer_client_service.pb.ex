@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetCustomerClientRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetCustomerClientRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,16 +11,16 @@ defmodule Google.Ads.Googleads.V8.Services.GetCustomerClientRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.CustomerClientService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.CustomerClientService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.CustomerClientService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.CustomerClientService"
 
   rpc :GetCustomerClient,
-      Google.Ads.Googleads.V8.Services.GetCustomerClientRequest,
-      Google.Ads.Googleads.V8.Resources.CustomerClient
+      Google.Ads.Googleads.V8Availabilities.Services.GetCustomerClientRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.CustomerClient
 end
 
-defmodule Google.Ads.Googleads.V8.Services.CustomerClientService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.CustomerClientService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.CustomerClientService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.CustomerClientService.Service
 end

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetFeedItemSetRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetFeedItemSetRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,13 +11,13 @@ defmodule Google.Ads.Googleads.V8.Services.GetFeedItemSetRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateFeedItemSetsRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateFeedItemSetsRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           customer_id: String.t(),
-          operations: [Google.Ads.Googleads.V8.Services.FeedItemSetOperation.t()],
+          operations: [Google.Ads.Googleads.V8Availabilities.Services.FeedItemSetOperation.t()],
           partial_failure: boolean,
           validate_only: boolean
         }
@@ -28,13 +28,13 @@ defmodule Google.Ads.Googleads.V8.Services.MutateFeedItemSetsRequest do
 
   field :operations, 2,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Services.FeedItemSetOperation
+    type: Google.Ads.Googleads.V8Availabilities.Services.FeedItemSetOperation
 
   field :partial_failure, 3, type: :bool
   field :validate_only, 4, type: :bool
 end
 
-defmodule Google.Ads.Googleads.V8.Services.FeedItemSetOperation do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.FeedItemSetOperation do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -48,27 +48,27 @@ defmodule Google.Ads.Googleads.V8.Services.FeedItemSetOperation do
   oneof :operation, 0
 
   field :update_mask, 4, type: Google.Protobuf.FieldMask
-  field :create, 1, type: Google.Ads.Googleads.V8.Resources.FeedItemSet, oneof: 0
-  field :update, 2, type: Google.Ads.Googleads.V8.Resources.FeedItemSet, oneof: 0
+  field :create, 1, type: Google.Ads.Googleads.V8Availabilities.Resources.FeedItemSet, oneof: 0
+  field :update, 2, type: Google.Ads.Googleads.V8Availabilities.Resources.FeedItemSet, oneof: 0
   field :remove, 3, type: :string, oneof: 0
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateFeedItemSetsResponse do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateFeedItemSetsResponse do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          results: [Google.Ads.Googleads.V8.Services.MutateFeedItemSetResult.t()]
+          results: [Google.Ads.Googleads.V8Availabilities.Services.MutateFeedItemSetResult.t()]
         }
 
   defstruct [:results]
 
   field :results, 1,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Services.MutateFeedItemSetResult
+    type: Google.Ads.Googleads.V8Availabilities.Services.MutateFeedItemSetResult
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateFeedItemSetResult do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateFeedItemSetResult do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -81,20 +81,20 @@ defmodule Google.Ads.Googleads.V8.Services.MutateFeedItemSetResult do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.FeedItemSetService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.FeedItemSetService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.FeedItemSetService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.FeedItemSetService"
 
   rpc :GetFeedItemSet,
-      Google.Ads.Googleads.V8.Services.GetFeedItemSetRequest,
-      Google.Ads.Googleads.V8.Resources.FeedItemSet
+      Google.Ads.Googleads.V8Availabilities.Services.GetFeedItemSetRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.FeedItemSet
 
   rpc :MutateFeedItemSets,
-      Google.Ads.Googleads.V8.Services.MutateFeedItemSetsRequest,
-      Google.Ads.Googleads.V8.Services.MutateFeedItemSetsResponse
+      Google.Ads.Googleads.V8Availabilities.Services.MutateFeedItemSetsRequest,
+      Google.Ads.Googleads.V8Availabilities.Services.MutateFeedItemSetsResponse
 end
 
-defmodule Google.Ads.Googleads.V8.Services.FeedItemSetService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.FeedItemSetService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.FeedItemSetService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.FeedItemSetService.Service
 end

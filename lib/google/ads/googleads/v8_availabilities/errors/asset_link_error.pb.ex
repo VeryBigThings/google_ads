@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.AssetLinkErrorEnum.AssetLinkError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.AssetLinkErrorEnum.AssetLinkError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -57,7 +57,7 @@ defmodule Google.Ads.Googleads.V8.Errors.AssetLinkErrorEnum.AssetLinkError do
   field :INVALID_STATUS, 17
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.AssetLinkErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.AssetLinkErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

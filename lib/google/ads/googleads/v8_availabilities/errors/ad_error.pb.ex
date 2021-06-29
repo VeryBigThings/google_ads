@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.AdErrorEnum.AdError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.AdErrorEnum.AdError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -450,7 +450,7 @@ defmodule Google.Ads.Googleads.V8.Errors.AdErrorEnum.AdError do
   field :MISSING_REQUIRED_IMAGE_ASPECT_RATIO, 153
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.AdErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.AdErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

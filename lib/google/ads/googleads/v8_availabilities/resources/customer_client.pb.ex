@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.CustomerClient do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.CustomerClient do
   @moduledoc false
   use Protobuf, syntax: :proto3
 

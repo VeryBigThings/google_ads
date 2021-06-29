@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.AssetErrorEnum.AssetError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.AssetErrorEnum.AssetError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -60,7 +60,7 @@ defmodule Google.Ads.Googleads.V8.Errors.AssetErrorEnum.AssetError do
   field :DUPLICATE_ASSETS_WITH_DIFFERENT_FIELD_VALUE, 18
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.AssetErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.AssetErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

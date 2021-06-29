@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetThirdPartyAppAnalyticsLinkRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetThirdPartyAppAnalyticsLinkRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,7 +11,7 @@ defmodule Google.Ads.Googleads.V8.Services.GetThirdPartyAppAnalyticsLinkRequest 
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.RegenerateShareableLinkIdRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.RegenerateShareableLinkIdRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -24,7 +24,7 @@ defmodule Google.Ads.Googleads.V8.Services.RegenerateShareableLinkIdRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.RegenerateShareableLinkIdResponse do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.RegenerateShareableLinkIdResponse do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}
@@ -32,21 +32,21 @@ defmodule Google.Ads.Googleads.V8.Services.RegenerateShareableLinkIdResponse do
   defstruct []
 end
 
-defmodule Google.Ads.Googleads.V8.Services.ThirdPartyAppAnalyticsLinkService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.ThirdPartyAppAnalyticsLinkService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.ThirdPartyAppAnalyticsLinkService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.ThirdPartyAppAnalyticsLinkService"
 
   rpc :GetThirdPartyAppAnalyticsLink,
-      Google.Ads.Googleads.V8.Services.GetThirdPartyAppAnalyticsLinkRequest,
-      Google.Ads.Googleads.V8.Resources.ThirdPartyAppAnalyticsLink
+      Google.Ads.Googleads.V8Availabilities.Services.GetThirdPartyAppAnalyticsLinkRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.ThirdPartyAppAnalyticsLink
 
   rpc :RegenerateShareableLinkId,
-      Google.Ads.Googleads.V8.Services.RegenerateShareableLinkIdRequest,
-      Google.Ads.Googleads.V8.Services.RegenerateShareableLinkIdResponse
+      Google.Ads.Googleads.V8Availabilities.Services.RegenerateShareableLinkIdRequest,
+      Google.Ads.Googleads.V8Availabilities.Services.RegenerateShareableLinkIdResponse
 end
 
-defmodule Google.Ads.Googleads.V8.Services.ThirdPartyAppAnalyticsLinkService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.ThirdPartyAppAnalyticsLinkService.Stub do
   @moduledoc false
   use GRPC.Stub,
-    service: Google.Ads.Googleads.V8.Services.ThirdPartyAppAnalyticsLinkService.Service
+    service: Google.Ads.Googleads.V8Availabilities.Services.ThirdPartyAppAnalyticsLinkService.Service
 end

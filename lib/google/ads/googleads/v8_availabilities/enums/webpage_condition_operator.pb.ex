@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.WebpageConditionOperatorEnum.WebpageConditionOperator do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.WebpageConditionOperatorEnum.WebpageConditionOperator do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :EQUALS | :CONTAINS
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Enums.WebpageConditionOperatorEnum.WebpageCond
   field :CONTAINS, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.WebpageConditionOperatorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.WebpageConditionOperatorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

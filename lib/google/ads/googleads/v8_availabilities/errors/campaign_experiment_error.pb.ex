@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.CampaignExperimentErrorEnum.CampaignExperimentError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.CampaignExperimentErrorEnum.CampaignExperimentError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -42,7 +42,7 @@ defmodule Google.Ads.Googleads.V8.Errors.CampaignExperimentErrorEnum.CampaignExp
   field :CANNOT_MUTATE_EXPERIMENT_DUE_TO_STATUS, 11
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.CampaignExperimentErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.CampaignExperimentErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

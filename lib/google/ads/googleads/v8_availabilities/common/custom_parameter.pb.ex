@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Common.CustomParameter do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.CustomParameter do
   @moduledoc false
   use Protobuf, syntax: :proto3
 

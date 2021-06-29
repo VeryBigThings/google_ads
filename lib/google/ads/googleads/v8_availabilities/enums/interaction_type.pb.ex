@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.InteractionTypeEnum.InteractionType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.InteractionTypeEnum.InteractionType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :CALLS
@@ -10,7 +10,7 @@ defmodule Google.Ads.Googleads.V8.Enums.InteractionTypeEnum.InteractionType do
   field :CALLS, 8000
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.InteractionTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.InteractionTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

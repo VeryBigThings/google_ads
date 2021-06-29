@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.OfflineUserDataJob do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.OfflineUserDataJob do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -8,11 +8,11 @@ defmodule Google.Ads.Googleads.V8.Resources.OfflineUserDataJob do
           id: integer,
           external_id: integer,
           type:
-            Google.Ads.Googleads.V8.Enums.OfflineUserDataJobTypeEnum.OfflineUserDataJobType.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.OfflineUserDataJobTypeEnum.OfflineUserDataJobType.t(),
           status:
-            Google.Ads.Googleads.V8.Enums.OfflineUserDataJobStatusEnum.OfflineUserDataJobStatus.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.OfflineUserDataJobStatusEnum.OfflineUserDataJobStatus.t(),
           failure_reason:
-            Google.Ads.Googleads.V8.Enums.OfflineUserDataJobFailureReasonEnum.OfflineUserDataJobFailureReason.t()
+            Google.Ads.Googleads.V8Availabilities.Enums.OfflineUserDataJobFailureReasonEnum.OfflineUserDataJobFailureReason.t()
         }
 
   defstruct [:metadata, :resource_name, :id, :external_id, :type, :status, :failure_reason]
@@ -24,23 +24,23 @@ defmodule Google.Ads.Googleads.V8.Resources.OfflineUserDataJob do
   field :external_id, 10, type: :int64
 
   field :type, 4,
-    type: Google.Ads.Googleads.V8.Enums.OfflineUserDataJobTypeEnum.OfflineUserDataJobType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.OfflineUserDataJobTypeEnum.OfflineUserDataJobType,
     enum: true
 
   field :status, 5,
-    type: Google.Ads.Googleads.V8.Enums.OfflineUserDataJobStatusEnum.OfflineUserDataJobStatus,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.OfflineUserDataJobStatusEnum.OfflineUserDataJobStatus,
     enum: true
 
   field :failure_reason, 6,
     type:
-      Google.Ads.Googleads.V8.Enums.OfflineUserDataJobFailureReasonEnum.OfflineUserDataJobFailureReason,
+      Google.Ads.Googleads.V8Availabilities.Enums.OfflineUserDataJobFailureReasonEnum.OfflineUserDataJobFailureReason,
     enum: true
 
   field :customer_match_user_list_metadata, 7,
-    type: Google.Ads.Googleads.V8.Common.CustomerMatchUserListMetadata,
+    type: Google.Ads.Googleads.V8Availabilities.Common.CustomerMatchUserListMetadata,
     oneof: 0
 
   field :store_sales_metadata, 8,
-    type: Google.Ads.Googleads.V8.Common.StoreSalesMetadata,
+    type: Google.Ads.Googleads.V8Availabilities.Common.StoreSalesMetadata,
     oneof: 0
 end

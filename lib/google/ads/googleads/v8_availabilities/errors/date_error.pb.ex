@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.DateErrorEnum.DateError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.DateErrorEnum.DateError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -42,7 +42,7 @@ defmodule Google.Ads.Googleads.V8.Errors.DateErrorEnum.DateError do
   field :DATE_RANGE_MINIMUM_AND_MAXIMUM_DATES_BOTH_NULL, 10
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.DateErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.DateErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

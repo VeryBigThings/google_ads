@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.AdGroupAdErrorEnum.AdGroupAdError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.AdGroupAdErrorEnum.AdGroupAdError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -45,7 +45,7 @@ defmodule Google.Ads.Googleads.V8.Errors.AdGroupAdErrorEnum.AdGroupAdError do
   field :CANNOT_UPDATE_DEPRECATED_ADS, 12
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.AdGroupAdErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.AdGroupAdErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

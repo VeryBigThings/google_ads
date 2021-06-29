@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -21,7 +21,7 @@ defmodule Google.Ads.Googleads.V8.Enums.UserListCrmDataSourceTypeEnum.UserListCr
   field :THIRD_PARTY_VOTER_FILE, 4
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.UserListCrmDataSourceTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.UserListCrmDataSourceTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

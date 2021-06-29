@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetAdGroupBidModifierRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetAdGroupBidModifierRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,17 +11,17 @@ defmodule Google.Ads.Googleads.V8.Services.GetAdGroupBidModifierRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateAdGroupBidModifiersRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateAdGroupBidModifiersRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           customer_id: String.t(),
-          operations: [Google.Ads.Googleads.V8.Services.AdGroupBidModifierOperation.t()],
+          operations: [Google.Ads.Googleads.V8Availabilities.Services.AdGroupBidModifierOperation.t()],
           partial_failure: boolean,
           validate_only: boolean,
           response_content_type:
-            Google.Ads.Googleads.V8.Enums.ResponseContentTypeEnum.ResponseContentType.t()
+            Google.Ads.Googleads.V8Availabilities.Enums.ResponseContentTypeEnum.ResponseContentType.t()
         }
 
   defstruct [:customer_id, :operations, :partial_failure, :validate_only, :response_content_type]
@@ -30,17 +30,17 @@ defmodule Google.Ads.Googleads.V8.Services.MutateAdGroupBidModifiersRequest do
 
   field :operations, 2,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Services.AdGroupBidModifierOperation
+    type: Google.Ads.Googleads.V8Availabilities.Services.AdGroupBidModifierOperation
 
   field :partial_failure, 3, type: :bool
   field :validate_only, 4, type: :bool
 
   field :response_content_type, 5,
-    type: Google.Ads.Googleads.V8.Enums.ResponseContentTypeEnum.ResponseContentType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.ResponseContentTypeEnum.ResponseContentType,
     enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Services.AdGroupBidModifierOperation do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.AdGroupBidModifierOperation do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -54,18 +54,18 @@ defmodule Google.Ads.Googleads.V8.Services.AdGroupBidModifierOperation do
   oneof :operation, 0
 
   field :update_mask, 4, type: Google.Protobuf.FieldMask
-  field :create, 1, type: Google.Ads.Googleads.V8.Resources.AdGroupBidModifier, oneof: 0
-  field :update, 2, type: Google.Ads.Googleads.V8.Resources.AdGroupBidModifier, oneof: 0
+  field :create, 1, type: Google.Ads.Googleads.V8Availabilities.Resources.AdGroupBidModifier, oneof: 0
+  field :update, 2, type: Google.Ads.Googleads.V8Availabilities.Resources.AdGroupBidModifier, oneof: 0
   field :remove, 3, type: :string, oneof: 0
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateAdGroupBidModifiersResponse do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateAdGroupBidModifiersResponse do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           partial_failure_error: Google.Rpc.Status.t() | nil,
-          results: [Google.Ads.Googleads.V8.Services.MutateAdGroupBidModifierResult.t()]
+          results: [Google.Ads.Googleads.V8Availabilities.Services.MutateAdGroupBidModifierResult.t()]
         }
 
   defstruct [:partial_failure_error, :results]
@@ -74,38 +74,38 @@ defmodule Google.Ads.Googleads.V8.Services.MutateAdGroupBidModifiersResponse do
 
   field :results, 2,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Services.MutateAdGroupBidModifierResult
+    type: Google.Ads.Googleads.V8Availabilities.Services.MutateAdGroupBidModifierResult
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateAdGroupBidModifierResult do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateAdGroupBidModifierResult do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           resource_name: String.t(),
-          ad_group_bid_modifier: Google.Ads.Googleads.V8.Resources.AdGroupBidModifier.t() | nil
+          ad_group_bid_modifier: Google.Ads.Googleads.V8Availabilities.Resources.AdGroupBidModifier.t() | nil
         }
 
   defstruct [:resource_name, :ad_group_bid_modifier]
 
   field :resource_name, 1, type: :string
-  field :ad_group_bid_modifier, 2, type: Google.Ads.Googleads.V8.Resources.AdGroupBidModifier
+  field :ad_group_bid_modifier, 2, type: Google.Ads.Googleads.V8Availabilities.Resources.AdGroupBidModifier
 end
 
-defmodule Google.Ads.Googleads.V8.Services.AdGroupBidModifierService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.AdGroupBidModifierService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.AdGroupBidModifierService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.AdGroupBidModifierService"
 
   rpc :GetAdGroupBidModifier,
-      Google.Ads.Googleads.V8.Services.GetAdGroupBidModifierRequest,
-      Google.Ads.Googleads.V8.Resources.AdGroupBidModifier
+      Google.Ads.Googleads.V8Availabilities.Services.GetAdGroupBidModifierRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.AdGroupBidModifier
 
   rpc :MutateAdGroupBidModifiers,
-      Google.Ads.Googleads.V8.Services.MutateAdGroupBidModifiersRequest,
-      Google.Ads.Googleads.V8.Services.MutateAdGroupBidModifiersResponse
+      Google.Ads.Googleads.V8Availabilities.Services.MutateAdGroupBidModifiersRequest,
+      Google.Ads.Googleads.V8Availabilities.Services.MutateAdGroupBidModifiersResponse
 end
 
-defmodule Google.Ads.Googleads.V8.Services.AdGroupBidModifierService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.AdGroupBidModifierService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.AdGroupBidModifierService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.AdGroupBidModifierService.Service
 end

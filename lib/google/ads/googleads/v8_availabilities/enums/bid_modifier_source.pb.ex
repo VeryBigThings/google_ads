@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.BidModifierSourceEnum.BidModifierSource do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.BidModifierSourceEnum.BidModifierSource do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :CAMPAIGN | :AD_GROUP
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Enums.BidModifierSourceEnum.BidModifierSource 
   field :AD_GROUP, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.BidModifierSourceEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.BidModifierSourceEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

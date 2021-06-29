@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetAdGroupAdAssetViewRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetAdGroupAdAssetViewRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,16 +11,16 @@ defmodule Google.Ads.Googleads.V8.Services.GetAdGroupAdAssetViewRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.AdGroupAdAssetViewService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.AdGroupAdAssetViewService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.AdGroupAdAssetViewService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.AdGroupAdAssetViewService"
 
   rpc :GetAdGroupAdAssetView,
-      Google.Ads.Googleads.V8.Services.GetAdGroupAdAssetViewRequest,
-      Google.Ads.Googleads.V8.Resources.AdGroupAdAssetView
+      Google.Ads.Googleads.V8Availabilities.Services.GetAdGroupAdAssetViewRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.AdGroupAdAssetView
 end
 
-defmodule Google.Ads.Googleads.V8.Services.AdGroupAdAssetViewService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.AdGroupAdAssetViewService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.AdGroupAdAssetViewService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.AdGroupAdAssetViewService.Service
 end

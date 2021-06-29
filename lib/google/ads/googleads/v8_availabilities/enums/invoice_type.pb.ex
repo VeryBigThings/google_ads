@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.InvoiceTypeEnum.InvoiceType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.InvoiceTypeEnum.InvoiceType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :CREDIT_MEMO | :INVOICE
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Enums.InvoiceTypeEnum.InvoiceType do
   field :INVOICE, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.InvoiceTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.InvoiceTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

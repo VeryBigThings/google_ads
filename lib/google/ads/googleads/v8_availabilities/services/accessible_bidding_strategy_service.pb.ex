@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetAccessibleBiddingStrategyRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetAccessibleBiddingStrategyRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,17 +11,17 @@ defmodule Google.Ads.Googleads.V8.Services.GetAccessibleBiddingStrategyRequest d
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.AccessibleBiddingStrategyService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.AccessibleBiddingStrategyService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.AccessibleBiddingStrategyService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.AccessibleBiddingStrategyService"
 
   rpc :GetAccessibleBiddingStrategy,
-      Google.Ads.Googleads.V8.Services.GetAccessibleBiddingStrategyRequest,
-      Google.Ads.Googleads.V8.Resources.AccessibleBiddingStrategy
+      Google.Ads.Googleads.V8Availabilities.Services.GetAccessibleBiddingStrategyRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.AccessibleBiddingStrategy
 end
 
-defmodule Google.Ads.Googleads.V8.Services.AccessibleBiddingStrategyService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.AccessibleBiddingStrategyService.Stub do
   @moduledoc false
   use GRPC.Stub,
-    service: Google.Ads.Googleads.V8.Services.AccessibleBiddingStrategyService.Service
+    service: Google.Ads.Googleads.V8Availabilities.Services.AccessibleBiddingStrategyService.Service
 end

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.BatchJob.BatchJobMetadata do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.BatchJob.BatchJobMetadata do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -28,7 +28,7 @@ defmodule Google.Ads.Googleads.V8.Resources.BatchJob.BatchJobMetadata do
   field :executed_operation_count, 12, type: :int64
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.BatchJob do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.BatchJob do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -36,8 +36,8 @@ defmodule Google.Ads.Googleads.V8.Resources.BatchJob do
           resource_name: String.t(),
           id: integer,
           next_add_sequence_token: String.t(),
-          metadata: Google.Ads.Googleads.V8.Resources.BatchJob.BatchJobMetadata.t() | nil,
-          status: Google.Ads.Googleads.V8.Enums.BatchJobStatusEnum.BatchJobStatus.t(),
+          metadata: Google.Ads.Googleads.V8Availabilities.Resources.BatchJob.BatchJobMetadata.t() | nil,
+          status: Google.Ads.Googleads.V8Availabilities.Enums.BatchJobStatusEnum.BatchJobStatus.t(),
           long_running_operation: String.t()
         }
 
@@ -53,10 +53,10 @@ defmodule Google.Ads.Googleads.V8.Resources.BatchJob do
   field :resource_name, 1, type: :string
   field :id, 7, type: :int64
   field :next_add_sequence_token, 8, type: :string
-  field :metadata, 4, type: Google.Ads.Googleads.V8.Resources.BatchJob.BatchJobMetadata
+  field :metadata, 4, type: Google.Ads.Googleads.V8Availabilities.Resources.BatchJob.BatchJobMetadata
 
   field :status, 5,
-    type: Google.Ads.Googleads.V8.Enums.BatchJobStatusEnum.BatchJobStatus,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.BatchJobStatusEnum.BatchJobStatus,
     enum: true
 
   field :long_running_operation, 9, type: :string

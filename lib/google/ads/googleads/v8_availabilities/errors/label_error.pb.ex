@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.LabelErrorEnum.LabelError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.LabelErrorEnum.LabelError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -39,7 +39,7 @@ defmodule Google.Ads.Googleads.V8.Errors.LabelErrorEnum.LabelError do
   field :CANNOT_ATTACH_NON_MANAGER_LABEL_TO_CUSTOMER, 10
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.LabelErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.LabelErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

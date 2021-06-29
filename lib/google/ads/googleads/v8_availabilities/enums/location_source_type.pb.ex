@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.LocationSourceTypeEnum.LocationSourceType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.LocationSourceTypeEnum.LocationSourceType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :GOOGLE_MY_BUSINESS | :AFFILIATE
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Enums.LocationSourceTypeEnum.LocationSourceTyp
   field :AFFILIATE, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.LocationSourceTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.LocationSourceTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

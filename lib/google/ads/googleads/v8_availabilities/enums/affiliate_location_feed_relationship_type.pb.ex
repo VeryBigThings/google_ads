@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.AffiliateLocationFeedRelationshipTypeEnum.AffiliateLocationFeedRelationshipType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AffiliateLocationFeedRelationshipTypeEnum.AffiliateLocationFeedRelationshipType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :GENERAL_RETAILER
@@ -10,7 +10,7 @@ defmodule Google.Ads.Googleads.V8.Enums.AffiliateLocationFeedRelationshipTypeEnu
   field :GENERAL_RETAILER, 2
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.AffiliateLocationFeedRelationshipTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AffiliateLocationFeedRelationshipTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

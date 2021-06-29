@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -24,7 +24,7 @@ defmodule Google.Ads.Googleads.V8.Enums.TargetCpaOptInRecommendationGoalEnum.Tar
   field :CLOSEST_CPA, 5
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.TargetCpaOptInRecommendationGoalEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.TargetCpaOptInRecommendationGoalEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

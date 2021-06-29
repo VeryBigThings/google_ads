@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.HotelPriceBucketEnum.HotelPriceBucket do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.HotelPriceBucketEnum.HotelPriceBucket do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -24,7 +24,7 @@ defmodule Google.Ads.Googleads.V8.Enums.HotelPriceBucketEnum.HotelPriceBucket do
   field :ONLY_PARTNER_SHOWN, 5
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.HotelPriceBucketEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.HotelPriceBucketEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

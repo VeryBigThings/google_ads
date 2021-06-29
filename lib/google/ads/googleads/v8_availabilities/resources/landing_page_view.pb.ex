@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.LandingPageView do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.LandingPageView do
   @moduledoc false
   use Protobuf, syntax: :proto3
 

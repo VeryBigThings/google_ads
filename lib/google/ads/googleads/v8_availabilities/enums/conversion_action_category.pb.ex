@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.ConversionActionCategoryEnum.ConversionActionCategory do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ConversionActionCategoryEnum.ConversionActionCategory do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -72,7 +72,7 @@ defmodule Google.Ads.Googleads.V8.Enums.ConversionActionCategoryEnum.ConversionA
   field :STORE_SALE, 21
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.ConversionActionCategoryEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ConversionActionCategoryEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

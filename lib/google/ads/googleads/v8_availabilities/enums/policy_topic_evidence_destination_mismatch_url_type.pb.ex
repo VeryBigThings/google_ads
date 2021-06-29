@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -27,7 +27,7 @@ defmodule Google.Ads.Googleads.V8.Enums.PolicyTopicEvidenceDestinationMismatchUr
   field :MOBILE_TRACKING_URL, 6
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

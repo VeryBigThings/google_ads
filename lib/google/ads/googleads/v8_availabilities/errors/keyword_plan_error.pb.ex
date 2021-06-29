@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.KeywordPlanErrorEnum.KeywordPlanError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.KeywordPlanErrorEnum.KeywordPlanError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -54,7 +54,7 @@ defmodule Google.Ads.Googleads.V8.Errors.KeywordPlanErrorEnum.KeywordPlanError d
   field :INVALID_NAME, 16
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.KeywordPlanErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.KeywordPlanErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.Campaign.NetworkSettings do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.Campaign.NetworkSettings do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -22,7 +22,7 @@ defmodule Google.Ads.Googleads.V8.Resources.Campaign.NetworkSettings do
   field :target_partner_search_network, 8, type: :bool
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.Campaign.HotelSettingInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.Campaign.HotelSettingInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -35,7 +35,7 @@ defmodule Google.Ads.Googleads.V8.Resources.Campaign.HotelSettingInfo do
   field :hotel_center_id, 2, type: :int64
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.Campaign.DynamicSearchAdsSetting do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.Campaign.DynamicSearchAdsSetting do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -54,13 +54,13 @@ defmodule Google.Ads.Googleads.V8.Resources.Campaign.DynamicSearchAdsSetting do
   field :feeds, 9, repeated: true, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.Campaign.OptimizationGoalSetting do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.Campaign.OptimizationGoalSetting do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           optimization_goal_types: [
-            [Google.Ads.Googleads.V8.Enums.OptimizationGoalTypeEnum.OptimizationGoalType.t()]
+            [Google.Ads.Googleads.V8Availabilities.Enums.OptimizationGoalTypeEnum.OptimizationGoalType.t()]
           ]
         }
 
@@ -68,11 +68,11 @@ defmodule Google.Ads.Googleads.V8.Resources.Campaign.OptimizationGoalSetting do
 
   field :optimization_goal_types, 1,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Enums.OptimizationGoalTypeEnum.OptimizationGoalType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.OptimizationGoalTypeEnum.OptimizationGoalType,
     enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.Campaign.ShoppingSetting do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.Campaign.ShoppingSetting do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -91,7 +91,7 @@ defmodule Google.Ads.Googleads.V8.Resources.Campaign.ShoppingSetting do
   field :enable_local, 8, type: :bool
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.Campaign.TrackingSetting do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.Campaign.TrackingSetting do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -104,92 +104,92 @@ defmodule Google.Ads.Googleads.V8.Resources.Campaign.TrackingSetting do
   field :tracking_url, 2, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.Campaign.GeoTargetTypeSetting do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.Campaign.GeoTargetTypeSetting do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           positive_geo_target_type:
-            Google.Ads.Googleads.V8.Enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType.t(),
           negative_geo_target_type:
-            Google.Ads.Googleads.V8.Enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType.t()
+            Google.Ads.Googleads.V8Availabilities.Enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType.t()
         }
 
   defstruct [:positive_geo_target_type, :negative_geo_target_type]
 
   field :positive_geo_target_type, 1,
-    type: Google.Ads.Googleads.V8.Enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType,
     enum: true
 
   field :negative_geo_target_type, 2,
-    type: Google.Ads.Googleads.V8.Enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType,
     enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.Campaign.LocalCampaignSetting do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.Campaign.LocalCampaignSetting do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           location_source_type:
-            Google.Ads.Googleads.V8.Enums.LocationSourceTypeEnum.LocationSourceType.t()
+            Google.Ads.Googleads.V8Availabilities.Enums.LocationSourceTypeEnum.LocationSourceType.t()
         }
 
   defstruct [:location_source_type]
 
   field :location_source_type, 1,
-    type: Google.Ads.Googleads.V8.Enums.LocationSourceTypeEnum.LocationSourceType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.LocationSourceTypeEnum.LocationSourceType,
     enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.Campaign.VanityPharma do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.Campaign.VanityPharma do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           vanity_pharma_display_url_mode:
-            Google.Ads.Googleads.V8.Enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode.t(),
           vanity_pharma_text:
-            Google.Ads.Googleads.V8.Enums.VanityPharmaTextEnum.VanityPharmaText.t()
+            Google.Ads.Googleads.V8Availabilities.Enums.VanityPharmaTextEnum.VanityPharmaText.t()
         }
 
   defstruct [:vanity_pharma_display_url_mode, :vanity_pharma_text]
 
   field :vanity_pharma_display_url_mode, 1,
-    type: Google.Ads.Googleads.V8.Enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode,
     enum: true
 
   field :vanity_pharma_text, 2,
-    type: Google.Ads.Googleads.V8.Enums.VanityPharmaTextEnum.VanityPharmaText,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.VanityPharmaTextEnum.VanityPharmaText,
     enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.Campaign.AppCampaignSetting do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.Campaign.AppCampaignSetting do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           bidding_strategy_goal_type:
-            Google.Ads.Googleads.V8.Enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType.t(),
           app_id: String.t(),
-          app_store: Google.Ads.Googleads.V8.Enums.AppCampaignAppStoreEnum.AppCampaignAppStore.t()
+          app_store: Google.Ads.Googleads.V8Availabilities.Enums.AppCampaignAppStoreEnum.AppCampaignAppStore.t()
         }
 
   defstruct [:bidding_strategy_goal_type, :app_id, :app_store]
 
   field :bidding_strategy_goal_type, 1,
     type:
-      Google.Ads.Googleads.V8.Enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType,
+      Google.Ads.Googleads.V8Availabilities.Enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType,
     enum: true
 
   field :app_id, 4, type: :string
 
   field :app_store, 3,
-    type: Google.Ads.Googleads.V8.Enums.AppCampaignAppStoreEnum.AppCampaignAppStore,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.AppCampaignAppStoreEnum.AppCampaignAppStore,
     enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.Campaign.SelectiveOptimization do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.Campaign.SelectiveOptimization do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -202,7 +202,7 @@ defmodule Google.Ads.Googleads.V8.Resources.Campaign.SelectiveOptimization do
   field :conversion_actions, 2, repeated: true, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.Campaign do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.Campaign do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -211,55 +211,55 @@ defmodule Google.Ads.Googleads.V8.Resources.Campaign do
           resource_name: String.t(),
           id: integer,
           name: String.t(),
-          status: Google.Ads.Googleads.V8.Enums.CampaignStatusEnum.CampaignStatus.t(),
+          status: Google.Ads.Googleads.V8Availabilities.Enums.CampaignStatusEnum.CampaignStatus.t(),
           serving_status:
-            Google.Ads.Googleads.V8.Enums.CampaignServingStatusEnum.CampaignServingStatus.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.CampaignServingStatusEnum.CampaignServingStatus.t(),
           ad_serving_optimization_status:
-            Google.Ads.Googleads.V8.Enums.AdServingOptimizationStatusEnum.AdServingOptimizationStatus.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.AdServingOptimizationStatusEnum.AdServingOptimizationStatus.t(),
           advertising_channel_type:
-            Google.Ads.Googleads.V8.Enums.AdvertisingChannelTypeEnum.AdvertisingChannelType.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.AdvertisingChannelTypeEnum.AdvertisingChannelType.t(),
           advertising_channel_sub_type:
-            Google.Ads.Googleads.V8.Enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType.t(),
           tracking_url_template: String.t(),
-          url_custom_parameters: [Google.Ads.Googleads.V8.Common.CustomParameter.t()],
+          url_custom_parameters: [Google.Ads.Googleads.V8Availabilities.Common.CustomParameter.t()],
           real_time_bidding_setting:
-            Google.Ads.Googleads.V8.Common.RealTimeBiddingSetting.t() | nil,
-          network_settings: Google.Ads.Googleads.V8.Resources.Campaign.NetworkSettings.t() | nil,
-          hotel_setting: Google.Ads.Googleads.V8.Resources.Campaign.HotelSettingInfo.t() | nil,
+            Google.Ads.Googleads.V8Availabilities.Common.RealTimeBiddingSetting.t() | nil,
+          network_settings: Google.Ads.Googleads.V8Availabilities.Resources.Campaign.NetworkSettings.t() | nil,
+          hotel_setting: Google.Ads.Googleads.V8Availabilities.Resources.Campaign.HotelSettingInfo.t() | nil,
           dynamic_search_ads_setting:
-            Google.Ads.Googleads.V8.Resources.Campaign.DynamicSearchAdsSetting.t() | nil,
-          shopping_setting: Google.Ads.Googleads.V8.Resources.Campaign.ShoppingSetting.t() | nil,
-          targeting_setting: Google.Ads.Googleads.V8.Common.TargetingSetting.t() | nil,
+            Google.Ads.Googleads.V8Availabilities.Resources.Campaign.DynamicSearchAdsSetting.t() | nil,
+          shopping_setting: Google.Ads.Googleads.V8Availabilities.Resources.Campaign.ShoppingSetting.t() | nil,
+          targeting_setting: Google.Ads.Googleads.V8Availabilities.Common.TargetingSetting.t() | nil,
           geo_target_type_setting:
-            Google.Ads.Googleads.V8.Resources.Campaign.GeoTargetTypeSetting.t() | nil,
+            Google.Ads.Googleads.V8Availabilities.Resources.Campaign.GeoTargetTypeSetting.t() | nil,
           local_campaign_setting:
-            Google.Ads.Googleads.V8.Resources.Campaign.LocalCampaignSetting.t() | nil,
+            Google.Ads.Googleads.V8Availabilities.Resources.Campaign.LocalCampaignSetting.t() | nil,
           app_campaign_setting:
-            Google.Ads.Googleads.V8.Resources.Campaign.AppCampaignSetting.t() | nil,
+            Google.Ads.Googleads.V8Availabilities.Resources.Campaign.AppCampaignSetting.t() | nil,
           labels: [String.t()],
           experiment_type:
-            Google.Ads.Googleads.V8.Enums.CampaignExperimentTypeEnum.CampaignExperimentType.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.CampaignExperimentTypeEnum.CampaignExperimentType.t(),
           base_campaign: String.t(),
           campaign_budget: String.t(),
           bidding_strategy_type:
-            Google.Ads.Googleads.V8.Enums.BiddingStrategyTypeEnum.BiddingStrategyType.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.BiddingStrategyTypeEnum.BiddingStrategyType.t(),
           accessible_bidding_strategy: String.t(),
           start_date: String.t(),
           end_date: String.t(),
           final_url_suffix: String.t(),
-          frequency_caps: [Google.Ads.Googleads.V8.Common.FrequencyCapEntry.t()],
+          frequency_caps: [Google.Ads.Googleads.V8Availabilities.Common.FrequencyCapEntry.t()],
           video_brand_safety_suitability:
-            Google.Ads.Googleads.V8.Enums.BrandSafetySuitabilityEnum.BrandSafetySuitability.t(),
-          vanity_pharma: Google.Ads.Googleads.V8.Resources.Campaign.VanityPharma.t() | nil,
+            Google.Ads.Googleads.V8Availabilities.Enums.BrandSafetySuitabilityEnum.BrandSafetySuitability.t(),
+          vanity_pharma: Google.Ads.Googleads.V8Availabilities.Resources.Campaign.VanityPharma.t() | nil,
           selective_optimization:
-            Google.Ads.Googleads.V8.Resources.Campaign.SelectiveOptimization.t() | nil,
+            Google.Ads.Googleads.V8Availabilities.Resources.Campaign.SelectiveOptimization.t() | nil,
           optimization_goal_setting:
-            Google.Ads.Googleads.V8.Resources.Campaign.OptimizationGoalSetting.t() | nil,
-          tracking_setting: Google.Ads.Googleads.V8.Resources.Campaign.TrackingSetting.t() | nil,
-          payment_mode: Google.Ads.Googleads.V8.Enums.PaymentModeEnum.PaymentMode.t(),
+            Google.Ads.Googleads.V8Availabilities.Resources.Campaign.OptimizationGoalSetting.t() | nil,
+          tracking_setting: Google.Ads.Googleads.V8Availabilities.Resources.Campaign.TrackingSetting.t() | nil,
+          payment_mode: Google.Ads.Googleads.V8Availabilities.Enums.PaymentModeEnum.PaymentMode.t(),
           optimization_score: float | :infinity | :negative_infinity | :nan,
           excluded_parent_asset_field_types: [
-            [Google.Ads.Googleads.V8.Enums.AssetFieldTypeEnum.AssetFieldType.t()]
+            [Google.Ads.Googleads.V8Availabilities.Enums.AssetFieldTypeEnum.AssetFieldType.t()]
           ]
         }
 
@@ -311,64 +311,64 @@ defmodule Google.Ads.Googleads.V8.Resources.Campaign do
   field :name, 58, type: :string
 
   field :status, 5,
-    type: Google.Ads.Googleads.V8.Enums.CampaignStatusEnum.CampaignStatus,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.CampaignStatusEnum.CampaignStatus,
     enum: true
 
   field :serving_status, 21,
-    type: Google.Ads.Googleads.V8.Enums.CampaignServingStatusEnum.CampaignServingStatus,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.CampaignServingStatusEnum.CampaignServingStatus,
     enum: true
 
   field :ad_serving_optimization_status, 8,
     type:
-      Google.Ads.Googleads.V8.Enums.AdServingOptimizationStatusEnum.AdServingOptimizationStatus,
+      Google.Ads.Googleads.V8Availabilities.Enums.AdServingOptimizationStatusEnum.AdServingOptimizationStatus,
     enum: true
 
   field :advertising_channel_type, 9,
-    type: Google.Ads.Googleads.V8.Enums.AdvertisingChannelTypeEnum.AdvertisingChannelType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.AdvertisingChannelTypeEnum.AdvertisingChannelType,
     enum: true
 
   field :advertising_channel_sub_type, 10,
-    type: Google.Ads.Googleads.V8.Enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType,
     enum: true
 
   field :tracking_url_template, 60, type: :string
 
   field :url_custom_parameters, 12,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Common.CustomParameter
+    type: Google.Ads.Googleads.V8Availabilities.Common.CustomParameter
 
   field :real_time_bidding_setting, 39,
-    type: Google.Ads.Googleads.V8.Common.RealTimeBiddingSetting
+    type: Google.Ads.Googleads.V8Availabilities.Common.RealTimeBiddingSetting
 
-  field :network_settings, 14, type: Google.Ads.Googleads.V8.Resources.Campaign.NetworkSettings
-  field :hotel_setting, 32, type: Google.Ads.Googleads.V8.Resources.Campaign.HotelSettingInfo
+  field :network_settings, 14, type: Google.Ads.Googleads.V8Availabilities.Resources.Campaign.NetworkSettings
+  field :hotel_setting, 32, type: Google.Ads.Googleads.V8Availabilities.Resources.Campaign.HotelSettingInfo
 
   field :dynamic_search_ads_setting, 33,
-    type: Google.Ads.Googleads.V8.Resources.Campaign.DynamicSearchAdsSetting
+    type: Google.Ads.Googleads.V8Availabilities.Resources.Campaign.DynamicSearchAdsSetting
 
-  field :shopping_setting, 36, type: Google.Ads.Googleads.V8.Resources.Campaign.ShoppingSetting
-  field :targeting_setting, 43, type: Google.Ads.Googleads.V8.Common.TargetingSetting
+  field :shopping_setting, 36, type: Google.Ads.Googleads.V8Availabilities.Resources.Campaign.ShoppingSetting
+  field :targeting_setting, 43, type: Google.Ads.Googleads.V8Availabilities.Common.TargetingSetting
 
   field :geo_target_type_setting, 47,
-    type: Google.Ads.Googleads.V8.Resources.Campaign.GeoTargetTypeSetting
+    type: Google.Ads.Googleads.V8Availabilities.Resources.Campaign.GeoTargetTypeSetting
 
   field :local_campaign_setting, 50,
-    type: Google.Ads.Googleads.V8.Resources.Campaign.LocalCampaignSetting
+    type: Google.Ads.Googleads.V8Availabilities.Resources.Campaign.LocalCampaignSetting
 
   field :app_campaign_setting, 51,
-    type: Google.Ads.Googleads.V8.Resources.Campaign.AppCampaignSetting
+    type: Google.Ads.Googleads.V8Availabilities.Resources.Campaign.AppCampaignSetting
 
   field :labels, 61, repeated: true, type: :string
 
   field :experiment_type, 17,
-    type: Google.Ads.Googleads.V8.Enums.CampaignExperimentTypeEnum.CampaignExperimentType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.CampaignExperimentTypeEnum.CampaignExperimentType,
     enum: true
 
   field :base_campaign, 56, type: :string
   field :campaign_budget, 62, type: :string
 
   field :bidding_strategy_type, 22,
-    type: Google.Ads.Googleads.V8.Enums.BiddingStrategyTypeEnum.BiddingStrategyType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.BiddingStrategyTypeEnum.BiddingStrategyType,
     enum: true
 
   field :accessible_bidding_strategy, 71, type: :string
@@ -378,55 +378,55 @@ defmodule Google.Ads.Googleads.V8.Resources.Campaign do
 
   field :frequency_caps, 40,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Common.FrequencyCapEntry
+    type: Google.Ads.Googleads.V8Availabilities.Common.FrequencyCapEntry
 
   field :video_brand_safety_suitability, 42,
-    type: Google.Ads.Googleads.V8.Enums.BrandSafetySuitabilityEnum.BrandSafetySuitability,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.BrandSafetySuitabilityEnum.BrandSafetySuitability,
     enum: true
 
-  field :vanity_pharma, 44, type: Google.Ads.Googleads.V8.Resources.Campaign.VanityPharma
+  field :vanity_pharma, 44, type: Google.Ads.Googleads.V8Availabilities.Resources.Campaign.VanityPharma
 
   field :selective_optimization, 45,
-    type: Google.Ads.Googleads.V8.Resources.Campaign.SelectiveOptimization
+    type: Google.Ads.Googleads.V8Availabilities.Resources.Campaign.SelectiveOptimization
 
   field :optimization_goal_setting, 54,
-    type: Google.Ads.Googleads.V8.Resources.Campaign.OptimizationGoalSetting
+    type: Google.Ads.Googleads.V8Availabilities.Resources.Campaign.OptimizationGoalSetting
 
-  field :tracking_setting, 46, type: Google.Ads.Googleads.V8.Resources.Campaign.TrackingSetting
+  field :tracking_setting, 46, type: Google.Ads.Googleads.V8Availabilities.Resources.Campaign.TrackingSetting
 
   field :payment_mode, 52,
-    type: Google.Ads.Googleads.V8.Enums.PaymentModeEnum.PaymentMode,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.PaymentModeEnum.PaymentMode,
     enum: true
 
   field :optimization_score, 66, type: :double
 
   field :excluded_parent_asset_field_types, 69,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Enums.AssetFieldTypeEnum.AssetFieldType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.AssetFieldTypeEnum.AssetFieldType,
     enum: true
 
   field :bidding_strategy, 67, type: :string, oneof: 0
-  field :commission, 49, type: Google.Ads.Googleads.V8.Common.Commission, oneof: 0
-  field :manual_cpc, 24, type: Google.Ads.Googleads.V8.Common.ManualCpc, oneof: 0
-  field :manual_cpm, 25, type: Google.Ads.Googleads.V8.Common.ManualCpm, oneof: 0
-  field :manual_cpv, 37, type: Google.Ads.Googleads.V8.Common.ManualCpv, oneof: 0
+  field :commission, 49, type: Google.Ads.Googleads.V8Availabilities.Common.Commission, oneof: 0
+  field :manual_cpc, 24, type: Google.Ads.Googleads.V8Availabilities.Common.ManualCpc, oneof: 0
+  field :manual_cpm, 25, type: Google.Ads.Googleads.V8Availabilities.Common.ManualCpm, oneof: 0
+  field :manual_cpv, 37, type: Google.Ads.Googleads.V8Availabilities.Common.ManualCpv, oneof: 0
 
   field :maximize_conversions, 30,
-    type: Google.Ads.Googleads.V8.Common.MaximizeConversions,
+    type: Google.Ads.Googleads.V8Availabilities.Common.MaximizeConversions,
     oneof: 0
 
   field :maximize_conversion_value, 31,
-    type: Google.Ads.Googleads.V8.Common.MaximizeConversionValue,
+    type: Google.Ads.Googleads.V8Availabilities.Common.MaximizeConversionValue,
     oneof: 0
 
-  field :target_cpa, 26, type: Google.Ads.Googleads.V8.Common.TargetCpa, oneof: 0
+  field :target_cpa, 26, type: Google.Ads.Googleads.V8Availabilities.Common.TargetCpa, oneof: 0
 
   field :target_impression_share, 48,
-    type: Google.Ads.Googleads.V8.Common.TargetImpressionShare,
+    type: Google.Ads.Googleads.V8Availabilities.Common.TargetImpressionShare,
     oneof: 0
 
-  field :target_roas, 29, type: Google.Ads.Googleads.V8.Common.TargetRoas, oneof: 0
-  field :target_spend, 27, type: Google.Ads.Googleads.V8.Common.TargetSpend, oneof: 0
-  field :percent_cpc, 34, type: Google.Ads.Googleads.V8.Common.PercentCpc, oneof: 0
-  field :target_cpm, 41, type: Google.Ads.Googleads.V8.Common.TargetCpm, oneof: 0
+  field :target_roas, 29, type: Google.Ads.Googleads.V8Availabilities.Common.TargetRoas, oneof: 0
+  field :target_spend, 27, type: Google.Ads.Googleads.V8Availabilities.Common.TargetSpend, oneof: 0
+  field :percent_cpc, 34, type: Google.Ads.Googleads.V8Availabilities.Common.PercentCpc, oneof: 0
+  field :target_cpm, 41, type: Google.Ads.Googleads.V8Availabilities.Common.TargetCpm, oneof: 0
 end

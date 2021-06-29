@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.BudgetTypeEnum.BudgetType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.BudgetTypeEnum.BudgetType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -24,7 +24,7 @@ defmodule Google.Ads.Googleads.V8.Enums.BudgetTypeEnum.BudgetType do
   field :SMART_CAMPAIGN, 5
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.BudgetTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.BudgetTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

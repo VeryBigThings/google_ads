@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetKeywordPlanCampaignRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetKeywordPlanCampaignRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,13 +11,13 @@ defmodule Google.Ads.Googleads.V8.Services.GetKeywordPlanCampaignRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateKeywordPlanCampaignsRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateKeywordPlanCampaignsRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           customer_id: String.t(),
-          operations: [Google.Ads.Googleads.V8.Services.KeywordPlanCampaignOperation.t()],
+          operations: [Google.Ads.Googleads.V8Availabilities.Services.KeywordPlanCampaignOperation.t()],
           partial_failure: boolean,
           validate_only: boolean
         }
@@ -28,13 +28,13 @@ defmodule Google.Ads.Googleads.V8.Services.MutateKeywordPlanCampaignsRequest do
 
   field :operations, 2,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Services.KeywordPlanCampaignOperation
+    type: Google.Ads.Googleads.V8Availabilities.Services.KeywordPlanCampaignOperation
 
   field :partial_failure, 3, type: :bool
   field :validate_only, 4, type: :bool
 end
 
-defmodule Google.Ads.Googleads.V8.Services.KeywordPlanCampaignOperation do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.KeywordPlanCampaignOperation do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -48,18 +48,18 @@ defmodule Google.Ads.Googleads.V8.Services.KeywordPlanCampaignOperation do
   oneof :operation, 0
 
   field :update_mask, 4, type: Google.Protobuf.FieldMask
-  field :create, 1, type: Google.Ads.Googleads.V8.Resources.KeywordPlanCampaign, oneof: 0
-  field :update, 2, type: Google.Ads.Googleads.V8.Resources.KeywordPlanCampaign, oneof: 0
+  field :create, 1, type: Google.Ads.Googleads.V8Availabilities.Resources.KeywordPlanCampaign, oneof: 0
+  field :update, 2, type: Google.Ads.Googleads.V8Availabilities.Resources.KeywordPlanCampaign, oneof: 0
   field :remove, 3, type: :string, oneof: 0
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateKeywordPlanCampaignsResponse do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateKeywordPlanCampaignsResponse do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           partial_failure_error: Google.Rpc.Status.t() | nil,
-          results: [Google.Ads.Googleads.V8.Services.MutateKeywordPlanCampaignResult.t()]
+          results: [Google.Ads.Googleads.V8Availabilities.Services.MutateKeywordPlanCampaignResult.t()]
         }
 
   defstruct [:partial_failure_error, :results]
@@ -68,10 +68,10 @@ defmodule Google.Ads.Googleads.V8.Services.MutateKeywordPlanCampaignsResponse do
 
   field :results, 2,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Services.MutateKeywordPlanCampaignResult
+    type: Google.Ads.Googleads.V8Availabilities.Services.MutateKeywordPlanCampaignResult
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateKeywordPlanCampaignResult do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateKeywordPlanCampaignResult do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -84,20 +84,20 @@ defmodule Google.Ads.Googleads.V8.Services.MutateKeywordPlanCampaignResult do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.KeywordPlanCampaignService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.KeywordPlanCampaignService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.KeywordPlanCampaignService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.KeywordPlanCampaignService"
 
   rpc :GetKeywordPlanCampaign,
-      Google.Ads.Googleads.V8.Services.GetKeywordPlanCampaignRequest,
-      Google.Ads.Googleads.V8.Resources.KeywordPlanCampaign
+      Google.Ads.Googleads.V8Availabilities.Services.GetKeywordPlanCampaignRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.KeywordPlanCampaign
 
   rpc :MutateKeywordPlanCampaigns,
-      Google.Ads.Googleads.V8.Services.MutateKeywordPlanCampaignsRequest,
-      Google.Ads.Googleads.V8.Services.MutateKeywordPlanCampaignsResponse
+      Google.Ads.Googleads.V8Availabilities.Services.MutateKeywordPlanCampaignsRequest,
+      Google.Ads.Googleads.V8Availabilities.Services.MutateKeywordPlanCampaignsResponse
 end
 
-defmodule Google.Ads.Googleads.V8.Services.KeywordPlanCampaignService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.KeywordPlanCampaignService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.KeywordPlanCampaignService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.KeywordPlanCampaignService.Service
 end

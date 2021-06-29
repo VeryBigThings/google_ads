@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.AdGroupCriterionErrorEnum.AdGroupCriterionError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.AdGroupCriterionErrorEnum.AdGroupCriterionError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -96,7 +96,7 @@ defmodule Google.Ads.Googleads.V8.Errors.AdGroupCriterionErrorEnum.AdGroupCriter
   field :FINAL_MOBILE_URLS_NOT_SUPPORTED_FOR_CRITERION_TYPE, 38
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.AdGroupCriterionErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.AdGroupCriterionErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

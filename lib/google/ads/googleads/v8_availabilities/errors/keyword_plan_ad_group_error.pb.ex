@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.KeywordPlanAdGroupErrorEnum.KeywordPlanAdGroupError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.KeywordPlanAdGroupErrorEnum.KeywordPlanAdGroupError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :INVALID_NAME | :DUPLICATE_NAME
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Errors.KeywordPlanAdGroupErrorEnum.KeywordPlan
   field :DUPLICATE_NAME, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.KeywordPlanAdGroupErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.KeywordPlanAdGroupErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.UserListTypeEnum.UserListType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.UserListTypeEnum.UserListType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -30,7 +30,7 @@ defmodule Google.Ads.Googleads.V8.Enums.UserListTypeEnum.UserListType do
   field :CRM_BASED, 7
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.UserListTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.UserListTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :PRESENCE_OR_INTEREST | :PRESENCE
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Enums.NegativeGeoTargetTypeEnum.NegativeGeoTar
   field :PRESENCE, 5
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.NegativeGeoTargetTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.NegativeGeoTargetTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

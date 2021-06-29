@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.CustomerClientLinkErrorEnum.CustomerClientLinkError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.CustomerClientLinkErrorEnum.CustomerClientLinkError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -36,7 +36,7 @@ defmodule Google.Ads.Googleads.V8.Errors.CustomerClientLinkErrorEnum.CustomerCli
   field :CLIENT_HAS_TOO_MANY_MANAGERS, 9
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.CustomerClientLinkErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.CustomerClientLinkErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

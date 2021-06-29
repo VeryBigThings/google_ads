@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.StructuredSnippetPlaceholderFieldEnum.StructuredSnippetPlaceholderField do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.StructuredSnippetPlaceholderFieldEnum.StructuredSnippetPlaceholderField do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :HEADER | :SNIPPETS
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Enums.StructuredSnippetPlaceholderFieldEnum.St
   field :SNIPPETS, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.StructuredSnippetPlaceholderFieldEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.StructuredSnippetPlaceholderFieldEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

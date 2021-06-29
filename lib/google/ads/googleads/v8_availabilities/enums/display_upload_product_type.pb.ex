@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.DisplayUploadProductTypeEnum.DisplayUploadProductType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.DisplayUploadProductTypeEnum.DisplayUploadProductType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -42,7 +42,7 @@ defmodule Google.Ads.Googleads.V8.Enums.DisplayUploadProductTypeEnum.DisplayUplo
   field :DYNAMIC_HTML5_HOTEL_AD, 11
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.DisplayUploadProductTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.DisplayUploadProductTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

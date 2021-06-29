@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.AdvertisingChannelTypeEnum.AdvertisingChannelType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AdvertisingChannelTypeEnum.AdvertisingChannelType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -36,7 +36,7 @@ defmodule Google.Ads.Googleads.V8.Enums.AdvertisingChannelTypeEnum.AdvertisingCh
   field :SMART, 9
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.AdvertisingChannelTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AdvertisingChannelTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

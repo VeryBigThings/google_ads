@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetDetailPlacementViewRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetDetailPlacementViewRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,16 +11,16 @@ defmodule Google.Ads.Googleads.V8.Services.GetDetailPlacementViewRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.DetailPlacementViewService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.DetailPlacementViewService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.DetailPlacementViewService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.DetailPlacementViewService"
 
   rpc :GetDetailPlacementView,
-      Google.Ads.Googleads.V8.Services.GetDetailPlacementViewRequest,
-      Google.Ads.Googleads.V8.Resources.DetailPlacementView
+      Google.Ads.Googleads.V8Availabilities.Services.GetDetailPlacementViewRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.DetailPlacementView
 end
 
-defmodule Google.Ads.Googleads.V8.Services.DetailPlacementViewService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.DetailPlacementViewService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.DetailPlacementViewService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.DetailPlacementViewService.Service
 end

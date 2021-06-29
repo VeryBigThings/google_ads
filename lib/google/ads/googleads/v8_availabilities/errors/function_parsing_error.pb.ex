@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.FunctionParsingErrorEnum.FunctionParsingError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.FunctionParsingErrorEnum.FunctionParsingError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -45,7 +45,7 @@ defmodule Google.Ads.Googleads.V8.Errors.FunctionParsingErrorEnum.FunctionParsin
   field :TOO_MANY_OPERANDS, 12
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.FunctionParsingErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.FunctionParsingErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

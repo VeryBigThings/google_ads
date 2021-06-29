@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.FeedItemValidationErrorEnum.FeedItemValidationError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.FeedItemValidationErrorEnum.FeedItemValidationError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -327,7 +327,7 @@ defmodule Google.Ads.Googleads.V8.Errors.FeedItemValidationErrorEnum.FeedItemVal
   field :IMAGE_ERROR_SERVER_ERROR, 107
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.FeedItemValidationErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.FeedItemValidationErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

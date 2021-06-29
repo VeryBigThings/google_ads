@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetAdGroupCriterionLabelRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetAdGroupCriterionLabelRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,13 +11,13 @@ defmodule Google.Ads.Googleads.V8.Services.GetAdGroupCriterionLabelRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateAdGroupCriterionLabelsRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateAdGroupCriterionLabelsRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           customer_id: String.t(),
-          operations: [Google.Ads.Googleads.V8.Services.AdGroupCriterionLabelOperation.t()],
+          operations: [Google.Ads.Googleads.V8Availabilities.Services.AdGroupCriterionLabelOperation.t()],
           partial_failure: boolean,
           validate_only: boolean
         }
@@ -28,13 +28,13 @@ defmodule Google.Ads.Googleads.V8.Services.MutateAdGroupCriterionLabelsRequest d
 
   field :operations, 2,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Services.AdGroupCriterionLabelOperation
+    type: Google.Ads.Googleads.V8Availabilities.Services.AdGroupCriterionLabelOperation
 
   field :partial_failure, 3, type: :bool
   field :validate_only, 4, type: :bool
 end
 
-defmodule Google.Ads.Googleads.V8.Services.AdGroupCriterionLabelOperation do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.AdGroupCriterionLabelOperation do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -46,17 +46,17 @@ defmodule Google.Ads.Googleads.V8.Services.AdGroupCriterionLabelOperation do
 
   oneof :operation, 0
 
-  field :create, 1, type: Google.Ads.Googleads.V8.Resources.AdGroupCriterionLabel, oneof: 0
+  field :create, 1, type: Google.Ads.Googleads.V8Availabilities.Resources.AdGroupCriterionLabel, oneof: 0
   field :remove, 2, type: :string, oneof: 0
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateAdGroupCriterionLabelsResponse do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateAdGroupCriterionLabelsResponse do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           partial_failure_error: Google.Rpc.Status.t() | nil,
-          results: [Google.Ads.Googleads.V8.Services.MutateAdGroupCriterionLabelResult.t()]
+          results: [Google.Ads.Googleads.V8Availabilities.Services.MutateAdGroupCriterionLabelResult.t()]
         }
 
   defstruct [:partial_failure_error, :results]
@@ -65,10 +65,10 @@ defmodule Google.Ads.Googleads.V8.Services.MutateAdGroupCriterionLabelsResponse 
 
   field :results, 2,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Services.MutateAdGroupCriterionLabelResult
+    type: Google.Ads.Googleads.V8Availabilities.Services.MutateAdGroupCriterionLabelResult
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateAdGroupCriterionLabelResult do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateAdGroupCriterionLabelResult do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -81,20 +81,20 @@ defmodule Google.Ads.Googleads.V8.Services.MutateAdGroupCriterionLabelResult do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.AdGroupCriterionLabelService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.AdGroupCriterionLabelService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.AdGroupCriterionLabelService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.AdGroupCriterionLabelService"
 
   rpc :GetAdGroupCriterionLabel,
-      Google.Ads.Googleads.V8.Services.GetAdGroupCriterionLabelRequest,
-      Google.Ads.Googleads.V8.Resources.AdGroupCriterionLabel
+      Google.Ads.Googleads.V8Availabilities.Services.GetAdGroupCriterionLabelRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.AdGroupCriterionLabel
 
   rpc :MutateAdGroupCriterionLabels,
-      Google.Ads.Googleads.V8.Services.MutateAdGroupCriterionLabelsRequest,
-      Google.Ads.Googleads.V8.Services.MutateAdGroupCriterionLabelsResponse
+      Google.Ads.Googleads.V8Availabilities.Services.MutateAdGroupCriterionLabelsRequest,
+      Google.Ads.Googleads.V8Availabilities.Services.MutateAdGroupCriterionLabelsResponse
 end
 
-defmodule Google.Ads.Googleads.V8.Services.AdGroupCriterionLabelService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.AdGroupCriterionLabelService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.AdGroupCriterionLabelService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.AdGroupCriterionLabelService.Service
 end

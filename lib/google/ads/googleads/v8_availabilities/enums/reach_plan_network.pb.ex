@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.ReachPlanNetworkEnum.ReachPlanNetwork do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ReachPlanNetworkEnum.ReachPlanNetwork do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -21,7 +21,7 @@ defmodule Google.Ads.Googleads.V8.Enums.ReachPlanNetworkEnum.ReachPlanNetwork do
   field :YOUTUBE_AND_GOOGLE_VIDEO_PARTNERS, 4
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.ReachPlanNetworkEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ReachPlanNetworkEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

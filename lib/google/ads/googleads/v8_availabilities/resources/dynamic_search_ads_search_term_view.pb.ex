@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.DynamicSearchAdsSearchTermView do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.DynamicSearchAdsSearchTermView do
   @moduledoc false
   use Protobuf, syntax: :proto3
 

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.FieldMaskErrorEnum.FieldMaskError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.FieldMaskErrorEnum.FieldMaskError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -24,7 +24,7 @@ defmodule Google.Ads.Googleads.V8.Errors.FieldMaskErrorEnum.FieldMaskError do
   field :FIELD_HAS_SUBFIELDS, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.FieldMaskErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.FieldMaskErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

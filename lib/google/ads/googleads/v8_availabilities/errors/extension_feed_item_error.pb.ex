@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.ExtensionFeedItemErrorEnum.ExtensionFeedItemError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.ExtensionFeedItemErrorEnum.ExtensionFeedItemError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -147,7 +147,7 @@ defmodule Google.Ads.Googleads.V8.Errors.ExtensionFeedItemErrorEnum.ExtensionFee
   field :SCHEDULE_END_NOT_AFTER_START, 46
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.ExtensionFeedItemErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.ExtensionFeedItemErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

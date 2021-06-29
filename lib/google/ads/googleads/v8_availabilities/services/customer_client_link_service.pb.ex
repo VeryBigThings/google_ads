@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetCustomerClientLinkRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetCustomerClientLinkRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,24 +11,24 @@ defmodule Google.Ads.Googleads.V8.Services.GetCustomerClientLinkRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateCustomerClientLinkRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateCustomerClientLinkRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           customer_id: String.t(),
-          operation: Google.Ads.Googleads.V8.Services.CustomerClientLinkOperation.t() | nil,
+          operation: Google.Ads.Googleads.V8Availabilities.Services.CustomerClientLinkOperation.t() | nil,
           validate_only: boolean
         }
 
   defstruct [:customer_id, :operation, :validate_only]
 
   field :customer_id, 1, type: :string
-  field :operation, 2, type: Google.Ads.Googleads.V8.Services.CustomerClientLinkOperation
+  field :operation, 2, type: Google.Ads.Googleads.V8Availabilities.Services.CustomerClientLinkOperation
   field :validate_only, 3, type: :bool
 end
 
-defmodule Google.Ads.Googleads.V8.Services.CustomerClientLinkOperation do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.CustomerClientLinkOperation do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -42,24 +42,24 @@ defmodule Google.Ads.Googleads.V8.Services.CustomerClientLinkOperation do
   oneof :operation, 0
 
   field :update_mask, 4, type: Google.Protobuf.FieldMask
-  field :create, 1, type: Google.Ads.Googleads.V8.Resources.CustomerClientLink, oneof: 0
-  field :update, 2, type: Google.Ads.Googleads.V8.Resources.CustomerClientLink, oneof: 0
+  field :create, 1, type: Google.Ads.Googleads.V8Availabilities.Resources.CustomerClientLink, oneof: 0
+  field :update, 2, type: Google.Ads.Googleads.V8Availabilities.Resources.CustomerClientLink, oneof: 0
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateCustomerClientLinkResponse do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateCustomerClientLinkResponse do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          result: Google.Ads.Googleads.V8.Services.MutateCustomerClientLinkResult.t() | nil
+          result: Google.Ads.Googleads.V8Availabilities.Services.MutateCustomerClientLinkResult.t() | nil
         }
 
   defstruct [:result]
 
-  field :result, 1, type: Google.Ads.Googleads.V8.Services.MutateCustomerClientLinkResult
+  field :result, 1, type: Google.Ads.Googleads.V8Availabilities.Services.MutateCustomerClientLinkResult
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateCustomerClientLinkResult do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateCustomerClientLinkResult do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -72,20 +72,20 @@ defmodule Google.Ads.Googleads.V8.Services.MutateCustomerClientLinkResult do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.CustomerClientLinkService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.CustomerClientLinkService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.CustomerClientLinkService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.CustomerClientLinkService"
 
   rpc :GetCustomerClientLink,
-      Google.Ads.Googleads.V8.Services.GetCustomerClientLinkRequest,
-      Google.Ads.Googleads.V8.Resources.CustomerClientLink
+      Google.Ads.Googleads.V8Availabilities.Services.GetCustomerClientLinkRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.CustomerClientLink
 
   rpc :MutateCustomerClientLink,
-      Google.Ads.Googleads.V8.Services.MutateCustomerClientLinkRequest,
-      Google.Ads.Googleads.V8.Services.MutateCustomerClientLinkResponse
+      Google.Ads.Googleads.V8Availabilities.Services.MutateCustomerClientLinkRequest,
+      Google.Ads.Googleads.V8Availabilities.Services.MutateCustomerClientLinkResponse
 end
 
-defmodule Google.Ads.Googleads.V8.Services.CustomerClientLinkService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.CustomerClientLinkService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.CustomerClientLinkService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.CustomerClientLinkService.Service
 end

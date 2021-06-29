@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.LanguageCodeErrorEnum.LanguageCodeError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.LanguageCodeErrorEnum.LanguageCodeError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :LANGUAGE_CODE_NOT_FOUND | :INVALID_LANGUAGE_CODE
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Errors.LanguageCodeErrorEnum.LanguageCodeError
   field :INVALID_LANGUAGE_CODE, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.LanguageCodeErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.LanguageCodeErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

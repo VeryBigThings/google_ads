@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.BiddingStrategy do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.BiddingStrategy do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -8,8 +8,8 @@ defmodule Google.Ads.Googleads.V8.Resources.BiddingStrategy do
           id: integer,
           name: String.t(),
           status:
-            Google.Ads.Googleads.V8.Enums.BiddingStrategyStatusEnum.BiddingStrategyStatus.t(),
-          type: Google.Ads.Googleads.V8.Enums.BiddingStrategyTypeEnum.BiddingStrategyType.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.BiddingStrategyStatusEnum.BiddingStrategyStatus.t(),
+          type: Google.Ads.Googleads.V8Availabilities.Enums.BiddingStrategyTypeEnum.BiddingStrategyType.t(),
           currency_code: String.t(),
           effective_currency_code: String.t(),
           campaign_count: integer,
@@ -36,33 +36,33 @@ defmodule Google.Ads.Googleads.V8.Resources.BiddingStrategy do
   field :name, 17, type: :string
 
   field :status, 15,
-    type: Google.Ads.Googleads.V8.Enums.BiddingStrategyStatusEnum.BiddingStrategyStatus,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.BiddingStrategyStatusEnum.BiddingStrategyStatus,
     enum: true
 
   field :type, 5,
-    type: Google.Ads.Googleads.V8.Enums.BiddingStrategyTypeEnum.BiddingStrategyType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.BiddingStrategyTypeEnum.BiddingStrategyType,
     enum: true
 
   field :currency_code, 23, type: :string
   field :effective_currency_code, 20, type: :string
   field :campaign_count, 18, type: :int64
   field :non_removed_campaign_count, 19, type: :int64
-  field :enhanced_cpc, 7, type: Google.Ads.Googleads.V8.Common.EnhancedCpc, oneof: 0
+  field :enhanced_cpc, 7, type: Google.Ads.Googleads.V8Availabilities.Common.EnhancedCpc, oneof: 0
 
   field :maximize_conversion_value, 21,
-    type: Google.Ads.Googleads.V8.Common.MaximizeConversionValue,
+    type: Google.Ads.Googleads.V8Availabilities.Common.MaximizeConversionValue,
     oneof: 0
 
   field :maximize_conversions, 22,
-    type: Google.Ads.Googleads.V8.Common.MaximizeConversions,
+    type: Google.Ads.Googleads.V8Availabilities.Common.MaximizeConversions,
     oneof: 0
 
-  field :target_cpa, 9, type: Google.Ads.Googleads.V8.Common.TargetCpa, oneof: 0
+  field :target_cpa, 9, type: Google.Ads.Googleads.V8Availabilities.Common.TargetCpa, oneof: 0
 
   field :target_impression_share, 48,
-    type: Google.Ads.Googleads.V8.Common.TargetImpressionShare,
+    type: Google.Ads.Googleads.V8Availabilities.Common.TargetImpressionShare,
     oneof: 0
 
-  field :target_roas, 11, type: Google.Ads.Googleads.V8.Common.TargetRoas, oneof: 0
-  field :target_spend, 12, type: Google.Ads.Googleads.V8.Common.TargetSpend, oneof: 0
+  field :target_roas, 11, type: Google.Ads.Googleads.V8Availabilities.Common.TargetRoas, oneof: 0
+  field :target_spend, 12, type: Google.Ads.Googleads.V8Availabilities.Common.TargetSpend, oneof: 0
 end

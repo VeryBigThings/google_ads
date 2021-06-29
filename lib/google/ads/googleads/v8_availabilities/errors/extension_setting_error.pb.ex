@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.ExtensionSettingErrorEnum.ExtensionSettingError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.ExtensionSettingErrorEnum.ExtensionSettingError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -207,7 +207,7 @@ defmodule Google.Ads.Googleads.V8.Errors.ExtensionSettingErrorEnum.ExtensionSett
   field :DISALLOWED_TEXT, 68
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.ExtensionSettingErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.ExtensionSettingErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

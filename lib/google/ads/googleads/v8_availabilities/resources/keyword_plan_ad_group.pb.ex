@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.KeywordPlanAdGroup do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.KeywordPlanAdGroup do
   @moduledoc false
   use Protobuf, syntax: :proto3
 

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetIncomeRangeViewRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetIncomeRangeViewRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,16 +11,16 @@ defmodule Google.Ads.Googleads.V8.Services.GetIncomeRangeViewRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.IncomeRangeViewService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.IncomeRangeViewService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.IncomeRangeViewService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.IncomeRangeViewService"
 
   rpc :GetIncomeRangeView,
-      Google.Ads.Googleads.V8.Services.GetIncomeRangeViewRequest,
-      Google.Ads.Googleads.V8.Resources.IncomeRangeView
+      Google.Ads.Googleads.V8Availabilities.Services.GetIncomeRangeViewRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.IncomeRangeView
 end
 
-defmodule Google.Ads.Googleads.V8.Services.IncomeRangeViewService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.IncomeRangeViewService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.IncomeRangeViewService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.IncomeRangeViewService.Service
 end

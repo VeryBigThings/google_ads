@@ -1,114 +1,114 @@
-defmodule Google.Ads.Googleads.V8.Common.BidModifierSimulationPointList do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.BidModifierSimulationPointList do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          points: [Google.Ads.Googleads.V8.Common.BidModifierSimulationPoint.t()]
+          points: [Google.Ads.Googleads.V8Availabilities.Common.BidModifierSimulationPoint.t()]
         }
 
   defstruct [:points]
 
   field :points, 1,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Common.BidModifierSimulationPoint
+    type: Google.Ads.Googleads.V8Availabilities.Common.BidModifierSimulationPoint
 end
 
-defmodule Google.Ads.Googleads.V8.Common.CpcBidSimulationPointList do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.CpcBidSimulationPointList do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          points: [Google.Ads.Googleads.V8.Common.CpcBidSimulationPoint.t()]
+          points: [Google.Ads.Googleads.V8Availabilities.Common.CpcBidSimulationPoint.t()]
         }
 
   defstruct [:points]
 
-  field :points, 1, repeated: true, type: Google.Ads.Googleads.V8.Common.CpcBidSimulationPoint
+  field :points, 1, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Common.CpcBidSimulationPoint
 end
 
-defmodule Google.Ads.Googleads.V8.Common.CpvBidSimulationPointList do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.CpvBidSimulationPointList do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          points: [Google.Ads.Googleads.V8.Common.CpvBidSimulationPoint.t()]
+          points: [Google.Ads.Googleads.V8Availabilities.Common.CpvBidSimulationPoint.t()]
         }
 
   defstruct [:points]
 
-  field :points, 1, repeated: true, type: Google.Ads.Googleads.V8.Common.CpvBidSimulationPoint
+  field :points, 1, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Common.CpvBidSimulationPoint
 end
 
-defmodule Google.Ads.Googleads.V8.Common.TargetCpaSimulationPointList do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.TargetCpaSimulationPointList do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          points: [Google.Ads.Googleads.V8.Common.TargetCpaSimulationPoint.t()]
+          points: [Google.Ads.Googleads.V8Availabilities.Common.TargetCpaSimulationPoint.t()]
         }
 
   defstruct [:points]
 
-  field :points, 1, repeated: true, type: Google.Ads.Googleads.V8.Common.TargetCpaSimulationPoint
+  field :points, 1, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Common.TargetCpaSimulationPoint
 end
 
-defmodule Google.Ads.Googleads.V8.Common.TargetRoasSimulationPointList do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.TargetRoasSimulationPointList do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          points: [Google.Ads.Googleads.V8.Common.TargetRoasSimulationPoint.t()]
+          points: [Google.Ads.Googleads.V8Availabilities.Common.TargetRoasSimulationPoint.t()]
         }
 
   defstruct [:points]
 
-  field :points, 1, repeated: true, type: Google.Ads.Googleads.V8.Common.TargetRoasSimulationPoint
+  field :points, 1, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Common.TargetRoasSimulationPoint
 end
 
-defmodule Google.Ads.Googleads.V8.Common.PercentCpcBidSimulationPointList do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.PercentCpcBidSimulationPointList do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          points: [Google.Ads.Googleads.V8.Common.PercentCpcBidSimulationPoint.t()]
-        }
-
-  defstruct [:points]
-
-  field :points, 1,
-    repeated: true,
-    type: Google.Ads.Googleads.V8.Common.PercentCpcBidSimulationPoint
-end
-
-defmodule Google.Ads.Googleads.V8.Common.BudgetSimulationPointList do
-  @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          points: [Google.Ads.Googleads.V8.Common.BudgetSimulationPoint.t()]
-        }
-
-  defstruct [:points]
-
-  field :points, 1, repeated: true, type: Google.Ads.Googleads.V8.Common.BudgetSimulationPoint
-end
-
-defmodule Google.Ads.Googleads.V8.Common.TargetImpressionShareSimulationPointList do
-  @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          points: [Google.Ads.Googleads.V8.Common.TargetImpressionShareSimulationPoint.t()]
+          points: [Google.Ads.Googleads.V8Availabilities.Common.PercentCpcBidSimulationPoint.t()]
         }
 
   defstruct [:points]
 
   field :points, 1,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Common.TargetImpressionShareSimulationPoint
+    type: Google.Ads.Googleads.V8Availabilities.Common.PercentCpcBidSimulationPoint
 end
 
-defmodule Google.Ads.Googleads.V8.Common.BidModifierSimulationPoint do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.BudgetSimulationPointList do
+  @moduledoc false
+  use Protobuf, syntax: :proto3
+
+  @type t :: %__MODULE__{
+          points: [Google.Ads.Googleads.V8Availabilities.Common.BudgetSimulationPoint.t()]
+        }
+
+  defstruct [:points]
+
+  field :points, 1, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Common.BudgetSimulationPoint
+end
+
+defmodule Google.Ads.Googleads.V8Availabilities.Common.TargetImpressionShareSimulationPointList do
+  @moduledoc false
+  use Protobuf, syntax: :proto3
+
+  @type t :: %__MODULE__{
+          points: [Google.Ads.Googleads.V8Availabilities.Common.TargetImpressionShareSimulationPoint.t()]
+        }
+
+  defstruct [:points]
+
+  field :points, 1,
+    repeated: true,
+    type: Google.Ads.Googleads.V8Availabilities.Common.TargetImpressionShareSimulationPoint
+end
+
+defmodule Google.Ads.Googleads.V8Availabilities.Common.BidModifierSimulationPoint do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -162,7 +162,7 @@ defmodule Google.Ads.Googleads.V8.Common.BidModifierSimulationPoint do
   field :parent_required_budget_micros, 28, type: :int64
 end
 
-defmodule Google.Ads.Googleads.V8.Common.CpcBidSimulationPoint do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.CpcBidSimulationPoint do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -201,7 +201,7 @@ defmodule Google.Ads.Googleads.V8.Common.CpcBidSimulationPoint do
   field :cpc_bid_scaling_modifier, 16, type: :double, oneof: 0
 end
 
-defmodule Google.Ads.Googleads.V8.Common.CpvBidSimulationPoint do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.CpvBidSimulationPoint do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -220,7 +220,7 @@ defmodule Google.Ads.Googleads.V8.Common.CpvBidSimulationPoint do
   field :views, 8, type: :int64
 end
 
-defmodule Google.Ads.Googleads.V8.Common.TargetCpaSimulationPoint do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.TargetCpaSimulationPoint do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -265,7 +265,7 @@ defmodule Google.Ads.Googleads.V8.Common.TargetCpaSimulationPoint do
   field :target_cpa_scaling_modifier, 18, type: :double, oneof: 0
 end
 
-defmodule Google.Ads.Googleads.V8.Common.TargetRoasSimulationPoint do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.TargetRoasSimulationPoint do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -301,7 +301,7 @@ defmodule Google.Ads.Googleads.V8.Common.TargetRoasSimulationPoint do
   field :top_slot_impressions, 14, type: :int64
 end
 
-defmodule Google.Ads.Googleads.V8.Common.PercentCpcBidSimulationPoint do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.PercentCpcBidSimulationPoint do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -334,7 +334,7 @@ defmodule Google.Ads.Googleads.V8.Common.PercentCpcBidSimulationPoint do
   field :top_slot_impressions, 7, type: :int64
 end
 
-defmodule Google.Ads.Googleads.V8.Common.BudgetSimulationPoint do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.BudgetSimulationPoint do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -370,7 +370,7 @@ defmodule Google.Ads.Googleads.V8.Common.BudgetSimulationPoint do
   field :top_slot_impressions, 8, type: :int64
 end
 
-defmodule Google.Ads.Googleads.V8.Common.TargetImpressionShareSimulationPoint do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.TargetImpressionShareSimulationPoint do
   @moduledoc false
   use Protobuf, syntax: :proto3
 

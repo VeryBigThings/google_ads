@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.ChangeStatusOperationEnum.ChangeStatusOperation do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ChangeStatusOperationEnum.ChangeStatusOperation do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :ADDED | :CHANGED | :REMOVED
@@ -14,7 +14,7 @@ defmodule Google.Ads.Googleads.V8.Enums.ChangeStatusOperationEnum.ChangeStatusOp
   field :REMOVED, 4
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.ChangeStatusOperationEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ChangeStatusOperationEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.AgeRangeTypeEnum.AgeRangeType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AgeRangeTypeEnum.AgeRangeType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -33,7 +33,7 @@ defmodule Google.Ads.Googleads.V8.Enums.AgeRangeTypeEnum.AgeRangeType do
   field :AGE_RANGE_UNDETERMINED, 503_999
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.AgeRangeTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AgeRangeTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

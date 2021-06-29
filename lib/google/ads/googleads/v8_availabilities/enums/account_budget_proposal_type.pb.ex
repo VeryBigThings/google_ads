@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :CREATE | :UPDATE | :END | :REMOVE
@@ -16,7 +16,7 @@ defmodule Google.Ads.Googleads.V8.Enums.AccountBudgetProposalTypeEnum.AccountBud
   field :REMOVE, 5
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.AccountBudgetProposalTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AccountBudgetProposalTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

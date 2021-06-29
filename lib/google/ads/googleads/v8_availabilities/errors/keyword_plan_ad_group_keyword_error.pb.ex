@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.KeywordPlanAdGroupKeywordErrorEnum.KeywordPlanAdGroupKeywordError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.KeywordPlanAdGroupKeywordErrorEnum.KeywordPlanAdGroupKeywordError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -33,7 +33,7 @@ defmodule Google.Ads.Googleads.V8.Errors.KeywordPlanAdGroupKeywordErrorEnum.Keyw
   field :NEGATIVE_KEYWORD_HAS_CPC_BID, 8
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.KeywordPlanAdGroupKeywordErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.KeywordPlanAdGroupKeywordErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

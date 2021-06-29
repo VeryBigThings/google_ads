@@ -1,15 +1,15 @@
-defmodule Google.Ads.Googleads.V8.Resources.CustomInterest do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.CustomInterest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           resource_name: String.t(),
           id: integer,
-          status: Google.Ads.Googleads.V8.Enums.CustomInterestStatusEnum.CustomInterestStatus.t(),
+          status: Google.Ads.Googleads.V8Availabilities.Enums.CustomInterestStatusEnum.CustomInterestStatus.t(),
           name: String.t(),
-          type: Google.Ads.Googleads.V8.Enums.CustomInterestTypeEnum.CustomInterestType.t(),
+          type: Google.Ads.Googleads.V8Availabilities.Enums.CustomInterestTypeEnum.CustomInterestType.t(),
           description: String.t(),
-          members: [Google.Ads.Googleads.V8.Resources.CustomInterestMember.t()]
+          members: [Google.Ads.Googleads.V8Availabilities.Resources.CustomInterestMember.t()]
         }
 
   defstruct [:resource_name, :id, :status, :name, :type, :description, :members]
@@ -18,33 +18,33 @@ defmodule Google.Ads.Googleads.V8.Resources.CustomInterest do
   field :id, 8, type: :int64
 
   field :status, 3,
-    type: Google.Ads.Googleads.V8.Enums.CustomInterestStatusEnum.CustomInterestStatus,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.CustomInterestStatusEnum.CustomInterestStatus,
     enum: true
 
   field :name, 9, type: :string
 
   field :type, 5,
-    type: Google.Ads.Googleads.V8.Enums.CustomInterestTypeEnum.CustomInterestType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.CustomInterestTypeEnum.CustomInterestType,
     enum: true
 
   field :description, 10, type: :string
-  field :members, 7, repeated: true, type: Google.Ads.Googleads.V8.Resources.CustomInterestMember
+  field :members, 7, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Resources.CustomInterestMember
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.CustomInterestMember do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.CustomInterestMember do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           member_type:
-            Google.Ads.Googleads.V8.Enums.CustomInterestMemberTypeEnum.CustomInterestMemberType.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.CustomInterestMemberTypeEnum.CustomInterestMemberType.t(),
           parameter: String.t()
         }
 
   defstruct [:member_type, :parameter]
 
   field :member_type, 1,
-    type: Google.Ads.Googleads.V8.Enums.CustomInterestMemberTypeEnum.CustomInterestMemberType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.CustomInterestMemberTypeEnum.CustomInterestMemberType,
     enum: true
 
   field :parameter, 3, type: :string

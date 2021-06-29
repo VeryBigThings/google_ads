@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.KeywordPlanCampaignKeywordErrorEnum.KeywordPlanCampaignKeywordError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.KeywordPlanCampaignKeywordErrorEnum.KeywordPlanCampaignKeywordError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :CAMPAIGN_KEYWORD_IS_POSITIVE
@@ -10,7 +10,7 @@ defmodule Google.Ads.Googleads.V8.Errors.KeywordPlanCampaignKeywordErrorEnum.Key
   field :CAMPAIGN_KEYWORD_IS_POSITIVE, 8
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.KeywordPlanCampaignKeywordErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.KeywordPlanCampaignKeywordErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

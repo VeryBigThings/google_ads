@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -27,7 +27,7 @@ defmodule Google.Ads.Googleads.V8.Enums.UserInterestTaxonomyTypeEnum.UserInteres
   field :NEW_SMART_PHONE_USER, 6
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.UserInterestTaxonomyTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.UserInterestTaxonomyTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

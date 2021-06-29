@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.RegionCodeErrorEnum.RegionCodeError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.RegionCodeErrorEnum.RegionCodeError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :INVALID_REGION_CODE
@@ -10,7 +10,7 @@ defmodule Google.Ads.Googleads.V8.Errors.RegionCodeErrorEnum.RegionCodeError do
   field :INVALID_REGION_CODE, 2
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.RegionCodeErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.RegionCodeErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

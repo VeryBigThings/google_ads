@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetCampaignExtensionSettingRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetCampaignExtensionSettingRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,17 +11,17 @@ defmodule Google.Ads.Googleads.V8.Services.GetCampaignExtensionSettingRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateCampaignExtensionSettingsRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateCampaignExtensionSettingsRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           customer_id: String.t(),
-          operations: [Google.Ads.Googleads.V8.Services.CampaignExtensionSettingOperation.t()],
+          operations: [Google.Ads.Googleads.V8Availabilities.Services.CampaignExtensionSettingOperation.t()],
           partial_failure: boolean,
           validate_only: boolean,
           response_content_type:
-            Google.Ads.Googleads.V8.Enums.ResponseContentTypeEnum.ResponseContentType.t()
+            Google.Ads.Googleads.V8Availabilities.Enums.ResponseContentTypeEnum.ResponseContentType.t()
         }
 
   defstruct [:customer_id, :operations, :partial_failure, :validate_only, :response_content_type]
@@ -30,17 +30,17 @@ defmodule Google.Ads.Googleads.V8.Services.MutateCampaignExtensionSettingsReques
 
   field :operations, 2,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Services.CampaignExtensionSettingOperation
+    type: Google.Ads.Googleads.V8Availabilities.Services.CampaignExtensionSettingOperation
 
   field :partial_failure, 3, type: :bool
   field :validate_only, 4, type: :bool
 
   field :response_content_type, 5,
-    type: Google.Ads.Googleads.V8.Enums.ResponseContentTypeEnum.ResponseContentType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.ResponseContentTypeEnum.ResponseContentType,
     enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Services.CampaignExtensionSettingOperation do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.CampaignExtensionSettingOperation do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -54,18 +54,18 @@ defmodule Google.Ads.Googleads.V8.Services.CampaignExtensionSettingOperation do
   oneof :operation, 0
 
   field :update_mask, 4, type: Google.Protobuf.FieldMask
-  field :create, 1, type: Google.Ads.Googleads.V8.Resources.CampaignExtensionSetting, oneof: 0
-  field :update, 2, type: Google.Ads.Googleads.V8.Resources.CampaignExtensionSetting, oneof: 0
+  field :create, 1, type: Google.Ads.Googleads.V8Availabilities.Resources.CampaignExtensionSetting, oneof: 0
+  field :update, 2, type: Google.Ads.Googleads.V8Availabilities.Resources.CampaignExtensionSetting, oneof: 0
   field :remove, 3, type: :string, oneof: 0
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateCampaignExtensionSettingsResponse do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateCampaignExtensionSettingsResponse do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           partial_failure_error: Google.Rpc.Status.t() | nil,
-          results: [Google.Ads.Googleads.V8.Services.MutateCampaignExtensionSettingResult.t()]
+          results: [Google.Ads.Googleads.V8Availabilities.Services.MutateCampaignExtensionSettingResult.t()]
         }
 
   defstruct [:partial_failure_error, :results]
@@ -74,17 +74,17 @@ defmodule Google.Ads.Googleads.V8.Services.MutateCampaignExtensionSettingsRespon
 
   field :results, 2,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Services.MutateCampaignExtensionSettingResult
+    type: Google.Ads.Googleads.V8Availabilities.Services.MutateCampaignExtensionSettingResult
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateCampaignExtensionSettingResult do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateCampaignExtensionSettingResult do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           resource_name: String.t(),
           campaign_extension_setting:
-            Google.Ads.Googleads.V8.Resources.CampaignExtensionSetting.t() | nil
+            Google.Ads.Googleads.V8Availabilities.Resources.CampaignExtensionSetting.t() | nil
         }
 
   defstruct [:resource_name, :campaign_extension_setting]
@@ -92,23 +92,23 @@ defmodule Google.Ads.Googleads.V8.Services.MutateCampaignExtensionSettingResult 
   field :resource_name, 1, type: :string
 
   field :campaign_extension_setting, 2,
-    type: Google.Ads.Googleads.V8.Resources.CampaignExtensionSetting
+    type: Google.Ads.Googleads.V8Availabilities.Resources.CampaignExtensionSetting
 end
 
-defmodule Google.Ads.Googleads.V8.Services.CampaignExtensionSettingService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.CampaignExtensionSettingService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.CampaignExtensionSettingService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.CampaignExtensionSettingService"
 
   rpc :GetCampaignExtensionSetting,
-      Google.Ads.Googleads.V8.Services.GetCampaignExtensionSettingRequest,
-      Google.Ads.Googleads.V8.Resources.CampaignExtensionSetting
+      Google.Ads.Googleads.V8Availabilities.Services.GetCampaignExtensionSettingRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.CampaignExtensionSetting
 
   rpc :MutateCampaignExtensionSettings,
-      Google.Ads.Googleads.V8.Services.MutateCampaignExtensionSettingsRequest,
-      Google.Ads.Googleads.V8.Services.MutateCampaignExtensionSettingsResponse
+      Google.Ads.Googleads.V8Availabilities.Services.MutateCampaignExtensionSettingsRequest,
+      Google.Ads.Googleads.V8Availabilities.Services.MutateCampaignExtensionSettingsResponse
 end
 
-defmodule Google.Ads.Googleads.V8.Services.CampaignExtensionSettingService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.CampaignExtensionSettingService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.CampaignExtensionSettingService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.CampaignExtensionSettingService.Service
 end

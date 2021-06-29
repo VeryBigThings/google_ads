@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetAdGroupLabelRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetAdGroupLabelRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,13 +11,13 @@ defmodule Google.Ads.Googleads.V8.Services.GetAdGroupLabelRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateAdGroupLabelsRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateAdGroupLabelsRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           customer_id: String.t(),
-          operations: [Google.Ads.Googleads.V8.Services.AdGroupLabelOperation.t()],
+          operations: [Google.Ads.Googleads.V8Availabilities.Services.AdGroupLabelOperation.t()],
           partial_failure: boolean,
           validate_only: boolean
         }
@@ -28,13 +28,13 @@ defmodule Google.Ads.Googleads.V8.Services.MutateAdGroupLabelsRequest do
 
   field :operations, 2,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Services.AdGroupLabelOperation
+    type: Google.Ads.Googleads.V8Availabilities.Services.AdGroupLabelOperation
 
   field :partial_failure, 3, type: :bool
   field :validate_only, 4, type: :bool
 end
 
-defmodule Google.Ads.Googleads.V8.Services.AdGroupLabelOperation do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.AdGroupLabelOperation do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -46,17 +46,17 @@ defmodule Google.Ads.Googleads.V8.Services.AdGroupLabelOperation do
 
   oneof :operation, 0
 
-  field :create, 1, type: Google.Ads.Googleads.V8.Resources.AdGroupLabel, oneof: 0
+  field :create, 1, type: Google.Ads.Googleads.V8Availabilities.Resources.AdGroupLabel, oneof: 0
   field :remove, 2, type: :string, oneof: 0
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateAdGroupLabelsResponse do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateAdGroupLabelsResponse do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           partial_failure_error: Google.Rpc.Status.t() | nil,
-          results: [Google.Ads.Googleads.V8.Services.MutateAdGroupLabelResult.t()]
+          results: [Google.Ads.Googleads.V8Availabilities.Services.MutateAdGroupLabelResult.t()]
         }
 
   defstruct [:partial_failure_error, :results]
@@ -65,10 +65,10 @@ defmodule Google.Ads.Googleads.V8.Services.MutateAdGroupLabelsResponse do
 
   field :results, 2,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Services.MutateAdGroupLabelResult
+    type: Google.Ads.Googleads.V8Availabilities.Services.MutateAdGroupLabelResult
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateAdGroupLabelResult do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateAdGroupLabelResult do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -81,20 +81,20 @@ defmodule Google.Ads.Googleads.V8.Services.MutateAdGroupLabelResult do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.AdGroupLabelService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.AdGroupLabelService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.AdGroupLabelService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.AdGroupLabelService"
 
   rpc :GetAdGroupLabel,
-      Google.Ads.Googleads.V8.Services.GetAdGroupLabelRequest,
-      Google.Ads.Googleads.V8.Resources.AdGroupLabel
+      Google.Ads.Googleads.V8Availabilities.Services.GetAdGroupLabelRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.AdGroupLabel
 
   rpc :MutateAdGroupLabels,
-      Google.Ads.Googleads.V8.Services.MutateAdGroupLabelsRequest,
-      Google.Ads.Googleads.V8.Services.MutateAdGroupLabelsResponse
+      Google.Ads.Googleads.V8Availabilities.Services.MutateAdGroupLabelsRequest,
+      Google.Ads.Googleads.V8Availabilities.Services.MutateAdGroupLabelsResponse
 end
 
-defmodule Google.Ads.Googleads.V8.Services.AdGroupLabelService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.AdGroupLabelService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.AdGroupLabelService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.AdGroupLabelService.Service
 end

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetGeoTargetConstantRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetGeoTargetConstantRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,7 +11,7 @@ defmodule Google.Ads.Googleads.V8.Services.GetGeoTargetConstantRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.SuggestGeoTargetConstantsRequest.LocationNames do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.SuggestGeoTargetConstantsRequest.LocationNames do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -24,7 +24,7 @@ defmodule Google.Ads.Googleads.V8.Services.SuggestGeoTargetConstantsRequest.Loca
   field :names, 2, repeated: true, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.SuggestGeoTargetConstantsRequest.GeoTargets do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.SuggestGeoTargetConstantsRequest.GeoTargets do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -37,7 +37,7 @@ defmodule Google.Ads.Googleads.V8.Services.SuggestGeoTargetConstantsRequest.GeoT
   field :geo_target_constants, 2, repeated: true, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.SuggestGeoTargetConstantsRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.SuggestGeoTargetConstantsRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -55,21 +55,21 @@ defmodule Google.Ads.Googleads.V8.Services.SuggestGeoTargetConstantsRequest do
   field :country_code, 7, type: :string
 
   field :location_names, 1,
-    type: Google.Ads.Googleads.V8.Services.SuggestGeoTargetConstantsRequest.LocationNames,
+    type: Google.Ads.Googleads.V8Availabilities.Services.SuggestGeoTargetConstantsRequest.LocationNames,
     oneof: 0
 
   field :geo_targets, 2,
-    type: Google.Ads.Googleads.V8.Services.SuggestGeoTargetConstantsRequest.GeoTargets,
+    type: Google.Ads.Googleads.V8Availabilities.Services.SuggestGeoTargetConstantsRequest.GeoTargets,
     oneof: 0
 end
 
-defmodule Google.Ads.Googleads.V8.Services.SuggestGeoTargetConstantsResponse do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.SuggestGeoTargetConstantsResponse do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           geo_target_constant_suggestions: [
-            Google.Ads.Googleads.V8.Services.GeoTargetConstantSuggestion.t()
+            Google.Ads.Googleads.V8Availabilities.Services.GeoTargetConstantSuggestion.t()
           ]
         }
 
@@ -77,10 +77,10 @@ defmodule Google.Ads.Googleads.V8.Services.SuggestGeoTargetConstantsResponse do
 
   field :geo_target_constant_suggestions, 1,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Services.GeoTargetConstantSuggestion
+    type: Google.Ads.Googleads.V8Availabilities.Services.GeoTargetConstantSuggestion
 end
 
-defmodule Google.Ads.Googleads.V8.Services.GeoTargetConstantSuggestion do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GeoTargetConstantSuggestion do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -88,8 +88,8 @@ defmodule Google.Ads.Googleads.V8.Services.GeoTargetConstantSuggestion do
           locale: String.t(),
           reach: integer,
           search_term: String.t(),
-          geo_target_constant: Google.Ads.Googleads.V8.Resources.GeoTargetConstant.t() | nil,
-          geo_target_constant_parents: [Google.Ads.Googleads.V8.Resources.GeoTargetConstant.t()]
+          geo_target_constant: Google.Ads.Googleads.V8Availabilities.Resources.GeoTargetConstant.t() | nil,
+          geo_target_constant_parents: [Google.Ads.Googleads.V8Availabilities.Resources.GeoTargetConstant.t()]
         }
 
   defstruct [:locale, :reach, :search_term, :geo_target_constant, :geo_target_constant_parents]
@@ -97,27 +97,27 @@ defmodule Google.Ads.Googleads.V8.Services.GeoTargetConstantSuggestion do
   field :locale, 6, type: :string
   field :reach, 7, type: :int64
   field :search_term, 8, type: :string
-  field :geo_target_constant, 4, type: Google.Ads.Googleads.V8.Resources.GeoTargetConstant
+  field :geo_target_constant, 4, type: Google.Ads.Googleads.V8Availabilities.Resources.GeoTargetConstant
 
   field :geo_target_constant_parents, 5,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Resources.GeoTargetConstant
+    type: Google.Ads.Googleads.V8Availabilities.Resources.GeoTargetConstant
 end
 
-defmodule Google.Ads.Googleads.V8.Services.GeoTargetConstantService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GeoTargetConstantService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.GeoTargetConstantService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.GeoTargetConstantService"
 
   rpc :GetGeoTargetConstant,
-      Google.Ads.Googleads.V8.Services.GetGeoTargetConstantRequest,
-      Google.Ads.Googleads.V8.Resources.GeoTargetConstant
+      Google.Ads.Googleads.V8Availabilities.Services.GetGeoTargetConstantRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.GeoTargetConstant
 
   rpc :SuggestGeoTargetConstants,
-      Google.Ads.Googleads.V8.Services.SuggestGeoTargetConstantsRequest,
-      Google.Ads.Googleads.V8.Services.SuggestGeoTargetConstantsResponse
+      Google.Ads.Googleads.V8Availabilities.Services.SuggestGeoTargetConstantsRequest,
+      Google.Ads.Googleads.V8Availabilities.Services.SuggestGeoTargetConstantsResponse
 end
 
-defmodule Google.Ads.Googleads.V8.Services.GeoTargetConstantService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GeoTargetConstantService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.GeoTargetConstantService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.GeoTargetConstantService.Service
 end

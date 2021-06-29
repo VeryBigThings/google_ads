@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :ADDED | :EXCLUDED | :ADDED_EXCLUDED | :NONE
@@ -16,7 +16,7 @@ defmodule Google.Ads.Googleads.V8.Enums.SearchTermTargetingStatusEnum.SearchTerm
   field :NONE, 5
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.SearchTermTargetingStatusEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.SearchTermTargetingStatusEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

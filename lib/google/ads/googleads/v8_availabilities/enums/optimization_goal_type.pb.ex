@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.OptimizationGoalTypeEnum.OptimizationGoalType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.OptimizationGoalTypeEnum.OptimizationGoalType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :CALL_CLICKS | :DRIVING_DIRECTIONS
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Enums.OptimizationGoalTypeEnum.OptimizationGoa
   field :DRIVING_DIRECTIONS, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.OptimizationGoalTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.OptimizationGoalTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

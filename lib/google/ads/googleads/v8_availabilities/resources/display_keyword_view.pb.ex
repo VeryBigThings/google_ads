@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.DisplayKeywordView do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.DisplayKeywordView do
   @moduledoc false
   use Protobuf, syntax: :proto3
 

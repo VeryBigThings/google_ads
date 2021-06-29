@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.SizeLimitErrorEnum.SizeLimitError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.SizeLimitErrorEnum.SizeLimitError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -18,7 +18,7 @@ defmodule Google.Ads.Googleads.V8.Errors.SizeLimitErrorEnum.SizeLimitError do
   field :RESPONSE_SIZE_LIMIT_EXCEEDED, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.SizeLimitErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.SizeLimitErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

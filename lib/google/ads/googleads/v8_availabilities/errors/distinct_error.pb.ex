@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.DistinctErrorEnum.DistinctError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.DistinctErrorEnum.DistinctError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :DUPLICATE_ELEMENT | :DUPLICATE_TYPE
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Errors.DistinctErrorEnum.DistinctError do
   field :DUPLICATE_TYPE, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.DistinctErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.DistinctErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

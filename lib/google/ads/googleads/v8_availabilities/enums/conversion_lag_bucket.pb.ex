@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.ConversionLagBucketEnum.ConversionLagBucket do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ConversionLagBucketEnum.ConversionLagBucket do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -69,7 +69,7 @@ defmodule Google.Ads.Googleads.V8.Enums.ConversionLagBucketEnum.ConversionLagBuc
   field :SIXTY_TO_NINETY_DAYS, 20
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.ConversionLagBucketEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ConversionLagBucketEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

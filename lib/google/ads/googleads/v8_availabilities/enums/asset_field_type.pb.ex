@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.AssetFieldTypeEnum.AssetFieldType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AssetFieldTypeEnum.AssetFieldType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -48,7 +48,7 @@ defmodule Google.Ads.Googleads.V8.Enums.AssetFieldTypeEnum.AssetFieldType do
   field :SITELINK, 13
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.AssetFieldTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AssetFieldTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

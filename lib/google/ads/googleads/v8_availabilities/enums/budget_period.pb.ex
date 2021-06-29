@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.BudgetPeriodEnum.BudgetPeriod do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.BudgetPeriodEnum.BudgetPeriod do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :DAILY | :CUSTOM_PERIOD
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Enums.BudgetPeriodEnum.BudgetPeriod do
   field :CUSTOM_PERIOD, 5
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.BudgetPeriodEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.BudgetPeriodEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

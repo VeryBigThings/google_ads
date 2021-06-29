@@ -1,10 +1,10 @@
-defmodule Google.Ads.Googleads.V8.Services.UploadConversionAdjustmentsRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.UploadConversionAdjustmentsRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           customer_id: String.t(),
-          conversion_adjustments: [Google.Ads.Googleads.V8.Services.ConversionAdjustment.t()],
+          conversion_adjustments: [Google.Ads.Googleads.V8Availabilities.Services.ConversionAdjustment.t()],
           partial_failure: boolean,
           validate_only: boolean
         }
@@ -15,19 +15,19 @@ defmodule Google.Ads.Googleads.V8.Services.UploadConversionAdjustmentsRequest do
 
   field :conversion_adjustments, 2,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Services.ConversionAdjustment
+    type: Google.Ads.Googleads.V8Availabilities.Services.ConversionAdjustment
 
   field :partial_failure, 3, type: :bool
   field :validate_only, 4, type: :bool
 end
 
-defmodule Google.Ads.Googleads.V8.Services.UploadConversionAdjustmentsResponse do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.UploadConversionAdjustmentsResponse do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           partial_failure_error: Google.Rpc.Status.t() | nil,
-          results: [Google.Ads.Googleads.V8.Services.ConversionAdjustmentResult.t()]
+          results: [Google.Ads.Googleads.V8Availabilities.Services.ConversionAdjustmentResult.t()]
         }
 
   defstruct [:partial_failure_error, :results]
@@ -36,10 +36,10 @@ defmodule Google.Ads.Googleads.V8.Services.UploadConversionAdjustmentsResponse d
 
   field :results, 2,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Services.ConversionAdjustmentResult
+    type: Google.Ads.Googleads.V8Availabilities.Services.ConversionAdjustmentResult
 end
 
-defmodule Google.Ads.Googleads.V8.Services.ConversionAdjustment do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.ConversionAdjustment do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -48,8 +48,8 @@ defmodule Google.Ads.Googleads.V8.Services.ConversionAdjustment do
           conversion_action: String.t(),
           adjustment_date_time: String.t(),
           adjustment_type:
-            Google.Ads.Googleads.V8.Enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType.t(),
-          restatement_value: Google.Ads.Googleads.V8.Services.RestatementValue.t() | nil
+            Google.Ads.Googleads.V8Availabilities.Enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType.t(),
+          restatement_value: Google.Ads.Googleads.V8Availabilities.Services.RestatementValue.t() | nil
         }
 
   defstruct [
@@ -66,19 +66,19 @@ defmodule Google.Ads.Googleads.V8.Services.ConversionAdjustment do
   field :adjustment_date_time, 9, type: :string
 
   field :adjustment_type, 5,
-    type: Google.Ads.Googleads.V8.Enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType,
     enum: true
 
-  field :restatement_value, 6, type: Google.Ads.Googleads.V8.Services.RestatementValue
+  field :restatement_value, 6, type: Google.Ads.Googleads.V8Availabilities.Services.RestatementValue
 
   field :gclid_date_time_pair, 1,
-    type: Google.Ads.Googleads.V8.Services.GclidDateTimePair,
+    type: Google.Ads.Googleads.V8Availabilities.Services.GclidDateTimePair,
     oneof: 0
 
   field :order_id, 7, type: :string, oneof: 0
 end
 
-defmodule Google.Ads.Googleads.V8.Services.RestatementValue do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.RestatementValue do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -93,7 +93,7 @@ defmodule Google.Ads.Googleads.V8.Services.RestatementValue do
   field :currency_code, 4, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.GclidDateTimePair do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GclidDateTimePair do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -108,7 +108,7 @@ defmodule Google.Ads.Googleads.V8.Services.GclidDateTimePair do
   field :conversion_date_time, 4, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.ConversionAdjustmentResult do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.ConversionAdjustmentResult do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -117,7 +117,7 @@ defmodule Google.Ads.Googleads.V8.Services.ConversionAdjustmentResult do
           conversion_action: String.t(),
           adjustment_date_time: String.t(),
           adjustment_type:
-            Google.Ads.Googleads.V8.Enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType.t()
+            Google.Ads.Googleads.V8Availabilities.Enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType.t()
         }
 
   defstruct [:conversion_identifier, :conversion_action, :adjustment_date_time, :adjustment_type]
@@ -128,27 +128,27 @@ defmodule Google.Ads.Googleads.V8.Services.ConversionAdjustmentResult do
   field :adjustment_date_time, 8, type: :string
 
   field :adjustment_type, 5,
-    type: Google.Ads.Googleads.V8.Enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType,
     enum: true
 
   field :gclid_date_time_pair, 1,
-    type: Google.Ads.Googleads.V8.Services.GclidDateTimePair,
+    type: Google.Ads.Googleads.V8Availabilities.Services.GclidDateTimePair,
     oneof: 0
 
   field :order_id, 6, type: :string, oneof: 0
 end
 
-defmodule Google.Ads.Googleads.V8.Services.ConversionAdjustmentUploadService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.ConversionAdjustmentUploadService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.ConversionAdjustmentUploadService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.ConversionAdjustmentUploadService"
 
   rpc :UploadConversionAdjustments,
-      Google.Ads.Googleads.V8.Services.UploadConversionAdjustmentsRequest,
-      Google.Ads.Googleads.V8.Services.UploadConversionAdjustmentsResponse
+      Google.Ads.Googleads.V8Availabilities.Services.UploadConversionAdjustmentsRequest,
+      Google.Ads.Googleads.V8Availabilities.Services.UploadConversionAdjustmentsResponse
 end
 
-defmodule Google.Ads.Googleads.V8.Services.ConversionAdjustmentUploadService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.ConversionAdjustmentUploadService.Stub do
   @moduledoc false
   use GRPC.Stub,
-    service: Google.Ads.Googleads.V8.Services.ConversionAdjustmentUploadService.Service
+    service: Google.Ads.Googleads.V8Availabilities.Services.ConversionAdjustmentUploadService.Service
 end

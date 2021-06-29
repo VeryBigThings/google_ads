@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.MimeTypeEnum.MimeType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.MimeTypeEnum.MimeType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -48,7 +48,7 @@ defmodule Google.Ads.Googleads.V8.Enums.MimeTypeEnum.MimeType do
   field :HTML5_AD_ZIP, 13
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.MimeTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.MimeTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.LinkedAccountTypeEnum.LinkedAccountType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.LinkedAccountTypeEnum.LinkedAccountType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -21,7 +21,7 @@ defmodule Google.Ads.Googleads.V8.Enums.LinkedAccountTypeEnum.LinkedAccountType 
   field :GOOGLE_ADS, 4
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.LinkedAccountTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.LinkedAccountTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetFeedItemRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetFeedItemRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,32 +11,32 @@ defmodule Google.Ads.Googleads.V8.Services.GetFeedItemRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateFeedItemsRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateFeedItemsRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           customer_id: String.t(),
-          operations: [Google.Ads.Googleads.V8.Services.FeedItemOperation.t()],
+          operations: [Google.Ads.Googleads.V8Availabilities.Services.FeedItemOperation.t()],
           partial_failure: boolean,
           validate_only: boolean,
           response_content_type:
-            Google.Ads.Googleads.V8.Enums.ResponseContentTypeEnum.ResponseContentType.t()
+            Google.Ads.Googleads.V8Availabilities.Enums.ResponseContentTypeEnum.ResponseContentType.t()
         }
 
   defstruct [:customer_id, :operations, :partial_failure, :validate_only, :response_content_type]
 
   field :customer_id, 1, type: :string
-  field :operations, 2, repeated: true, type: Google.Ads.Googleads.V8.Services.FeedItemOperation
+  field :operations, 2, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Services.FeedItemOperation
   field :partial_failure, 3, type: :bool
   field :validate_only, 4, type: :bool
 
   field :response_content_type, 5,
-    type: Google.Ads.Googleads.V8.Enums.ResponseContentTypeEnum.ResponseContentType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.ResponseContentTypeEnum.ResponseContentType,
     enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Services.FeedItemOperation do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.FeedItemOperation do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -50,55 +50,55 @@ defmodule Google.Ads.Googleads.V8.Services.FeedItemOperation do
   oneof :operation, 0
 
   field :update_mask, 4, type: Google.Protobuf.FieldMask
-  field :create, 1, type: Google.Ads.Googleads.V8.Resources.FeedItem, oneof: 0
-  field :update, 2, type: Google.Ads.Googleads.V8.Resources.FeedItem, oneof: 0
+  field :create, 1, type: Google.Ads.Googleads.V8Availabilities.Resources.FeedItem, oneof: 0
+  field :update, 2, type: Google.Ads.Googleads.V8Availabilities.Resources.FeedItem, oneof: 0
   field :remove, 3, type: :string, oneof: 0
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateFeedItemsResponse do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateFeedItemsResponse do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           partial_failure_error: Google.Rpc.Status.t() | nil,
-          results: [Google.Ads.Googleads.V8.Services.MutateFeedItemResult.t()]
+          results: [Google.Ads.Googleads.V8Availabilities.Services.MutateFeedItemResult.t()]
         }
 
   defstruct [:partial_failure_error, :results]
 
   field :partial_failure_error, 3, type: Google.Rpc.Status
-  field :results, 2, repeated: true, type: Google.Ads.Googleads.V8.Services.MutateFeedItemResult
+  field :results, 2, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Services.MutateFeedItemResult
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateFeedItemResult do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateFeedItemResult do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           resource_name: String.t(),
-          feed_item: Google.Ads.Googleads.V8.Resources.FeedItem.t() | nil
+          feed_item: Google.Ads.Googleads.V8Availabilities.Resources.FeedItem.t() | nil
         }
 
   defstruct [:resource_name, :feed_item]
 
   field :resource_name, 1, type: :string
-  field :feed_item, 2, type: Google.Ads.Googleads.V8.Resources.FeedItem
+  field :feed_item, 2, type: Google.Ads.Googleads.V8Availabilities.Resources.FeedItem
 end
 
-defmodule Google.Ads.Googleads.V8.Services.FeedItemService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.FeedItemService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.FeedItemService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.FeedItemService"
 
   rpc :GetFeedItem,
-      Google.Ads.Googleads.V8.Services.GetFeedItemRequest,
-      Google.Ads.Googleads.V8.Resources.FeedItem
+      Google.Ads.Googleads.V8Availabilities.Services.GetFeedItemRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.FeedItem
 
   rpc :MutateFeedItems,
-      Google.Ads.Googleads.V8.Services.MutateFeedItemsRequest,
-      Google.Ads.Googleads.V8.Services.MutateFeedItemsResponse
+      Google.Ads.Googleads.V8Availabilities.Services.MutateFeedItemsRequest,
+      Google.Ads.Googleads.V8Availabilities.Services.MutateFeedItemsResponse
 end
 
-defmodule Google.Ads.Googleads.V8.Services.FeedItemService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.FeedItemService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.FeedItemService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.FeedItemService.Service
 end

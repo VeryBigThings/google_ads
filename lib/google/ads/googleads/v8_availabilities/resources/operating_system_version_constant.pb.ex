@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.OperatingSystemVersionConstant do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.OperatingSystemVersionConstant do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -9,7 +9,7 @@ defmodule Google.Ads.Googleads.V8.Resources.OperatingSystemVersionConstant do
           os_major_version: integer,
           os_minor_version: integer,
           operator_type:
-            Google.Ads.Googleads.V8.Enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType.t()
+            Google.Ads.Googleads.V8Availabilities.Enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType.t()
         }
 
   defstruct [:resource_name, :id, :name, :os_major_version, :os_minor_version, :operator_type]
@@ -22,6 +22,6 @@ defmodule Google.Ads.Googleads.V8.Resources.OperatingSystemVersionConstant do
 
   field :operator_type, 6,
     type:
-      Google.Ads.Googleads.V8.Enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType,
+      Google.Ads.Googleads.V8Availabilities.Enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType,
     enum: true
 end

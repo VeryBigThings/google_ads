@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.HotelPlaceholderFieldEnum.HotelPlaceholderField do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.HotelPlaceholderFieldEnum.HotelPlaceholderField do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -72,7 +72,7 @@ defmodule Google.Ads.Googleads.V8.Enums.HotelPlaceholderFieldEnum.HotelPlacehold
   field :IOS_APP_STORE_ID, 21
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.HotelPlaceholderFieldEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.HotelPlaceholderFieldEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.CampaignSharedSetErrorEnum.CampaignSharedSetError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.CampaignSharedSetErrorEnum.CampaignSharedSetError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :SHARED_SET_ACCESS_DENIED
@@ -10,7 +10,7 @@ defmodule Google.Ads.Googleads.V8.Errors.CampaignSharedSetErrorEnum.CampaignShar
   field :SHARED_SET_ACCESS_DENIED, 2
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.CampaignSharedSetErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.CampaignSharedSetErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

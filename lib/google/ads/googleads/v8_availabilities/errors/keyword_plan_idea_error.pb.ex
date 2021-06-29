@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.KeywordPlanIdeaErrorEnum.KeywordPlanIdeaError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.KeywordPlanIdeaErrorEnum.KeywordPlanIdeaError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :URL_CRAWL_ERROR | :INVALID_VALUE
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Errors.KeywordPlanIdeaErrorEnum.KeywordPlanIde
   field :INVALID_VALUE, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.KeywordPlanIdeaErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.KeywordPlanIdeaErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.ResponseContentTypeEnum.ResponseContentType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ResponseContentTypeEnum.ResponseContentType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :RESOURCE_NAME_ONLY | :MUTABLE_RESOURCE
@@ -10,7 +10,7 @@ defmodule Google.Ads.Googleads.V8.Enums.ResponseContentTypeEnum.ResponseContentT
   field :MUTABLE_RESOURCE, 2
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.ResponseContentTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ResponseContentTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

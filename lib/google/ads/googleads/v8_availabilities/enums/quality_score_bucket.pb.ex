@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.QualityScoreBucketEnum.QualityScoreBucket do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.QualityScoreBucketEnum.QualityScoreBucket do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :BELOW_AVERAGE | :AVERAGE | :ABOVE_AVERAGE
@@ -14,7 +14,7 @@ defmodule Google.Ads.Googleads.V8.Enums.QualityScoreBucketEnum.QualityScoreBucke
   field :ABOVE_AVERAGE, 4
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.QualityScoreBucketEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.QualityScoreBucketEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

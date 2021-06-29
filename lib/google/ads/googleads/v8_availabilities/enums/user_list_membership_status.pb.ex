@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.UserListMembershipStatusEnum.UserListMembershipStatus do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.UserListMembershipStatusEnum.UserListMembershipStatus do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :OPEN | :CLOSED
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Enums.UserListMembershipStatusEnum.UserListMem
   field :CLOSED, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.UserListMembershipStatusEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.UserListMembershipStatusEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

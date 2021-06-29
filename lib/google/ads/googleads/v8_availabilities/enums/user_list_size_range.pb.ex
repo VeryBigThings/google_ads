@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.UserListSizeRangeEnum.UserListSizeRange do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.UserListSizeRangeEnum.UserListSizeRange do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -60,7 +60,7 @@ defmodule Google.Ads.Googleads.V8.Enums.UserListSizeRangeEnum.UserListSizeRange 
   field :OVER_FIFTY_MILLION, 17
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.UserListSizeRangeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.UserListSizeRangeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

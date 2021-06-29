@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.CampaignAudienceView do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.CampaignAudienceView do
   @moduledoc false
   use Protobuf, syntax: :proto3
 

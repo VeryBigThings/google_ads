@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.ContentLabelTypeEnum.ContentLabelType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ContentLabelTypeEnum.ContentLabelType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -57,7 +57,7 @@ defmodule Google.Ads.Googleads.V8.Enums.ContentLabelTypeEnum.ContentLabelType do
   field :SOCIAL_ISSUES, 17
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.ContentLabelTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ContentLabelTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.LeadFormCallToActionTypeEnum.LeadFormCallToActionType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.LeadFormCallToActionTypeEnum.LeadFormCallToActionType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -54,7 +54,7 @@ defmodule Google.Ads.Googleads.V8.Enums.LeadFormCallToActionTypeEnum.LeadFormCal
   field :GET_STARTED, 15
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.LeadFormCallToActionTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.LeadFormCallToActionTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

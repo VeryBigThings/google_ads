@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetLandingPageViewRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetLandingPageViewRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,16 +11,16 @@ defmodule Google.Ads.Googleads.V8.Services.GetLandingPageViewRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.LandingPageViewService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.LandingPageViewService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.LandingPageViewService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.LandingPageViewService"
 
   rpc :GetLandingPageView,
-      Google.Ads.Googleads.V8.Services.GetLandingPageViewRequest,
-      Google.Ads.Googleads.V8.Resources.LandingPageView
+      Google.Ads.Googleads.V8Availabilities.Services.GetLandingPageViewRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.LandingPageView
 end
 
-defmodule Google.Ads.Googleads.V8.Services.LandingPageViewService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.LandingPageViewService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.LandingPageViewService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.LandingPageViewService.Service
 end

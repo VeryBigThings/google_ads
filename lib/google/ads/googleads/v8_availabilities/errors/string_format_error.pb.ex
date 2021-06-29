@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.StringFormatErrorEnum.StringFormatError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.StringFormatErrorEnum.StringFormatError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :ILLEGAL_CHARS | :INVALID_FORMAT
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Errors.StringFormatErrorEnum.StringFormatError
   field :INVALID_FORMAT, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.StringFormatErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.StringFormatErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

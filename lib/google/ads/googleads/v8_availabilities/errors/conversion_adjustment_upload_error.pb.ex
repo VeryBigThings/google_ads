@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -45,7 +45,7 @@ defmodule Google.Ads.Googleads.V8.Errors.ConversionAdjustmentUploadErrorEnum.Con
   field :TOO_MANY_ADJUSTMENTS, 12
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.ConversionAdjustmentUploadErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.ConversionAdjustmentUploadErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

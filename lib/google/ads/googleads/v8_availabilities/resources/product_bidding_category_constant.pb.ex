@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.ProductBiddingCategoryConstant do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.ProductBiddingCategoryConstant do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -8,9 +8,9 @@ defmodule Google.Ads.Googleads.V8.Resources.ProductBiddingCategoryConstant do
           country_code: String.t(),
           product_bidding_category_constant_parent: String.t(),
           level:
-            Google.Ads.Googleads.V8.Enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel.t(),
           status:
-            Google.Ads.Googleads.V8.Enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus.t(),
           language_code: String.t(),
           localized_name: String.t()
         }
@@ -33,12 +33,12 @@ defmodule Google.Ads.Googleads.V8.Resources.ProductBiddingCategoryConstant do
 
   field :level, 5,
     type:
-      Google.Ads.Googleads.V8.Enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel,
+      Google.Ads.Googleads.V8Availabilities.Enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel,
     enum: true
 
   field :status, 6,
     type:
-      Google.Ads.Googleads.V8.Enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus,
+      Google.Ads.Googleads.V8Availabilities.Enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus,
     enum: true
 
   field :language_code, 13, type: :string

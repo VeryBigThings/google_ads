@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.CampaignExperiment do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.CampaignExperiment do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -10,10 +10,10 @@ defmodule Google.Ads.Googleads.V8.Resources.CampaignExperiment do
           description: String.t(),
           traffic_split_percent: integer,
           traffic_split_type:
-            Google.Ads.Googleads.V8.Enums.CampaignExperimentTrafficSplitTypeEnum.CampaignExperimentTrafficSplitType.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.CampaignExperimentTrafficSplitTypeEnum.CampaignExperimentTrafficSplitType.t(),
           experiment_campaign: String.t(),
           status:
-            Google.Ads.Googleads.V8.Enums.CampaignExperimentStatusEnum.CampaignExperimentStatus.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.CampaignExperimentStatusEnum.CampaignExperimentStatus.t(),
           long_running_operation: String.t(),
           start_date: String.t(),
           end_date: String.t()
@@ -43,13 +43,13 @@ defmodule Google.Ads.Googleads.V8.Resources.CampaignExperiment do
 
   field :traffic_split_type, 7,
     type:
-      Google.Ads.Googleads.V8.Enums.CampaignExperimentTrafficSplitTypeEnum.CampaignExperimentTrafficSplitType,
+      Google.Ads.Googleads.V8Availabilities.Enums.CampaignExperimentTrafficSplitTypeEnum.CampaignExperimentTrafficSplitType,
     enum: true
 
   field :experiment_campaign, 18, type: :string
 
   field :status, 9,
-    type: Google.Ads.Googleads.V8.Enums.CampaignExperimentStatusEnum.CampaignExperimentStatus,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.CampaignExperimentStatusEnum.CampaignExperimentStatus,
     enum: true
 
   field :long_running_operation, 19, type: :string

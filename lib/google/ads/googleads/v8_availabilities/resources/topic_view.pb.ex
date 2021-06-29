@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.TopicView do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.TopicView do
   @moduledoc false
   use Protobuf, syntax: :proto3
 

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.PreferredContentTypeEnum.PreferredContentType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.PreferredContentTypeEnum.PreferredContentType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :YOUTUBE_TOP_CONTENT
@@ -10,7 +10,7 @@ defmodule Google.Ads.Googleads.V8.Enums.PreferredContentTypeEnum.PreferredConten
   field :YOUTUBE_TOP_CONTENT, 400
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.PreferredContentTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.PreferredContentTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

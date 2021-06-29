@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :ENABLED | :REMOVAL_PLANNED
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Enums.GeoTargetConstantStatusEnum.GeoTargetCon
   field :REMOVAL_PLANNED, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.GeoTargetConstantStatusEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.GeoTargetConstantStatusEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

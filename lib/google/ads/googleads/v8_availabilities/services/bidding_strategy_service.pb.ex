@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetBiddingStrategyRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetBiddingStrategyRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,17 +11,17 @@ defmodule Google.Ads.Googleads.V8.Services.GetBiddingStrategyRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateBiddingStrategiesRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateBiddingStrategiesRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           customer_id: String.t(),
-          operations: [Google.Ads.Googleads.V8.Services.BiddingStrategyOperation.t()],
+          operations: [Google.Ads.Googleads.V8Availabilities.Services.BiddingStrategyOperation.t()],
           partial_failure: boolean,
           validate_only: boolean,
           response_content_type:
-            Google.Ads.Googleads.V8.Enums.ResponseContentTypeEnum.ResponseContentType.t()
+            Google.Ads.Googleads.V8Availabilities.Enums.ResponseContentTypeEnum.ResponseContentType.t()
         }
 
   defstruct [:customer_id, :operations, :partial_failure, :validate_only, :response_content_type]
@@ -30,17 +30,17 @@ defmodule Google.Ads.Googleads.V8.Services.MutateBiddingStrategiesRequest do
 
   field :operations, 2,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Services.BiddingStrategyOperation
+    type: Google.Ads.Googleads.V8Availabilities.Services.BiddingStrategyOperation
 
   field :partial_failure, 3, type: :bool
   field :validate_only, 4, type: :bool
 
   field :response_content_type, 5,
-    type: Google.Ads.Googleads.V8.Enums.ResponseContentTypeEnum.ResponseContentType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.ResponseContentTypeEnum.ResponseContentType,
     enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Services.BiddingStrategyOperation do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.BiddingStrategyOperation do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -54,18 +54,18 @@ defmodule Google.Ads.Googleads.V8.Services.BiddingStrategyOperation do
   oneof :operation, 0
 
   field :update_mask, 4, type: Google.Protobuf.FieldMask
-  field :create, 1, type: Google.Ads.Googleads.V8.Resources.BiddingStrategy, oneof: 0
-  field :update, 2, type: Google.Ads.Googleads.V8.Resources.BiddingStrategy, oneof: 0
+  field :create, 1, type: Google.Ads.Googleads.V8Availabilities.Resources.BiddingStrategy, oneof: 0
+  field :update, 2, type: Google.Ads.Googleads.V8Availabilities.Resources.BiddingStrategy, oneof: 0
   field :remove, 3, type: :string, oneof: 0
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateBiddingStrategiesResponse do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateBiddingStrategiesResponse do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           partial_failure_error: Google.Rpc.Status.t() | nil,
-          results: [Google.Ads.Googleads.V8.Services.MutateBiddingStrategyResult.t()]
+          results: [Google.Ads.Googleads.V8Availabilities.Services.MutateBiddingStrategyResult.t()]
         }
 
   defstruct [:partial_failure_error, :results]
@@ -74,38 +74,38 @@ defmodule Google.Ads.Googleads.V8.Services.MutateBiddingStrategiesResponse do
 
   field :results, 2,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Services.MutateBiddingStrategyResult
+    type: Google.Ads.Googleads.V8Availabilities.Services.MutateBiddingStrategyResult
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateBiddingStrategyResult do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateBiddingStrategyResult do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           resource_name: String.t(),
-          bidding_strategy: Google.Ads.Googleads.V8.Resources.BiddingStrategy.t() | nil
+          bidding_strategy: Google.Ads.Googleads.V8Availabilities.Resources.BiddingStrategy.t() | nil
         }
 
   defstruct [:resource_name, :bidding_strategy]
 
   field :resource_name, 1, type: :string
-  field :bidding_strategy, 2, type: Google.Ads.Googleads.V8.Resources.BiddingStrategy
+  field :bidding_strategy, 2, type: Google.Ads.Googleads.V8Availabilities.Resources.BiddingStrategy
 end
 
-defmodule Google.Ads.Googleads.V8.Services.BiddingStrategyService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.BiddingStrategyService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.BiddingStrategyService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.BiddingStrategyService"
 
   rpc :GetBiddingStrategy,
-      Google.Ads.Googleads.V8.Services.GetBiddingStrategyRequest,
-      Google.Ads.Googleads.V8.Resources.BiddingStrategy
+      Google.Ads.Googleads.V8Availabilities.Services.GetBiddingStrategyRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.BiddingStrategy
 
   rpc :MutateBiddingStrategies,
-      Google.Ads.Googleads.V8.Services.MutateBiddingStrategiesRequest,
-      Google.Ads.Googleads.V8.Services.MutateBiddingStrategiesResponse
+      Google.Ads.Googleads.V8Availabilities.Services.MutateBiddingStrategiesRequest,
+      Google.Ads.Googleads.V8Availabilities.Services.MutateBiddingStrategiesResponse
 end
 
-defmodule Google.Ads.Googleads.V8.Services.BiddingStrategyService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.BiddingStrategyService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.BiddingStrategyService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.BiddingStrategyService.Service
 end

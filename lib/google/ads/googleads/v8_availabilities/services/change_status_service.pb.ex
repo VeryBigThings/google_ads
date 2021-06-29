@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetChangeStatusRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetChangeStatusRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,16 +11,16 @@ defmodule Google.Ads.Googleads.V8.Services.GetChangeStatusRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.ChangeStatusService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.ChangeStatusService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.ChangeStatusService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.ChangeStatusService"
 
   rpc :GetChangeStatus,
-      Google.Ads.Googleads.V8.Services.GetChangeStatusRequest,
-      Google.Ads.Googleads.V8.Resources.ChangeStatus
+      Google.Ads.Googleads.V8Availabilities.Services.GetChangeStatusRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.ChangeStatus
 end
 
-defmodule Google.Ads.Googleads.V8.Services.ChangeStatusService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.ChangeStatusService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.ChangeStatusService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.ChangeStatusService.Service
 end

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.CustomerManagerLink do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.CustomerManagerLink do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -6,7 +6,7 @@ defmodule Google.Ads.Googleads.V8.Resources.CustomerManagerLink do
           resource_name: String.t(),
           manager_customer: String.t(),
           manager_link_id: integer,
-          status: Google.Ads.Googleads.V8.Enums.ManagerLinkStatusEnum.ManagerLinkStatus.t()
+          status: Google.Ads.Googleads.V8Availabilities.Enums.ManagerLinkStatusEnum.ManagerLinkStatus.t()
         }
 
   defstruct [:resource_name, :manager_customer, :manager_link_id, :status]
@@ -16,6 +16,6 @@ defmodule Google.Ads.Googleads.V8.Resources.CustomerManagerLink do
   field :manager_link_id, 7, type: :int64
 
   field :status, 5,
-    type: Google.Ads.Googleads.V8.Enums.ManagerLinkStatusEnum.ManagerLinkStatus,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.ManagerLinkStatusEnum.ManagerLinkStatus,
     enum: true
 end

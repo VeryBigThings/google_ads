@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.DeviceEnum.Device do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.DeviceEnum.Device do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -27,7 +27,7 @@ defmodule Google.Ads.Googleads.V8.Enums.DeviceEnum.Device do
   field :OTHER, 5
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.DeviceEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.DeviceEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

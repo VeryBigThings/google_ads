@@ -1,20 +1,20 @@
-defmodule Google.Ads.Googleads.V8.Resources.ChangeEvent.ChangedResource do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.ChangeEvent.ChangedResource do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          ad: Google.Ads.Googleads.V8.Resources.Ad.t() | nil,
-          ad_group: Google.Ads.Googleads.V8.Resources.AdGroup.t() | nil,
-          ad_group_criterion: Google.Ads.Googleads.V8.Resources.AdGroupCriterion.t() | nil,
-          campaign: Google.Ads.Googleads.V8.Resources.Campaign.t() | nil,
-          campaign_budget: Google.Ads.Googleads.V8.Resources.CampaignBudget.t() | nil,
-          ad_group_bid_modifier: Google.Ads.Googleads.V8.Resources.AdGroupBidModifier.t() | nil,
-          campaign_criterion: Google.Ads.Googleads.V8.Resources.CampaignCriterion.t() | nil,
-          feed: Google.Ads.Googleads.V8.Resources.Feed.t() | nil,
-          feed_item: Google.Ads.Googleads.V8.Resources.FeedItem.t() | nil,
-          campaign_feed: Google.Ads.Googleads.V8.Resources.CampaignFeed.t() | nil,
-          ad_group_feed: Google.Ads.Googleads.V8.Resources.AdGroupFeed.t() | nil,
-          ad_group_ad: Google.Ads.Googleads.V8.Resources.AdGroupAd.t() | nil
+          ad: Google.Ads.Googleads.V8Availabilities.Resources.Ad.t() | nil,
+          ad_group: Google.Ads.Googleads.V8Availabilities.Resources.AdGroup.t() | nil,
+          ad_group_criterion: Google.Ads.Googleads.V8Availabilities.Resources.AdGroupCriterion.t() | nil,
+          campaign: Google.Ads.Googleads.V8Availabilities.Resources.Campaign.t() | nil,
+          campaign_budget: Google.Ads.Googleads.V8Availabilities.Resources.CampaignBudget.t() | nil,
+          ad_group_bid_modifier: Google.Ads.Googleads.V8Availabilities.Resources.AdGroupBidModifier.t() | nil,
+          campaign_criterion: Google.Ads.Googleads.V8Availabilities.Resources.CampaignCriterion.t() | nil,
+          feed: Google.Ads.Googleads.V8Availabilities.Resources.Feed.t() | nil,
+          feed_item: Google.Ads.Googleads.V8Availabilities.Resources.FeedItem.t() | nil,
+          campaign_feed: Google.Ads.Googleads.V8Availabilities.Resources.CampaignFeed.t() | nil,
+          ad_group_feed: Google.Ads.Googleads.V8Availabilities.Resources.AdGroupFeed.t() | nil,
+          ad_group_ad: Google.Ads.Googleads.V8Availabilities.Resources.AdGroupAd.t() | nil
         }
 
   defstruct [
@@ -32,21 +32,21 @@ defmodule Google.Ads.Googleads.V8.Resources.ChangeEvent.ChangedResource do
     :ad_group_ad
   ]
 
-  field :ad, 1, type: Google.Ads.Googleads.V8.Resources.Ad
-  field :ad_group, 2, type: Google.Ads.Googleads.V8.Resources.AdGroup
-  field :ad_group_criterion, 3, type: Google.Ads.Googleads.V8.Resources.AdGroupCriterion
-  field :campaign, 4, type: Google.Ads.Googleads.V8.Resources.Campaign
-  field :campaign_budget, 5, type: Google.Ads.Googleads.V8.Resources.CampaignBudget
-  field :ad_group_bid_modifier, 6, type: Google.Ads.Googleads.V8.Resources.AdGroupBidModifier
-  field :campaign_criterion, 7, type: Google.Ads.Googleads.V8.Resources.CampaignCriterion
-  field :feed, 8, type: Google.Ads.Googleads.V8.Resources.Feed
-  field :feed_item, 9, type: Google.Ads.Googleads.V8.Resources.FeedItem
-  field :campaign_feed, 10, type: Google.Ads.Googleads.V8.Resources.CampaignFeed
-  field :ad_group_feed, 11, type: Google.Ads.Googleads.V8.Resources.AdGroupFeed
-  field :ad_group_ad, 12, type: Google.Ads.Googleads.V8.Resources.AdGroupAd
+  field :ad, 1, type: Google.Ads.Googleads.V8Availabilities.Resources.Ad
+  field :ad_group, 2, type: Google.Ads.Googleads.V8Availabilities.Resources.AdGroup
+  field :ad_group_criterion, 3, type: Google.Ads.Googleads.V8Availabilities.Resources.AdGroupCriterion
+  field :campaign, 4, type: Google.Ads.Googleads.V8Availabilities.Resources.Campaign
+  field :campaign_budget, 5, type: Google.Ads.Googleads.V8Availabilities.Resources.CampaignBudget
+  field :ad_group_bid_modifier, 6, type: Google.Ads.Googleads.V8Availabilities.Resources.AdGroupBidModifier
+  field :campaign_criterion, 7, type: Google.Ads.Googleads.V8Availabilities.Resources.CampaignCriterion
+  field :feed, 8, type: Google.Ads.Googleads.V8Availabilities.Resources.Feed
+  field :feed_item, 9, type: Google.Ads.Googleads.V8Availabilities.Resources.FeedItem
+  field :campaign_feed, 10, type: Google.Ads.Googleads.V8Availabilities.Resources.CampaignFeed
+  field :ad_group_feed, 11, type: Google.Ads.Googleads.V8Availabilities.Resources.AdGroupFeed
+  field :ad_group_ad, 12, type: Google.Ads.Googleads.V8Availabilities.Resources.AdGroupAd
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.ChangeEvent do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.ChangeEvent do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -54,14 +54,14 @@ defmodule Google.Ads.Googleads.V8.Resources.ChangeEvent do
           resource_name: String.t(),
           change_date_time: String.t(),
           change_resource_type:
-            Google.Ads.Googleads.V8.Enums.ChangeEventResourceTypeEnum.ChangeEventResourceType.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.ChangeEventResourceTypeEnum.ChangeEventResourceType.t(),
           change_resource_name: String.t(),
-          client_type: Google.Ads.Googleads.V8.Enums.ChangeClientTypeEnum.ChangeClientType.t(),
+          client_type: Google.Ads.Googleads.V8Availabilities.Enums.ChangeClientTypeEnum.ChangeClientType.t(),
           user_email: String.t(),
-          old_resource: Google.Ads.Googleads.V8.Resources.ChangeEvent.ChangedResource.t() | nil,
-          new_resource: Google.Ads.Googleads.V8.Resources.ChangeEvent.ChangedResource.t() | nil,
+          old_resource: Google.Ads.Googleads.V8Availabilities.Resources.ChangeEvent.ChangedResource.t() | nil,
+          new_resource: Google.Ads.Googleads.V8Availabilities.Resources.ChangeEvent.ChangedResource.t() | nil,
           resource_change_operation:
-            Google.Ads.Googleads.V8.Enums.ResourceChangeOperationEnum.ResourceChangeOperation.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.ResourceChangeOperationEnum.ResourceChangeOperation.t(),
           changed_fields: Google.Protobuf.FieldMask.t() | nil,
           campaign: String.t(),
           ad_group: String.t(),
@@ -90,21 +90,21 @@ defmodule Google.Ads.Googleads.V8.Resources.ChangeEvent do
   field :change_date_time, 2, type: :string
 
   field :change_resource_type, 3,
-    type: Google.Ads.Googleads.V8.Enums.ChangeEventResourceTypeEnum.ChangeEventResourceType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.ChangeEventResourceTypeEnum.ChangeEventResourceType,
     enum: true
 
   field :change_resource_name, 4, type: :string
 
   field :client_type, 5,
-    type: Google.Ads.Googleads.V8.Enums.ChangeClientTypeEnum.ChangeClientType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.ChangeClientTypeEnum.ChangeClientType,
     enum: true
 
   field :user_email, 6, type: :string
-  field :old_resource, 7, type: Google.Ads.Googleads.V8.Resources.ChangeEvent.ChangedResource
-  field :new_resource, 8, type: Google.Ads.Googleads.V8.Resources.ChangeEvent.ChangedResource
+  field :old_resource, 7, type: Google.Ads.Googleads.V8Availabilities.Resources.ChangeEvent.ChangedResource
+  field :new_resource, 8, type: Google.Ads.Googleads.V8Availabilities.Resources.ChangeEvent.ChangedResource
 
   field :resource_change_operation, 9,
-    type: Google.Ads.Googleads.V8.Enums.ResourceChangeOperationEnum.ResourceChangeOperation,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.ResourceChangeOperationEnum.ResourceChangeOperation,
     enum: true
 
   field :changed_fields, 10, type: Google.Protobuf.FieldMask

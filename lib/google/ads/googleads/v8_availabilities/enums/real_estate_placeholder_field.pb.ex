@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -66,7 +66,7 @@ defmodule Google.Ads.Googleads.V8.Enums.RealEstatePlaceholderFieldEnum.RealEstat
   field :IOS_APP_STORE_ID, 19
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.RealEstatePlaceholderFieldEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.RealEstatePlaceholderFieldEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

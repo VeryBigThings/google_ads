@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.BillingSetupStatusEnum.BillingSetupStatus do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.BillingSetupStatusEnum.BillingSetupStatus do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -18,7 +18,7 @@ defmodule Google.Ads.Googleads.V8.Enums.BillingSetupStatusEnum.BillingSetupStatu
   field :CANCELLED, 5
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.BillingSetupStatusEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.BillingSetupStatusEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

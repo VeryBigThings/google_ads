@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.EnumErrorEnum.EnumError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.EnumErrorEnum.EnumError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :ENUM_VALUE_NOT_PERMITTED
@@ -10,7 +10,7 @@ defmodule Google.Ads.Googleads.V8.Errors.EnumErrorEnum.EnumError do
   field :ENUM_VALUE_NOT_PERMITTED, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.EnumErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.EnumErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

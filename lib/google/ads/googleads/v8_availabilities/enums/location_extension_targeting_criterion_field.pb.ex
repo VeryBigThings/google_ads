@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -30,7 +30,7 @@ defmodule Google.Ads.Googleads.V8.Enums.LocationExtensionTargetingCriterionField
   field :COUNTRY_CODE, 7
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.LocationExtensionTargetingCriterionFieldEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.LocationExtensionTargetingCriterionFieldEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

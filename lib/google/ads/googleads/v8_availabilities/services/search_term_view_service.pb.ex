@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetSearchTermViewRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetSearchTermViewRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,16 +11,16 @@ defmodule Google.Ads.Googleads.V8.Services.GetSearchTermViewRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.SearchTermViewService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.SearchTermViewService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.SearchTermViewService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.SearchTermViewService"
 
   rpc :GetSearchTermView,
-      Google.Ads.Googleads.V8.Services.GetSearchTermViewRequest,
-      Google.Ads.Googleads.V8.Resources.SearchTermView
+      Google.Ads.Googleads.V8Availabilities.Services.GetSearchTermViewRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.SearchTermView
 end
 
-defmodule Google.Ads.Googleads.V8.Services.SearchTermViewService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.SearchTermViewService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.SearchTermViewService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.SearchTermViewService.Service
 end

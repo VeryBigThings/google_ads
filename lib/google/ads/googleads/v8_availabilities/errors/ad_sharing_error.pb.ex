@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.AdSharingErrorEnum.AdSharingError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.AdSharingErrorEnum.AdSharingError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -21,7 +21,7 @@ defmodule Google.Ads.Googleads.V8.Errors.AdSharingErrorEnum.AdSharingError do
   field :CANNOT_SHARE_INACTIVE_AD, 4
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.AdSharingErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.AdSharingErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

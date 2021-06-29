@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.FeedItemSetStringFilterTypeEnum.FeedItemSetStringFilterType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.FeedItemSetStringFilterTypeEnum.FeedItemSetStringFilterType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :EXACT
@@ -10,7 +10,7 @@ defmodule Google.Ads.Googleads.V8.Enums.FeedItemSetStringFilterTypeEnum.FeedItem
   field :EXACT, 2
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.FeedItemSetStringFilterTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.FeedItemSetStringFilterTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

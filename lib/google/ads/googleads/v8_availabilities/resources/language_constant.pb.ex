@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.LanguageConstant do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.LanguageConstant do
   @moduledoc false
   use Protobuf, syntax: :proto3
 

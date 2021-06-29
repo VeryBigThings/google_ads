@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -24,7 +24,7 @@ defmodule Google.Ads.Googleads.V8.Errors.GeoTargetConstantSuggestionErrorEnum.Ge
   field :REQUEST_PARAMETERS_UNSET, 5
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.GeoTargetConstantSuggestionErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.GeoTargetConstantSuggestionErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

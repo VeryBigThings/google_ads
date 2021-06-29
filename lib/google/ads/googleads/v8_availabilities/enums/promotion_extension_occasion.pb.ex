@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -123,7 +123,7 @@ defmodule Google.Ads.Googleads.V8.Enums.PromotionExtensionOccasionEnum.Promotion
   field :YEAR_END_GIFT, 38
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.PromotionExtensionOccasionEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.PromotionExtensionOccasionEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

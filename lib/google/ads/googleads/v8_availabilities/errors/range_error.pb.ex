@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.RangeErrorEnum.RangeError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.RangeErrorEnum.RangeError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :TOO_LOW | :TOO_HIGH
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Errors.RangeErrorEnum.RangeError do
   field :TOO_HIGH, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.RangeErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.RangeErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

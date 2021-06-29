@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.LocalPlaceholderFieldEnum.LocalPlaceholderField do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.LocalPlaceholderFieldEnum.LocalPlaceholderField do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -69,7 +69,7 @@ defmodule Google.Ads.Googleads.V8.Enums.LocalPlaceholderFieldEnum.LocalPlacehold
   field :IOS_APP_STORE_ID, 20
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.LocalPlaceholderFieldEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.LocalPlaceholderFieldEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

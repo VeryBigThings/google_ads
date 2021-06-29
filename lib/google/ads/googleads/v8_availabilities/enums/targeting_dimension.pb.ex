@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.TargetingDimensionEnum.TargetingDimension do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.TargetingDimensionEnum.TargetingDimension do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -36,7 +36,7 @@ defmodule Google.Ads.Googleads.V8.Enums.TargetingDimensionEnum.TargetingDimensio
   field :INCOME_RANGE, 9
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.TargetingDimensionEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.TargetingDimensionEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

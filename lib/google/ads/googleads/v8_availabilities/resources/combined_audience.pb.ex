@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.CombinedAudience do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.CombinedAudience do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -6,7 +6,7 @@ defmodule Google.Ads.Googleads.V8.Resources.CombinedAudience do
           resource_name: String.t(),
           id: integer,
           status:
-            Google.Ads.Googleads.V8.Enums.CombinedAudienceStatusEnum.CombinedAudienceStatus.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.CombinedAudienceStatusEnum.CombinedAudienceStatus.t(),
           name: String.t(),
           description: String.t()
         }
@@ -17,7 +17,7 @@ defmodule Google.Ads.Googleads.V8.Resources.CombinedAudience do
   field :id, 2, type: :int64
 
   field :status, 3,
-    type: Google.Ads.Googleads.V8.Enums.CombinedAudienceStatusEnum.CombinedAudienceStatus,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.CombinedAudienceStatusEnum.CombinedAudienceStatus,
     enum: true
 
   field :name, 4, type: :string

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetDisplayKeywordViewRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetDisplayKeywordViewRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,16 +11,16 @@ defmodule Google.Ads.Googleads.V8.Services.GetDisplayKeywordViewRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.DisplayKeywordViewService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.DisplayKeywordViewService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.DisplayKeywordViewService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.DisplayKeywordViewService"
 
   rpc :GetDisplayKeywordView,
-      Google.Ads.Googleads.V8.Services.GetDisplayKeywordViewRequest,
-      Google.Ads.Googleads.V8.Resources.DisplayKeywordView
+      Google.Ads.Googleads.V8Availabilities.Services.GetDisplayKeywordViewRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.DisplayKeywordView
 end
 
-defmodule Google.Ads.Googleads.V8.Services.DisplayKeywordViewService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.DisplayKeywordViewService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.DisplayKeywordViewService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.DisplayKeywordViewService.Service
 end

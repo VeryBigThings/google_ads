@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.LeadFormDesiredIntentEnum.LeadFormDesiredIntent do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.LeadFormDesiredIntentEnum.LeadFormDesiredIntent do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :LOW_INTENT | :HIGH_INTENT
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Enums.LeadFormDesiredIntentEnum.LeadFormDesire
   field :HIGH_INTENT, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.LeadFormDesiredIntentEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.LeadFormDesiredIntentEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

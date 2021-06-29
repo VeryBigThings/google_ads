@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.FeedItemTargetTypeEnum.FeedItemTargetType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.FeedItemTargetTypeEnum.FeedItemTargetType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :CAMPAIGN | :AD_GROUP | :CRITERION
@@ -14,7 +14,7 @@ defmodule Google.Ads.Googleads.V8.Enums.FeedItemTargetTypeEnum.FeedItemTargetTyp
   field :CRITERION, 4
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.FeedItemTargetTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.FeedItemTargetTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

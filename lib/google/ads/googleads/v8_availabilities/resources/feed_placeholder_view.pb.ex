@@ -1,10 +1,10 @@
-defmodule Google.Ads.Googleads.V8.Resources.FeedPlaceholderView do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.FeedPlaceholderView do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           resource_name: String.t(),
-          placeholder_type: Google.Ads.Googleads.V8.Enums.PlaceholderTypeEnum.PlaceholderType.t()
+          placeholder_type: Google.Ads.Googleads.V8Availabilities.Enums.PlaceholderTypeEnum.PlaceholderType.t()
         }
 
   defstruct [:resource_name, :placeholder_type]
@@ -12,6 +12,6 @@ defmodule Google.Ads.Googleads.V8.Resources.FeedPlaceholderView do
   field :resource_name, 1, type: :string
 
   field :placeholder_type, 2,
-    type: Google.Ads.Googleads.V8.Enums.PlaceholderTypeEnum.PlaceholderType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.PlaceholderTypeEnum.PlaceholderType,
     enum: true
 end

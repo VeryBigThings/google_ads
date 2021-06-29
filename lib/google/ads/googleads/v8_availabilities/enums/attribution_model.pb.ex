@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.AttributionModelEnum.AttributionModel do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AttributionModelEnum.AttributionModel do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -33,7 +33,7 @@ defmodule Google.Ads.Googleads.V8.Enums.AttributionModelEnum.AttributionModel do
   field :GOOGLE_SEARCH_ATTRIBUTION_DATA_DRIVEN, 106
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.AttributionModelEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AttributionModelEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

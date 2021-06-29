@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.TopicConstant do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.TopicConstant do
   @moduledoc false
   use Protobuf, syntax: :proto3
 

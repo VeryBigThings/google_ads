@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.CampaignDraftStatusEnum.CampaignDraftStatus do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.CampaignDraftStatusEnum.CampaignDraftStatus do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -27,7 +27,7 @@ defmodule Google.Ads.Googleads.V8.Enums.CampaignDraftStatusEnum.CampaignDraftSta
   field :PROMOTE_FAILED, 6
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.CampaignDraftStatusEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.CampaignDraftStatusEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

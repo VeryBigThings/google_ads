@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetAssetFieldTypeViewRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetAssetFieldTypeViewRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,16 +11,16 @@ defmodule Google.Ads.Googleads.V8.Services.GetAssetFieldTypeViewRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.AssetFieldTypeViewService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.AssetFieldTypeViewService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.AssetFieldTypeViewService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.AssetFieldTypeViewService"
 
   rpc :GetAssetFieldTypeView,
-      Google.Ads.Googleads.V8.Services.GetAssetFieldTypeViewRequest,
-      Google.Ads.Googleads.V8.Resources.AssetFieldTypeView
+      Google.Ads.Googleads.V8Availabilities.Services.GetAssetFieldTypeViewRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.AssetFieldTypeView
 end
 
-defmodule Google.Ads.Googleads.V8.Services.AssetFieldTypeViewService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.AssetFieldTypeViewService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.AssetFieldTypeViewService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.AssetFieldTypeViewService.Service
 end

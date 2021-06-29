@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.KeywordPlanAggregateMetricTypeEnum.KeywordPlanAggregateMetricType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.KeywordPlanAggregateMetricTypeEnum.KeywordPlanAggregateMetricType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :DEVICE
@@ -10,7 +10,7 @@ defmodule Google.Ads.Googleads.V8.Enums.KeywordPlanAggregateMetricTypeEnum.Keywo
   field :DEVICE, 2
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.KeywordPlanAggregateMetricTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.KeywordPlanAggregateMetricTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

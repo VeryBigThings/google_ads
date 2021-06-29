@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetAdGroupCriterionSimulationRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetAdGroupCriterionSimulationRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,17 +11,17 @@ defmodule Google.Ads.Googleads.V8.Services.GetAdGroupCriterionSimulationRequest 
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.AdGroupCriterionSimulationService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.AdGroupCriterionSimulationService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.AdGroupCriterionSimulationService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.AdGroupCriterionSimulationService"
 
   rpc :GetAdGroupCriterionSimulation,
-      Google.Ads.Googleads.V8.Services.GetAdGroupCriterionSimulationRequest,
-      Google.Ads.Googleads.V8.Resources.AdGroupCriterionSimulation
+      Google.Ads.Googleads.V8Availabilities.Services.GetAdGroupCriterionSimulationRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.AdGroupCriterionSimulation
 end
 
-defmodule Google.Ads.Googleads.V8.Services.AdGroupCriterionSimulationService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.AdGroupCriterionSimulationService.Stub do
   @moduledoc false
   use GRPC.Stub,
-    service: Google.Ads.Googleads.V8.Services.AdGroupCriterionSimulationService.Service
+    service: Google.Ads.Googleads.V8Availabilities.Services.AdGroupCriterionSimulationService.Service
 end

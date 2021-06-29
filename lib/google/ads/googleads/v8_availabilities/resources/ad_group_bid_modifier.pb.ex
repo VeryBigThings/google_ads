@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.AdGroupBidModifier do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.AdGroupBidModifier do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -10,7 +10,7 @@ defmodule Google.Ads.Googleads.V8.Resources.AdGroupBidModifier do
           bid_modifier: float | :infinity | :negative_infinity | :nan,
           base_ad_group: String.t(),
           bid_modifier_source:
-            Google.Ads.Googleads.V8.Enums.BidModifierSourceEnum.BidModifierSource.t()
+            Google.Ads.Googleads.V8Availabilities.Enums.BidModifierSourceEnum.BidModifierSource.t()
         }
 
   defstruct [
@@ -32,29 +32,29 @@ defmodule Google.Ads.Googleads.V8.Resources.AdGroupBidModifier do
   field :base_ad_group, 16, type: :string
 
   field :bid_modifier_source, 10,
-    type: Google.Ads.Googleads.V8.Enums.BidModifierSourceEnum.BidModifierSource,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.BidModifierSourceEnum.BidModifierSource,
     enum: true
 
   field :hotel_date_selection_type, 5,
-    type: Google.Ads.Googleads.V8.Common.HotelDateSelectionTypeInfo,
+    type: Google.Ads.Googleads.V8Availabilities.Common.HotelDateSelectionTypeInfo,
     oneof: 0
 
   field :hotel_advance_booking_window, 6,
-    type: Google.Ads.Googleads.V8.Common.HotelAdvanceBookingWindowInfo,
+    type: Google.Ads.Googleads.V8Availabilities.Common.HotelAdvanceBookingWindowInfo,
     oneof: 0
 
   field :hotel_length_of_stay, 7,
-    type: Google.Ads.Googleads.V8.Common.HotelLengthOfStayInfo,
+    type: Google.Ads.Googleads.V8Availabilities.Common.HotelLengthOfStayInfo,
     oneof: 0
 
-  field :hotel_check_in_day, 8, type: Google.Ads.Googleads.V8.Common.HotelCheckInDayInfo, oneof: 0
-  field :device, 11, type: Google.Ads.Googleads.V8.Common.DeviceInfo, oneof: 0
+  field :hotel_check_in_day, 8, type: Google.Ads.Googleads.V8Availabilities.Common.HotelCheckInDayInfo, oneof: 0
+  field :device, 11, type: Google.Ads.Googleads.V8Availabilities.Common.DeviceInfo, oneof: 0
 
   field :preferred_content, 12,
-    type: Google.Ads.Googleads.V8.Common.PreferredContentInfo,
+    type: Google.Ads.Googleads.V8Availabilities.Common.PreferredContentInfo,
     oneof: 0
 
   field :hotel_check_in_date_range, 17,
-    type: Google.Ads.Googleads.V8.Common.HotelCheckInDateRangeInfo,
+    type: Google.Ads.Googleads.V8Availabilities.Common.HotelCheckInDateRangeInfo,
     oneof: 0
 end

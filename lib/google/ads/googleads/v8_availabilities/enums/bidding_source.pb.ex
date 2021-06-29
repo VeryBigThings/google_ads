@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.BiddingSourceEnum.BiddingSource do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.BiddingSourceEnum.BiddingSource do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -21,7 +21,7 @@ defmodule Google.Ads.Googleads.V8.Enums.BiddingSourceEnum.BiddingSource do
   field :AD_GROUP_CRITERION, 7
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.BiddingSourceEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.BiddingSourceEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

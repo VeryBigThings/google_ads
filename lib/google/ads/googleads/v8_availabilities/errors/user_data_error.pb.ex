@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.UserDataErrorEnum.UserDataError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.UserDataErrorEnum.UserDataError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -21,7 +21,7 @@ defmodule Google.Ads.Googleads.V8.Errors.UserDataErrorEnum.UserDataError do
   field :USER_LIST_NOT_APPLICABLE, 4
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.UserDataErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.UserDataErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

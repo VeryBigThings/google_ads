@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.SitelinkPlaceholderFieldEnum.SitelinkPlaceholderField do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.SitelinkPlaceholderFieldEnum.SitelinkPlaceholderField do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -33,7 +33,7 @@ defmodule Google.Ads.Googleads.V8.Enums.SitelinkPlaceholderFieldEnum.SitelinkPla
   field :FINAL_URL_SUFFIX, 8
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.SitelinkPlaceholderFieldEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.SitelinkPlaceholderFieldEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetTopicViewRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetTopicViewRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,16 +11,16 @@ defmodule Google.Ads.Googleads.V8.Services.GetTopicViewRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.TopicViewService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.TopicViewService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.TopicViewService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.TopicViewService"
 
   rpc :GetTopicView,
-      Google.Ads.Googleads.V8.Services.GetTopicViewRequest,
-      Google.Ads.Googleads.V8.Resources.TopicView
+      Google.Ads.Googleads.V8Availabilities.Services.GetTopicViewRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.TopicView
 end
 
-defmodule Google.Ads.Googleads.V8.Services.TopicViewService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.TopicViewService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.TopicViewService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.TopicViewService.Service
 end

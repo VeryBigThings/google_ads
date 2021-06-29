@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.ServedAssetFieldTypeEnum.ServedAssetFieldType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ServedAssetFieldTypeEnum.ServedAssetFieldType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -27,7 +27,7 @@ defmodule Google.Ads.Googleads.V8.Enums.ServedAssetFieldTypeEnum.ServedAssetFiel
   field :DESCRIPTION_2, 6
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.ServedAssetFieldTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ServedAssetFieldTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

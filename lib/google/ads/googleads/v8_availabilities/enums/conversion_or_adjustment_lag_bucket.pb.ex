@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.ConversionOrAdjustmentLagBucketEnum.ConversionOrAdjustmentLagBucket do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ConversionOrAdjustmentLagBucketEnum.ConversionOrAdjustmentLagBucket do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -135,7 +135,7 @@ defmodule Google.Ads.Googleads.V8.Enums.ConversionOrAdjustmentLagBucketEnum.Conv
   field :ADJUSTMENT_UNKNOWN, 42
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.ConversionOrAdjustmentLagBucketEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ConversionOrAdjustmentLagBucketEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

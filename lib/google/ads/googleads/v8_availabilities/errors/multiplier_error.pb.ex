@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.MultiplierErrorEnum.MultiplierError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.MultiplierErrorEnum.MultiplierError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -48,7 +48,7 @@ defmodule Google.Ads.Googleads.V8.Errors.MultiplierErrorEnum.MultiplierError do
   field :MULTIPLIER_AND_BIDDING_STRATEGY_TYPE_MISMATCH, 13
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.MultiplierErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.MultiplierErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.AdGroupErrorEnum.AdGroupError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.AdGroupErrorEnum.AdGroupError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -54,7 +54,7 @@ defmodule Google.Ads.Googleads.V8.Errors.AdGroupErrorEnum.AdGroupError do
   field :INVALID_EXCLUDED_PARENT_ASSET_FIELD_TYPE, 16
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.AdGroupErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.AdGroupErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

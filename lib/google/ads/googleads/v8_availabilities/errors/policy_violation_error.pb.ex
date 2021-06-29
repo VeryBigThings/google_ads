@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.PolicyViolationErrorEnum.PolicyViolationError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.PolicyViolationErrorEnum.PolicyViolationError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :POLICY_ERROR
@@ -10,7 +10,7 @@ defmodule Google.Ads.Googleads.V8.Errors.PolicyViolationErrorEnum.PolicyViolatio
   field :POLICY_ERROR, 2
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.PolicyViolationErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.PolicyViolationErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

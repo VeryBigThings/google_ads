@@ -1,10 +1,10 @@
-defmodule Google.Ads.Googleads.V8.Services.UploadClickConversionsRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.UploadClickConversionsRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           customer_id: String.t(),
-          conversions: [Google.Ads.Googleads.V8.Services.ClickConversion.t()],
+          conversions: [Google.Ads.Googleads.V8Availabilities.Services.ClickConversion.t()],
           partial_failure: boolean,
           validate_only: boolean
         }
@@ -12,33 +12,33 @@ defmodule Google.Ads.Googleads.V8.Services.UploadClickConversionsRequest do
   defstruct [:customer_id, :conversions, :partial_failure, :validate_only]
 
   field :customer_id, 1, type: :string
-  field :conversions, 2, repeated: true, type: Google.Ads.Googleads.V8.Services.ClickConversion
+  field :conversions, 2, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Services.ClickConversion
   field :partial_failure, 3, type: :bool
   field :validate_only, 4, type: :bool
 end
 
-defmodule Google.Ads.Googleads.V8.Services.UploadClickConversionsResponse do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.UploadClickConversionsResponse do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           partial_failure_error: Google.Rpc.Status.t() | nil,
-          results: [Google.Ads.Googleads.V8.Services.ClickConversionResult.t()]
+          results: [Google.Ads.Googleads.V8Availabilities.Services.ClickConversionResult.t()]
         }
 
   defstruct [:partial_failure_error, :results]
 
   field :partial_failure_error, 1, type: Google.Rpc.Status
-  field :results, 2, repeated: true, type: Google.Ads.Googleads.V8.Services.ClickConversionResult
+  field :results, 2, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Services.ClickConversionResult
 end
 
-defmodule Google.Ads.Googleads.V8.Services.UploadCallConversionsRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.UploadCallConversionsRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           customer_id: String.t(),
-          conversions: [Google.Ads.Googleads.V8.Services.CallConversion.t()],
+          conversions: [Google.Ads.Googleads.V8Availabilities.Services.CallConversion.t()],
           partial_failure: boolean,
           validate_only: boolean
         }
@@ -46,27 +46,27 @@ defmodule Google.Ads.Googleads.V8.Services.UploadCallConversionsRequest do
   defstruct [:customer_id, :conversions, :partial_failure, :validate_only]
 
   field :customer_id, 1, type: :string
-  field :conversions, 2, repeated: true, type: Google.Ads.Googleads.V8.Services.CallConversion
+  field :conversions, 2, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Services.CallConversion
   field :partial_failure, 3, type: :bool
   field :validate_only, 4, type: :bool
 end
 
-defmodule Google.Ads.Googleads.V8.Services.UploadCallConversionsResponse do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.UploadCallConversionsResponse do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           partial_failure_error: Google.Rpc.Status.t() | nil,
-          results: [Google.Ads.Googleads.V8.Services.CallConversionResult.t()]
+          results: [Google.Ads.Googleads.V8Availabilities.Services.CallConversionResult.t()]
         }
 
   defstruct [:partial_failure_error, :results]
 
   field :partial_failure_error, 1, type: Google.Rpc.Status
-  field :results, 2, repeated: true, type: Google.Ads.Googleads.V8.Services.CallConversionResult
+  field :results, 2, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Services.CallConversionResult
 end
 
-defmodule Google.Ads.Googleads.V8.Services.ClickConversion do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.ClickConversion do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -78,9 +78,9 @@ defmodule Google.Ads.Googleads.V8.Services.ClickConversion do
           currency_code: String.t(),
           order_id: String.t(),
           external_attribution_data:
-            Google.Ads.Googleads.V8.Services.ExternalAttributionData.t() | nil,
-          custom_variables: [Google.Ads.Googleads.V8.Services.CustomVariable.t()],
-          cart_data: Google.Ads.Googleads.V8.Services.CartData.t() | nil
+            Google.Ads.Googleads.V8Availabilities.Services.ExternalAttributionData.t() | nil,
+          custom_variables: [Google.Ads.Googleads.V8Availabilities.Services.CustomVariable.t()],
+          cart_data: Google.Ads.Googleads.V8Availabilities.Services.CartData.t() | nil
         }
 
   defstruct [
@@ -103,16 +103,16 @@ defmodule Google.Ads.Googleads.V8.Services.ClickConversion do
   field :order_id, 14, type: :string
 
   field :external_attribution_data, 7,
-    type: Google.Ads.Googleads.V8.Services.ExternalAttributionData
+    type: Google.Ads.Googleads.V8Availabilities.Services.ExternalAttributionData
 
   field :custom_variables, 15,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Services.CustomVariable
+    type: Google.Ads.Googleads.V8Availabilities.Services.CustomVariable
 
-  field :cart_data, 16, type: Google.Ads.Googleads.V8.Services.CartData
+  field :cart_data, 16, type: Google.Ads.Googleads.V8Availabilities.Services.CartData
 end
 
-defmodule Google.Ads.Googleads.V8.Services.CallConversion do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.CallConversion do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -123,7 +123,7 @@ defmodule Google.Ads.Googleads.V8.Services.CallConversion do
           conversion_date_time: String.t(),
           conversion_value: float | :infinity | :negative_infinity | :nan,
           currency_code: String.t(),
-          custom_variables: [Google.Ads.Googleads.V8.Services.CustomVariable.t()]
+          custom_variables: [Google.Ads.Googleads.V8Availabilities.Services.CustomVariable.t()]
         }
 
   defstruct [
@@ -145,10 +145,10 @@ defmodule Google.Ads.Googleads.V8.Services.CallConversion do
 
   field :custom_variables, 13,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Services.CustomVariable
+    type: Google.Ads.Googleads.V8Availabilities.Services.CustomVariable
 end
 
-defmodule Google.Ads.Googleads.V8.Services.ExternalAttributionData do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.ExternalAttributionData do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -163,7 +163,7 @@ defmodule Google.Ads.Googleads.V8.Services.ExternalAttributionData do
   field :external_attribution_model, 4, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.ClickConversionResult do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.ClickConversionResult do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -180,7 +180,7 @@ defmodule Google.Ads.Googleads.V8.Services.ClickConversionResult do
   field :conversion_date_time, 6, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.CallConversionResult do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.CallConversionResult do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -199,7 +199,7 @@ defmodule Google.Ads.Googleads.V8.Services.CallConversionResult do
   field :conversion_date_time, 8, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.CustomVariable do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.CustomVariable do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -214,7 +214,7 @@ defmodule Google.Ads.Googleads.V8.Services.CustomVariable do
   field :value, 2, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.CartData.Item do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.CartData.Item do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -231,7 +231,7 @@ defmodule Google.Ads.Googleads.V8.Services.CartData.Item do
   field :unit_price, 3, type: :double
 end
 
-defmodule Google.Ads.Googleads.V8.Services.CartData do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.CartData do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -240,7 +240,7 @@ defmodule Google.Ads.Googleads.V8.Services.CartData do
           feed_country_code: String.t(),
           feed_language_code: String.t(),
           local_transaction_cost: float | :infinity | :negative_infinity | :nan,
-          items: [Google.Ads.Googleads.V8.Services.CartData.Item.t()]
+          items: [Google.Ads.Googleads.V8Availabilities.Services.CartData.Item.t()]
         }
 
   defstruct [
@@ -255,23 +255,23 @@ defmodule Google.Ads.Googleads.V8.Services.CartData do
   field :feed_country_code, 2, type: :string
   field :feed_language_code, 3, type: :string
   field :local_transaction_cost, 4, type: :double
-  field :items, 5, repeated: true, type: Google.Ads.Googleads.V8.Services.CartData.Item
+  field :items, 5, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Services.CartData.Item
 end
 
-defmodule Google.Ads.Googleads.V8.Services.ConversionUploadService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.ConversionUploadService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.ConversionUploadService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.ConversionUploadService"
 
   rpc :UploadClickConversions,
-      Google.Ads.Googleads.V8.Services.UploadClickConversionsRequest,
-      Google.Ads.Googleads.V8.Services.UploadClickConversionsResponse
+      Google.Ads.Googleads.V8Availabilities.Services.UploadClickConversionsRequest,
+      Google.Ads.Googleads.V8Availabilities.Services.UploadClickConversionsResponse
 
   rpc :UploadCallConversions,
-      Google.Ads.Googleads.V8.Services.UploadCallConversionsRequest,
-      Google.Ads.Googleads.V8.Services.UploadCallConversionsResponse
+      Google.Ads.Googleads.V8Availabilities.Services.UploadCallConversionsRequest,
+      Google.Ads.Googleads.V8Availabilities.Services.UploadCallConversionsResponse
 end
 
-defmodule Google.Ads.Googleads.V8.Services.ConversionUploadService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.ConversionUploadService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.ConversionUploadService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.ConversionUploadService.Service
 end

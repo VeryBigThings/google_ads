@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Common.TextLabel do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.TextLabel do
   @moduledoc false
   use Protobuf, syntax: :proto3
 

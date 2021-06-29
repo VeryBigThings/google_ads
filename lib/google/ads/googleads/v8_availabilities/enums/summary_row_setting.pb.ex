@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.SummaryRowSettingEnum.SummaryRowSetting do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.SummaryRowSettingEnum.SummaryRowSetting do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -21,7 +21,7 @@ defmodule Google.Ads.Googleads.V8.Enums.SummaryRowSettingEnum.SummaryRowSetting 
   field :SUMMARY_ROW_ONLY, 4
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.SummaryRowSettingEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.SummaryRowSettingEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

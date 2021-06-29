@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.SettingErrorEnum.SettingError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.SettingErrorEnum.SettingError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -46,7 +46,7 @@ defmodule Google.Ads.Googleads.V8.Errors.SettingErrorEnum.SettingError do
   field :SETTING_VALUE_NOT_COMPATIBLE_WITH_CAMPAIGN, 20
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.SettingErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.SettingErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

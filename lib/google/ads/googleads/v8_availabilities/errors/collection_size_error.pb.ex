@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.CollectionSizeErrorEnum.CollectionSizeError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.CollectionSizeErrorEnum.CollectionSizeError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :TOO_FEW | :TOO_MANY
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Errors.CollectionSizeErrorEnum.CollectionSizeE
   field :TOO_MANY, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.CollectionSizeErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.CollectionSizeErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

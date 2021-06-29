@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.OfflineUserDataJobStatusEnum.OfflineUserDataJobStatus do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.OfflineUserDataJobStatusEnum.OfflineUserDataJobStatus do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :PENDING | :RUNNING | :SUCCESS | :FAILED
@@ -16,7 +16,7 @@ defmodule Google.Ads.Googleads.V8.Enums.OfflineUserDataJobStatusEnum.OfflineUser
   field :FAILED, 5
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.OfflineUserDataJobStatusEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.OfflineUserDataJobStatusEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

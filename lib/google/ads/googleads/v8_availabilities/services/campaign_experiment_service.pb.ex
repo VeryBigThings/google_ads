@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetCampaignExperimentRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetCampaignExperimentRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,17 +11,17 @@ defmodule Google.Ads.Googleads.V8.Services.GetCampaignExperimentRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateCampaignExperimentsRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateCampaignExperimentsRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           customer_id: String.t(),
-          operations: [Google.Ads.Googleads.V8.Services.CampaignExperimentOperation.t()],
+          operations: [Google.Ads.Googleads.V8Availabilities.Services.CampaignExperimentOperation.t()],
           partial_failure: boolean,
           validate_only: boolean,
           response_content_type:
-            Google.Ads.Googleads.V8.Enums.ResponseContentTypeEnum.ResponseContentType.t()
+            Google.Ads.Googleads.V8Availabilities.Enums.ResponseContentTypeEnum.ResponseContentType.t()
         }
 
   defstruct [:customer_id, :operations, :partial_failure, :validate_only, :response_content_type]
@@ -30,17 +30,17 @@ defmodule Google.Ads.Googleads.V8.Services.MutateCampaignExperimentsRequest do
 
   field :operations, 2,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Services.CampaignExperimentOperation
+    type: Google.Ads.Googleads.V8Availabilities.Services.CampaignExperimentOperation
 
   field :partial_failure, 3, type: :bool
   field :validate_only, 4, type: :bool
 
   field :response_content_type, 5,
-    type: Google.Ads.Googleads.V8.Enums.ResponseContentTypeEnum.ResponseContentType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.ResponseContentTypeEnum.ResponseContentType,
     enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Services.CampaignExperimentOperation do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.CampaignExperimentOperation do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -54,17 +54,17 @@ defmodule Google.Ads.Googleads.V8.Services.CampaignExperimentOperation do
   oneof :operation, 0
 
   field :update_mask, 3, type: Google.Protobuf.FieldMask
-  field :update, 1, type: Google.Ads.Googleads.V8.Resources.CampaignExperiment, oneof: 0
+  field :update, 1, type: Google.Ads.Googleads.V8Availabilities.Resources.CampaignExperiment, oneof: 0
   field :remove, 2, type: :string, oneof: 0
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateCampaignExperimentsResponse do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateCampaignExperimentsResponse do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           partial_failure_error: Google.Rpc.Status.t() | nil,
-          results: [Google.Ads.Googleads.V8.Services.MutateCampaignExperimentResult.t()]
+          results: [Google.Ads.Googleads.V8Availabilities.Services.MutateCampaignExperimentResult.t()]
         }
 
   defstruct [:partial_failure_error, :results]
@@ -73,42 +73,42 @@ defmodule Google.Ads.Googleads.V8.Services.MutateCampaignExperimentsResponse do
 
   field :results, 2,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Services.MutateCampaignExperimentResult
+    type: Google.Ads.Googleads.V8Availabilities.Services.MutateCampaignExperimentResult
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateCampaignExperimentResult do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateCampaignExperimentResult do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           resource_name: String.t(),
-          campaign_experiment: Google.Ads.Googleads.V8.Resources.CampaignExperiment.t() | nil
+          campaign_experiment: Google.Ads.Googleads.V8Availabilities.Resources.CampaignExperiment.t() | nil
         }
 
   defstruct [:resource_name, :campaign_experiment]
 
   field :resource_name, 1, type: :string
-  field :campaign_experiment, 2, type: Google.Ads.Googleads.V8.Resources.CampaignExperiment
+  field :campaign_experiment, 2, type: Google.Ads.Googleads.V8Availabilities.Resources.CampaignExperiment
 end
 
-defmodule Google.Ads.Googleads.V8.Services.CreateCampaignExperimentRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.CreateCampaignExperimentRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           customer_id: String.t(),
-          campaign_experiment: Google.Ads.Googleads.V8.Resources.CampaignExperiment.t() | nil,
+          campaign_experiment: Google.Ads.Googleads.V8Availabilities.Resources.CampaignExperiment.t() | nil,
           validate_only: boolean
         }
 
   defstruct [:customer_id, :campaign_experiment, :validate_only]
 
   field :customer_id, 1, type: :string
-  field :campaign_experiment, 2, type: Google.Ads.Googleads.V8.Resources.CampaignExperiment
+  field :campaign_experiment, 2, type: Google.Ads.Googleads.V8Availabilities.Resources.CampaignExperiment
   field :validate_only, 3, type: :bool
 end
 
-defmodule Google.Ads.Googleads.V8.Services.CreateCampaignExperimentMetadata do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.CreateCampaignExperimentMetadata do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -121,7 +121,7 @@ defmodule Google.Ads.Googleads.V8.Services.CreateCampaignExperimentMetadata do
   field :campaign_experiment, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.GraduateCampaignExperimentRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GraduateCampaignExperimentRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -138,7 +138,7 @@ defmodule Google.Ads.Googleads.V8.Services.GraduateCampaignExperimentRequest do
   field :validate_only, 3, type: :bool
 end
 
-defmodule Google.Ads.Googleads.V8.Services.GraduateCampaignExperimentResponse do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GraduateCampaignExperimentResponse do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -151,7 +151,7 @@ defmodule Google.Ads.Googleads.V8.Services.GraduateCampaignExperimentResponse do
   field :graduated_campaign, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.PromoteCampaignExperimentRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.PromoteCampaignExperimentRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -166,7 +166,7 @@ defmodule Google.Ads.Googleads.V8.Services.PromoteCampaignExperimentRequest do
   field :validate_only, 2, type: :bool
 end
 
-defmodule Google.Ads.Googleads.V8.Services.EndCampaignExperimentRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.EndCampaignExperimentRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -181,7 +181,7 @@ defmodule Google.Ads.Googleads.V8.Services.EndCampaignExperimentRequest do
   field :validate_only, 2, type: :bool
 end
 
-defmodule Google.Ads.Googleads.V8.Services.ListCampaignExperimentAsyncErrorsRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.ListCampaignExperimentAsyncErrorsRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -198,7 +198,7 @@ defmodule Google.Ads.Googleads.V8.Services.ListCampaignExperimentAsyncErrorsRequ
   field :page_size, 3, type: :int32
 end
 
-defmodule Google.Ads.Googleads.V8.Services.ListCampaignExperimentAsyncErrorsResponse do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.ListCampaignExperimentAsyncErrorsResponse do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -213,40 +213,40 @@ defmodule Google.Ads.Googleads.V8.Services.ListCampaignExperimentAsyncErrorsResp
   field :next_page_token, 2, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.CampaignExperimentService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.CampaignExperimentService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.CampaignExperimentService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.CampaignExperimentService"
 
   rpc :GetCampaignExperiment,
-      Google.Ads.Googleads.V8.Services.GetCampaignExperimentRequest,
-      Google.Ads.Googleads.V8.Resources.CampaignExperiment
+      Google.Ads.Googleads.V8Availabilities.Services.GetCampaignExperimentRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.CampaignExperiment
 
   rpc :CreateCampaignExperiment,
-      Google.Ads.Googleads.V8.Services.CreateCampaignExperimentRequest,
+      Google.Ads.Googleads.V8Availabilities.Services.CreateCampaignExperimentRequest,
       Google.Longrunning.Operation
 
   rpc :MutateCampaignExperiments,
-      Google.Ads.Googleads.V8.Services.MutateCampaignExperimentsRequest,
-      Google.Ads.Googleads.V8.Services.MutateCampaignExperimentsResponse
+      Google.Ads.Googleads.V8Availabilities.Services.MutateCampaignExperimentsRequest,
+      Google.Ads.Googleads.V8Availabilities.Services.MutateCampaignExperimentsResponse
 
   rpc :GraduateCampaignExperiment,
-      Google.Ads.Googleads.V8.Services.GraduateCampaignExperimentRequest,
-      Google.Ads.Googleads.V8.Services.GraduateCampaignExperimentResponse
+      Google.Ads.Googleads.V8Availabilities.Services.GraduateCampaignExperimentRequest,
+      Google.Ads.Googleads.V8Availabilities.Services.GraduateCampaignExperimentResponse
 
   rpc :PromoteCampaignExperiment,
-      Google.Ads.Googleads.V8.Services.PromoteCampaignExperimentRequest,
+      Google.Ads.Googleads.V8Availabilities.Services.PromoteCampaignExperimentRequest,
       Google.Longrunning.Operation
 
   rpc :EndCampaignExperiment,
-      Google.Ads.Googleads.V8.Services.EndCampaignExperimentRequest,
+      Google.Ads.Googleads.V8Availabilities.Services.EndCampaignExperimentRequest,
       Google.Protobuf.Empty
 
   rpc :ListCampaignExperimentAsyncErrors,
-      Google.Ads.Googleads.V8.Services.ListCampaignExperimentAsyncErrorsRequest,
-      Google.Ads.Googleads.V8.Services.ListCampaignExperimentAsyncErrorsResponse
+      Google.Ads.Googleads.V8Availabilities.Services.ListCampaignExperimentAsyncErrorsRequest,
+      Google.Ads.Googleads.V8Availabilities.Services.ListCampaignExperimentAsyncErrorsResponse
 end
 
-defmodule Google.Ads.Googleads.V8.Services.CampaignExperimentService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.CampaignExperimentService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.CampaignExperimentService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.CampaignExperimentService.Service
 end

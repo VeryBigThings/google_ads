@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -30,7 +30,7 @@ defmodule Google.Ads.Googleads.V8.Enums.UserListNumberRuleItemOperatorEnum.UserL
   field :LESS_THAN_OR_EQUAL, 7
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.UserListNumberRuleItemOperatorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.UserListNumberRuleItemOperatorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

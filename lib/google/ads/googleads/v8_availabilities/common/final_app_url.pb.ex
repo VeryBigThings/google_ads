@@ -1,17 +1,17 @@
-defmodule Google.Ads.Googleads.V8.Common.FinalAppUrl do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.FinalAppUrl do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           os_type:
-            Google.Ads.Googleads.V8.Enums.AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType.t(),
           url: String.t()
         }
 
   defstruct [:os_type, :url]
 
   field :os_type, 1,
-    type: Google.Ads.Googleads.V8.Enums.AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType,
     enum: true
 
   field :url, 3, type: :string

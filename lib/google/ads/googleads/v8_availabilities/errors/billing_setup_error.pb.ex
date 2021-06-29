@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.BillingSetupErrorEnum.BillingSetupError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.BillingSetupErrorEnum.BillingSetupError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -63,7 +63,7 @@ defmodule Google.Ads.Googleads.V8.Errors.BillingSetupErrorEnum.BillingSetupError
   field :PAYMENTS_ACCOUNT_INELIGIBLE_CURRENCY_CODE_MISMATCH, 19
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.BillingSetupErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.BillingSetupErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

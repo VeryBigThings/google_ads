@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.AccountBudgetProposalErrorEnum.AccountBudgetProposalError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.AccountBudgetProposalErrorEnum.AccountBudgetProposalError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -84,7 +84,7 @@ defmodule Google.Ads.Googleads.V8.Errors.AccountBudgetProposalErrorEnum.AccountB
   field :CANNOT_CREATE_BUDGET_THROUGH_API, 25
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.AccountBudgetProposalErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.AccountBudgetProposalErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

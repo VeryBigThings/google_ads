@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.Customer do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.Customer do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -15,13 +15,13 @@ defmodule Google.Ads.Googleads.V8.Resources.Customer do
           manager: boolean,
           test_account: boolean,
           call_reporting_setting:
-            Google.Ads.Googleads.V8.Resources.CallReportingSetting.t() | nil,
+            Google.Ads.Googleads.V8Availabilities.Resources.CallReportingSetting.t() | nil,
           conversion_tracking_setting:
-            Google.Ads.Googleads.V8.Resources.ConversionTrackingSetting.t() | nil,
-          remarketing_setting: Google.Ads.Googleads.V8.Resources.RemarketingSetting.t() | nil,
+            Google.Ads.Googleads.V8Availabilities.Resources.ConversionTrackingSetting.t() | nil,
+          remarketing_setting: Google.Ads.Googleads.V8Availabilities.Resources.RemarketingSetting.t() | nil,
           pay_per_conversion_eligibility_failure_reasons: [
             [
-              Google.Ads.Googleads.V8.Enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason.t()
+              Google.Ads.Googleads.V8Availabilities.Enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason.t()
             ]
           ],
           optimization_score: float | :infinity | :negative_infinity | :nan,
@@ -59,24 +59,24 @@ defmodule Google.Ads.Googleads.V8.Resources.Customer do
   field :has_partners_badge, 26, type: :bool
   field :manager, 27, type: :bool
   field :test_account, 28, type: :bool
-  field :call_reporting_setting, 10, type: Google.Ads.Googleads.V8.Resources.CallReportingSetting
+  field :call_reporting_setting, 10, type: Google.Ads.Googleads.V8Availabilities.Resources.CallReportingSetting
 
   field :conversion_tracking_setting, 14,
-    type: Google.Ads.Googleads.V8.Resources.ConversionTrackingSetting
+    type: Google.Ads.Googleads.V8Availabilities.Resources.ConversionTrackingSetting
 
-  field :remarketing_setting, 15, type: Google.Ads.Googleads.V8.Resources.RemarketingSetting
+  field :remarketing_setting, 15, type: Google.Ads.Googleads.V8Availabilities.Resources.RemarketingSetting
 
   field :pay_per_conversion_eligibility_failure_reasons, 16,
     repeated: true,
     type:
-      Google.Ads.Googleads.V8.Enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason,
+      Google.Ads.Googleads.V8Availabilities.Enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason,
     enum: true
 
   field :optimization_score, 29, type: :double
   field :optimization_score_weight, 30, type: :double
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.CallReportingSetting do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.CallReportingSetting do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -93,7 +93,7 @@ defmodule Google.Ads.Googleads.V8.Resources.CallReportingSetting do
   field :call_conversion_action, 12, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.ConversionTrackingSetting do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.ConversionTrackingSetting do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -108,7 +108,7 @@ defmodule Google.Ads.Googleads.V8.Resources.ConversionTrackingSetting do
   field :cross_account_conversion_tracking_id, 4, type: :int64
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.RemarketingSetting do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.RemarketingSetting do
   @moduledoc false
   use Protobuf, syntax: :proto3
 

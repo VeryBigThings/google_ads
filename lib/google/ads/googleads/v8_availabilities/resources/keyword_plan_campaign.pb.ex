@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.KeywordPlanCampaign do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.KeywordPlanCampaign do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -9,9 +9,9 @@ defmodule Google.Ads.Googleads.V8.Resources.KeywordPlanCampaign do
           name: String.t(),
           language_constants: [String.t()],
           keyword_plan_network:
-            Google.Ads.Googleads.V8.Enums.KeywordPlanNetworkEnum.KeywordPlanNetwork.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.KeywordPlanNetworkEnum.KeywordPlanNetwork.t(),
           cpc_bid_micros: integer,
-          geo_targets: [Google.Ads.Googleads.V8.Resources.KeywordPlanGeoTarget.t()]
+          geo_targets: [Google.Ads.Googleads.V8Availabilities.Resources.KeywordPlanGeoTarget.t()]
         }
 
   defstruct [
@@ -32,17 +32,17 @@ defmodule Google.Ads.Googleads.V8.Resources.KeywordPlanCampaign do
   field :language_constants, 12, repeated: true, type: :string
 
   field :keyword_plan_network, 6,
-    type: Google.Ads.Googleads.V8.Enums.KeywordPlanNetworkEnum.KeywordPlanNetwork,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.KeywordPlanNetworkEnum.KeywordPlanNetwork,
     enum: true
 
   field :cpc_bid_micros, 13, type: :int64
 
   field :geo_targets, 8,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Resources.KeywordPlanGeoTarget
+    type: Google.Ads.Googleads.V8Availabilities.Resources.KeywordPlanGeoTarget
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.KeywordPlanGeoTarget do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.KeywordPlanGeoTarget do
   @moduledoc false
   use Protobuf, syntax: :proto3
 

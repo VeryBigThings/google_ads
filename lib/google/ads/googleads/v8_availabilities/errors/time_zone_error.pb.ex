@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.TimeZoneErrorEnum.TimeZoneError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.TimeZoneErrorEnum.TimeZoneError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :INVALID_TIME_ZONE
@@ -10,7 +10,7 @@ defmodule Google.Ads.Googleads.V8.Errors.TimeZoneErrorEnum.TimeZoneError do
   field :INVALID_TIME_ZONE, 5
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.TimeZoneErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.TimeZoneErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

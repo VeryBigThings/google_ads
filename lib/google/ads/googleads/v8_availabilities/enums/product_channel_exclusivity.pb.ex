@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.ProductChannelExclusivityEnum.ProductChannelExclusivity do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ProductChannelExclusivityEnum.ProductChannelExclusivity do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :SINGLE_CHANNEL | :MULTI_CHANNEL
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Enums.ProductChannelExclusivityEnum.ProductCha
   field :MULTI_CHANNEL, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.ProductChannelExclusivityEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ProductChannelExclusivityEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetClickViewRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetClickViewRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,16 +11,16 @@ defmodule Google.Ads.Googleads.V8.Services.GetClickViewRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.ClickViewService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.ClickViewService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.ClickViewService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.ClickViewService"
 
   rpc :GetClickView,
-      Google.Ads.Googleads.V8.Services.GetClickViewRequest,
-      Google.Ads.Googleads.V8.Resources.ClickView
+      Google.Ads.Googleads.V8Availabilities.Services.GetClickViewRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.ClickView
 end
 
-defmodule Google.Ads.Googleads.V8.Services.ClickViewService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.ClickViewService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.ClickViewService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.ClickViewService.Service
 end

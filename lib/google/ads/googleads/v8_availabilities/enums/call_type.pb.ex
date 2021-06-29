@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.CallTypeEnum.CallType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.CallTypeEnum.CallType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :MANUALLY_DIALED | :HIGH_END_MOBILE_SEARCH
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Enums.CallTypeEnum.CallType do
   field :HIGH_END_MOBILE_SEARCH, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.CallTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.CallTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

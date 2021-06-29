@@ -1,13 +1,13 @@
-defmodule Google.Ads.Googleads.V8.Common.MatchingFunction do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.MatchingFunction do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           function_string: String.t(),
           operator:
-            Google.Ads.Googleads.V8.Enums.MatchingFunctionOperatorEnum.MatchingFunctionOperator.t(),
-          left_operands: [Google.Ads.Googleads.V8.Common.Operand.t()],
-          right_operands: [Google.Ads.Googleads.V8.Common.Operand.t()]
+            Google.Ads.Googleads.V8Availabilities.Enums.MatchingFunctionOperatorEnum.MatchingFunctionOperator.t(),
+          left_operands: [Google.Ads.Googleads.V8Availabilities.Common.Operand.t()],
+          right_operands: [Google.Ads.Googleads.V8Availabilities.Common.Operand.t()]
         }
 
   defstruct [:function_string, :operator, :left_operands, :right_operands]
@@ -15,14 +15,14 @@ defmodule Google.Ads.Googleads.V8.Common.MatchingFunction do
   field :function_string, 5, type: :string
 
   field :operator, 4,
-    type: Google.Ads.Googleads.V8.Enums.MatchingFunctionOperatorEnum.MatchingFunctionOperator,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.MatchingFunctionOperatorEnum.MatchingFunctionOperator,
     enum: true
 
-  field :left_operands, 2, repeated: true, type: Google.Ads.Googleads.V8.Common.Operand
-  field :right_operands, 3, repeated: true, type: Google.Ads.Googleads.V8.Common.Operand
+  field :left_operands, 2, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Common.Operand
+  field :right_operands, 3, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Common.Operand
 end
 
-defmodule Google.Ads.Googleads.V8.Common.Operand.ConstantOperand do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.Operand.ConstantOperand do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -40,7 +40,7 @@ defmodule Google.Ads.Googleads.V8.Common.Operand.ConstantOperand do
   field :double_value, 8, type: :double, oneof: 0
 end
 
-defmodule Google.Ads.Googleads.V8.Common.Operand.FeedAttributeOperand do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.Operand.FeedAttributeOperand do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -55,37 +55,37 @@ defmodule Google.Ads.Googleads.V8.Common.Operand.FeedAttributeOperand do
   field :feed_attribute_id, 4, type: :int64
 end
 
-defmodule Google.Ads.Googleads.V8.Common.Operand.FunctionOperand do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.Operand.FunctionOperand do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          matching_function: Google.Ads.Googleads.V8.Common.MatchingFunction.t() | nil
+          matching_function: Google.Ads.Googleads.V8Availabilities.Common.MatchingFunction.t() | nil
         }
 
   defstruct [:matching_function]
 
-  field :matching_function, 1, type: Google.Ads.Googleads.V8.Common.MatchingFunction
+  field :matching_function, 1, type: Google.Ads.Googleads.V8Availabilities.Common.MatchingFunction
 end
 
-defmodule Google.Ads.Googleads.V8.Common.Operand.RequestContextOperand do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.Operand.RequestContextOperand do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           context_type:
-            Google.Ads.Googleads.V8.Enums.MatchingFunctionContextTypeEnum.MatchingFunctionContextType.t()
+            Google.Ads.Googleads.V8Availabilities.Enums.MatchingFunctionContextTypeEnum.MatchingFunctionContextType.t()
         }
 
   defstruct [:context_type]
 
   field :context_type, 1,
     type:
-      Google.Ads.Googleads.V8.Enums.MatchingFunctionContextTypeEnum.MatchingFunctionContextType,
+      Google.Ads.Googleads.V8Availabilities.Enums.MatchingFunctionContextTypeEnum.MatchingFunctionContextType,
     enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Common.Operand do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.Operand do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -98,18 +98,18 @@ defmodule Google.Ads.Googleads.V8.Common.Operand do
   oneof :function_argument_operand, 0
 
   field :constant_operand, 1,
-    type: Google.Ads.Googleads.V8.Common.Operand.ConstantOperand,
+    type: Google.Ads.Googleads.V8Availabilities.Common.Operand.ConstantOperand,
     oneof: 0
 
   field :feed_attribute_operand, 2,
-    type: Google.Ads.Googleads.V8.Common.Operand.FeedAttributeOperand,
+    type: Google.Ads.Googleads.V8Availabilities.Common.Operand.FeedAttributeOperand,
     oneof: 0
 
   field :function_operand, 3,
-    type: Google.Ads.Googleads.V8.Common.Operand.FunctionOperand,
+    type: Google.Ads.Googleads.V8Availabilities.Common.Operand.FunctionOperand,
     oneof: 0
 
   field :request_context_operand, 4,
-    type: Google.Ads.Googleads.V8.Common.Operand.RequestContextOperand,
+    type: Google.Ads.Googleads.V8Availabilities.Common.Operand.RequestContextOperand,
     oneof: 0
 end

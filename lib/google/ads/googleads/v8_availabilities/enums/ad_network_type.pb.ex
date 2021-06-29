@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.AdNetworkTypeEnum.AdNetworkType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AdNetworkTypeEnum.AdNetworkType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -30,7 +30,7 @@ defmodule Google.Ads.Googleads.V8.Enums.AdNetworkTypeEnum.AdNetworkType do
   field :MIXED, 7
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.AdNetworkTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AdNetworkTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

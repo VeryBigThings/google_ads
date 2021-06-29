@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.GoogleVoiceCallStatusEnum.GoogleVoiceCallStatus do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.GoogleVoiceCallStatusEnum.GoogleVoiceCallStatus do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :MISSED | :RECEIVED
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Enums.GoogleVoiceCallStatusEnum.GoogleVoiceCal
   field :RECEIVED, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.GoogleVoiceCallStatusEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.GoogleVoiceCallStatusEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

@@ -1,13 +1,13 @@
-defmodule Google.Ads.Googleads.V8.Resources.CustomerExtensionSetting do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.CustomerExtensionSetting do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           resource_name: String.t(),
-          extension_type: Google.Ads.Googleads.V8.Enums.ExtensionTypeEnum.ExtensionType.t(),
+          extension_type: Google.Ads.Googleads.V8Availabilities.Enums.ExtensionTypeEnum.ExtensionType.t(),
           extension_feed_items: [String.t()],
           device:
-            Google.Ads.Googleads.V8.Enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice.t()
+            Google.Ads.Googleads.V8Availabilities.Enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice.t()
         }
 
   defstruct [:resource_name, :extension_type, :extension_feed_items, :device]
@@ -15,12 +15,12 @@ defmodule Google.Ads.Googleads.V8.Resources.CustomerExtensionSetting do
   field :resource_name, 1, type: :string
 
   field :extension_type, 2,
-    type: Google.Ads.Googleads.V8.Enums.ExtensionTypeEnum.ExtensionType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.ExtensionTypeEnum.ExtensionType,
     enum: true
 
   field :extension_feed_items, 5, repeated: true, type: :string
 
   field :device, 4,
-    type: Google.Ads.Googleads.V8.Enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice,
     enum: true
 end

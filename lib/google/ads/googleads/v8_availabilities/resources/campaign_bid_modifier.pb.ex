@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.CampaignBidModifier do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.CampaignBidModifier do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -18,5 +18,5 @@ defmodule Google.Ads.Googleads.V8.Resources.CampaignBidModifier do
   field :campaign, 6, type: :string
   field :criterion_id, 7, type: :int64
   field :bid_modifier, 8, type: :double
-  field :interaction_type, 5, type: Google.Ads.Googleads.V8.Common.InteractionTypeInfo, oneof: 0
+  field :interaction_type, 5, type: Google.Ads.Googleads.V8Availabilities.Common.InteractionTypeInfo, oneof: 0
 end

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.FeedItemSet do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.FeedItemSet do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -8,7 +8,7 @@ defmodule Google.Ads.Googleads.V8.Resources.FeedItemSet do
           feed: String.t(),
           feed_item_set_id: integer,
           display_name: String.t(),
-          status: Google.Ads.Googleads.V8.Enums.FeedItemSetStatusEnum.FeedItemSetStatus.t()
+          status: Google.Ads.Googleads.V8Availabilities.Enums.FeedItemSetStatusEnum.FeedItemSetStatus.t()
         }
 
   defstruct [
@@ -28,14 +28,14 @@ defmodule Google.Ads.Googleads.V8.Resources.FeedItemSet do
   field :display_name, 4, type: :string
 
   field :status, 8,
-    type: Google.Ads.Googleads.V8.Enums.FeedItemSetStatusEnum.FeedItemSetStatus,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.FeedItemSetStatusEnum.FeedItemSetStatus,
     enum: true
 
   field :dynamic_location_set_filter, 5,
-    type: Google.Ads.Googleads.V8.Common.DynamicLocationSetFilter,
+    type: Google.Ads.Googleads.V8Availabilities.Common.DynamicLocationSetFilter,
     oneof: 0
 
   field :dynamic_affiliate_location_set_filter, 6,
-    type: Google.Ads.Googleads.V8.Common.DynamicAffiliateLocationSetFilter,
+    type: Google.Ads.Googleads.V8Availabilities.Common.DynamicAffiliateLocationSetFilter,
     oneof: 0
 end

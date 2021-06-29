@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.ConversionActionTypeEnum.ConversionActionType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ConversionActionTypeEnum.ConversionActionType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -117,7 +117,7 @@ defmodule Google.Ads.Googleads.V8.Enums.ConversionActionTypeEnum.ConversionActio
   field :STORE_VISITS, 36
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.ConversionActionTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ConversionActionTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

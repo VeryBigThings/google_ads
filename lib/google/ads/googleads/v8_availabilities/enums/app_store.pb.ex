@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.AppStoreEnum.AppStore do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AppStoreEnum.AppStore do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :APPLE_ITUNES | :GOOGLE_PLAY
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Enums.AppStoreEnum.AppStore do
   field :GOOGLE_PLAY, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.AppStoreEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AppStoreEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

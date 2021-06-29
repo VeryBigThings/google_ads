@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.OfflineUserDataJobErrorEnum.OfflineUserDataJobError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.OfflineUserDataJobErrorEnum.OfflineUserDataJobError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -108,7 +108,7 @@ defmodule Google.Ads.Googleads.V8.Errors.OfflineUserDataJobErrorEnum.OfflineUser
   field :LAST_PURCHASE_TIME_LESS_THAN_ACQUISITION_TIME, 38
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.OfflineUserDataJobErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.OfflineUserDataJobErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

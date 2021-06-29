@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.FieldErrorEnum.FieldError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.FieldErrorEnum.FieldError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -33,7 +33,7 @@ defmodule Google.Ads.Googleads.V8.Errors.FieldErrorEnum.FieldError do
   field :BLOCKED_VALUE, 9
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.FieldErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.FieldErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

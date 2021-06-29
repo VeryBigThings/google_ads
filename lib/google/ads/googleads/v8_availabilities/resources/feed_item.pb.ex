@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.FeedItem do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.FeedItem do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -8,12 +8,12 @@ defmodule Google.Ads.Googleads.V8.Resources.FeedItem do
           id: integer,
           start_date_time: String.t(),
           end_date_time: String.t(),
-          attribute_values: [Google.Ads.Googleads.V8.Resources.FeedItemAttributeValue.t()],
+          attribute_values: [Google.Ads.Googleads.V8Availabilities.Resources.FeedItemAttributeValue.t()],
           geo_targeting_restriction:
-            Google.Ads.Googleads.V8.Enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction.t(),
-          url_custom_parameters: [Google.Ads.Googleads.V8.Common.CustomParameter.t()],
-          status: Google.Ads.Googleads.V8.Enums.FeedItemStatusEnum.FeedItemStatus.t(),
-          policy_infos: [Google.Ads.Googleads.V8.Resources.FeedItemPlaceholderPolicyInfo.t()]
+            Google.Ads.Googleads.V8Availabilities.Enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction.t(),
+          url_custom_parameters: [Google.Ads.Googleads.V8Availabilities.Common.CustomParameter.t()],
+          status: Google.Ads.Googleads.V8Availabilities.Enums.FeedItemStatusEnum.FeedItemStatus.t(),
+          policy_infos: [Google.Ads.Googleads.V8Availabilities.Resources.FeedItemPlaceholderPolicyInfo.t()]
         }
 
   defstruct [
@@ -37,26 +37,26 @@ defmodule Google.Ads.Googleads.V8.Resources.FeedItem do
 
   field :attribute_values, 6,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Resources.FeedItemAttributeValue
+    type: Google.Ads.Googleads.V8Availabilities.Resources.FeedItemAttributeValue
 
   field :geo_targeting_restriction, 7,
-    type: Google.Ads.Googleads.V8.Enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction,
     enum: true
 
   field :url_custom_parameters, 8,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Common.CustomParameter
+    type: Google.Ads.Googleads.V8Availabilities.Common.CustomParameter
 
   field :status, 9,
-    type: Google.Ads.Googleads.V8.Enums.FeedItemStatusEnum.FeedItemStatus,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.FeedItemStatusEnum.FeedItemStatus,
     enum: true
 
   field :policy_infos, 10,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Resources.FeedItemPlaceholderPolicyInfo
+    type: Google.Ads.Googleads.V8Availabilities.Resources.FeedItemPlaceholderPolicyInfo
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.FeedItemAttributeValue do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.FeedItemAttributeValue do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -66,7 +66,7 @@ defmodule Google.Ads.Googleads.V8.Resources.FeedItemAttributeValue do
           boolean_value: boolean,
           string_value: String.t(),
           double_value: float | :infinity | :negative_infinity | :nan,
-          price_value: Google.Ads.Googleads.V8.Common.Money.t() | nil,
+          price_value: Google.Ads.Googleads.V8Availabilities.Common.Money.t() | nil,
           integer_values: [integer],
           boolean_values: [boolean],
           string_values: [String.t()],
@@ -91,34 +91,34 @@ defmodule Google.Ads.Googleads.V8.Resources.FeedItemAttributeValue do
   field :boolean_value, 13, type: :bool
   field :string_value, 14, type: :string
   field :double_value, 15, type: :double
-  field :price_value, 6, type: Google.Ads.Googleads.V8.Common.Money
+  field :price_value, 6, type: Google.Ads.Googleads.V8Availabilities.Common.Money
   field :integer_values, 16, repeated: true, type: :int64
   field :boolean_values, 17, repeated: true, type: :bool
   field :string_values, 18, repeated: true, type: :string
   field :double_values, 19, repeated: true, type: :double
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.FeedItemPlaceholderPolicyInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.FeedItemPlaceholderPolicyInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           placeholder_type_enum:
-            Google.Ads.Googleads.V8.Enums.PlaceholderTypeEnum.PlaceholderType.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.PlaceholderTypeEnum.PlaceholderType.t(),
           feed_mapping_resource_name: String.t(),
           review_status:
-            Google.Ads.Googleads.V8.Enums.PolicyReviewStatusEnum.PolicyReviewStatus.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.PolicyReviewStatusEnum.PolicyReviewStatus.t(),
           approval_status:
-            Google.Ads.Googleads.V8.Enums.PolicyApprovalStatusEnum.PolicyApprovalStatus.t(),
-          policy_topic_entries: [Google.Ads.Googleads.V8.Common.PolicyTopicEntry.t()],
+            Google.Ads.Googleads.V8Availabilities.Enums.PolicyApprovalStatusEnum.PolicyApprovalStatus.t(),
+          policy_topic_entries: [Google.Ads.Googleads.V8Availabilities.Common.PolicyTopicEntry.t()],
           validation_status:
-            Google.Ads.Googleads.V8.Enums.FeedItemValidationStatusEnum.FeedItemValidationStatus.t(),
-          validation_errors: [Google.Ads.Googleads.V8.Resources.FeedItemValidationError.t()],
+            Google.Ads.Googleads.V8Availabilities.Enums.FeedItemValidationStatusEnum.FeedItemValidationStatus.t(),
+          validation_errors: [Google.Ads.Googleads.V8Availabilities.Resources.FeedItemValidationError.t()],
           quality_approval_status:
-            Google.Ads.Googleads.V8.Enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus.t(),
           quality_disapproval_reasons: [
             [
-              Google.Ads.Googleads.V8.Enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason.t()
+              Google.Ads.Googleads.V8Availabilities.Enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason.t()
             ]
           ]
         }
@@ -136,50 +136,50 @@ defmodule Google.Ads.Googleads.V8.Resources.FeedItemPlaceholderPolicyInfo do
   ]
 
   field :placeholder_type_enum, 10,
-    type: Google.Ads.Googleads.V8.Enums.PlaceholderTypeEnum.PlaceholderType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.PlaceholderTypeEnum.PlaceholderType,
     enum: true
 
   field :feed_mapping_resource_name, 11, type: :string
 
   field :review_status, 3,
-    type: Google.Ads.Googleads.V8.Enums.PolicyReviewStatusEnum.PolicyReviewStatus,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.PolicyReviewStatusEnum.PolicyReviewStatus,
     enum: true
 
   field :approval_status, 4,
-    type: Google.Ads.Googleads.V8.Enums.PolicyApprovalStatusEnum.PolicyApprovalStatus,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.PolicyApprovalStatusEnum.PolicyApprovalStatus,
     enum: true
 
   field :policy_topic_entries, 5,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Common.PolicyTopicEntry
+    type: Google.Ads.Googleads.V8Availabilities.Common.PolicyTopicEntry
 
   field :validation_status, 6,
-    type: Google.Ads.Googleads.V8.Enums.FeedItemValidationStatusEnum.FeedItemValidationStatus,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.FeedItemValidationStatusEnum.FeedItemValidationStatus,
     enum: true
 
   field :validation_errors, 7,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Resources.FeedItemValidationError
+    type: Google.Ads.Googleads.V8Availabilities.Resources.FeedItemValidationError
 
   field :quality_approval_status, 8,
     type:
-      Google.Ads.Googleads.V8.Enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus,
+      Google.Ads.Googleads.V8Availabilities.Enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus,
     enum: true
 
   field :quality_disapproval_reasons, 9,
     repeated: true,
     type:
-      Google.Ads.Googleads.V8.Enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason,
+      Google.Ads.Googleads.V8Availabilities.Enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason,
     enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.FeedItemValidationError do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.FeedItemValidationError do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           validation_error:
-            Google.Ads.Googleads.V8.Errors.FeedItemValidationErrorEnum.FeedItemValidationError.t(),
+            Google.Ads.Googleads.V8Availabilities.Errors.FeedItemValidationErrorEnum.FeedItemValidationError.t(),
           description: String.t(),
           feed_attribute_ids: [integer],
           extra_info: String.t()
@@ -188,7 +188,7 @@ defmodule Google.Ads.Googleads.V8.Resources.FeedItemValidationError do
   defstruct [:validation_error, :description, :feed_attribute_ids, :extra_info]
 
   field :validation_error, 1,
-    type: Google.Ads.Googleads.V8.Errors.FeedItemValidationErrorEnum.FeedItemValidationError,
+    type: Google.Ads.Googleads.V8Availabilities.Errors.FeedItemValidationErrorEnum.FeedItemValidationError,
     enum: true
 
   field :description, 6, type: :string

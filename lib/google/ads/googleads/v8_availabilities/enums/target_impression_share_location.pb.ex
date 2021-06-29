@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -21,7 +21,7 @@ defmodule Google.Ads.Googleads.V8.Enums.TargetImpressionShareLocationEnum.Target
   field :ABSOLUTE_TOP_OF_PAGE, 4
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.TargetImpressionShareLocationEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.TargetImpressionShareLocationEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

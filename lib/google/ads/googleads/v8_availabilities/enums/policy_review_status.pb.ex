@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.PolicyReviewStatusEnum.PolicyReviewStatus do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.PolicyReviewStatusEnum.PolicyReviewStatus do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -24,7 +24,7 @@ defmodule Google.Ads.Googleads.V8.Enums.PolicyReviewStatusEnum.PolicyReviewStatu
   field :ELIGIBLE_MAY_SERVE, 5
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.PolicyReviewStatusEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.PolicyReviewStatusEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

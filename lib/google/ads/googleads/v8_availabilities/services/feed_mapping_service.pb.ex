@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Services.GetFeedMappingRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.GetFeedMappingRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,17 +11,17 @@ defmodule Google.Ads.Googleads.V8.Services.GetFeedMappingRequest do
   field :resource_name, 1, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateFeedMappingsRequest do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateFeedMappingsRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           customer_id: String.t(),
-          operations: [Google.Ads.Googleads.V8.Services.FeedMappingOperation.t()],
+          operations: [Google.Ads.Googleads.V8Availabilities.Services.FeedMappingOperation.t()],
           partial_failure: boolean,
           validate_only: boolean,
           response_content_type:
-            Google.Ads.Googleads.V8.Enums.ResponseContentTypeEnum.ResponseContentType.t()
+            Google.Ads.Googleads.V8Availabilities.Enums.ResponseContentTypeEnum.ResponseContentType.t()
         }
 
   defstruct [:customer_id, :operations, :partial_failure, :validate_only, :response_content_type]
@@ -30,17 +30,17 @@ defmodule Google.Ads.Googleads.V8.Services.MutateFeedMappingsRequest do
 
   field :operations, 2,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Services.FeedMappingOperation
+    type: Google.Ads.Googleads.V8Availabilities.Services.FeedMappingOperation
 
   field :partial_failure, 3, type: :bool
   field :validate_only, 4, type: :bool
 
   field :response_content_type, 5,
-    type: Google.Ads.Googleads.V8.Enums.ResponseContentTypeEnum.ResponseContentType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.ResponseContentTypeEnum.ResponseContentType,
     enum: true
 end
 
-defmodule Google.Ads.Googleads.V8.Services.FeedMappingOperation do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.FeedMappingOperation do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -52,17 +52,17 @@ defmodule Google.Ads.Googleads.V8.Services.FeedMappingOperation do
 
   oneof :operation, 0
 
-  field :create, 1, type: Google.Ads.Googleads.V8.Resources.FeedMapping, oneof: 0
+  field :create, 1, type: Google.Ads.Googleads.V8Availabilities.Resources.FeedMapping, oneof: 0
   field :remove, 3, type: :string, oneof: 0
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateFeedMappingsResponse do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateFeedMappingsResponse do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           partial_failure_error: Google.Rpc.Status.t() | nil,
-          results: [Google.Ads.Googleads.V8.Services.MutateFeedMappingResult.t()]
+          results: [Google.Ads.Googleads.V8Availabilities.Services.MutateFeedMappingResult.t()]
         }
 
   defstruct [:partial_failure_error, :results]
@@ -71,38 +71,38 @@ defmodule Google.Ads.Googleads.V8.Services.MutateFeedMappingsResponse do
 
   field :results, 2,
     repeated: true,
-    type: Google.Ads.Googleads.V8.Services.MutateFeedMappingResult
+    type: Google.Ads.Googleads.V8Availabilities.Services.MutateFeedMappingResult
 end
 
-defmodule Google.Ads.Googleads.V8.Services.MutateFeedMappingResult do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateFeedMappingResult do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           resource_name: String.t(),
-          feed_mapping: Google.Ads.Googleads.V8.Resources.FeedMapping.t() | nil
+          feed_mapping: Google.Ads.Googleads.V8Availabilities.Resources.FeedMapping.t() | nil
         }
 
   defstruct [:resource_name, :feed_mapping]
 
   field :resource_name, 1, type: :string
-  field :feed_mapping, 2, type: Google.Ads.Googleads.V8.Resources.FeedMapping
+  field :feed_mapping, 2, type: Google.Ads.Googleads.V8Availabilities.Resources.FeedMapping
 end
 
-defmodule Google.Ads.Googleads.V8.Services.FeedMappingService.Service do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.FeedMappingService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v8.services.FeedMappingService"
+  use GRPC.Service, name: "google.ads.googleads.V8Availabilities.services.FeedMappingService"
 
   rpc :GetFeedMapping,
-      Google.Ads.Googleads.V8.Services.GetFeedMappingRequest,
-      Google.Ads.Googleads.V8.Resources.FeedMapping
+      Google.Ads.Googleads.V8Availabilities.Services.GetFeedMappingRequest,
+      Google.Ads.Googleads.V8Availabilities.Resources.FeedMapping
 
   rpc :MutateFeedMappings,
-      Google.Ads.Googleads.V8.Services.MutateFeedMappingsRequest,
-      Google.Ads.Googleads.V8.Services.MutateFeedMappingsResponse
+      Google.Ads.Googleads.V8Availabilities.Services.MutateFeedMappingsRequest,
+      Google.Ads.Googleads.V8Availabilities.Services.MutateFeedMappingsResponse
 end
 
-defmodule Google.Ads.Googleads.V8.Services.FeedMappingService.Stub do
+defmodule Google.Ads.Googleads.V8Availabilities.Services.FeedMappingService.Stub do
   @moduledoc false
-  use GRPC.Stub, service: Google.Ads.Googleads.V8.Services.FeedMappingService.Service
+  use GRPC.Stub, service: Google.Ads.Googleads.V8Availabilities.Services.FeedMappingService.Service
 end

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.ThirdPartyAppAnalyticsLink do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.ThirdPartyAppAnalyticsLink do
   @moduledoc false
   use Protobuf, syntax: :proto3
 

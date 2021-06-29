@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.MonthOfYearEnum.MonthOfYear do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.MonthOfYearEnum.MonthOfYear do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -48,7 +48,7 @@ defmodule Google.Ads.Googleads.V8.Enums.MonthOfYearEnum.MonthOfYear do
   field :DECEMBER, 13
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.MonthOfYearEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.MonthOfYearEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

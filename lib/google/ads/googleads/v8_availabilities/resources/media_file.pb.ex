@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.MediaFile do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.MediaFile do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -6,8 +6,8 @@ defmodule Google.Ads.Googleads.V8.Resources.MediaFile do
           mediatype: {atom, any},
           resource_name: String.t(),
           id: integer,
-          type: Google.Ads.Googleads.V8.Enums.MediaTypeEnum.MediaType.t(),
-          mime_type: Google.Ads.Googleads.V8.Enums.MimeTypeEnum.MimeType.t(),
+          type: Google.Ads.Googleads.V8Availabilities.Enums.MediaTypeEnum.MediaType.t(),
+          mime_type: Google.Ads.Googleads.V8Availabilities.Enums.MimeTypeEnum.MimeType.t(),
           source_url: String.t(),
           name: String.t(),
           file_size: integer
@@ -19,18 +19,18 @@ defmodule Google.Ads.Googleads.V8.Resources.MediaFile do
 
   field :resource_name, 1, type: :string
   field :id, 12, type: :int64
-  field :type, 5, type: Google.Ads.Googleads.V8.Enums.MediaTypeEnum.MediaType, enum: true
-  field :mime_type, 6, type: Google.Ads.Googleads.V8.Enums.MimeTypeEnum.MimeType, enum: true
+  field :type, 5, type: Google.Ads.Googleads.V8Availabilities.Enums.MediaTypeEnum.MediaType, enum: true
+  field :mime_type, 6, type: Google.Ads.Googleads.V8Availabilities.Enums.MimeTypeEnum.MimeType, enum: true
   field :source_url, 13, type: :string
   field :name, 14, type: :string
   field :file_size, 15, type: :int64
-  field :image, 3, type: Google.Ads.Googleads.V8.Resources.MediaImage, oneof: 0
-  field :media_bundle, 4, type: Google.Ads.Googleads.V8.Resources.MediaBundle, oneof: 0
-  field :audio, 10, type: Google.Ads.Googleads.V8.Resources.MediaAudio, oneof: 0
-  field :video, 11, type: Google.Ads.Googleads.V8.Resources.MediaVideo, oneof: 0
+  field :image, 3, type: Google.Ads.Googleads.V8Availabilities.Resources.MediaImage, oneof: 0
+  field :media_bundle, 4, type: Google.Ads.Googleads.V8Availabilities.Resources.MediaBundle, oneof: 0
+  field :audio, 10, type: Google.Ads.Googleads.V8Availabilities.Resources.MediaAudio, oneof: 0
+  field :video, 11, type: Google.Ads.Googleads.V8Availabilities.Resources.MediaVideo, oneof: 0
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.MediaImage do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.MediaImage do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -47,7 +47,7 @@ defmodule Google.Ads.Googleads.V8.Resources.MediaImage do
   field :preview_size_image_url, 3, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.MediaBundle do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.MediaBundle do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -62,7 +62,7 @@ defmodule Google.Ads.Googleads.V8.Resources.MediaBundle do
   field :url, 2, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.MediaAudio do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.MediaAudio do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -75,7 +75,7 @@ defmodule Google.Ads.Googleads.V8.Resources.MediaAudio do
   field :ad_duration_millis, 2, type: :int64
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.MediaVideo do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.MediaVideo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 

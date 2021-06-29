@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.RequestErrorEnum.RequestError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.RequestErrorEnum.RequestError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -81,7 +81,7 @@ defmodule Google.Ads.Googleads.V8.Errors.RequestErrorEnum.RequestError do
   field :RPC_DEADLINE_TOO_SHORT, 33
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.RequestErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.RequestErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Errors.NullErrorEnum.NullError do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.NullErrorEnum.NullError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :NULL_CONTENT
@@ -10,7 +10,7 @@ defmodule Google.Ads.Googleads.V8.Errors.NullErrorEnum.NullError do
   field :NULL_CONTENT, 2
 end
 
-defmodule Google.Ads.Googleads.V8.Errors.NullErrorEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Errors.NullErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

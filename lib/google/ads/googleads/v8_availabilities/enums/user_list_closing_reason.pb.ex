@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.UserListClosingReasonEnum.UserListClosingReason do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.UserListClosingReasonEnum.UserListClosingReason do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :UNUSED
@@ -10,7 +10,7 @@ defmodule Google.Ads.Googleads.V8.Enums.UserListClosingReasonEnum.UserListClosin
   field :UNUSED, 2
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.UserListClosingReasonEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.UserListClosingReasonEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Common.OfflineUserAddressInfo do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.OfflineUserAddressInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -21,14 +21,14 @@ defmodule Google.Ads.Googleads.V8.Common.OfflineUserAddressInfo do
   field :postal_code, 12, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.UserIdentifier do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.UserIdentifier do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           identifier: {atom, any},
           user_identifier_source:
-            Google.Ads.Googleads.V8.Enums.UserIdentifierSourceEnum.UserIdentifierSource.t()
+            Google.Ads.Googleads.V8Availabilities.Enums.UserIdentifierSourceEnum.UserIdentifierSource.t()
         }
 
   defstruct [:identifier, :user_identifier_source]
@@ -36,17 +36,17 @@ defmodule Google.Ads.Googleads.V8.Common.UserIdentifier do
   oneof :identifier, 0
 
   field :user_identifier_source, 6,
-    type: Google.Ads.Googleads.V8.Enums.UserIdentifierSourceEnum.UserIdentifierSource,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.UserIdentifierSourceEnum.UserIdentifierSource,
     enum: true
 
   field :hashed_email, 7, type: :string, oneof: 0
   field :hashed_phone_number, 8, type: :string, oneof: 0
   field :mobile_id, 9, type: :string, oneof: 0
   field :third_party_user_id, 10, type: :string, oneof: 0
-  field :address_info, 5, type: Google.Ads.Googleads.V8.Common.OfflineUserAddressInfo, oneof: 0
+  field :address_info, 5, type: Google.Ads.Googleads.V8Availabilities.Common.OfflineUserAddressInfo, oneof: 0
 end
 
-defmodule Google.Ads.Googleads.V8.Common.TransactionAttribute do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.TransactionAttribute do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -56,9 +56,9 @@ defmodule Google.Ads.Googleads.V8.Common.TransactionAttribute do
           currency_code: String.t(),
           conversion_action: String.t(),
           order_id: String.t(),
-          store_attribute: Google.Ads.Googleads.V8.Common.StoreAttribute.t() | nil,
+          store_attribute: Google.Ads.Googleads.V8Availabilities.Common.StoreAttribute.t() | nil,
           custom_value: String.t(),
-          item_attribute: Google.Ads.Googleads.V8.Common.ItemAttribute.t() | nil
+          item_attribute: Google.Ads.Googleads.V8Availabilities.Common.ItemAttribute.t() | nil
         }
 
   defstruct [
@@ -77,12 +77,12 @@ defmodule Google.Ads.Googleads.V8.Common.TransactionAttribute do
   field :currency_code, 10, type: :string
   field :conversion_action, 11, type: :string
   field :order_id, 12, type: :string
-  field :store_attribute, 6, type: Google.Ads.Googleads.V8.Common.StoreAttribute
+  field :store_attribute, 6, type: Google.Ads.Googleads.V8Availabilities.Common.StoreAttribute
   field :custom_value, 13, type: :string
-  field :item_attribute, 14, type: Google.Ads.Googleads.V8.Common.ItemAttribute
+  field :item_attribute, 14, type: Google.Ads.Googleads.V8Availabilities.Common.ItemAttribute
 end
 
-defmodule Google.Ads.Googleads.V8.Common.StoreAttribute do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.StoreAttribute do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -95,7 +95,7 @@ defmodule Google.Ads.Googleads.V8.Common.StoreAttribute do
   field :store_code, 2, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.ItemAttribute do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.ItemAttribute do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -116,24 +116,24 @@ defmodule Google.Ads.Googleads.V8.Common.ItemAttribute do
   field :quantity, 5, type: :int64
 end
 
-defmodule Google.Ads.Googleads.V8.Common.UserData do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.UserData do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
-          user_identifiers: [Google.Ads.Googleads.V8.Common.UserIdentifier.t()],
-          transaction_attribute: Google.Ads.Googleads.V8.Common.TransactionAttribute.t() | nil,
-          user_attribute: Google.Ads.Googleads.V8.Common.UserAttribute.t() | nil
+          user_identifiers: [Google.Ads.Googleads.V8Availabilities.Common.UserIdentifier.t()],
+          transaction_attribute: Google.Ads.Googleads.V8Availabilities.Common.TransactionAttribute.t() | nil,
+          user_attribute: Google.Ads.Googleads.V8Availabilities.Common.UserAttribute.t() | nil
         }
 
   defstruct [:user_identifiers, :transaction_attribute, :user_attribute]
 
-  field :user_identifiers, 1, repeated: true, type: Google.Ads.Googleads.V8.Common.UserIdentifier
-  field :transaction_attribute, 2, type: Google.Ads.Googleads.V8.Common.TransactionAttribute
-  field :user_attribute, 3, type: Google.Ads.Googleads.V8.Common.UserAttribute
+  field :user_identifiers, 1, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Common.UserIdentifier
+  field :transaction_attribute, 2, type: Google.Ads.Googleads.V8Availabilities.Common.TransactionAttribute
+  field :user_attribute, 3, type: Google.Ads.Googleads.V8Availabilities.Common.UserAttribute
 end
 
-defmodule Google.Ads.Googleads.V8.Common.UserAttribute do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.UserAttribute do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -163,7 +163,7 @@ defmodule Google.Ads.Googleads.V8.Common.UserAttribute do
   field :acquisition_date_time, 6, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.CustomerMatchUserListMetadata do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.CustomerMatchUserListMetadata do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -176,7 +176,7 @@ defmodule Google.Ads.Googleads.V8.Common.CustomerMatchUserListMetadata do
   field :user_list, 2, type: :string
 end
 
-defmodule Google.Ads.Googleads.V8.Common.StoreSalesMetadata do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.StoreSalesMetadata do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -185,7 +185,7 @@ defmodule Google.Ads.Googleads.V8.Common.StoreSalesMetadata do
           transaction_upload_fraction: float | :infinity | :negative_infinity | :nan,
           custom_key: String.t(),
           third_party_metadata:
-            Google.Ads.Googleads.V8.Common.StoreSalesThirdPartyMetadata.t() | nil
+            Google.Ads.Googleads.V8Availabilities.Common.StoreSalesThirdPartyMetadata.t() | nil
         }
 
   defstruct [:loyalty_fraction, :transaction_upload_fraction, :custom_key, :third_party_metadata]
@@ -195,10 +195,10 @@ defmodule Google.Ads.Googleads.V8.Common.StoreSalesMetadata do
   field :custom_key, 7, type: :string
 
   field :third_party_metadata, 3,
-    type: Google.Ads.Googleads.V8.Common.StoreSalesThirdPartyMetadata
+    type: Google.Ads.Googleads.V8Availabilities.Common.StoreSalesThirdPartyMetadata
 end
 
-defmodule Google.Ads.Googleads.V8.Common.StoreSalesThirdPartyMetadata do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.StoreSalesThirdPartyMetadata do
   @moduledoc false
   use Protobuf, syntax: :proto3
 

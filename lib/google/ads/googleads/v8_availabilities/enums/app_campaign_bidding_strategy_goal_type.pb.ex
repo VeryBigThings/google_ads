@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -24,7 +24,7 @@ defmodule Google.Ads.Googleads.V8.Enums.AppCampaignBiddingStrategyGoalTypeEnum.A
   field :OPTIMIZE_RETURN_ON_ADVERTISING_SPEND, 5
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.AppCampaignBiddingStrategyGoalTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.AppCampaignBiddingStrategyGoalTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

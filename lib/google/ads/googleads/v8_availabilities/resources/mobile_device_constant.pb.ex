@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.MobileDeviceConstant do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.MobileDeviceConstant do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -8,7 +8,7 @@ defmodule Google.Ads.Googleads.V8.Resources.MobileDeviceConstant do
           name: String.t(),
           manufacturer_name: String.t(),
           operating_system_name: String.t(),
-          type: Google.Ads.Googleads.V8.Enums.MobileDeviceTypeEnum.MobileDeviceType.t()
+          type: Google.Ads.Googleads.V8Availabilities.Enums.MobileDeviceTypeEnum.MobileDeviceType.t()
         }
 
   defstruct [:resource_name, :id, :name, :manufacturer_name, :operating_system_name, :type]
@@ -20,6 +20,6 @@ defmodule Google.Ads.Googleads.V8.Resources.MobileDeviceConstant do
   field :operating_system_name, 10, type: :string
 
   field :type, 6,
-    type: Google.Ads.Googleads.V8.Enums.MobileDeviceTypeEnum.MobileDeviceType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.MobileDeviceTypeEnum.MobileDeviceType,
     enum: true
 end

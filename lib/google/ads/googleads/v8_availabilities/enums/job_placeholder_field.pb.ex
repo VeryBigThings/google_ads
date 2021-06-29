@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.JobPlaceholderFieldEnum.JobPlaceholderField do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.JobPlaceholderFieldEnum.JobPlaceholderField do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -63,7 +63,7 @@ defmodule Google.Ads.Googleads.V8.Enums.JobPlaceholderFieldEnum.JobPlaceholderFi
   field :IOS_APP_STORE_ID, 19
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.JobPlaceholderFieldEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.JobPlaceholderFieldEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

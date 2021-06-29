@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Common.Commission do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.Commission do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -11,7 +11,7 @@ defmodule Google.Ads.Googleads.V8.Common.Commission do
   field :commission_rate_micros, 2, type: :int64
 end
 
-defmodule Google.Ads.Googleads.V8.Common.EnhancedCpc do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.EnhancedCpc do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}
@@ -19,7 +19,7 @@ defmodule Google.Ads.Googleads.V8.Common.EnhancedCpc do
   defstruct []
 end
 
-defmodule Google.Ads.Googleads.V8.Common.ManualCpc do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.ManualCpc do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -32,7 +32,7 @@ defmodule Google.Ads.Googleads.V8.Common.ManualCpc do
   field :enhanced_cpc_enabled, 2, type: :bool
 end
 
-defmodule Google.Ads.Googleads.V8.Common.ManualCpm do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.ManualCpm do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}
@@ -40,7 +40,7 @@ defmodule Google.Ads.Googleads.V8.Common.ManualCpm do
   defstruct []
 end
 
-defmodule Google.Ads.Googleads.V8.Common.ManualCpv do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.ManualCpv do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}
@@ -48,7 +48,7 @@ defmodule Google.Ads.Googleads.V8.Common.ManualCpv do
   defstruct []
 end
 
-defmodule Google.Ads.Googleads.V8.Common.MaximizeConversions do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.MaximizeConversions do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -61,7 +61,7 @@ defmodule Google.Ads.Googleads.V8.Common.MaximizeConversions do
   field :target_cpa, 1, type: :int64
 end
 
-defmodule Google.Ads.Googleads.V8.Common.MaximizeConversionValue do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.MaximizeConversionValue do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -74,7 +74,7 @@ defmodule Google.Ads.Googleads.V8.Common.MaximizeConversionValue do
   field :target_roas, 2, type: :double
 end
 
-defmodule Google.Ads.Googleads.V8.Common.TargetCpa do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.TargetCpa do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -91,7 +91,7 @@ defmodule Google.Ads.Googleads.V8.Common.TargetCpa do
   field :cpc_bid_floor_micros, 6, type: :int64
 end
 
-defmodule Google.Ads.Googleads.V8.Common.TargetCpm do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.TargetCpm do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}
@@ -99,13 +99,13 @@ defmodule Google.Ads.Googleads.V8.Common.TargetCpm do
   defstruct []
 end
 
-defmodule Google.Ads.Googleads.V8.Common.TargetImpressionShare do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.TargetImpressionShare do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           location:
-            Google.Ads.Googleads.V8.Enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation.t(),
           location_fraction_micros: integer,
           cpc_bid_ceiling_micros: integer
         }
@@ -114,14 +114,14 @@ defmodule Google.Ads.Googleads.V8.Common.TargetImpressionShare do
 
   field :location, 1,
     type:
-      Google.Ads.Googleads.V8.Enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation,
+      Google.Ads.Googleads.V8Availabilities.Enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation,
     enum: true
 
   field :location_fraction_micros, 4, type: :int64
   field :cpc_bid_ceiling_micros, 5, type: :int64
 end
 
-defmodule Google.Ads.Googleads.V8.Common.TargetRoas do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.TargetRoas do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -138,7 +138,7 @@ defmodule Google.Ads.Googleads.V8.Common.TargetRoas do
   field :cpc_bid_floor_micros, 6, type: :int64
 end
 
-defmodule Google.Ads.Googleads.V8.Common.TargetSpend do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.TargetSpend do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -153,7 +153,7 @@ defmodule Google.Ads.Googleads.V8.Common.TargetSpend do
   field :cpc_bid_ceiling_micros, 4, type: :int64
 end
 
-defmodule Google.Ads.Googleads.V8.Common.PercentCpc do
+defmodule Google.Ads.Googleads.V8Availabilities.Common.PercentCpc do
   @moduledoc false
   use Protobuf, syntax: :proto3
 

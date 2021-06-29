@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -66,7 +66,7 @@ defmodule Google.Ads.Googleads.V8.Enums.FeedItemQualityDisapprovalReasonEnum.Fee
   field :STRUCTURED_SNIPPETS_HAS_PROMOTIONAL_TEXT, 19
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.FeedItemQualityDisapprovalReasonEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.FeedItemQualityDisapprovalReasonEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.ChangeEventResourceTypeEnum.ChangeEventResourceType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ChangeEventResourceTypeEnum.ChangeEventResourceType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
@@ -48,7 +48,7 @@ defmodule Google.Ads.Googleads.V8.Enums.ChangeEventResourceTypeEnum.ChangeEventR
   field :AD_GROUP_AD, 13
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.ChangeEventResourceTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.ChangeEventResourceTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}

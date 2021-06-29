@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Resources.AccountBudget.PendingAccountBudgetProposal do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.AccountBudget.PendingAccountBudgetProposal do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -7,7 +7,7 @@ defmodule Google.Ads.Googleads.V8.Resources.AccountBudget.PendingAccountBudgetPr
           spending_limit: {atom, any},
           account_budget_proposal: String.t(),
           proposal_type:
-            Google.Ads.Googleads.V8.Enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType.t(),
+            Google.Ads.Googleads.V8Availabilities.Enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType.t(),
           name: String.t(),
           start_date_time: String.t(),
           purchase_order_number: String.t(),
@@ -33,7 +33,7 @@ defmodule Google.Ads.Googleads.V8.Resources.AccountBudget.PendingAccountBudgetPr
   field :account_budget_proposal, 12, type: :string
 
   field :proposal_type, 2,
-    type: Google.Ads.Googleads.V8.Enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType,
     enum: true
 
   field :name, 13, type: :string
@@ -44,19 +44,19 @@ defmodule Google.Ads.Googleads.V8.Resources.AccountBudget.PendingAccountBudgetPr
   field :end_date_time, 15, type: :string, oneof: 0
 
   field :end_time_type, 6,
-    type: Google.Ads.Googleads.V8.Enums.TimeTypeEnum.TimeType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.TimeTypeEnum.TimeType,
     enum: true,
     oneof: 0
 
   field :spending_limit_micros, 16, type: :int64, oneof: 1
 
   field :spending_limit_type, 8,
-    type: Google.Ads.Googleads.V8.Enums.SpendingLimitTypeEnum.SpendingLimitType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.SpendingLimitTypeEnum.SpendingLimitType,
     enum: true,
     oneof: 1
 end
 
-defmodule Google.Ads.Googleads.V8.Resources.AccountBudget do
+defmodule Google.Ads.Googleads.V8Availabilities.Resources.AccountBudget do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
@@ -69,7 +69,7 @@ defmodule Google.Ads.Googleads.V8.Resources.AccountBudget do
           resource_name: String.t(),
           id: integer,
           billing_setup: String.t(),
-          status: Google.Ads.Googleads.V8.Enums.AccountBudgetStatusEnum.AccountBudgetStatus.t(),
+          status: Google.Ads.Googleads.V8Availabilities.Enums.AccountBudgetStatusEnum.AccountBudgetStatus.t(),
           name: String.t(),
           proposed_start_date_time: String.t(),
           approved_start_date_time: String.t(),
@@ -78,7 +78,7 @@ defmodule Google.Ads.Googleads.V8.Resources.AccountBudget do
           purchase_order_number: String.t(),
           notes: String.t(),
           pending_proposal:
-            Google.Ads.Googleads.V8.Resources.AccountBudget.PendingAccountBudgetProposal.t() | nil
+            Google.Ads.Googleads.V8Availabilities.Resources.AccountBudget.PendingAccountBudgetProposal.t() | nil
         }
 
   defstruct [
@@ -112,7 +112,7 @@ defmodule Google.Ads.Googleads.V8.Resources.AccountBudget do
   field :billing_setup, 24, type: :string
 
   field :status, 4,
-    type: Google.Ads.Googleads.V8.Enums.AccountBudgetStatusEnum.AccountBudgetStatus,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.AccountBudgetStatusEnum.AccountBudgetStatus,
     enum: true
 
   field :name, 25, type: :string
@@ -124,40 +124,40 @@ defmodule Google.Ads.Googleads.V8.Resources.AccountBudget do
   field :notes, 36, type: :string
 
   field :pending_proposal, 22,
-    type: Google.Ads.Googleads.V8.Resources.AccountBudget.PendingAccountBudgetProposal
+    type: Google.Ads.Googleads.V8Availabilities.Resources.AccountBudget.PendingAccountBudgetProposal
 
   field :proposed_end_date_time, 28, type: :string, oneof: 0
 
   field :proposed_end_time_type, 9,
-    type: Google.Ads.Googleads.V8.Enums.TimeTypeEnum.TimeType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.TimeTypeEnum.TimeType,
     enum: true,
     oneof: 0
 
   field :approved_end_date_time, 29, type: :string, oneof: 1
 
   field :approved_end_time_type, 11,
-    type: Google.Ads.Googleads.V8.Enums.TimeTypeEnum.TimeType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.TimeTypeEnum.TimeType,
     enum: true,
     oneof: 1
 
   field :proposed_spending_limit_micros, 30, type: :int64, oneof: 2
 
   field :proposed_spending_limit_type, 13,
-    type: Google.Ads.Googleads.V8.Enums.SpendingLimitTypeEnum.SpendingLimitType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.SpendingLimitTypeEnum.SpendingLimitType,
     enum: true,
     oneof: 2
 
   field :approved_spending_limit_micros, 31, type: :int64, oneof: 3
 
   field :approved_spending_limit_type, 15,
-    type: Google.Ads.Googleads.V8.Enums.SpendingLimitTypeEnum.SpendingLimitType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.SpendingLimitTypeEnum.SpendingLimitType,
     enum: true,
     oneof: 3
 
   field :adjusted_spending_limit_micros, 32, type: :int64, oneof: 4
 
   field :adjusted_spending_limit_type, 17,
-    type: Google.Ads.Googleads.V8.Enums.SpendingLimitTypeEnum.SpendingLimitType,
+    type: Google.Ads.Googleads.V8Availabilities.Enums.SpendingLimitTypeEnum.SpendingLimitType,
     enum: true,
     oneof: 4
 end

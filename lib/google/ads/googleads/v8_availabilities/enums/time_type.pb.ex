@@ -1,4 +1,4 @@
-defmodule Google.Ads.Googleads.V8.Enums.TimeTypeEnum.TimeType do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.TimeTypeEnum.TimeType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
   @type t :: integer | :UNSPECIFIED | :UNKNOWN | :NOW | :FOREVER
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V8.Enums.TimeTypeEnum.TimeType do
   field :FOREVER, 3
 end
 
-defmodule Google.Ads.Googleads.V8.Enums.TimeTypeEnum do
+defmodule Google.Ads.Googleads.V8Availabilities.Enums.TimeTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
   @type t :: %__MODULE__{}
