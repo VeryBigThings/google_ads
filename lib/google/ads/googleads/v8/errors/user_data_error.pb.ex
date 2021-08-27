@@ -1,6 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Errors.UserDataErrorEnum.UserDataError do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto2
+  use Protobuf, enum: true, syntax: :proto3
 
   @type t ::
           integer
@@ -11,20 +11,16 @@ defmodule Google.Ads.Googleads.V8.Errors.UserDataErrorEnum.UserDataError do
           | :USER_LIST_NOT_APPLICABLE
 
   field :UNSPECIFIED, 0
-
   field :UNKNOWN, 1
-
   field :OPERATIONS_FOR_CUSTOMER_MATCH_NOT_ALLOWED, 2
-
   field :TOO_MANY_USER_IDENTIFIERS, 3
-
   field :USER_LIST_NOT_APPLICABLE, 4
 end
 
 defmodule Google.Ads.Googleads.V8.Errors.UserDataErrorEnum do
   @moduledoc false
-  use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
+  use Protobuf, syntax: :proto3
 
+  @type t :: %__MODULE__{}
   defstruct []
 end

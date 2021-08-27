@@ -1,6 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Resources.SharedSet do
   @moduledoc false
-  use Protobuf, syntax: :proto2
+  use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           resource_name: String.t(),
@@ -11,24 +11,17 @@ defmodule Google.Ads.Googleads.V8.Resources.SharedSet do
           member_count: integer,
           reference_count: integer
         }
-
   defstruct [:resource_name, :id, :type, :name, :status, :member_count, :reference_count]
 
-  field :resource_name, 1, optional: true, type: :string
-  field :id, 8, optional: true, type: :int64
-
-  field :type, 3,
-    required: true,
-    type: Google.Ads.Googleads.V8.Enums.SharedSetTypeEnum.SharedSetType,
-    enum: true
-
-  field :name, 9, optional: true, type: :string
+  field :resource_name, 1, type: :string
+  field :id, 8, type: :int64
+  field :type, 3, type: Google.Ads.Googleads.V8.Enums.SharedSetTypeEnum.SharedSetType, enum: true
+  field :name, 9, type: :string
 
   field :status, 5,
-    required: true,
     type: Google.Ads.Googleads.V8.Enums.SharedSetStatusEnum.SharedSetStatus,
     enum: true
 
-  field :member_count, 10, optional: true, type: :int64
-  field :reference_count, 11, optional: true, type: :int64
+  field :member_count, 10, type: :int64
+  field :reference_count, 11, type: :int64
 end

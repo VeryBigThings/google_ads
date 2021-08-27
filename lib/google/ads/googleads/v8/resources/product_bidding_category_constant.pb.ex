@@ -1,6 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Resources.ProductBiddingCategoryConstant do
   @moduledoc false
-  use Protobuf, syntax: :proto2
+  use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           resource_name: String.t(),
@@ -14,7 +14,6 @@ defmodule Google.Ads.Googleads.V8.Resources.ProductBiddingCategoryConstant do
           language_code: String.t(),
           localized_name: String.t()
         }
-
   defstruct [
     :resource_name,
     :id,
@@ -26,23 +25,21 @@ defmodule Google.Ads.Googleads.V8.Resources.ProductBiddingCategoryConstant do
     :localized_name
   ]
 
-  field :resource_name, 1, optional: true, type: :string
-  field :id, 10, optional: true, type: :int64
-  field :country_code, 11, optional: true, type: :string
-  field :product_bidding_category_constant_parent, 12, optional: true, type: :string
+  field :resource_name, 1, type: :string
+  field :id, 10, type: :int64
+  field :country_code, 11, type: :string
+  field :product_bidding_category_constant_parent, 12, type: :string
 
   field :level, 5,
-    optional: true,
     type:
       Google.Ads.Googleads.V8.Enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel,
     enum: true
 
   field :status, 6,
-    optional: true,
     type:
       Google.Ads.Googleads.V8.Enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus,
     enum: true
 
-  field :language_code, 13, optional: true, type: :string
-  field :localized_name, 14, optional: true, type: :string
+  field :language_code, 13, type: :string
+  field :localized_name, 14, type: :string
 end

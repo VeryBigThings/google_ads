@@ -1,85 +1,70 @@
 defmodule Google.Ads.Googleads.V8.Services.GetAccountBudgetProposalRequest do
   @moduledoc false
-  use Protobuf, syntax: :proto2
+  use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           resource_name: String.t()
         }
-
   defstruct [:resource_name]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, type: :string
 end
 
 defmodule Google.Ads.Googleads.V8.Services.MutateAccountBudgetProposalRequest do
   @moduledoc false
-  use Protobuf, syntax: :proto2
+  use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           customer_id: String.t(),
           operation: Google.Ads.Googleads.V8.Services.AccountBudgetProposalOperation.t() | nil,
           validate_only: boolean
         }
-
   defstruct [:customer_id, :operation, :validate_only]
 
-  field :customer_id, 1, required: true, type: :string
-
-  field :operation, 2,
-    required: true,
-    type: Google.Ads.Googleads.V8.Services.AccountBudgetProposalOperation
-
-  field :validate_only, 3, optional: true, type: :bool
+  field :customer_id, 1, type: :string
+  field :operation, 2, type: Google.Ads.Googleads.V8.Services.AccountBudgetProposalOperation
+  field :validate_only, 3, type: :bool
 end
 
 defmodule Google.Ads.Googleads.V8.Services.AccountBudgetProposalOperation do
   @moduledoc false
-  use Protobuf, syntax: :proto2
+  use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           operation: {atom, any},
           update_mask: Google.Protobuf.FieldMask.t() | nil
         }
-
   defstruct [:operation, :update_mask]
 
   oneof :operation, 0
-  field :update_mask, 3, optional: true, type: Google.Protobuf.FieldMask
 
-  field :create, 2,
-    optional: true,
-    type: Google.Ads.Googleads.V8.Resources.AccountBudgetProposal,
-    oneof: 0
-
-  field :remove, 1, optional: true, type: :string, oneof: 0
+  field :update_mask, 3, type: Google.Protobuf.FieldMask
+  field :create, 2, type: Google.Ads.Googleads.V8.Resources.AccountBudgetProposal, oneof: 0
+  field :remove, 1, type: :string, oneof: 0
 end
 
 defmodule Google.Ads.Googleads.V8.Services.MutateAccountBudgetProposalResponse do
   @moduledoc false
-  use Protobuf, syntax: :proto2
+  use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           result: Google.Ads.Googleads.V8.Services.MutateAccountBudgetProposalResult.t() | nil
         }
-
   defstruct [:result]
 
-  field :result, 2,
-    optional: true,
-    type: Google.Ads.Googleads.V8.Services.MutateAccountBudgetProposalResult
+  field :result, 2, type: Google.Ads.Googleads.V8.Services.MutateAccountBudgetProposalResult
 end
 
 defmodule Google.Ads.Googleads.V8.Services.MutateAccountBudgetProposalResult do
   @moduledoc false
-  use Protobuf, syntax: :proto2
+  use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           resource_name: String.t()
         }
-
   defstruct [:resource_name]
 
-  field :resource_name, 1, optional: true, type: :string
+  field :resource_name, 1, type: :string
 end
 
 defmodule Google.Ads.Googleads.V8.Services.AccountBudgetProposalService.Service do

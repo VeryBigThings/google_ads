@@ -1,6 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Resources.Invoice.AccountBudgetSummary do
   @moduledoc false
-  use Protobuf, syntax: :proto2
+  use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           customer: String.t(),
@@ -13,7 +13,6 @@ defmodule Google.Ads.Googleads.V8.Resources.Invoice.AccountBudgetSummary do
           total_amount_micros: integer,
           billable_activity_date_range: Google.Ads.Googleads.V8.Common.DateRange.t() | nil
         }
-
   defstruct [
     :customer,
     :customer_descriptive_name,
@@ -26,23 +25,20 @@ defmodule Google.Ads.Googleads.V8.Resources.Invoice.AccountBudgetSummary do
     :billable_activity_date_range
   ]
 
-  field :customer, 10, optional: true, type: :string
-  field :customer_descriptive_name, 11, optional: true, type: :string
-  field :account_budget, 12, optional: true, type: :string
-  field :account_budget_name, 13, optional: true, type: :string
-  field :purchase_order_number, 14, optional: true, type: :string
-  field :subtotal_amount_micros, 15, optional: true, type: :int64
-  field :tax_amount_micros, 16, optional: true, type: :int64
-  field :total_amount_micros, 17, optional: true, type: :int64
-
-  field :billable_activity_date_range, 9,
-    optional: true,
-    type: Google.Ads.Googleads.V8.Common.DateRange
+  field :customer, 10, type: :string
+  field :customer_descriptive_name, 11, type: :string
+  field :account_budget, 12, type: :string
+  field :account_budget_name, 13, type: :string
+  field :purchase_order_number, 14, type: :string
+  field :subtotal_amount_micros, 15, type: :int64
+  field :tax_amount_micros, 16, type: :int64
+  field :total_amount_micros, 17, type: :int64
+  field :billable_activity_date_range, 9, type: Google.Ads.Googleads.V8.Common.DateRange
 end
 
 defmodule Google.Ads.Googleads.V8.Resources.Invoice do
   @moduledoc false
-  use Protobuf, syntax: :proto2
+  use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           resource_name: String.t(),
@@ -71,7 +67,6 @@ defmodule Google.Ads.Googleads.V8.Resources.Invoice do
             Google.Ads.Googleads.V8.Resources.Invoice.AccountBudgetSummary.t()
           ]
         }
-
   defstruct [
     :resource_name,
     :id,
@@ -98,33 +93,28 @@ defmodule Google.Ads.Googleads.V8.Resources.Invoice do
     :account_budget_summaries
   ]
 
-  field :resource_name, 1, optional: true, type: :string
-  field :id, 25, optional: true, type: :string
-
-  field :type, 3,
-    optional: true,
-    type: Google.Ads.Googleads.V8.Enums.InvoiceTypeEnum.InvoiceType,
-    enum: true
-
-  field :billing_setup, 26, optional: true, type: :string
-  field :payments_account_id, 27, optional: true, type: :string
-  field :payments_profile_id, 28, optional: true, type: :string
-  field :issue_date, 29, optional: true, type: :string
-  field :due_date, 30, optional: true, type: :string
-  field :service_date_range, 9, optional: true, type: Google.Ads.Googleads.V8.Common.DateRange
-  field :currency_code, 31, optional: true, type: :string
-  field :adjustments_subtotal_amount_micros, 19, optional: true, type: :int64
-  field :adjustments_tax_amount_micros, 20, optional: true, type: :int64
-  field :adjustments_total_amount_micros, 21, optional: true, type: :int64
-  field :regulatory_costs_subtotal_amount_micros, 22, optional: true, type: :int64
-  field :regulatory_costs_tax_amount_micros, 23, optional: true, type: :int64
-  field :regulatory_costs_total_amount_micros, 24, optional: true, type: :int64
-  field :subtotal_amount_micros, 33, optional: true, type: :int64
-  field :tax_amount_micros, 34, optional: true, type: :int64
-  field :total_amount_micros, 35, optional: true, type: :int64
-  field :corrected_invoice, 36, optional: true, type: :string
+  field :resource_name, 1, type: :string
+  field :id, 25, type: :string
+  field :type, 3, type: Google.Ads.Googleads.V8.Enums.InvoiceTypeEnum.InvoiceType, enum: true
+  field :billing_setup, 26, type: :string
+  field :payments_account_id, 27, type: :string
+  field :payments_profile_id, 28, type: :string
+  field :issue_date, 29, type: :string
+  field :due_date, 30, type: :string
+  field :service_date_range, 9, type: Google.Ads.Googleads.V8.Common.DateRange
+  field :currency_code, 31, type: :string
+  field :adjustments_subtotal_amount_micros, 19, type: :int64
+  field :adjustments_tax_amount_micros, 20, type: :int64
+  field :adjustments_total_amount_micros, 21, type: :int64
+  field :regulatory_costs_subtotal_amount_micros, 22, type: :int64
+  field :regulatory_costs_tax_amount_micros, 23, type: :int64
+  field :regulatory_costs_total_amount_micros, 24, type: :int64
+  field :subtotal_amount_micros, 33, type: :int64
+  field :tax_amount_micros, 34, type: :int64
+  field :total_amount_micros, 35, type: :int64
+  field :corrected_invoice, 36, type: :string
   field :replaced_invoices, 37, repeated: true, type: :string
-  field :pdf_url, 38, optional: true, type: :string
+  field :pdf_url, 38, type: :string
 
   field :account_budget_summaries, 18,
     repeated: true,

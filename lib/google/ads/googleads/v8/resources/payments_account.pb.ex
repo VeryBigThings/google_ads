@@ -1,6 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Resources.PaymentsAccount do
   @moduledoc false
-  use Protobuf, syntax: :proto2
+  use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           resource_name: String.t(),
@@ -11,7 +11,6 @@ defmodule Google.Ads.Googleads.V8.Resources.PaymentsAccount do
           secondary_payments_profile_id: String.t(),
           paying_manager_customer: String.t()
         }
-
   defstruct [
     :resource_name,
     :payments_account_id,
@@ -22,11 +21,11 @@ defmodule Google.Ads.Googleads.V8.Resources.PaymentsAccount do
     :paying_manager_customer
   ]
 
-  field :resource_name, 1, optional: true, type: :string
-  field :payments_account_id, 8, optional: true, type: :string
-  field :name, 9, optional: true, type: :string
-  field :currency_code, 10, optional: true, type: :string
-  field :payments_profile_id, 11, optional: true, type: :string
-  field :secondary_payments_profile_id, 12, optional: true, type: :string
-  field :paying_manager_customer, 13, optional: true, type: :string
+  field :resource_name, 1, type: :string
+  field :payments_account_id, 8, type: :string
+  field :name, 9, type: :string
+  field :currency_code, 10, type: :string
+  field :payments_profile_id, 11, type: :string
+  field :secondary_payments_profile_id, 12, type: :string
+  field :paying_manager_customer, 13, type: :string
 end

@@ -1,6 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Resources.ChangeEvent.ChangedResource do
   @moduledoc false
-  use Protobuf, syntax: :proto2
+  use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           ad: Google.Ads.Googleads.V8.Resources.Ad.t() | nil,
@@ -14,9 +14,12 @@ defmodule Google.Ads.Googleads.V8.Resources.ChangeEvent.ChangedResource do
           feed_item: Google.Ads.Googleads.V8.Resources.FeedItem.t() | nil,
           campaign_feed: Google.Ads.Googleads.V8.Resources.CampaignFeed.t() | nil,
           ad_group_feed: Google.Ads.Googleads.V8.Resources.AdGroupFeed.t() | nil,
-          ad_group_ad: Google.Ads.Googleads.V8.Resources.AdGroupAd.t() | nil
+          ad_group_ad: Google.Ads.Googleads.V8.Resources.AdGroupAd.t() | nil,
+          asset: Google.Ads.Googleads.V8.Resources.Asset.t() | nil,
+          customer_asset: Google.Ads.Googleads.V8.Resources.CustomerAsset.t() | nil,
+          campaign_asset: Google.Ads.Googleads.V8.Resources.CampaignAsset.t() | nil,
+          ad_group_asset: Google.Ads.Googleads.V8.Resources.AdGroupAsset.t() | nil
         }
-
   defstruct [
     :ad,
     :ad_group,
@@ -29,40 +32,34 @@ defmodule Google.Ads.Googleads.V8.Resources.ChangeEvent.ChangedResource do
     :feed_item,
     :campaign_feed,
     :ad_group_feed,
-    :ad_group_ad
+    :ad_group_ad,
+    :asset,
+    :customer_asset,
+    :campaign_asset,
+    :ad_group_asset
   ]
 
-  field :ad, 1, optional: true, type: Google.Ads.Googleads.V8.Resources.Ad
-  field :ad_group, 2, optional: true, type: Google.Ads.Googleads.V8.Resources.AdGroup
-
-  field :ad_group_criterion, 3,
-    optional: true,
-    type: Google.Ads.Googleads.V8.Resources.AdGroupCriterion
-
-  field :campaign, 4, optional: true, type: Google.Ads.Googleads.V8.Resources.Campaign
-
-  field :campaign_budget, 5,
-    optional: true,
-    type: Google.Ads.Googleads.V8.Resources.CampaignBudget
-
-  field :ad_group_bid_modifier, 6,
-    optional: true,
-    type: Google.Ads.Googleads.V8.Resources.AdGroupBidModifier
-
-  field :campaign_criterion, 7,
-    optional: true,
-    type: Google.Ads.Googleads.V8.Resources.CampaignCriterion
-
-  field :feed, 8, optional: true, type: Google.Ads.Googleads.V8.Resources.Feed
-  field :feed_item, 9, optional: true, type: Google.Ads.Googleads.V8.Resources.FeedItem
-  field :campaign_feed, 10, optional: true, type: Google.Ads.Googleads.V8.Resources.CampaignFeed
-  field :ad_group_feed, 11, optional: true, type: Google.Ads.Googleads.V8.Resources.AdGroupFeed
-  field :ad_group_ad, 12, optional: true, type: Google.Ads.Googleads.V8.Resources.AdGroupAd
+  field :ad, 1, type: Google.Ads.Googleads.V8.Resources.Ad
+  field :ad_group, 2, type: Google.Ads.Googleads.V8.Resources.AdGroup
+  field :ad_group_criterion, 3, type: Google.Ads.Googleads.V8.Resources.AdGroupCriterion
+  field :campaign, 4, type: Google.Ads.Googleads.V8.Resources.Campaign
+  field :campaign_budget, 5, type: Google.Ads.Googleads.V8.Resources.CampaignBudget
+  field :ad_group_bid_modifier, 6, type: Google.Ads.Googleads.V8.Resources.AdGroupBidModifier
+  field :campaign_criterion, 7, type: Google.Ads.Googleads.V8.Resources.CampaignCriterion
+  field :feed, 8, type: Google.Ads.Googleads.V8.Resources.Feed
+  field :feed_item, 9, type: Google.Ads.Googleads.V8.Resources.FeedItem
+  field :campaign_feed, 10, type: Google.Ads.Googleads.V8.Resources.CampaignFeed
+  field :ad_group_feed, 11, type: Google.Ads.Googleads.V8.Resources.AdGroupFeed
+  field :ad_group_ad, 12, type: Google.Ads.Googleads.V8.Resources.AdGroupAd
+  field :asset, 13, type: Google.Ads.Googleads.V8.Resources.Asset
+  field :customer_asset, 14, type: Google.Ads.Googleads.V8.Resources.CustomerAsset
+  field :campaign_asset, 15, type: Google.Ads.Googleads.V8.Resources.CampaignAsset
+  field :ad_group_asset, 16, type: Google.Ads.Googleads.V8.Resources.AdGroupAsset
 end
 
 defmodule Google.Ads.Googleads.V8.Resources.ChangeEvent do
   @moduledoc false
-  use Protobuf, syntax: :proto2
+  use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           resource_name: String.t(),
@@ -80,9 +77,9 @@ defmodule Google.Ads.Googleads.V8.Resources.ChangeEvent do
           campaign: String.t(),
           ad_group: String.t(),
           feed: String.t(),
-          feed_item: String.t()
+          feed_item: String.t(),
+          asset: String.t()
         }
-
   defstruct [
     :resource_name,
     :change_date_time,
@@ -97,42 +94,35 @@ defmodule Google.Ads.Googleads.V8.Resources.ChangeEvent do
     :campaign,
     :ad_group,
     :feed,
-    :feed_item
+    :feed_item,
+    :asset
   ]
 
-  field :resource_name, 1, optional: true, type: :string
-  field :change_date_time, 2, optional: true, type: :string
+  field :resource_name, 1, type: :string
+  field :change_date_time, 2, type: :string
 
   field :change_resource_type, 3,
-    optional: true,
     type: Google.Ads.Googleads.V8.Enums.ChangeEventResourceTypeEnum.ChangeEventResourceType,
     enum: true
 
-  field :change_resource_name, 4, optional: true, type: :string
+  field :change_resource_name, 4, type: :string
 
   field :client_type, 5,
-    optional: true,
     type: Google.Ads.Googleads.V8.Enums.ChangeClientTypeEnum.ChangeClientType,
     enum: true
 
-  field :user_email, 6, optional: true, type: :string
-
-  field :old_resource, 7,
-    optional: true,
-    type: Google.Ads.Googleads.V8.Resources.ChangeEvent.ChangedResource
-
-  field :new_resource, 8,
-    optional: true,
-    type: Google.Ads.Googleads.V8.Resources.ChangeEvent.ChangedResource
+  field :user_email, 6, type: :string
+  field :old_resource, 7, type: Google.Ads.Googleads.V8.Resources.ChangeEvent.ChangedResource
+  field :new_resource, 8, type: Google.Ads.Googleads.V8.Resources.ChangeEvent.ChangedResource
 
   field :resource_change_operation, 9,
-    optional: true,
     type: Google.Ads.Googleads.V8.Enums.ResourceChangeOperationEnum.ResourceChangeOperation,
     enum: true
 
-  field :changed_fields, 10, optional: true, type: Google.Protobuf.FieldMask
-  field :campaign, 11, optional: true, type: :string
-  field :ad_group, 12, optional: true, type: :string
-  field :feed, 13, optional: true, type: :string
-  field :feed_item, 14, optional: true, type: :string
+  field :changed_fields, 10, type: Google.Protobuf.FieldMask
+  field :campaign, 11, type: :string
+  field :ad_group, 12, type: :string
+  field :feed, 13, type: :string
+  field :feed_item, 14, type: :string
+  field :asset, 20, type: :string
 end

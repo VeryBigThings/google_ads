@@ -1,24 +1,22 @@
 defmodule Google.Ads.Googleads.V8.Services.ListMerchantCenterLinksRequest do
   @moduledoc false
-  use Protobuf, syntax: :proto2
+  use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           customer_id: String.t()
         }
-
   defstruct [:customer_id]
 
-  field :customer_id, 1, required: true, type: :string
+  field :customer_id, 1, type: :string
 end
 
 defmodule Google.Ads.Googleads.V8.Services.ListMerchantCenterLinksResponse do
   @moduledoc false
-  use Protobuf, syntax: :proto2
+  use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           merchant_center_links: [Google.Ads.Googleads.V8.Resources.MerchantCenterLink.t()]
         }
-
   defstruct [:merchant_center_links]
 
   field :merchant_center_links, 1,
@@ -28,86 +26,71 @@ end
 
 defmodule Google.Ads.Googleads.V8.Services.GetMerchantCenterLinkRequest do
   @moduledoc false
-  use Protobuf, syntax: :proto2
+  use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           resource_name: String.t()
         }
-
   defstruct [:resource_name]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, type: :string
 end
 
 defmodule Google.Ads.Googleads.V8.Services.MutateMerchantCenterLinkRequest do
   @moduledoc false
-  use Protobuf, syntax: :proto2
+  use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           customer_id: String.t(),
           operation: Google.Ads.Googleads.V8.Services.MerchantCenterLinkOperation.t() | nil,
           validate_only: boolean
         }
-
   defstruct [:customer_id, :operation, :validate_only]
 
-  field :customer_id, 1, required: true, type: :string
-
-  field :operation, 2,
-    required: true,
-    type: Google.Ads.Googleads.V8.Services.MerchantCenterLinkOperation
-
-  field :validate_only, 3, optional: true, type: :bool
+  field :customer_id, 1, type: :string
+  field :operation, 2, type: Google.Ads.Googleads.V8.Services.MerchantCenterLinkOperation
+  field :validate_only, 3, type: :bool
 end
 
 defmodule Google.Ads.Googleads.V8.Services.MerchantCenterLinkOperation do
   @moduledoc false
-  use Protobuf, syntax: :proto2
+  use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           operation: {atom, any},
           update_mask: Google.Protobuf.FieldMask.t() | nil
         }
-
   defstruct [:operation, :update_mask]
 
   oneof :operation, 0
-  field :update_mask, 3, optional: true, type: Google.Protobuf.FieldMask
 
-  field :update, 1,
-    optional: true,
-    type: Google.Ads.Googleads.V8.Resources.MerchantCenterLink,
-    oneof: 0
-
-  field :remove, 2, optional: true, type: :string, oneof: 0
+  field :update_mask, 3, type: Google.Protobuf.FieldMask
+  field :update, 1, type: Google.Ads.Googleads.V8.Resources.MerchantCenterLink, oneof: 0
+  field :remove, 2, type: :string, oneof: 0
 end
 
 defmodule Google.Ads.Googleads.V8.Services.MutateMerchantCenterLinkResponse do
   @moduledoc false
-  use Protobuf, syntax: :proto2
+  use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           result: Google.Ads.Googleads.V8.Services.MutateMerchantCenterLinkResult.t() | nil
         }
-
   defstruct [:result]
 
-  field :result, 2,
-    optional: true,
-    type: Google.Ads.Googleads.V8.Services.MutateMerchantCenterLinkResult
+  field :result, 2, type: Google.Ads.Googleads.V8.Services.MutateMerchantCenterLinkResult
 end
 
 defmodule Google.Ads.Googleads.V8.Services.MutateMerchantCenterLinkResult do
   @moduledoc false
-  use Protobuf, syntax: :proto2
+  use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           resource_name: String.t()
         }
-
   defstruct [:resource_name]
 
-  field :resource_name, 1, optional: true, type: :string
+  field :resource_name, 1, type: :string
 end
 
 defmodule Google.Ads.Googleads.V8.Services.MerchantCenterLinkService.Service do

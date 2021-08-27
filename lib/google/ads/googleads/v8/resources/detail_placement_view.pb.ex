@@ -1,6 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Resources.DetailPlacementView do
   @moduledoc false
-  use Protobuf, syntax: :proto2
+  use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           resource_name: String.t(),
@@ -10,7 +10,6 @@ defmodule Google.Ads.Googleads.V8.Resources.DetailPlacementView do
           target_url: String.t(),
           placement_type: Google.Ads.Googleads.V8.Enums.PlacementTypeEnum.PlacementType.t()
         }
-
   defstruct [
     :resource_name,
     :placement,
@@ -20,14 +19,13 @@ defmodule Google.Ads.Googleads.V8.Resources.DetailPlacementView do
     :placement_type
   ]
 
-  field :resource_name, 1, optional: true, type: :string
-  field :placement, 7, optional: true, type: :string
-  field :display_name, 8, optional: true, type: :string
-  field :group_placement_target_url, 9, optional: true, type: :string
-  field :target_url, 10, optional: true, type: :string
+  field :resource_name, 1, type: :string
+  field :placement, 7, type: :string
+  field :display_name, 8, type: :string
+  field :group_placement_target_url, 9, type: :string
+  field :target_url, 10, type: :string
 
   field :placement_type, 6,
-    optional: true,
     type: Google.Ads.Googleads.V8.Enums.PlacementTypeEnum.PlacementType,
     enum: true
 end

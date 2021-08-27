@@ -1,6 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Resources.ChangeStatus do
   @moduledoc false
-  use Protobuf, syntax: :proto2
+  use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           resource_name: String.t(),
@@ -18,9 +18,14 @@ defmodule Google.Ads.Googleads.V8.Resources.ChangeStatus do
           feed_item: String.t(),
           ad_group_feed: String.t(),
           campaign_feed: String.t(),
-          ad_group_bid_modifier: String.t()
+          ad_group_bid_modifier: String.t(),
+          shared_set: String.t(),
+          campaign_shared_set: String.t(),
+          asset: String.t(),
+          customer_asset: String.t(),
+          campaign_asset: String.t(),
+          ad_group_asset: String.t()
         }
-
   defstruct [
     :resource_name,
     :last_change_date_time,
@@ -35,31 +40,41 @@ defmodule Google.Ads.Googleads.V8.Resources.ChangeStatus do
     :feed_item,
     :ad_group_feed,
     :campaign_feed,
-    :ad_group_bid_modifier
+    :ad_group_bid_modifier,
+    :shared_set,
+    :campaign_shared_set,
+    :asset,
+    :customer_asset,
+    :campaign_asset,
+    :ad_group_asset
   ]
 
-  field :resource_name, 1, optional: true, type: :string
-  field :last_change_date_time, 24, optional: true, type: :string
+  field :resource_name, 1, type: :string
+  field :last_change_date_time, 24, type: :string
 
   field :resource_type, 4,
-    required: true,
     type: Google.Ads.Googleads.V8.Enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType,
     enum: true
 
-  field :campaign, 17, optional: true, type: :string
-  field :ad_group, 18, optional: true, type: :string
+  field :campaign, 17, type: :string
+  field :ad_group, 18, type: :string
 
   field :resource_status, 8,
-    required: true,
     type: Google.Ads.Googleads.V8.Enums.ChangeStatusOperationEnum.ChangeStatusOperation,
     enum: true
 
-  field :ad_group_ad, 25, optional: true, type: :string
-  field :ad_group_criterion, 26, optional: true, type: :string
-  field :campaign_criterion, 27, optional: true, type: :string
-  field :feed, 28, optional: true, type: :string
-  field :feed_item, 29, optional: true, type: :string
-  field :ad_group_feed, 30, optional: true, type: :string
-  field :campaign_feed, 31, optional: true, type: :string
-  field :ad_group_bid_modifier, 32, optional: true, type: :string
+  field :ad_group_ad, 25, type: :string
+  field :ad_group_criterion, 26, type: :string
+  field :campaign_criterion, 27, type: :string
+  field :feed, 28, type: :string
+  field :feed_item, 29, type: :string
+  field :ad_group_feed, 30, type: :string
+  field :campaign_feed, 31, type: :string
+  field :ad_group_bid_modifier, 32, type: :string
+  field :shared_set, 33, type: :string
+  field :campaign_shared_set, 34, type: :string
+  field :asset, 35, type: :string
+  field :customer_asset, 36, type: :string
+  field :campaign_asset, 37, type: :string
+  field :ad_group_asset, 38, type: :string
 end

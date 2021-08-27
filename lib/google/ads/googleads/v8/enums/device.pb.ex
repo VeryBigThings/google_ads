@@ -1,6 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Enums.DeviceEnum.Device do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto2
+  use Protobuf, enum: true, syntax: :proto3
 
   @type t ::
           integer
@@ -13,24 +13,18 @@ defmodule Google.Ads.Googleads.V8.Enums.DeviceEnum.Device do
           | :OTHER
 
   field :UNSPECIFIED, 0
-
   field :UNKNOWN, 1
-
   field :MOBILE, 2
-
   field :TABLET, 3
-
   field :DESKTOP, 4
-
   field :CONNECTED_TV, 6
-
   field :OTHER, 5
 end
 
 defmodule Google.Ads.Googleads.V8.Enums.DeviceEnum do
   @moduledoc false
-  use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
+  use Protobuf, syntax: :proto3
 
+  @type t :: %__MODULE__{}
   defstruct []
 end

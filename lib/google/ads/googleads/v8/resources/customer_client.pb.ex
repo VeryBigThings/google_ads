@@ -1,6 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Resources.CustomerClient do
   @moduledoc false
-  use Protobuf, syntax: :proto2
+  use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           resource_name: String.t(),
@@ -15,7 +15,6 @@ defmodule Google.Ads.Googleads.V8.Resources.CustomerClient do
           id: integer,
           applied_labels: [String.t()]
         }
-
   defstruct [
     :resource_name,
     :client_customer,
@@ -30,15 +29,15 @@ defmodule Google.Ads.Googleads.V8.Resources.CustomerClient do
     :applied_labels
   ]
 
-  field :resource_name, 1, optional: true, type: :string
-  field :client_customer, 12, optional: true, type: :string
-  field :hidden, 13, optional: true, type: :bool
-  field :level, 14, optional: true, type: :int64
-  field :time_zone, 15, optional: true, type: :string
-  field :test_account, 16, optional: true, type: :bool
-  field :manager, 17, optional: true, type: :bool
-  field :descriptive_name, 18, optional: true, type: :string
-  field :currency_code, 19, optional: true, type: :string
-  field :id, 20, optional: true, type: :int64
+  field :resource_name, 1, type: :string
+  field :client_customer, 12, type: :string
+  field :hidden, 13, type: :bool
+  field :level, 14, type: :int64
+  field :time_zone, 15, type: :string
+  field :test_account, 16, type: :bool
+  field :manager, 17, type: :bool
+  field :descriptive_name, 18, type: :string
+  field :currency_code, 19, type: :string
+  field :id, 20, type: :int64
   field :applied_labels, 21, repeated: true, type: :string
 end

@@ -1,6 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Resources.DomainCategory do
   @moduledoc false
-  use Protobuf, syntax: :proto2
+  use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           resource_name: String.t(),
@@ -13,7 +13,6 @@ defmodule Google.Ads.Googleads.V8.Resources.DomainCategory do
           has_children: boolean,
           recommended_cpc_bid_micros: integer
         }
-
   defstruct [
     :resource_name,
     :campaign,
@@ -26,13 +25,13 @@ defmodule Google.Ads.Googleads.V8.Resources.DomainCategory do
     :recommended_cpc_bid_micros
   ]
 
-  field :resource_name, 1, optional: true, type: :string
-  field :campaign, 10, optional: true, type: :string
-  field :category, 11, optional: true, type: :string
-  field :language_code, 12, optional: true, type: :string
-  field :domain, 13, optional: true, type: :string
-  field :coverage_fraction, 14, optional: true, type: :double
-  field :category_rank, 15, optional: true, type: :int64
-  field :has_children, 16, optional: true, type: :bool
-  field :recommended_cpc_bid_micros, 17, optional: true, type: :int64
+  field :resource_name, 1, type: :string
+  field :campaign, 10, type: :string
+  field :category, 11, type: :string
+  field :language_code, 12, type: :string
+  field :domain, 13, type: :string
+  field :coverage_fraction, 14, type: :double
+  field :category_rank, 15, type: :int64
+  field :has_children, 16, type: :bool
+  field :recommended_cpc_bid_micros, 17, type: :int64
 end

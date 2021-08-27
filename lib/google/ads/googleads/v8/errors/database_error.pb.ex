@@ -1,6 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Errors.DatabaseErrorEnum.DatabaseError do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto2
+  use Protobuf, enum: true, syntax: :proto3
 
   @type t ::
           integer
@@ -11,20 +11,16 @@ defmodule Google.Ads.Googleads.V8.Errors.DatabaseErrorEnum.DatabaseError do
           | :REQUEST_TOO_LARGE
 
   field :UNSPECIFIED, 0
-
   field :UNKNOWN, 1
-
   field :CONCURRENT_MODIFICATION, 2
-
   field :DATA_CONSTRAINT_VIOLATION, 3
-
   field :REQUEST_TOO_LARGE, 4
 end
 
 defmodule Google.Ads.Googleads.V8.Errors.DatabaseErrorEnum do
   @moduledoc false
-  use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
+  use Protobuf, syntax: :proto3
 
+  @type t :: %__MODULE__{}
   defstruct []
 end

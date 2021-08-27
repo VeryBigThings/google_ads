@@ -1,6 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto2
+  use Protobuf, enum: true, syntax: :proto3
 
   @type t ::
           integer
@@ -11,20 +11,16 @@ defmodule Google.Ads.Googleads.V8.Enums.UserListCrmDataSourceTypeEnum.UserListCr
           | :THIRD_PARTY_VOTER_FILE
 
   field :UNSPECIFIED, 0
-
   field :UNKNOWN, 1
-
   field :FIRST_PARTY, 2
-
   field :THIRD_PARTY_CREDIT_BUREAU, 3
-
   field :THIRD_PARTY_VOTER_FILE, 4
 end
 
 defmodule Google.Ads.Googleads.V8.Enums.UserListCrmDataSourceTypeEnum do
   @moduledoc false
-  use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
+  use Protobuf, syntax: :proto3
 
+  @type t :: %__MODULE__{}
   defstruct []
 end

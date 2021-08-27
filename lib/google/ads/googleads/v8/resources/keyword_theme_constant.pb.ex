@@ -1,6 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Resources.KeywordThemeConstant do
   @moduledoc false
-  use Protobuf, syntax: :proto2
+  use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           resource_name: String.t(),
@@ -8,11 +8,10 @@ defmodule Google.Ads.Googleads.V8.Resources.KeywordThemeConstant do
           language_code: String.t(),
           display_name: String.t()
         }
-
   defstruct [:resource_name, :country_code, :language_code, :display_name]
 
-  field :resource_name, 1, optional: true, type: :string
-  field :country_code, 2, optional: true, type: :string
-  field :language_code, 3, optional: true, type: :string
-  field :display_name, 4, optional: true, type: :string
+  field :resource_name, 1, type: :string
+  field :country_code, 2, type: :string
+  field :language_code, 3, type: :string
+  field :display_name, 4, type: :string
 end

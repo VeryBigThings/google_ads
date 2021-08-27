@@ -1,6 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Common.OfflineUserAddressInfo do
   @moduledoc false
-  use Protobuf, syntax: :proto2
+  use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           hashed_first_name: String.t(),
@@ -8,52 +8,55 @@ defmodule Google.Ads.Googleads.V8.Common.OfflineUserAddressInfo do
           city: String.t(),
           state: String.t(),
           country_code: String.t(),
-          postal_code: String.t()
+          postal_code: String.t(),
+          hashed_street_address: String.t()
         }
+  defstruct [
+    :hashed_first_name,
+    :hashed_last_name,
+    :city,
+    :state,
+    :country_code,
+    :postal_code,
+    :hashed_street_address
+  ]
 
-  defstruct [:hashed_first_name, :hashed_last_name, :city, :state, :country_code, :postal_code]
-
-  field :hashed_first_name, 7, optional: true, type: :string
-  field :hashed_last_name, 8, optional: true, type: :string
-  field :city, 9, optional: true, type: :string
-  field :state, 10, optional: true, type: :string
-  field :country_code, 11, optional: true, type: :string
-  field :postal_code, 12, optional: true, type: :string
+  field :hashed_first_name, 7, type: :string
+  field :hashed_last_name, 8, type: :string
+  field :city, 9, type: :string
+  field :state, 10, type: :string
+  field :country_code, 11, type: :string
+  field :postal_code, 12, type: :string
+  field :hashed_street_address, 13, type: :string
 end
 
 defmodule Google.Ads.Googleads.V8.Common.UserIdentifier do
   @moduledoc false
-  use Protobuf, syntax: :proto2
+  use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           identifier: {atom, any},
           user_identifier_source:
             Google.Ads.Googleads.V8.Enums.UserIdentifierSourceEnum.UserIdentifierSource.t()
         }
-
   defstruct [:identifier, :user_identifier_source]
 
   oneof :identifier, 0
 
   field :user_identifier_source, 6,
-    optional: true,
     type: Google.Ads.Googleads.V8.Enums.UserIdentifierSourceEnum.UserIdentifierSource,
     enum: true
 
-  field :hashed_email, 7, optional: true, type: :string, oneof: 0
-  field :hashed_phone_number, 8, optional: true, type: :string, oneof: 0
-  field :mobile_id, 9, optional: true, type: :string, oneof: 0
-  field :third_party_user_id, 10, optional: true, type: :string, oneof: 0
-
-  field :address_info, 5,
-    optional: true,
-    type: Google.Ads.Googleads.V8.Common.OfflineUserAddressInfo,
-    oneof: 0
+  field :hashed_email, 7, type: :string, oneof: 0
+  field :hashed_phone_number, 8, type: :string, oneof: 0
+  field :mobile_id, 9, type: :string, oneof: 0
+  field :third_party_user_id, 10, type: :string, oneof: 0
+  field :address_info, 5, type: Google.Ads.Googleads.V8.Common.OfflineUserAddressInfo, oneof: 0
 end
 
 defmodule Google.Ads.Googleads.V8.Common.TransactionAttribute do
   @moduledoc false
-  use Protobuf, syntax: :proto2
+  use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           transaction_date_time: String.t(),
@@ -65,7 +68,6 @@ defmodule Google.Ads.Googleads.V8.Common.TransactionAttribute do
           custom_value: String.t(),
           item_attribute: Google.Ads.Googleads.V8.Common.ItemAttribute.t() | nil
         }
-
   defstruct [
     :transaction_date_time,
     :transaction_amount_micros,
@@ -77,32 +79,31 @@ defmodule Google.Ads.Googleads.V8.Common.TransactionAttribute do
     :item_attribute
   ]
 
-  field :transaction_date_time, 8, optional: true, type: :string
-  field :transaction_amount_micros, 9, optional: true, type: :double
-  field :currency_code, 10, optional: true, type: :string
-  field :conversion_action, 11, optional: true, type: :string
-  field :order_id, 12, optional: true, type: :string
-  field :store_attribute, 6, optional: true, type: Google.Ads.Googleads.V8.Common.StoreAttribute
-  field :custom_value, 13, optional: true, type: :string
-  field :item_attribute, 14, optional: true, type: Google.Ads.Googleads.V8.Common.ItemAttribute
+  field :transaction_date_time, 8, type: :string
+  field :transaction_amount_micros, 9, type: :double
+  field :currency_code, 10, type: :string
+  field :conversion_action, 11, type: :string
+  field :order_id, 12, type: :string
+  field :store_attribute, 6, type: Google.Ads.Googleads.V8.Common.StoreAttribute
+  field :custom_value, 13, type: :string
+  field :item_attribute, 14, type: Google.Ads.Googleads.V8.Common.ItemAttribute
 end
 
 defmodule Google.Ads.Googleads.V8.Common.StoreAttribute do
   @moduledoc false
-  use Protobuf, syntax: :proto2
+  use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           store_code: String.t()
         }
-
   defstruct [:store_code]
 
-  field :store_code, 2, optional: true, type: :string
+  field :store_code, 2, type: :string
 end
 
 defmodule Google.Ads.Googleads.V8.Common.ItemAttribute do
   @moduledoc false
-  use Protobuf, syntax: :proto2
+  use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           item_id: String.t(),
@@ -111,40 +112,34 @@ defmodule Google.Ads.Googleads.V8.Common.ItemAttribute do
           language_code: String.t(),
           quantity: integer
         }
-
   defstruct [:item_id, :merchant_id, :country_code, :language_code, :quantity]
 
-  field :item_id, 1, optional: true, type: :string
-  field :merchant_id, 2, optional: true, type: :int64
-  field :country_code, 3, optional: true, type: :string
-  field :language_code, 4, optional: true, type: :string
-  field :quantity, 5, optional: true, type: :int64
+  field :item_id, 1, type: :string
+  field :merchant_id, 2, type: :int64
+  field :country_code, 3, type: :string
+  field :language_code, 4, type: :string
+  field :quantity, 5, type: :int64
 end
 
 defmodule Google.Ads.Googleads.V8.Common.UserData do
   @moduledoc false
-  use Protobuf, syntax: :proto2
+  use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           user_identifiers: [Google.Ads.Googleads.V8.Common.UserIdentifier.t()],
           transaction_attribute: Google.Ads.Googleads.V8.Common.TransactionAttribute.t() | nil,
           user_attribute: Google.Ads.Googleads.V8.Common.UserAttribute.t() | nil
         }
-
   defstruct [:user_identifiers, :transaction_attribute, :user_attribute]
 
   field :user_identifiers, 1, repeated: true, type: Google.Ads.Googleads.V8.Common.UserIdentifier
-
-  field :transaction_attribute, 2,
-    optional: true,
-    type: Google.Ads.Googleads.V8.Common.TransactionAttribute
-
-  field :user_attribute, 3, optional: true, type: Google.Ads.Googleads.V8.Common.UserAttribute
+  field :transaction_attribute, 2, type: Google.Ads.Googleads.V8.Common.TransactionAttribute
+  field :user_attribute, 3, type: Google.Ads.Googleads.V8.Common.UserAttribute
 end
 
 defmodule Google.Ads.Googleads.V8.Common.UserAttribute do
   @moduledoc false
-  use Protobuf, syntax: :proto2
+  use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           lifetime_value_micros: integer,
@@ -154,7 +149,6 @@ defmodule Google.Ads.Googleads.V8.Common.UserAttribute do
           average_purchase_value_micros: integer,
           acquisition_date_time: String.t()
         }
-
   defstruct [
     :lifetime_value_micros,
     :lifetime_value_bucket,
@@ -164,30 +158,29 @@ defmodule Google.Ads.Googleads.V8.Common.UserAttribute do
     :acquisition_date_time
   ]
 
-  field :lifetime_value_micros, 1, optional: true, type: :int64
-  field :lifetime_value_bucket, 2, optional: true, type: :int32
-  field :last_purchase_date_time, 3, optional: true, type: :string
-  field :average_purchase_count, 4, optional: true, type: :int32
-  field :average_purchase_value_micros, 5, optional: true, type: :int64
-  field :acquisition_date_time, 6, optional: true, type: :string
+  field :lifetime_value_micros, 1, type: :int64
+  field :lifetime_value_bucket, 2, type: :int32
+  field :last_purchase_date_time, 3, type: :string
+  field :average_purchase_count, 4, type: :int32
+  field :average_purchase_value_micros, 5, type: :int64
+  field :acquisition_date_time, 6, type: :string
 end
 
 defmodule Google.Ads.Googleads.V8.Common.CustomerMatchUserListMetadata do
   @moduledoc false
-  use Protobuf, syntax: :proto2
+  use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           user_list: String.t()
         }
-
   defstruct [:user_list]
 
-  field :user_list, 2, optional: true, type: :string
+  field :user_list, 2, type: :string
 end
 
 defmodule Google.Ads.Googleads.V8.Common.StoreSalesMetadata do
   @moduledoc false
-  use Protobuf, syntax: :proto2
+  use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           loyalty_fraction: float | :infinity | :negative_infinity | :nan,
@@ -196,21 +189,19 @@ defmodule Google.Ads.Googleads.V8.Common.StoreSalesMetadata do
           third_party_metadata:
             Google.Ads.Googleads.V8.Common.StoreSalesThirdPartyMetadata.t() | nil
         }
-
   defstruct [:loyalty_fraction, :transaction_upload_fraction, :custom_key, :third_party_metadata]
 
-  field :loyalty_fraction, 5, optional: true, type: :double
-  field :transaction_upload_fraction, 6, optional: true, type: :double
-  field :custom_key, 7, optional: true, type: :string
+  field :loyalty_fraction, 5, type: :double
+  field :transaction_upload_fraction, 6, type: :double
+  field :custom_key, 7, type: :string
 
   field :third_party_metadata, 3,
-    optional: true,
     type: Google.Ads.Googleads.V8.Common.StoreSalesThirdPartyMetadata
 end
 
 defmodule Google.Ads.Googleads.V8.Common.StoreSalesThirdPartyMetadata do
   @moduledoc false
-  use Protobuf, syntax: :proto2
+  use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           advertiser_upload_date_time: String.t(),
@@ -220,7 +211,6 @@ defmodule Google.Ads.Googleads.V8.Common.StoreSalesThirdPartyMetadata do
           bridge_map_version_id: String.t(),
           partner_id: integer
         }
-
   defstruct [
     :advertiser_upload_date_time,
     :valid_transaction_fraction,
@@ -230,10 +220,10 @@ defmodule Google.Ads.Googleads.V8.Common.StoreSalesThirdPartyMetadata do
     :partner_id
   ]
 
-  field :advertiser_upload_date_time, 7, optional: true, type: :string
-  field :valid_transaction_fraction, 8, optional: true, type: :double
-  field :partner_match_fraction, 9, optional: true, type: :double
-  field :partner_upload_fraction, 10, optional: true, type: :double
-  field :bridge_map_version_id, 11, optional: true, type: :string
-  field :partner_id, 12, optional: true, type: :int64
+  field :advertiser_upload_date_time, 7, type: :string
+  field :valid_transaction_fraction, 8, type: :double
+  field :partner_match_fraction, 9, type: :double
+  field :partner_upload_fraction, 10, type: :double
+  field :bridge_map_version_id, 11, type: :string
+  field :partner_id, 12, type: :int64
 end

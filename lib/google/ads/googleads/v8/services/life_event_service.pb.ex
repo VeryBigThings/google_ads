@@ -1,14 +1,13 @@
 defmodule Google.Ads.Googleads.V8.Services.GetLifeEventRequest do
   @moduledoc false
-  use Protobuf, syntax: :proto2
+  use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           resource_name: String.t()
         }
-
   defstruct [:resource_name]
 
-  field :resource_name, 1, required: true, type: :string
+  field :resource_name, 1, type: :string
 end
 
 defmodule Google.Ads.Googleads.V8.Services.LifeEventService.Service do

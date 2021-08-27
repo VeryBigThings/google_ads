@@ -1,6 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Enums.TrackingCodeTypeEnum.TrackingCodeType do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto2
+  use Protobuf, enum: true, syntax: :proto3
 
   @type t ::
           integer
@@ -12,22 +12,17 @@ defmodule Google.Ads.Googleads.V8.Enums.TrackingCodeTypeEnum.TrackingCodeType do
           | :WEBSITE_CALL
 
   field :UNSPECIFIED, 0
-
   field :UNKNOWN, 1
-
   field :WEBPAGE, 2
-
   field :WEBPAGE_ONCLICK, 3
-
   field :CLICK_TO_CALL, 4
-
   field :WEBSITE_CALL, 5
 end
 
 defmodule Google.Ads.Googleads.V8.Enums.TrackingCodeTypeEnum do
   @moduledoc false
-  use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
+  use Protobuf, syntax: :proto3
 
+  @type t :: %__MODULE__{}
   defstruct []
 end

@@ -1,6 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Enums.UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto2
+  use Protobuf, enum: true, syntax: :proto3
 
   @type t ::
           integer
@@ -14,26 +14,19 @@ defmodule Google.Ads.Googleads.V8.Enums.UserListNumberRuleItemOperatorEnum.UserL
           | :LESS_THAN_OR_EQUAL
 
   field :UNSPECIFIED, 0
-
   field :UNKNOWN, 1
-
   field :GREATER_THAN, 2
-
   field :GREATER_THAN_OR_EQUAL, 3
-
   field :EQUALS, 4
-
   field :NOT_EQUALS, 5
-
   field :LESS_THAN, 6
-
   field :LESS_THAN_OR_EQUAL, 7
 end
 
 defmodule Google.Ads.Googleads.V8.Enums.UserListNumberRuleItemOperatorEnum do
   @moduledoc false
-  use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
+  use Protobuf, syntax: :proto3
 
+  @type t :: %__MODULE__{}
   defstruct []
 end

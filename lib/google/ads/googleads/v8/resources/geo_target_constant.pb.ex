@@ -1,6 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Resources.GeoTargetConstant do
   @moduledoc false
-  use Protobuf, syntax: :proto2
+  use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           resource_name: String.t(),
@@ -13,7 +13,6 @@ defmodule Google.Ads.Googleads.V8.Resources.GeoTargetConstant do
           canonical_name: String.t(),
           parent_geo_target: String.t()
         }
-
   defstruct [
     :resource_name,
     :id,
@@ -25,17 +24,16 @@ defmodule Google.Ads.Googleads.V8.Resources.GeoTargetConstant do
     :parent_geo_target
   ]
 
-  field :resource_name, 1, optional: true, type: :string
-  field :id, 10, optional: true, type: :int64
-  field :name, 11, optional: true, type: :string
-  field :country_code, 12, optional: true, type: :string
-  field :target_type, 13, optional: true, type: :string
+  field :resource_name, 1, type: :string
+  field :id, 10, type: :int64
+  field :name, 11, type: :string
+  field :country_code, 12, type: :string
+  field :target_type, 13, type: :string
 
   field :status, 7,
-    required: true,
     type: Google.Ads.Googleads.V8.Enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus,
     enum: true
 
-  field :canonical_name, 14, optional: true, type: :string
-  field :parent_geo_target, 9, optional: true, type: :string
+  field :canonical_name, 14, type: :string
+  field :parent_geo_target, 9, type: :string
 end

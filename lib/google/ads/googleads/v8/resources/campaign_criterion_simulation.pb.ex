@@ -1,6 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Resources.CampaignCriterionSimulation do
   @moduledoc false
-  use Protobuf, syntax: :proto2
+  use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           point_list: {atom, any},
@@ -13,7 +13,6 @@ defmodule Google.Ads.Googleads.V8.Resources.CampaignCriterionSimulation do
           start_date: String.t(),
           end_date: String.t()
         }
-
   defstruct [
     :point_list,
     :resource_name,
@@ -26,26 +25,24 @@ defmodule Google.Ads.Googleads.V8.Resources.CampaignCriterionSimulation do
   ]
 
   oneof :point_list, 0
-  field :resource_name, 1, optional: true, type: :string
-  field :campaign_id, 9, optional: true, type: :int64
-  field :criterion_id, 10, optional: true, type: :int64
+
+  field :resource_name, 1, type: :string
+  field :campaign_id, 9, type: :int64
+  field :criterion_id, 10, type: :int64
 
   field :type, 4,
-    optional: true,
     type: Google.Ads.Googleads.V8.Enums.SimulationTypeEnum.SimulationType,
     enum: true
 
   field :modification_method, 5,
-    optional: true,
     type:
       Google.Ads.Googleads.V8.Enums.SimulationModificationMethodEnum.SimulationModificationMethod,
     enum: true
 
-  field :start_date, 11, optional: true, type: :string
-  field :end_date, 12, optional: true, type: :string
+  field :start_date, 11, type: :string
+  field :end_date, 12, type: :string
 
   field :bid_modifier_point_list, 8,
-    optional: true,
     type: Google.Ads.Googleads.V8.Common.BidModifierSimulationPointList,
     oneof: 0
 end

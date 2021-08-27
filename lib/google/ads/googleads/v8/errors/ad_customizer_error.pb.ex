@@ -1,6 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Errors.AdCustomizerErrorEnum.AdCustomizerError do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto2
+  use Protobuf, enum: true, syntax: :proto3
 
   @type t ::
           integer
@@ -13,24 +13,18 @@ defmodule Google.Ads.Googleads.V8.Errors.AdCustomizerErrorEnum.AdCustomizerError
           | :UNKNOWN_USER_LIST
 
   field :UNSPECIFIED, 0
-
   field :UNKNOWN, 1
-
   field :COUNTDOWN_INVALID_DATE_FORMAT, 2
-
   field :COUNTDOWN_DATE_IN_PAST, 3
-
   field :COUNTDOWN_INVALID_LOCALE, 4
-
   field :COUNTDOWN_INVALID_START_DAYS_BEFORE, 5
-
   field :UNKNOWN_USER_LIST, 6
 end
 
 defmodule Google.Ads.Googleads.V8.Errors.AdCustomizerErrorEnum do
   @moduledoc false
-  use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
+  use Protobuf, syntax: :proto3
 
+  @type t :: %__MODULE__{}
   defstruct []
 end

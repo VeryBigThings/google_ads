@@ -1,6 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Resources.CampaignExperiment do
   @moduledoc false
-  use Protobuf, syntax: :proto2
+  use Protobuf, syntax: :proto3
 
   @type t :: %__MODULE__{
           resource_name: String.t(),
@@ -18,7 +18,6 @@ defmodule Google.Ads.Googleads.V8.Resources.CampaignExperiment do
           start_date: String.t(),
           end_date: String.t()
         }
-
   defstruct [
     :resource_name,
     :id,
@@ -34,27 +33,25 @@ defmodule Google.Ads.Googleads.V8.Resources.CampaignExperiment do
     :end_date
   ]
 
-  field :resource_name, 1, optional: true, type: :string
-  field :id, 13, optional: true, type: :int64
-  field :campaign_draft, 14, optional: true, type: :string
-  field :name, 15, optional: true, type: :string
-  field :description, 16, optional: true, type: :string
-  field :traffic_split_percent, 17, optional: true, type: :int64
+  field :resource_name, 1, type: :string
+  field :id, 13, type: :int64
+  field :campaign_draft, 14, type: :string
+  field :name, 15, type: :string
+  field :description, 16, type: :string
+  field :traffic_split_percent, 17, type: :int64
 
   field :traffic_split_type, 7,
-    optional: true,
     type:
       Google.Ads.Googleads.V8.Enums.CampaignExperimentTrafficSplitTypeEnum.CampaignExperimentTrafficSplitType,
     enum: true
 
-  field :experiment_campaign, 18, optional: true, type: :string
+  field :experiment_campaign, 18, type: :string
 
   field :status, 9,
-    optional: true,
     type: Google.Ads.Googleads.V8.Enums.CampaignExperimentStatusEnum.CampaignExperimentStatus,
     enum: true
 
-  field :long_running_operation, 19, optional: true, type: :string
-  field :start_date, 20, optional: true, type: :string
-  field :end_date, 21, optional: true, type: :string
+  field :long_running_operation, 19, type: :string
+  field :start_date, 20, type: :string
+  field :end_date, 21, type: :string
 end
