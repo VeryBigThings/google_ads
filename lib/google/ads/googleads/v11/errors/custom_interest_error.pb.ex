@@ -1,18 +1,6 @@
 defmodule Google.Ads.Googleads.V11.Errors.CustomInterestErrorEnum.CustomInterestError do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto3
-
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :NAME_ALREADY_USED
-          | :CUSTOM_INTEREST_MEMBER_ID_AND_TYPE_PARAMETER_NOT_PRESENT_IN_REMOVE
-          | :TYPE_AND_PARAMETER_NOT_FOUND
-          | :TYPE_AND_PARAMETER_ALREADY_EXISTED
-          | :INVALID_CUSTOM_INTEREST_MEMBER_TYPE
-          | :CANNOT_REMOVE_WHILE_IN_USE
-          | :CANNOT_CHANGE_TYPE
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
@@ -24,11 +12,8 @@ defmodule Google.Ads.Googleads.V11.Errors.CustomInterestErrorEnum.CustomInterest
   field :CANNOT_REMOVE_WHILE_IN_USE, 7
   field :CANNOT_CHANGE_TYPE, 8
 end
+
 defmodule Google.Ads.Googleads.V11.Errors.CustomInterestErrorEnum do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{}
-
-  defstruct []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 end

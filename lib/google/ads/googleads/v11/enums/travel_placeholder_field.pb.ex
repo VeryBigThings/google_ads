@@ -1,31 +1,6 @@
 defmodule Google.Ads.Googleads.V11.Enums.TravelPlaceholderFieldEnum.TravelPlaceholderField do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto3
-
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :DESTINATION_ID
-          | :ORIGIN_ID
-          | :TITLE
-          | :DESTINATION_NAME
-          | :ORIGIN_NAME
-          | :PRICE
-          | :FORMATTED_PRICE
-          | :SALE_PRICE
-          | :FORMATTED_SALE_PRICE
-          | :IMAGE_URL
-          | :CATEGORY
-          | :CONTEXTUAL_KEYWORDS
-          | :DESTINATION_ADDRESS
-          | :FINAL_URL
-          | :FINAL_MOBILE_URLS
-          | :TRACKING_URL
-          | :ANDROID_APP_LINK
-          | :SIMILAR_DESTINATION_IDS
-          | :IOS_APP_LINK
-          | :IOS_APP_STORE_ID
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
@@ -50,11 +25,8 @@ defmodule Google.Ads.Googleads.V11.Enums.TravelPlaceholderFieldEnum.TravelPlaceh
   field :IOS_APP_LINK, 20
   field :IOS_APP_STORE_ID, 21
 end
+
 defmodule Google.Ads.Googleads.V11.Enums.TravelPlaceholderFieldEnum do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{}
-
-  defstruct []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 end

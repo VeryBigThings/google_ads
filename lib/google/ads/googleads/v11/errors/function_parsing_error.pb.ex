@@ -1,22 +1,6 @@
 defmodule Google.Ads.Googleads.V11.Errors.FunctionParsingErrorEnum.FunctionParsingError do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto3
-
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :NO_MORE_INPUT
-          | :EXPECTED_CHARACTER
-          | :UNEXPECTED_SEPARATOR
-          | :UNMATCHED_LEFT_BRACKET
-          | :UNMATCHED_RIGHT_BRACKET
-          | :TOO_MANY_NESTED_FUNCTIONS
-          | :MISSING_RIGHT_HAND_OPERAND
-          | :INVALID_OPERATOR_NAME
-          | :FEED_ATTRIBUTE_OPERAND_ARGUMENT_NOT_INTEGER
-          | :NO_OPERANDS
-          | :TOO_MANY_OPERANDS
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
@@ -32,11 +16,8 @@ defmodule Google.Ads.Googleads.V11.Errors.FunctionParsingErrorEnum.FunctionParsi
   field :NO_OPERANDS, 11
   field :TOO_MANY_OPERANDS, 12
 end
+
 defmodule Google.Ads.Googleads.V11.Errors.FunctionParsingErrorEnum do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{}
-
-  defstruct []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 end

@@ -1,8 +1,6 @@
 defmodule Google.Ads.Googleads.V11.Enums.SimulationModificationMethodEnum.SimulationModificationMethod do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto3
-
-  @type t :: integer | :UNSPECIFIED | :UNKNOWN | :UNIFORM | :DEFAULT | :SCALING
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
@@ -10,11 +8,8 @@ defmodule Google.Ads.Googleads.V11.Enums.SimulationModificationMethodEnum.Simula
   field :DEFAULT, 3
   field :SCALING, 4
 end
+
 defmodule Google.Ads.Googleads.V11.Enums.SimulationModificationMethodEnum do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{}
-
-  defstruct []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 end

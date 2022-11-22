@@ -1,52 +1,18 @@
 defmodule Google.Ads.Googleads.V11.Resources.GoogleAdsField do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          name: String.t(),
-          category:
-            Google.Ads.Googleads.V11.Enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory.t(),
-          selectable: boolean,
-          filterable: boolean,
-          sortable: boolean,
-          selectable_with: [String.t()],
-          attribute_resources: [String.t()],
-          metrics: [String.t()],
-          segments: [String.t()],
-          enum_values: [String.t()],
-          data_type:
-            Google.Ads.Googleads.V11.Enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType.t(),
-          type_url: String.t(),
-          is_repeated: boolean
-        }
-
-  defstruct resource_name: "",
-            name: "",
-            category: :UNSPECIFIED,
-            selectable: false,
-            filterable: false,
-            sortable: false,
-            selectable_with: [],
-            attribute_resources: [],
-            metrics: [],
-            segments: [],
-            enum_values: [],
-            data_type: :UNSPECIFIED,
-            type_url: "",
-            is_repeated: false
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
-  field :name, 21, type: :string, deprecated: false
+  field :name, 21, proto3_optional: true, type: :string, deprecated: false
 
   field :category, 3,
     type: Google.Ads.Googleads.V11.Enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory,
     enum: true,
     deprecated: false
 
-  field :selectable, 22, type: :bool, deprecated: false
-  field :filterable, 23, type: :bool, deprecated: false
-  field :sortable, 24, type: :bool, deprecated: false
+  field :selectable, 22, proto3_optional: true, type: :bool, deprecated: false
+  field :filterable, 23, proto3_optional: true, type: :bool, deprecated: false
+  field :sortable, 24, proto3_optional: true, type: :bool, deprecated: false
 
   field :selectable_with, 25,
     repeated: true,
@@ -75,6 +41,15 @@ defmodule Google.Ads.Googleads.V11.Resources.GoogleAdsField do
     enum: true,
     deprecated: false
 
-  field :type_url, 30, type: :string, json_name: "typeUrl", deprecated: false
-  field :is_repeated, 31, type: :bool, json_name: "isRepeated", deprecated: false
+  field :type_url, 30,
+    proto3_optional: true,
+    type: :string,
+    json_name: "typeUrl",
+    deprecated: false
+
+  field :is_repeated, 31,
+    proto3_optional: true,
+    type: :bool,
+    json_name: "isRepeated",
+    deprecated: false
 end

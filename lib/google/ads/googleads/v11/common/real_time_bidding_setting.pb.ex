@@ -1,12 +1,6 @@
 defmodule Google.Ads.Googleads.V11.Common.RealTimeBiddingSetting do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
-  @type t :: %__MODULE__{
-          opt_in: boolean
-        }
-
-  defstruct opt_in: false
-
-  field :opt_in, 2, type: :bool, json_name: "optIn"
+  field :opt_in, 2, proto3_optional: true, type: :bool, json_name: "optIn"
 end

@@ -1,16 +1,6 @@
 defmodule Google.Ads.Googleads.V11.Resources.ConversionAction.AttributionModelSettings do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          attribution_model:
-            Google.Ads.Googleads.V11.Enums.AttributionModelEnum.AttributionModel.t(),
-          data_driven_model_status:
-            Google.Ads.Googleads.V11.Enums.DataDrivenModelStatusEnum.DataDrivenModelStatus.t()
-        }
-
-  defstruct attribution_model: :UNSPECIFIED,
-            data_driven_model_status: :UNSPECIFIED
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :attribution_model, 1,
     type: Google.Ads.Googleads.V11.Enums.AttributionModelEnum.AttributionModel,
@@ -23,122 +13,64 @@ defmodule Google.Ads.Googleads.V11.Resources.ConversionAction.AttributionModelSe
     enum: true,
     deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.ConversionAction.ValueSettings do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
-  @type t :: %__MODULE__{
-          default_value: float | :infinity | :negative_infinity | :nan,
-          default_currency_code: String.t(),
-          always_use_default_value: boolean
-        }
+  field :default_value, 4, proto3_optional: true, type: :double, json_name: "defaultValue"
 
-  defstruct default_value: 0.0,
-            default_currency_code: "",
-            always_use_default_value: false
+  field :default_currency_code, 5,
+    proto3_optional: true,
+    type: :string,
+    json_name: "defaultCurrencyCode"
 
-  field :default_value, 4, type: :double, json_name: "defaultValue"
-  field :default_currency_code, 5, type: :string, json_name: "defaultCurrencyCode"
-  field :always_use_default_value, 6, type: :bool, json_name: "alwaysUseDefaultValue"
+  field :always_use_default_value, 6,
+    proto3_optional: true,
+    type: :bool,
+    json_name: "alwaysUseDefaultValue"
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.ConversionAction.ThirdPartyAppAnalyticsSettings do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
-  @type t :: %__MODULE__{
-          event_name: String.t(),
-          provider_name: String.t()
-        }
+  field :event_name, 2,
+    proto3_optional: true,
+    type: :string,
+    json_name: "eventName",
+    deprecated: false
 
-  defstruct event_name: "",
-            provider_name: ""
-
-  field :event_name, 2, type: :string, json_name: "eventName", deprecated: false
   field :provider_name, 3, type: :string, json_name: "providerName", deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.ConversionAction.FirebaseSettings do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
-  @type t :: %__MODULE__{
-          event_name: String.t(),
-          project_id: String.t(),
-          property_id: integer,
-          property_name: String.t()
-        }
+  field :event_name, 3,
+    proto3_optional: true,
+    type: :string,
+    json_name: "eventName",
+    deprecated: false
 
-  defstruct event_name: "",
-            project_id: "",
-            property_id: 0,
-            property_name: ""
+  field :project_id, 4,
+    proto3_optional: true,
+    type: :string,
+    json_name: "projectId",
+    deprecated: false
 
-  field :event_name, 3, type: :string, json_name: "eventName", deprecated: false
-  field :project_id, 4, type: :string, json_name: "projectId", deprecated: false
   field :property_id, 5, type: :int64, json_name: "propertyId", deprecated: false
   field :property_name, 6, type: :string, json_name: "propertyName", deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.ConversionAction do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          id: integer,
-          name: String.t(),
-          status:
-            Google.Ads.Googleads.V11.Enums.ConversionActionStatusEnum.ConversionActionStatus.t(),
-          type: Google.Ads.Googleads.V11.Enums.ConversionActionTypeEnum.ConversionActionType.t(),
-          origin: Google.Ads.Googleads.V11.Enums.ConversionOriginEnum.ConversionOrigin.t(),
-          primary_for_goal: boolean,
-          category:
-            Google.Ads.Googleads.V11.Enums.ConversionActionCategoryEnum.ConversionActionCategory.t(),
-          owner_customer: String.t(),
-          include_in_conversions_metric: boolean,
-          click_through_lookback_window_days: integer,
-          view_through_lookback_window_days: integer,
-          value_settings:
-            Google.Ads.Googleads.V11.Resources.ConversionAction.ValueSettings.t() | nil,
-          counting_type:
-            Google.Ads.Googleads.V11.Enums.ConversionActionCountingTypeEnum.ConversionActionCountingType.t(),
-          attribution_model_settings:
-            Google.Ads.Googleads.V11.Resources.ConversionAction.AttributionModelSettings.t() | nil,
-          tag_snippets: [Google.Ads.Googleads.V11.Common.TagSnippet.t()],
-          phone_call_duration_seconds: integer,
-          app_id: String.t(),
-          mobile_app_vendor:
-            Google.Ads.Googleads.V11.Enums.MobileAppVendorEnum.MobileAppVendor.t(),
-          firebase_settings:
-            Google.Ads.Googleads.V11.Resources.ConversionAction.FirebaseSettings.t() | nil,
-          third_party_app_analytics_settings:
-            Google.Ads.Googleads.V11.Resources.ConversionAction.ThirdPartyAppAnalyticsSettings.t()
-            | nil
-        }
-
-  defstruct resource_name: "",
-            id: 0,
-            name: "",
-            status: :UNSPECIFIED,
-            type: :UNSPECIFIED,
-            origin: :UNSPECIFIED,
-            primary_for_goal: false,
-            category: :UNSPECIFIED,
-            owner_customer: "",
-            include_in_conversions_metric: false,
-            click_through_lookback_window_days: 0,
-            view_through_lookback_window_days: 0,
-            value_settings: nil,
-            counting_type: :UNSPECIFIED,
-            attribution_model_settings: nil,
-            tag_snippets: [],
-            phone_call_duration_seconds: 0,
-            app_id: "",
-            mobile_app_vendor: :UNSPECIFIED,
-            firebase_settings: nil,
-            third_party_app_analytics_settings: nil
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
-  field :id, 21, type: :int64, deprecated: false
-  field :name, 22, type: :string
+  field :id, 21, proto3_optional: true, type: :int64, deprecated: false
+  field :name, 22, proto3_optional: true, type: :string
 
   field :status, 4,
     type: Google.Ads.Googleads.V11.Enums.ConversionActionStatusEnum.ConversionActionStatus,
@@ -154,20 +86,30 @@ defmodule Google.Ads.Googleads.V11.Resources.ConversionAction do
     enum: true,
     deprecated: false
 
-  field :primary_for_goal, 31, type: :bool, json_name: "primaryForGoal"
+  field :primary_for_goal, 31, proto3_optional: true, type: :bool, json_name: "primaryForGoal"
 
   field :category, 6,
     type: Google.Ads.Googleads.V11.Enums.ConversionActionCategoryEnum.ConversionActionCategory,
     enum: true
 
-  field :owner_customer, 23, type: :string, json_name: "ownerCustomer", deprecated: false
-  field :include_in_conversions_metric, 24, type: :bool, json_name: "includeInConversionsMetric"
+  field :owner_customer, 23,
+    proto3_optional: true,
+    type: :string,
+    json_name: "ownerCustomer",
+    deprecated: false
+
+  field :include_in_conversions_metric, 24,
+    proto3_optional: true,
+    type: :bool,
+    json_name: "includeInConversionsMetric"
 
   field :click_through_lookback_window_days, 25,
+    proto3_optional: true,
     type: :int64,
     json_name: "clickThroughLookbackWindowDays"
 
   field :view_through_lookback_window_days, 26,
+    proto3_optional: true,
     type: :int64,
     json_name: "viewThroughLookbackWindowDays"
 
@@ -191,8 +133,12 @@ defmodule Google.Ads.Googleads.V11.Resources.ConversionAction do
     json_name: "tagSnippets",
     deprecated: false
 
-  field :phone_call_duration_seconds, 27, type: :int64, json_name: "phoneCallDurationSeconds"
-  field :app_id, 28, type: :string, json_name: "appId"
+  field :phone_call_duration_seconds, 27,
+    proto3_optional: true,
+    type: :int64,
+    json_name: "phoneCallDurationSeconds"
+
+  field :app_id, 28, proto3_optional: true, type: :string, json_name: "appId"
 
   field :mobile_app_vendor, 17,
     type: Google.Ads.Googleads.V11.Enums.MobileAppVendorEnum.MobileAppVendor,

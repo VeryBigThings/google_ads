@@ -1,29 +1,11 @@
 defmodule Google.Ads.Googleads.V11.Resources.FeedMapping do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          target:
-            {:placeholder_type,
-             Google.Ads.Googleads.V11.Enums.PlaceholderTypeEnum.PlaceholderType.t()}
-            | {:criterion_type,
-               Google.Ads.Googleads.V11.Enums.FeedMappingCriterionTypeEnum.FeedMappingCriterionType.t()},
-          resource_name: String.t(),
-          feed: String.t(),
-          attribute_field_mappings: [Google.Ads.Googleads.V11.Resources.AttributeFieldMapping.t()],
-          status: Google.Ads.Googleads.V11.Enums.FeedMappingStatusEnum.FeedMappingStatus.t()
-        }
-
-  defstruct target: nil,
-            resource_name: "",
-            feed: "",
-            attribute_field_mappings: [],
-            status: :UNSPECIFIED
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   oneof :target, 0
 
   field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
-  field :feed, 7, type: :string, deprecated: false
+  field :feed, 7, proto3_optional: true, type: :string, deprecated: false
 
   field :attribute_field_mappings, 5,
     repeated: true,
@@ -50,68 +32,24 @@ defmodule Google.Ads.Googleads.V11.Resources.FeedMapping do
     oneof: 0,
     deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.AttributeFieldMapping do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          field:
-            {:sitelink_field,
-             Google.Ads.Googleads.V11.Enums.SitelinkPlaceholderFieldEnum.SitelinkPlaceholderField.t()}
-            | {:call_field,
-               Google.Ads.Googleads.V11.Enums.CallPlaceholderFieldEnum.CallPlaceholderField.t()}
-            | {:app_field,
-               Google.Ads.Googleads.V11.Enums.AppPlaceholderFieldEnum.AppPlaceholderField.t()}
-            | {:location_field,
-               Google.Ads.Googleads.V11.Enums.LocationPlaceholderFieldEnum.LocationPlaceholderField.t()}
-            | {:affiliate_location_field,
-               Google.Ads.Googleads.V11.Enums.AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField.t()}
-            | {:callout_field,
-               Google.Ads.Googleads.V11.Enums.CalloutPlaceholderFieldEnum.CalloutPlaceholderField.t()}
-            | {:structured_snippet_field,
-               Google.Ads.Googleads.V11.Enums.StructuredSnippetPlaceholderFieldEnum.StructuredSnippetPlaceholderField.t()}
-            | {:message_field,
-               Google.Ads.Googleads.V11.Enums.MessagePlaceholderFieldEnum.MessagePlaceholderField.t()}
-            | {:price_field,
-               Google.Ads.Googleads.V11.Enums.PricePlaceholderFieldEnum.PricePlaceholderField.t()}
-            | {:promotion_field,
-               Google.Ads.Googleads.V11.Enums.PromotionPlaceholderFieldEnum.PromotionPlaceholderField.t()}
-            | {:ad_customizer_field,
-               Google.Ads.Googleads.V11.Enums.AdCustomizerPlaceholderFieldEnum.AdCustomizerPlaceholderField.t()}
-            | {:dsa_page_feed_field,
-               Google.Ads.Googleads.V11.Enums.DsaPageFeedCriterionFieldEnum.DsaPageFeedCriterionField.t()}
-            | {:location_extension_targeting_field,
-               Google.Ads.Googleads.V11.Enums.LocationExtensionTargetingCriterionFieldEnum.LocationExtensionTargetingCriterionField.t()}
-            | {:education_field,
-               Google.Ads.Googleads.V11.Enums.EducationPlaceholderFieldEnum.EducationPlaceholderField.t()}
-            | {:flight_field,
-               Google.Ads.Googleads.V11.Enums.FlightPlaceholderFieldEnum.FlightPlaceholderField.t()}
-            | {:custom_field,
-               Google.Ads.Googleads.V11.Enums.CustomPlaceholderFieldEnum.CustomPlaceholderField.t()}
-            | {:hotel_field,
-               Google.Ads.Googleads.V11.Enums.HotelPlaceholderFieldEnum.HotelPlaceholderField.t()}
-            | {:real_estate_field,
-               Google.Ads.Googleads.V11.Enums.RealEstatePlaceholderFieldEnum.RealEstatePlaceholderField.t()}
-            | {:travel_field,
-               Google.Ads.Googleads.V11.Enums.TravelPlaceholderFieldEnum.TravelPlaceholderField.t()}
-            | {:local_field,
-               Google.Ads.Googleads.V11.Enums.LocalPlaceholderFieldEnum.LocalPlaceholderField.t()}
-            | {:job_field,
-               Google.Ads.Googleads.V11.Enums.JobPlaceholderFieldEnum.JobPlaceholderField.t()}
-            | {:image_field,
-               Google.Ads.Googleads.V11.Enums.ImagePlaceholderFieldEnum.ImagePlaceholderField.t()},
-          feed_attribute_id: integer,
-          field_id: integer
-        }
-
-  defstruct field: nil,
-            feed_attribute_id: 0,
-            field_id: 0
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   oneof :field, 0
 
-  field :feed_attribute_id, 24, type: :int64, json_name: "feedAttributeId", deprecated: false
-  field :field_id, 25, type: :int64, json_name: "fieldId", deprecated: false
+  field :feed_attribute_id, 24,
+    proto3_optional: true,
+    type: :int64,
+    json_name: "feedAttributeId",
+    deprecated: false
+
+  field :field_id, 25,
+    proto3_optional: true,
+    type: :int64,
+    json_name: "fieldId",
+    deprecated: false
 
   field :sitelink_field, 3,
     type: Google.Ads.Googleads.V11.Enums.SitelinkPlaceholderFieldEnum.SitelinkPlaceholderField,

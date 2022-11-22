@@ -1,15 +1,6 @@
 defmodule Google.Ads.Googleads.V11.Common.AssetUsage do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          asset: String.t(),
-          served_asset_field_type:
-            Google.Ads.Googleads.V11.Enums.ServedAssetFieldTypeEnum.ServedAssetFieldType.t()
-        }
-
-  defstruct asset: "",
-            served_asset_field_type: :UNSPECIFIED
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :asset, 1, type: :string
 

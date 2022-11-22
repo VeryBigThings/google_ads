@@ -1,12 +1,6 @@
 defmodule Google.Protobuf.FieldMask do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  defstruct [:paths]
-
-  @type t :: %__MODULE__{
-          paths: [String.t()]
-        }
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field(:paths, 1, repeated: true, type: :string)
 end

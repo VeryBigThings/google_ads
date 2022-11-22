@@ -1,24 +1,6 @@
 defmodule Google.Ads.Googleads.V11.Enums.ExperimentMetricEnum.ExperimentMetric do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto3
-
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :CLICKS
-          | :IMPRESSIONS
-          | :COST
-          | :CONVERSIONS_PER_INTERACTION_RATE
-          | :COST_PER_CONVERSION
-          | :CONVERSIONS_VALUE_PER_COST
-          | :AVERAGE_CPC
-          | :CTR
-          | :INCREMENTAL_CONVERSIONS
-          | :COMPLETED_VIDEO_VIEWS
-          | :CUSTOM_ALGORITHMS
-          | :CONVERSIONS
-          | :CONVERSION_VALUE
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
@@ -36,11 +18,8 @@ defmodule Google.Ads.Googleads.V11.Enums.ExperimentMetricEnum.ExperimentMetric d
   field :CONVERSIONS, 13
   field :CONVERSION_VALUE, 14
 end
+
 defmodule Google.Ads.Googleads.V11.Enums.ExperimentMetricEnum do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{}
-
-  defstruct []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 end

@@ -1,35 +1,16 @@
 defmodule Google.Ads.Googleads.V11.Resources.FeedItemTarget do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          target:
-            {:campaign, String.t()}
-            | {:ad_group, String.t()}
-            | {:keyword, Google.Ads.Googleads.V11.Common.KeywordInfo.t() | nil}
-            | {:geo_target_constant, String.t()}
-            | {:device,
-               Google.Ads.Googleads.V11.Enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice.t()}
-            | {:ad_schedule, Google.Ads.Googleads.V11.Common.AdScheduleInfo.t() | nil},
-          resource_name: String.t(),
-          feed_item: String.t(),
-          feed_item_target_type:
-            Google.Ads.Googleads.V11.Enums.FeedItemTargetTypeEnum.FeedItemTargetType.t(),
-          feed_item_target_id: integer,
-          status: Google.Ads.Googleads.V11.Enums.FeedItemTargetStatusEnum.FeedItemTargetStatus.t()
-        }
-
-  defstruct target: nil,
-            resource_name: "",
-            feed_item: "",
-            feed_item_target_type: :UNSPECIFIED,
-            feed_item_target_id: 0,
-            status: :UNSPECIFIED
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   oneof :target, 0
 
   field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
-  field :feed_item, 12, type: :string, json_name: "feedItem", deprecated: false
+
+  field :feed_item, 12,
+    proto3_optional: true,
+    type: :string,
+    json_name: "feedItem",
+    deprecated: false
 
   field :feed_item_target_type, 3,
     type: Google.Ads.Googleads.V11.Enums.FeedItemTargetTypeEnum.FeedItemTargetType,
@@ -37,7 +18,11 @@ defmodule Google.Ads.Googleads.V11.Resources.FeedItemTarget do
     enum: true,
     deprecated: false
 
-  field :feed_item_target_id, 13, type: :int64, json_name: "feedItemTargetId", deprecated: false
+  field :feed_item_target_id, 13,
+    proto3_optional: true,
+    type: :int64,
+    json_name: "feedItemTargetId",
+    deprecated: false
 
   field :status, 11,
     type: Google.Ads.Googleads.V11.Enums.FeedItemTargetStatusEnum.FeedItemTargetStatus,

@@ -1,47 +1,12 @@
 defmodule Google.Ads.Googleads.V11.Resources.BiddingStrategy do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          scheme:
-            {:enhanced_cpc, Google.Ads.Googleads.V11.Common.EnhancedCpc.t() | nil}
-            | {:maximize_conversion_value,
-               Google.Ads.Googleads.V11.Common.MaximizeConversionValue.t() | nil}
-            | {:maximize_conversions,
-               Google.Ads.Googleads.V11.Common.MaximizeConversions.t() | nil}
-            | {:target_cpa, Google.Ads.Googleads.V11.Common.TargetCpa.t() | nil}
-            | {:target_impression_share,
-               Google.Ads.Googleads.V11.Common.TargetImpressionShare.t() | nil}
-            | {:target_roas, Google.Ads.Googleads.V11.Common.TargetRoas.t() | nil}
-            | {:target_spend, Google.Ads.Googleads.V11.Common.TargetSpend.t() | nil},
-          resource_name: String.t(),
-          id: integer,
-          name: String.t(),
-          status:
-            Google.Ads.Googleads.V11.Enums.BiddingStrategyStatusEnum.BiddingStrategyStatus.t(),
-          type: Google.Ads.Googleads.V11.Enums.BiddingStrategyTypeEnum.BiddingStrategyType.t(),
-          currency_code: String.t(),
-          effective_currency_code: String.t(),
-          campaign_count: integer,
-          non_removed_campaign_count: integer
-        }
-
-  defstruct scheme: nil,
-            resource_name: "",
-            id: 0,
-            name: "",
-            status: :UNSPECIFIED,
-            type: :UNSPECIFIED,
-            currency_code: "",
-            effective_currency_code: "",
-            campaign_count: 0,
-            non_removed_campaign_count: 0
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   oneof :scheme, 0
 
   field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
-  field :id, 16, type: :int64, deprecated: false
-  field :name, 17, type: :string
+  field :id, 16, proto3_optional: true, type: :int64, deprecated: false
+  field :name, 17, proto3_optional: true, type: :string
 
   field :status, 15,
     type: Google.Ads.Googleads.V11.Enums.BiddingStrategyStatusEnum.BiddingStrategyStatus,
@@ -56,13 +21,19 @@ defmodule Google.Ads.Googleads.V11.Resources.BiddingStrategy do
   field :currency_code, 23, type: :string, json_name: "currencyCode", deprecated: false
 
   field :effective_currency_code, 20,
+    proto3_optional: true,
     type: :string,
     json_name: "effectiveCurrencyCode",
     deprecated: false
 
-  field :campaign_count, 18, type: :int64, json_name: "campaignCount", deprecated: false
+  field :campaign_count, 18,
+    proto3_optional: true,
+    type: :int64,
+    json_name: "campaignCount",
+    deprecated: false
 
   field :non_removed_campaign_count, 19,
+    proto3_optional: true,
     type: :int64,
     json_name: "nonRemovedCampaignCount",
     deprecated: false

@@ -1,23 +1,6 @@
 defmodule Google.Ads.Googleads.V11.Enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto3
-
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :CATEGORY
-          | :KNOWLEDGE_GRAPH
-          | :GEO_TARGET_COUNTRY
-          | :SUB_COUNTRY_LOCATION
-          | :YOUTUBE_CHANNEL
-          | :YOUTUBE_DYNAMIC_LINEUP
-          | :AFFINITY_USER_INTEREST
-          | :IN_MARKET_USER_INTEREST
-          | :PARENTAL_STATUS
-          | :INCOME_RANGE
-          | :AGE_RANGE
-          | :GENDER
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
@@ -34,11 +17,8 @@ defmodule Google.Ads.Googleads.V11.Enums.AudienceInsightsDimensionEnum.AudienceI
   field :AGE_RANGE, 12
   field :GENDER, 13
 end
+
 defmodule Google.Ads.Googleads.V11.Enums.AudienceInsightsDimensionEnum do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{}
-
-  defstruct []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 end

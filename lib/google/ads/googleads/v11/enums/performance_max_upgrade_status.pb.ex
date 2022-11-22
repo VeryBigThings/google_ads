@@ -1,15 +1,6 @@
 defmodule Google.Ads.Googleads.V11.Enums.PerformanceMaxUpgradeStatusEnum.PerformanceMaxUpgradeStatus do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto3
-
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :UPGRADE_ELIBIGLE
-          | :UPGRADE_IN_PROGRESS
-          | :UPGRADE_COMPLETE
-          | :UPGRADE_FAILED
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
@@ -18,11 +9,8 @@ defmodule Google.Ads.Googleads.V11.Enums.PerformanceMaxUpgradeStatusEnum.Perform
   field :UPGRADE_COMPLETE, 4
   field :UPGRADE_FAILED, 5
 end
+
 defmodule Google.Ads.Googleads.V11.Enums.PerformanceMaxUpgradeStatusEnum do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{}
-
-  defstruct []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 end

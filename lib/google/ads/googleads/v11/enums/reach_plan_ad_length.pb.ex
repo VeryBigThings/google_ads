@@ -1,14 +1,6 @@
 defmodule Google.Ads.Googleads.V11.Enums.ReachPlanAdLengthEnum.ReachPlanAdLength do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto3
-
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :SIX_SECONDS
-          | :FIFTEEN_OR_TWENTY_SECONDS
-          | :TWENTY_SECONDS_OR_MORE
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
@@ -16,11 +8,8 @@ defmodule Google.Ads.Googleads.V11.Enums.ReachPlanAdLengthEnum.ReachPlanAdLength
   field :FIFTEEN_OR_TWENTY_SECONDS, 3
   field :TWENTY_SECONDS_OR_MORE, 4
 end
+
 defmodule Google.Ads.Googleads.V11.Enums.ReachPlanAdLengthEnum do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{}
-
-  defstruct []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 end

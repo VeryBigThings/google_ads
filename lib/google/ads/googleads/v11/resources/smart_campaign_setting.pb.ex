@@ -1,57 +1,24 @@
 defmodule Google.Ads.Googleads.V11.Resources.SmartCampaignSetting.PhoneNumber do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
-  @type t :: %__MODULE__{
-          phone_number: String.t(),
-          country_code: String.t()
-        }
-
-  defstruct phone_number: "",
-            country_code: ""
-
-  field :phone_number, 1, type: :string, json_name: "phoneNumber"
-  field :country_code, 2, type: :string, json_name: "countryCode"
+  field :phone_number, 1, proto3_optional: true, type: :string, json_name: "phoneNumber"
+  field :country_code, 2, proto3_optional: true, type: :string, json_name: "countryCode"
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.SmartCampaignSetting.AdOptimizedBusinessProfileSetting do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          include_lead_form: boolean
-        }
-
-  defstruct include_lead_form: false
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :include_lead_form, 1, type: :bool, json_name: "includeLeadForm"
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.SmartCampaignSetting do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          landing_page:
-            {:final_url, String.t()}
-            | {:ad_optimized_business_profile_setting,
-               Google.Ads.Googleads.V11.Resources.SmartCampaignSetting.AdOptimizedBusinessProfileSetting.t()
-               | nil},
-          business_setting:
-            {:business_name, String.t()} | {:business_profile_location, String.t()},
-          resource_name: String.t(),
-          campaign: String.t(),
-          phone_number:
-            Google.Ads.Googleads.V11.Resources.SmartCampaignSetting.PhoneNumber.t() | nil,
-          advertising_language_code: String.t()
-        }
-
-  defstruct landing_page: nil,
-            business_setting: nil,
-            resource_name: "",
-            campaign: "",
-            phone_number: nil,
-            advertising_language_code: ""
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   oneof :landing_page, 0
+
   oneof :business_setting, 1
 
   field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false

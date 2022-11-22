@@ -1,30 +1,6 @@
 defmodule Google.Ads.Googleads.V11.Resources.AssetGroup do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          id: integer,
-          campaign: String.t(),
-          name: String.t(),
-          final_urls: [String.t()],
-          final_mobile_urls: [String.t()],
-          status: Google.Ads.Googleads.V11.Enums.AssetGroupStatusEnum.AssetGroupStatus.t(),
-          path1: String.t(),
-          path2: String.t(),
-          ad_strength: Google.Ads.Googleads.V11.Enums.AdStrengthEnum.AdStrength.t()
-        }
-
-  defstruct resource_name: "",
-            id: 0,
-            campaign: "",
-            name: "",
-            final_urls: [],
-            final_mobile_urls: [],
-            status: :UNSPECIFIED,
-            path1: "",
-            path2: "",
-            ad_strength: :UNSPECIFIED
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
   field :id, 9, type: :int64, deprecated: false

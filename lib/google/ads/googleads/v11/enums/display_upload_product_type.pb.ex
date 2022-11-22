@@ -1,21 +1,6 @@
 defmodule Google.Ads.Googleads.V11.Enums.DisplayUploadProductTypeEnum.DisplayUploadProductType do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto3
-
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :HTML5_UPLOAD_AD
-          | :DYNAMIC_HTML5_EDUCATION_AD
-          | :DYNAMIC_HTML5_FLIGHT_AD
-          | :DYNAMIC_HTML5_HOTEL_RENTAL_AD
-          | :DYNAMIC_HTML5_JOB_AD
-          | :DYNAMIC_HTML5_LOCAL_AD
-          | :DYNAMIC_HTML5_REAL_ESTATE_AD
-          | :DYNAMIC_HTML5_CUSTOM_AD
-          | :DYNAMIC_HTML5_TRAVEL_AD
-          | :DYNAMIC_HTML5_HOTEL_AD
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
@@ -30,11 +15,8 @@ defmodule Google.Ads.Googleads.V11.Enums.DisplayUploadProductTypeEnum.DisplayUpl
   field :DYNAMIC_HTML5_TRAVEL_AD, 10
   field :DYNAMIC_HTML5_HOTEL_AD, 11
 end
+
 defmodule Google.Ads.Googleads.V11.Enums.DisplayUploadProductTypeEnum do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{}
-
-  defstruct []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 end

@@ -1,29 +1,19 @@
 defmodule Google.Ads.Googleads.V11.Resources.MobileDeviceConstant do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          id: integer,
-          name: String.t(),
-          manufacturer_name: String.t(),
-          operating_system_name: String.t(),
-          type: Google.Ads.Googleads.V11.Enums.MobileDeviceTypeEnum.MobileDeviceType.t()
-        }
-
-  defstruct resource_name: "",
-            id: 0,
-            name: "",
-            manufacturer_name: "",
-            operating_system_name: "",
-            type: :UNSPECIFIED
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
-  field :id, 7, type: :int64, deprecated: false
-  field :name, 8, type: :string, deprecated: false
-  field :manufacturer_name, 9, type: :string, json_name: "manufacturerName", deprecated: false
+  field :id, 7, proto3_optional: true, type: :int64, deprecated: false
+  field :name, 8, proto3_optional: true, type: :string, deprecated: false
+
+  field :manufacturer_name, 9,
+    proto3_optional: true,
+    type: :string,
+    json_name: "manufacturerName",
+    deprecated: false
 
   field :operating_system_name, 10,
+    proto3_optional: true,
     type: :string,
     json_name: "operatingSystemName",
     deprecated: false

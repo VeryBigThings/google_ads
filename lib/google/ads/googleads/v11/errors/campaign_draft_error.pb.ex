@@ -1,21 +1,6 @@
 defmodule Google.Ads.Googleads.V11.Errors.CampaignDraftErrorEnum.CampaignDraftError do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto3
-
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :DUPLICATE_DRAFT_NAME
-          | :INVALID_STATUS_TRANSITION_FROM_REMOVED
-          | :INVALID_STATUS_TRANSITION_FROM_PROMOTED
-          | :INVALID_STATUS_TRANSITION_FROM_PROMOTE_FAILED
-          | :CUSTOMER_CANNOT_CREATE_DRAFT
-          | :CAMPAIGN_CANNOT_CREATE_DRAFT
-          | :INVALID_DRAFT_CHANGE
-          | :INVALID_STATUS_TRANSITION
-          | :MAX_NUMBER_OF_DRAFTS_PER_CAMPAIGN_REACHED
-          | :LIST_ERRORS_FOR_PROMOTED_DRAFT_ONLY
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
@@ -30,11 +15,8 @@ defmodule Google.Ads.Googleads.V11.Errors.CampaignDraftErrorEnum.CampaignDraftEr
   field :MAX_NUMBER_OF_DRAFTS_PER_CAMPAIGN_REACHED, 10
   field :LIST_ERRORS_FOR_PROMOTED_DRAFT_ONLY, 11
 end
+
 defmodule Google.Ads.Googleads.V11.Errors.CampaignDraftErrorEnum do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{}
-
-  defstruct []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 end

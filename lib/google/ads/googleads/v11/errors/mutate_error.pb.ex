@@ -1,20 +1,6 @@
 defmodule Google.Ads.Googleads.V11.Errors.MutateErrorEnum.MutateError do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto3
-
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :RESOURCE_NOT_FOUND
-          | :ID_EXISTS_IN_MULTIPLE_MUTATES
-          | :INCONSISTENT_FIELD_VALUES
-          | :MUTATE_NOT_ALLOWED
-          | :RESOURCE_NOT_IN_GOOGLE_ADS
-          | :RESOURCE_ALREADY_EXISTS
-          | :RESOURCE_DOES_NOT_SUPPORT_VALIDATE_ONLY
-          | :OPERATION_DOES_NOT_SUPPORT_PARTIAL_FAILURE
-          | :RESOURCE_READ_ONLY
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
@@ -28,11 +14,8 @@ defmodule Google.Ads.Googleads.V11.Errors.MutateErrorEnum.MutateError do
   field :OPERATION_DOES_NOT_SUPPORT_PARTIAL_FAILURE, 16
   field :RESOURCE_READ_ONLY, 13
 end
+
 defmodule Google.Ads.Googleads.V11.Errors.MutateErrorEnum do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{}
-
-  defstruct []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 end

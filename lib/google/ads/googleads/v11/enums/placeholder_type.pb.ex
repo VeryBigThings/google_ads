@@ -1,31 +1,6 @@
 defmodule Google.Ads.Googleads.V11.Enums.PlaceholderTypeEnum.PlaceholderType do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto3
-
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :SITELINK
-          | :CALL
-          | :APP
-          | :LOCATION
-          | :AFFILIATE_LOCATION
-          | :CALLOUT
-          | :STRUCTURED_SNIPPET
-          | :MESSAGE
-          | :PRICE
-          | :PROMOTION
-          | :AD_CUSTOMIZER
-          | :DYNAMIC_EDUCATION
-          | :DYNAMIC_FLIGHT
-          | :DYNAMIC_CUSTOM
-          | :DYNAMIC_HOTEL
-          | :DYNAMIC_REAL_ESTATE
-          | :DYNAMIC_TRAVEL
-          | :DYNAMIC_LOCAL
-          | :DYNAMIC_JOB
-          | :IMAGE
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
@@ -50,11 +25,8 @@ defmodule Google.Ads.Googleads.V11.Enums.PlaceholderTypeEnum.PlaceholderType do
   field :DYNAMIC_JOB, 20
   field :IMAGE, 21
 end
+
 defmodule Google.Ads.Googleads.V11.Enums.PlaceholderTypeEnum do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{}
-
-  defstruct []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 end

@@ -1,19 +1,14 @@
 defmodule Google.Ads.Googleads.V11.Enums.CallTypeEnum.CallType do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto3
-
-  @type t :: integer | :UNSPECIFIED | :UNKNOWN | :MANUALLY_DIALED | :HIGH_END_MOBILE_SEARCH
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :MANUALLY_DIALED, 2
   field :HIGH_END_MOBILE_SEARCH, 3
 end
+
 defmodule Google.Ads.Googleads.V11.Enums.CallTypeEnum do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{}
-
-  defstruct []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 end

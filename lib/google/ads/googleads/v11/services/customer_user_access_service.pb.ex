@@ -1,14 +1,6 @@
 defmodule Google.Ads.Googleads.V11.Services.MutateCustomerUserAccessRequest do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          customer_id: String.t(),
-          operation: Google.Ads.Googleads.V11.Services.CustomerUserAccessOperation.t() | nil
-        }
-
-  defstruct customer_id: "",
-            operation: nil
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :customer_id, 1, type: :string, json_name: "customerId", deprecated: false
 
@@ -16,19 +8,10 @@ defmodule Google.Ads.Googleads.V11.Services.MutateCustomerUserAccessRequest do
     type: Google.Ads.Googleads.V11.Services.CustomerUserAccessOperation,
     deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Services.CustomerUserAccessOperation do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          operation:
-            {:update, Google.Ads.Googleads.V11.Resources.CustomerUserAccess.t() | nil}
-            | {:remove, String.t()},
-          update_mask: Google.Protobuf.FieldMask.t() | nil
-        }
-
-  defstruct operation: nil,
-            update_mask: nil
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   oneof :operation, 0
 
@@ -36,33 +19,26 @@ defmodule Google.Ads.Googleads.V11.Services.CustomerUserAccessOperation do
   field :update, 1, type: Google.Ads.Googleads.V11.Resources.CustomerUserAccess, oneof: 0
   field :remove, 2, type: :string, oneof: 0, deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Services.MutateCustomerUserAccessResponse do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          result: Google.Ads.Googleads.V11.Services.MutateCustomerUserAccessResult.t() | nil
-        }
-
-  defstruct result: nil
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :result, 1, type: Google.Ads.Googleads.V11.Services.MutateCustomerUserAccessResult
 end
+
 defmodule Google.Ads.Googleads.V11.Services.MutateCustomerUserAccessResult do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          resource_name: String.t()
-        }
-
-  defstruct resource_name: ""
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Services.CustomerUserAccessService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v11.services.CustomerUserAccessService"
+  use GRPC.Service,
+    name: "google.ads.googleads.v11.services.CustomerUserAccessService",
+    protoc_gen_elixir_version: "0.11.0"
 
   rpc :MutateCustomerUserAccess,
       Google.Ads.Googleads.V11.Services.MutateCustomerUserAccessRequest,

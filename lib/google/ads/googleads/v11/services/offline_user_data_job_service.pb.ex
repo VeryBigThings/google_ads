@@ -1,72 +1,40 @@
 defmodule Google.Ads.Googleads.V11.Services.CreateOfflineUserDataJobRequest do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          customer_id: String.t(),
-          job: Google.Ads.Googleads.V11.Resources.OfflineUserDataJob.t() | nil,
-          validate_only: boolean,
-          enable_match_rate_range_preview: boolean
-        }
-
-  defstruct customer_id: "",
-            job: nil,
-            validate_only: false,
-            enable_match_rate_range_preview: false
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :customer_id, 1, type: :string, json_name: "customerId", deprecated: false
   field :job, 2, type: Google.Ads.Googleads.V11.Resources.OfflineUserDataJob, deprecated: false
   field :validate_only, 3, type: :bool, json_name: "validateOnly"
   field :enable_match_rate_range_preview, 5, type: :bool, json_name: "enableMatchRateRangePreview"
 end
+
 defmodule Google.Ads.Googleads.V11.Services.CreateOfflineUserDataJobResponse do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          resource_name: String.t()
-        }
-
-  defstruct resource_name: ""
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Services.RunOfflineUserDataJobRequest do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          validate_only: boolean
-        }
-
-  defstruct resource_name: "",
-            validate_only: false
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
   field :validate_only, 2, type: :bool, json_name: "validateOnly"
 end
+
 defmodule Google.Ads.Googleads.V11.Services.AddOfflineUserDataJobOperationsRequest do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          enable_partial_failure: boolean,
-          enable_warnings: boolean,
-          operations: [Google.Ads.Googleads.V11.Services.OfflineUserDataJobOperation.t()],
-          validate_only: boolean
-        }
-
-  defstruct resource_name: "",
-            enable_partial_failure: false,
-            enable_warnings: false,
-            operations: [],
-            validate_only: false
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
-  field :enable_partial_failure, 4, type: :bool, json_name: "enablePartialFailure"
-  field :enable_warnings, 6, type: :bool, json_name: "enableWarnings"
+
+  field :enable_partial_failure, 4,
+    proto3_optional: true,
+    type: :bool,
+    json_name: "enablePartialFailure"
+
+  field :enable_warnings, 6, proto3_optional: true, type: :bool, json_name: "enableWarnings"
 
   field :operations, 3,
     repeated: true,
@@ -75,18 +43,10 @@ defmodule Google.Ads.Googleads.V11.Services.AddOfflineUserDataJobOperationsReque
 
   field :validate_only, 5, type: :bool, json_name: "validateOnly"
 end
+
 defmodule Google.Ads.Googleads.V11.Services.OfflineUserDataJobOperation do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          operation:
-            {:create, Google.Ads.Googleads.V11.Common.UserData.t() | nil}
-            | {:remove, Google.Ads.Googleads.V11.Common.UserData.t() | nil}
-            | {:remove_all, boolean}
-        }
-
-  defstruct operation: nil
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   oneof :operation, 0
 
@@ -94,24 +54,20 @@ defmodule Google.Ads.Googleads.V11.Services.OfflineUserDataJobOperation do
   field :remove, 2, type: Google.Ads.Googleads.V11.Common.UserData, oneof: 0
   field :remove_all, 3, type: :bool, json_name: "removeAll", oneof: 0
 end
+
 defmodule Google.Ads.Googleads.V11.Services.AddOfflineUserDataJobOperationsResponse do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          partial_failure_error: Google.Rpc.Status.t() | nil,
-          warning: Google.Rpc.Status.t() | nil
-        }
-
-  defstruct partial_failure_error: nil,
-            warning: nil
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :partial_failure_error, 1, type: Google.Rpc.Status, json_name: "partialFailureError"
   field :warning, 2, type: Google.Rpc.Status
 end
+
 defmodule Google.Ads.Googleads.V11.Services.OfflineUserDataJobService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v11.services.OfflineUserDataJobService"
+  use GRPC.Service,
+    name: "google.ads.googleads.v11.services.OfflineUserDataJobService",
+    protoc_gen_elixir_version: "0.11.0"
 
   rpc :CreateOfflineUserDataJob,
       Google.Ads.Googleads.V11.Services.CreateOfflineUserDataJobRequest,

@@ -1,53 +1,31 @@
 defmodule Google.Ads.Googleads.V11.Resources.AccessibleBiddingStrategy.MaximizeConversionValue do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          target_roas: float | :infinity | :negative_infinity | :nan
-        }
-
-  defstruct target_roas: 0.0
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :target_roas, 1, type: :double, json_name: "targetRoas", deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.AccessibleBiddingStrategy.MaximizeConversions do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          target_cpa_micros: integer
-        }
-
-  defstruct target_cpa_micros: 0
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :target_cpa_micros, 2, type: :int64, json_name: "targetCpaMicros", deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.AccessibleBiddingStrategy.TargetCpa do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
-  @type t :: %__MODULE__{
-          target_cpa_micros: integer
-        }
-
-  defstruct target_cpa_micros: 0
-
-  field :target_cpa_micros, 1, type: :int64, json_name: "targetCpaMicros", deprecated: false
+  field :target_cpa_micros, 1,
+    proto3_optional: true,
+    type: :int64,
+    json_name: "targetCpaMicros",
+    deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.AccessibleBiddingStrategy.TargetImpressionShare do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          location:
-            Google.Ads.Googleads.V11.Enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation.t(),
-          location_fraction_micros: integer,
-          cpc_bid_ceiling_micros: integer
-        }
-
-  defstruct location: :UNSPECIFIED,
-            location_fraction_micros: 0,
-            cpc_bid_ceiling_micros: 0
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :location, 1,
     type:
@@ -55,80 +33,49 @@ defmodule Google.Ads.Googleads.V11.Resources.AccessibleBiddingStrategy.TargetImp
     enum: true,
     deprecated: false
 
-  field :location_fraction_micros, 2, type: :int64, json_name: "locationFractionMicros"
+  field :location_fraction_micros, 2,
+    proto3_optional: true,
+    type: :int64,
+    json_name: "locationFractionMicros"
 
   field :cpc_bid_ceiling_micros, 3,
+    proto3_optional: true,
     type: :int64,
     json_name: "cpcBidCeilingMicros",
     deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.AccessibleBiddingStrategy.TargetRoas do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
-  @type t :: %__MODULE__{
-          target_roas: float | :infinity | :negative_infinity | :nan
-        }
-
-  defstruct target_roas: 0.0
-
-  field :target_roas, 1, type: :double, json_name: "targetRoas", deprecated: false
+  field :target_roas, 1,
+    proto3_optional: true,
+    type: :double,
+    json_name: "targetRoas",
+    deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.AccessibleBiddingStrategy.TargetSpend do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
-  @type t :: %__MODULE__{
-          target_spend_micros: integer,
-          cpc_bid_ceiling_micros: integer
-        }
-
-  defstruct target_spend_micros: 0,
-            cpc_bid_ceiling_micros: 0
-
-  field :target_spend_micros, 1, type: :int64, json_name: "targetSpendMicros", deprecated: true
+  field :target_spend_micros, 1,
+    proto3_optional: true,
+    type: :int64,
+    json_name: "targetSpendMicros",
+    deprecated: true
 
   field :cpc_bid_ceiling_micros, 2,
+    proto3_optional: true,
     type: :int64,
     json_name: "cpcBidCeilingMicros",
     deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.AccessibleBiddingStrategy do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          scheme:
-            {:maximize_conversion_value,
-             Google.Ads.Googleads.V11.Resources.AccessibleBiddingStrategy.MaximizeConversionValue.t()
-             | nil}
-            | {:maximize_conversions,
-               Google.Ads.Googleads.V11.Resources.AccessibleBiddingStrategy.MaximizeConversions.t()
-               | nil}
-            | {:target_cpa,
-               Google.Ads.Googleads.V11.Resources.AccessibleBiddingStrategy.TargetCpa.t() | nil}
-            | {:target_impression_share,
-               Google.Ads.Googleads.V11.Resources.AccessibleBiddingStrategy.TargetImpressionShare.t()
-               | nil}
-            | {:target_roas,
-               Google.Ads.Googleads.V11.Resources.AccessibleBiddingStrategy.TargetRoas.t() | nil}
-            | {:target_spend,
-               Google.Ads.Googleads.V11.Resources.AccessibleBiddingStrategy.TargetSpend.t() | nil},
-          resource_name: String.t(),
-          id: integer,
-          name: String.t(),
-          type: Google.Ads.Googleads.V11.Enums.BiddingStrategyTypeEnum.BiddingStrategyType.t(),
-          owner_customer_id: integer,
-          owner_descriptive_name: String.t()
-        }
-
-  defstruct scheme: nil,
-            resource_name: "",
-            id: 0,
-            name: "",
-            type: :UNSPECIFIED,
-            owner_customer_id: 0,
-            owner_descriptive_name: ""
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   oneof :scheme, 0
 

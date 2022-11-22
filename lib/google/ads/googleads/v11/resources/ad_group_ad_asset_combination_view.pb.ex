@@ -1,16 +1,6 @@
 defmodule Google.Ads.Googleads.V11.Resources.AdGroupAdAssetCombinationView do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          served_assets: [Google.Ads.Googleads.V11.Common.AssetUsage.t()],
-          enabled: boolean
-        }
-
-  defstruct resource_name: "",
-            served_assets: [],
-            enabled: false
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
 
@@ -20,5 +10,5 @@ defmodule Google.Ads.Googleads.V11.Resources.AdGroupAdAssetCombinationView do
     json_name: "servedAssets",
     deprecated: false
 
-  field :enabled, 3, type: :bool, deprecated: false
+  field :enabled, 3, proto3_optional: true, type: :bool, deprecated: false
 end

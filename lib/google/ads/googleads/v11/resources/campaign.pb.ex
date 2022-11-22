@@ -1,17 +1,6 @@
 defmodule Google.Ads.Googleads.V11.Resources.Campaign.PerformanceMaxUpgrade do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          performance_max_campaign: String.t(),
-          pre_upgrade_campaign: String.t(),
-          status:
-            Google.Ads.Googleads.V11.Enums.PerformanceMaxUpgradeStatusEnum.PerformanceMaxUpgradeStatus.t()
-        }
-
-  defstruct performance_max_campaign: "",
-            pre_upgrade_campaign: "",
-            status: :UNSPECIFIED
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :performance_max_campaign, 1,
     type: :string,
@@ -29,116 +18,93 @@ defmodule Google.Ads.Googleads.V11.Resources.Campaign.PerformanceMaxUpgrade do
     enum: true,
     deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Campaign.NetworkSettings do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
-  @type t :: %__MODULE__{
-          target_google_search: boolean,
-          target_search_network: boolean,
-          target_content_network: boolean,
-          target_partner_search_network: boolean
-        }
+  field :target_google_search, 5,
+    proto3_optional: true,
+    type: :bool,
+    json_name: "targetGoogleSearch"
 
-  defstruct target_google_search: false,
-            target_search_network: false,
-            target_content_network: false,
-            target_partner_search_network: false
+  field :target_search_network, 6,
+    proto3_optional: true,
+    type: :bool,
+    json_name: "targetSearchNetwork"
 
-  field :target_google_search, 5, type: :bool, json_name: "targetGoogleSearch"
-  field :target_search_network, 6, type: :bool, json_name: "targetSearchNetwork"
-  field :target_content_network, 7, type: :bool, json_name: "targetContentNetwork"
-  field :target_partner_search_network, 8, type: :bool, json_name: "targetPartnerSearchNetwork"
+  field :target_content_network, 7,
+    proto3_optional: true,
+    type: :bool,
+    json_name: "targetContentNetwork"
+
+  field :target_partner_search_network, 8,
+    proto3_optional: true,
+    type: :bool,
+    json_name: "targetPartnerSearchNetwork"
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Campaign.HotelSettingInfo do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
-  @type t :: %__MODULE__{
-          hotel_center_id: integer
-        }
-
-  defstruct hotel_center_id: 0
-
-  field :hotel_center_id, 2, type: :int64, json_name: "hotelCenterId", deprecated: false
+  field :hotel_center_id, 2,
+    proto3_optional: true,
+    type: :int64,
+    json_name: "hotelCenterId",
+    deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Campaign.DynamicSearchAdsSetting do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          domain_name: String.t(),
-          language_code: String.t(),
-          use_supplied_urls_only: boolean,
-          feeds: [String.t()]
-        }
-
-  defstruct domain_name: "",
-            language_code: "",
-            use_supplied_urls_only: false,
-            feeds: []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :domain_name, 6, type: :string, json_name: "domainName", deprecated: false
   field :language_code, 7, type: :string, json_name: "languageCode", deprecated: false
-  field :use_supplied_urls_only, 8, type: :bool, json_name: "useSuppliedUrlsOnly"
+
+  field :use_supplied_urls_only, 8,
+    proto3_optional: true,
+    type: :bool,
+    json_name: "useSuppliedUrlsOnly"
+
   field :feeds, 9, repeated: true, type: :string, deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Campaign.ShoppingSetting do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
-  @type t :: %__MODULE__{
-          merchant_id: integer,
-          sales_country: String.t(),
-          feed_label: String.t(),
-          campaign_priority: integer,
-          enable_local: boolean,
-          use_vehicle_inventory: boolean
-        }
+  field :merchant_id, 5,
+    proto3_optional: true,
+    type: :int64,
+    json_name: "merchantId",
+    deprecated: false
 
-  defstruct merchant_id: 0,
-            sales_country: "",
-            feed_label: "",
-            campaign_priority: 0,
-            enable_local: false,
-            use_vehicle_inventory: false
-
-  field :merchant_id, 5, type: :int64, json_name: "merchantId", deprecated: false
-  field :sales_country, 6, type: :string, json_name: "salesCountry"
+  field :sales_country, 6, proto3_optional: true, type: :string, json_name: "salesCountry"
   field :feed_label, 10, type: :string, json_name: "feedLabel"
-  field :campaign_priority, 7, type: :int32, json_name: "campaignPriority"
-  field :enable_local, 8, type: :bool, json_name: "enableLocal"
+  field :campaign_priority, 7, proto3_optional: true, type: :int32, json_name: "campaignPriority"
+  field :enable_local, 8, proto3_optional: true, type: :bool, json_name: "enableLocal"
 
   field :use_vehicle_inventory, 9,
     type: :bool,
     json_name: "useVehicleInventory",
     deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Campaign.TrackingSetting do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
-  @type t :: %__MODULE__{
-          tracking_url: String.t()
-        }
-
-  defstruct tracking_url: ""
-
-  field :tracking_url, 2, type: :string, json_name: "trackingUrl", deprecated: false
+  field :tracking_url, 2,
+    proto3_optional: true,
+    type: :string,
+    json_name: "trackingUrl",
+    deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Campaign.GeoTargetTypeSetting do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          positive_geo_target_type:
-            Google.Ads.Googleads.V11.Enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType.t(),
-          negative_geo_target_type:
-            Google.Ads.Googleads.V11.Enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType.t()
-        }
-
-  defstruct positive_geo_target_type: :UNSPECIFIED,
-            negative_geo_target_type: :UNSPECIFIED
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :positive_geo_target_type, 1,
     type: Google.Ads.Googleads.V11.Enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType,
@@ -150,37 +116,20 @@ defmodule Google.Ads.Googleads.V11.Resources.Campaign.GeoTargetTypeSetting do
     json_name: "negativeGeoTargetType",
     enum: true
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Campaign.LocalCampaignSetting do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          location_source_type:
-            Google.Ads.Googleads.V11.Enums.LocationSourceTypeEnum.LocationSourceType.t()
-        }
-
-  defstruct location_source_type: :UNSPECIFIED
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :location_source_type, 1,
     type: Google.Ads.Googleads.V11.Enums.LocationSourceTypeEnum.LocationSourceType,
     json_name: "locationSourceType",
     enum: true
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Campaign.AppCampaignSetting do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          bidding_strategy_goal_type:
-            Google.Ads.Googleads.V11.Enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType.t(),
-          app_id: String.t(),
-          app_store:
-            Google.Ads.Googleads.V11.Enums.AppCampaignAppStoreEnum.AppCampaignAppStore.t()
-        }
-
-  defstruct bidding_strategy_goal_type: :UNSPECIFIED,
-            app_id: "",
-            app_store: :UNSPECIFIED
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :bidding_strategy_goal_type, 1,
     type:
@@ -188,7 +137,7 @@ defmodule Google.Ads.Googleads.V11.Resources.Campaign.AppCampaignSetting do
     json_name: "biddingStrategyGoalType",
     enum: true
 
-  field :app_id, 4, type: :string, json_name: "appId", deprecated: false
+  field :app_id, 4, proto3_optional: true, type: :string, json_name: "appId", deprecated: false
 
   field :app_store, 3,
     type: Google.Ads.Googleads.V11.Enums.AppCampaignAppStoreEnum.AppCampaignAppStore,
@@ -196,19 +145,10 @@ defmodule Google.Ads.Googleads.V11.Resources.Campaign.AppCampaignSetting do
     enum: true,
     deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Campaign.VanityPharma do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          vanity_pharma_display_url_mode:
-            Google.Ads.Googleads.V11.Enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode.t(),
-          vanity_pharma_text:
-            Google.Ads.Googleads.V11.Enums.VanityPharmaTextEnum.VanityPharmaText.t()
-        }
-
-  defstruct vanity_pharma_display_url_mode: :UNSPECIFIED,
-            vanity_pharma_text: :UNSPECIFIED
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :vanity_pharma_display_url_mode, 1,
     type:
@@ -221,15 +161,10 @@ defmodule Google.Ads.Googleads.V11.Resources.Campaign.VanityPharma do
     json_name: "vanityPharmaText",
     enum: true
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Campaign.SelectiveOptimization do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          conversion_actions: [String.t()]
-        }
-
-  defstruct conversion_actions: []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :conversion_actions, 2,
     repeated: true,
@@ -237,17 +172,10 @@ defmodule Google.Ads.Googleads.V11.Resources.Campaign.SelectiveOptimization do
     json_name: "conversionActions",
     deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Campaign.OptimizationGoalSetting do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          optimization_goal_types: [
-            Google.Ads.Googleads.V11.Enums.OptimizationGoalTypeEnum.OptimizationGoalType.t()
-          ]
-        }
-
-  defstruct optimization_goal_types: []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :optimization_goal_types, 1,
     repeated: true,
@@ -255,185 +183,49 @@ defmodule Google.Ads.Googleads.V11.Resources.Campaign.OptimizationGoalSetting do
     json_name: "optimizationGoalTypes",
     enum: true
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Campaign.AudienceSetting do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
-  @type t :: %__MODULE__{
-          use_audience_grouped: boolean
-        }
-
-  defstruct use_audience_grouped: false
-
-  field :use_audience_grouped, 1, type: :bool, json_name: "useAudienceGrouped", deprecated: false
+  field :use_audience_grouped, 1,
+    proto3_optional: true,
+    type: :bool,
+    json_name: "useAudienceGrouped",
+    deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Campaign.LocalServicesCampaignSettings do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          category_bids: [Google.Ads.Googleads.V11.Resources.Campaign.CategoryBid.t()]
-        }
-
-  defstruct category_bids: []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :category_bids, 1,
     repeated: true,
     type: Google.Ads.Googleads.V11.Resources.Campaign.CategoryBid,
     json_name: "categoryBids"
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Campaign.CategoryBid do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
-  @type t :: %__MODULE__{
-          category_id: String.t(),
-          manual_cpa_bid_micros: integer
-        }
+  field :category_id, 1, proto3_optional: true, type: :string, json_name: "categoryId"
 
-  defstruct category_id: "",
-            manual_cpa_bid_micros: 0
-
-  field :category_id, 1, type: :string, json_name: "categoryId"
-  field :manual_cpa_bid_micros, 2, type: :int64, json_name: "manualCpaBidMicros"
+  field :manual_cpa_bid_micros, 2,
+    proto3_optional: true,
+    type: :int64,
+    json_name: "manualCpaBidMicros"
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Campaign do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          campaign_bidding_strategy:
-            {:bidding_strategy, String.t()}
-            | {:commission, Google.Ads.Googleads.V11.Common.Commission.t() | nil}
-            | {:manual_cpa, Google.Ads.Googleads.V11.Common.ManualCpa.t() | nil}
-            | {:manual_cpc, Google.Ads.Googleads.V11.Common.ManualCpc.t() | nil}
-            | {:manual_cpm, Google.Ads.Googleads.V11.Common.ManualCpm.t() | nil}
-            | {:manual_cpv, Google.Ads.Googleads.V11.Common.ManualCpv.t() | nil}
-            | {:maximize_conversions,
-               Google.Ads.Googleads.V11.Common.MaximizeConversions.t() | nil}
-            | {:maximize_conversion_value,
-               Google.Ads.Googleads.V11.Common.MaximizeConversionValue.t() | nil}
-            | {:target_cpa, Google.Ads.Googleads.V11.Common.TargetCpa.t() | nil}
-            | {:target_impression_share,
-               Google.Ads.Googleads.V11.Common.TargetImpressionShare.t() | nil}
-            | {:target_roas, Google.Ads.Googleads.V11.Common.TargetRoas.t() | nil}
-            | {:target_spend, Google.Ads.Googleads.V11.Common.TargetSpend.t() | nil}
-            | {:percent_cpc, Google.Ads.Googleads.V11.Common.PercentCpc.t() | nil}
-            | {:target_cpm, Google.Ads.Googleads.V11.Common.TargetCpm.t() | nil},
-          resource_name: String.t(),
-          id: integer,
-          name: String.t(),
-          status: Google.Ads.Googleads.V11.Enums.CampaignStatusEnum.CampaignStatus.t(),
-          serving_status:
-            Google.Ads.Googleads.V11.Enums.CampaignServingStatusEnum.CampaignServingStatus.t(),
-          bidding_strategy_system_status:
-            Google.Ads.Googleads.V11.Enums.BiddingStrategySystemStatusEnum.BiddingStrategySystemStatus.t(),
-          ad_serving_optimization_status:
-            Google.Ads.Googleads.V11.Enums.AdServingOptimizationStatusEnum.AdServingOptimizationStatus.t(),
-          advertising_channel_type:
-            Google.Ads.Googleads.V11.Enums.AdvertisingChannelTypeEnum.AdvertisingChannelType.t(),
-          advertising_channel_sub_type:
-            Google.Ads.Googleads.V11.Enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType.t(),
-          tracking_url_template: String.t(),
-          url_custom_parameters: [Google.Ads.Googleads.V11.Common.CustomParameter.t()],
-          local_services_campaign_settings:
-            Google.Ads.Googleads.V11.Resources.Campaign.LocalServicesCampaignSettings.t() | nil,
-          real_time_bidding_setting:
-            Google.Ads.Googleads.V11.Common.RealTimeBiddingSetting.t() | nil,
-          network_settings: Google.Ads.Googleads.V11.Resources.Campaign.NetworkSettings.t() | nil,
-          hotel_setting: Google.Ads.Googleads.V11.Resources.Campaign.HotelSettingInfo.t() | nil,
-          dynamic_search_ads_setting:
-            Google.Ads.Googleads.V11.Resources.Campaign.DynamicSearchAdsSetting.t() | nil,
-          shopping_setting: Google.Ads.Googleads.V11.Resources.Campaign.ShoppingSetting.t() | nil,
-          targeting_setting: Google.Ads.Googleads.V11.Common.TargetingSetting.t() | nil,
-          audience_setting: Google.Ads.Googleads.V11.Resources.Campaign.AudienceSetting.t() | nil,
-          geo_target_type_setting:
-            Google.Ads.Googleads.V11.Resources.Campaign.GeoTargetTypeSetting.t() | nil,
-          local_campaign_setting:
-            Google.Ads.Googleads.V11.Resources.Campaign.LocalCampaignSetting.t() | nil,
-          app_campaign_setting:
-            Google.Ads.Googleads.V11.Resources.Campaign.AppCampaignSetting.t() | nil,
-          labels: [String.t()],
-          experiment_type:
-            Google.Ads.Googleads.V11.Enums.CampaignExperimentTypeEnum.CampaignExperimentType.t(),
-          base_campaign: String.t(),
-          campaign_budget: String.t(),
-          bidding_strategy_type:
-            Google.Ads.Googleads.V11.Enums.BiddingStrategyTypeEnum.BiddingStrategyType.t(),
-          accessible_bidding_strategy: String.t(),
-          start_date: String.t(),
-          campaign_group: String.t(),
-          end_date: String.t(),
-          final_url_suffix: String.t(),
-          frequency_caps: [Google.Ads.Googleads.V11.Common.FrequencyCapEntry.t()],
-          video_brand_safety_suitability:
-            Google.Ads.Googleads.V11.Enums.BrandSafetySuitabilityEnum.BrandSafetySuitability.t(),
-          vanity_pharma: Google.Ads.Googleads.V11.Resources.Campaign.VanityPharma.t() | nil,
-          selective_optimization:
-            Google.Ads.Googleads.V11.Resources.Campaign.SelectiveOptimization.t() | nil,
-          optimization_goal_setting:
-            Google.Ads.Googleads.V11.Resources.Campaign.OptimizationGoalSetting.t() | nil,
-          tracking_setting: Google.Ads.Googleads.V11.Resources.Campaign.TrackingSetting.t() | nil,
-          payment_mode: Google.Ads.Googleads.V11.Enums.PaymentModeEnum.PaymentMode.t(),
-          optimization_score: float | :infinity | :negative_infinity | :nan,
-          excluded_parent_asset_field_types: [
-            Google.Ads.Googleads.V11.Enums.AssetFieldTypeEnum.AssetFieldType.t()
-          ],
-          url_expansion_opt_out: boolean,
-          performance_max_upgrade:
-            Google.Ads.Googleads.V11.Resources.Campaign.PerformanceMaxUpgrade.t() | nil
-        }
-
-  defstruct campaign_bidding_strategy: nil,
-            resource_name: "",
-            id: 0,
-            name: "",
-            status: :UNSPECIFIED,
-            serving_status: :UNSPECIFIED,
-            bidding_strategy_system_status: :UNSPECIFIED,
-            ad_serving_optimization_status: :UNSPECIFIED,
-            advertising_channel_type: :UNSPECIFIED,
-            advertising_channel_sub_type: :UNSPECIFIED,
-            tracking_url_template: "",
-            url_custom_parameters: [],
-            local_services_campaign_settings: nil,
-            real_time_bidding_setting: nil,
-            network_settings: nil,
-            hotel_setting: nil,
-            dynamic_search_ads_setting: nil,
-            shopping_setting: nil,
-            targeting_setting: nil,
-            audience_setting: nil,
-            geo_target_type_setting: nil,
-            local_campaign_setting: nil,
-            app_campaign_setting: nil,
-            labels: [],
-            experiment_type: :UNSPECIFIED,
-            base_campaign: "",
-            campaign_budget: "",
-            bidding_strategy_type: :UNSPECIFIED,
-            accessible_bidding_strategy: "",
-            start_date: "",
-            campaign_group: "",
-            end_date: "",
-            final_url_suffix: "",
-            frequency_caps: [],
-            video_brand_safety_suitability: :UNSPECIFIED,
-            vanity_pharma: nil,
-            selective_optimization: nil,
-            optimization_goal_setting: nil,
-            tracking_setting: nil,
-            payment_mode: :UNSPECIFIED,
-            optimization_score: 0.0,
-            excluded_parent_asset_field_types: [],
-            url_expansion_opt_out: false,
-            performance_max_upgrade: nil
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   oneof :campaign_bidding_strategy, 0
 
   field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
-  field :id, 59, type: :int64, deprecated: false
-  field :name, 58, type: :string
+  field :id, 59, proto3_optional: true, type: :int64, deprecated: false
+  field :name, 58, proto3_optional: true, type: :string
 
   field :status, 5,
     type: Google.Ads.Googleads.V11.Enums.CampaignStatusEnum.CampaignStatus,
@@ -470,7 +262,10 @@ defmodule Google.Ads.Googleads.V11.Resources.Campaign do
     enum: true,
     deprecated: false
 
-  field :tracking_url_template, 60, type: :string, json_name: "trackingUrlTemplate"
+  field :tracking_url_template, 60,
+    proto3_optional: true,
+    type: :string,
+    json_name: "trackingUrlTemplate"
 
   field :url_custom_parameters, 12,
     repeated: true,
@@ -507,6 +302,7 @@ defmodule Google.Ads.Googleads.V11.Resources.Campaign do
     json_name: "targetingSetting"
 
   field :audience_setting, 73,
+    proto3_optional: true,
     type: Google.Ads.Googleads.V11.Resources.Campaign.AudienceSetting,
     json_name: "audienceSetting",
     deprecated: false
@@ -531,8 +327,17 @@ defmodule Google.Ads.Googleads.V11.Resources.Campaign do
     enum: true,
     deprecated: false
 
-  field :base_campaign, 56, type: :string, json_name: "baseCampaign", deprecated: false
-  field :campaign_budget, 62, type: :string, json_name: "campaignBudget", deprecated: false
+  field :base_campaign, 56,
+    proto3_optional: true,
+    type: :string,
+    json_name: "baseCampaign",
+    deprecated: false
+
+  field :campaign_budget, 62,
+    proto3_optional: true,
+    type: :string,
+    json_name: "campaignBudget",
+    deprecated: false
 
   field :bidding_strategy_type, 22,
     type: Google.Ads.Googleads.V11.Enums.BiddingStrategyTypeEnum.BiddingStrategyType,
@@ -545,10 +350,16 @@ defmodule Google.Ads.Googleads.V11.Resources.Campaign do
     json_name: "accessibleBiddingStrategy",
     deprecated: false
 
-  field :start_date, 63, type: :string, json_name: "startDate"
-  field :campaign_group, 76, type: :string, json_name: "campaignGroup", deprecated: false
-  field :end_date, 64, type: :string, json_name: "endDate"
-  field :final_url_suffix, 65, type: :string, json_name: "finalUrlSuffix"
+  field :start_date, 63, proto3_optional: true, type: :string, json_name: "startDate"
+
+  field :campaign_group, 76,
+    proto3_optional: true,
+    type: :string,
+    json_name: "campaignGroup",
+    deprecated: false
+
+  field :end_date, 64, proto3_optional: true, type: :string, json_name: "endDate"
+  field :final_url_suffix, 65, proto3_optional: true, type: :string, json_name: "finalUrlSuffix"
 
   field :frequency_caps, 40,
     repeated: true,
@@ -583,7 +394,11 @@ defmodule Google.Ads.Googleads.V11.Resources.Campaign do
     json_name: "paymentMode",
     enum: true
 
-  field :optimization_score, 66, type: :double, json_name: "optimizationScore", deprecated: false
+  field :optimization_score, 66,
+    proto3_optional: true,
+    type: :double,
+    json_name: "optimizationScore",
+    deprecated: false
 
   field :excluded_parent_asset_field_types, 69,
     repeated: true,
@@ -591,7 +406,10 @@ defmodule Google.Ads.Googleads.V11.Resources.Campaign do
     json_name: "excludedParentAssetFieldTypes",
     enum: true
 
-  field :url_expansion_opt_out, 72, type: :bool, json_name: "urlExpansionOptOut"
+  field :url_expansion_opt_out, 72,
+    proto3_optional: true,
+    type: :bool,
+    json_name: "urlExpansionOptOut"
 
   field :performance_max_upgrade, 77,
     type: Google.Ads.Googleads.V11.Resources.Campaign.PerformanceMaxUpgrade,

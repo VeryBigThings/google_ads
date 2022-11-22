@@ -1,30 +1,6 @@
 defmodule Google.Ads.Googleads.V11.Enums.LocalPlaceholderFieldEnum.LocalPlaceholderField do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto3
-
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :DEAL_ID
-          | :DEAL_NAME
-          | :SUBTITLE
-          | :DESCRIPTION
-          | :PRICE
-          | :FORMATTED_PRICE
-          | :SALE_PRICE
-          | :FORMATTED_SALE_PRICE
-          | :IMAGE_URL
-          | :ADDRESS
-          | :CATEGORY
-          | :CONTEXTUAL_KEYWORDS
-          | :FINAL_URLS
-          | :FINAL_MOBILE_URLS
-          | :TRACKING_URL
-          | :ANDROID_APP_LINK
-          | :SIMILAR_DEAL_IDS
-          | :IOS_APP_LINK
-          | :IOS_APP_STORE_ID
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
@@ -48,11 +24,8 @@ defmodule Google.Ads.Googleads.V11.Enums.LocalPlaceholderFieldEnum.LocalPlacehol
   field :IOS_APP_LINK, 19
   field :IOS_APP_STORE_ID, 20
 end
+
 defmodule Google.Ads.Googleads.V11.Enums.LocalPlaceholderFieldEnum do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{}
-
-  defstruct []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 end

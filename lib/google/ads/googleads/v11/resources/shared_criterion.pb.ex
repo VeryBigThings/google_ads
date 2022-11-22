@@ -1,34 +1,22 @@
 defmodule Google.Ads.Googleads.V11.Resources.SharedCriterion do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          criterion:
-            {:keyword, Google.Ads.Googleads.V11.Common.KeywordInfo.t() | nil}
-            | {:youtube_video, Google.Ads.Googleads.V11.Common.YouTubeVideoInfo.t() | nil}
-            | {:youtube_channel, Google.Ads.Googleads.V11.Common.YouTubeChannelInfo.t() | nil}
-            | {:placement, Google.Ads.Googleads.V11.Common.PlacementInfo.t() | nil}
-            | {:mobile_app_category,
-               Google.Ads.Googleads.V11.Common.MobileAppCategoryInfo.t() | nil}
-            | {:mobile_application,
-               Google.Ads.Googleads.V11.Common.MobileApplicationInfo.t() | nil},
-          resource_name: String.t(),
-          shared_set: String.t(),
-          criterion_id: integer,
-          type: Google.Ads.Googleads.V11.Enums.CriterionTypeEnum.CriterionType.t()
-        }
-
-  defstruct criterion: nil,
-            resource_name: "",
-            shared_set: "",
-            criterion_id: 0,
-            type: :UNSPECIFIED
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   oneof :criterion, 0
 
   field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
-  field :shared_set, 10, type: :string, json_name: "sharedSet", deprecated: false
-  field :criterion_id, 11, type: :int64, json_name: "criterionId", deprecated: false
+
+  field :shared_set, 10,
+    proto3_optional: true,
+    type: :string,
+    json_name: "sharedSet",
+    deprecated: false
+
+  field :criterion_id, 11,
+    proto3_optional: true,
+    type: :int64,
+    json_name: "criterionId",
+    deprecated: false
 
   field :type, 4,
     type: Google.Ads.Googleads.V11.Enums.CriterionTypeEnum.CriterionType,

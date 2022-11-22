@@ -1,21 +1,8 @@
 defmodule Google.Ads.Googleads.V11.Common.MatchingFunction do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
-  @type t :: %__MODULE__{
-          function_string: String.t(),
-          operator:
-            Google.Ads.Googleads.V11.Enums.MatchingFunctionOperatorEnum.MatchingFunctionOperator.t(),
-          left_operands: [Google.Ads.Googleads.V11.Common.Operand.t()],
-          right_operands: [Google.Ads.Googleads.V11.Common.Operand.t()]
-        }
-
-  defstruct function_string: "",
-            operator: :UNSPECIFIED,
-            left_operands: [],
-            right_operands: []
-
-  field :function_string, 5, type: :string, json_name: "functionString"
+  field :function_string, 5, proto3_optional: true, type: :string, json_name: "functionString"
 
   field :operator, 4,
     type: Google.Ads.Googleads.V11.Enums.MatchingFunctionOperatorEnum.MatchingFunctionOperator,
@@ -31,19 +18,10 @@ defmodule Google.Ads.Googleads.V11.Common.MatchingFunction do
     type: Google.Ads.Googleads.V11.Common.Operand,
     json_name: "rightOperands"
 end
+
 defmodule Google.Ads.Googleads.V11.Common.Operand.ConstantOperand do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          constant_operand_value:
-            {:string_value, String.t()}
-            | {:long_value, integer}
-            | {:boolean_value, boolean}
-            | {:double_value, float | :infinity | :negative_infinity | :nan}
-        }
-
-  defstruct constant_operand_value: nil
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   oneof :constant_operand_value, 0
 
@@ -52,45 +30,27 @@ defmodule Google.Ads.Googleads.V11.Common.Operand.ConstantOperand do
   field :boolean_value, 7, type: :bool, json_name: "booleanValue", oneof: 0
   field :double_value, 8, type: :double, json_name: "doubleValue", oneof: 0
 end
+
 defmodule Google.Ads.Googleads.V11.Common.Operand.FeedAttributeOperand do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
-  @type t :: %__MODULE__{
-          feed_id: integer,
-          feed_attribute_id: integer
-        }
-
-  defstruct feed_id: 0,
-            feed_attribute_id: 0
-
-  field :feed_id, 3, type: :int64, json_name: "feedId"
-  field :feed_attribute_id, 4, type: :int64, json_name: "feedAttributeId"
+  field :feed_id, 3, proto3_optional: true, type: :int64, json_name: "feedId"
+  field :feed_attribute_id, 4, proto3_optional: true, type: :int64, json_name: "feedAttributeId"
 end
+
 defmodule Google.Ads.Googleads.V11.Common.Operand.FunctionOperand do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          matching_function: Google.Ads.Googleads.V11.Common.MatchingFunction.t() | nil
-        }
-
-  defstruct matching_function: nil
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :matching_function, 1,
     type: Google.Ads.Googleads.V11.Common.MatchingFunction,
     json_name: "matchingFunction"
 end
+
 defmodule Google.Ads.Googleads.V11.Common.Operand.RequestContextOperand do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          context_type:
-            Google.Ads.Googleads.V11.Enums.MatchingFunctionContextTypeEnum.MatchingFunctionContextType.t()
-        }
-
-  defstruct context_type: :UNSPECIFIED
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :context_type, 1,
     type:
@@ -98,22 +58,10 @@ defmodule Google.Ads.Googleads.V11.Common.Operand.RequestContextOperand do
     json_name: "contextType",
     enum: true
 end
+
 defmodule Google.Ads.Googleads.V11.Common.Operand do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          function_argument_operand:
-            {:constant_operand, Google.Ads.Googleads.V11.Common.Operand.ConstantOperand.t() | nil}
-            | {:feed_attribute_operand,
-               Google.Ads.Googleads.V11.Common.Operand.FeedAttributeOperand.t() | nil}
-            | {:function_operand,
-               Google.Ads.Googleads.V11.Common.Operand.FunctionOperand.t() | nil}
-            | {:request_context_operand,
-               Google.Ads.Googleads.V11.Common.Operand.RequestContextOperand.t() | nil}
-        }
-
-  defstruct function_argument_operand: nil
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   oneof :function_argument_operand, 0
 

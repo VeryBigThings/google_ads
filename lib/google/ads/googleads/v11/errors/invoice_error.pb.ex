@@ -1,16 +1,6 @@
 defmodule Google.Ads.Googleads.V11.Errors.InvoiceErrorEnum.InvoiceError do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto3
-
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :YEAR_MONTH_TOO_OLD
-          | :NOT_INVOICED_CUSTOMER
-          | :BILLING_SETUP_NOT_APPROVED
-          | :BILLING_SETUP_NOT_ON_MONTHLY_INVOICING
-          | :NON_SERVING_CUSTOMER
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
@@ -20,11 +10,8 @@ defmodule Google.Ads.Googleads.V11.Errors.InvoiceErrorEnum.InvoiceError do
   field :BILLING_SETUP_NOT_ON_MONTHLY_INVOICING, 5
   field :NON_SERVING_CUSTOMER, 6
 end
+
 defmodule Google.Ads.Googleads.V11.Errors.InvoiceErrorEnum do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{}
-
-  defstruct []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 end

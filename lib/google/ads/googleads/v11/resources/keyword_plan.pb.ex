@@ -1,39 +1,19 @@
 defmodule Google.Ads.Googleads.V11.Resources.KeywordPlan do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          id: integer,
-          name: String.t(),
-          forecast_period: Google.Ads.Googleads.V11.Resources.KeywordPlanForecastPeriod.t() | nil
-        }
-
-  defstruct resource_name: "",
-            id: 0,
-            name: "",
-            forecast_period: nil
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
-  field :id, 5, type: :int64, deprecated: false
-  field :name, 6, type: :string
+  field :id, 5, proto3_optional: true, type: :int64, deprecated: false
+  field :name, 6, proto3_optional: true, type: :string
 
   field :forecast_period, 4,
     type: Google.Ads.Googleads.V11.Resources.KeywordPlanForecastPeriod,
     json_name: "forecastPeriod"
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.KeywordPlanForecastPeriod do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          interval:
-            {:date_interval,
-             Google.Ads.Googleads.V11.Enums.KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval.t()}
-            | {:date_range, Google.Ads.Googleads.V11.Common.DateRange.t() | nil}
-        }
-
-  defstruct interval: nil
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   oneof :interval, 0
 

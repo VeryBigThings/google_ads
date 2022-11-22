@@ -1,71 +1,21 @@
 defmodule Google.Ads.Googleads.V11.Resources.CampaignCriterion do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          criterion:
-            {:keyword, Google.Ads.Googleads.V11.Common.KeywordInfo.t() | nil}
-            | {:placement, Google.Ads.Googleads.V11.Common.PlacementInfo.t() | nil}
-            | {:mobile_app_category,
-               Google.Ads.Googleads.V11.Common.MobileAppCategoryInfo.t() | nil}
-            | {:mobile_application,
-               Google.Ads.Googleads.V11.Common.MobileApplicationInfo.t() | nil}
-            | {:location, Google.Ads.Googleads.V11.Common.LocationInfo.t() | nil}
-            | {:device, Google.Ads.Googleads.V11.Common.DeviceInfo.t() | nil}
-            | {:ad_schedule, Google.Ads.Googleads.V11.Common.AdScheduleInfo.t() | nil}
-            | {:age_range, Google.Ads.Googleads.V11.Common.AgeRangeInfo.t() | nil}
-            | {:gender, Google.Ads.Googleads.V11.Common.GenderInfo.t() | nil}
-            | {:income_range, Google.Ads.Googleads.V11.Common.IncomeRangeInfo.t() | nil}
-            | {:parental_status, Google.Ads.Googleads.V11.Common.ParentalStatusInfo.t() | nil}
-            | {:user_list, Google.Ads.Googleads.V11.Common.UserListInfo.t() | nil}
-            | {:youtube_video, Google.Ads.Googleads.V11.Common.YouTubeVideoInfo.t() | nil}
-            | {:youtube_channel, Google.Ads.Googleads.V11.Common.YouTubeChannelInfo.t() | nil}
-            | {:proximity, Google.Ads.Googleads.V11.Common.ProximityInfo.t() | nil}
-            | {:topic, Google.Ads.Googleads.V11.Common.TopicInfo.t() | nil}
-            | {:listing_scope, Google.Ads.Googleads.V11.Common.ListingScopeInfo.t() | nil}
-            | {:language, Google.Ads.Googleads.V11.Common.LanguageInfo.t() | nil}
-            | {:ip_block, Google.Ads.Googleads.V11.Common.IpBlockInfo.t() | nil}
-            | {:content_label, Google.Ads.Googleads.V11.Common.ContentLabelInfo.t() | nil}
-            | {:carrier, Google.Ads.Googleads.V11.Common.CarrierInfo.t() | nil}
-            | {:user_interest, Google.Ads.Googleads.V11.Common.UserInterestInfo.t() | nil}
-            | {:webpage, Google.Ads.Googleads.V11.Common.WebpageInfo.t() | nil}
-            | {:operating_system_version,
-               Google.Ads.Googleads.V11.Common.OperatingSystemVersionInfo.t() | nil}
-            | {:mobile_device, Google.Ads.Googleads.V11.Common.MobileDeviceInfo.t() | nil}
-            | {:location_group, Google.Ads.Googleads.V11.Common.LocationGroupInfo.t() | nil}
-            | {:custom_affinity, Google.Ads.Googleads.V11.Common.CustomAffinityInfo.t() | nil}
-            | {:custom_audience, Google.Ads.Googleads.V11.Common.CustomAudienceInfo.t() | nil}
-            | {:combined_audience, Google.Ads.Googleads.V11.Common.CombinedAudienceInfo.t() | nil}
-            | {:keyword_theme, Google.Ads.Googleads.V11.Common.KeywordThemeInfo.t() | nil},
-          resource_name: String.t(),
-          campaign: String.t(),
-          criterion_id: integer,
-          display_name: String.t(),
-          bid_modifier: float | :infinity | :negative_infinity | :nan,
-          negative: boolean,
-          type: Google.Ads.Googleads.V11.Enums.CriterionTypeEnum.CriterionType.t(),
-          status:
-            Google.Ads.Googleads.V11.Enums.CampaignCriterionStatusEnum.CampaignCriterionStatus.t()
-        }
-
-  defstruct criterion: nil,
-            resource_name: "",
-            campaign: "",
-            criterion_id: 0,
-            display_name: "",
-            bid_modifier: 0.0,
-            negative: false,
-            type: :UNSPECIFIED,
-            status: :UNSPECIFIED
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   oneof :criterion, 0
 
   field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
-  field :campaign, 37, type: :string, deprecated: false
-  field :criterion_id, 38, type: :int64, json_name: "criterionId", deprecated: false
+  field :campaign, 37, proto3_optional: true, type: :string, deprecated: false
+
+  field :criterion_id, 38,
+    proto3_optional: true,
+    type: :int64,
+    json_name: "criterionId",
+    deprecated: false
+
   field :display_name, 43, type: :string, json_name: "displayName", deprecated: false
-  field :bid_modifier, 39, type: :float, json_name: "bidModifier"
-  field :negative, 40, type: :bool, deprecated: false
+  field :bid_modifier, 39, proto3_optional: true, type: :float, json_name: "bidModifier"
+  field :negative, 40, proto3_optional: true, type: :bool, deprecated: false
 
   field :type, 6,
     type: Google.Ads.Googleads.V11.Enums.CriterionTypeEnum.CriterionType,

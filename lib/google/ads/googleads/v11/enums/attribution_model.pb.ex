@@ -1,18 +1,6 @@
 defmodule Google.Ads.Googleads.V11.Enums.AttributionModelEnum.AttributionModel do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto3
-
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :EXTERNAL
-          | :GOOGLE_ADS_LAST_CLICK
-          | :GOOGLE_SEARCH_ATTRIBUTION_FIRST_CLICK
-          | :GOOGLE_SEARCH_ATTRIBUTION_LINEAR
-          | :GOOGLE_SEARCH_ATTRIBUTION_TIME_DECAY
-          | :GOOGLE_SEARCH_ATTRIBUTION_POSITION_BASED
-          | :GOOGLE_SEARCH_ATTRIBUTION_DATA_DRIVEN
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
@@ -24,11 +12,8 @@ defmodule Google.Ads.Googleads.V11.Enums.AttributionModelEnum.AttributionModel d
   field :GOOGLE_SEARCH_ATTRIBUTION_POSITION_BASED, 105
   field :GOOGLE_SEARCH_ATTRIBUTION_DATA_DRIVEN, 106
 end
+
 defmodule Google.Ads.Googleads.V11.Enums.AttributionModelEnum do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{}
-
-  defstruct []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 end

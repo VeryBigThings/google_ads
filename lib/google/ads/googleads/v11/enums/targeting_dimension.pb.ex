@@ -1,19 +1,6 @@
 defmodule Google.Ads.Googleads.V11.Enums.TargetingDimensionEnum.TargetingDimension do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto3
-
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :KEYWORD
-          | :AUDIENCE
-          | :TOPIC
-          | :GENDER
-          | :AGE_RANGE
-          | :PLACEMENT
-          | :PARENTAL_STATUS
-          | :INCOME_RANGE
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
@@ -26,11 +13,8 @@ defmodule Google.Ads.Googleads.V11.Enums.TargetingDimensionEnum.TargetingDimensi
   field :PARENTAL_STATUS, 8
   field :INCOME_RANGE, 9
 end
+
 defmodule Google.Ads.Googleads.V11.Enums.TargetingDimensionEnum do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{}
-
-  defstruct []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 end

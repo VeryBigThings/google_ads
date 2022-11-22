@@ -1,18 +1,6 @@
 defmodule Google.Ads.Googleads.V11.Services.MutateFeedItemSetsRequest do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          customer_id: String.t(),
-          operations: [Google.Ads.Googleads.V11.Services.FeedItemSetOperation.t()],
-          partial_failure: boolean,
-          validate_only: boolean
-        }
-
-  defstruct customer_id: "",
-            operations: [],
-            partial_failure: false,
-            validate_only: false
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :customer_id, 1, type: :string, json_name: "customerId", deprecated: false
 
@@ -24,20 +12,10 @@ defmodule Google.Ads.Googleads.V11.Services.MutateFeedItemSetsRequest do
   field :partial_failure, 3, type: :bool, json_name: "partialFailure"
   field :validate_only, 4, type: :bool, json_name: "validateOnly"
 end
+
 defmodule Google.Ads.Googleads.V11.Services.FeedItemSetOperation do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          operation:
-            {:create, Google.Ads.Googleads.V11.Resources.FeedItemSet.t() | nil}
-            | {:update, Google.Ads.Googleads.V11.Resources.FeedItemSet.t() | nil}
-            | {:remove, String.t()},
-          update_mask: Google.Protobuf.FieldMask.t() | nil
-        }
-
-  defstruct operation: nil,
-            update_mask: nil
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   oneof :operation, 0
 
@@ -46,17 +24,10 @@ defmodule Google.Ads.Googleads.V11.Services.FeedItemSetOperation do
   field :update, 2, type: Google.Ads.Googleads.V11.Resources.FeedItemSet, oneof: 0
   field :remove, 3, type: :string, oneof: 0, deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Services.MutateFeedItemSetsResponse do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          results: [Google.Ads.Googleads.V11.Services.MutateFeedItemSetResult.t()],
-          partial_failure_error: Google.Rpc.Status.t() | nil
-        }
-
-  defstruct results: [],
-            partial_failure_error: nil
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :results, 1,
     repeated: true,
@@ -64,21 +35,19 @@ defmodule Google.Ads.Googleads.V11.Services.MutateFeedItemSetsResponse do
 
   field :partial_failure_error, 2, type: Google.Rpc.Status, json_name: "partialFailureError"
 end
+
 defmodule Google.Ads.Googleads.V11.Services.MutateFeedItemSetResult do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          resource_name: String.t()
-        }
-
-  defstruct resource_name: ""
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Services.FeedItemSetService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v11.services.FeedItemSetService"
+  use GRPC.Service,
+    name: "google.ads.googleads.v11.services.FeedItemSetService",
+    protoc_gen_elixir_version: "0.11.0"
 
   rpc :MutateFeedItemSets,
       Google.Ads.Googleads.V11.Services.MutateFeedItemSetsRequest,

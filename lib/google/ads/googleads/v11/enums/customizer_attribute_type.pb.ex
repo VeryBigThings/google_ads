@@ -1,8 +1,6 @@
 defmodule Google.Ads.Googleads.V11.Enums.CustomizerAttributeTypeEnum.CustomizerAttributeType do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto3
-
-  @type t :: integer | :UNSPECIFIED | :UNKNOWN | :TEXT | :NUMBER | :PRICE | :PERCENT
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
@@ -11,11 +9,8 @@ defmodule Google.Ads.Googleads.V11.Enums.CustomizerAttributeTypeEnum.CustomizerA
   field :PRICE, 4
   field :PERCENT, 5
 end
+
 defmodule Google.Ads.Googleads.V11.Enums.CustomizerAttributeTypeEnum do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{}
-
-  defstruct []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 end

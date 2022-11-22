@@ -1,30 +1,16 @@
 defmodule Google.Ads.Googleads.V11.Resources.AdGroupAdAssetView do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          ad_group_ad: String.t(),
-          asset: String.t(),
-          field_type: Google.Ads.Googleads.V11.Enums.AssetFieldTypeEnum.AssetFieldType.t(),
-          enabled: boolean,
-          policy_summary:
-            Google.Ads.Googleads.V11.Resources.AdGroupAdAssetPolicySummary.t() | nil,
-          performance_label:
-            Google.Ads.Googleads.V11.Enums.AssetPerformanceLabelEnum.AssetPerformanceLabel.t()
-        }
-
-  defstruct resource_name: "",
-            ad_group_ad: "",
-            asset: "",
-            field_type: :UNSPECIFIED,
-            enabled: false,
-            policy_summary: nil,
-            performance_label: :UNSPECIFIED
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
-  field :ad_group_ad, 9, type: :string, json_name: "adGroupAd", deprecated: false
-  field :asset, 10, type: :string, deprecated: false
+
+  field :ad_group_ad, 9,
+    proto3_optional: true,
+    type: :string,
+    json_name: "adGroupAd",
+    deprecated: false
+
+  field :asset, 10, proto3_optional: true, type: :string, deprecated: false
 
   field :field_type, 2,
     type: Google.Ads.Googleads.V11.Enums.AssetFieldTypeEnum.AssetFieldType,
@@ -32,7 +18,7 @@ defmodule Google.Ads.Googleads.V11.Resources.AdGroupAdAssetView do
     enum: true,
     deprecated: false
 
-  field :enabled, 8, type: :bool, deprecated: false
+  field :enabled, 8, proto3_optional: true, type: :bool, deprecated: false
 
   field :policy_summary, 3,
     type: Google.Ads.Googleads.V11.Resources.AdGroupAdAssetPolicySummary,
@@ -45,21 +31,10 @@ defmodule Google.Ads.Googleads.V11.Resources.AdGroupAdAssetView do
     enum: true,
     deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.AdGroupAdAssetPolicySummary do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          policy_topic_entries: [Google.Ads.Googleads.V11.Common.PolicyTopicEntry.t()],
-          review_status:
-            Google.Ads.Googleads.V11.Enums.PolicyReviewStatusEnum.PolicyReviewStatus.t(),
-          approval_status:
-            Google.Ads.Googleads.V11.Enums.PolicyApprovalStatusEnum.PolicyApprovalStatus.t()
-        }
-
-  defstruct policy_topic_entries: [],
-            review_status: :UNSPECIFIED,
-            approval_status: :UNSPECIFIED
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :policy_topic_entries, 1,
     repeated: true,

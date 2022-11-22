@@ -1,83 +1,11 @@
 defmodule Google.Ads.Googleads.V11.Resources.Ad do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          ad_data:
-            {:text_ad, Google.Ads.Googleads.V11.Common.TextAdInfo.t() | nil}
-            | {:expanded_text_ad, Google.Ads.Googleads.V11.Common.ExpandedTextAdInfo.t() | nil}
-            | {:call_ad, Google.Ads.Googleads.V11.Common.CallAdInfo.t() | nil}
-            | {:expanded_dynamic_search_ad,
-               Google.Ads.Googleads.V11.Common.ExpandedDynamicSearchAdInfo.t() | nil}
-            | {:hotel_ad, Google.Ads.Googleads.V11.Common.HotelAdInfo.t() | nil}
-            | {:shopping_smart_ad, Google.Ads.Googleads.V11.Common.ShoppingSmartAdInfo.t() | nil}
-            | {:shopping_product_ad,
-               Google.Ads.Googleads.V11.Common.ShoppingProductAdInfo.t() | nil}
-            | {:gmail_ad, Google.Ads.Googleads.V11.Common.GmailAdInfo.t() | nil}
-            | {:image_ad, Google.Ads.Googleads.V11.Common.ImageAdInfo.t() | nil}
-            | {:video_ad, Google.Ads.Googleads.V11.Common.VideoAdInfo.t() | nil}
-            | {:video_responsive_ad,
-               Google.Ads.Googleads.V11.Common.VideoResponsiveAdInfo.t() | nil}
-            | {:responsive_search_ad,
-               Google.Ads.Googleads.V11.Common.ResponsiveSearchAdInfo.t() | nil}
-            | {:legacy_responsive_display_ad,
-               Google.Ads.Googleads.V11.Common.LegacyResponsiveDisplayAdInfo.t() | nil}
-            | {:app_ad, Google.Ads.Googleads.V11.Common.AppAdInfo.t() | nil}
-            | {:legacy_app_install_ad,
-               Google.Ads.Googleads.V11.Common.LegacyAppInstallAdInfo.t() | nil}
-            | {:responsive_display_ad,
-               Google.Ads.Googleads.V11.Common.ResponsiveDisplayAdInfo.t() | nil}
-            | {:local_ad, Google.Ads.Googleads.V11.Common.LocalAdInfo.t() | nil}
-            | {:display_upload_ad, Google.Ads.Googleads.V11.Common.DisplayUploadAdInfo.t() | nil}
-            | {:app_engagement_ad, Google.Ads.Googleads.V11.Common.AppEngagementAdInfo.t() | nil}
-            | {:shopping_comparison_listing_ad,
-               Google.Ads.Googleads.V11.Common.ShoppingComparisonListingAdInfo.t() | nil}
-            | {:smart_campaign_ad, Google.Ads.Googleads.V11.Common.SmartCampaignAdInfo.t() | nil}
-            | {:app_pre_registration_ad,
-               Google.Ads.Googleads.V11.Common.AppPreRegistrationAdInfo.t() | nil}
-            | {:discovery_multi_asset_ad,
-               Google.Ads.Googleads.V11.Common.DiscoveryMultiAssetAdInfo.t() | nil}
-            | {:discovery_carousel_ad,
-               Google.Ads.Googleads.V11.Common.DiscoveryCarouselAdInfo.t() | nil},
-          resource_name: String.t(),
-          id: integer,
-          final_urls: [String.t()],
-          final_app_urls: [Google.Ads.Googleads.V11.Common.FinalAppUrl.t()],
-          final_mobile_urls: [String.t()],
-          tracking_url_template: String.t(),
-          final_url_suffix: String.t(),
-          url_custom_parameters: [Google.Ads.Googleads.V11.Common.CustomParameter.t()],
-          display_url: String.t(),
-          type: Google.Ads.Googleads.V11.Enums.AdTypeEnum.AdType.t(),
-          added_by_google_ads: boolean,
-          device_preference: Google.Ads.Googleads.V11.Enums.DeviceEnum.Device.t(),
-          url_collections: [Google.Ads.Googleads.V11.Common.UrlCollection.t()],
-          name: String.t(),
-          system_managed_resource_source:
-            Google.Ads.Googleads.V11.Enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource.t()
-        }
-
-  defstruct ad_data: nil,
-            resource_name: "",
-            id: 0,
-            final_urls: [],
-            final_app_urls: [],
-            final_mobile_urls: [],
-            tracking_url_template: "",
-            final_url_suffix: "",
-            url_custom_parameters: [],
-            display_url: "",
-            type: :UNSPECIFIED,
-            added_by_google_ads: false,
-            device_preference: :UNSPECIFIED,
-            url_collections: [],
-            name: "",
-            system_managed_resource_source: :UNSPECIFIED
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   oneof :ad_data, 0
 
   field :resource_name, 37, type: :string, json_name: "resourceName", deprecated: false
-  field :id, 40, type: :int64, deprecated: false
+  field :id, 40, proto3_optional: true, type: :int64, deprecated: false
   field :final_urls, 41, repeated: true, type: :string, json_name: "finalUrls"
 
   field :final_app_urls, 35,
@@ -86,22 +14,31 @@ defmodule Google.Ads.Googleads.V11.Resources.Ad do
     json_name: "finalAppUrls"
 
   field :final_mobile_urls, 42, repeated: true, type: :string, json_name: "finalMobileUrls"
-  field :tracking_url_template, 43, type: :string, json_name: "trackingUrlTemplate"
-  field :final_url_suffix, 44, type: :string, json_name: "finalUrlSuffix"
+
+  field :tracking_url_template, 43,
+    proto3_optional: true,
+    type: :string,
+    json_name: "trackingUrlTemplate"
+
+  field :final_url_suffix, 44, proto3_optional: true, type: :string, json_name: "finalUrlSuffix"
 
   field :url_custom_parameters, 10,
     repeated: true,
     type: Google.Ads.Googleads.V11.Common.CustomParameter,
     json_name: "urlCustomParameters"
 
-  field :display_url, 45, type: :string, json_name: "displayUrl"
+  field :display_url, 45, proto3_optional: true, type: :string, json_name: "displayUrl"
 
   field :type, 5,
     type: Google.Ads.Googleads.V11.Enums.AdTypeEnum.AdType,
     enum: true,
     deprecated: false
 
-  field :added_by_google_ads, 46, type: :bool, json_name: "addedByGoogleAds", deprecated: false
+  field :added_by_google_ads, 46,
+    proto3_optional: true,
+    type: :bool,
+    json_name: "addedByGoogleAds",
+    deprecated: false
 
   field :device_preference, 20,
     type: Google.Ads.Googleads.V11.Enums.DeviceEnum.Device,
@@ -113,7 +50,7 @@ defmodule Google.Ads.Googleads.V11.Resources.Ad do
     type: Google.Ads.Googleads.V11.Common.UrlCollection,
     json_name: "urlCollections"
 
-  field :name, 47, type: :string, deprecated: false
+  field :name, 47, proto3_optional: true, type: :string, deprecated: false
 
   field :system_managed_resource_source, 27,
     type:

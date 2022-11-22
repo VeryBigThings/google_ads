@@ -1,28 +1,10 @@
 defmodule Google.Ads.Googleads.V11.Resources.CampaignFeed do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          feed: String.t(),
-          campaign: String.t(),
-          placeholder_types: [
-            Google.Ads.Googleads.V11.Enums.PlaceholderTypeEnum.PlaceholderType.t()
-          ],
-          matching_function: Google.Ads.Googleads.V11.Common.MatchingFunction.t() | nil,
-          status: Google.Ads.Googleads.V11.Enums.FeedLinkStatusEnum.FeedLinkStatus.t()
-        }
-
-  defstruct resource_name: "",
-            feed: "",
-            campaign: "",
-            placeholder_types: [],
-            matching_function: nil,
-            status: :UNSPECIFIED
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
-  field :feed, 7, type: :string, deprecated: false
-  field :campaign, 8, type: :string, deprecated: false
+  field :feed, 7, proto3_optional: true, type: :string, deprecated: false
+  field :campaign, 8, proto3_optional: true, type: :string, deprecated: false
 
   field :placeholder_types, 4,
     repeated: true,

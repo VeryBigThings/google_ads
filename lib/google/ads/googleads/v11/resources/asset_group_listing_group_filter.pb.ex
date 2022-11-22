@@ -1,26 +1,6 @@
 defmodule Google.Ads.Googleads.V11.Resources.AssetGroupListingGroupFilter do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          asset_group: String.t(),
-          id: integer,
-          type:
-            Google.Ads.Googleads.V11.Enums.ListingGroupFilterTypeEnum.ListingGroupFilterType.t(),
-          vertical:
-            Google.Ads.Googleads.V11.Enums.ListingGroupFilterVerticalEnum.ListingGroupFilterVertical.t(),
-          case_value: Google.Ads.Googleads.V11.Resources.ListingGroupFilterDimension.t() | nil,
-          parent_listing_group_filter: String.t()
-        }
-
-  defstruct resource_name: "",
-            asset_group: "",
-            id: 0,
-            type: :UNSPECIFIED,
-            vertical: :UNSPECIFIED,
-            case_value: nil,
-            parent_listing_group_filter: ""
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
   field :asset_group, 2, type: :string, json_name: "assetGroup", deprecated: false
@@ -46,152 +26,80 @@ defmodule Google.Ads.Googleads.V11.Resources.AssetGroupListingGroupFilter do
     json_name: "parentListingGroupFilter",
     deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.ListingGroupFilterDimension.ProductBiddingCategory do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
-  @type t :: %__MODULE__{
-          id: integer,
-          level:
-            Google.Ads.Googleads.V11.Enums.ListingGroupFilterBiddingCategoryLevelEnum.ListingGroupFilterBiddingCategoryLevel.t()
-        }
-
-  defstruct id: 0,
-            level: :UNSPECIFIED
-
-  field :id, 1, type: :int64
+  field :id, 1, proto3_optional: true, type: :int64
 
   field :level, 2,
     type:
       Google.Ads.Googleads.V11.Enums.ListingGroupFilterBiddingCategoryLevelEnum.ListingGroupFilterBiddingCategoryLevel,
     enum: true
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.ListingGroupFilterDimension.ProductBrand do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
-  @type t :: %__MODULE__{
-          value: String.t()
-        }
-
-  defstruct value: ""
-
-  field :value, 1, type: :string
+  field :value, 1, proto3_optional: true, type: :string
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.ListingGroupFilterDimension.ProductChannel do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          channel:
-            Google.Ads.Googleads.V11.Enums.ListingGroupFilterProductChannelEnum.ListingGroupFilterProductChannel.t()
-        }
-
-  defstruct channel: :UNSPECIFIED
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :channel, 1,
     type:
       Google.Ads.Googleads.V11.Enums.ListingGroupFilterProductChannelEnum.ListingGroupFilterProductChannel,
     enum: true
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.ListingGroupFilterDimension.ProductCondition do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          condition:
-            Google.Ads.Googleads.V11.Enums.ListingGroupFilterProductConditionEnum.ListingGroupFilterProductCondition.t()
-        }
-
-  defstruct condition: :UNSPECIFIED
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :condition, 1,
     type:
       Google.Ads.Googleads.V11.Enums.ListingGroupFilterProductConditionEnum.ListingGroupFilterProductCondition,
     enum: true
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.ListingGroupFilterDimension.ProductCustomAttribute do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
-  @type t :: %__MODULE__{
-          value: String.t(),
-          index:
-            Google.Ads.Googleads.V11.Enums.ListingGroupFilterCustomAttributeIndexEnum.ListingGroupFilterCustomAttributeIndex.t()
-        }
-
-  defstruct value: "",
-            index: :UNSPECIFIED
-
-  field :value, 1, type: :string
+  field :value, 1, proto3_optional: true, type: :string
 
   field :index, 2,
     type:
       Google.Ads.Googleads.V11.Enums.ListingGroupFilterCustomAttributeIndexEnum.ListingGroupFilterCustomAttributeIndex,
     enum: true
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.ListingGroupFilterDimension.ProductItemId do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
-  @type t :: %__MODULE__{
-          value: String.t()
-        }
-
-  defstruct value: ""
-
-  field :value, 1, type: :string
+  field :value, 1, proto3_optional: true, type: :string
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.ListingGroupFilterDimension.ProductType do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
-  @type t :: %__MODULE__{
-          value: String.t(),
-          level:
-            Google.Ads.Googleads.V11.Enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel.t()
-        }
-
-  defstruct value: "",
-            level: :UNSPECIFIED
-
-  field :value, 1, type: :string
+  field :value, 1, proto3_optional: true, type: :string
 
   field :level, 2,
     type:
       Google.Ads.Googleads.V11.Enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel,
     enum: true
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.ListingGroupFilterDimension do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          dimension:
-            {:product_bidding_category,
-             Google.Ads.Googleads.V11.Resources.ListingGroupFilterDimension.ProductBiddingCategory.t()
-             | nil}
-            | {:product_brand,
-               Google.Ads.Googleads.V11.Resources.ListingGroupFilterDimension.ProductBrand.t()
-               | nil}
-            | {:product_channel,
-               Google.Ads.Googleads.V11.Resources.ListingGroupFilterDimension.ProductChannel.t()
-               | nil}
-            | {:product_condition,
-               Google.Ads.Googleads.V11.Resources.ListingGroupFilterDimension.ProductCondition.t()
-               | nil}
-            | {:product_custom_attribute,
-               Google.Ads.Googleads.V11.Resources.ListingGroupFilterDimension.ProductCustomAttribute.t()
-               | nil}
-            | {:product_item_id,
-               Google.Ads.Googleads.V11.Resources.ListingGroupFilterDimension.ProductItemId.t()
-               | nil}
-            | {:product_type,
-               Google.Ads.Googleads.V11.Resources.ListingGroupFilterDimension.ProductType.t()
-               | nil}
-        }
-
-  defstruct dimension: nil
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   oneof :dimension, 0
 

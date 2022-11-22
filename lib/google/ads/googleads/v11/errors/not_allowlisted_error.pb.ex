@@ -1,18 +1,13 @@
 defmodule Google.Ads.Googleads.V11.Errors.NotAllowlistedErrorEnum.NotAllowlistedError do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto3
-
-  @type t :: integer | :UNSPECIFIED | :UNKNOWN | :CUSTOMER_NOT_ALLOWLISTED_FOR_THIS_FEATURE
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :CUSTOMER_NOT_ALLOWLISTED_FOR_THIS_FEATURE, 2
 end
+
 defmodule Google.Ads.Googleads.V11.Errors.NotAllowlistedErrorEnum do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{}
-
-  defstruct []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 end

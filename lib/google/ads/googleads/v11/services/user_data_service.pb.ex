@@ -1,18 +1,6 @@
 defmodule Google.Ads.Googleads.V11.Services.UploadUserDataRequest do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          metadata:
-            {:customer_match_user_list_metadata,
-             Google.Ads.Googleads.V11.Common.CustomerMatchUserListMetadata.t() | nil},
-          customer_id: String.t(),
-          operations: [Google.Ads.Googleads.V11.Services.UserDataOperation.t()]
-        }
-
-  defstruct metadata: nil,
-            customer_id: "",
-            operations: []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   oneof :metadata, 0
 
@@ -28,41 +16,34 @@ defmodule Google.Ads.Googleads.V11.Services.UploadUserDataRequest do
     json_name: "customerMatchUserListMetadata",
     oneof: 0
 end
+
 defmodule Google.Ads.Googleads.V11.Services.UserDataOperation do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          operation:
-            {:create, Google.Ads.Googleads.V11.Common.UserData.t() | nil}
-            | {:remove, Google.Ads.Googleads.V11.Common.UserData.t() | nil}
-        }
-
-  defstruct operation: nil
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   oneof :operation, 0
 
   field :create, 1, type: Google.Ads.Googleads.V11.Common.UserData, oneof: 0
   field :remove, 2, type: Google.Ads.Googleads.V11.Common.UserData, oneof: 0
 end
+
 defmodule Google.Ads.Googleads.V11.Services.UploadUserDataResponse do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
-  @type t :: %__MODULE__{
-          upload_date_time: String.t(),
-          received_operations_count: integer
-        }
+  field :upload_date_time, 3, proto3_optional: true, type: :string, json_name: "uploadDateTime"
 
-  defstruct upload_date_time: "",
-            received_operations_count: 0
-
-  field :upload_date_time, 3, type: :string, json_name: "uploadDateTime"
-  field :received_operations_count, 4, type: :int32, json_name: "receivedOperationsCount"
+  field :received_operations_count, 4,
+    proto3_optional: true,
+    type: :int32,
+    json_name: "receivedOperationsCount"
 end
+
 defmodule Google.Ads.Googleads.V11.Services.UserDataService.Service do
   @moduledoc false
-  use GRPC.Service, name: "google.ads.googleads.v11.services.UserDataService"
+  use GRPC.Service,
+    name: "google.ads.googleads.v11.services.UserDataService",
+    protoc_gen_elixir_version: "0.11.0"
 
   rpc :UploadUserData,
       Google.Ads.Googleads.V11.Services.UploadUserDataRequest,

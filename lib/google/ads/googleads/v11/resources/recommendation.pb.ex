@@ -1,16 +1,6 @@
 defmodule Google.Ads.Googleads.V11.Resources.Recommendation.RecommendationImpact do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          base_metrics:
-            Google.Ads.Googleads.V11.Resources.Recommendation.RecommendationMetrics.t() | nil,
-          potential_metrics:
-            Google.Ads.Googleads.V11.Resources.Recommendation.RecommendationMetrics.t() | nil
-        }
-
-  defstruct base_metrics: nil,
-            potential_metrics: nil
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :base_metrics, 1,
     type: Google.Ads.Googleads.V11.Resources.Recommendation.RecommendationMetrics,
@@ -22,70 +12,56 @@ defmodule Google.Ads.Googleads.V11.Resources.Recommendation.RecommendationImpact
     json_name: "potentialMetrics",
     deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Recommendation.RecommendationMetrics do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
-  @type t :: %__MODULE__{
-          impressions: float | :infinity | :negative_infinity | :nan,
-          clicks: float | :infinity | :negative_infinity | :nan,
-          cost_micros: integer,
-          conversions: float | :infinity | :negative_infinity | :nan,
-          video_views: float | :infinity | :negative_infinity | :nan
-        }
+  field :impressions, 6, proto3_optional: true, type: :double, deprecated: false
+  field :clicks, 7, proto3_optional: true, type: :double, deprecated: false
 
-  defstruct impressions: 0.0,
-            clicks: 0.0,
-            cost_micros: 0,
-            conversions: 0.0,
-            video_views: 0.0
+  field :cost_micros, 8,
+    proto3_optional: true,
+    type: :int64,
+    json_name: "costMicros",
+    deprecated: false
 
-  field :impressions, 6, type: :double, deprecated: false
-  field :clicks, 7, type: :double, deprecated: false
-  field :cost_micros, 8, type: :int64, json_name: "costMicros", deprecated: false
-  field :conversions, 9, type: :double, deprecated: false
-  field :video_views, 10, type: :double, json_name: "videoViews", deprecated: false
+  field :conversions, 9, proto3_optional: true, type: :double, deprecated: false
+
+  field :video_views, 10,
+    proto3_optional: true,
+    type: :double,
+    json_name: "videoViews",
+    deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption do
   @moduledoc false
-  use Protobuf, syntax: :proto3
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
-  @type t :: %__MODULE__{
-          budget_amount_micros: integer,
-          impact: Google.Ads.Googleads.V11.Resources.Recommendation.RecommendationImpact.t() | nil
-        }
-
-  defstruct budget_amount_micros: 0,
-            impact: nil
-
-  field :budget_amount_micros, 3, type: :int64, json_name: "budgetAmountMicros", deprecated: false
+  field :budget_amount_micros, 3,
+    proto3_optional: true,
+    type: :int64,
+    json_name: "budgetAmountMicros",
+    deprecated: false
 
   field :impact, 2,
     type: Google.Ads.Googleads.V11.Resources.Recommendation.RecommendationImpact,
     deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Recommendation.CampaignBudgetRecommendation do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          current_budget_amount_micros: integer,
-          recommended_budget_amount_micros: integer,
-          budget_options: [
-            Google.Ads.Googleads.V11.Resources.Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption.t()
-          ]
-        }
-
-  defstruct current_budget_amount_micros: 0,
-            recommended_budget_amount_micros: 0,
-            budget_options: []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :current_budget_amount_micros, 7,
+    proto3_optional: true,
     type: :int64,
     json_name: "currentBudgetAmountMicros",
     deprecated: false
 
   field :recommended_budget_amount_micros, 8,
+    proto3_optional: true,
     type: :int64,
     json_name: "recommendedBudgetAmountMicros",
     deprecated: false
@@ -97,59 +73,42 @@ defmodule Google.Ads.Googleads.V11.Resources.Recommendation.CampaignBudgetRecomm
     json_name: "budgetOptions",
     deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Recommendation.KeywordRecommendation do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          keyword: Google.Ads.Googleads.V11.Common.KeywordInfo.t() | nil,
-          recommended_cpc_bid_micros: integer
-        }
-
-  defstruct keyword: nil,
-            recommended_cpc_bid_micros: 0
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :keyword, 1, type: Google.Ads.Googleads.V11.Common.KeywordInfo, deprecated: false
 
   field :recommended_cpc_bid_micros, 3,
+    proto3_optional: true,
     type: :int64,
     json_name: "recommendedCpcBidMicros",
     deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Recommendation.TextAdRecommendation do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          ad: Google.Ads.Googleads.V11.Resources.Ad.t() | nil,
-          creation_date: String.t(),
-          auto_apply_date: String.t()
-        }
-
-  defstruct ad: nil,
-            creation_date: "",
-            auto_apply_date: ""
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :ad, 1, type: Google.Ads.Googleads.V11.Resources.Ad, deprecated: false
-  field :creation_date, 4, type: :string, json_name: "creationDate", deprecated: false
-  field :auto_apply_date, 5, type: :string, json_name: "autoApplyDate", deprecated: false
+
+  field :creation_date, 4,
+    proto3_optional: true,
+    type: :string,
+    json_name: "creationDate",
+    deprecated: false
+
+  field :auto_apply_date, 5,
+    proto3_optional: true,
+    type: :string,
+    json_name: "autoApplyDate",
+    deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          goal:
-            Google.Ads.Googleads.V11.Enums.TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal.t(),
-          target_cpa_micros: integer,
-          required_campaign_budget_amount_micros: integer,
-          impact: Google.Ads.Googleads.V11.Resources.Recommendation.RecommendationImpact.t() | nil
-        }
-
-  defstruct goal: :UNSPECIFIED,
-            target_cpa_micros: 0,
-            required_campaign_budget_amount_micros: 0,
-            impact: nil
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :goal, 1,
     type:
@@ -157,9 +116,14 @@ defmodule Google.Ads.Googleads.V11.Resources.Recommendation.TargetCpaOptInRecomm
     enum: true,
     deprecated: false
 
-  field :target_cpa_micros, 5, type: :int64, json_name: "targetCpaMicros", deprecated: false
+  field :target_cpa_micros, 5,
+    proto3_optional: true,
+    type: :int64,
+    json_name: "targetCpaMicros",
+    deprecated: false
 
   field :required_campaign_budget_amount_micros, 6,
+    proto3_optional: true,
     type: :int64,
     json_name: "requiredCampaignBudgetAmountMicros",
     deprecated: false
@@ -168,19 +132,10 @@ defmodule Google.Ads.Googleads.V11.Resources.Recommendation.TargetCpaOptInRecomm
     type: Google.Ads.Googleads.V11.Resources.Recommendation.RecommendationImpact,
     deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Recommendation.TargetCpaOptInRecommendation do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          options: [
-            Google.Ads.Googleads.V11.Resources.Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption.t()
-          ],
-          recommended_target_cpa_micros: integer
-        }
-
-  defstruct options: [],
-            recommended_target_cpa_micros: 0
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :options, 1,
     repeated: true,
@@ -189,73 +144,52 @@ defmodule Google.Ads.Googleads.V11.Resources.Recommendation.TargetCpaOptInRecomm
     deprecated: false
 
   field :recommended_target_cpa_micros, 3,
+    proto3_optional: true,
     type: :int64,
     json_name: "recommendedTargetCpaMicros",
     deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Recommendation.MaximizeConversionsOptInRecommendation do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          recommended_budget_amount_micros: integer
-        }
-
-  defstruct recommended_budget_amount_micros: 0
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :recommended_budget_amount_micros, 2,
+    proto3_optional: true,
     type: :int64,
     json_name: "recommendedBudgetAmountMicros",
     deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Recommendation.EnhancedCpcOptInRecommendation do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{}
-
-  defstruct []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Recommendation.SearchPartnersOptInRecommendation do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{}
-
-  defstruct []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Recommendation.MaximizeClicksOptInRecommendation do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          recommended_budget_amount_micros: integer
-        }
-
-  defstruct recommended_budget_amount_micros: 0
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :recommended_budget_amount_micros, 2,
+    proto3_optional: true,
     type: :int64,
     json_name: "recommendedBudgetAmountMicros",
     deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Recommendation.OptimizeAdRotationRecommendation do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{}
-
-  defstruct []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Recommendation.CalloutExtensionRecommendation do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          recommended_extensions: [Google.Ads.Googleads.V11.Common.CalloutFeedItem.t()]
-        }
-
-  defstruct recommended_extensions: []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :recommended_extensions, 1,
     repeated: true,
@@ -263,15 +197,10 @@ defmodule Google.Ads.Googleads.V11.Resources.Recommendation.CalloutExtensionReco
     json_name: "recommendedExtensions",
     deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Recommendation.SitelinkExtensionRecommendation do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          recommended_extensions: [Google.Ads.Googleads.V11.Common.SitelinkFeedItem.t()]
-        }
-
-  defstruct recommended_extensions: []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :recommended_extensions, 1,
     repeated: true,
@@ -279,15 +208,10 @@ defmodule Google.Ads.Googleads.V11.Resources.Recommendation.SitelinkExtensionRec
     json_name: "recommendedExtensions",
     deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Recommendation.CallExtensionRecommendation do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          recommended_extensions: [Google.Ads.Googleads.V11.Common.CallFeedItem.t()]
-        }
-
-  defstruct recommended_extensions: []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :recommended_extensions, 1,
     repeated: true,
@@ -295,18 +219,10 @@ defmodule Google.Ads.Googleads.V11.Resources.Recommendation.CallExtensionRecomme
     json_name: "recommendedExtensions",
     deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Recommendation.KeywordMatchTypeRecommendation do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          keyword: Google.Ads.Googleads.V11.Common.KeywordInfo.t() | nil,
-          recommended_match_type:
-            Google.Ads.Googleads.V11.Enums.KeywordMatchTypeEnum.KeywordMatchType.t()
-        }
-
-  defstruct keyword: nil,
-            recommended_match_type: :UNSPECIFIED
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :keyword, 1, type: Google.Ads.Googleads.V11.Common.KeywordInfo, deprecated: false
 
@@ -316,21 +232,13 @@ defmodule Google.Ads.Googleads.V11.Resources.Recommendation.KeywordMatchTypeReco
     enum: true,
     deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Recommendation.MoveUnusedBudgetRecommendation do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          excess_campaign_budget: String.t(),
-          budget_recommendation:
-            Google.Ads.Googleads.V11.Resources.Recommendation.CampaignBudgetRecommendation.t()
-            | nil
-        }
-
-  defstruct excess_campaign_budget: "",
-            budget_recommendation: nil
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :excess_campaign_budget, 3,
+    proto3_optional: true,
     type: :string,
     json_name: "excessCampaignBudget",
     deprecated: false
@@ -340,39 +248,27 @@ defmodule Google.Ads.Googleads.V11.Resources.Recommendation.MoveUnusedBudgetReco
     json_name: "budgetRecommendation",
     deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Recommendation.TargetRoasOptInRecommendation do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          recommended_target_roas: float | :infinity | :negative_infinity | :nan,
-          required_campaign_budget_amount_micros: integer
-        }
-
-  defstruct recommended_target_roas: 0.0,
-            required_campaign_budget_amount_micros: 0
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :recommended_target_roas, 1,
+    proto3_optional: true,
     type: :double,
     json_name: "recommendedTargetRoas",
     deprecated: false
 
   field :required_campaign_budget_amount_micros, 2,
+    proto3_optional: true,
     type: :int64,
     json_name: "requiredCampaignBudgetAmountMicros",
     deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Recommendation.ResponsiveSearchAdAssetRecommendation do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          current_ad: Google.Ads.Googleads.V11.Resources.Ad.t() | nil,
-          recommended_assets: Google.Ads.Googleads.V11.Resources.Ad.t() | nil
-        }
-
-  defstruct current_ad: nil,
-            recommended_assets: nil
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :current_ad, 1,
     type: Google.Ads.Googleads.V11.Resources.Ad,
@@ -384,17 +280,10 @@ defmodule Google.Ads.Googleads.V11.Resources.Recommendation.ResponsiveSearchAdAs
     json_name: "recommendedAssets",
     deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Recommendation.ResponsiveSearchAdImproveAdStrengthRecommendation do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          current_ad: Google.Ads.Googleads.V11.Resources.Ad.t() | nil,
-          recommended_ad: Google.Ads.Googleads.V11.Resources.Ad.t() | nil
-        }
-
-  defstruct current_ad: nil,
-            recommended_ad: nil
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :current_ad, 1,
     type: Google.Ads.Googleads.V11.Resources.Ad,
@@ -406,35 +295,17 @@ defmodule Google.Ads.Googleads.V11.Resources.Recommendation.ResponsiveSearchAdIm
     json_name: "recommendedAd",
     deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Recommendation.ResponsiveSearchAdRecommendation do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          ad: Google.Ads.Googleads.V11.Resources.Ad.t() | nil
-        }
-
-  defstruct ad: nil
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :ad, 1, type: Google.Ads.Googleads.V11.Resources.Ad, deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Recommendation.UseBroadMatchKeywordRecommendation do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          keyword: [Google.Ads.Googleads.V11.Common.KeywordInfo.t()],
-          suggested_keywords_count: integer,
-          campaign_keywords_count: integer,
-          campaign_uses_shared_budget: boolean,
-          required_campaign_budget_amount_micros: integer
-        }
-
-  defstruct keyword: [],
-            suggested_keywords_count: 0,
-            campaign_keywords_count: 0,
-            campaign_uses_shared_budget: false,
-            required_campaign_budget_amount_micros: 0
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :keyword, 1,
     repeated: true,
@@ -461,131 +332,28 @@ defmodule Google.Ads.Googleads.V11.Resources.Recommendation.UseBroadMatchKeyword
     json_name: "requiredCampaignBudgetAmountMicros",
     deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Recommendation.UpgradeSmartShoppingCampaignToPerformanceMaxRecommendation do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          merchant_id: integer,
-          sales_country_code: String.t()
-        }
-
-  defstruct merchant_id: 0,
-            sales_country_code: ""
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :merchant_id, 1, type: :int64, json_name: "merchantId", deprecated: false
   field :sales_country_code, 2, type: :string, json_name: "salesCountryCode", deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Recommendation.DisplayExpansionOptInRecommendation do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{}
-
-  defstruct []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{}
-
-  defstruct []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.Recommendation do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          recommendation:
-            {:campaign_budget_recommendation,
-             Google.Ads.Googleads.V11.Resources.Recommendation.CampaignBudgetRecommendation.t()
-             | nil}
-            | {:forecasting_campaign_budget_recommendation,
-               Google.Ads.Googleads.V11.Resources.Recommendation.CampaignBudgetRecommendation.t()
-               | nil}
-            | {:keyword_recommendation,
-               Google.Ads.Googleads.V11.Resources.Recommendation.KeywordRecommendation.t() | nil}
-            | {:text_ad_recommendation,
-               Google.Ads.Googleads.V11.Resources.Recommendation.TextAdRecommendation.t() | nil}
-            | {:target_cpa_opt_in_recommendation,
-               Google.Ads.Googleads.V11.Resources.Recommendation.TargetCpaOptInRecommendation.t()
-               | nil}
-            | {:maximize_conversions_opt_in_recommendation,
-               Google.Ads.Googleads.V11.Resources.Recommendation.MaximizeConversionsOptInRecommendation.t()
-               | nil}
-            | {:enhanced_cpc_opt_in_recommendation,
-               Google.Ads.Googleads.V11.Resources.Recommendation.EnhancedCpcOptInRecommendation.t()
-               | nil}
-            | {:search_partners_opt_in_recommendation,
-               Google.Ads.Googleads.V11.Resources.Recommendation.SearchPartnersOptInRecommendation.t()
-               | nil}
-            | {:maximize_clicks_opt_in_recommendation,
-               Google.Ads.Googleads.V11.Resources.Recommendation.MaximizeClicksOptInRecommendation.t()
-               | nil}
-            | {:optimize_ad_rotation_recommendation,
-               Google.Ads.Googleads.V11.Resources.Recommendation.OptimizeAdRotationRecommendation.t()
-               | nil}
-            | {:callout_extension_recommendation,
-               Google.Ads.Googleads.V11.Resources.Recommendation.CalloutExtensionRecommendation.t()
-               | nil}
-            | {:sitelink_extension_recommendation,
-               Google.Ads.Googleads.V11.Resources.Recommendation.SitelinkExtensionRecommendation.t()
-               | nil}
-            | {:call_extension_recommendation,
-               Google.Ads.Googleads.V11.Resources.Recommendation.CallExtensionRecommendation.t()
-               | nil}
-            | {:keyword_match_type_recommendation,
-               Google.Ads.Googleads.V11.Resources.Recommendation.KeywordMatchTypeRecommendation.t()
-               | nil}
-            | {:move_unused_budget_recommendation,
-               Google.Ads.Googleads.V11.Resources.Recommendation.MoveUnusedBudgetRecommendation.t()
-               | nil}
-            | {:target_roas_opt_in_recommendation,
-               Google.Ads.Googleads.V11.Resources.Recommendation.TargetRoasOptInRecommendation.t()
-               | nil}
-            | {:responsive_search_ad_recommendation,
-               Google.Ads.Googleads.V11.Resources.Recommendation.ResponsiveSearchAdRecommendation.t()
-               | nil}
-            | {:marginal_roi_campaign_budget_recommendation,
-               Google.Ads.Googleads.V11.Resources.Recommendation.CampaignBudgetRecommendation.t()
-               | nil}
-            | {:use_broad_match_keyword_recommendation,
-               Google.Ads.Googleads.V11.Resources.Recommendation.UseBroadMatchKeywordRecommendation.t()
-               | nil}
-            | {:responsive_search_ad_asset_recommendation,
-               Google.Ads.Googleads.V11.Resources.Recommendation.ResponsiveSearchAdAssetRecommendation.t()
-               | nil}
-            | {:upgrade_smart_shopping_campaign_to_performance_max_recommendation,
-               Google.Ads.Googleads.V11.Resources.Recommendation.UpgradeSmartShoppingCampaignToPerformanceMaxRecommendation.t()
-               | nil}
-            | {:responsive_search_ad_improve_ad_strength_recommendation,
-               Google.Ads.Googleads.V11.Resources.Recommendation.ResponsiveSearchAdImproveAdStrengthRecommendation.t()
-               | nil}
-            | {:display_expansion_opt_in_recommendation,
-               Google.Ads.Googleads.V11.Resources.Recommendation.DisplayExpansionOptInRecommendation.t()
-               | nil}
-            | {:upgrade_local_campaign_to_performance_max_recommendation,
-               Google.Ads.Googleads.V11.Resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation.t()
-               | nil},
-          resource_name: String.t(),
-          type: Google.Ads.Googleads.V11.Enums.RecommendationTypeEnum.RecommendationType.t(),
-          impact:
-            Google.Ads.Googleads.V11.Resources.Recommendation.RecommendationImpact.t() | nil,
-          campaign_budget: String.t(),
-          campaign: String.t(),
-          ad_group: String.t(),
-          dismissed: boolean
-        }
-
-  defstruct recommendation: nil,
-            resource_name: "",
-            type: :UNSPECIFIED,
-            impact: nil,
-            campaign_budget: "",
-            campaign: "",
-            ad_group: "",
-            dismissed: false
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   oneof :recommendation, 0
 
@@ -600,10 +368,21 @@ defmodule Google.Ads.Googleads.V11.Resources.Recommendation do
     type: Google.Ads.Googleads.V11.Resources.Recommendation.RecommendationImpact,
     deprecated: false
 
-  field :campaign_budget, 24, type: :string, json_name: "campaignBudget", deprecated: false
-  field :campaign, 25, type: :string, deprecated: false
-  field :ad_group, 26, type: :string, json_name: "adGroup", deprecated: false
-  field :dismissed, 27, type: :bool, deprecated: false
+  field :campaign_budget, 24,
+    proto3_optional: true,
+    type: :string,
+    json_name: "campaignBudget",
+    deprecated: false
+
+  field :campaign, 25, proto3_optional: true, type: :string, deprecated: false
+
+  field :ad_group, 26,
+    proto3_optional: true,
+    type: :string,
+    json_name: "adGroup",
+    deprecated: false
+
+  field :dismissed, 27, proto3_optional: true, type: :bool, deprecated: false
 
   field :campaign_budget_recommendation, 4,
     type: Google.Ads.Googleads.V11.Resources.Recommendation.CampaignBudgetRecommendation,

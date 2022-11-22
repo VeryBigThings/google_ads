@@ -1,21 +1,6 @@
 defmodule Google.Ads.Googleads.V11.Resources.AdGroupExtensionSetting do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          extension_type: Google.Ads.Googleads.V11.Enums.ExtensionTypeEnum.ExtensionType.t(),
-          ad_group: String.t(),
-          extension_feed_items: [String.t()],
-          device:
-            Google.Ads.Googleads.V11.Enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice.t()
-        }
-
-  defstruct resource_name: "",
-            extension_type: :UNSPECIFIED,
-            ad_group: "",
-            extension_feed_items: [],
-            device: :UNSPECIFIED
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
 
@@ -25,7 +10,11 @@ defmodule Google.Ads.Googleads.V11.Resources.AdGroupExtensionSetting do
     enum: true,
     deprecated: false
 
-  field :ad_group, 6, type: :string, json_name: "adGroup", deprecated: false
+  field :ad_group, 6,
+    proto3_optional: true,
+    type: :string,
+    json_name: "adGroup",
+    deprecated: false
 
   field :extension_feed_items, 7,
     repeated: true,

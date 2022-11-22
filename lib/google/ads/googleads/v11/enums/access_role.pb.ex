@@ -1,8 +1,6 @@
 defmodule Google.Ads.Googleads.V11.Enums.AccessRoleEnum.AccessRole do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto3
-
-  @type t :: integer | :UNSPECIFIED | :UNKNOWN | :ADMIN | :STANDARD | :READ_ONLY | :EMAIL_ONLY
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
@@ -11,11 +9,8 @@ defmodule Google.Ads.Googleads.V11.Enums.AccessRoleEnum.AccessRole do
   field :READ_ONLY, 4
   field :EMAIL_ONLY, 5
 end
+
 defmodule Google.Ads.Googleads.V11.Enums.AccessRoleEnum do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{}
-
-  defstruct []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 end

@@ -1,16 +1,6 @@
 defmodule Google.Ads.Googleads.V11.Enums.LegacyAppInstallAdAppStoreEnum.LegacyAppInstallAdAppStore do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto3
-
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :APPLE_APP_STORE
-          | :GOOGLE_PLAY
-          | :WINDOWS_STORE
-          | :WINDOWS_PHONE_STORE
-          | :CN_APP_STORE
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
@@ -20,11 +10,8 @@ defmodule Google.Ads.Googleads.V11.Enums.LegacyAppInstallAdAppStoreEnum.LegacyAp
   field :WINDOWS_PHONE_STORE, 5
   field :CN_APP_STORE, 6
 end
+
 defmodule Google.Ads.Googleads.V11.Enums.LegacyAppInstallAdAppStoreEnum do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{}
-
-  defstruct []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 end

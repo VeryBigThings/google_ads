@@ -1,15 +1,6 @@
 defmodule Google.Ads.Googleads.V11.Enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto3
-
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :APPROVED
-          | :DISAPPROVED
-          | :PENDING_REVIEW
-          | :UNDER_REVIEW
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
@@ -18,11 +9,8 @@ defmodule Google.Ads.Googleads.V11.Enums.AdGroupCriterionApprovalStatusEnum.AdGr
   field :PENDING_REVIEW, 4
   field :UNDER_REVIEW, 5
 end
+
 defmodule Google.Ads.Googleads.V11.Enums.AdGroupCriterionApprovalStatusEnum do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{}
-
-  defstruct []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 end

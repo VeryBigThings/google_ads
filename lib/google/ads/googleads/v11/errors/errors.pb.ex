@@ -1,46 +1,24 @@
 defmodule Google.Ads.Googleads.V11.Errors.QuotaErrorDetails.QuotaRateScope do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto3
-
-  @type t :: integer | :UNSPECIFIED | :UNKNOWN | :ACCOUNT | :DEVELOPER
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :ACCOUNT, 2
   field :DEVELOPER, 3
 end
+
 defmodule Google.Ads.Googleads.V11.Errors.GoogleAdsFailure do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          errors: [Google.Ads.Googleads.V11.Errors.GoogleAdsError.t()],
-          request_id: String.t()
-        }
-
-  defstruct errors: [],
-            request_id: ""
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :errors, 1, repeated: true, type: Google.Ads.Googleads.V11.Errors.GoogleAdsError
   field :request_id, 2, type: :string, json_name: "requestId"
 end
+
 defmodule Google.Ads.Googleads.V11.Errors.GoogleAdsError do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          error_code: Google.Ads.Googleads.V11.Errors.ErrorCode.t() | nil,
-          message: String.t(),
-          trigger: Google.Ads.Googleads.V11.Common.Value.t() | nil,
-          location: Google.Ads.Googleads.V11.Errors.ErrorLocation.t() | nil,
-          details: Google.Ads.Googleads.V11.Errors.ErrorDetails.t() | nil
-        }
-
-  defstruct error_code: nil,
-            message: "",
-            trigger: nil,
-            location: nil,
-            details: nil
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :error_code, 1, type: Google.Ads.Googleads.V11.Errors.ErrorCode, json_name: "errorCode"
   field :message, 2, type: :string
@@ -48,273 +26,10 @@ defmodule Google.Ads.Googleads.V11.Errors.GoogleAdsError do
   field :location, 4, type: Google.Ads.Googleads.V11.Errors.ErrorLocation
   field :details, 5, type: Google.Ads.Googleads.V11.Errors.ErrorDetails
 end
+
 defmodule Google.Ads.Googleads.V11.Errors.ErrorCode do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          error_code:
-            {:request_error, Google.Ads.Googleads.V11.Errors.RequestErrorEnum.RequestError.t()}
-            | {:bidding_strategy_error,
-               Google.Ads.Googleads.V11.Errors.BiddingStrategyErrorEnum.BiddingStrategyError.t()}
-            | {:url_field_error,
-               Google.Ads.Googleads.V11.Errors.UrlFieldErrorEnum.UrlFieldError.t()}
-            | {:list_operation_error,
-               Google.Ads.Googleads.V11.Errors.ListOperationErrorEnum.ListOperationError.t()}
-            | {:query_error, Google.Ads.Googleads.V11.Errors.QueryErrorEnum.QueryError.t()}
-            | {:mutate_error, Google.Ads.Googleads.V11.Errors.MutateErrorEnum.MutateError.t()}
-            | {:field_mask_error,
-               Google.Ads.Googleads.V11.Errors.FieldMaskErrorEnum.FieldMaskError.t()}
-            | {:authorization_error,
-               Google.Ads.Googleads.V11.Errors.AuthorizationErrorEnum.AuthorizationError.t()}
-            | {:internal_error,
-               Google.Ads.Googleads.V11.Errors.InternalErrorEnum.InternalError.t()}
-            | {:quota_error, Google.Ads.Googleads.V11.Errors.QuotaErrorEnum.QuotaError.t()}
-            | {:ad_error, Google.Ads.Googleads.V11.Errors.AdErrorEnum.AdError.t()}
-            | {:ad_group_error, Google.Ads.Googleads.V11.Errors.AdGroupErrorEnum.AdGroupError.t()}
-            | {:campaign_budget_error,
-               Google.Ads.Googleads.V11.Errors.CampaignBudgetErrorEnum.CampaignBudgetError.t()}
-            | {:campaign_error,
-               Google.Ads.Googleads.V11.Errors.CampaignErrorEnum.CampaignError.t()}
-            | {:authentication_error,
-               Google.Ads.Googleads.V11.Errors.AuthenticationErrorEnum.AuthenticationError.t()}
-            | {:ad_group_criterion_customizer_error,
-               Google.Ads.Googleads.V11.Errors.AdGroupCriterionCustomizerErrorEnum.AdGroupCriterionCustomizerError.t()}
-            | {:ad_group_criterion_error,
-               Google.Ads.Googleads.V11.Errors.AdGroupCriterionErrorEnum.AdGroupCriterionError.t()}
-            | {:ad_group_customizer_error,
-               Google.Ads.Googleads.V11.Errors.AdGroupCustomizerErrorEnum.AdGroupCustomizerError.t()}
-            | {:ad_customizer_error,
-               Google.Ads.Googleads.V11.Errors.AdCustomizerErrorEnum.AdCustomizerError.t()}
-            | {:ad_group_ad_error,
-               Google.Ads.Googleads.V11.Errors.AdGroupAdErrorEnum.AdGroupAdError.t()}
-            | {:ad_sharing_error,
-               Google.Ads.Googleads.V11.Errors.AdSharingErrorEnum.AdSharingError.t()}
-            | {:adx_error, Google.Ads.Googleads.V11.Errors.AdxErrorEnum.AdxError.t()}
-            | {:asset_error, Google.Ads.Googleads.V11.Errors.AssetErrorEnum.AssetError.t()}
-            | {:asset_group_asset_error,
-               Google.Ads.Googleads.V11.Errors.AssetGroupAssetErrorEnum.AssetGroupAssetError.t()}
-            | {:asset_group_listing_group_filter_error,
-               Google.Ads.Googleads.V11.Errors.AssetGroupListingGroupFilterErrorEnum.AssetGroupListingGroupFilterError.t()}
-            | {:asset_group_error,
-               Google.Ads.Googleads.V11.Errors.AssetGroupErrorEnum.AssetGroupError.t()}
-            | {:asset_set_asset_error,
-               Google.Ads.Googleads.V11.Errors.AssetSetAssetErrorEnum.AssetSetAssetError.t()}
-            | {:asset_set_link_error,
-               Google.Ads.Googleads.V11.Errors.AssetSetLinkErrorEnum.AssetSetLinkError.t()}
-            | {:asset_set_error,
-               Google.Ads.Googleads.V11.Errors.AssetSetErrorEnum.AssetSetError.t()}
-            | {:bidding_error, Google.Ads.Googleads.V11.Errors.BiddingErrorEnum.BiddingError.t()}
-            | {:campaign_criterion_error,
-               Google.Ads.Googleads.V11.Errors.CampaignCriterionErrorEnum.CampaignCriterionError.t()}
-            | {:campaign_conversion_goal_error,
-               Google.Ads.Googleads.V11.Errors.CampaignConversionGoalErrorEnum.CampaignConversionGoalError.t()}
-            | {:campaign_customizer_error,
-               Google.Ads.Googleads.V11.Errors.CampaignCustomizerErrorEnum.CampaignCustomizerError.t()}
-            | {:collection_size_error,
-               Google.Ads.Googleads.V11.Errors.CollectionSizeErrorEnum.CollectionSizeError.t()}
-            | {:conversion_goal_campaign_config_error,
-               Google.Ads.Googleads.V11.Errors.ConversionGoalCampaignConfigErrorEnum.ConversionGoalCampaignConfigError.t()}
-            | {:country_code_error,
-               Google.Ads.Googleads.V11.Errors.CountryCodeErrorEnum.CountryCodeError.t()}
-            | {:criterion_error,
-               Google.Ads.Googleads.V11.Errors.CriterionErrorEnum.CriterionError.t()}
-            | {:custom_conversion_goal_error,
-               Google.Ads.Googleads.V11.Errors.CustomConversionGoalErrorEnum.CustomConversionGoalError.t()}
-            | {:customer_customizer_error,
-               Google.Ads.Googleads.V11.Errors.CustomerCustomizerErrorEnum.CustomerCustomizerError.t()}
-            | {:customer_error,
-               Google.Ads.Googleads.V11.Errors.CustomerErrorEnum.CustomerError.t()}
-            | {:customizer_attribute_error,
-               Google.Ads.Googleads.V11.Errors.CustomizerAttributeErrorEnum.CustomizerAttributeError.t()}
-            | {:date_error, Google.Ads.Googleads.V11.Errors.DateErrorEnum.DateError.t()}
-            | {:date_range_error,
-               Google.Ads.Googleads.V11.Errors.DateRangeErrorEnum.DateRangeError.t()}
-            | {:distinct_error,
-               Google.Ads.Googleads.V11.Errors.DistinctErrorEnum.DistinctError.t()}
-            | {:feed_attribute_reference_error,
-               Google.Ads.Googleads.V11.Errors.FeedAttributeReferenceErrorEnum.FeedAttributeReferenceError.t()}
-            | {:function_error,
-               Google.Ads.Googleads.V11.Errors.FunctionErrorEnum.FunctionError.t()}
-            | {:function_parsing_error,
-               Google.Ads.Googleads.V11.Errors.FunctionParsingErrorEnum.FunctionParsingError.t()}
-            | {:id_error, Google.Ads.Googleads.V11.Errors.IdErrorEnum.IdError.t()}
-            | {:image_error, Google.Ads.Googleads.V11.Errors.ImageErrorEnum.ImageError.t()}
-            | {:language_code_error,
-               Google.Ads.Googleads.V11.Errors.LanguageCodeErrorEnum.LanguageCodeError.t()}
-            | {:media_bundle_error,
-               Google.Ads.Googleads.V11.Errors.MediaBundleErrorEnum.MediaBundleError.t()}
-            | {:media_upload_error,
-               Google.Ads.Googleads.V11.Errors.MediaUploadErrorEnum.MediaUploadError.t()}
-            | {:media_file_error,
-               Google.Ads.Googleads.V11.Errors.MediaFileErrorEnum.MediaFileError.t()}
-            | {:merchant_center_error,
-               Google.Ads.Googleads.V11.Errors.MerchantCenterErrorEnum.MerchantCenterError.t()}
-            | {:multiplier_error,
-               Google.Ads.Googleads.V11.Errors.MultiplierErrorEnum.MultiplierError.t()}
-            | {:new_resource_creation_error,
-               Google.Ads.Googleads.V11.Errors.NewResourceCreationErrorEnum.NewResourceCreationError.t()}
-            | {:not_empty_error,
-               Google.Ads.Googleads.V11.Errors.NotEmptyErrorEnum.NotEmptyError.t()}
-            | {:null_error, Google.Ads.Googleads.V11.Errors.NullErrorEnum.NullError.t()}
-            | {:operator_error,
-               Google.Ads.Googleads.V11.Errors.OperatorErrorEnum.OperatorError.t()}
-            | {:range_error, Google.Ads.Googleads.V11.Errors.RangeErrorEnum.RangeError.t()}
-            | {:recommendation_error,
-               Google.Ads.Googleads.V11.Errors.RecommendationErrorEnum.RecommendationError.t()}
-            | {:region_code_error,
-               Google.Ads.Googleads.V11.Errors.RegionCodeErrorEnum.RegionCodeError.t()}
-            | {:setting_error, Google.Ads.Googleads.V11.Errors.SettingErrorEnum.SettingError.t()}
-            | {:string_format_error,
-               Google.Ads.Googleads.V11.Errors.StringFormatErrorEnum.StringFormatError.t()}
-            | {:string_length_error,
-               Google.Ads.Googleads.V11.Errors.StringLengthErrorEnum.StringLengthError.t()}
-            | {:operation_access_denied_error,
-               Google.Ads.Googleads.V11.Errors.OperationAccessDeniedErrorEnum.OperationAccessDeniedError.t()}
-            | {:resource_access_denied_error,
-               Google.Ads.Googleads.V11.Errors.ResourceAccessDeniedErrorEnum.ResourceAccessDeniedError.t()}
-            | {:resource_count_limit_exceeded_error,
-               Google.Ads.Googleads.V11.Errors.ResourceCountLimitExceededErrorEnum.ResourceCountLimitExceededError.t()}
-            | {:youtube_video_registration_error,
-               Google.Ads.Googleads.V11.Errors.YoutubeVideoRegistrationErrorEnum.YoutubeVideoRegistrationError.t()}
-            | {:ad_group_bid_modifier_error,
-               Google.Ads.Googleads.V11.Errors.AdGroupBidModifierErrorEnum.AdGroupBidModifierError.t()}
-            | {:context_error, Google.Ads.Googleads.V11.Errors.ContextErrorEnum.ContextError.t()}
-            | {:field_error, Google.Ads.Googleads.V11.Errors.FieldErrorEnum.FieldError.t()}
-            | {:shared_set_error,
-               Google.Ads.Googleads.V11.Errors.SharedSetErrorEnum.SharedSetError.t()}
-            | {:shared_criterion_error,
-               Google.Ads.Googleads.V11.Errors.SharedCriterionErrorEnum.SharedCriterionError.t()}
-            | {:campaign_shared_set_error,
-               Google.Ads.Googleads.V11.Errors.CampaignSharedSetErrorEnum.CampaignSharedSetError.t()}
-            | {:conversion_action_error,
-               Google.Ads.Googleads.V11.Errors.ConversionActionErrorEnum.ConversionActionError.t()}
-            | {:conversion_adjustment_upload_error,
-               Google.Ads.Googleads.V11.Errors.ConversionAdjustmentUploadErrorEnum.ConversionAdjustmentUploadError.t()}
-            | {:conversion_custom_variable_error,
-               Google.Ads.Googleads.V11.Errors.ConversionCustomVariableErrorEnum.ConversionCustomVariableError.t()}
-            | {:conversion_upload_error,
-               Google.Ads.Googleads.V11.Errors.ConversionUploadErrorEnum.ConversionUploadError.t()}
-            | {:conversion_value_rule_error,
-               Google.Ads.Googleads.V11.Errors.ConversionValueRuleErrorEnum.ConversionValueRuleError.t()}
-            | {:conversion_value_rule_set_error,
-               Google.Ads.Googleads.V11.Errors.ConversionValueRuleSetErrorEnum.ConversionValueRuleSetError.t()}
-            | {:header_error, Google.Ads.Googleads.V11.Errors.HeaderErrorEnum.HeaderError.t()}
-            | {:database_error,
-               Google.Ads.Googleads.V11.Errors.DatabaseErrorEnum.DatabaseError.t()}
-            | {:policy_finding_error,
-               Google.Ads.Googleads.V11.Errors.PolicyFindingErrorEnum.PolicyFindingError.t()}
-            | {:enum_error, Google.Ads.Googleads.V11.Errors.EnumErrorEnum.EnumError.t()}
-            | {:keyword_plan_error,
-               Google.Ads.Googleads.V11.Errors.KeywordPlanErrorEnum.KeywordPlanError.t()}
-            | {:keyword_plan_campaign_error,
-               Google.Ads.Googleads.V11.Errors.KeywordPlanCampaignErrorEnum.KeywordPlanCampaignError.t()}
-            | {:keyword_plan_campaign_keyword_error,
-               Google.Ads.Googleads.V11.Errors.KeywordPlanCampaignKeywordErrorEnum.KeywordPlanCampaignKeywordError.t()}
-            | {:keyword_plan_ad_group_error,
-               Google.Ads.Googleads.V11.Errors.KeywordPlanAdGroupErrorEnum.KeywordPlanAdGroupError.t()}
-            | {:keyword_plan_ad_group_keyword_error,
-               Google.Ads.Googleads.V11.Errors.KeywordPlanAdGroupKeywordErrorEnum.KeywordPlanAdGroupKeywordError.t()}
-            | {:keyword_plan_idea_error,
-               Google.Ads.Googleads.V11.Errors.KeywordPlanIdeaErrorEnum.KeywordPlanIdeaError.t()}
-            | {:account_budget_proposal_error,
-               Google.Ads.Googleads.V11.Errors.AccountBudgetProposalErrorEnum.AccountBudgetProposalError.t()}
-            | {:user_list_error,
-               Google.Ads.Googleads.V11.Errors.UserListErrorEnum.UserListError.t()}
-            | {:change_event_error,
-               Google.Ads.Googleads.V11.Errors.ChangeEventErrorEnum.ChangeEventError.t()}
-            | {:change_status_error,
-               Google.Ads.Googleads.V11.Errors.ChangeStatusErrorEnum.ChangeStatusError.t()}
-            | {:feed_error, Google.Ads.Googleads.V11.Errors.FeedErrorEnum.FeedError.t()}
-            | {:geo_target_constant_suggestion_error,
-               Google.Ads.Googleads.V11.Errors.GeoTargetConstantSuggestionErrorEnum.GeoTargetConstantSuggestionError.t()}
-            | {:campaign_draft_error,
-               Google.Ads.Googleads.V11.Errors.CampaignDraftErrorEnum.CampaignDraftError.t()}
-            | {:feed_item_error,
-               Google.Ads.Googleads.V11.Errors.FeedItemErrorEnum.FeedItemError.t()}
-            | {:label_error, Google.Ads.Googleads.V11.Errors.LabelErrorEnum.LabelError.t()}
-            | {:billing_setup_error,
-               Google.Ads.Googleads.V11.Errors.BillingSetupErrorEnum.BillingSetupError.t()}
-            | {:customer_client_link_error,
-               Google.Ads.Googleads.V11.Errors.CustomerClientLinkErrorEnum.CustomerClientLinkError.t()}
-            | {:customer_manager_link_error,
-               Google.Ads.Googleads.V11.Errors.CustomerManagerLinkErrorEnum.CustomerManagerLinkError.t()}
-            | {:feed_mapping_error,
-               Google.Ads.Googleads.V11.Errors.FeedMappingErrorEnum.FeedMappingError.t()}
-            | {:customer_feed_error,
-               Google.Ads.Googleads.V11.Errors.CustomerFeedErrorEnum.CustomerFeedError.t()}
-            | {:ad_group_feed_error,
-               Google.Ads.Googleads.V11.Errors.AdGroupFeedErrorEnum.AdGroupFeedError.t()}
-            | {:campaign_feed_error,
-               Google.Ads.Googleads.V11.Errors.CampaignFeedErrorEnum.CampaignFeedError.t()}
-            | {:custom_interest_error,
-               Google.Ads.Googleads.V11.Errors.CustomInterestErrorEnum.CustomInterestError.t()}
-            | {:campaign_experiment_error,
-               Google.Ads.Googleads.V11.Errors.CampaignExperimentErrorEnum.CampaignExperimentError.t()}
-            | {:extension_feed_item_error,
-               Google.Ads.Googleads.V11.Errors.ExtensionFeedItemErrorEnum.ExtensionFeedItemError.t()}
-            | {:ad_parameter_error,
-               Google.Ads.Googleads.V11.Errors.AdParameterErrorEnum.AdParameterError.t()}
-            | {:feed_item_validation_error,
-               Google.Ads.Googleads.V11.Errors.FeedItemValidationErrorEnum.FeedItemValidationError.t()}
-            | {:extension_setting_error,
-               Google.Ads.Googleads.V11.Errors.ExtensionSettingErrorEnum.ExtensionSettingError.t()}
-            | {:feed_item_set_error,
-               Google.Ads.Googleads.V11.Errors.FeedItemSetErrorEnum.FeedItemSetError.t()}
-            | {:feed_item_set_link_error,
-               Google.Ads.Googleads.V11.Errors.FeedItemSetLinkErrorEnum.FeedItemSetLinkError.t()}
-            | {:feed_item_target_error,
-               Google.Ads.Googleads.V11.Errors.FeedItemTargetErrorEnum.FeedItemTargetError.t()}
-            | {:policy_violation_error,
-               Google.Ads.Googleads.V11.Errors.PolicyViolationErrorEnum.PolicyViolationError.t()}
-            | {:partial_failure_error,
-               Google.Ads.Googleads.V11.Errors.PartialFailureErrorEnum.PartialFailureError.t()}
-            | {:policy_validation_parameter_error,
-               Google.Ads.Googleads.V11.Errors.PolicyValidationParameterErrorEnum.PolicyValidationParameterError.t()}
-            | {:size_limit_error,
-               Google.Ads.Googleads.V11.Errors.SizeLimitErrorEnum.SizeLimitError.t()}
-            | {:offline_user_data_job_error,
-               Google.Ads.Googleads.V11.Errors.OfflineUserDataJobErrorEnum.OfflineUserDataJobError.t()}
-            | {:not_allowlisted_error,
-               Google.Ads.Googleads.V11.Errors.NotAllowlistedErrorEnum.NotAllowlistedError.t()}
-            | {:manager_link_error,
-               Google.Ads.Googleads.V11.Errors.ManagerLinkErrorEnum.ManagerLinkError.t()}
-            | {:currency_code_error,
-               Google.Ads.Googleads.V11.Errors.CurrencyCodeErrorEnum.CurrencyCodeError.t()}
-            | {:experiment_error,
-               Google.Ads.Googleads.V11.Errors.ExperimentErrorEnum.ExperimentError.t()}
-            | {:access_invitation_error,
-               Google.Ads.Googleads.V11.Errors.AccessInvitationErrorEnum.AccessInvitationError.t()}
-            | {:reach_plan_error,
-               Google.Ads.Googleads.V11.Errors.ReachPlanErrorEnum.ReachPlanError.t()}
-            | {:invoice_error, Google.Ads.Googleads.V11.Errors.InvoiceErrorEnum.InvoiceError.t()}
-            | {:payments_account_error,
-               Google.Ads.Googleads.V11.Errors.PaymentsAccountErrorEnum.PaymentsAccountError.t()}
-            | {:time_zone_error,
-               Google.Ads.Googleads.V11.Errors.TimeZoneErrorEnum.TimeZoneError.t()}
-            | {:asset_link_error,
-               Google.Ads.Googleads.V11.Errors.AssetLinkErrorEnum.AssetLinkError.t()}
-            | {:user_data_error,
-               Google.Ads.Googleads.V11.Errors.UserDataErrorEnum.UserDataError.t()}
-            | {:batch_job_error,
-               Google.Ads.Googleads.V11.Errors.BatchJobErrorEnum.BatchJobError.t()}
-            | {:account_link_error,
-               Google.Ads.Googleads.V11.Errors.AccountLinkErrorEnum.AccountLinkError.t()}
-            | {:third_party_app_analytics_link_error,
-               Google.Ads.Googleads.V11.Errors.ThirdPartyAppAnalyticsLinkErrorEnum.ThirdPartyAppAnalyticsLinkError.t()}
-            | {:customer_user_access_error,
-               Google.Ads.Googleads.V11.Errors.CustomerUserAccessErrorEnum.CustomerUserAccessError.t()}
-            | {:custom_audience_error,
-               Google.Ads.Googleads.V11.Errors.CustomAudienceErrorEnum.CustomAudienceError.t()}
-            | {:audience_error,
-               Google.Ads.Googleads.V11.Errors.AudienceErrorEnum.AudienceError.t()}
-            | {:experiment_arm_error,
-               Google.Ads.Googleads.V11.Errors.ExperimentArmErrorEnum.ExperimentArmError.t()}
-            | {:audience_insights_error,
-               Google.Ads.Googleads.V11.Errors.AudienceInsightsErrorEnum.AudienceInsightsError.t()}
-        }
-
-  defstruct error_code: nil
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   oneof :error_code, 0
 
@@ -1175,56 +890,28 @@ defmodule Google.Ads.Googleads.V11.Errors.ErrorCode do
     enum: true,
     oneof: 0
 end
+
 defmodule Google.Ads.Googleads.V11.Errors.ErrorLocation.FieldPathElement do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          field_name: String.t(),
-          index: integer
-        }
-
-  defstruct field_name: "",
-            index: 0
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :field_name, 1, type: :string, json_name: "fieldName"
-  field :index, 3, type: :int32
+  field :index, 3, proto3_optional: true, type: :int32
 end
+
 defmodule Google.Ads.Googleads.V11.Errors.ErrorLocation do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          field_path_elements: [
-            Google.Ads.Googleads.V11.Errors.ErrorLocation.FieldPathElement.t()
-          ]
-        }
-
-  defstruct field_path_elements: []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :field_path_elements, 2,
     repeated: true,
     type: Google.Ads.Googleads.V11.Errors.ErrorLocation.FieldPathElement,
     json_name: "fieldPathElements"
 end
+
 defmodule Google.Ads.Googleads.V11.Errors.ErrorDetails do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          unpublished_error_code: String.t(),
-          policy_violation_details:
-            Google.Ads.Googleads.V11.Errors.PolicyViolationDetails.t() | nil,
-          policy_finding_details: Google.Ads.Googleads.V11.Errors.PolicyFindingDetails.t() | nil,
-          quota_error_details: Google.Ads.Googleads.V11.Errors.QuotaErrorDetails.t() | nil,
-          resource_count_details: Google.Ads.Googleads.V11.Errors.ResourceCountDetails.t() | nil
-        }
-
-  defstruct unpublished_error_code: "",
-            policy_violation_details: nil,
-            policy_finding_details: nil,
-            quota_error_details: nil,
-            resource_count_details: nil
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :unpublished_error_code, 1, type: :string, json_name: "unpublishedErrorCode"
 
@@ -1244,55 +931,30 @@ defmodule Google.Ads.Googleads.V11.Errors.ErrorDetails do
     type: Google.Ads.Googleads.V11.Errors.ResourceCountDetails,
     json_name: "resourceCountDetails"
 end
+
 defmodule Google.Ads.Googleads.V11.Errors.PolicyViolationDetails do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          external_policy_description: String.t(),
-          key: Google.Ads.Googleads.V11.Common.PolicyViolationKey.t() | nil,
-          external_policy_name: String.t(),
-          is_exemptible: boolean
-        }
-
-  defstruct external_policy_description: "",
-            key: nil,
-            external_policy_name: "",
-            is_exemptible: false
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :external_policy_description, 2, type: :string, json_name: "externalPolicyDescription"
   field :key, 4, type: Google.Ads.Googleads.V11.Common.PolicyViolationKey
   field :external_policy_name, 5, type: :string, json_name: "externalPolicyName"
   field :is_exemptible, 6, type: :bool, json_name: "isExemptible"
 end
+
 defmodule Google.Ads.Googleads.V11.Errors.PolicyFindingDetails do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          policy_topic_entries: [Google.Ads.Googleads.V11.Common.PolicyTopicEntry.t()]
-        }
-
-  defstruct policy_topic_entries: []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :policy_topic_entries, 1,
     repeated: true,
     type: Google.Ads.Googleads.V11.Common.PolicyTopicEntry,
     json_name: "policyTopicEntries"
 end
+
 defmodule Google.Ads.Googleads.V11.Errors.QuotaErrorDetails do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          rate_scope: Google.Ads.Googleads.V11.Errors.QuotaErrorDetails.QuotaRateScope.t(),
-          rate_name: String.t(),
-          retry_delay: Google.Protobuf.Duration.t() | nil
-        }
-
-  defstruct rate_scope: :UNSPECIFIED,
-            rate_name: "",
-            retry_delay: nil
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :rate_scope, 1,
     type: Google.Ads.Googleads.V11.Errors.QuotaErrorDetails.QuotaRateScope,
@@ -1302,23 +964,10 @@ defmodule Google.Ads.Googleads.V11.Errors.QuotaErrorDetails do
   field :rate_name, 2, type: :string, json_name: "rateName"
   field :retry_delay, 3, type: Google.Protobuf.Duration, json_name: "retryDelay"
 end
+
 defmodule Google.Ads.Googleads.V11.Errors.ResourceCountDetails do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          enclosing_id: String.t(),
-          enclosing_resource: String.t(),
-          limit: integer,
-          limit_type: Google.Ads.Googleads.V11.Enums.ResourceLimitTypeEnum.ResourceLimitType.t(),
-          existing_count: integer
-        }
-
-  defstruct enclosing_id: "",
-            enclosing_resource: "",
-            limit: 0,
-            limit_type: :UNSPECIFIED,
-            existing_count: 0
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :enclosing_id, 1, type: :string, json_name: "enclosingId"
   field :enclosing_resource, 5, type: :string, json_name: "enclosingResource"

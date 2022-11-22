@@ -1,28 +1,6 @@
 defmodule Google.Ads.Googleads.V11.Enums.BiddingStrategyTypeEnum.BiddingStrategyType do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto3
-
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :COMMISSION
-          | :ENHANCED_CPC
-          | :INVALID
-          | :MANUAL_CPA
-          | :MANUAL_CPC
-          | :MANUAL_CPM
-          | :MANUAL_CPV
-          | :MAXIMIZE_CONVERSIONS
-          | :MAXIMIZE_CONVERSION_VALUE
-          | :PAGE_ONE_PROMOTED
-          | :PERCENT_CPC
-          | :TARGET_CPA
-          | :TARGET_CPM
-          | :TARGET_IMPRESSION_SHARE
-          | :TARGET_OUTRANK_SHARE
-          | :TARGET_ROAS
-          | :TARGET_SPEND
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
@@ -44,11 +22,8 @@ defmodule Google.Ads.Googleads.V11.Enums.BiddingStrategyTypeEnum.BiddingStrategy
   field :TARGET_ROAS, 8
   field :TARGET_SPEND, 9
 end
+
 defmodule Google.Ads.Googleads.V11.Enums.BiddingStrategyTypeEnum do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{}
-
-  defstruct []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 end

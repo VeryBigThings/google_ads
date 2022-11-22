@@ -1,26 +1,6 @@
 defmodule Google.Ads.Googleads.V11.Resources.AdGroupAd do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          status: Google.Ads.Googleads.V11.Enums.AdGroupAdStatusEnum.AdGroupAdStatus.t(),
-          ad_group: String.t(),
-          ad: Google.Ads.Googleads.V11.Resources.Ad.t() | nil,
-          policy_summary: Google.Ads.Googleads.V11.Resources.AdGroupAdPolicySummary.t() | nil,
-          ad_strength: Google.Ads.Googleads.V11.Enums.AdStrengthEnum.AdStrength.t(),
-          action_items: [String.t()],
-          labels: [String.t()]
-        }
-
-  defstruct resource_name: "",
-            status: :UNSPECIFIED,
-            ad_group: "",
-            ad: nil,
-            policy_summary: nil,
-            ad_strength: :UNSPECIFIED,
-            action_items: [],
-            labels: []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
 
@@ -28,7 +8,12 @@ defmodule Google.Ads.Googleads.V11.Resources.AdGroupAd do
     type: Google.Ads.Googleads.V11.Enums.AdGroupAdStatusEnum.AdGroupAdStatus,
     enum: true
 
-  field :ad_group, 9, type: :string, json_name: "adGroup", deprecated: false
+  field :ad_group, 9,
+    proto3_optional: true,
+    type: :string,
+    json_name: "adGroup",
+    deprecated: false
+
   field :ad, 5, type: Google.Ads.Googleads.V11.Resources.Ad, deprecated: false
 
   field :policy_summary, 6,
@@ -50,21 +35,10 @@ defmodule Google.Ads.Googleads.V11.Resources.AdGroupAd do
 
   field :labels, 10, repeated: true, type: :string, deprecated: false
 end
+
 defmodule Google.Ads.Googleads.V11.Resources.AdGroupAdPolicySummary do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          policy_topic_entries: [Google.Ads.Googleads.V11.Common.PolicyTopicEntry.t()],
-          review_status:
-            Google.Ads.Googleads.V11.Enums.PolicyReviewStatusEnum.PolicyReviewStatus.t(),
-          approval_status:
-            Google.Ads.Googleads.V11.Enums.PolicyApprovalStatusEnum.PolicyApprovalStatus.t()
-        }
-
-  defstruct policy_topic_entries: [],
-            review_status: :UNSPECIFIED,
-            approval_status: :UNSPECIFIED
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :policy_topic_entries, 1,
     repeated: true,

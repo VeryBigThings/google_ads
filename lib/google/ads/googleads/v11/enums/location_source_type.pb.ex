@@ -1,19 +1,14 @@
 defmodule Google.Ads.Googleads.V11.Enums.LocationSourceTypeEnum.LocationSourceType do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto3
-
-  @type t :: integer | :UNSPECIFIED | :UNKNOWN | :GOOGLE_MY_BUSINESS | :AFFILIATE
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :GOOGLE_MY_BUSINESS, 2
   field :AFFILIATE, 3
 end
+
 defmodule Google.Ads.Googleads.V11.Enums.LocationSourceTypeEnum do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{}
-
-  defstruct []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 end

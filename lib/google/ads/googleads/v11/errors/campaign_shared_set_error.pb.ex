@@ -1,18 +1,13 @@
 defmodule Google.Ads.Googleads.V11.Errors.CampaignSharedSetErrorEnum.CampaignSharedSetError do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto3
-
-  @type t :: integer | :UNSPECIFIED | :UNKNOWN | :SHARED_SET_ACCESS_DENIED
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :SHARED_SET_ACCESS_DENIED, 2
 end
+
 defmodule Google.Ads.Googleads.V11.Errors.CampaignSharedSetErrorEnum do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{}
-
-  defstruct []
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 end

@@ -1,58 +1,13 @@
 defmodule Google.Ads.Googleads.V11.Resources.ExtensionFeedItem do
   @moduledoc false
-  use Protobuf, syntax: :proto3
-
-  @type t :: %__MODULE__{
-          extension:
-            {:sitelink_feed_item, Google.Ads.Googleads.V11.Common.SitelinkFeedItem.t() | nil}
-            | {:structured_snippet_feed_item,
-               Google.Ads.Googleads.V11.Common.StructuredSnippetFeedItem.t() | nil}
-            | {:app_feed_item, Google.Ads.Googleads.V11.Common.AppFeedItem.t() | nil}
-            | {:call_feed_item, Google.Ads.Googleads.V11.Common.CallFeedItem.t() | nil}
-            | {:callout_feed_item, Google.Ads.Googleads.V11.Common.CalloutFeedItem.t() | nil}
-            | {:text_message_feed_item,
-               Google.Ads.Googleads.V11.Common.TextMessageFeedItem.t() | nil}
-            | {:price_feed_item, Google.Ads.Googleads.V11.Common.PriceFeedItem.t() | nil}
-            | {:promotion_feed_item, Google.Ads.Googleads.V11.Common.PromotionFeedItem.t() | nil}
-            | {:location_feed_item, Google.Ads.Googleads.V11.Common.LocationFeedItem.t() | nil}
-            | {:affiliate_location_feed_item,
-               Google.Ads.Googleads.V11.Common.AffiliateLocationFeedItem.t() | nil}
-            | {:hotel_callout_feed_item,
-               Google.Ads.Googleads.V11.Common.HotelCalloutFeedItem.t() | nil}
-            | {:image_feed_item, Google.Ads.Googleads.V11.Common.ImageFeedItem.t() | nil},
-          serving_resource_targeting:
-            {:targeted_campaign, String.t()} | {:targeted_ad_group, String.t()},
-          resource_name: String.t(),
-          id: integer,
-          extension_type: Google.Ads.Googleads.V11.Enums.ExtensionTypeEnum.ExtensionType.t(),
-          start_date_time: String.t(),
-          end_date_time: String.t(),
-          ad_schedules: [Google.Ads.Googleads.V11.Common.AdScheduleInfo.t()],
-          device:
-            Google.Ads.Googleads.V11.Enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice.t(),
-          targeted_geo_target_constant: String.t(),
-          targeted_keyword: Google.Ads.Googleads.V11.Common.KeywordInfo.t() | nil,
-          status: Google.Ads.Googleads.V11.Enums.FeedItemStatusEnum.FeedItemStatus.t()
-        }
-
-  defstruct extension: nil,
-            serving_resource_targeting: nil,
-            resource_name: "",
-            id: 0,
-            extension_type: :UNSPECIFIED,
-            start_date_time: "",
-            end_date_time: "",
-            ad_schedules: [],
-            device: :UNSPECIFIED,
-            targeted_geo_target_constant: "",
-            targeted_keyword: nil,
-            status: :UNSPECIFIED
+  use Protobuf, protoc_gen_elixir_version: "0.11.0", syntax: :proto3
 
   oneof :extension, 0
+
   oneof :serving_resource_targeting, 1
 
   field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
-  field :id, 25, type: :int64, deprecated: false
+  field :id, 25, proto3_optional: true, type: :int64, deprecated: false
 
   field :extension_type, 13,
     type: Google.Ads.Googleads.V11.Enums.ExtensionTypeEnum.ExtensionType,
@@ -60,8 +15,8 @@ defmodule Google.Ads.Googleads.V11.Resources.ExtensionFeedItem do
     enum: true,
     deprecated: false
 
-  field :start_date_time, 26, type: :string, json_name: "startDateTime"
-  field :end_date_time, 27, type: :string, json_name: "endDateTime"
+  field :start_date_time, 26, proto3_optional: true, type: :string, json_name: "startDateTime"
+  field :end_date_time, 27, proto3_optional: true, type: :string, json_name: "endDateTime"
 
   field :ad_schedules, 16,
     repeated: true,
@@ -73,6 +28,7 @@ defmodule Google.Ads.Googleads.V11.Resources.ExtensionFeedItem do
     enum: true
 
   field :targeted_geo_target_constant, 30,
+    proto3_optional: true,
     type: :string,
     json_name: "targetedGeoTargetConstant",
     deprecated: false
