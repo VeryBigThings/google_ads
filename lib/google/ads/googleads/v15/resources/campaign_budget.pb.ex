@@ -19,7 +19,7 @@ defmodule Google.Ads.Googleads.V15.Resources.CampaignBudget do
     json_name: "deliveryMethod",
     enum: true
 
-  field :explicitly_shared, 23, type: :bool, json_name: "explicitlyShared"
+  field :explicitly_shared, 23, type: :bool, json_name: "explicitlyShared", proto3_optional: true
   field :reference_count, 24, type: :int64, json_name: "referenceCount", deprecated: false
 
   field :has_recommended_budget, 25,
