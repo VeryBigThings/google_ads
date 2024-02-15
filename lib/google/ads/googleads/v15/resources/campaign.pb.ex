@@ -373,9 +373,9 @@ defmodule Google.Ads.Googleads.V15.Resources.Campaign do
     json_name: "accessibleBiddingStrategy",
     deprecated: false
 
-  field :start_date, 63, type: :string, json_name: "startDate"
+  field :start_date, 63, type: :string, json_name: "startDate", proto3_optional: true
   field :campaign_group, 76, type: :string, json_name: "campaignGroup", deprecated: false
-  field :end_date, 64, type: :string, json_name: "endDate"
+  field :end_date, 64, type: :string, json_name: "endDate", proto3_optional: true
   field :final_url_suffix, 65, type: :string, json_name: "finalUrlSuffix"
 
   field :frequency_caps, 40,
