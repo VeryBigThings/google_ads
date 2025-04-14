@@ -3,10 +3,10 @@ defmodule Google.Ads.Googleads.V19.Enums.ListingGroupFilterListingSourceEnum.Lis
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :UNSPECIFIED, 0
-  field :UNKNOWN, 1
-  field :SHOPPING, 2
-  field :WEBPAGE, 3
+  field(:UNSPECIFIED, 0)
+  field(:UNKNOWN, 1)
+  field(:SHOPPING, 2)
+  field(:WEBPAGE, 3)
 end
 
 defmodule Google.Ads.Googleads.V19.Enums.ListingGroupFilterListingSourceEnum do

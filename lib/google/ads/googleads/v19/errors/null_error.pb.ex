@@ -3,9 +3,9 @@ defmodule Google.Ads.Googleads.V19.Errors.NullErrorEnum.NullError do
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :UNSPECIFIED, 0
-  field :UNKNOWN, 1
-  field :NULL_CONTENT, 2
+  field(:UNSPECIFIED, 0)
+  field(:UNKNOWN, 1)
+  field(:NULL_CONTENT, 2)
 end
 
 defmodule Google.Ads.Googleads.V19.Errors.NullErrorEnum do

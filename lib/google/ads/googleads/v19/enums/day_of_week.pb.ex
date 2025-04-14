@@ -3,15 +3,15 @@ defmodule Google.Ads.Googleads.V19.Enums.DayOfWeekEnum.DayOfWeek do
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :UNSPECIFIED, 0
-  field :UNKNOWN, 1
-  field :MONDAY, 2
-  field :TUESDAY, 3
-  field :WEDNESDAY, 4
-  field :THURSDAY, 5
-  field :FRIDAY, 6
-  field :SATURDAY, 7
-  field :SUNDAY, 8
+  field(:UNSPECIFIED, 0)
+  field(:UNKNOWN, 1)
+  field(:MONDAY, 2)
+  field(:TUESDAY, 3)
+  field(:WEDNESDAY, 4)
+  field(:THURSDAY, 5)
+  field(:FRIDAY, 6)
+  field(:SATURDAY, 7)
+  field(:SUNDAY, 8)
 end
 
 defmodule Google.Ads.Googleads.V19.Enums.DayOfWeekEnum do

@@ -3,10 +3,10 @@ defmodule Google.Ads.Googleads.V19.Enums.ConversionActionCountingTypeEnum.Conver
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :UNSPECIFIED, 0
-  field :UNKNOWN, 1
-  field :ONE_PER_CLICK, 2
-  field :MANY_PER_CLICK, 3
+  field(:UNSPECIFIED, 0)
+  field(:UNKNOWN, 1)
+  field(:ONE_PER_CLICK, 2)
+  field(:MANY_PER_CLICK, 3)
 end
 
 defmodule Google.Ads.Googleads.V19.Enums.ConversionActionCountingTypeEnum do

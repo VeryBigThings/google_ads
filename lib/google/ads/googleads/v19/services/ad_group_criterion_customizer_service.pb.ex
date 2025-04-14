@@ -3,20 +3,22 @@ defmodule Google.Ads.Googleads.V19.Services.MutateAdGroupCriterionCustomizersReq
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :customer_id, 1, type: :string, json_name: "customerId", deprecated: false
+  field(:customer_id, 1, type: :string, json_name: "customerId", deprecated: false)
 
-  field :operations, 2,
+  field(:operations, 2,
     repeated: true,
     type: Google.Ads.Googleads.V19.Services.AdGroupCriterionCustomizerOperation,
     deprecated: false
+  )
 
-  field :partial_failure, 3, type: :bool, json_name: "partialFailure"
-  field :validate_only, 4, type: :bool, json_name: "validateOnly"
+  field(:partial_failure, 3, type: :bool, json_name: "partialFailure")
+  field(:validate_only, 4, type: :bool, json_name: "validateOnly")
 
-  field :response_content_type, 5,
+  field(:response_content_type, 5,
     type: Google.Ads.Googleads.V19.Enums.ResponseContentTypeEnum.ResponseContentType,
     json_name: "responseContentType",
     enum: true
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.AdGroupCriterionCustomizerOperation do
@@ -24,10 +26,10 @@ defmodule Google.Ads.Googleads.V19.Services.AdGroupCriterionCustomizerOperation 
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  oneof :operation, 0
+  oneof(:operation, 0)
 
-  field :create, 1, type: Google.Ads.Googleads.V19.Resources.AdGroupCriterionCustomizer, oneof: 0
-  field :remove, 2, type: :string, oneof: 0, deprecated: false
+  field(:create, 1, type: Google.Ads.Googleads.V19.Resources.AdGroupCriterionCustomizer, oneof: 0)
+  field(:remove, 2, type: :string, oneof: 0, deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.MutateAdGroupCriterionCustomizersResponse do
@@ -35,11 +37,12 @@ defmodule Google.Ads.Googleads.V19.Services.MutateAdGroupCriterionCustomizersRes
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :results, 1,
+  field(:results, 1,
     repeated: true,
     type: Google.Ads.Googleads.V19.Services.MutateAdGroupCriterionCustomizerResult
+  )
 
-  field :partial_failure_error, 2, type: Google.Rpc.Status, json_name: "partialFailureError"
+  field(:partial_failure_error, 2, type: Google.Rpc.Status, json_name: "partialFailureError")
 end
 
 defmodule Google.Ads.Googleads.V19.Services.MutateAdGroupCriterionCustomizerResult do
@@ -47,11 +50,12 @@ defmodule Google.Ads.Googleads.V19.Services.MutateAdGroupCriterionCustomizerResu
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
+  field(:resource_name, 1, type: :string, json_name: "resourceName", deprecated: false)
 
-  field :ad_group_criterion_customizer, 2,
+  field(:ad_group_criterion_customizer, 2,
     type: Google.Ads.Googleads.V19.Resources.AdGroupCriterionCustomizer,
     json_name: "adGroupCriterionCustomizer"
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.AdGroupCriterionCustomizerService.Service do
@@ -61,9 +65,11 @@ defmodule Google.Ads.Googleads.V19.Services.AdGroupCriterionCustomizerService.Se
     name: "google.ads.googleads.v19.services.AdGroupCriterionCustomizerService",
     protoc_gen_elixir_version: "0.14.1"
 
-  rpc :MutateAdGroupCriterionCustomizers,
-      Google.Ads.Googleads.V19.Services.MutateAdGroupCriterionCustomizersRequest,
-      Google.Ads.Googleads.V19.Services.MutateAdGroupCriterionCustomizersResponse
+  rpc(
+    :MutateAdGroupCriterionCustomizers,
+    Google.Ads.Googleads.V19.Services.MutateAdGroupCriterionCustomizersRequest,
+    Google.Ads.Googleads.V19.Services.MutateAdGroupCriterionCustomizersResponse
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.AdGroupCriterionCustomizerService.Stub do

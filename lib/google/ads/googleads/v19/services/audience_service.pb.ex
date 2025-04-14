@@ -3,20 +3,22 @@ defmodule Google.Ads.Googleads.V19.Services.MutateAudiencesRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :customer_id, 1, type: :string, json_name: "customerId", deprecated: false
+  field(:customer_id, 1, type: :string, json_name: "customerId", deprecated: false)
 
-  field :operations, 2,
+  field(:operations, 2,
     repeated: true,
     type: Google.Ads.Googleads.V19.Services.AudienceOperation,
     deprecated: false
+  )
 
-  field :partial_failure, 3, type: :bool, json_name: "partialFailure"
-  field :validate_only, 4, type: :bool, json_name: "validateOnly"
+  field(:partial_failure, 3, type: :bool, json_name: "partialFailure")
+  field(:validate_only, 4, type: :bool, json_name: "validateOnly")
 
-  field :response_content_type, 5,
+  field(:response_content_type, 5,
     type: Google.Ads.Googleads.V19.Enums.ResponseContentTypeEnum.ResponseContentType,
     json_name: "responseContentType",
     enum: true
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.MutateAudiencesResponse do
@@ -24,8 +26,8 @@ defmodule Google.Ads.Googleads.V19.Services.MutateAudiencesResponse do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :results, 1, repeated: true, type: Google.Ads.Googleads.V19.Services.MutateAudienceResult
-  field :partial_failure_error, 2, type: Google.Rpc.Status, json_name: "partialFailureError"
+  field(:results, 1, repeated: true, type: Google.Ads.Googleads.V19.Services.MutateAudienceResult)
+  field(:partial_failure_error, 2, type: Google.Rpc.Status, json_name: "partialFailureError")
 end
 
 defmodule Google.Ads.Googleads.V19.Services.AudienceOperation do
@@ -33,11 +35,11 @@ defmodule Google.Ads.Googleads.V19.Services.AudienceOperation do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  oneof :operation, 0
+  oneof(:operation, 0)
 
-  field :update_mask, 4, type: Google.Protobuf.FieldMask, json_name: "updateMask"
-  field :create, 1, type: Google.Ads.Googleads.V19.Resources.Audience, oneof: 0
-  field :update, 2, type: Google.Ads.Googleads.V19.Resources.Audience, oneof: 0
+  field(:update_mask, 4, type: Google.Protobuf.FieldMask, json_name: "updateMask")
+  field(:create, 1, type: Google.Ads.Googleads.V19.Resources.Audience, oneof: 0)
+  field(:update, 2, type: Google.Ads.Googleads.V19.Resources.Audience, oneof: 0)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.MutateAudienceResult do
@@ -45,8 +47,8 @@ defmodule Google.Ads.Googleads.V19.Services.MutateAudienceResult do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
-  field :audience, 2, type: Google.Ads.Googleads.V19.Resources.Audience
+  field(:resource_name, 1, type: :string, json_name: "resourceName", deprecated: false)
+  field(:audience, 2, type: Google.Ads.Googleads.V19.Resources.Audience)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.AudienceService.Service do
@@ -56,9 +58,11 @@ defmodule Google.Ads.Googleads.V19.Services.AudienceService.Service do
     name: "google.ads.googleads.v19.services.AudienceService",
     protoc_gen_elixir_version: "0.14.1"
 
-  rpc :MutateAudiences,
-      Google.Ads.Googleads.V19.Services.MutateAudiencesRequest,
-      Google.Ads.Googleads.V19.Services.MutateAudiencesResponse
+  rpc(
+    :MutateAudiences,
+    Google.Ads.Googleads.V19.Services.MutateAudiencesRequest,
+    Google.Ads.Googleads.V19.Services.MutateAudiencesResponse
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.AudienceService.Stub do

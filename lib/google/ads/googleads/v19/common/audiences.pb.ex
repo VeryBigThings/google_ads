@@ -3,25 +3,28 @@ defmodule Google.Ads.Googleads.V19.Common.AudienceDimension do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  oneof :dimension, 0
+  oneof(:dimension, 0)
 
-  field :age, 1, type: Google.Ads.Googleads.V19.Common.AgeDimension, oneof: 0
-  field :gender, 2, type: Google.Ads.Googleads.V19.Common.GenderDimension, oneof: 0
+  field(:age, 1, type: Google.Ads.Googleads.V19.Common.AgeDimension, oneof: 0)
+  field(:gender, 2, type: Google.Ads.Googleads.V19.Common.GenderDimension, oneof: 0)
 
-  field :household_income, 3,
+  field(:household_income, 3,
     type: Google.Ads.Googleads.V19.Common.HouseholdIncomeDimension,
     json_name: "householdIncome",
     oneof: 0
+  )
 
-  field :parental_status, 4,
+  field(:parental_status, 4,
     type: Google.Ads.Googleads.V19.Common.ParentalStatusDimension,
     json_name: "parentalStatus",
     oneof: 0
+  )
 
-  field :audience_segments, 5,
+  field(:audience_segments, 5,
     type: Google.Ads.Googleads.V19.Common.AudienceSegmentDimension,
     json_name: "audienceSegments",
     oneof: 0
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.AudienceExclusionDimension do
@@ -29,7 +32,7 @@ defmodule Google.Ads.Googleads.V19.Common.AudienceExclusionDimension do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :exclusions, 1, repeated: true, type: Google.Ads.Googleads.V19.Common.ExclusionSegment
+  field(:exclusions, 1, repeated: true, type: Google.Ads.Googleads.V19.Common.ExclusionSegment)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.ExclusionSegment do
@@ -37,12 +40,13 @@ defmodule Google.Ads.Googleads.V19.Common.ExclusionSegment do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  oneof :segment, 0
+  oneof(:segment, 0)
 
-  field :user_list, 1,
+  field(:user_list, 1,
     type: Google.Ads.Googleads.V19.Common.UserListSegment,
     json_name: "userList",
     oneof: 0
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.AgeDimension do
@@ -50,12 +54,13 @@ defmodule Google.Ads.Googleads.V19.Common.AgeDimension do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :age_ranges, 1,
+  field(:age_ranges, 1,
     repeated: true,
     type: Google.Ads.Googleads.V19.Common.AgeSegment,
     json_name: "ageRanges"
+  )
 
-  field :include_undetermined, 2, type: :bool, json_name: "includeUndetermined"
+  field(:include_undetermined, 2, type: :bool, json_name: "includeUndetermined")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.AgeSegment do
@@ -63,8 +68,8 @@ defmodule Google.Ads.Googleads.V19.Common.AgeSegment do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :min_age, 1, type: :int32, json_name: "minAge"
-  field :max_age, 2, type: :int32, json_name: "maxAge"
+  field(:min_age, 1, type: :int32, json_name: "minAge")
+  field(:max_age, 2, type: :int32, json_name: "maxAge")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.GenderDimension do
@@ -72,12 +77,13 @@ defmodule Google.Ads.Googleads.V19.Common.GenderDimension do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :genders, 1,
+  field(:genders, 1,
     repeated: true,
     type: Google.Ads.Googleads.V19.Enums.GenderTypeEnum.GenderType,
     enum: true
+  )
 
-  field :include_undetermined, 2, type: :bool, json_name: "includeUndetermined"
+  field(:include_undetermined, 2, type: :bool, json_name: "includeUndetermined")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.HouseholdIncomeDimension do
@@ -85,13 +91,14 @@ defmodule Google.Ads.Googleads.V19.Common.HouseholdIncomeDimension do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :income_ranges, 1,
+  field(:income_ranges, 1,
     repeated: true,
     type: Google.Ads.Googleads.V19.Enums.IncomeRangeTypeEnum.IncomeRangeType,
     json_name: "incomeRanges",
     enum: true
+  )
 
-  field :include_undetermined, 2, type: :bool, json_name: "includeUndetermined"
+  field(:include_undetermined, 2, type: :bool, json_name: "includeUndetermined")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.ParentalStatusDimension do
@@ -99,13 +106,14 @@ defmodule Google.Ads.Googleads.V19.Common.ParentalStatusDimension do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :parental_statuses, 1,
+  field(:parental_statuses, 1,
     repeated: true,
     type: Google.Ads.Googleads.V19.Enums.ParentalStatusTypeEnum.ParentalStatusType,
     json_name: "parentalStatuses",
     enum: true
+  )
 
-  field :include_undetermined, 2, type: :bool, json_name: "includeUndetermined"
+  field(:include_undetermined, 2, type: :bool, json_name: "includeUndetermined")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.AudienceSegmentDimension do
@@ -113,7 +121,7 @@ defmodule Google.Ads.Googleads.V19.Common.AudienceSegmentDimension do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :segments, 1, repeated: true, type: Google.Ads.Googleads.V19.Common.AudienceSegment
+  field(:segments, 1, repeated: true, type: Google.Ads.Googleads.V19.Common.AudienceSegment)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.AudienceSegment do
@@ -121,32 +129,37 @@ defmodule Google.Ads.Googleads.V19.Common.AudienceSegment do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  oneof :segment, 0
+  oneof(:segment, 0)
 
-  field :user_list, 1,
+  field(:user_list, 1,
     type: Google.Ads.Googleads.V19.Common.UserListSegment,
     json_name: "userList",
     oneof: 0
+  )
 
-  field :user_interest, 2,
+  field(:user_interest, 2,
     type: Google.Ads.Googleads.V19.Common.UserInterestSegment,
     json_name: "userInterest",
     oneof: 0
+  )
 
-  field :life_event, 3,
+  field(:life_event, 3,
     type: Google.Ads.Googleads.V19.Common.LifeEventSegment,
     json_name: "lifeEvent",
     oneof: 0
+  )
 
-  field :detailed_demographic, 4,
+  field(:detailed_demographic, 4,
     type: Google.Ads.Googleads.V19.Common.DetailedDemographicSegment,
     json_name: "detailedDemographic",
     oneof: 0
+  )
 
-  field :custom_audience, 5,
+  field(:custom_audience, 5,
     type: Google.Ads.Googleads.V19.Common.CustomAudienceSegment,
     json_name: "customAudience",
     oneof: 0
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.UserListSegment do
@@ -154,7 +167,7 @@ defmodule Google.Ads.Googleads.V19.Common.UserListSegment do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :user_list, 1, type: :string, json_name: "userList"
+  field(:user_list, 1, type: :string, json_name: "userList")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.UserInterestSegment do
@@ -162,7 +175,7 @@ defmodule Google.Ads.Googleads.V19.Common.UserInterestSegment do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :user_interest_category, 1, type: :string, json_name: "userInterestCategory"
+  field(:user_interest_category, 1, type: :string, json_name: "userInterestCategory")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.LifeEventSegment do
@@ -170,7 +183,7 @@ defmodule Google.Ads.Googleads.V19.Common.LifeEventSegment do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :life_event, 1, type: :string, json_name: "lifeEvent", deprecated: false
+  field(:life_event, 1, type: :string, json_name: "lifeEvent", deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.DetailedDemographicSegment do
@@ -178,10 +191,11 @@ defmodule Google.Ads.Googleads.V19.Common.DetailedDemographicSegment do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :detailed_demographic, 1,
+  field(:detailed_demographic, 1,
     type: :string,
     json_name: "detailedDemographic",
     deprecated: false
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.CustomAudienceSegment do
@@ -189,5 +203,5 @@ defmodule Google.Ads.Googleads.V19.Common.CustomAudienceSegment do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :custom_audience, 1, type: :string, json_name: "customAudience"
+  field(:custom_audience, 1, type: :string, json_name: "customAudience")
 end

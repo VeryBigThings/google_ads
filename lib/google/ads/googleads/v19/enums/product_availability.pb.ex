@@ -3,11 +3,11 @@ defmodule Google.Ads.Googleads.V19.Enums.ProductAvailabilityEnum.ProductAvailabi
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :UNSPECIFIED, 0
-  field :UNKNOWN, 1
-  field :IN_STOCK, 2
-  field :OUT_OF_STOCK, 3
-  field :PREORDER, 4
+  field(:UNSPECIFIED, 0)
+  field(:UNKNOWN, 1)
+  field(:IN_STOCK, 2)
+  field(:OUT_OF_STOCK, 3)
+  field(:PREORDER, 4)
 end
 
 defmodule Google.Ads.Googleads.V19.Enums.ProductAvailabilityEnum do

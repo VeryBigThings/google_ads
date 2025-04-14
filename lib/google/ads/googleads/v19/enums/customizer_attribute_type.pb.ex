@@ -3,12 +3,12 @@ defmodule Google.Ads.Googleads.V19.Enums.CustomizerAttributeTypeEnum.CustomizerA
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :UNSPECIFIED, 0
-  field :UNKNOWN, 1
-  field :TEXT, 2
-  field :NUMBER, 3
-  field :PRICE, 4
-  field :PERCENT, 5
+  field(:UNSPECIFIED, 0)
+  field(:UNKNOWN, 1)
+  field(:TEXT, 2)
+  field(:NUMBER, 3)
+  field(:PRICE, 4)
+  field(:PERCENT, 5)
 end
 
 defmodule Google.Ads.Googleads.V19.Enums.CustomizerAttributeTypeEnum do

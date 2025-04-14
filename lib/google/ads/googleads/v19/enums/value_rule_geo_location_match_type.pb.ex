@@ -3,10 +3,10 @@ defmodule Google.Ads.Googleads.V19.Enums.ValueRuleGeoLocationMatchTypeEnum.Value
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :UNSPECIFIED, 0
-  field :UNKNOWN, 1
-  field :ANY, 2
-  field :LOCATION_OF_PRESENCE, 3
+  field(:UNSPECIFIED, 0)
+  field(:UNKNOWN, 1)
+  field(:ANY, 2)
+  field(:LOCATION_OF_PRESENCE, 3)
 end
 
 defmodule Google.Ads.Googleads.V19.Enums.ValueRuleGeoLocationMatchTypeEnum do

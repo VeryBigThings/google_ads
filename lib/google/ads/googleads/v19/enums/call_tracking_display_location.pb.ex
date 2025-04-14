@@ -3,10 +3,10 @@ defmodule Google.Ads.Googleads.V19.Enums.CallTrackingDisplayLocationEnum.CallTra
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :UNSPECIFIED, 0
-  field :UNKNOWN, 1
-  field :AD, 2
-  field :LANDING_PAGE, 3
+  field(:UNSPECIFIED, 0)
+  field(:UNKNOWN, 1)
+  field(:AD, 2)
+  field(:LANDING_PAGE, 3)
 end
 
 defmodule Google.Ads.Googleads.V19.Enums.CallTrackingDisplayLocationEnum do

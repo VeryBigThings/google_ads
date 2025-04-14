@@ -3,11 +3,11 @@ defmodule Google.Ads.Googleads.V19.Enums.KeywordPlanConceptGroupTypeEnum.Keyword
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :UNSPECIFIED, 0
-  field :UNKNOWN, 1
-  field :BRAND, 2
-  field :OTHER_BRANDS, 3
-  field :NON_BRAND, 4
+  field(:UNSPECIFIED, 0)
+  field(:UNKNOWN, 1)
+  field(:BRAND, 2)
+  field(:OTHER_BRANDS, 3)
+  field(:NON_BRAND, 4)
 end
 
 defmodule Google.Ads.Googleads.V19.Enums.KeywordPlanConceptGroupTypeEnum do

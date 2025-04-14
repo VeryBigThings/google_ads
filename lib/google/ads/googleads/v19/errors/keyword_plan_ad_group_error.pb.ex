@@ -3,10 +3,10 @@ defmodule Google.Ads.Googleads.V19.Errors.KeywordPlanAdGroupErrorEnum.KeywordPla
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :UNSPECIFIED, 0
-  field :UNKNOWN, 1
-  field :INVALID_NAME, 2
-  field :DUPLICATE_NAME, 3
+  field(:UNSPECIFIED, 0)
+  field(:UNKNOWN, 1)
+  field(:INVALID_NAME, 2)
+  field(:DUPLICATE_NAME, 3)
 end
 
 defmodule Google.Ads.Googleads.V19.Errors.KeywordPlanAdGroupErrorEnum do

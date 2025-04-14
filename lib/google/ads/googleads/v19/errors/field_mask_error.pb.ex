@@ -3,12 +3,12 @@ defmodule Google.Ads.Googleads.V19.Errors.FieldMaskErrorEnum.FieldMaskError do
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :UNSPECIFIED, 0
-  field :UNKNOWN, 1
-  field :FIELD_MASK_MISSING, 5
-  field :FIELD_MASK_NOT_ALLOWED, 4
-  field :FIELD_NOT_FOUND, 2
-  field :FIELD_HAS_SUBFIELDS, 3
+  field(:UNSPECIFIED, 0)
+  field(:UNKNOWN, 1)
+  field(:FIELD_MASK_MISSING, 5)
+  field(:FIELD_MASK_NOT_ALLOWED, 4)
+  field(:FIELD_NOT_FOUND, 2)
+  field(:FIELD_HAS_SUBFIELDS, 3)
 end
 
 defmodule Google.Ads.Googleads.V19.Errors.FieldMaskErrorEnum do

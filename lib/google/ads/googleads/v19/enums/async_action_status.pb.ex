@@ -3,13 +3,13 @@ defmodule Google.Ads.Googleads.V19.Enums.AsyncActionStatusEnum.AsyncActionStatus
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :UNSPECIFIED, 0
-  field :UNKNOWN, 1
-  field :NOT_STARTED, 2
-  field :IN_PROGRESS, 3
-  field :COMPLETED, 4
-  field :FAILED, 5
-  field :COMPLETED_WITH_WARNING, 6
+  field(:UNSPECIFIED, 0)
+  field(:UNKNOWN, 1)
+  field(:NOT_STARTED, 2)
+  field(:IN_PROGRESS, 3)
+  field(:COMPLETED, 4)
+  field(:FAILED, 5)
+  field(:COMPLETED_WITH_WARNING, 6)
 end
 
 defmodule Google.Ads.Googleads.V19.Enums.AsyncActionStatusEnum do

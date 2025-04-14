@@ -3,10 +3,10 @@ defmodule Google.Ads.Googleads.V19.Enums.ConversionEnvironmentEnum.ConversionEnv
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :UNSPECIFIED, 0
-  field :UNKNOWN, 1
-  field :APP, 2
-  field :WEB, 3
+  field(:UNSPECIFIED, 0)
+  field(:UNKNOWN, 1)
+  field(:APP, 2)
+  field(:WEB, 3)
 end
 
 defmodule Google.Ads.Googleads.V19.Enums.ConversionEnvironmentEnum do

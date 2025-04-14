@@ -3,8 +3,8 @@ defmodule Google.Ads.Googleads.V19.Resources.SmartCampaignSetting.PhoneNumber do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :phone_number, 1, type: :string, json_name: "phoneNumber"
-  field :country_code, 2, type: :string, json_name: "countryCode"
+  field(:phone_number, 1, type: :string, json_name: "phoneNumber")
+  field(:country_code, 2, type: :string, json_name: "countryCode")
 end
 
 defmodule Google.Ads.Googleads.V19.Resources.SmartCampaignSetting.AdOptimizedBusinessProfileSetting do
@@ -12,7 +12,7 @@ defmodule Google.Ads.Googleads.V19.Resources.SmartCampaignSetting.AdOptimizedBus
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :include_lead_form, 1, type: :bool, json_name: "includeLeadForm"
+  field(:include_lead_form, 1, type: :bool, json_name: "includeLeadForm")
 end
 
 defmodule Google.Ads.Googleads.V19.Resources.SmartCampaignSetting do
@@ -20,30 +20,33 @@ defmodule Google.Ads.Googleads.V19.Resources.SmartCampaignSetting do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  oneof :landing_page, 0
+  oneof(:landing_page, 0)
 
-  oneof :business_setting, 1
+  oneof(:business_setting, 1)
 
-  field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
-  field :campaign, 2, type: :string, deprecated: false
+  field(:resource_name, 1, type: :string, json_name: "resourceName", deprecated: false)
+  field(:campaign, 2, type: :string, deprecated: false)
 
-  field :phone_number, 3,
+  field(:phone_number, 3,
     type: Google.Ads.Googleads.V19.Resources.SmartCampaignSetting.PhoneNumber,
     json_name: "phoneNumber"
+  )
 
-  field :advertising_language_code, 7, type: :string, json_name: "advertisingLanguageCode"
-  field :final_url, 8, type: :string, json_name: "finalUrl", oneof: 0
+  field(:advertising_language_code, 7, type: :string, json_name: "advertisingLanguageCode")
+  field(:final_url, 8, type: :string, json_name: "finalUrl", oneof: 0)
 
-  field :ad_optimized_business_profile_setting, 9,
+  field(:ad_optimized_business_profile_setting, 9,
     type:
       Google.Ads.Googleads.V19.Resources.SmartCampaignSetting.AdOptimizedBusinessProfileSetting,
     json_name: "adOptimizedBusinessProfileSetting",
     oneof: 0
+  )
 
-  field :business_name, 5, type: :string, json_name: "businessName", oneof: 1
+  field(:business_name, 5, type: :string, json_name: "businessName", oneof: 1)
 
-  field :business_profile_location, 10,
+  field(:business_profile_location, 10,
     type: :string,
     json_name: "businessProfileLocation",
     oneof: 1
+  )
 end

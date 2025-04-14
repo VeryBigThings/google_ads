@@ -3,30 +3,34 @@ defmodule Google.Ads.Googleads.V19.Resources.BatchJob.BatchJobMetadata do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :creation_date_time, 8, type: :string, json_name: "creationDateTime", deprecated: false
-  field :start_date_time, 7, type: :string, json_name: "startDateTime", deprecated: false
+  field(:creation_date_time, 8, type: :string, json_name: "creationDateTime", deprecated: false)
+  field(:start_date_time, 7, type: :string, json_name: "startDateTime", deprecated: false)
 
-  field :completion_date_time, 9,
+  field(:completion_date_time, 9,
     type: :string,
     json_name: "completionDateTime",
     deprecated: false
+  )
 
-  field :estimated_completion_ratio, 10,
+  field(:estimated_completion_ratio, 10,
     type: :double,
     json_name: "estimatedCompletionRatio",
     deprecated: false
+  )
 
-  field :operation_count, 11, type: :int64, json_name: "operationCount", deprecated: false
+  field(:operation_count, 11, type: :int64, json_name: "operationCount", deprecated: false)
 
-  field :executed_operation_count, 12,
+  field(:executed_operation_count, 12,
     type: :int64,
     json_name: "executedOperationCount",
     deprecated: false
+  )
 
-  field :execution_limit_seconds, 13,
+  field(:execution_limit_seconds, 13,
     type: :int32,
     json_name: "executionLimitSeconds",
     deprecated: false
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Resources.BatchJob do
@@ -34,25 +38,29 @@ defmodule Google.Ads.Googleads.V19.Resources.BatchJob do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
-  field :id, 7, type: :int64, deprecated: false
+  field(:resource_name, 1, type: :string, json_name: "resourceName", deprecated: false)
+  field(:id, 7, type: :int64, deprecated: false)
 
-  field :next_add_sequence_token, 8,
+  field(:next_add_sequence_token, 8,
     type: :string,
     json_name: "nextAddSequenceToken",
     deprecated: false
+  )
 
-  field :metadata, 4,
+  field(:metadata, 4,
     type: Google.Ads.Googleads.V19.Resources.BatchJob.BatchJobMetadata,
     deprecated: false
+  )
 
-  field :status, 5,
+  field(:status, 5,
     type: Google.Ads.Googleads.V19.Enums.BatchJobStatusEnum.BatchJobStatus,
     enum: true,
     deprecated: false
+  )
 
-  field :long_running_operation, 9,
+  field(:long_running_operation, 9,
     type: :string,
     json_name: "longRunningOperation",
     deprecated: false
+  )
 end

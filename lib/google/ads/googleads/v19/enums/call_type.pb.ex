@@ -3,10 +3,10 @@ defmodule Google.Ads.Googleads.V19.Enums.CallTypeEnum.CallType do
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :UNSPECIFIED, 0
-  field :UNKNOWN, 1
-  field :MANUALLY_DIALED, 2
-  field :HIGH_END_MOBILE_SEARCH, 3
+  field(:UNSPECIFIED, 0)
+  field(:UNKNOWN, 1)
+  field(:MANUALLY_DIALED, 2)
+  field(:HIGH_END_MOBILE_SEARCH, 3)
 end
 
 defmodule Google.Ads.Googleads.V19.Enums.CallTypeEnum do

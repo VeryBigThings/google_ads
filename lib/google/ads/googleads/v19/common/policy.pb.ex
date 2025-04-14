@@ -3,8 +3,8 @@ defmodule Google.Ads.Googleads.V19.Common.PolicyViolationKey do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :policy_name, 3, type: :string, json_name: "policyName"
-  field :violating_text, 4, type: :string, json_name: "violatingText"
+  field(:policy_name, 3, type: :string, json_name: "policyName")
+  field(:violating_text, 4, type: :string, json_name: "violatingText")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.PolicyValidationParameter do
@@ -12,15 +12,17 @@ defmodule Google.Ads.Googleads.V19.Common.PolicyValidationParameter do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :ignorable_policy_topics, 3,
+  field(:ignorable_policy_topics, 3,
     repeated: true,
     type: :string,
     json_name: "ignorablePolicyTopics"
+  )
 
-  field :exempt_policy_violation_keys, 2,
+  field(:exempt_policy_violation_keys, 2,
     repeated: true,
     type: Google.Ads.Googleads.V19.Common.PolicyViolationKey,
     json_name: "exemptPolicyViolationKeys"
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.PolicyTopicEntry do
@@ -28,17 +30,19 @@ defmodule Google.Ads.Googleads.V19.Common.PolicyTopicEntry do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :topic, 5, type: :string
+  field(:topic, 5, type: :string)
 
-  field :type, 2,
+  field(:type, 2,
     type: Google.Ads.Googleads.V19.Enums.PolicyTopicEntryTypeEnum.PolicyTopicEntryType,
     enum: true
+  )
 
-  field :evidences, 3, repeated: true, type: Google.Ads.Googleads.V19.Common.PolicyTopicEvidence
+  field(:evidences, 3, repeated: true, type: Google.Ads.Googleads.V19.Common.PolicyTopicEvidence)
 
-  field :constraints, 4,
+  field(:constraints, 4,
     repeated: true,
     type: Google.Ads.Googleads.V19.Common.PolicyTopicConstraint
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.PolicyTopicEvidence.TextList do
@@ -46,7 +50,7 @@ defmodule Google.Ads.Googleads.V19.Common.PolicyTopicEvidence.TextList do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :texts, 2, repeated: true, type: :string
+  field(:texts, 2, repeated: true, type: :string)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.PolicyTopicEvidence.WebsiteList do
@@ -54,7 +58,7 @@ defmodule Google.Ads.Googleads.V19.Common.PolicyTopicEvidence.WebsiteList do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :websites, 2, repeated: true, type: :string
+  field(:websites, 2, repeated: true, type: :string)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.PolicyTopicEvidence.DestinationTextList do
@@ -62,7 +66,7 @@ defmodule Google.Ads.Googleads.V19.Common.PolicyTopicEvidence.DestinationTextLis
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :destination_texts, 2, repeated: true, type: :string, json_name: "destinationTexts"
+  field(:destination_texts, 2, repeated: true, type: :string, json_name: "destinationTexts")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.PolicyTopicEvidence.DestinationMismatch do
@@ -70,12 +74,13 @@ defmodule Google.Ads.Googleads.V19.Common.PolicyTopicEvidence.DestinationMismatc
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :url_types, 1,
+  field(:url_types, 1,
     repeated: true,
     type:
       Google.Ads.Googleads.V19.Enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType,
     json_name: "urlTypes",
     enum: true
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.PolicyTopicEvidence.DestinationNotWorking do
@@ -83,25 +88,27 @@ defmodule Google.Ads.Googleads.V19.Common.PolicyTopicEvidence.DestinationNotWork
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  oneof :reason, 0
+  oneof(:reason, 0)
 
-  field :expanded_url, 7, type: :string, json_name: "expandedUrl"
+  field(:expanded_url, 7, type: :string, json_name: "expandedUrl")
 
-  field :device, 4,
+  field(:device, 4,
     type:
       Google.Ads.Googleads.V19.Enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice,
     enum: true
+  )
 
-  field :last_checked_date_time, 8, type: :string, json_name: "lastCheckedDateTime"
+  field(:last_checked_date_time, 8, type: :string, json_name: "lastCheckedDateTime")
 
-  field :dns_error_type, 1,
+  field(:dns_error_type, 1,
     type:
       Google.Ads.Googleads.V19.Enums.PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType,
     json_name: "dnsErrorType",
     enum: true,
     oneof: 0
+  )
 
-  field :http_error_code, 6, type: :int64, json_name: "httpErrorCode", oneof: 0
+  field(:http_error_code, 6, type: :int64, json_name: "httpErrorCode", oneof: 0)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.PolicyTopicEvidence do
@@ -109,34 +116,39 @@ defmodule Google.Ads.Googleads.V19.Common.PolicyTopicEvidence do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  oneof :value, 0
+  oneof(:value, 0)
 
-  field :website_list, 3,
+  field(:website_list, 3,
     type: Google.Ads.Googleads.V19.Common.PolicyTopicEvidence.WebsiteList,
     json_name: "websiteList",
     oneof: 0
+  )
 
-  field :text_list, 4,
+  field(:text_list, 4,
     type: Google.Ads.Googleads.V19.Common.PolicyTopicEvidence.TextList,
     json_name: "textList",
     oneof: 0
+  )
 
-  field :language_code, 9, type: :string, json_name: "languageCode", oneof: 0
+  field(:language_code, 9, type: :string, json_name: "languageCode", oneof: 0)
 
-  field :destination_text_list, 6,
+  field(:destination_text_list, 6,
     type: Google.Ads.Googleads.V19.Common.PolicyTopicEvidence.DestinationTextList,
     json_name: "destinationTextList",
     oneof: 0
+  )
 
-  field :destination_mismatch, 7,
+  field(:destination_mismatch, 7,
     type: Google.Ads.Googleads.V19.Common.PolicyTopicEvidence.DestinationMismatch,
     json_name: "destinationMismatch",
     oneof: 0
+  )
 
-  field :destination_not_working, 8,
+  field(:destination_not_working, 8,
     type: Google.Ads.Googleads.V19.Common.PolicyTopicEvidence.DestinationNotWorking,
     json_name: "destinationNotWorking",
     oneof: 0
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.PolicyTopicConstraint.CountryConstraintList do
@@ -144,11 +156,12 @@ defmodule Google.Ads.Googleads.V19.Common.PolicyTopicConstraint.CountryConstrain
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :total_targeted_countries, 3, type: :int32, json_name: "totalTargetedCountries"
+  field(:total_targeted_countries, 3, type: :int32, json_name: "totalTargetedCountries")
 
-  field :countries, 2,
+  field(:countries, 2,
     repeated: true,
     type: Google.Ads.Googleads.V19.Common.PolicyTopicConstraint.CountryConstraint
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.PolicyTopicConstraint.ResellerConstraint do
@@ -162,7 +175,7 @@ defmodule Google.Ads.Googleads.V19.Common.PolicyTopicConstraint.CountryConstrain
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :country_criterion, 2, type: :string, json_name: "countryCriterion"
+  field(:country_criterion, 2, type: :string, json_name: "countryCriterion")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.PolicyTopicConstraint do
@@ -170,25 +183,29 @@ defmodule Google.Ads.Googleads.V19.Common.PolicyTopicConstraint do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  oneof :value, 0
+  oneof(:value, 0)
 
-  field :country_constraint_list, 1,
+  field(:country_constraint_list, 1,
     type: Google.Ads.Googleads.V19.Common.PolicyTopicConstraint.CountryConstraintList,
     json_name: "countryConstraintList",
     oneof: 0
+  )
 
-  field :reseller_constraint, 2,
+  field(:reseller_constraint, 2,
     type: Google.Ads.Googleads.V19.Common.PolicyTopicConstraint.ResellerConstraint,
     json_name: "resellerConstraint",
     oneof: 0
+  )
 
-  field :certificate_missing_in_country_list, 3,
+  field(:certificate_missing_in_country_list, 3,
     type: Google.Ads.Googleads.V19.Common.PolicyTopicConstraint.CountryConstraintList,
     json_name: "certificateMissingInCountryList",
     oneof: 0
+  )
 
-  field :certificate_domain_mismatch_in_country_list, 4,
+  field(:certificate_domain_mismatch_in_country_list, 4,
     type: Google.Ads.Googleads.V19.Common.PolicyTopicConstraint.CountryConstraintList,
     json_name: "certificateDomainMismatchInCountryList",
     oneof: 0
+  )
 end

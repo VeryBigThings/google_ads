@@ -3,14 +3,15 @@ defmodule Google.Ads.Googleads.V19.Resources.KeywordPlanAdGroup do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
+  field(:resource_name, 1, type: :string, json_name: "resourceName", deprecated: false)
 
-  field :keyword_plan_campaign, 6,
+  field(:keyword_plan_campaign, 6,
     type: :string,
     json_name: "keywordPlanCampaign",
     deprecated: false
+  )
 
-  field :id, 7, type: :int64, deprecated: false
-  field :name, 8, type: :string
-  field :cpc_bid_micros, 9, type: :int64, json_name: "cpcBidMicros"
+  field(:id, 7, type: :int64, deprecated: false)
+  field(:name, 8, type: :string)
+  field(:cpc_bid_micros, 9, type: :int64, json_name: "cpcBidMicros")
 end

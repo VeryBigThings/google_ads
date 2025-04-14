@@ -3,11 +3,11 @@ defmodule Google.Ads.Googleads.V19.Enums.ListingGroupFilterProductConditionEnum.
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :UNSPECIFIED, 0
-  field :UNKNOWN, 1
-  field :NEW, 2
-  field :REFURBISHED, 3
-  field :USED, 4
+  field(:UNSPECIFIED, 0)
+  field(:UNKNOWN, 1)
+  field(:NEW, 2)
+  field(:REFURBISHED, 3)
+  field(:USED, 4)
 end
 
 defmodule Google.Ads.Googleads.V19.Enums.ListingGroupFilterProductConditionEnum do

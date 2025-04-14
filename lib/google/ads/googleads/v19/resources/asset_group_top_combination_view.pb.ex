@@ -3,13 +3,14 @@ defmodule Google.Ads.Googleads.V19.Resources.AssetGroupTopCombinationView do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
+  field(:resource_name, 1, type: :string, json_name: "resourceName", deprecated: false)
 
-  field :asset_group_top_combinations, 2,
+  field(:asset_group_top_combinations, 2,
     repeated: true,
     type: Google.Ads.Googleads.V19.Resources.AssetGroupAssetCombinationData,
     json_name: "assetGroupTopCombinations",
     deprecated: false
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Resources.AssetGroupAssetCombinationData do
@@ -17,9 +18,10 @@ defmodule Google.Ads.Googleads.V19.Resources.AssetGroupAssetCombinationData do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :asset_combination_served_assets, 1,
+  field(:asset_combination_served_assets, 1,
     repeated: true,
     type: Google.Ads.Googleads.V19.Common.AssetUsage,
     json_name: "assetCombinationServedAssets",
     deprecated: false
+  )
 end

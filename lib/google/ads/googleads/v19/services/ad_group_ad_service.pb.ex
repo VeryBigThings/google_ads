@@ -3,20 +3,22 @@ defmodule Google.Ads.Googleads.V19.Services.MutateAdGroupAdsRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :customer_id, 1, type: :string, json_name: "customerId", deprecated: false
+  field(:customer_id, 1, type: :string, json_name: "customerId", deprecated: false)
 
-  field :operations, 2,
+  field(:operations, 2,
     repeated: true,
     type: Google.Ads.Googleads.V19.Services.AdGroupAdOperation,
     deprecated: false
+  )
 
-  field :partial_failure, 3, type: :bool, json_name: "partialFailure"
-  field :validate_only, 4, type: :bool, json_name: "validateOnly"
+  field(:partial_failure, 3, type: :bool, json_name: "partialFailure")
+  field(:validate_only, 4, type: :bool, json_name: "validateOnly")
 
-  field :response_content_type, 5,
+  field(:response_content_type, 5,
     type: Google.Ads.Googleads.V19.Enums.ResponseContentTypeEnum.ResponseContentType,
     json_name: "responseContentType",
     enum: true
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.AdGroupAdOperation do
@@ -24,17 +26,18 @@ defmodule Google.Ads.Googleads.V19.Services.AdGroupAdOperation do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  oneof :operation, 0
+  oneof(:operation, 0)
 
-  field :update_mask, 4, type: Google.Protobuf.FieldMask, json_name: "updateMask"
+  field(:update_mask, 4, type: Google.Protobuf.FieldMask, json_name: "updateMask")
 
-  field :policy_validation_parameter, 5,
+  field(:policy_validation_parameter, 5,
     type: Google.Ads.Googleads.V19.Common.PolicyValidationParameter,
     json_name: "policyValidationParameter"
+  )
 
-  field :create, 1, type: Google.Ads.Googleads.V19.Resources.AdGroupAd, oneof: 0
-  field :update, 2, type: Google.Ads.Googleads.V19.Resources.AdGroupAd, oneof: 0
-  field :remove, 3, type: :string, oneof: 0, deprecated: false
+  field(:create, 1, type: Google.Ads.Googleads.V19.Resources.AdGroupAd, oneof: 0)
+  field(:update, 2, type: Google.Ads.Googleads.V19.Resources.AdGroupAd, oneof: 0)
+  field(:remove, 3, type: :string, oneof: 0, deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.MutateAdGroupAdsResponse do
@@ -42,8 +45,12 @@ defmodule Google.Ads.Googleads.V19.Services.MutateAdGroupAdsResponse do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :partial_failure_error, 3, type: Google.Rpc.Status, json_name: "partialFailureError"
-  field :results, 2, repeated: true, type: Google.Ads.Googleads.V19.Services.MutateAdGroupAdResult
+  field(:partial_failure_error, 3, type: Google.Rpc.Status, json_name: "partialFailureError")
+
+  field(:results, 2,
+    repeated: true,
+    type: Google.Ads.Googleads.V19.Services.MutateAdGroupAdResult
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.MutateAdGroupAdResult do
@@ -51,11 +58,12 @@ defmodule Google.Ads.Googleads.V19.Services.MutateAdGroupAdResult do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
+  field(:resource_name, 1, type: :string, json_name: "resourceName", deprecated: false)
 
-  field :ad_group_ad, 2,
+  field(:ad_group_ad, 2,
     type: Google.Ads.Googleads.V19.Resources.AdGroupAd,
     json_name: "adGroupAd"
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.RemoveAutomaticallyCreatedAssetsRequest do
@@ -63,13 +71,14 @@ defmodule Google.Ads.Googleads.V19.Services.RemoveAutomaticallyCreatedAssetsRequ
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :ad_group_ad, 1, type: :string, json_name: "adGroupAd", deprecated: false
+  field(:ad_group_ad, 1, type: :string, json_name: "adGroupAd", deprecated: false)
 
-  field :assets_with_field_type, 2,
+  field(:assets_with_field_type, 2,
     repeated: true,
     type: Google.Ads.Googleads.V19.Services.AssetsWithFieldType,
     json_name: "assetsWithFieldType",
     deprecated: false
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.AssetsWithFieldType do
@@ -77,13 +86,14 @@ defmodule Google.Ads.Googleads.V19.Services.AssetsWithFieldType do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :asset, 1, type: :string, deprecated: false
+  field(:asset, 1, type: :string, deprecated: false)
 
-  field :asset_field_type, 2,
+  field(:asset_field_type, 2,
     type: Google.Ads.Googleads.V19.Enums.AssetFieldTypeEnum.AssetFieldType,
     json_name: "assetFieldType",
     enum: true,
     deprecated: false
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.AdGroupAdService.Service do
@@ -93,13 +103,17 @@ defmodule Google.Ads.Googleads.V19.Services.AdGroupAdService.Service do
     name: "google.ads.googleads.v19.services.AdGroupAdService",
     protoc_gen_elixir_version: "0.14.1"
 
-  rpc :MutateAdGroupAds,
-      Google.Ads.Googleads.V19.Services.MutateAdGroupAdsRequest,
-      Google.Ads.Googleads.V19.Services.MutateAdGroupAdsResponse
+  rpc(
+    :MutateAdGroupAds,
+    Google.Ads.Googleads.V19.Services.MutateAdGroupAdsRequest,
+    Google.Ads.Googleads.V19.Services.MutateAdGroupAdsResponse
+  )
 
-  rpc :RemoveAutomaticallyCreatedAssets,
-      Google.Ads.Googleads.V19.Services.RemoveAutomaticallyCreatedAssetsRequest,
-      Google.Protobuf.Empty
+  rpc(
+    :RemoveAutomaticallyCreatedAssets,
+    Google.Ads.Googleads.V19.Services.RemoveAutomaticallyCreatedAssetsRequest,
+    Google.Protobuf.Empty
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.AdGroupAdService.Stub do

@@ -3,14 +3,15 @@ defmodule Google.Ads.Googleads.V19.Services.SuggestBrandsRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :customer_id, 1, type: :string, json_name: "customerId", deprecated: false
-  field :brand_prefix, 2, type: :string, json_name: "brandPrefix", deprecated: false
+  field(:customer_id, 1, type: :string, json_name: "customerId", deprecated: false)
+  field(:brand_prefix, 2, type: :string, json_name: "brandPrefix", deprecated: false)
 
-  field :selected_brands, 3,
+  field(:selected_brands, 3,
     repeated: true,
     type: :string,
     json_name: "selectedBrands",
     deprecated: false
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.SuggestBrandsResponse do
@@ -18,7 +19,7 @@ defmodule Google.Ads.Googleads.V19.Services.SuggestBrandsResponse do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :brands, 1, repeated: true, type: Google.Ads.Googleads.V19.Services.BrandSuggestion
+  field(:brands, 1, repeated: true, type: Google.Ads.Googleads.V19.Services.BrandSuggestion)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.BrandSuggestion do
@@ -26,10 +27,10 @@ defmodule Google.Ads.Googleads.V19.Services.BrandSuggestion do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :id, 1, type: :string
-  field :name, 2, type: :string
-  field :urls, 3, repeated: true, type: :string
-  field :state, 4, type: Google.Ads.Googleads.V19.Enums.BrandStateEnum.BrandState, enum: true
+  field(:id, 1, type: :string)
+  field(:name, 2, type: :string)
+  field(:urls, 3, repeated: true, type: :string)
+  field(:state, 4, type: Google.Ads.Googleads.V19.Enums.BrandStateEnum.BrandState, enum: true)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.BrandSuggestionService.Service do
@@ -39,9 +40,11 @@ defmodule Google.Ads.Googleads.V19.Services.BrandSuggestionService.Service do
     name: "google.ads.googleads.v19.services.BrandSuggestionService",
     protoc_gen_elixir_version: "0.14.1"
 
-  rpc :SuggestBrands,
-      Google.Ads.Googleads.V19.Services.SuggestBrandsRequest,
-      Google.Ads.Googleads.V19.Services.SuggestBrandsResponse
+  rpc(
+    :SuggestBrands,
+    Google.Ads.Googleads.V19.Services.SuggestBrandsRequest,
+    Google.Ads.Googleads.V19.Services.SuggestBrandsResponse
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.BrandSuggestionService.Stub do

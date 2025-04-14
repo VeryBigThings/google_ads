@@ -3,7 +3,7 @@ defmodule Google.Ads.Googleads.V19.Services.SuggestGeoTargetConstantsRequest.Loc
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :names, 2, repeated: true, type: :string
+  field(:names, 2, repeated: true, type: :string)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.SuggestGeoTargetConstantsRequest.GeoTargets do
@@ -11,7 +11,7 @@ defmodule Google.Ads.Googleads.V19.Services.SuggestGeoTargetConstantsRequest.Geo
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :geo_target_constants, 2, repeated: true, type: :string, json_name: "geoTargetConstants"
+  field(:geo_target_constants, 2, repeated: true, type: :string, json_name: "geoTargetConstants")
 end
 
 defmodule Google.Ads.Googleads.V19.Services.SuggestGeoTargetConstantsRequest do
@@ -19,20 +19,22 @@ defmodule Google.Ads.Googleads.V19.Services.SuggestGeoTargetConstantsRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  oneof :query, 0
+  oneof(:query, 0)
 
-  field :locale, 6, type: :string
-  field :country_code, 7, type: :string, json_name: "countryCode"
+  field(:locale, 6, type: :string)
+  field(:country_code, 7, type: :string, json_name: "countryCode")
 
-  field :location_names, 1,
+  field(:location_names, 1,
     type: Google.Ads.Googleads.V19.Services.SuggestGeoTargetConstantsRequest.LocationNames,
     json_name: "locationNames",
     oneof: 0
+  )
 
-  field :geo_targets, 2,
+  field(:geo_targets, 2,
     type: Google.Ads.Googleads.V19.Services.SuggestGeoTargetConstantsRequest.GeoTargets,
     json_name: "geoTargets",
     oneof: 0
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.SuggestGeoTargetConstantsResponse do
@@ -40,10 +42,11 @@ defmodule Google.Ads.Googleads.V19.Services.SuggestGeoTargetConstantsResponse do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :geo_target_constant_suggestions, 1,
+  field(:geo_target_constant_suggestions, 1,
     repeated: true,
     type: Google.Ads.Googleads.V19.Services.GeoTargetConstantSuggestion,
     json_name: "geoTargetConstantSuggestions"
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.GeoTargetConstantSuggestion do
@@ -51,18 +54,20 @@ defmodule Google.Ads.Googleads.V19.Services.GeoTargetConstantSuggestion do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :locale, 6, type: :string
-  field :reach, 7, type: :int64
-  field :search_term, 8, type: :string, json_name: "searchTerm"
+  field(:locale, 6, type: :string)
+  field(:reach, 7, type: :int64)
+  field(:search_term, 8, type: :string, json_name: "searchTerm")
 
-  field :geo_target_constant, 4,
+  field(:geo_target_constant, 4,
     type: Google.Ads.Googleads.V19.Resources.GeoTargetConstant,
     json_name: "geoTargetConstant"
+  )
 
-  field :geo_target_constant_parents, 5,
+  field(:geo_target_constant_parents, 5,
     repeated: true,
     type: Google.Ads.Googleads.V19.Resources.GeoTargetConstant,
     json_name: "geoTargetConstantParents"
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.GeoTargetConstantService.Service do
@@ -72,9 +77,11 @@ defmodule Google.Ads.Googleads.V19.Services.GeoTargetConstantService.Service do
     name: "google.ads.googleads.v19.services.GeoTargetConstantService",
     protoc_gen_elixir_version: "0.14.1"
 
-  rpc :SuggestGeoTargetConstants,
-      Google.Ads.Googleads.V19.Services.SuggestGeoTargetConstantsRequest,
-      Google.Ads.Googleads.V19.Services.SuggestGeoTargetConstantsResponse
+  rpc(
+    :SuggestGeoTargetConstants,
+    Google.Ads.Googleads.V19.Services.SuggestGeoTargetConstantsRequest,
+    Google.Ads.Googleads.V19.Services.SuggestGeoTargetConstantsResponse
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.GeoTargetConstantService.Stub do

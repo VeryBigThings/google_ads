@@ -3,11 +3,11 @@ defmodule Google.Ads.Googleads.V19.Enums.CampaignExperimentTypeEnum.CampaignExpe
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :UNSPECIFIED, 0
-  field :UNKNOWN, 1
-  field :BASE, 2
-  field :DRAFT, 3
-  field :EXPERIMENT, 4
+  field(:UNSPECIFIED, 0)
+  field(:UNKNOWN, 1)
+  field(:BASE, 2)
+  field(:DRAFT, 3)
+  field(:EXPERIMENT, 4)
 end
 
 defmodule Google.Ads.Googleads.V19.Enums.CampaignExperimentTypeEnum do

@@ -3,11 +3,12 @@ defmodule Google.Ads.Googleads.V19.Common.CriterionCategoryAvailability do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :channel, 1, type: Google.Ads.Googleads.V19.Common.CriterionCategoryChannelAvailability
+  field(:channel, 1, type: Google.Ads.Googleads.V19.Common.CriterionCategoryChannelAvailability)
 
-  field :locale, 2,
+  field(:locale, 2,
     repeated: true,
     type: Google.Ads.Googleads.V19.Common.CriterionCategoryLocaleAvailability
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.CriterionCategoryChannelAvailability do
@@ -15,26 +16,30 @@ defmodule Google.Ads.Googleads.V19.Common.CriterionCategoryChannelAvailability d
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :availability_mode, 1,
+  field(:availability_mode, 1,
     type:
       Google.Ads.Googleads.V19.Enums.CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode,
     json_name: "availabilityMode",
     enum: true
+  )
 
-  field :advertising_channel_type, 2,
+  field(:advertising_channel_type, 2,
     type: Google.Ads.Googleads.V19.Enums.AdvertisingChannelTypeEnum.AdvertisingChannelType,
     json_name: "advertisingChannelType",
     enum: true
+  )
 
-  field :advertising_channel_sub_type, 3,
+  field(:advertising_channel_sub_type, 3,
     repeated: true,
     type: Google.Ads.Googleads.V19.Enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType,
     json_name: "advertisingChannelSubType",
     enum: true
+  )
 
-  field :include_default_channel_sub_type, 5,
+  field(:include_default_channel_sub_type, 5,
     type: :bool,
     json_name: "includeDefaultChannelSubType"
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.CriterionCategoryLocaleAvailability do
@@ -42,12 +47,13 @@ defmodule Google.Ads.Googleads.V19.Common.CriterionCategoryLocaleAvailability do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :availability_mode, 1,
+  field(:availability_mode, 1,
     type:
       Google.Ads.Googleads.V19.Enums.CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode,
     json_name: "availabilityMode",
     enum: true
+  )
 
-  field :country_code, 4, type: :string, json_name: "countryCode"
-  field :language_code, 5, type: :string, json_name: "languageCode"
+  field(:country_code, 4, type: :string, json_name: "countryCode")
+  field(:language_code, 5, type: :string, json_name: "languageCode")
 end

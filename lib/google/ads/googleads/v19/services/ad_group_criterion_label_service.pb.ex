@@ -3,15 +3,16 @@ defmodule Google.Ads.Googleads.V19.Services.MutateAdGroupCriterionLabelsRequest 
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :customer_id, 1, type: :string, json_name: "customerId", deprecated: false
+  field(:customer_id, 1, type: :string, json_name: "customerId", deprecated: false)
 
-  field :operations, 2,
+  field(:operations, 2,
     repeated: true,
     type: Google.Ads.Googleads.V19.Services.AdGroupCriterionLabelOperation,
     deprecated: false
+  )
 
-  field :partial_failure, 3, type: :bool, json_name: "partialFailure"
-  field :validate_only, 4, type: :bool, json_name: "validateOnly"
+  field(:partial_failure, 3, type: :bool, json_name: "partialFailure")
+  field(:validate_only, 4, type: :bool, json_name: "validateOnly")
 end
 
 defmodule Google.Ads.Googleads.V19.Services.AdGroupCriterionLabelOperation do
@@ -19,10 +20,10 @@ defmodule Google.Ads.Googleads.V19.Services.AdGroupCriterionLabelOperation do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  oneof :operation, 0
+  oneof(:operation, 0)
 
-  field :create, 1, type: Google.Ads.Googleads.V19.Resources.AdGroupCriterionLabel, oneof: 0
-  field :remove, 2, type: :string, oneof: 0, deprecated: false
+  field(:create, 1, type: Google.Ads.Googleads.V19.Resources.AdGroupCriterionLabel, oneof: 0)
+  field(:remove, 2, type: :string, oneof: 0, deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.MutateAdGroupCriterionLabelsResponse do
@@ -30,11 +31,12 @@ defmodule Google.Ads.Googleads.V19.Services.MutateAdGroupCriterionLabelsResponse
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :partial_failure_error, 3, type: Google.Rpc.Status, json_name: "partialFailureError"
+  field(:partial_failure_error, 3, type: Google.Rpc.Status, json_name: "partialFailureError")
 
-  field :results, 2,
+  field(:results, 2,
     repeated: true,
     type: Google.Ads.Googleads.V19.Services.MutateAdGroupCriterionLabelResult
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.MutateAdGroupCriterionLabelResult do
@@ -42,7 +44,7 @@ defmodule Google.Ads.Googleads.V19.Services.MutateAdGroupCriterionLabelResult do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
+  field(:resource_name, 1, type: :string, json_name: "resourceName", deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.AdGroupCriterionLabelService.Service do
@@ -52,9 +54,11 @@ defmodule Google.Ads.Googleads.V19.Services.AdGroupCriterionLabelService.Service
     name: "google.ads.googleads.v19.services.AdGroupCriterionLabelService",
     protoc_gen_elixir_version: "0.14.1"
 
-  rpc :MutateAdGroupCriterionLabels,
-      Google.Ads.Googleads.V19.Services.MutateAdGroupCriterionLabelsRequest,
-      Google.Ads.Googleads.V19.Services.MutateAdGroupCriterionLabelsResponse
+  rpc(
+    :MutateAdGroupCriterionLabels,
+    Google.Ads.Googleads.V19.Services.MutateAdGroupCriterionLabelsRequest,
+    Google.Ads.Googleads.V19.Services.MutateAdGroupCriterionLabelsResponse
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.AdGroupCriterionLabelService.Stub do

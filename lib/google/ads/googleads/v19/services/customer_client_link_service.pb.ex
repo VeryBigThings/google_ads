@@ -3,13 +3,14 @@ defmodule Google.Ads.Googleads.V19.Services.MutateCustomerClientLinkRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :customer_id, 1, type: :string, json_name: "customerId", deprecated: false
+  field(:customer_id, 1, type: :string, json_name: "customerId", deprecated: false)
 
-  field :operation, 2,
+  field(:operation, 2,
     type: Google.Ads.Googleads.V19.Services.CustomerClientLinkOperation,
     deprecated: false
+  )
 
-  field :validate_only, 3, type: :bool, json_name: "validateOnly"
+  field(:validate_only, 3, type: :bool, json_name: "validateOnly")
 end
 
 defmodule Google.Ads.Googleads.V19.Services.CustomerClientLinkOperation do
@@ -17,11 +18,11 @@ defmodule Google.Ads.Googleads.V19.Services.CustomerClientLinkOperation do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  oneof :operation, 0
+  oneof(:operation, 0)
 
-  field :update_mask, 4, type: Google.Protobuf.FieldMask, json_name: "updateMask"
-  field :create, 1, type: Google.Ads.Googleads.V19.Resources.CustomerClientLink, oneof: 0
-  field :update, 2, type: Google.Ads.Googleads.V19.Resources.CustomerClientLink, oneof: 0
+  field(:update_mask, 4, type: Google.Protobuf.FieldMask, json_name: "updateMask")
+  field(:create, 1, type: Google.Ads.Googleads.V19.Resources.CustomerClientLink, oneof: 0)
+  field(:update, 2, type: Google.Ads.Googleads.V19.Resources.CustomerClientLink, oneof: 0)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.MutateCustomerClientLinkResponse do
@@ -29,7 +30,7 @@ defmodule Google.Ads.Googleads.V19.Services.MutateCustomerClientLinkResponse do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :result, 1, type: Google.Ads.Googleads.V19.Services.MutateCustomerClientLinkResult
+  field(:result, 1, type: Google.Ads.Googleads.V19.Services.MutateCustomerClientLinkResult)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.MutateCustomerClientLinkResult do
@@ -37,7 +38,7 @@ defmodule Google.Ads.Googleads.V19.Services.MutateCustomerClientLinkResult do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
+  field(:resource_name, 1, type: :string, json_name: "resourceName", deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.CustomerClientLinkService.Service do
@@ -47,9 +48,11 @@ defmodule Google.Ads.Googleads.V19.Services.CustomerClientLinkService.Service do
     name: "google.ads.googleads.v19.services.CustomerClientLinkService",
     protoc_gen_elixir_version: "0.14.1"
 
-  rpc :MutateCustomerClientLink,
-      Google.Ads.Googleads.V19.Services.MutateCustomerClientLinkRequest,
-      Google.Ads.Googleads.V19.Services.MutateCustomerClientLinkResponse
+  rpc(
+    :MutateCustomerClientLink,
+    Google.Ads.Googleads.V19.Services.MutateCustomerClientLinkRequest,
+    Google.Ads.Googleads.V19.Services.MutateCustomerClientLinkResponse
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.CustomerClientLinkService.Stub do

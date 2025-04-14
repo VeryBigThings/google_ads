@@ -3,5 +3,5 @@ defmodule Google.Ads.Googleads.V19.Common.RealTimeBiddingSetting do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :opt_in, 2, type: :bool, json_name: "optIn"
+  field(:opt_in, 2, type: :bool, json_name: "optIn")
 end

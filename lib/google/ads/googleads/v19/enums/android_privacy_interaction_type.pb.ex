@@ -3,11 +3,11 @@ defmodule Google.Ads.Googleads.V19.Enums.AndroidPrivacyInteractionTypeEnum.Andro
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :UNSPECIFIED, 0
-  field :UNKNOWN, 1
-  field :CLICK, 2
-  field :ENGAGED_VIEW, 3
-  field :VIEW, 4
+  field(:UNSPECIFIED, 0)
+  field(:UNKNOWN, 1)
+  field(:CLICK, 2)
+  field(:ENGAGED_VIEW, 3)
+  field(:VIEW, 4)
 end
 
 defmodule Google.Ads.Googleads.V19.Enums.AndroidPrivacyInteractionTypeEnum do

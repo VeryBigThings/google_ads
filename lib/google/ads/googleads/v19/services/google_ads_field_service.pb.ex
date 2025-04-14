@@ -3,7 +3,7 @@ defmodule Google.Ads.Googleads.V19.Services.GetGoogleAdsFieldRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
+  field(:resource_name, 1, type: :string, json_name: "resourceName", deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.SearchGoogleAdsFieldsRequest do
@@ -11,9 +11,9 @@ defmodule Google.Ads.Googleads.V19.Services.SearchGoogleAdsFieldsRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :query, 1, type: :string, deprecated: false
-  field :page_token, 2, type: :string, json_name: "pageToken"
-  field :page_size, 3, type: :int32, json_name: "pageSize"
+  field(:query, 1, type: :string, deprecated: false)
+  field(:page_token, 2, type: :string, json_name: "pageToken")
+  field(:page_size, 3, type: :int32, json_name: "pageSize")
 end
 
 defmodule Google.Ads.Googleads.V19.Services.SearchGoogleAdsFieldsResponse do
@@ -21,9 +21,9 @@ defmodule Google.Ads.Googleads.V19.Services.SearchGoogleAdsFieldsResponse do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :results, 1, repeated: true, type: Google.Ads.Googleads.V19.Resources.GoogleAdsField
-  field :next_page_token, 2, type: :string, json_name: "nextPageToken"
-  field :total_results_count, 3, type: :int64, json_name: "totalResultsCount"
+  field(:results, 1, repeated: true, type: Google.Ads.Googleads.V19.Resources.GoogleAdsField)
+  field(:next_page_token, 2, type: :string, json_name: "nextPageToken")
+  field(:total_results_count, 3, type: :int64, json_name: "totalResultsCount")
 end
 
 defmodule Google.Ads.Googleads.V19.Services.GoogleAdsFieldService.Service do
@@ -33,13 +33,17 @@ defmodule Google.Ads.Googleads.V19.Services.GoogleAdsFieldService.Service do
     name: "google.ads.googleads.v19.services.GoogleAdsFieldService",
     protoc_gen_elixir_version: "0.14.1"
 
-  rpc :GetGoogleAdsField,
-      Google.Ads.Googleads.V19.Services.GetGoogleAdsFieldRequest,
-      Google.Ads.Googleads.V19.Resources.GoogleAdsField
+  rpc(
+    :GetGoogleAdsField,
+    Google.Ads.Googleads.V19.Services.GetGoogleAdsFieldRequest,
+    Google.Ads.Googleads.V19.Resources.GoogleAdsField
+  )
 
-  rpc :SearchGoogleAdsFields,
-      Google.Ads.Googleads.V19.Services.SearchGoogleAdsFieldsRequest,
-      Google.Ads.Googleads.V19.Services.SearchGoogleAdsFieldsResponse
+  rpc(
+    :SearchGoogleAdsFields,
+    Google.Ads.Googleads.V19.Services.SearchGoogleAdsFieldsRequest,
+    Google.Ads.Googleads.V19.Services.SearchGoogleAdsFieldsResponse
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.GoogleAdsFieldService.Stub do

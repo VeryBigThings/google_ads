@@ -3,7 +3,7 @@ defmodule Google.Ads.Googleads.V19.Services.GetSmartCampaignStatusRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
+  field(:resource_name, 1, type: :string, json_name: "resourceName", deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.SmartCampaignNotEligibleDetails do
@@ -11,11 +11,12 @@ defmodule Google.Ads.Googleads.V19.Services.SmartCampaignNotEligibleDetails do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :not_eligible_reason, 1,
+  field(:not_eligible_reason, 1,
     type:
       Google.Ads.Googleads.V19.Enums.SmartCampaignNotEligibleReasonEnum.SmartCampaignNotEligibleReason,
     json_name: "notEligibleReason",
     enum: true
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.SmartCampaignEligibleDetails do
@@ -23,8 +24,8 @@ defmodule Google.Ads.Googleads.V19.Services.SmartCampaignEligibleDetails do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :last_impression_date_time, 1, type: :string, json_name: "lastImpressionDateTime"
-  field :end_date_time, 2, type: :string, json_name: "endDateTime"
+  field(:last_impression_date_time, 1, type: :string, json_name: "lastImpressionDateTime")
+  field(:end_date_time, 2, type: :string, json_name: "endDateTime")
 end
 
 defmodule Google.Ads.Googleads.V19.Services.SmartCampaignPausedDetails do
@@ -32,7 +33,7 @@ defmodule Google.Ads.Googleads.V19.Services.SmartCampaignPausedDetails do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :paused_date_time, 1, type: :string, json_name: "pausedDateTime"
+  field(:paused_date_time, 1, type: :string, json_name: "pausedDateTime")
 end
 
 defmodule Google.Ads.Googleads.V19.Services.SmartCampaignRemovedDetails do
@@ -40,7 +41,7 @@ defmodule Google.Ads.Googleads.V19.Services.SmartCampaignRemovedDetails do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :removed_date_time, 1, type: :string, json_name: "removedDateTime"
+  field(:removed_date_time, 1, type: :string, json_name: "removedDateTime")
 end
 
 defmodule Google.Ads.Googleads.V19.Services.SmartCampaignEndedDetails do
@@ -48,7 +49,7 @@ defmodule Google.Ads.Googleads.V19.Services.SmartCampaignEndedDetails do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :end_date_time, 1, type: :string, json_name: "endDateTime"
+  field(:end_date_time, 1, type: :string, json_name: "endDateTime")
 end
 
 defmodule Google.Ads.Googleads.V19.Services.GetSmartCampaignStatusResponse do
@@ -56,37 +57,43 @@ defmodule Google.Ads.Googleads.V19.Services.GetSmartCampaignStatusResponse do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  oneof :smart_campaign_status_details, 0
+  oneof(:smart_campaign_status_details, 0)
 
-  field :smart_campaign_status, 1,
+  field(:smart_campaign_status, 1,
     type: Google.Ads.Googleads.V19.Enums.SmartCampaignStatusEnum.SmartCampaignStatus,
     json_name: "smartCampaignStatus",
     enum: true
+  )
 
-  field :not_eligible_details, 2,
+  field(:not_eligible_details, 2,
     type: Google.Ads.Googleads.V19.Services.SmartCampaignNotEligibleDetails,
     json_name: "notEligibleDetails",
     oneof: 0
+  )
 
-  field :eligible_details, 3,
+  field(:eligible_details, 3,
     type: Google.Ads.Googleads.V19.Services.SmartCampaignEligibleDetails,
     json_name: "eligibleDetails",
     oneof: 0
+  )
 
-  field :paused_details, 4,
+  field(:paused_details, 4,
     type: Google.Ads.Googleads.V19.Services.SmartCampaignPausedDetails,
     json_name: "pausedDetails",
     oneof: 0
+  )
 
-  field :removed_details, 5,
+  field(:removed_details, 5,
     type: Google.Ads.Googleads.V19.Services.SmartCampaignRemovedDetails,
     json_name: "removedDetails",
     oneof: 0
+  )
 
-  field :ended_details, 6,
+  field(:ended_details, 6,
     type: Google.Ads.Googleads.V19.Services.SmartCampaignEndedDetails,
     json_name: "endedDetails",
     oneof: 0
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.MutateSmartCampaignSettingsRequest do
@@ -94,20 +101,22 @@ defmodule Google.Ads.Googleads.V19.Services.MutateSmartCampaignSettingsRequest d
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :customer_id, 1, type: :string, json_name: "customerId", deprecated: false
+  field(:customer_id, 1, type: :string, json_name: "customerId", deprecated: false)
 
-  field :operations, 2,
+  field(:operations, 2,
     repeated: true,
     type: Google.Ads.Googleads.V19.Services.SmartCampaignSettingOperation,
     deprecated: false
+  )
 
-  field :partial_failure, 3, type: :bool, json_name: "partialFailure"
-  field :validate_only, 4, type: :bool, json_name: "validateOnly"
+  field(:partial_failure, 3, type: :bool, json_name: "partialFailure")
+  field(:validate_only, 4, type: :bool, json_name: "validateOnly")
 
-  field :response_content_type, 5,
+  field(:response_content_type, 5,
     type: Google.Ads.Googleads.V19.Enums.ResponseContentTypeEnum.ResponseContentType,
     json_name: "responseContentType",
     enum: true
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.SmartCampaignSettingOperation do
@@ -115,8 +124,8 @@ defmodule Google.Ads.Googleads.V19.Services.SmartCampaignSettingOperation do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :update, 1, type: Google.Ads.Googleads.V19.Resources.SmartCampaignSetting
-  field :update_mask, 2, type: Google.Protobuf.FieldMask, json_name: "updateMask"
+  field(:update, 1, type: Google.Ads.Googleads.V19.Resources.SmartCampaignSetting)
+  field(:update_mask, 2, type: Google.Protobuf.FieldMask, json_name: "updateMask")
 end
 
 defmodule Google.Ads.Googleads.V19.Services.MutateSmartCampaignSettingsResponse do
@@ -124,11 +133,12 @@ defmodule Google.Ads.Googleads.V19.Services.MutateSmartCampaignSettingsResponse 
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :partial_failure_error, 1, type: Google.Rpc.Status, json_name: "partialFailureError"
+  field(:partial_failure_error, 1, type: Google.Rpc.Status, json_name: "partialFailureError")
 
-  field :results, 2,
+  field(:results, 2,
     repeated: true,
     type: Google.Ads.Googleads.V19.Services.MutateSmartCampaignSettingResult
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.MutateSmartCampaignSettingResult do
@@ -136,11 +146,12 @@ defmodule Google.Ads.Googleads.V19.Services.MutateSmartCampaignSettingResult do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
+  field(:resource_name, 1, type: :string, json_name: "resourceName", deprecated: false)
 
-  field :smart_campaign_setting, 2,
+  field(:smart_campaign_setting, 2,
     type: Google.Ads.Googleads.V19.Resources.SmartCampaignSetting,
     json_name: "smartCampaignSetting"
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.SmartCampaignSettingService.Service do
@@ -150,13 +161,17 @@ defmodule Google.Ads.Googleads.V19.Services.SmartCampaignSettingService.Service 
     name: "google.ads.googleads.v19.services.SmartCampaignSettingService",
     protoc_gen_elixir_version: "0.14.1"
 
-  rpc :GetSmartCampaignStatus,
-      Google.Ads.Googleads.V19.Services.GetSmartCampaignStatusRequest,
-      Google.Ads.Googleads.V19.Services.GetSmartCampaignStatusResponse
+  rpc(
+    :GetSmartCampaignStatus,
+    Google.Ads.Googleads.V19.Services.GetSmartCampaignStatusRequest,
+    Google.Ads.Googleads.V19.Services.GetSmartCampaignStatusResponse
+  )
 
-  rpc :MutateSmartCampaignSettings,
-      Google.Ads.Googleads.V19.Services.MutateSmartCampaignSettingsRequest,
-      Google.Ads.Googleads.V19.Services.MutateSmartCampaignSettingsResponse
+  rpc(
+    :MutateSmartCampaignSettings,
+    Google.Ads.Googleads.V19.Services.MutateSmartCampaignSettingsRequest,
+    Google.Ads.Googleads.V19.Services.MutateSmartCampaignSettingsResponse
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.SmartCampaignSettingService.Stub do

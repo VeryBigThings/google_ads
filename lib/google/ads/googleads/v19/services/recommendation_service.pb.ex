@@ -3,10 +3,10 @@ defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.AdAsset
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :UNSPECIFIED, 0
-  field :UNKNOWN, 1
-  field :CUSTOMER, 2
-  field :CAMPAIGN, 3
+  field(:UNSPECIFIED, 0)
+  field(:UNKNOWN, 1)
+  field(:CUSTOMER, 2)
+  field(:CAMPAIGN, 3)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationRequest do
@@ -14,14 +14,15 @@ defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :customer_id, 1, type: :string, json_name: "customerId", deprecated: false
+  field(:customer_id, 1, type: :string, json_name: "customerId", deprecated: false)
 
-  field :operations, 2,
+  field(:operations, 2,
     repeated: true,
     type: Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation,
     deprecated: false
+  )
 
-  field :partial_failure, 3, type: :bool, json_name: "partialFailure"
+  field(:partial_failure, 3, type: :bool, json_name: "partialFailure")
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.CampaignBudgetParameters do
@@ -29,7 +30,7 @@ defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.Campaig
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :new_budget_amount_micros, 2, type: :int64, json_name: "newBudgetAmountMicros"
+  field(:new_budget_amount_micros, 2, type: :int64, json_name: "newBudgetAmountMicros")
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.ForecastingSetTargetRoasParameters do
@@ -37,8 +38,8 @@ defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.Forecas
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :target_roas, 1, type: :double, json_name: "targetRoas"
-  field :campaign_budget_amount_micros, 2, type: :int64, json_name: "campaignBudgetAmountMicros"
+  field(:target_roas, 1, type: :double, json_name: "targetRoas")
+  field(:campaign_budget_amount_micros, 2, type: :int64, json_name: "campaignBudgetAmountMicros")
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.TextAdParameters do
@@ -46,7 +47,7 @@ defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.TextAdP
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :ad, 1, type: Google.Ads.Googleads.V19.Resources.Ad
+  field(:ad, 1, type: Google.Ads.Googleads.V19.Resources.Ad)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.KeywordParameters do
@@ -54,14 +55,15 @@ defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.Keyword
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :ad_group, 4, type: :string, json_name: "adGroup"
+  field(:ad_group, 4, type: :string, json_name: "adGroup")
 
-  field :match_type, 2,
+  field(:match_type, 2,
     type: Google.Ads.Googleads.V19.Enums.KeywordMatchTypeEnum.KeywordMatchType,
     json_name: "matchType",
     enum: true
+  )
 
-  field :cpc_bid_micros, 5, type: :int64, json_name: "cpcBidMicros"
+  field(:cpc_bid_micros, 5, type: :int64, json_name: "cpcBidMicros")
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.TargetCpaOptInParameters do
@@ -69,11 +71,12 @@ defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.TargetC
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :target_cpa_micros, 3, type: :int64, json_name: "targetCpaMicros"
+  field(:target_cpa_micros, 3, type: :int64, json_name: "targetCpaMicros")
 
-  field :new_campaign_budget_amount_micros, 4,
+  field(:new_campaign_budget_amount_micros, 4,
     type: :int64,
     json_name: "newCampaignBudgetAmountMicros"
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.TargetRoasOptInParameters do
@@ -81,11 +84,12 @@ defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.TargetR
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :target_roas, 1, type: :double, json_name: "targetRoas"
+  field(:target_roas, 1, type: :double, json_name: "targetRoas")
 
-  field :new_campaign_budget_amount_micros, 2,
+  field(:new_campaign_budget_amount_micros, 2,
     type: :int64,
     json_name: "newCampaignBudgetAmountMicros"
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.CalloutExtensionParameters do
@@ -93,10 +97,11 @@ defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.Callout
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :callout_extensions, 1,
+  field(:callout_extensions, 1,
     repeated: true,
     type: Google.Ads.Googleads.V19.Common.CalloutFeedItem,
     json_name: "calloutExtensions"
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.CallExtensionParameters do
@@ -104,10 +109,11 @@ defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.CallExt
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :call_extensions, 1,
+  field(:call_extensions, 1,
     repeated: true,
     type: Google.Ads.Googleads.V19.Common.CallFeedItem,
     json_name: "callExtensions"
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.SitelinkExtensionParameters do
@@ -115,10 +121,11 @@ defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.Sitelin
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :sitelink_extensions, 1,
+  field(:sitelink_extensions, 1,
     repeated: true,
     type: Google.Ads.Googleads.V19.Common.SitelinkFeedItem,
     json_name: "sitelinkExtensions"
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.CalloutAssetParameters do
@@ -126,10 +133,11 @@ defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.Callout
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :ad_asset_apply_parameters, 1,
+  field(:ad_asset_apply_parameters, 1,
     type: Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.AdAssetApplyParameters,
     json_name: "adAssetApplyParameters",
     deprecated: false
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.CallAssetParameters do
@@ -137,10 +145,11 @@ defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.CallAss
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :ad_asset_apply_parameters, 1,
+  field(:ad_asset_apply_parameters, 1,
     type: Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.AdAssetApplyParameters,
     json_name: "adAssetApplyParameters",
     deprecated: false
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.SitelinkAssetParameters do
@@ -148,10 +157,11 @@ defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.Sitelin
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :ad_asset_apply_parameters, 1,
+  field(:ad_asset_apply_parameters, 1,
     type: Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.AdAssetApplyParameters,
     json_name: "adAssetApplyParameters",
     deprecated: false
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.RaiseTargetCpaParameters do
@@ -159,10 +169,11 @@ defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.RaiseTa
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :target_cpa_multiplier, 1,
+  field(:target_cpa_multiplier, 1,
     type: :double,
     json_name: "targetCpaMultiplier",
     deprecated: false
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.LowerTargetRoasParameters do
@@ -170,10 +181,11 @@ defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.LowerTa
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :target_roas_multiplier, 1,
+  field(:target_roas_multiplier, 1,
     type: :double,
     json_name: "targetRoasMultiplier",
     deprecated: false
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.AdAssetApplyParameters do
@@ -181,18 +193,20 @@ defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.AdAsset
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :new_assets, 1,
+  field(:new_assets, 1,
     repeated: true,
     type: Google.Ads.Googleads.V19.Resources.Asset,
     json_name: "newAssets"
+  )
 
-  field :existing_assets, 2, repeated: true, type: :string, json_name: "existingAssets"
+  field(:existing_assets, 2, repeated: true, type: :string, json_name: "existingAssets")
 
-  field :scope, 3,
+  field(:scope, 3,
     type:
       Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.AdAssetApplyParameters.ApplyScope,
     enum: true,
     deprecated: false
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.MoveUnusedBudgetParameters do
@@ -200,7 +214,7 @@ defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.MoveUnu
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :budget_micros_to_move, 2, type: :int64, json_name: "budgetMicrosToMove"
+  field(:budget_micros_to_move, 2, type: :int64, json_name: "budgetMicrosToMove")
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.ResponsiveSearchAdAssetParameters do
@@ -208,7 +222,7 @@ defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.Respons
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :updated_ad, 1, type: Google.Ads.Googleads.V19.Resources.Ad, json_name: "updatedAd"
+  field(:updated_ad, 1, type: Google.Ads.Googleads.V19.Resources.Ad, json_name: "updatedAd")
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.ResponsiveSearchAdImproveAdStrengthParameters do
@@ -216,7 +230,7 @@ defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.Respons
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :updated_ad, 1, type: Google.Ads.Googleads.V19.Resources.Ad, json_name: "updatedAd"
+  field(:updated_ad, 1, type: Google.Ads.Googleads.V19.Resources.Ad, json_name: "updatedAd")
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.ResponsiveSearchAdParameters do
@@ -224,7 +238,7 @@ defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.Respons
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :ad, 1, type: Google.Ads.Googleads.V19.Resources.Ad, deprecated: false
+  field(:ad, 1, type: Google.Ads.Googleads.V19.Resources.Ad, deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.RaiseTargetCpaBidTooLowParameters do
@@ -232,7 +246,7 @@ defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.RaiseTa
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :target_multiplier, 1, type: :double, json_name: "targetMultiplier", deprecated: false
+  field(:target_multiplier, 1, type: :double, json_name: "targetMultiplier", deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.UseBroadMatchKeywordParameters do
@@ -240,7 +254,7 @@ defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.UseBroa
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :new_budget_amount_micros, 1, type: :int64, json_name: "newBudgetAmountMicros"
+  field(:new_budget_amount_micros, 1, type: :int64, json_name: "newBudgetAmountMicros")
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.ForecastingSetTargetCpaParameters do
@@ -248,8 +262,8 @@ defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.Forecas
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :target_cpa_micros, 1, type: :int64, json_name: "targetCpaMicros"
-  field :campaign_budget_amount_micros, 2, type: :int64, json_name: "campaignBudgetAmountMicros"
+  field(:target_cpa_micros, 1, type: :int64, json_name: "targetCpaMicros")
+  field(:campaign_budget_amount_micros, 2, type: :int64, json_name: "campaignBudgetAmountMicros")
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.LeadFormAssetParameters do
@@ -257,14 +271,16 @@ defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.LeadFor
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :ad_asset_apply_parameters, 1,
+  field(:ad_asset_apply_parameters, 1,
     type: Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.AdAssetApplyParameters,
     json_name: "adAssetApplyParameters",
     deprecated: false
+  )
 
-  field :set_submit_lead_form_asset_campaign_goal, 2,
+  field(:set_submit_lead_form_asset_campaign_goal, 2,
     type: :bool,
     json_name: "setSubmitLeadFormAssetCampaignGoal"
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation do
@@ -272,142 +288,166 @@ defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  oneof :apply_parameters, 0
+  oneof(:apply_parameters, 0)
 
-  field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
+  field(:resource_name, 1, type: :string, json_name: "resourceName", deprecated: false)
 
-  field :campaign_budget, 2,
+  field(:campaign_budget, 2,
     type: Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.CampaignBudgetParameters,
     json_name: "campaignBudget",
     oneof: 0
+  )
 
-  field :text_ad, 3,
+  field(:text_ad, 3,
     type: Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.TextAdParameters,
     json_name: "textAd",
     oneof: 0
+  )
 
-  field :keyword, 4,
+  field(:keyword, 4,
     type: Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.KeywordParameters,
     oneof: 0
+  )
 
-  field :target_cpa_opt_in, 5,
+  field(:target_cpa_opt_in, 5,
     type: Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.TargetCpaOptInParameters,
     json_name: "targetCpaOptIn",
     oneof: 0
+  )
 
-  field :target_roas_opt_in, 10,
+  field(:target_roas_opt_in, 10,
     type:
       Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.TargetRoasOptInParameters,
     json_name: "targetRoasOptIn",
     oneof: 0
+  )
 
-  field :callout_extension, 6,
+  field(:callout_extension, 6,
     type:
       Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.CalloutExtensionParameters,
     json_name: "calloutExtension",
     oneof: 0
+  )
 
-  field :call_extension, 7,
+  field(:call_extension, 7,
     type: Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.CallExtensionParameters,
     json_name: "callExtension",
     oneof: 0
+  )
 
-  field :sitelink_extension, 8,
+  field(:sitelink_extension, 8,
     type:
       Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.SitelinkExtensionParameters,
     json_name: "sitelinkExtension",
     oneof: 0
+  )
 
-  field :move_unused_budget, 9,
+  field(:move_unused_budget, 9,
     type:
       Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.MoveUnusedBudgetParameters,
     json_name: "moveUnusedBudget",
     oneof: 0
+  )
 
-  field :responsive_search_ad, 11,
+  field(:responsive_search_ad, 11,
     type:
       Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.ResponsiveSearchAdParameters,
     json_name: "responsiveSearchAd",
     oneof: 0
+  )
 
-  field :use_broad_match_keyword, 12,
+  field(:use_broad_match_keyword, 12,
     type:
       Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.UseBroadMatchKeywordParameters,
     json_name: "useBroadMatchKeyword",
     oneof: 0
+  )
 
-  field :responsive_search_ad_asset, 13,
+  field(:responsive_search_ad_asset, 13,
     type:
       Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.ResponsiveSearchAdAssetParameters,
     json_name: "responsiveSearchAdAsset",
     oneof: 0
+  )
 
-  field :responsive_search_ad_improve_ad_strength, 14,
+  field(:responsive_search_ad_improve_ad_strength, 14,
     type:
       Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.ResponsiveSearchAdImproveAdStrengthParameters,
     json_name: "responsiveSearchAdImproveAdStrength",
     oneof: 0
+  )
 
-  field :raise_target_cpa_bid_too_low, 15,
+  field(:raise_target_cpa_bid_too_low, 15,
     type:
       Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.RaiseTargetCpaBidTooLowParameters,
     json_name: "raiseTargetCpaBidTooLow",
     oneof: 0
+  )
 
-  field :forecasting_set_target_roas, 16,
+  field(:forecasting_set_target_roas, 16,
     type:
       Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.ForecastingSetTargetRoasParameters,
     json_name: "forecastingSetTargetRoas",
     oneof: 0
+  )
 
-  field :callout_asset, 17,
+  field(:callout_asset, 17,
     type: Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.CalloutAssetParameters,
     json_name: "calloutAsset",
     oneof: 0
+  )
 
-  field :call_asset, 18,
+  field(:call_asset, 18,
     type: Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.CallAssetParameters,
     json_name: "callAsset",
     oneof: 0
+  )
 
-  field :sitelink_asset, 19,
+  field(:sitelink_asset, 19,
     type: Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.SitelinkAssetParameters,
     json_name: "sitelinkAsset",
     oneof: 0
+  )
 
-  field :raise_target_cpa, 20,
+  field(:raise_target_cpa, 20,
     type: Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.RaiseTargetCpaParameters,
     json_name: "raiseTargetCpa",
     oneof: 0
+  )
 
-  field :lower_target_roas, 21,
+  field(:lower_target_roas, 21,
     type:
       Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.LowerTargetRoasParameters,
     json_name: "lowerTargetRoas",
     oneof: 0
+  )
 
-  field :forecasting_set_target_cpa, 22,
+  field(:forecasting_set_target_cpa, 22,
     type:
       Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.ForecastingSetTargetCpaParameters,
     json_name: "forecastingSetTargetCpa",
     oneof: 0
+  )
 
-  field :set_target_cpa, 23,
+  field(:set_target_cpa, 23,
     type:
       Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.ForecastingSetTargetCpaParameters,
     json_name: "setTargetCpa",
     oneof: 0
+  )
 
-  field :set_target_roas, 24,
+  field(:set_target_roas, 24,
     type:
       Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.ForecastingSetTargetRoasParameters,
     json_name: "setTargetRoas",
     oneof: 0
+  )
 
-  field :lead_form_asset, 25,
+  field(:lead_form_asset, 25,
     type: Google.Ads.Googleads.V19.Services.ApplyRecommendationOperation.LeadFormAssetParameters,
     json_name: "leadFormAsset",
     oneof: 0
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationResponse do
@@ -415,11 +455,12 @@ defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationResponse do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :results, 1,
+  field(:results, 1,
     repeated: true,
     type: Google.Ads.Googleads.V19.Services.ApplyRecommendationResult
+  )
 
-  field :partial_failure_error, 2, type: Google.Rpc.Status, json_name: "partialFailureError"
+  field(:partial_failure_error, 2, type: Google.Rpc.Status, json_name: "partialFailureError")
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationResult do
@@ -427,7 +468,7 @@ defmodule Google.Ads.Googleads.V19.Services.ApplyRecommendationResult do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
+  field(:resource_name, 1, type: :string, json_name: "resourceName", deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.DismissRecommendationRequest.DismissRecommendationOperation do
@@ -435,7 +476,7 @@ defmodule Google.Ads.Googleads.V19.Services.DismissRecommendationRequest.Dismiss
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :resource_name, 1, type: :string, json_name: "resourceName"
+  field(:resource_name, 1, type: :string, json_name: "resourceName")
 end
 
 defmodule Google.Ads.Googleads.V19.Services.DismissRecommendationRequest do
@@ -443,15 +484,16 @@ defmodule Google.Ads.Googleads.V19.Services.DismissRecommendationRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :customer_id, 1, type: :string, json_name: "customerId", deprecated: false
+  field(:customer_id, 1, type: :string, json_name: "customerId", deprecated: false)
 
-  field :operations, 3,
+  field(:operations, 3,
     repeated: true,
     type:
       Google.Ads.Googleads.V19.Services.DismissRecommendationRequest.DismissRecommendationOperation,
     deprecated: false
+  )
 
-  field :partial_failure, 2, type: :bool, json_name: "partialFailure"
+  field(:partial_failure, 2, type: :bool, json_name: "partialFailure")
 end
 
 defmodule Google.Ads.Googleads.V19.Services.DismissRecommendationResponse.DismissRecommendationResult do
@@ -459,7 +501,7 @@ defmodule Google.Ads.Googleads.V19.Services.DismissRecommendationResponse.Dismis
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :resource_name, 1, type: :string, json_name: "resourceName"
+  field(:resource_name, 1, type: :string, json_name: "resourceName")
 end
 
 defmodule Google.Ads.Googleads.V19.Services.DismissRecommendationResponse do
@@ -467,12 +509,13 @@ defmodule Google.Ads.Googleads.V19.Services.DismissRecommendationResponse do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :results, 1,
+  field(:results, 1,
     repeated: true,
     type:
       Google.Ads.Googleads.V19.Services.DismissRecommendationResponse.DismissRecommendationResult
+  )
 
-  field :partial_failure_error, 2, type: Google.Rpc.Status, json_name: "partialFailureError"
+  field(:partial_failure_error, 2, type: Google.Rpc.Status, json_name: "partialFailureError")
 end
 
 defmodule Google.Ads.Googleads.V19.Services.GenerateRecommendationsRequest.BiddingInfo do
@@ -480,22 +523,24 @@ defmodule Google.Ads.Googleads.V19.Services.GenerateRecommendationsRequest.Biddi
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  oneof :bidding_strategy_target_info, 0
+  oneof(:bidding_strategy_target_info, 0)
 
-  field :bidding_strategy_type, 1,
+  field(:bidding_strategy_type, 1,
     type: Google.Ads.Googleads.V19.Enums.BiddingStrategyTypeEnum.BiddingStrategyType,
     json_name: "biddingStrategyType",
     enum: true
+  )
 
-  field :target_cpa_micros, 2, type: :int64, json_name: "targetCpaMicros", oneof: 0
-  field :target_roas, 3, type: :double, json_name: "targetRoas", oneof: 0
+  field(:target_cpa_micros, 2, type: :int64, json_name: "targetCpaMicros", oneof: 0)
+  field(:target_roas, 3, type: :double, json_name: "targetRoas", oneof: 0)
 
-  field :target_impression_share_info, 4,
+  field(:target_impression_share_info, 4,
     type:
       Google.Ads.Googleads.V19.Services.GenerateRecommendationsRequest.TargetImpressionShareInfo,
     json_name: "targetImpressionShareInfo",
     oneof: 0,
     deprecated: false
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.GenerateRecommendationsRequest.AdGroupInfo do
@@ -503,16 +548,18 @@ defmodule Google.Ads.Googleads.V19.Services.GenerateRecommendationsRequest.AdGro
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :ad_group_type, 1,
+  field(:ad_group_type, 1,
     type: Google.Ads.Googleads.V19.Enums.AdGroupTypeEnum.AdGroupType,
     json_name: "adGroupType",
     enum: true,
     deprecated: false
+  )
 
-  field :keywords, 2,
+  field(:keywords, 2,
     repeated: true,
     type: Google.Ads.Googleads.V19.Common.KeywordInfo,
     deprecated: false
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.GenerateRecommendationsRequest.SeedInfo do
@@ -520,13 +567,14 @@ defmodule Google.Ads.Googleads.V19.Services.GenerateRecommendationsRequest.SeedI
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :url_seed, 2, type: :string, json_name: "urlSeed"
+  field(:url_seed, 2, type: :string, json_name: "urlSeed")
 
-  field :keyword_seeds, 3,
+  field(:keyword_seeds, 3,
     repeated: true,
     type: :string,
     json_name: "keywordSeeds",
     deprecated: false
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.GenerateRecommendationsRequest.BudgetInfo do
@@ -534,7 +582,7 @@ defmodule Google.Ads.Googleads.V19.Services.GenerateRecommendationsRequest.Budge
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :current_budget, 1, type: :int64, json_name: "currentBudget", deprecated: false
+  field(:current_budget, 1, type: :int64, json_name: "currentBudget", deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.GenerateRecommendationsRequest.AssetGroupInfo do
@@ -542,9 +590,9 @@ defmodule Google.Ads.Googleads.V19.Services.GenerateRecommendationsRequest.Asset
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :final_url, 1, type: :string, json_name: "finalUrl", deprecated: false
-  field :headline, 2, repeated: true, type: :string, deprecated: false
-  field :description, 3, repeated: true, type: :string, deprecated: false
+  field(:final_url, 1, type: :string, json_name: "finalUrl", deprecated: false)
+  field(:headline, 2, repeated: true, type: :string, deprecated: false)
+  field(:description, 3, repeated: true, type: :string, deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.GenerateRecommendationsRequest.TargetImpressionShareInfo do
@@ -552,18 +600,20 @@ defmodule Google.Ads.Googleads.V19.Services.GenerateRecommendationsRequest.Targe
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :location, 1,
+  field(:location, 1,
     type:
       Google.Ads.Googleads.V19.Enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation,
     enum: true,
     deprecated: false
+  )
 
-  field :target_impression_share_micros, 2,
+  field(:target_impression_share_micros, 2,
     type: :int64,
     json_name: "targetImpressionShareMicros",
     deprecated: false
+  )
 
-  field :max_cpc_bid_ceiling, 3, type: :int64, json_name: "maxCpcBidCeiling", deprecated: false
+  field(:max_cpc_bid_ceiling, 3, type: :int64, json_name: "maxCpcBidCeiling", deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.GenerateRecommendationsRequest do
@@ -571,102 +621,119 @@ defmodule Google.Ads.Googleads.V19.Services.GenerateRecommendationsRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :customer_id, 1, type: :string, json_name: "customerId", deprecated: false
+  field(:customer_id, 1, type: :string, json_name: "customerId", deprecated: false)
 
-  field :recommendation_types, 2,
+  field(:recommendation_types, 2,
     repeated: true,
     type: Google.Ads.Googleads.V19.Enums.RecommendationTypeEnum.RecommendationType,
     json_name: "recommendationTypes",
     enum: true,
     deprecated: false
+  )
 
-  field :advertising_channel_type, 3,
+  field(:advertising_channel_type, 3,
     type: Google.Ads.Googleads.V19.Enums.AdvertisingChannelTypeEnum.AdvertisingChannelType,
     json_name: "advertisingChannelType",
     enum: true,
     deprecated: false
+  )
 
-  field :campaign_sitelink_count, 4,
+  field(:campaign_sitelink_count, 4,
     type: :int32,
     json_name: "campaignSitelinkCount",
     deprecated: false
+  )
 
-  field :conversion_tracking_status, 5,
+  field(:conversion_tracking_status, 5,
     type: Google.Ads.Googleads.V19.Enums.ConversionTrackingStatusEnum.ConversionTrackingStatus,
     json_name: "conversionTrackingStatus",
     enum: true,
     deprecated: false
+  )
 
-  field :bidding_info, 6,
+  field(:bidding_info, 6,
     type: Google.Ads.Googleads.V19.Services.GenerateRecommendationsRequest.BiddingInfo,
     json_name: "biddingInfo",
     deprecated: false
+  )
 
-  field :ad_group_info, 7,
+  field(:ad_group_info, 7,
     repeated: true,
     type: Google.Ads.Googleads.V19.Services.GenerateRecommendationsRequest.AdGroupInfo,
     json_name: "adGroupInfo",
     deprecated: false
+  )
 
-  field :seed_info, 8,
+  field(:seed_info, 8,
     type: Google.Ads.Googleads.V19.Services.GenerateRecommendationsRequest.SeedInfo,
     json_name: "seedInfo",
     deprecated: false
+  )
 
-  field :budget_info, 9,
+  field(:budget_info, 9,
     type: Google.Ads.Googleads.V19.Services.GenerateRecommendationsRequest.BudgetInfo,
     json_name: "budgetInfo",
     deprecated: false
+  )
 
-  field :campaign_image_asset_count, 10,
+  field(:campaign_image_asset_count, 10,
     type: :int32,
     json_name: "campaignImageAssetCount",
     deprecated: false
+  )
 
-  field :campaign_call_asset_count, 11,
+  field(:campaign_call_asset_count, 11,
     type: :int32,
     json_name: "campaignCallAssetCount",
     deprecated: false
+  )
 
-  field :country_codes, 13,
+  field(:country_codes, 13,
     repeated: true,
     type: :string,
     json_name: "countryCodes",
     deprecated: false
+  )
 
-  field :language_codes, 14,
+  field(:language_codes, 14,
     repeated: true,
     type: :string,
     json_name: "languageCodes",
     deprecated: false
+  )
 
-  field :positive_locations_ids, 15,
+  field(:positive_locations_ids, 15,
     repeated: true,
     type: :int64,
     json_name: "positiveLocationsIds",
     deprecated: false
+  )
 
-  field :negative_locations_ids, 16,
+  field(:negative_locations_ids, 16,
     repeated: true,
     type: :int64,
     json_name: "negativeLocationsIds",
     deprecated: false
+  )
 
-  field :asset_group_info, 17,
+  field(:asset_group_info, 17,
     repeated: true,
     type: Google.Ads.Googleads.V19.Services.GenerateRecommendationsRequest.AssetGroupInfo,
     json_name: "assetGroupInfo",
     deprecated: false
+  )
 
-  field :target_partner_search_network, 18,
+  field(:target_partner_search_network, 18,
     type: :bool,
     json_name: "targetPartnerSearchNetwork",
     deprecated: false
+  )
 
-  field :target_content_network, 19,
+  field(:target_content_network, 19,
     type: :bool,
     json_name: "targetContentNetwork",
     deprecated: false
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.GenerateRecommendationsResponse do
@@ -674,9 +741,10 @@ defmodule Google.Ads.Googleads.V19.Services.GenerateRecommendationsResponse do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :recommendations, 1,
+  field(:recommendations, 1,
     repeated: true,
     type: Google.Ads.Googleads.V19.Resources.Recommendation
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.RecommendationService.Service do
@@ -686,17 +754,23 @@ defmodule Google.Ads.Googleads.V19.Services.RecommendationService.Service do
     name: "google.ads.googleads.v19.services.RecommendationService",
     protoc_gen_elixir_version: "0.14.1"
 
-  rpc :ApplyRecommendation,
-      Google.Ads.Googleads.V19.Services.ApplyRecommendationRequest,
-      Google.Ads.Googleads.V19.Services.ApplyRecommendationResponse
+  rpc(
+    :ApplyRecommendation,
+    Google.Ads.Googleads.V19.Services.ApplyRecommendationRequest,
+    Google.Ads.Googleads.V19.Services.ApplyRecommendationResponse
+  )
 
-  rpc :DismissRecommendation,
-      Google.Ads.Googleads.V19.Services.DismissRecommendationRequest,
-      Google.Ads.Googleads.V19.Services.DismissRecommendationResponse
+  rpc(
+    :DismissRecommendation,
+    Google.Ads.Googleads.V19.Services.DismissRecommendationRequest,
+    Google.Ads.Googleads.V19.Services.DismissRecommendationResponse
+  )
 
-  rpc :GenerateRecommendations,
-      Google.Ads.Googleads.V19.Services.GenerateRecommendationsRequest,
-      Google.Ads.Googleads.V19.Services.GenerateRecommendationsResponse
+  rpc(
+    :GenerateRecommendations,
+    Google.Ads.Googleads.V19.Services.GenerateRecommendationsRequest,
+    Google.Ads.Googleads.V19.Services.GenerateRecommendationsResponse
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.RecommendationService.Stub do

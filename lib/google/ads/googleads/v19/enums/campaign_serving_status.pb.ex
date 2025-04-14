@@ -3,13 +3,13 @@ defmodule Google.Ads.Googleads.V19.Enums.CampaignServingStatusEnum.CampaignServi
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :UNSPECIFIED, 0
-  field :UNKNOWN, 1
-  field :SERVING, 2
-  field :NONE, 3
-  field :ENDED, 4
-  field :PENDING, 5
-  field :SUSPENDED, 6
+  field(:UNSPECIFIED, 0)
+  field(:UNKNOWN, 1)
+  field(:SERVING, 2)
+  field(:NONE, 3)
+  field(:ENDED, 4)
+  field(:PENDING, 5)
+  field(:SUSPENDED, 6)
 end
 
 defmodule Google.Ads.Googleads.V19.Enums.CampaignServingStatusEnum do

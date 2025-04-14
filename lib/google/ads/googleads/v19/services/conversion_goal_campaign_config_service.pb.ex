@@ -3,19 +3,21 @@ defmodule Google.Ads.Googleads.V19.Services.MutateConversionGoalCampaignConfigsR
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :customer_id, 1, type: :string, json_name: "customerId", deprecated: false
+  field(:customer_id, 1, type: :string, json_name: "customerId", deprecated: false)
 
-  field :operations, 2,
+  field(:operations, 2,
     repeated: true,
     type: Google.Ads.Googleads.V19.Services.ConversionGoalCampaignConfigOperation,
     deprecated: false
+  )
 
-  field :validate_only, 3, type: :bool, json_name: "validateOnly"
+  field(:validate_only, 3, type: :bool, json_name: "validateOnly")
 
-  field :response_content_type, 4,
+  field(:response_content_type, 4,
     type: Google.Ads.Googleads.V19.Enums.ResponseContentTypeEnum.ResponseContentType,
     json_name: "responseContentType",
     enum: true
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ConversionGoalCampaignConfigOperation do
@@ -23,13 +25,14 @@ defmodule Google.Ads.Googleads.V19.Services.ConversionGoalCampaignConfigOperatio
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  oneof :operation, 0
+  oneof(:operation, 0)
 
-  field :update_mask, 2, type: Google.Protobuf.FieldMask, json_name: "updateMask"
+  field(:update_mask, 2, type: Google.Protobuf.FieldMask, json_name: "updateMask")
 
-  field :update, 1,
+  field(:update, 1,
     type: Google.Ads.Googleads.V19.Resources.ConversionGoalCampaignConfig,
     oneof: 0
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.MutateConversionGoalCampaignConfigsResponse do
@@ -37,9 +40,10 @@ defmodule Google.Ads.Googleads.V19.Services.MutateConversionGoalCampaignConfigsR
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :results, 1,
+  field(:results, 1,
     repeated: true,
     type: Google.Ads.Googleads.V19.Services.MutateConversionGoalCampaignConfigResult
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.MutateConversionGoalCampaignConfigResult do
@@ -47,11 +51,12 @@ defmodule Google.Ads.Googleads.V19.Services.MutateConversionGoalCampaignConfigRe
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
+  field(:resource_name, 1, type: :string, json_name: "resourceName", deprecated: false)
 
-  field :conversion_goal_campaign_config, 2,
+  field(:conversion_goal_campaign_config, 2,
     type: Google.Ads.Googleads.V19.Resources.ConversionGoalCampaignConfig,
     json_name: "conversionGoalCampaignConfig"
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ConversionGoalCampaignConfigService.Service do
@@ -61,9 +66,11 @@ defmodule Google.Ads.Googleads.V19.Services.ConversionGoalCampaignConfigService.
     name: "google.ads.googleads.v19.services.ConversionGoalCampaignConfigService",
     protoc_gen_elixir_version: "0.14.1"
 
-  rpc :MutateConversionGoalCampaignConfigs,
-      Google.Ads.Googleads.V19.Services.MutateConversionGoalCampaignConfigsRequest,
-      Google.Ads.Googleads.V19.Services.MutateConversionGoalCampaignConfigsResponse
+  rpc(
+    :MutateConversionGoalCampaignConfigs,
+    Google.Ads.Googleads.V19.Services.MutateConversionGoalCampaignConfigsRequest,
+    Google.Ads.Googleads.V19.Services.MutateConversionGoalCampaignConfigsResponse
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ConversionGoalCampaignConfigService.Stub do

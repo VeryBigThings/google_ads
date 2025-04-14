@@ -3,21 +3,23 @@ defmodule Google.Ads.Googleads.V19.Services.MutateAssetsRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :customer_id, 1, type: :string, json_name: "customerId", deprecated: false
+  field(:customer_id, 1, type: :string, json_name: "customerId", deprecated: false)
 
-  field :operations, 2,
+  field(:operations, 2,
     repeated: true,
     type: Google.Ads.Googleads.V19.Services.AssetOperation,
     deprecated: false
+  )
 
-  field :partial_failure, 5, type: :bool, json_name: "partialFailure"
+  field(:partial_failure, 5, type: :bool, json_name: "partialFailure")
 
-  field :response_content_type, 3,
+  field(:response_content_type, 3,
     type: Google.Ads.Googleads.V19.Enums.ResponseContentTypeEnum.ResponseContentType,
     json_name: "responseContentType",
     enum: true
+  )
 
-  field :validate_only, 4, type: :bool, json_name: "validateOnly"
+  field(:validate_only, 4, type: :bool, json_name: "validateOnly")
 end
 
 defmodule Google.Ads.Googleads.V19.Services.AssetOperation do
@@ -25,11 +27,11 @@ defmodule Google.Ads.Googleads.V19.Services.AssetOperation do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  oneof :operation, 0
+  oneof(:operation, 0)
 
-  field :update_mask, 3, type: Google.Protobuf.FieldMask, json_name: "updateMask"
-  field :create, 1, type: Google.Ads.Googleads.V19.Resources.Asset, oneof: 0
-  field :update, 2, type: Google.Ads.Googleads.V19.Resources.Asset, oneof: 0
+  field(:update_mask, 3, type: Google.Protobuf.FieldMask, json_name: "updateMask")
+  field(:create, 1, type: Google.Ads.Googleads.V19.Resources.Asset, oneof: 0)
+  field(:update, 2, type: Google.Ads.Googleads.V19.Resources.Asset, oneof: 0)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.MutateAssetsResponse do
@@ -37,8 +39,8 @@ defmodule Google.Ads.Googleads.V19.Services.MutateAssetsResponse do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :partial_failure_error, 3, type: Google.Rpc.Status, json_name: "partialFailureError"
-  field :results, 2, repeated: true, type: Google.Ads.Googleads.V19.Services.MutateAssetResult
+  field(:partial_failure_error, 3, type: Google.Rpc.Status, json_name: "partialFailureError")
+  field(:results, 2, repeated: true, type: Google.Ads.Googleads.V19.Services.MutateAssetResult)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.MutateAssetResult do
@@ -46,8 +48,8 @@ defmodule Google.Ads.Googleads.V19.Services.MutateAssetResult do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
-  field :asset, 2, type: Google.Ads.Googleads.V19.Resources.Asset
+  field(:resource_name, 1, type: :string, json_name: "resourceName", deprecated: false)
+  field(:asset, 2, type: Google.Ads.Googleads.V19.Resources.Asset)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.AssetService.Service do
@@ -57,9 +59,11 @@ defmodule Google.Ads.Googleads.V19.Services.AssetService.Service do
     name: "google.ads.googleads.v19.services.AssetService",
     protoc_gen_elixir_version: "0.14.1"
 
-  rpc :MutateAssets,
-      Google.Ads.Googleads.V19.Services.MutateAssetsRequest,
-      Google.Ads.Googleads.V19.Services.MutateAssetsResponse
+  rpc(
+    :MutateAssets,
+    Google.Ads.Googleads.V19.Services.MutateAssetsRequest,
+    Google.Ads.Googleads.V19.Services.MutateAssetsResponse
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.AssetService.Stub do

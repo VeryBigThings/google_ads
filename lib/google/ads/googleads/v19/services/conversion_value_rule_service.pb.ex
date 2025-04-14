@@ -3,20 +3,22 @@ defmodule Google.Ads.Googleads.V19.Services.MutateConversionValueRulesRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :customer_id, 1, type: :string, json_name: "customerId", deprecated: false
+  field(:customer_id, 1, type: :string, json_name: "customerId", deprecated: false)
 
-  field :operations, 2,
+  field(:operations, 2,
     repeated: true,
     type: Google.Ads.Googleads.V19.Services.ConversionValueRuleOperation,
     deprecated: false
+  )
 
-  field :partial_failure, 5, type: :bool, json_name: "partialFailure"
-  field :validate_only, 3, type: :bool, json_name: "validateOnly"
+  field(:partial_failure, 5, type: :bool, json_name: "partialFailure")
+  field(:validate_only, 3, type: :bool, json_name: "validateOnly")
 
-  field :response_content_type, 4,
+  field(:response_content_type, 4,
     type: Google.Ads.Googleads.V19.Enums.ResponseContentTypeEnum.ResponseContentType,
     json_name: "responseContentType",
     enum: true
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ConversionValueRuleOperation do
@@ -24,12 +26,12 @@ defmodule Google.Ads.Googleads.V19.Services.ConversionValueRuleOperation do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  oneof :operation, 0
+  oneof(:operation, 0)
 
-  field :update_mask, 4, type: Google.Protobuf.FieldMask, json_name: "updateMask"
-  field :create, 1, type: Google.Ads.Googleads.V19.Resources.ConversionValueRule, oneof: 0
-  field :update, 2, type: Google.Ads.Googleads.V19.Resources.ConversionValueRule, oneof: 0
-  field :remove, 3, type: :string, oneof: 0, deprecated: false
+  field(:update_mask, 4, type: Google.Protobuf.FieldMask, json_name: "updateMask")
+  field(:create, 1, type: Google.Ads.Googleads.V19.Resources.ConversionValueRule, oneof: 0)
+  field(:update, 2, type: Google.Ads.Googleads.V19.Resources.ConversionValueRule, oneof: 0)
+  field(:remove, 3, type: :string, oneof: 0, deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.MutateConversionValueRulesResponse do
@@ -37,11 +39,12 @@ defmodule Google.Ads.Googleads.V19.Services.MutateConversionValueRulesResponse d
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :results, 2,
+  field(:results, 2,
     repeated: true,
     type: Google.Ads.Googleads.V19.Services.MutateConversionValueRuleResult
+  )
 
-  field :partial_failure_error, 3, type: Google.Rpc.Status, json_name: "partialFailureError"
+  field(:partial_failure_error, 3, type: Google.Rpc.Status, json_name: "partialFailureError")
 end
 
 defmodule Google.Ads.Googleads.V19.Services.MutateConversionValueRuleResult do
@@ -49,11 +52,12 @@ defmodule Google.Ads.Googleads.V19.Services.MutateConversionValueRuleResult do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
+  field(:resource_name, 1, type: :string, json_name: "resourceName", deprecated: false)
 
-  field :conversion_value_rule, 2,
+  field(:conversion_value_rule, 2,
     type: Google.Ads.Googleads.V19.Resources.ConversionValueRule,
     json_name: "conversionValueRule"
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ConversionValueRuleService.Service do
@@ -63,9 +67,11 @@ defmodule Google.Ads.Googleads.V19.Services.ConversionValueRuleService.Service d
     name: "google.ads.googleads.v19.services.ConversionValueRuleService",
     protoc_gen_elixir_version: "0.14.1"
 
-  rpc :MutateConversionValueRules,
-      Google.Ads.Googleads.V19.Services.MutateConversionValueRulesRequest,
-      Google.Ads.Googleads.V19.Services.MutateConversionValueRulesResponse
+  rpc(
+    :MutateConversionValueRules,
+    Google.Ads.Googleads.V19.Services.MutateConversionValueRulesRequest,
+    Google.Ads.Googleads.V19.Services.MutateConversionValueRulesResponse
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ConversionValueRuleService.Stub do

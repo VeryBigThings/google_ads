@@ -3,13 +3,14 @@ defmodule Google.Ads.Googleads.V19.Services.ConfigureCampaignLifecycleGoalsReque
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :customer_id, 1, type: :string, json_name: "customerId", deprecated: false
+  field(:customer_id, 1, type: :string, json_name: "customerId", deprecated: false)
 
-  field :operation, 2,
+  field(:operation, 2,
     type: Google.Ads.Googleads.V19.Services.CampaignLifecycleGoalOperation,
     deprecated: false
+  )
 
-  field :validate_only, 3, type: :bool, json_name: "validateOnly", deprecated: false
+  field(:validate_only, 3, type: :bool, json_name: "validateOnly", deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.CampaignLifecycleGoalOperation do
@@ -17,15 +18,16 @@ defmodule Google.Ads.Googleads.V19.Services.CampaignLifecycleGoalOperation do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  oneof :operation, 0
+  oneof(:operation, 0)
 
-  field :update_mask, 2,
+  field(:update_mask, 2,
     type: Google.Protobuf.FieldMask,
     json_name: "updateMask",
     deprecated: false
+  )
 
-  field :create, 1, type: Google.Ads.Googleads.V19.Resources.CampaignLifecycleGoal, oneof: 0
-  field :update, 3, type: Google.Ads.Googleads.V19.Resources.CampaignLifecycleGoal, oneof: 0
+  field(:create, 1, type: Google.Ads.Googleads.V19.Resources.CampaignLifecycleGoal, oneof: 0)
+  field(:update, 3, type: Google.Ads.Googleads.V19.Resources.CampaignLifecycleGoal, oneof: 0)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ConfigureCampaignLifecycleGoalsResponse do
@@ -33,7 +35,7 @@ defmodule Google.Ads.Googleads.V19.Services.ConfigureCampaignLifecycleGoalsRespo
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :result, 1, type: Google.Ads.Googleads.V19.Services.ConfigureCampaignLifecycleGoalsResult
+  field(:result, 1, type: Google.Ads.Googleads.V19.Services.ConfigureCampaignLifecycleGoalsResult)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ConfigureCampaignLifecycleGoalsResult do
@@ -41,7 +43,7 @@ defmodule Google.Ads.Googleads.V19.Services.ConfigureCampaignLifecycleGoalsResul
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
+  field(:resource_name, 1, type: :string, json_name: "resourceName", deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.CampaignLifecycleGoalService.Service do
@@ -51,9 +53,11 @@ defmodule Google.Ads.Googleads.V19.Services.CampaignLifecycleGoalService.Service
     name: "google.ads.googleads.v19.services.CampaignLifecycleGoalService",
     protoc_gen_elixir_version: "0.14.1"
 
-  rpc :ConfigureCampaignLifecycleGoals,
-      Google.Ads.Googleads.V19.Services.ConfigureCampaignLifecycleGoalsRequest,
-      Google.Ads.Googleads.V19.Services.ConfigureCampaignLifecycleGoalsResponse
+  rpc(
+    :ConfigureCampaignLifecycleGoals,
+    Google.Ads.Googleads.V19.Services.ConfigureCampaignLifecycleGoalsRequest,
+    Google.Ads.Googleads.V19.Services.ConfigureCampaignLifecycleGoalsResponse
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.CampaignLifecycleGoalService.Stub do

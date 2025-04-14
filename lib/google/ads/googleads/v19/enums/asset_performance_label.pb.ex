@@ -3,13 +3,13 @@ defmodule Google.Ads.Googleads.V19.Enums.AssetPerformanceLabelEnum.AssetPerforma
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :UNSPECIFIED, 0
-  field :UNKNOWN, 1
-  field :PENDING, 2
-  field :LEARNING, 3
-  field :LOW, 4
-  field :GOOD, 5
-  field :BEST, 6
+  field(:UNSPECIFIED, 0)
+  field(:UNKNOWN, 1)
+  field(:PENDING, 2)
+  field(:LEARNING, 3)
+  field(:LOW, 4)
+  field(:GOOD, 5)
+  field(:BEST, 6)
 end
 
 defmodule Google.Ads.Googleads.V19.Enums.AssetPerformanceLabelEnum do

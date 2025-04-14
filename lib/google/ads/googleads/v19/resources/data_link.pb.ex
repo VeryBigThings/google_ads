@@ -3,27 +3,30 @@ defmodule Google.Ads.Googleads.V19.Resources.DataLink do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  oneof :data_link_entity, 0
+  oneof(:data_link_entity, 0)
 
-  field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
-  field :product_link_id, 2, type: :int64, json_name: "productLinkId", deprecated: false
-  field :data_link_id, 3, type: :int64, json_name: "dataLinkId", deprecated: false
+  field(:resource_name, 1, type: :string, json_name: "resourceName", deprecated: false)
+  field(:product_link_id, 2, type: :int64, json_name: "productLinkId", deprecated: false)
+  field(:data_link_id, 3, type: :int64, json_name: "dataLinkId", deprecated: false)
 
-  field :type, 4,
+  field(:type, 4,
     type: Google.Ads.Googleads.V19.Enums.DataLinkTypeEnum.DataLinkType,
     enum: true,
     deprecated: false
+  )
 
-  field :status, 5,
+  field(:status, 5,
     type: Google.Ads.Googleads.V19.Enums.DataLinkStatusEnum.DataLinkStatus,
     enum: true,
     deprecated: false
+  )
 
-  field :youtube_video, 6,
+  field(:youtube_video, 6,
     type: Google.Ads.Googleads.V19.Resources.YoutubeVideoIdentifier,
     json_name: "youtubeVideo",
     oneof: 0,
     deprecated: false
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Resources.YoutubeVideoIdentifier do
@@ -31,6 +34,6 @@ defmodule Google.Ads.Googleads.V19.Resources.YoutubeVideoIdentifier do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :channel_id, 1, type: :string, json_name: "channelId", deprecated: false
-  field :video_id, 2, type: :string, json_name: "videoId", deprecated: false
+  field(:channel_id, 1, type: :string, json_name: "channelId", deprecated: false)
+  field(:video_id, 2, type: :string, json_name: "videoId", deprecated: false)
 end

@@ -3,10 +3,10 @@ defmodule Google.Ads.Googleads.V19.Errors.ListOperationErrorEnum.ListOperationEr
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :UNSPECIFIED, 0
-  field :UNKNOWN, 1
-  field :REQUIRED_FIELD_MISSING, 7
-  field :DUPLICATE_VALUES, 8
+  field(:UNSPECIFIED, 0)
+  field(:UNKNOWN, 1)
+  field(:REQUIRED_FIELD_MISSING, 7)
+  field(:DUPLICATE_VALUES, 8)
 end
 
 defmodule Google.Ads.Googleads.V19.Errors.ListOperationErrorEnum do

@@ -3,12 +3,13 @@ defmodule Google.Ads.Googleads.V19.Resources.SearchTermView do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
-  field :search_term, 5, type: :string, json_name: "searchTerm", deprecated: false
-  field :ad_group, 6, type: :string, json_name: "adGroup", deprecated: false
+  field(:resource_name, 1, type: :string, json_name: "resourceName", deprecated: false)
+  field(:search_term, 5, type: :string, json_name: "searchTerm", deprecated: false)
+  field(:ad_group, 6, type: :string, json_name: "adGroup", deprecated: false)
 
-  field :status, 4,
+  field(:status, 4,
     type: Google.Ads.Googleads.V19.Enums.SearchTermTargetingStatusEnum.SearchTermTargetingStatus,
     enum: true,
     deprecated: false
+  )
 end

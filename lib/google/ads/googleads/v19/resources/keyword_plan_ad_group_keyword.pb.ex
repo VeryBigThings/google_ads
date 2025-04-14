@@ -3,21 +3,23 @@ defmodule Google.Ads.Googleads.V19.Resources.KeywordPlanAdGroupKeyword do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
+  field(:resource_name, 1, type: :string, json_name: "resourceName", deprecated: false)
 
-  field :keyword_plan_ad_group, 8,
+  field(:keyword_plan_ad_group, 8,
     type: :string,
     json_name: "keywordPlanAdGroup",
     deprecated: false
+  )
 
-  field :id, 9, type: :int64, deprecated: false
-  field :text, 10, type: :string
+  field(:id, 9, type: :int64, deprecated: false)
+  field(:text, 10, type: :string)
 
-  field :match_type, 5,
+  field(:match_type, 5,
     type: Google.Ads.Googleads.V19.Enums.KeywordMatchTypeEnum.KeywordMatchType,
     json_name: "matchType",
     enum: true
+  )
 
-  field :cpc_bid_micros, 11, type: :int64, json_name: "cpcBidMicros"
-  field :negative, 12, type: :bool, deprecated: false
+  field(:cpc_bid_micros, 11, type: :int64, json_name: "cpcBidMicros")
+  field(:negative, 12, type: :bool, deprecated: false)
 end

@@ -3,20 +3,22 @@ defmodule Google.Ads.Googleads.V19.Resources.DetailPlacementView do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
-  field :placement, 7, type: :string, deprecated: false
-  field :display_name, 8, type: :string, json_name: "displayName", deprecated: false
+  field(:resource_name, 1, type: :string, json_name: "resourceName", deprecated: false)
+  field(:placement, 7, type: :string, deprecated: false)
+  field(:display_name, 8, type: :string, json_name: "displayName", deprecated: false)
 
-  field :group_placement_target_url, 9,
+  field(:group_placement_target_url, 9,
     type: :string,
     json_name: "groupPlacementTargetUrl",
     deprecated: false
+  )
 
-  field :target_url, 10, type: :string, json_name: "targetUrl", deprecated: false
+  field(:target_url, 10, type: :string, json_name: "targetUrl", deprecated: false)
 
-  field :placement_type, 6,
+  field(:placement_type, 6,
     type: Google.Ads.Googleads.V19.Enums.PlacementTypeEnum.PlacementType,
     json_name: "placementType",
     enum: true,
     deprecated: false
+  )
 end

@@ -3,7 +3,7 @@ defmodule Google.Ads.Googleads.V19.Services.RegenerateShareableLinkIdRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
+  field(:resource_name, 1, type: :string, json_name: "resourceName", deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.RegenerateShareableLinkIdResponse do
@@ -19,9 +19,11 @@ defmodule Google.Ads.Googleads.V19.Services.ThirdPartyAppAnalyticsLinkService.Se
     name: "google.ads.googleads.v19.services.ThirdPartyAppAnalyticsLinkService",
     protoc_gen_elixir_version: "0.14.1"
 
-  rpc :RegenerateShareableLinkId,
-      Google.Ads.Googleads.V19.Services.RegenerateShareableLinkIdRequest,
-      Google.Ads.Googleads.V19.Services.RegenerateShareableLinkIdResponse
+  rpc(
+    :RegenerateShareableLinkId,
+    Google.Ads.Googleads.V19.Services.RegenerateShareableLinkIdRequest,
+    Google.Ads.Googleads.V19.Services.RegenerateShareableLinkIdResponse
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ThirdPartyAppAnalyticsLinkService.Stub do

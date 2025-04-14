@@ -3,10 +3,10 @@ defmodule Google.Ads.Googleads.V19.Enums.PolicyTopicEvidenceDestinationNotWorkin
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :UNSPECIFIED, 0
-  field :UNKNOWN, 1
-  field :HOSTNAME_NOT_FOUND, 2
-  field :GOOGLE_CRAWLER_DNS_ISSUE, 3
+  field(:UNSPECIFIED, 0)
+  field(:UNKNOWN, 1)
+  field(:HOSTNAME_NOT_FOUND, 2)
+  field(:GOOGLE_CRAWLER_DNS_ISSUE, 3)
 end
 
 defmodule Google.Ads.Googleads.V19.Enums.PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum do

@@ -3,8 +3,8 @@ defmodule Google.Ads.Googleads.V19.Common.FrequencyCapEntry do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :key, 1, type: Google.Ads.Googleads.V19.Common.FrequencyCapKey
-  field :cap, 3, type: :int32
+  field(:key, 1, type: Google.Ads.Googleads.V19.Common.FrequencyCapKey)
+  field(:cap, 3, type: :int32)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.FrequencyCapKey do
@@ -12,19 +12,22 @@ defmodule Google.Ads.Googleads.V19.Common.FrequencyCapKey do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :level, 1,
+  field(:level, 1,
     type: Google.Ads.Googleads.V19.Enums.FrequencyCapLevelEnum.FrequencyCapLevel,
     enum: true
+  )
 
-  field :event_type, 3,
+  field(:event_type, 3,
     type: Google.Ads.Googleads.V19.Enums.FrequencyCapEventTypeEnum.FrequencyCapEventType,
     json_name: "eventType",
     enum: true
+  )
 
-  field :time_unit, 2,
+  field(:time_unit, 2,
     type: Google.Ads.Googleads.V19.Enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit,
     json_name: "timeUnit",
     enum: true
+  )
 
-  field :time_length, 5, type: :int32, json_name: "timeLength"
+  field(:time_length, 5, type: :int32, json_name: "timeLength")
 end

@@ -3,13 +3,13 @@ defmodule Google.Ads.Googleads.V19.Common.OfflineUserAddressInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :hashed_first_name, 7, type: :string, json_name: "hashedFirstName"
-  field :hashed_last_name, 8, type: :string, json_name: "hashedLastName"
-  field :city, 9, type: :string
-  field :state, 10, type: :string
-  field :country_code, 11, type: :string, json_name: "countryCode"
-  field :postal_code, 12, type: :string, json_name: "postalCode"
-  field :hashed_street_address, 13, type: :string, json_name: "hashedStreetAddress"
+  field(:hashed_first_name, 7, type: :string, json_name: "hashedFirstName")
+  field(:hashed_last_name, 8, type: :string, json_name: "hashedLastName")
+  field(:city, 9, type: :string)
+  field(:state, 10, type: :string)
+  field(:country_code, 11, type: :string, json_name: "countryCode")
+  field(:postal_code, 12, type: :string, json_name: "postalCode")
+  field(:hashed_street_address, 13, type: :string, json_name: "hashedStreetAddress")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.UserIdentifier do
@@ -17,22 +17,24 @@ defmodule Google.Ads.Googleads.V19.Common.UserIdentifier do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  oneof :identifier, 0
+  oneof(:identifier, 0)
 
-  field :user_identifier_source, 6,
+  field(:user_identifier_source, 6,
     type: Google.Ads.Googleads.V19.Enums.UserIdentifierSourceEnum.UserIdentifierSource,
     json_name: "userIdentifierSource",
     enum: true
+  )
 
-  field :hashed_email, 7, type: :string, json_name: "hashedEmail", oneof: 0
-  field :hashed_phone_number, 8, type: :string, json_name: "hashedPhoneNumber", oneof: 0
-  field :mobile_id, 9, type: :string, json_name: "mobileId", oneof: 0
-  field :third_party_user_id, 10, type: :string, json_name: "thirdPartyUserId", oneof: 0
+  field(:hashed_email, 7, type: :string, json_name: "hashedEmail", oneof: 0)
+  field(:hashed_phone_number, 8, type: :string, json_name: "hashedPhoneNumber", oneof: 0)
+  field(:mobile_id, 9, type: :string, json_name: "mobileId", oneof: 0)
+  field(:third_party_user_id, 10, type: :string, json_name: "thirdPartyUserId", oneof: 0)
 
-  field :address_info, 5,
+  field(:address_info, 5,
     type: Google.Ads.Googleads.V19.Common.OfflineUserAddressInfo,
     json_name: "addressInfo",
     oneof: 0
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.TransactionAttribute do
@@ -40,21 +42,23 @@ defmodule Google.Ads.Googleads.V19.Common.TransactionAttribute do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :transaction_date_time, 8, type: :string, json_name: "transactionDateTime"
-  field :transaction_amount_micros, 9, type: :double, json_name: "transactionAmountMicros"
-  field :currency_code, 10, type: :string, json_name: "currencyCode"
-  field :conversion_action, 11, type: :string, json_name: "conversionAction"
-  field :order_id, 12, type: :string, json_name: "orderId"
+  field(:transaction_date_time, 8, type: :string, json_name: "transactionDateTime")
+  field(:transaction_amount_micros, 9, type: :double, json_name: "transactionAmountMicros")
+  field(:currency_code, 10, type: :string, json_name: "currencyCode")
+  field(:conversion_action, 11, type: :string, json_name: "conversionAction")
+  field(:order_id, 12, type: :string, json_name: "orderId")
 
-  field :store_attribute, 6,
+  field(:store_attribute, 6,
     type: Google.Ads.Googleads.V19.Common.StoreAttribute,
     json_name: "storeAttribute"
+  )
 
-  field :custom_value, 13, type: :string, json_name: "customValue"
+  field(:custom_value, 13, type: :string, json_name: "customValue")
 
-  field :item_attribute, 14,
+  field(:item_attribute, 14,
     type: Google.Ads.Googleads.V19.Common.ItemAttribute,
     json_name: "itemAttribute"
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.StoreAttribute do
@@ -62,7 +66,7 @@ defmodule Google.Ads.Googleads.V19.Common.StoreAttribute do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :store_code, 2, type: :string, json_name: "storeCode"
+  field(:store_code, 2, type: :string, json_name: "storeCode")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.ItemAttribute do
@@ -70,11 +74,11 @@ defmodule Google.Ads.Googleads.V19.Common.ItemAttribute do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :item_id, 1, type: :string, json_name: "itemId"
-  field :merchant_id, 2, type: :int64, json_name: "merchantId"
-  field :country_code, 3, type: :string, json_name: "countryCode"
-  field :language_code, 4, type: :string, json_name: "languageCode"
-  field :quantity, 5, type: :int64
+  field(:item_id, 1, type: :string, json_name: "itemId")
+  field(:merchant_id, 2, type: :int64, json_name: "merchantId")
+  field(:country_code, 3, type: :string, json_name: "countryCode")
+  field(:language_code, 4, type: :string, json_name: "languageCode")
+  field(:quantity, 5, type: :int64)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.UserData do
@@ -82,20 +86,23 @@ defmodule Google.Ads.Googleads.V19.Common.UserData do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :user_identifiers, 1,
+  field(:user_identifiers, 1,
     repeated: true,
     type: Google.Ads.Googleads.V19.Common.UserIdentifier,
     json_name: "userIdentifiers"
+  )
 
-  field :transaction_attribute, 2,
+  field(:transaction_attribute, 2,
     type: Google.Ads.Googleads.V19.Common.TransactionAttribute,
     json_name: "transactionAttribute"
+  )
 
-  field :user_attribute, 3,
+  field(:user_attribute, 3,
     type: Google.Ads.Googleads.V19.Common.UserAttribute,
     json_name: "userAttribute"
+  )
 
-  field :consent, 4, type: Google.Ads.Googleads.V19.Common.Consent
+  field(:consent, 4, type: Google.Ads.Googleads.V19.Common.Consent)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.UserAttribute do
@@ -103,29 +110,32 @@ defmodule Google.Ads.Googleads.V19.Common.UserAttribute do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :lifetime_value_micros, 1, type: :int64, json_name: "lifetimeValueMicros"
-  field :lifetime_value_bucket, 2, type: :int32, json_name: "lifetimeValueBucket"
-  field :last_purchase_date_time, 3, type: :string, json_name: "lastPurchaseDateTime"
-  field :average_purchase_count, 4, type: :int32, json_name: "averagePurchaseCount"
-  field :average_purchase_value_micros, 5, type: :int64, json_name: "averagePurchaseValueMicros"
-  field :acquisition_date_time, 6, type: :string, json_name: "acquisitionDateTime"
+  field(:lifetime_value_micros, 1, type: :int64, json_name: "lifetimeValueMicros")
+  field(:lifetime_value_bucket, 2, type: :int32, json_name: "lifetimeValueBucket")
+  field(:last_purchase_date_time, 3, type: :string, json_name: "lastPurchaseDateTime")
+  field(:average_purchase_count, 4, type: :int32, json_name: "averagePurchaseCount")
+  field(:average_purchase_value_micros, 5, type: :int64, json_name: "averagePurchaseValueMicros")
+  field(:acquisition_date_time, 6, type: :string, json_name: "acquisitionDateTime")
 
-  field :shopping_loyalty, 7,
+  field(:shopping_loyalty, 7,
     type: Google.Ads.Googleads.V19.Common.ShoppingLoyalty,
     json_name: "shoppingLoyalty"
+  )
 
-  field :lifecycle_stage, 8, type: :string, json_name: "lifecycleStage", deprecated: false
+  field(:lifecycle_stage, 8, type: :string, json_name: "lifecycleStage", deprecated: false)
 
-  field :first_purchase_date_time, 9,
+  field(:first_purchase_date_time, 9,
     type: :string,
     json_name: "firstPurchaseDateTime",
     deprecated: false
+  )
 
-  field :event_attribute, 10,
+  field(:event_attribute, 10,
     repeated: true,
     type: Google.Ads.Googleads.V19.Common.EventAttribute,
     json_name: "eventAttribute",
     deprecated: false
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.EventAttribute do
@@ -133,14 +143,15 @@ defmodule Google.Ads.Googleads.V19.Common.EventAttribute do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :event, 1, type: :string, deprecated: false
-  field :event_date_time, 2, type: :string, json_name: "eventDateTime", deprecated: false
+  field(:event, 1, type: :string, deprecated: false)
+  field(:event_date_time, 2, type: :string, json_name: "eventDateTime", deprecated: false)
 
-  field :item_attribute, 3,
+  field(:item_attribute, 3,
     repeated: true,
     type: Google.Ads.Googleads.V19.Common.EventItemAttribute,
     json_name: "itemAttribute",
     deprecated: false
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.EventItemAttribute do
@@ -148,7 +159,7 @@ defmodule Google.Ads.Googleads.V19.Common.EventItemAttribute do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :item_id, 1, type: :string, json_name: "itemId", deprecated: false
+  field(:item_id, 1, type: :string, json_name: "itemId", deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.ShoppingLoyalty do
@@ -156,7 +167,7 @@ defmodule Google.Ads.Googleads.V19.Common.ShoppingLoyalty do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :loyalty_tier, 1, type: :string, json_name: "loyaltyTier"
+  field(:loyalty_tier, 1, type: :string, json_name: "loyaltyTier")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.CustomerMatchUserListMetadata do
@@ -164,8 +175,8 @@ defmodule Google.Ads.Googleads.V19.Common.CustomerMatchUserListMetadata do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :user_list, 2, type: :string, json_name: "userList"
-  field :consent, 3, type: Google.Ads.Googleads.V19.Common.Consent
+  field(:user_list, 2, type: :string, json_name: "userList")
+  field(:consent, 3, type: Google.Ads.Googleads.V19.Common.Consent)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.StoreSalesMetadata do
@@ -173,13 +184,14 @@ defmodule Google.Ads.Googleads.V19.Common.StoreSalesMetadata do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :loyalty_fraction, 5, type: :double, json_name: "loyaltyFraction"
-  field :transaction_upload_fraction, 6, type: :double, json_name: "transactionUploadFraction"
-  field :custom_key, 7, type: :string, json_name: "customKey"
+  field(:loyalty_fraction, 5, type: :double, json_name: "loyaltyFraction")
+  field(:transaction_upload_fraction, 6, type: :double, json_name: "transactionUploadFraction")
+  field(:custom_key, 7, type: :string, json_name: "customKey")
 
-  field :third_party_metadata, 3,
+  field(:third_party_metadata, 3,
     type: Google.Ads.Googleads.V19.Common.StoreSalesThirdPartyMetadata,
     json_name: "thirdPartyMetadata"
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.StoreSalesThirdPartyMetadata do
@@ -187,10 +199,10 @@ defmodule Google.Ads.Googleads.V19.Common.StoreSalesThirdPartyMetadata do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :advertiser_upload_date_time, 7, type: :string, json_name: "advertiserUploadDateTime"
-  field :valid_transaction_fraction, 8, type: :double, json_name: "validTransactionFraction"
-  field :partner_match_fraction, 9, type: :double, json_name: "partnerMatchFraction"
-  field :partner_upload_fraction, 10, type: :double, json_name: "partnerUploadFraction"
-  field :bridge_map_version_id, 11, type: :string, json_name: "bridgeMapVersionId"
-  field :partner_id, 12, type: :int64, json_name: "partnerId"
+  field(:advertiser_upload_date_time, 7, type: :string, json_name: "advertiserUploadDateTime")
+  field(:valid_transaction_fraction, 8, type: :double, json_name: "validTransactionFraction")
+  field(:partner_match_fraction, 9, type: :double, json_name: "partnerMatchFraction")
+  field(:partner_upload_fraction, 10, type: :double, json_name: "partnerUploadFraction")
+  field(:bridge_map_version_id, 11, type: :string, json_name: "bridgeMapVersionId")
+  field(:partner_id, 12, type: :int64, json_name: "partnerId")
 end

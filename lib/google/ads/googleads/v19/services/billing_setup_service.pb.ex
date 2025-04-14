@@ -3,11 +3,12 @@ defmodule Google.Ads.Googleads.V19.Services.MutateBillingSetupRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :customer_id, 1, type: :string, json_name: "customerId", deprecated: false
+  field(:customer_id, 1, type: :string, json_name: "customerId", deprecated: false)
 
-  field :operation, 2,
+  field(:operation, 2,
     type: Google.Ads.Googleads.V19.Services.BillingSetupOperation,
     deprecated: false
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.BillingSetupOperation do
@@ -15,10 +16,10 @@ defmodule Google.Ads.Googleads.V19.Services.BillingSetupOperation do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  oneof :operation, 0
+  oneof(:operation, 0)
 
-  field :create, 2, type: Google.Ads.Googleads.V19.Resources.BillingSetup, oneof: 0
-  field :remove, 1, type: :string, oneof: 0, deprecated: false
+  field(:create, 2, type: Google.Ads.Googleads.V19.Resources.BillingSetup, oneof: 0)
+  field(:remove, 1, type: :string, oneof: 0, deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.MutateBillingSetupResponse do
@@ -26,7 +27,7 @@ defmodule Google.Ads.Googleads.V19.Services.MutateBillingSetupResponse do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :result, 1, type: Google.Ads.Googleads.V19.Services.MutateBillingSetupResult
+  field(:result, 1, type: Google.Ads.Googleads.V19.Services.MutateBillingSetupResult)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.MutateBillingSetupResult do
@@ -34,7 +35,7 @@ defmodule Google.Ads.Googleads.V19.Services.MutateBillingSetupResult do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
+  field(:resource_name, 1, type: :string, json_name: "resourceName", deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.BillingSetupService.Service do
@@ -44,9 +45,11 @@ defmodule Google.Ads.Googleads.V19.Services.BillingSetupService.Service do
     name: "google.ads.googleads.v19.services.BillingSetupService",
     protoc_gen_elixir_version: "0.14.1"
 
-  rpc :MutateBillingSetup,
-      Google.Ads.Googleads.V19.Services.MutateBillingSetupRequest,
-      Google.Ads.Googleads.V19.Services.MutateBillingSetupResponse
+  rpc(
+    :MutateBillingSetup,
+    Google.Ads.Googleads.V19.Services.MutateBillingSetupRequest,
+    Google.Ads.Googleads.V19.Services.MutateBillingSetupResponse
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.BillingSetupService.Stub do

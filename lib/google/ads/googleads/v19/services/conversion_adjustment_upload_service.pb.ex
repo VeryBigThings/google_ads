@@ -3,17 +3,18 @@ defmodule Google.Ads.Googleads.V19.Services.UploadConversionAdjustmentsRequest d
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :customer_id, 1, type: :string, json_name: "customerId", deprecated: false
+  field(:customer_id, 1, type: :string, json_name: "customerId", deprecated: false)
 
-  field :conversion_adjustments, 2,
+  field(:conversion_adjustments, 2,
     repeated: true,
     type: Google.Ads.Googleads.V19.Services.ConversionAdjustment,
     json_name: "conversionAdjustments",
     deprecated: false
+  )
 
-  field :partial_failure, 3, type: :bool, json_name: "partialFailure", deprecated: false
-  field :validate_only, 4, type: :bool, json_name: "validateOnly"
-  field :job_id, 5, type: :int32, json_name: "jobId", deprecated: false
+  field(:partial_failure, 3, type: :bool, json_name: "partialFailure", deprecated: false)
+  field(:validate_only, 4, type: :bool, json_name: "validateOnly")
+  field(:job_id, 5, type: :int32, json_name: "jobId", deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.UploadConversionAdjustmentsResponse do
@@ -21,13 +22,14 @@ defmodule Google.Ads.Googleads.V19.Services.UploadConversionAdjustmentsResponse 
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :partial_failure_error, 1, type: Google.Rpc.Status, json_name: "partialFailureError"
+  field(:partial_failure_error, 1, type: Google.Rpc.Status, json_name: "partialFailureError")
 
-  field :results, 2,
+  field(:results, 2,
     repeated: true,
     type: Google.Ads.Googleads.V19.Services.ConversionAdjustmentResult
+  )
 
-  field :job_id, 3, type: :int64, json_name: "jobId"
+  field(:job_id, 3, type: :int64, json_name: "jobId")
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ConversionAdjustment do
@@ -35,29 +37,33 @@ defmodule Google.Ads.Googleads.V19.Services.ConversionAdjustment do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :gclid_date_time_pair, 12,
+  field(:gclid_date_time_pair, 12,
     type: Google.Ads.Googleads.V19.Services.GclidDateTimePair,
     json_name: "gclidDateTimePair"
+  )
 
-  field :order_id, 13, type: :string, json_name: "orderId"
-  field :conversion_action, 8, type: :string, json_name: "conversionAction"
-  field :adjustment_date_time, 9, type: :string, json_name: "adjustmentDateTime"
+  field(:order_id, 13, type: :string, json_name: "orderId")
+  field(:conversion_action, 8, type: :string, json_name: "conversionAction")
+  field(:adjustment_date_time, 9, type: :string, json_name: "adjustmentDateTime")
 
-  field :adjustment_type, 5,
+  field(:adjustment_type, 5,
     type: Google.Ads.Googleads.V19.Enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType,
     json_name: "adjustmentType",
     enum: true
+  )
 
-  field :restatement_value, 6,
+  field(:restatement_value, 6,
     type: Google.Ads.Googleads.V19.Services.RestatementValue,
     json_name: "restatementValue"
+  )
 
-  field :user_identifiers, 10,
+  field(:user_identifiers, 10,
     repeated: true,
     type: Google.Ads.Googleads.V19.Common.UserIdentifier,
     json_name: "userIdentifiers"
+  )
 
-  field :user_agent, 11, type: :string, json_name: "userAgent"
+  field(:user_agent, 11, type: :string, json_name: "userAgent")
 end
 
 defmodule Google.Ads.Googleads.V19.Services.RestatementValue do
@@ -65,8 +71,8 @@ defmodule Google.Ads.Googleads.V19.Services.RestatementValue do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :adjusted_value, 3, type: :double, json_name: "adjustedValue"
-  field :currency_code, 4, type: :string, json_name: "currencyCode"
+  field(:adjusted_value, 3, type: :double, json_name: "adjustedValue")
+  field(:currency_code, 4, type: :string, json_name: "currencyCode")
 end
 
 defmodule Google.Ads.Googleads.V19.Services.GclidDateTimePair do
@@ -74,8 +80,8 @@ defmodule Google.Ads.Googleads.V19.Services.GclidDateTimePair do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :gclid, 3, type: :string
-  field :conversion_date_time, 4, type: :string, json_name: "conversionDateTime"
+  field(:gclid, 3, type: :string)
+  field(:conversion_date_time, 4, type: :string, json_name: "conversionDateTime")
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ConversionAdjustmentResult do
@@ -83,18 +89,20 @@ defmodule Google.Ads.Googleads.V19.Services.ConversionAdjustmentResult do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :gclid_date_time_pair, 9,
+  field(:gclid_date_time_pair, 9,
     type: Google.Ads.Googleads.V19.Services.GclidDateTimePair,
     json_name: "gclidDateTimePair"
+  )
 
-  field :order_id, 10, type: :string, json_name: "orderId"
-  field :conversion_action, 7, type: :string, json_name: "conversionAction"
-  field :adjustment_date_time, 8, type: :string, json_name: "adjustmentDateTime"
+  field(:order_id, 10, type: :string, json_name: "orderId")
+  field(:conversion_action, 7, type: :string, json_name: "conversionAction")
+  field(:adjustment_date_time, 8, type: :string, json_name: "adjustmentDateTime")
 
-  field :adjustment_type, 5,
+  field(:adjustment_type, 5,
     type: Google.Ads.Googleads.V19.Enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType,
     json_name: "adjustmentType",
     enum: true
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ConversionAdjustmentUploadService.Service do
@@ -104,9 +112,11 @@ defmodule Google.Ads.Googleads.V19.Services.ConversionAdjustmentUploadService.Se
     name: "google.ads.googleads.v19.services.ConversionAdjustmentUploadService",
     protoc_gen_elixir_version: "0.14.1"
 
-  rpc :UploadConversionAdjustments,
-      Google.Ads.Googleads.V19.Services.UploadConversionAdjustmentsRequest,
-      Google.Ads.Googleads.V19.Services.UploadConversionAdjustmentsResponse
+  rpc(
+    :UploadConversionAdjustments,
+    Google.Ads.Googleads.V19.Services.UploadConversionAdjustmentsRequest,
+    Google.Ads.Googleads.V19.Services.UploadConversionAdjustmentsResponse
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ConversionAdjustmentUploadService.Stub do

@@ -3,20 +3,22 @@ defmodule Google.Ads.Googleads.V19.Services.MutateAdGroupBidModifiersRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :customer_id, 1, type: :string, json_name: "customerId", deprecated: false
+  field(:customer_id, 1, type: :string, json_name: "customerId", deprecated: false)
 
-  field :operations, 2,
+  field(:operations, 2,
     repeated: true,
     type: Google.Ads.Googleads.V19.Services.AdGroupBidModifierOperation,
     deprecated: false
+  )
 
-  field :partial_failure, 3, type: :bool, json_name: "partialFailure"
-  field :validate_only, 4, type: :bool, json_name: "validateOnly"
+  field(:partial_failure, 3, type: :bool, json_name: "partialFailure")
+  field(:validate_only, 4, type: :bool, json_name: "validateOnly")
 
-  field :response_content_type, 5,
+  field(:response_content_type, 5,
     type: Google.Ads.Googleads.V19.Enums.ResponseContentTypeEnum.ResponseContentType,
     json_name: "responseContentType",
     enum: true
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.AdGroupBidModifierOperation do
@@ -24,12 +26,12 @@ defmodule Google.Ads.Googleads.V19.Services.AdGroupBidModifierOperation do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  oneof :operation, 0
+  oneof(:operation, 0)
 
-  field :update_mask, 4, type: Google.Protobuf.FieldMask, json_name: "updateMask"
-  field :create, 1, type: Google.Ads.Googleads.V19.Resources.AdGroupBidModifier, oneof: 0
-  field :update, 2, type: Google.Ads.Googleads.V19.Resources.AdGroupBidModifier, oneof: 0
-  field :remove, 3, type: :string, oneof: 0, deprecated: false
+  field(:update_mask, 4, type: Google.Protobuf.FieldMask, json_name: "updateMask")
+  field(:create, 1, type: Google.Ads.Googleads.V19.Resources.AdGroupBidModifier, oneof: 0)
+  field(:update, 2, type: Google.Ads.Googleads.V19.Resources.AdGroupBidModifier, oneof: 0)
+  field(:remove, 3, type: :string, oneof: 0, deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.MutateAdGroupBidModifiersResponse do
@@ -37,11 +39,12 @@ defmodule Google.Ads.Googleads.V19.Services.MutateAdGroupBidModifiersResponse do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :partial_failure_error, 3, type: Google.Rpc.Status, json_name: "partialFailureError"
+  field(:partial_failure_error, 3, type: Google.Rpc.Status, json_name: "partialFailureError")
 
-  field :results, 2,
+  field(:results, 2,
     repeated: true,
     type: Google.Ads.Googleads.V19.Services.MutateAdGroupBidModifierResult
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.MutateAdGroupBidModifierResult do
@@ -49,11 +52,12 @@ defmodule Google.Ads.Googleads.V19.Services.MutateAdGroupBidModifierResult do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
+  field(:resource_name, 1, type: :string, json_name: "resourceName", deprecated: false)
 
-  field :ad_group_bid_modifier, 2,
+  field(:ad_group_bid_modifier, 2,
     type: Google.Ads.Googleads.V19.Resources.AdGroupBidModifier,
     json_name: "adGroupBidModifier"
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.AdGroupBidModifierService.Service do
@@ -63,9 +67,11 @@ defmodule Google.Ads.Googleads.V19.Services.AdGroupBidModifierService.Service do
     name: "google.ads.googleads.v19.services.AdGroupBidModifierService",
     protoc_gen_elixir_version: "0.14.1"
 
-  rpc :MutateAdGroupBidModifiers,
-      Google.Ads.Googleads.V19.Services.MutateAdGroupBidModifiersRequest,
-      Google.Ads.Googleads.V19.Services.MutateAdGroupBidModifiersResponse
+  rpc(
+    :MutateAdGroupBidModifiers,
+    Google.Ads.Googleads.V19.Services.MutateAdGroupBidModifiersRequest,
+    Google.Ads.Googleads.V19.Services.MutateAdGroupBidModifiersResponse
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.AdGroupBidModifierService.Stub do

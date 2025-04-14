@@ -3,11 +3,11 @@ defmodule Google.Ads.Googleads.V19.Errors.UserDataErrorEnum.UserDataError do
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :UNSPECIFIED, 0
-  field :UNKNOWN, 1
-  field :OPERATIONS_FOR_CUSTOMER_MATCH_NOT_ALLOWED, 2
-  field :TOO_MANY_USER_IDENTIFIERS, 3
-  field :USER_LIST_NOT_APPLICABLE, 4
+  field(:UNSPECIFIED, 0)
+  field(:UNKNOWN, 1)
+  field(:OPERATIONS_FOR_CUSTOMER_MATCH_NOT_ALLOWED, 2)
+  field(:TOO_MANY_USER_IDENTIFIERS, 3)
+  field(:USER_LIST_NOT_APPLICABLE, 4)
 end
 
 defmodule Google.Ads.Googleads.V19.Errors.UserDataErrorEnum do

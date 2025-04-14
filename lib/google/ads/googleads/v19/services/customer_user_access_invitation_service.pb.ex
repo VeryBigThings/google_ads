@@ -3,11 +3,12 @@ defmodule Google.Ads.Googleads.V19.Services.MutateCustomerUserAccessInvitationRe
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :customer_id, 1, type: :string, json_name: "customerId", deprecated: false
+  field(:customer_id, 1, type: :string, json_name: "customerId", deprecated: false)
 
-  field :operation, 2,
+  field(:operation, 2,
     type: Google.Ads.Googleads.V19.Services.CustomerUserAccessInvitationOperation,
     deprecated: false
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.CustomerUserAccessInvitationOperation do
@@ -15,13 +16,14 @@ defmodule Google.Ads.Googleads.V19.Services.CustomerUserAccessInvitationOperatio
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  oneof :operation, 0
+  oneof(:operation, 0)
 
-  field :create, 1,
+  field(:create, 1,
     type: Google.Ads.Googleads.V19.Resources.CustomerUserAccessInvitation,
     oneof: 0
+  )
 
-  field :remove, 2, type: :string, oneof: 0, deprecated: false
+  field(:remove, 2, type: :string, oneof: 0, deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.MutateCustomerUserAccessInvitationResponse do
@@ -29,8 +31,9 @@ defmodule Google.Ads.Googleads.V19.Services.MutateCustomerUserAccessInvitationRe
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :result, 1,
+  field(:result, 1,
     type: Google.Ads.Googleads.V19.Services.MutateCustomerUserAccessInvitationResult
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.MutateCustomerUserAccessInvitationResult do
@@ -38,7 +41,7 @@ defmodule Google.Ads.Googleads.V19.Services.MutateCustomerUserAccessInvitationRe
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
+  field(:resource_name, 1, type: :string, json_name: "resourceName", deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.CustomerUserAccessInvitationService.Service do
@@ -48,9 +51,11 @@ defmodule Google.Ads.Googleads.V19.Services.CustomerUserAccessInvitationService.
     name: "google.ads.googleads.v19.services.CustomerUserAccessInvitationService",
     protoc_gen_elixir_version: "0.14.1"
 
-  rpc :MutateCustomerUserAccessInvitation,
-      Google.Ads.Googleads.V19.Services.MutateCustomerUserAccessInvitationRequest,
-      Google.Ads.Googleads.V19.Services.MutateCustomerUserAccessInvitationResponse
+  rpc(
+    :MutateCustomerUserAccessInvitation,
+    Google.Ads.Googleads.V19.Services.MutateCustomerUserAccessInvitationRequest,
+    Google.Ads.Googleads.V19.Services.MutateCustomerUserAccessInvitationResponse
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.CustomerUserAccessInvitationService.Stub do

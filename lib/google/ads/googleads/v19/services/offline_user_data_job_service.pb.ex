@@ -3,10 +3,14 @@ defmodule Google.Ads.Googleads.V19.Services.CreateOfflineUserDataJobRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :customer_id, 1, type: :string, json_name: "customerId", deprecated: false
-  field :job, 2, type: Google.Ads.Googleads.V19.Resources.OfflineUserDataJob, deprecated: false
-  field :validate_only, 3, type: :bool, json_name: "validateOnly"
-  field :enable_match_rate_range_preview, 5, type: :bool, json_name: "enableMatchRateRangePreview"
+  field(:customer_id, 1, type: :string, json_name: "customerId", deprecated: false)
+  field(:job, 2, type: Google.Ads.Googleads.V19.Resources.OfflineUserDataJob, deprecated: false)
+  field(:validate_only, 3, type: :bool, json_name: "validateOnly")
+
+  field(:enable_match_rate_range_preview, 5,
+    type: :bool,
+    json_name: "enableMatchRateRangePreview"
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.CreateOfflineUserDataJobResponse do
@@ -14,7 +18,7 @@ defmodule Google.Ads.Googleads.V19.Services.CreateOfflineUserDataJobResponse do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
+  field(:resource_name, 1, type: :string, json_name: "resourceName", deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.RunOfflineUserDataJobRequest do
@@ -22,8 +26,8 @@ defmodule Google.Ads.Googleads.V19.Services.RunOfflineUserDataJobRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
-  field :validate_only, 2, type: :bool, json_name: "validateOnly"
+  field(:resource_name, 1, type: :string, json_name: "resourceName", deprecated: false)
+  field(:validate_only, 2, type: :bool, json_name: "validateOnly")
 end
 
 defmodule Google.Ads.Googleads.V19.Services.AddOfflineUserDataJobOperationsRequest do
@@ -31,16 +35,17 @@ defmodule Google.Ads.Googleads.V19.Services.AddOfflineUserDataJobOperationsReque
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
-  field :enable_partial_failure, 4, type: :bool, json_name: "enablePartialFailure"
-  field :enable_warnings, 6, type: :bool, json_name: "enableWarnings"
+  field(:resource_name, 1, type: :string, json_name: "resourceName", deprecated: false)
+  field(:enable_partial_failure, 4, type: :bool, json_name: "enablePartialFailure")
+  field(:enable_warnings, 6, type: :bool, json_name: "enableWarnings")
 
-  field :operations, 3,
+  field(:operations, 3,
     repeated: true,
     type: Google.Ads.Googleads.V19.Services.OfflineUserDataJobOperation,
     deprecated: false
+  )
 
-  field :validate_only, 5, type: :bool, json_name: "validateOnly"
+  field(:validate_only, 5, type: :bool, json_name: "validateOnly")
 end
 
 defmodule Google.Ads.Googleads.V19.Services.OfflineUserDataJobOperation do
@@ -48,11 +53,11 @@ defmodule Google.Ads.Googleads.V19.Services.OfflineUserDataJobOperation do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  oneof :operation, 0
+  oneof(:operation, 0)
 
-  field :create, 1, type: Google.Ads.Googleads.V19.Common.UserData, oneof: 0
-  field :remove, 2, type: Google.Ads.Googleads.V19.Common.UserData, oneof: 0
-  field :remove_all, 3, type: :bool, json_name: "removeAll", oneof: 0
+  field(:create, 1, type: Google.Ads.Googleads.V19.Common.UserData, oneof: 0)
+  field(:remove, 2, type: Google.Ads.Googleads.V19.Common.UserData, oneof: 0)
+  field(:remove_all, 3, type: :bool, json_name: "removeAll", oneof: 0)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.AddOfflineUserDataJobOperationsResponse do
@@ -60,8 +65,8 @@ defmodule Google.Ads.Googleads.V19.Services.AddOfflineUserDataJobOperationsRespo
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :partial_failure_error, 1, type: Google.Rpc.Status, json_name: "partialFailureError"
-  field :warning, 2, type: Google.Rpc.Status
+  field(:partial_failure_error, 1, type: Google.Rpc.Status, json_name: "partialFailureError")
+  field(:warning, 2, type: Google.Rpc.Status)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.OfflineUserDataJobService.Service do
@@ -71,17 +76,23 @@ defmodule Google.Ads.Googleads.V19.Services.OfflineUserDataJobService.Service do
     name: "google.ads.googleads.v19.services.OfflineUserDataJobService",
     protoc_gen_elixir_version: "0.14.1"
 
-  rpc :CreateOfflineUserDataJob,
-      Google.Ads.Googleads.V19.Services.CreateOfflineUserDataJobRequest,
-      Google.Ads.Googleads.V19.Services.CreateOfflineUserDataJobResponse
+  rpc(
+    :CreateOfflineUserDataJob,
+    Google.Ads.Googleads.V19.Services.CreateOfflineUserDataJobRequest,
+    Google.Ads.Googleads.V19.Services.CreateOfflineUserDataJobResponse
+  )
 
-  rpc :AddOfflineUserDataJobOperations,
-      Google.Ads.Googleads.V19.Services.AddOfflineUserDataJobOperationsRequest,
-      Google.Ads.Googleads.V19.Services.AddOfflineUserDataJobOperationsResponse
+  rpc(
+    :AddOfflineUserDataJobOperations,
+    Google.Ads.Googleads.V19.Services.AddOfflineUserDataJobOperationsRequest,
+    Google.Ads.Googleads.V19.Services.AddOfflineUserDataJobOperationsResponse
+  )
 
-  rpc :RunOfflineUserDataJob,
-      Google.Ads.Googleads.V19.Services.RunOfflineUserDataJobRequest,
-      Google.Longrunning.Operation
+  rpc(
+    :RunOfflineUserDataJob,
+    Google.Ads.Googleads.V19.Services.RunOfflineUserDataJobRequest,
+    Google.Longrunning.Operation
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.OfflineUserDataJobService.Stub do

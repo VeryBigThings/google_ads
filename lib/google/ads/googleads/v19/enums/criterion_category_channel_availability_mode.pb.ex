@@ -3,11 +3,11 @@ defmodule Google.Ads.Googleads.V19.Enums.CriterionCategoryChannelAvailabilityMod
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :UNSPECIFIED, 0
-  field :UNKNOWN, 1
-  field :ALL_CHANNELS, 2
-  field :CHANNEL_TYPE_AND_ALL_SUBTYPES, 3
-  field :CHANNEL_TYPE_AND_SUBSET_SUBTYPES, 4
+  field(:UNSPECIFIED, 0)
+  field(:UNKNOWN, 1)
+  field(:ALL_CHANNELS, 2)
+  field(:CHANNEL_TYPE_AND_ALL_SUBTYPES, 3)
+  field(:CHANNEL_TYPE_AND_SUBSET_SUBTYPES, 4)
 end
 
 defmodule Google.Ads.Googleads.V19.Enums.CriterionCategoryChannelAvailabilityModeEnum do

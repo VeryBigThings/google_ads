@@ -3,12 +3,12 @@ defmodule Google.Ads.Googleads.V19.Enums.CustomAudienceTypeEnum.CustomAudienceTy
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :UNSPECIFIED, 0
-  field :UNKNOWN, 1
-  field :AUTO, 2
-  field :INTEREST, 3
-  field :PURCHASE_INTENT, 4
-  field :SEARCH, 5
+  field(:UNSPECIFIED, 0)
+  field(:UNKNOWN, 1)
+  field(:AUTO, 2)
+  field(:INTEREST, 3)
+  field(:PURCHASE_INTENT, 4)
+  field(:SEARCH, 5)
 end
 
 defmodule Google.Ads.Googleads.V19.Enums.CustomAudienceTypeEnum do

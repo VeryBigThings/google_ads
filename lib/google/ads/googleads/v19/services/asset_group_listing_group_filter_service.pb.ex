@@ -3,19 +3,21 @@ defmodule Google.Ads.Googleads.V19.Services.MutateAssetGroupListingGroupFiltersR
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :customer_id, 1, type: :string, json_name: "customerId", deprecated: false
+  field(:customer_id, 1, type: :string, json_name: "customerId", deprecated: false)
 
-  field :operations, 2,
+  field(:operations, 2,
     repeated: true,
     type: Google.Ads.Googleads.V19.Services.AssetGroupListingGroupFilterOperation,
     deprecated: false
+  )
 
-  field :validate_only, 3, type: :bool, json_name: "validateOnly"
+  field(:validate_only, 3, type: :bool, json_name: "validateOnly")
 
-  field :response_content_type, 4,
+  field(:response_content_type, 4,
     type: Google.Ads.Googleads.V19.Enums.ResponseContentTypeEnum.ResponseContentType,
     json_name: "responseContentType",
     enum: true
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.AssetGroupListingGroupFilterOperation do
@@ -23,19 +25,21 @@ defmodule Google.Ads.Googleads.V19.Services.AssetGroupListingGroupFilterOperatio
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  oneof :operation, 0
+  oneof(:operation, 0)
 
-  field :update_mask, 4, type: Google.Protobuf.FieldMask, json_name: "updateMask"
+  field(:update_mask, 4, type: Google.Protobuf.FieldMask, json_name: "updateMask")
 
-  field :create, 1,
+  field(:create, 1,
     type: Google.Ads.Googleads.V19.Resources.AssetGroupListingGroupFilter,
     oneof: 0
+  )
 
-  field :update, 2,
+  field(:update, 2,
     type: Google.Ads.Googleads.V19.Resources.AssetGroupListingGroupFilter,
     oneof: 0
+  )
 
-  field :remove, 3, type: :string, oneof: 0, deprecated: false
+  field(:remove, 3, type: :string, oneof: 0, deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.MutateAssetGroupListingGroupFiltersResponse do
@@ -43,9 +47,10 @@ defmodule Google.Ads.Googleads.V19.Services.MutateAssetGroupListingGroupFiltersR
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :results, 1,
+  field(:results, 1,
     repeated: true,
     type: Google.Ads.Googleads.V19.Services.MutateAssetGroupListingGroupFilterResult
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.MutateAssetGroupListingGroupFilterResult do
@@ -53,11 +58,12 @@ defmodule Google.Ads.Googleads.V19.Services.MutateAssetGroupListingGroupFilterRe
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
+  field(:resource_name, 1, type: :string, json_name: "resourceName", deprecated: false)
 
-  field :asset_group_listing_group_filter, 2,
+  field(:asset_group_listing_group_filter, 2,
     type: Google.Ads.Googleads.V19.Resources.AssetGroupListingGroupFilter,
     json_name: "assetGroupListingGroupFilter"
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.AssetGroupListingGroupFilterService.Service do
@@ -67,9 +73,11 @@ defmodule Google.Ads.Googleads.V19.Services.AssetGroupListingGroupFilterService.
     name: "google.ads.googleads.v19.services.AssetGroupListingGroupFilterService",
     protoc_gen_elixir_version: "0.14.1"
 
-  rpc :MutateAssetGroupListingGroupFilters,
-      Google.Ads.Googleads.V19.Services.MutateAssetGroupListingGroupFiltersRequest,
-      Google.Ads.Googleads.V19.Services.MutateAssetGroupListingGroupFiltersResponse
+  rpc(
+    :MutateAssetGroupListingGroupFilters,
+    Google.Ads.Googleads.V19.Services.MutateAssetGroupListingGroupFiltersRequest,
+    Google.Ads.Googleads.V19.Services.MutateAssetGroupListingGroupFiltersResponse
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.AssetGroupListingGroupFilterService.Stub do

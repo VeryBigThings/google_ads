@@ -3,12 +3,12 @@ defmodule Google.Ads.Googleads.V19.Errors.ProductLinkInvitationErrorEnum.Product
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :UNSPECIFIED, 0
-  field :UNKNOWN, 1
-  field :INVALID_STATUS, 2
-  field :PERMISSION_DENIED, 3
-  field :NO_INVITATION_REQUIRED, 4
-  field :CUSTOMER_NOT_PERMITTED_TO_CREATE_INVITATION, 5
+  field(:UNSPECIFIED, 0)
+  field(:UNKNOWN, 1)
+  field(:INVALID_STATUS, 2)
+  field(:PERMISSION_DENIED, 3)
+  field(:NO_INVITATION_REQUIRED, 4)
+  field(:CUSTOMER_NOT_PERMITTED_TO_CREATE_INVITATION, 5)
 end
 
 defmodule Google.Ads.Googleads.V19.Errors.ProductLinkInvitationErrorEnum do

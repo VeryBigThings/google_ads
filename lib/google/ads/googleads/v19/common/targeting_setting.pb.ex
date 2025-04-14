@@ -3,10 +3,10 @@ defmodule Google.Ads.Googleads.V19.Common.TargetRestrictionOperation.Operator do
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :UNSPECIFIED, 0
-  field :UNKNOWN, 1
-  field :ADD, 2
-  field :REMOVE, 3
+  field(:UNSPECIFIED, 0)
+  field(:UNKNOWN, 1)
+  field(:ADD, 2)
+  field(:REMOVE, 3)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.TargetingSetting do
@@ -14,15 +14,17 @@ defmodule Google.Ads.Googleads.V19.Common.TargetingSetting do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :target_restrictions, 1,
+  field(:target_restrictions, 1,
     repeated: true,
     type: Google.Ads.Googleads.V19.Common.TargetRestriction,
     json_name: "targetRestrictions"
+  )
 
-  field :target_restriction_operations, 2,
+  field(:target_restriction_operations, 2,
     repeated: true,
     type: Google.Ads.Googleads.V19.Common.TargetRestrictionOperation,
     json_name: "targetRestrictionOperations"
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.TargetRestriction do
@@ -30,12 +32,13 @@ defmodule Google.Ads.Googleads.V19.Common.TargetRestriction do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :targeting_dimension, 1,
+  field(:targeting_dimension, 1,
     type: Google.Ads.Googleads.V19.Enums.TargetingDimensionEnum.TargetingDimension,
     json_name: "targetingDimension",
     enum: true
+  )
 
-  field :bid_only, 3, type: :bool, json_name: "bidOnly"
+  field(:bid_only, 3, type: :bool, json_name: "bidOnly")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.TargetRestrictionOperation do
@@ -43,9 +46,10 @@ defmodule Google.Ads.Googleads.V19.Common.TargetRestrictionOperation do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :operator, 1,
+  field(:operator, 1,
     type: Google.Ads.Googleads.V19.Common.TargetRestrictionOperation.Operator,
     enum: true
+  )
 
-  field :value, 2, type: Google.Ads.Googleads.V19.Common.TargetRestriction
+  field(:value, 2, type: Google.Ads.Googleads.V19.Common.TargetRestriction)
 end

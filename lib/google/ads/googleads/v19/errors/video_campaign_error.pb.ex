@@ -3,9 +3,9 @@ defmodule Google.Ads.Googleads.V19.Errors.VideoCampaignErrorEnum.VideoCampaignEr
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :UNSPECIFIED, 0
-  field :UNKNOWN, 1
-  field :MUTATE_REQUIRES_RESERVATION, 2
+  field(:UNSPECIFIED, 0)
+  field(:UNKNOWN, 1)
+  field(:MUTATE_REQUIRES_RESERVATION, 2)
 end
 
 defmodule Google.Ads.Googleads.V19.Errors.VideoCampaignErrorEnum do

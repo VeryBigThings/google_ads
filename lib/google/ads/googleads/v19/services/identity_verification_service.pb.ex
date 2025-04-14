@@ -3,14 +3,15 @@ defmodule Google.Ads.Googleads.V19.Services.StartIdentityVerificationRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :customer_id, 1, type: :string, json_name: "customerId", deprecated: false
+  field(:customer_id, 1, type: :string, json_name: "customerId", deprecated: false)
 
-  field :verification_program, 2,
+  field(:verification_program, 2,
     type:
       Google.Ads.Googleads.V19.Enums.IdentityVerificationProgramEnum.IdentityVerificationProgram,
     json_name: "verificationProgram",
     enum: true,
     deprecated: false
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.GetIdentityVerificationRequest do
@@ -18,7 +19,7 @@ defmodule Google.Ads.Googleads.V19.Services.GetIdentityVerificationRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :customer_id, 1, type: :string, json_name: "customerId", deprecated: false
+  field(:customer_id, 1, type: :string, json_name: "customerId", deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.GetIdentityVerificationResponse do
@@ -26,10 +27,11 @@ defmodule Google.Ads.Googleads.V19.Services.GetIdentityVerificationResponse do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :identity_verification, 1,
+  field(:identity_verification, 1,
     repeated: true,
     type: Google.Ads.Googleads.V19.Services.IdentityVerification,
     json_name: "identityVerification"
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.IdentityVerification do
@@ -37,19 +39,22 @@ defmodule Google.Ads.Googleads.V19.Services.IdentityVerification do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :verification_program, 1,
+  field(:verification_program, 1,
     type:
       Google.Ads.Googleads.V19.Enums.IdentityVerificationProgramEnum.IdentityVerificationProgram,
     json_name: "verificationProgram",
     enum: true
+  )
 
-  field :identity_verification_requirement, 2,
+  field(:identity_verification_requirement, 2,
     type: Google.Ads.Googleads.V19.Services.IdentityVerificationRequirement,
     json_name: "identityVerificationRequirement"
+  )
 
-  field :verification_progress, 3,
+  field(:verification_progress, 3,
     type: Google.Ads.Googleads.V19.Services.IdentityVerificationProgress,
     json_name: "verificationProgress"
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.IdentityVerificationProgress do
@@ -57,17 +62,19 @@ defmodule Google.Ads.Googleads.V19.Services.IdentityVerificationProgress do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :program_status, 1,
+  field(:program_status, 1,
     type:
       Google.Ads.Googleads.V19.Enums.IdentityVerificationProgramStatusEnum.IdentityVerificationProgramStatus,
     json_name: "programStatus",
     enum: true
+  )
 
-  field :invitation_link_expiration_time, 2,
+  field(:invitation_link_expiration_time, 2,
     type: :string,
     json_name: "invitationLinkExpirationTime"
+  )
 
-  field :action_url, 3, type: :string, json_name: "actionUrl"
+  field(:action_url, 3, type: :string, json_name: "actionUrl")
 end
 
 defmodule Google.Ads.Googleads.V19.Services.IdentityVerificationRequirement do
@@ -75,13 +82,15 @@ defmodule Google.Ads.Googleads.V19.Services.IdentityVerificationRequirement do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :verification_start_deadline_time, 1,
+  field(:verification_start_deadline_time, 1,
     type: :string,
     json_name: "verificationStartDeadlineTime"
+  )
 
-  field :verification_completion_deadline_time, 2,
+  field(:verification_completion_deadline_time, 2,
     type: :string,
     json_name: "verificationCompletionDeadlineTime"
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.IdentityVerificationService.Service do
@@ -91,13 +100,17 @@ defmodule Google.Ads.Googleads.V19.Services.IdentityVerificationService.Service 
     name: "google.ads.googleads.v19.services.IdentityVerificationService",
     protoc_gen_elixir_version: "0.14.1"
 
-  rpc :StartIdentityVerification,
-      Google.Ads.Googleads.V19.Services.StartIdentityVerificationRequest,
-      Google.Protobuf.Empty
+  rpc(
+    :StartIdentityVerification,
+    Google.Ads.Googleads.V19.Services.StartIdentityVerificationRequest,
+    Google.Protobuf.Empty
+  )
 
-  rpc :GetIdentityVerification,
-      Google.Ads.Googleads.V19.Services.GetIdentityVerificationRequest,
-      Google.Ads.Googleads.V19.Services.GetIdentityVerificationResponse
+  rpc(
+    :GetIdentityVerification,
+    Google.Ads.Googleads.V19.Services.GetIdentityVerificationRequest,
+    Google.Ads.Googleads.V19.Services.GetIdentityVerificationResponse
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.IdentityVerificationService.Stub do

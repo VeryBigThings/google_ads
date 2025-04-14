@@ -3,20 +3,22 @@ defmodule Google.Ads.Googleads.V19.Services.MutateCustomerNegativeCriteriaReques
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :customer_id, 1, type: :string, json_name: "customerId", deprecated: false
+  field(:customer_id, 1, type: :string, json_name: "customerId", deprecated: false)
 
-  field :operations, 2,
+  field(:operations, 2,
     repeated: true,
     type: Google.Ads.Googleads.V19.Services.CustomerNegativeCriterionOperation,
     deprecated: false
+  )
 
-  field :partial_failure, 3, type: :bool, json_name: "partialFailure"
-  field :validate_only, 4, type: :bool, json_name: "validateOnly"
+  field(:partial_failure, 3, type: :bool, json_name: "partialFailure")
+  field(:validate_only, 4, type: :bool, json_name: "validateOnly")
 
-  field :response_content_type, 5,
+  field(:response_content_type, 5,
     type: Google.Ads.Googleads.V19.Enums.ResponseContentTypeEnum.ResponseContentType,
     json_name: "responseContentType",
     enum: true
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.CustomerNegativeCriterionOperation do
@@ -24,10 +26,10 @@ defmodule Google.Ads.Googleads.V19.Services.CustomerNegativeCriterionOperation d
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  oneof :operation, 0
+  oneof(:operation, 0)
 
-  field :create, 1, type: Google.Ads.Googleads.V19.Resources.CustomerNegativeCriterion, oneof: 0
-  field :remove, 2, type: :string, oneof: 0, deprecated: false
+  field(:create, 1, type: Google.Ads.Googleads.V19.Resources.CustomerNegativeCriterion, oneof: 0)
+  field(:remove, 2, type: :string, oneof: 0, deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.MutateCustomerNegativeCriteriaResponse do
@@ -35,11 +37,12 @@ defmodule Google.Ads.Googleads.V19.Services.MutateCustomerNegativeCriteriaRespon
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :partial_failure_error, 3, type: Google.Rpc.Status, json_name: "partialFailureError"
+  field(:partial_failure_error, 3, type: Google.Rpc.Status, json_name: "partialFailureError")
 
-  field :results, 2,
+  field(:results, 2,
     repeated: true,
     type: Google.Ads.Googleads.V19.Services.MutateCustomerNegativeCriteriaResult
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.MutateCustomerNegativeCriteriaResult do
@@ -47,11 +50,12 @@ defmodule Google.Ads.Googleads.V19.Services.MutateCustomerNegativeCriteriaResult
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
+  field(:resource_name, 1, type: :string, json_name: "resourceName", deprecated: false)
 
-  field :customer_negative_criterion, 2,
+  field(:customer_negative_criterion, 2,
     type: Google.Ads.Googleads.V19.Resources.CustomerNegativeCriterion,
     json_name: "customerNegativeCriterion"
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.CustomerNegativeCriterionService.Service do
@@ -61,9 +65,11 @@ defmodule Google.Ads.Googleads.V19.Services.CustomerNegativeCriterionService.Ser
     name: "google.ads.googleads.v19.services.CustomerNegativeCriterionService",
     protoc_gen_elixir_version: "0.14.1"
 
-  rpc :MutateCustomerNegativeCriteria,
-      Google.Ads.Googleads.V19.Services.MutateCustomerNegativeCriteriaRequest,
-      Google.Ads.Googleads.V19.Services.MutateCustomerNegativeCriteriaResponse
+  rpc(
+    :MutateCustomerNegativeCriteria,
+    Google.Ads.Googleads.V19.Services.MutateCustomerNegativeCriteriaRequest,
+    Google.Ads.Googleads.V19.Services.MutateCustomerNegativeCriteriaResponse
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.CustomerNegativeCriterionService.Stub do

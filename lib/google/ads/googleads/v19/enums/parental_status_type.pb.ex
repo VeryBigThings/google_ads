@@ -3,11 +3,11 @@ defmodule Google.Ads.Googleads.V19.Enums.ParentalStatusTypeEnum.ParentalStatusTy
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :UNSPECIFIED, 0
-  field :UNKNOWN, 1
-  field :PARENT, 300
-  field :NOT_A_PARENT, 301
-  field :UNDETERMINED, 302
+  field(:UNSPECIFIED, 0)
+  field(:UNKNOWN, 1)
+  field(:PARENT, 300)
+  field(:NOT_A_PARENT, 301)
+  field(:UNDETERMINED, 302)
 end
 
 defmodule Google.Ads.Googleads.V19.Enums.ParentalStatusTypeEnum do

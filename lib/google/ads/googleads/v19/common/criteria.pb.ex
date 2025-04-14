@@ -3,12 +3,13 @@ defmodule Google.Ads.Googleads.V19.Common.KeywordInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :text, 3, type: :string
+  field(:text, 3, type: :string)
 
-  field :match_type, 2,
+  field(:match_type, 2,
     type: Google.Ads.Googleads.V19.Enums.KeywordMatchTypeEnum.KeywordMatchType,
     json_name: "matchType",
     enum: true
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.PlacementInfo do
@@ -16,7 +17,7 @@ defmodule Google.Ads.Googleads.V19.Common.PlacementInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :url, 2, type: :string
+  field(:url, 2, type: :string)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.NegativeKeywordListInfo do
@@ -24,7 +25,7 @@ defmodule Google.Ads.Googleads.V19.Common.NegativeKeywordListInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :shared_set, 1, type: :string, json_name: "sharedSet"
+  field(:shared_set, 1, type: :string, json_name: "sharedSet")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.MobileAppCategoryInfo do
@@ -32,10 +33,11 @@ defmodule Google.Ads.Googleads.V19.Common.MobileAppCategoryInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :mobile_app_category_constant, 2,
+  field(:mobile_app_category_constant, 2,
     type: :string,
     json_name: "mobileAppCategoryConstant",
     deprecated: false
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.MobileApplicationInfo do
@@ -43,8 +45,8 @@ defmodule Google.Ads.Googleads.V19.Common.MobileApplicationInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :app_id, 4, type: :string, json_name: "appId"
-  field :name, 5, type: :string
+  field(:app_id, 4, type: :string, json_name: "appId")
+  field(:name, 5, type: :string)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.LocationInfo do
@@ -52,7 +54,7 @@ defmodule Google.Ads.Googleads.V19.Common.LocationInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :geo_target_constant, 2, type: :string, json_name: "geoTargetConstant"
+  field(:geo_target_constant, 2, type: :string, json_name: "geoTargetConstant")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.DeviceInfo do
@@ -60,7 +62,7 @@ defmodule Google.Ads.Googleads.V19.Common.DeviceInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :type, 1, type: Google.Ads.Googleads.V19.Enums.DeviceEnum.Device, enum: true
+  field(:type, 1, type: Google.Ads.Googleads.V19.Enums.DeviceEnum.Device, enum: true)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.ListingGroupInfo do
@@ -68,16 +70,18 @@ defmodule Google.Ads.Googleads.V19.Common.ListingGroupInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :type, 1,
+  field(:type, 1,
     type: Google.Ads.Googleads.V19.Enums.ListingGroupTypeEnum.ListingGroupType,
     enum: true
+  )
 
-  field :case_value, 2,
+  field(:case_value, 2,
     type: Google.Ads.Googleads.V19.Common.ListingDimensionInfo,
     json_name: "caseValue"
+  )
 
-  field :parent_ad_group_criterion, 4, type: :string, json_name: "parentAdGroupCriterion"
-  field :path, 5, type: Google.Ads.Googleads.V19.Common.ListingDimensionPath
+  field(:parent_ad_group_criterion, 4, type: :string, json_name: "parentAdGroupCriterion")
+  field(:path, 5, type: Google.Ads.Googleads.V19.Common.ListingDimensionPath)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.ListingDimensionPath do
@@ -85,7 +89,10 @@ defmodule Google.Ads.Googleads.V19.Common.ListingDimensionPath do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :dimensions, 1, repeated: true, type: Google.Ads.Googleads.V19.Common.ListingDimensionInfo
+  field(:dimensions, 1,
+    repeated: true,
+    type: Google.Ads.Googleads.V19.Common.ListingDimensionInfo
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.ListingScopeInfo do
@@ -93,7 +100,10 @@ defmodule Google.Ads.Googleads.V19.Common.ListingScopeInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :dimensions, 2, repeated: true, type: Google.Ads.Googleads.V19.Common.ListingDimensionInfo
+  field(:dimensions, 2,
+    repeated: true,
+    type: Google.Ads.Googleads.V19.Common.ListingDimensionInfo
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.ListingDimensionInfo do
@@ -101,122 +111,145 @@ defmodule Google.Ads.Googleads.V19.Common.ListingDimensionInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  oneof :dimension, 0
+  oneof(:dimension, 0)
 
-  field :hotel_id, 2,
+  field(:hotel_id, 2,
     type: Google.Ads.Googleads.V19.Common.HotelIdInfo,
     json_name: "hotelId",
     oneof: 0
+  )
 
-  field :hotel_class, 3,
+  field(:hotel_class, 3,
     type: Google.Ads.Googleads.V19.Common.HotelClassInfo,
     json_name: "hotelClass",
     oneof: 0
+  )
 
-  field :hotel_country_region, 4,
+  field(:hotel_country_region, 4,
     type: Google.Ads.Googleads.V19.Common.HotelCountryRegionInfo,
     json_name: "hotelCountryRegion",
     oneof: 0
+  )
 
-  field :hotel_state, 5,
+  field(:hotel_state, 5,
     type: Google.Ads.Googleads.V19.Common.HotelStateInfo,
     json_name: "hotelState",
     oneof: 0
+  )
 
-  field :hotel_city, 6,
+  field(:hotel_city, 6,
     type: Google.Ads.Googleads.V19.Common.HotelCityInfo,
     json_name: "hotelCity",
     oneof: 0
+  )
 
-  field :product_category, 24,
+  field(:product_category, 24,
     type: Google.Ads.Googleads.V19.Common.ProductCategoryInfo,
     json_name: "productCategory",
     oneof: 0
+  )
 
-  field :product_brand, 15,
+  field(:product_brand, 15,
     type: Google.Ads.Googleads.V19.Common.ProductBrandInfo,
     json_name: "productBrand",
     oneof: 0
+  )
 
-  field :product_channel, 8,
+  field(:product_channel, 8,
     type: Google.Ads.Googleads.V19.Common.ProductChannelInfo,
     json_name: "productChannel",
     oneof: 0
+  )
 
-  field :product_channel_exclusivity, 9,
+  field(:product_channel_exclusivity, 9,
     type: Google.Ads.Googleads.V19.Common.ProductChannelExclusivityInfo,
     json_name: "productChannelExclusivity",
     oneof: 0
+  )
 
-  field :product_condition, 10,
+  field(:product_condition, 10,
     type: Google.Ads.Googleads.V19.Common.ProductConditionInfo,
     json_name: "productCondition",
     oneof: 0
+  )
 
-  field :product_custom_attribute, 16,
+  field(:product_custom_attribute, 16,
     type: Google.Ads.Googleads.V19.Common.ProductCustomAttributeInfo,
     json_name: "productCustomAttribute",
     oneof: 0
+  )
 
-  field :product_item_id, 11,
+  field(:product_item_id, 11,
     type: Google.Ads.Googleads.V19.Common.ProductItemIdInfo,
     json_name: "productItemId",
     oneof: 0
+  )
 
-  field :product_type, 12,
+  field(:product_type, 12,
     type: Google.Ads.Googleads.V19.Common.ProductTypeInfo,
     json_name: "productType",
     oneof: 0
+  )
 
-  field :product_grouping, 17,
+  field(:product_grouping, 17,
     type: Google.Ads.Googleads.V19.Common.ProductGroupingInfo,
     json_name: "productGrouping",
     oneof: 0
+  )
 
-  field :product_labels, 18,
+  field(:product_labels, 18,
     type: Google.Ads.Googleads.V19.Common.ProductLabelsInfo,
     json_name: "productLabels",
     oneof: 0
+  )
 
-  field :product_legacy_condition, 19,
+  field(:product_legacy_condition, 19,
     type: Google.Ads.Googleads.V19.Common.ProductLegacyConditionInfo,
     json_name: "productLegacyCondition",
     oneof: 0
+  )
 
-  field :product_type_full, 20,
+  field(:product_type_full, 20,
     type: Google.Ads.Googleads.V19.Common.ProductTypeFullInfo,
     json_name: "productTypeFull",
     oneof: 0
+  )
 
-  field :activity_id, 21,
+  field(:activity_id, 21,
     type: Google.Ads.Googleads.V19.Common.ActivityIdInfo,
     json_name: "activityId",
     oneof: 0
+  )
 
-  field :activity_rating, 22,
+  field(:activity_rating, 22,
     type: Google.Ads.Googleads.V19.Common.ActivityRatingInfo,
     json_name: "activityRating",
     oneof: 0
+  )
 
-  field :activity_country, 23,
+  field(:activity_country, 23,
     type: Google.Ads.Googleads.V19.Common.ActivityCountryInfo,
     json_name: "activityCountry",
     oneof: 0
+  )
 
-  field :activity_state, 25,
+  field(:activity_state, 25,
     type: Google.Ads.Googleads.V19.Common.ActivityStateInfo,
     json_name: "activityState",
     oneof: 0
+  )
 
-  field :activity_city, 26,
+  field(:activity_city, 26,
     type: Google.Ads.Googleads.V19.Common.ActivityCityInfo,
     json_name: "activityCity",
     oneof: 0
+  )
 
-  field :unknown_listing_dimension, 14,
+  field(:unknown_listing_dimension, 14,
     type: Google.Ads.Googleads.V19.Common.UnknownListingDimensionInfo,
     json_name: "unknownListingDimension",
     oneof: 0
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.HotelIdInfo do
@@ -224,7 +257,7 @@ defmodule Google.Ads.Googleads.V19.Common.HotelIdInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :value, 2, type: :string
+  field(:value, 2, type: :string)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.HotelClassInfo do
@@ -232,7 +265,7 @@ defmodule Google.Ads.Googleads.V19.Common.HotelClassInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :value, 2, type: :int64
+  field(:value, 2, type: :int64)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.HotelCountryRegionInfo do
@@ -240,7 +273,7 @@ defmodule Google.Ads.Googleads.V19.Common.HotelCountryRegionInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :country_region_criterion, 2, type: :string, json_name: "countryRegionCriterion"
+  field(:country_region_criterion, 2, type: :string, json_name: "countryRegionCriterion")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.HotelStateInfo do
@@ -248,7 +281,7 @@ defmodule Google.Ads.Googleads.V19.Common.HotelStateInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :state_criterion, 2, type: :string, json_name: "stateCriterion"
+  field(:state_criterion, 2, type: :string, json_name: "stateCriterion")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.HotelCityInfo do
@@ -256,7 +289,7 @@ defmodule Google.Ads.Googleads.V19.Common.HotelCityInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :city_criterion, 2, type: :string, json_name: "cityCriterion"
+  field(:city_criterion, 2, type: :string, json_name: "cityCriterion")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.ProductCategoryInfo do
@@ -264,11 +297,12 @@ defmodule Google.Ads.Googleads.V19.Common.ProductCategoryInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :category_id, 1, type: :int64, json_name: "categoryId"
+  field(:category_id, 1, type: :int64, json_name: "categoryId")
 
-  field :level, 2,
+  field(:level, 2,
     type: Google.Ads.Googleads.V19.Enums.ProductCategoryLevelEnum.ProductCategoryLevel,
     enum: true
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.ProductBrandInfo do
@@ -276,7 +310,7 @@ defmodule Google.Ads.Googleads.V19.Common.ProductBrandInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :value, 2, type: :string
+  field(:value, 2, type: :string)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.ProductChannelInfo do
@@ -284,9 +318,10 @@ defmodule Google.Ads.Googleads.V19.Common.ProductChannelInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :channel, 1,
+  field(:channel, 1,
     type: Google.Ads.Googleads.V19.Enums.ProductChannelEnum.ProductChannel,
     enum: true
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.ProductChannelExclusivityInfo do
@@ -294,10 +329,11 @@ defmodule Google.Ads.Googleads.V19.Common.ProductChannelExclusivityInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :channel_exclusivity, 1,
+  field(:channel_exclusivity, 1,
     type: Google.Ads.Googleads.V19.Enums.ProductChannelExclusivityEnum.ProductChannelExclusivity,
     json_name: "channelExclusivity",
     enum: true
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.ProductConditionInfo do
@@ -305,9 +341,10 @@ defmodule Google.Ads.Googleads.V19.Common.ProductConditionInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :condition, 1,
+  field(:condition, 1,
     type: Google.Ads.Googleads.V19.Enums.ProductConditionEnum.ProductCondition,
     enum: true
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.ProductCustomAttributeInfo do
@@ -315,12 +352,13 @@ defmodule Google.Ads.Googleads.V19.Common.ProductCustomAttributeInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :value, 3, type: :string
+  field(:value, 3, type: :string)
 
-  field :index, 2,
+  field(:index, 2,
     type:
       Google.Ads.Googleads.V19.Enums.ProductCustomAttributeIndexEnum.ProductCustomAttributeIndex,
     enum: true
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.ProductItemIdInfo do
@@ -328,7 +366,7 @@ defmodule Google.Ads.Googleads.V19.Common.ProductItemIdInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :value, 2, type: :string
+  field(:value, 2, type: :string)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.ProductTypeInfo do
@@ -336,11 +374,12 @@ defmodule Google.Ads.Googleads.V19.Common.ProductTypeInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :value, 3, type: :string
+  field(:value, 3, type: :string)
 
-  field :level, 2,
+  field(:level, 2,
     type: Google.Ads.Googleads.V19.Enums.ProductTypeLevelEnum.ProductTypeLevel,
     enum: true
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.ProductGroupingInfo do
@@ -348,7 +387,7 @@ defmodule Google.Ads.Googleads.V19.Common.ProductGroupingInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :value, 1, type: :string
+  field(:value, 1, type: :string)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.ProductLabelsInfo do
@@ -356,7 +395,7 @@ defmodule Google.Ads.Googleads.V19.Common.ProductLabelsInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :value, 1, type: :string
+  field(:value, 1, type: :string)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.ProductLegacyConditionInfo do
@@ -364,7 +403,7 @@ defmodule Google.Ads.Googleads.V19.Common.ProductLegacyConditionInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :value, 1, type: :string
+  field(:value, 1, type: :string)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.ProductTypeFullInfo do
@@ -372,7 +411,7 @@ defmodule Google.Ads.Googleads.V19.Common.ProductTypeFullInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :value, 1, type: :string
+  field(:value, 1, type: :string)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.UnknownListingDimensionInfo do
@@ -386,9 +425,10 @@ defmodule Google.Ads.Googleads.V19.Common.HotelDateSelectionTypeInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :type, 1,
+  field(:type, 1,
     type: Google.Ads.Googleads.V19.Enums.HotelDateSelectionTypeEnum.HotelDateSelectionType,
     enum: true
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.HotelAdvanceBookingWindowInfo do
@@ -396,8 +436,8 @@ defmodule Google.Ads.Googleads.V19.Common.HotelAdvanceBookingWindowInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :min_days, 3, type: :int64, json_name: "minDays"
-  field :max_days, 4, type: :int64, json_name: "maxDays"
+  field(:min_days, 3, type: :int64, json_name: "minDays")
+  field(:max_days, 4, type: :int64, json_name: "maxDays")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.HotelLengthOfStayInfo do
@@ -405,8 +445,8 @@ defmodule Google.Ads.Googleads.V19.Common.HotelLengthOfStayInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :min_nights, 3, type: :int64, json_name: "minNights"
-  field :max_nights, 4, type: :int64, json_name: "maxNights"
+  field(:min_nights, 3, type: :int64, json_name: "minNights")
+  field(:max_nights, 4, type: :int64, json_name: "maxNights")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.HotelCheckInDateRangeInfo do
@@ -414,8 +454,8 @@ defmodule Google.Ads.Googleads.V19.Common.HotelCheckInDateRangeInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :start_date, 1, type: :string, json_name: "startDate"
-  field :end_date, 2, type: :string, json_name: "endDate"
+  field(:start_date, 1, type: :string, json_name: "startDate")
+  field(:end_date, 2, type: :string, json_name: "endDate")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.HotelCheckInDayInfo do
@@ -423,10 +463,11 @@ defmodule Google.Ads.Googleads.V19.Common.HotelCheckInDayInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :day_of_week, 1,
+  field(:day_of_week, 1,
     type: Google.Ads.Googleads.V19.Enums.DayOfWeekEnum.DayOfWeek,
     json_name: "dayOfWeek",
     enum: true
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.ActivityIdInfo do
@@ -434,7 +475,7 @@ defmodule Google.Ads.Googleads.V19.Common.ActivityIdInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :value, 1, type: :string
+  field(:value, 1, type: :string)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.ActivityRatingInfo do
@@ -442,7 +483,7 @@ defmodule Google.Ads.Googleads.V19.Common.ActivityRatingInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :value, 1, type: :int64
+  field(:value, 1, type: :int64)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.ActivityCountryInfo do
@@ -450,7 +491,7 @@ defmodule Google.Ads.Googleads.V19.Common.ActivityCountryInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :value, 1, type: :string
+  field(:value, 1, type: :string)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.ActivityStateInfo do
@@ -458,7 +499,7 @@ defmodule Google.Ads.Googleads.V19.Common.ActivityStateInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :value, 1, type: :string
+  field(:value, 1, type: :string)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.ActivityCityInfo do
@@ -466,7 +507,7 @@ defmodule Google.Ads.Googleads.V19.Common.ActivityCityInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :value, 1, type: :string
+  field(:value, 1, type: :string)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.InteractionTypeInfo do
@@ -474,9 +515,10 @@ defmodule Google.Ads.Googleads.V19.Common.InteractionTypeInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :type, 1,
+  field(:type, 1,
     type: Google.Ads.Googleads.V19.Enums.InteractionTypeEnum.InteractionType,
     enum: true
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.AdScheduleInfo do
@@ -484,23 +526,26 @@ defmodule Google.Ads.Googleads.V19.Common.AdScheduleInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :start_minute, 1,
+  field(:start_minute, 1,
     type: Google.Ads.Googleads.V19.Enums.MinuteOfHourEnum.MinuteOfHour,
     json_name: "startMinute",
     enum: true
+  )
 
-  field :end_minute, 2,
+  field(:end_minute, 2,
     type: Google.Ads.Googleads.V19.Enums.MinuteOfHourEnum.MinuteOfHour,
     json_name: "endMinute",
     enum: true
+  )
 
-  field :start_hour, 6, type: :int32, json_name: "startHour"
-  field :end_hour, 7, type: :int32, json_name: "endHour"
+  field(:start_hour, 6, type: :int32, json_name: "startHour")
+  field(:end_hour, 7, type: :int32, json_name: "endHour")
 
-  field :day_of_week, 5,
+  field(:day_of_week, 5,
     type: Google.Ads.Googleads.V19.Enums.DayOfWeekEnum.DayOfWeek,
     json_name: "dayOfWeek",
     enum: true
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.AgeRangeInfo do
@@ -508,7 +553,7 @@ defmodule Google.Ads.Googleads.V19.Common.AgeRangeInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :type, 1, type: Google.Ads.Googleads.V19.Enums.AgeRangeTypeEnum.AgeRangeType, enum: true
+  field(:type, 1, type: Google.Ads.Googleads.V19.Enums.AgeRangeTypeEnum.AgeRangeType, enum: true)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.GenderInfo do
@@ -516,7 +561,7 @@ defmodule Google.Ads.Googleads.V19.Common.GenderInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :type, 1, type: Google.Ads.Googleads.V19.Enums.GenderTypeEnum.GenderType, enum: true
+  field(:type, 1, type: Google.Ads.Googleads.V19.Enums.GenderTypeEnum.GenderType, enum: true)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.IncomeRangeInfo do
@@ -524,9 +569,10 @@ defmodule Google.Ads.Googleads.V19.Common.IncomeRangeInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :type, 1,
+  field(:type, 1,
     type: Google.Ads.Googleads.V19.Enums.IncomeRangeTypeEnum.IncomeRangeType,
     enum: true
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.ParentalStatusInfo do
@@ -534,9 +580,10 @@ defmodule Google.Ads.Googleads.V19.Common.ParentalStatusInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :type, 1,
+  field(:type, 1,
     type: Google.Ads.Googleads.V19.Enums.ParentalStatusTypeEnum.ParentalStatusType,
     enum: true
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.YouTubeVideoInfo do
@@ -544,7 +591,7 @@ defmodule Google.Ads.Googleads.V19.Common.YouTubeVideoInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :video_id, 2, type: :string, json_name: "videoId"
+  field(:video_id, 2, type: :string, json_name: "videoId")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.YouTubeChannelInfo do
@@ -552,7 +599,7 @@ defmodule Google.Ads.Googleads.V19.Common.YouTubeChannelInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :channel_id, 2, type: :string, json_name: "channelId"
+  field(:channel_id, 2, type: :string, json_name: "channelId")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.UserListInfo do
@@ -560,7 +607,7 @@ defmodule Google.Ads.Googleads.V19.Common.UserListInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :user_list, 2, type: :string, json_name: "userList"
+  field(:user_list, 2, type: :string, json_name: "userList")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.ProximityInfo do
@@ -568,15 +615,16 @@ defmodule Google.Ads.Googleads.V19.Common.ProximityInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :geo_point, 1, type: Google.Ads.Googleads.V19.Common.GeoPointInfo, json_name: "geoPoint"
-  field :radius, 5, type: :double
+  field(:geo_point, 1, type: Google.Ads.Googleads.V19.Common.GeoPointInfo, json_name: "geoPoint")
+  field(:radius, 5, type: :double)
 
-  field :radius_units, 3,
+  field(:radius_units, 3,
     type: Google.Ads.Googleads.V19.Enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits,
     json_name: "radiusUnits",
     enum: true
+  )
 
-  field :address, 4, type: Google.Ads.Googleads.V19.Common.AddressInfo
+  field(:address, 4, type: Google.Ads.Googleads.V19.Common.AddressInfo)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.GeoPointInfo do
@@ -584,8 +632,8 @@ defmodule Google.Ads.Googleads.V19.Common.GeoPointInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :longitude_in_micro_degrees, 3, type: :int32, json_name: "longitudeInMicroDegrees"
-  field :latitude_in_micro_degrees, 4, type: :int32, json_name: "latitudeInMicroDegrees"
+  field(:longitude_in_micro_degrees, 3, type: :int32, json_name: "longitudeInMicroDegrees")
+  field(:latitude_in_micro_degrees, 4, type: :int32, json_name: "latitudeInMicroDegrees")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.AddressInfo do
@@ -593,13 +641,13 @@ defmodule Google.Ads.Googleads.V19.Common.AddressInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :postal_code, 8, type: :string, json_name: "postalCode"
-  field :province_code, 9, type: :string, json_name: "provinceCode"
-  field :country_code, 10, type: :string, json_name: "countryCode"
-  field :province_name, 11, type: :string, json_name: "provinceName"
-  field :street_address, 12, type: :string, json_name: "streetAddress"
-  field :street_address2, 13, type: :string, json_name: "streetAddress2"
-  field :city_name, 14, type: :string, json_name: "cityName"
+  field(:postal_code, 8, type: :string, json_name: "postalCode")
+  field(:province_code, 9, type: :string, json_name: "provinceCode")
+  field(:country_code, 10, type: :string, json_name: "countryCode")
+  field(:province_name, 11, type: :string, json_name: "provinceName")
+  field(:street_address, 12, type: :string, json_name: "streetAddress")
+  field(:street_address2, 13, type: :string, json_name: "streetAddress2")
+  field(:city_name, 14, type: :string, json_name: "cityName")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.TopicInfo do
@@ -607,8 +655,8 @@ defmodule Google.Ads.Googleads.V19.Common.TopicInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :topic_constant, 3, type: :string, json_name: "topicConstant", deprecated: false
-  field :path, 4, repeated: true, type: :string
+  field(:topic_constant, 3, type: :string, json_name: "topicConstant", deprecated: false)
+  field(:path, 4, repeated: true, type: :string)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.LanguageInfo do
@@ -616,7 +664,7 @@ defmodule Google.Ads.Googleads.V19.Common.LanguageInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :language_constant, 2, type: :string, json_name: "languageConstant"
+  field(:language_constant, 2, type: :string, json_name: "languageConstant")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.IpBlockInfo do
@@ -624,7 +672,7 @@ defmodule Google.Ads.Googleads.V19.Common.IpBlockInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :ip_address, 2, type: :string, json_name: "ipAddress"
+  field(:ip_address, 2, type: :string, json_name: "ipAddress")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.ContentLabelInfo do
@@ -632,9 +680,10 @@ defmodule Google.Ads.Googleads.V19.Common.ContentLabelInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :type, 1,
+  field(:type, 1,
     type: Google.Ads.Googleads.V19.Enums.ContentLabelTypeEnum.ContentLabelType,
     enum: true
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.CarrierInfo do
@@ -642,7 +691,7 @@ defmodule Google.Ads.Googleads.V19.Common.CarrierInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :carrier_constant, 2, type: :string, json_name: "carrierConstant", deprecated: false
+  field(:carrier_constant, 2, type: :string, json_name: "carrierConstant", deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.UserInterestInfo do
@@ -650,7 +699,7 @@ defmodule Google.Ads.Googleads.V19.Common.UserInterestInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :user_interest_category, 2, type: :string, json_name: "userInterestCategory"
+  field(:user_interest_category, 2, type: :string, json_name: "userInterestCategory")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.WebpageInfo do
@@ -658,10 +707,15 @@ defmodule Google.Ads.Googleads.V19.Common.WebpageInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :criterion_name, 3, type: :string, json_name: "criterionName"
-  field :conditions, 2, repeated: true, type: Google.Ads.Googleads.V19.Common.WebpageConditionInfo
-  field :coverage_percentage, 4, type: :double, json_name: "coveragePercentage"
-  field :sample, 5, type: Google.Ads.Googleads.V19.Common.WebpageSampleInfo
+  field(:criterion_name, 3, type: :string, json_name: "criterionName")
+
+  field(:conditions, 2,
+    repeated: true,
+    type: Google.Ads.Googleads.V19.Common.WebpageConditionInfo
+  )
+
+  field(:coverage_percentage, 4, type: :double, json_name: "coveragePercentage")
+  field(:sample, 5, type: Google.Ads.Googleads.V19.Common.WebpageSampleInfo)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.WebpageConditionInfo do
@@ -669,15 +723,17 @@ defmodule Google.Ads.Googleads.V19.Common.WebpageConditionInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :operand, 1,
+  field(:operand, 1,
     type: Google.Ads.Googleads.V19.Enums.WebpageConditionOperandEnum.WebpageConditionOperand,
     enum: true
+  )
 
-  field :operator, 2,
+  field(:operator, 2,
     type: Google.Ads.Googleads.V19.Enums.WebpageConditionOperatorEnum.WebpageConditionOperator,
     enum: true
+  )
 
-  field :argument, 4, type: :string
+  field(:argument, 4, type: :string)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.WebpageSampleInfo do
@@ -685,7 +741,7 @@ defmodule Google.Ads.Googleads.V19.Common.WebpageSampleInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :sample_urls, 1, repeated: true, type: :string, json_name: "sampleUrls"
+  field(:sample_urls, 1, repeated: true, type: :string, json_name: "sampleUrls")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.OperatingSystemVersionInfo do
@@ -693,10 +749,11 @@ defmodule Google.Ads.Googleads.V19.Common.OperatingSystemVersionInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :operating_system_version_constant, 2,
+  field(:operating_system_version_constant, 2,
     type: :string,
     json_name: "operatingSystemVersionConstant",
     deprecated: false
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.AppPaymentModelInfo do
@@ -704,9 +761,10 @@ defmodule Google.Ads.Googleads.V19.Common.AppPaymentModelInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :type, 1,
+  field(:type, 1,
     type: Google.Ads.Googleads.V19.Enums.AppPaymentModelTypeEnum.AppPaymentModelType,
     enum: true
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.MobileDeviceInfo do
@@ -714,10 +772,11 @@ defmodule Google.Ads.Googleads.V19.Common.MobileDeviceInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :mobile_device_constant, 2,
+  field(:mobile_device_constant, 2,
     type: :string,
     json_name: "mobileDeviceConstant",
     deprecated: false
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.CustomAffinityInfo do
@@ -725,7 +784,7 @@ defmodule Google.Ads.Googleads.V19.Common.CustomAffinityInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :custom_affinity, 2, type: :string, json_name: "customAffinity"
+  field(:custom_affinity, 2, type: :string, json_name: "customAffinity")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.CustomIntentInfo do
@@ -733,7 +792,7 @@ defmodule Google.Ads.Googleads.V19.Common.CustomIntentInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :custom_intent, 2, type: :string, json_name: "customIntent"
+  field(:custom_intent, 2, type: :string, json_name: "customIntent")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.LocationGroupInfo do
@@ -741,24 +800,27 @@ defmodule Google.Ads.Googleads.V19.Common.LocationGroupInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :geo_target_constants, 6, repeated: true, type: :string, json_name: "geoTargetConstants"
-  field :radius, 7, type: :int64
+  field(:geo_target_constants, 6, repeated: true, type: :string, json_name: "geoTargetConstants")
+  field(:radius, 7, type: :int64)
 
-  field :radius_units, 4,
+  field(:radius_units, 4,
     type: Google.Ads.Googleads.V19.Enums.LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits,
     json_name: "radiusUnits",
     enum: true
+  )
 
-  field :feed_item_sets, 8, repeated: true, type: :string, json_name: "feedItemSets"
+  field(:feed_item_sets, 8, repeated: true, type: :string, json_name: "feedItemSets")
 
-  field :enable_customer_level_location_asset_set, 9,
+  field(:enable_customer_level_location_asset_set, 9,
     type: :bool,
     json_name: "enableCustomerLevelLocationAssetSet"
+  )
 
-  field :location_group_asset_sets, 10,
+  field(:location_group_asset_sets, 10,
     repeated: true,
     type: :string,
     json_name: "locationGroupAssetSets"
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.CustomAudienceInfo do
@@ -766,7 +828,7 @@ defmodule Google.Ads.Googleads.V19.Common.CustomAudienceInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :custom_audience, 1, type: :string, json_name: "customAudience"
+  field(:custom_audience, 1, type: :string, json_name: "customAudience")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.CombinedAudienceInfo do
@@ -774,7 +836,7 @@ defmodule Google.Ads.Googleads.V19.Common.CombinedAudienceInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :combined_audience, 1, type: :string, json_name: "combinedAudience", deprecated: false
+  field(:combined_audience, 1, type: :string, json_name: "combinedAudience", deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.AudienceInfo do
@@ -782,7 +844,7 @@ defmodule Google.Ads.Googleads.V19.Common.AudienceInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :audience, 1, type: :string
+  field(:audience, 1, type: :string)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.KeywordThemeInfo do
@@ -790,15 +852,16 @@ defmodule Google.Ads.Googleads.V19.Common.KeywordThemeInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  oneof :keyword_theme, 0
+  oneof(:keyword_theme, 0)
 
-  field :keyword_theme_constant, 1,
+  field(:keyword_theme_constant, 1,
     type: :string,
     json_name: "keywordThemeConstant",
     oneof: 0,
     deprecated: false
+  )
 
-  field :free_form_keyword_theme, 2, type: :string, json_name: "freeFormKeywordTheme", oneof: 0
+  field(:free_form_keyword_theme, 2, type: :string, json_name: "freeFormKeywordTheme", oneof: 0)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.LocalServiceIdInfo do
@@ -806,7 +869,7 @@ defmodule Google.Ads.Googleads.V19.Common.LocalServiceIdInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :service_id, 1, type: :string, json_name: "serviceId"
+  field(:service_id, 1, type: :string, json_name: "serviceId")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.SearchThemeInfo do
@@ -814,7 +877,7 @@ defmodule Google.Ads.Googleads.V19.Common.SearchThemeInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :text, 1, type: :string
+  field(:text, 1, type: :string)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.BrandInfo do
@@ -822,21 +885,23 @@ defmodule Google.Ads.Googleads.V19.Common.BrandInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :display_name, 2, type: :string, json_name: "displayName", deprecated: false
-  field :entity_id, 1, type: :string, json_name: "entityId"
-  field :primary_url, 3, type: :string, json_name: "primaryUrl", deprecated: false
+  field(:display_name, 2, type: :string, json_name: "displayName", deprecated: false)
+  field(:entity_id, 1, type: :string, json_name: "entityId")
+  field(:primary_url, 3, type: :string, json_name: "primaryUrl", deprecated: false)
 
-  field :rejection_reason, 4,
+  field(:rejection_reason, 4,
     type:
       Google.Ads.Googleads.V19.Enums.BrandRequestRejectionReasonEnum.BrandRequestRejectionReason,
     json_name: "rejectionReason",
     enum: true,
     deprecated: false
+  )
 
-  field :status, 5,
+  field(:status, 5,
     type: Google.Ads.Googleads.V19.Enums.BrandStateEnum.BrandState,
     enum: true,
     deprecated: false
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.BrandListInfo do
@@ -844,5 +909,5 @@ defmodule Google.Ads.Googleads.V19.Common.BrandListInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :shared_set, 1, type: :string, json_name: "sharedSet"
+  field(:shared_set, 1, type: :string, json_name: "sharedSet")
 end

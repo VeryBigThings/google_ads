@@ -3,42 +3,48 @@ defmodule Google.Ads.Googleads.V19.Resources.AdGroupAsset do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
-  field :ad_group, 2, type: :string, json_name: "adGroup", deprecated: false
-  field :asset, 3, type: :string, deprecated: false
+  field(:resource_name, 1, type: :string, json_name: "resourceName", deprecated: false)
+  field(:ad_group, 2, type: :string, json_name: "adGroup", deprecated: false)
+  field(:asset, 3, type: :string, deprecated: false)
 
-  field :field_type, 4,
+  field(:field_type, 4,
     type: Google.Ads.Googleads.V19.Enums.AssetFieldTypeEnum.AssetFieldType,
     json_name: "fieldType",
     enum: true,
     deprecated: false
+  )
 
-  field :source, 6,
+  field(:source, 6,
     type: Google.Ads.Googleads.V19.Enums.AssetSourceEnum.AssetSource,
     enum: true,
     deprecated: false
+  )
 
-  field :status, 5,
+  field(:status, 5,
     type: Google.Ads.Googleads.V19.Enums.AssetLinkStatusEnum.AssetLinkStatus,
     enum: true
+  )
 
-  field :primary_status, 7,
+  field(:primary_status, 7,
     type: Google.Ads.Googleads.V19.Enums.AssetLinkPrimaryStatusEnum.AssetLinkPrimaryStatus,
     json_name: "primaryStatus",
     enum: true,
     deprecated: false
+  )
 
-  field :primary_status_details, 8,
+  field(:primary_status_details, 8,
     repeated: true,
     type: Google.Ads.Googleads.V19.Common.AssetLinkPrimaryStatusDetails,
     json_name: "primaryStatusDetails",
     deprecated: false
+  )
 
-  field :primary_status_reasons, 9,
+  field(:primary_status_reasons, 9,
     repeated: true,
     type:
       Google.Ads.Googleads.V19.Enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason,
     json_name: "primaryStatusReasons",
     enum: true,
     deprecated: false
+  )
 end

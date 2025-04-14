@@ -3,12 +3,13 @@ defmodule Google.Ads.Googleads.V19.Services.CreateProductLinkInvitationRequest d
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :customer_id, 1, type: :string, json_name: "customerId", deprecated: false
+  field(:customer_id, 1, type: :string, json_name: "customerId", deprecated: false)
 
-  field :product_link_invitation, 2,
+  field(:product_link_invitation, 2,
     type: Google.Ads.Googleads.V19.Resources.ProductLinkInvitation,
     json_name: "productLinkInvitation",
     deprecated: false
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.CreateProductLinkInvitationResponse do
@@ -16,7 +17,7 @@ defmodule Google.Ads.Googleads.V19.Services.CreateProductLinkInvitationResponse 
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
+  field(:resource_name, 1, type: :string, json_name: "resourceName", deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.UpdateProductLinkInvitationRequest do
@@ -24,16 +25,17 @@ defmodule Google.Ads.Googleads.V19.Services.UpdateProductLinkInvitationRequest d
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :customer_id, 1, type: :string, json_name: "customerId", deprecated: false
+  field(:customer_id, 1, type: :string, json_name: "customerId", deprecated: false)
 
-  field :product_link_invitation_status, 2,
+  field(:product_link_invitation_status, 2,
     type:
       Google.Ads.Googleads.V19.Enums.ProductLinkInvitationStatusEnum.ProductLinkInvitationStatus,
     json_name: "productLinkInvitationStatus",
     enum: true,
     deprecated: false
+  )
 
-  field :resource_name, 3, type: :string, json_name: "resourceName", deprecated: false
+  field(:resource_name, 3, type: :string, json_name: "resourceName", deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.UpdateProductLinkInvitationResponse do
@@ -41,7 +43,7 @@ defmodule Google.Ads.Googleads.V19.Services.UpdateProductLinkInvitationResponse 
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
+  field(:resource_name, 1, type: :string, json_name: "resourceName", deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.RemoveProductLinkInvitationRequest do
@@ -49,8 +51,8 @@ defmodule Google.Ads.Googleads.V19.Services.RemoveProductLinkInvitationRequest d
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :customer_id, 1, type: :string, json_name: "customerId", deprecated: false
-  field :resource_name, 2, type: :string, json_name: "resourceName", deprecated: false
+  field(:customer_id, 1, type: :string, json_name: "customerId", deprecated: false)
+  field(:resource_name, 2, type: :string, json_name: "resourceName", deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.RemoveProductLinkInvitationResponse do
@@ -58,7 +60,7 @@ defmodule Google.Ads.Googleads.V19.Services.RemoveProductLinkInvitationResponse 
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
+  field(:resource_name, 1, type: :string, json_name: "resourceName", deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ProductLinkInvitationService.Service do
@@ -68,17 +70,23 @@ defmodule Google.Ads.Googleads.V19.Services.ProductLinkInvitationService.Service
     name: "google.ads.googleads.v19.services.ProductLinkInvitationService",
     protoc_gen_elixir_version: "0.14.1"
 
-  rpc :CreateProductLinkInvitation,
-      Google.Ads.Googleads.V19.Services.CreateProductLinkInvitationRequest,
-      Google.Ads.Googleads.V19.Services.CreateProductLinkInvitationResponse
+  rpc(
+    :CreateProductLinkInvitation,
+    Google.Ads.Googleads.V19.Services.CreateProductLinkInvitationRequest,
+    Google.Ads.Googleads.V19.Services.CreateProductLinkInvitationResponse
+  )
 
-  rpc :UpdateProductLinkInvitation,
-      Google.Ads.Googleads.V19.Services.UpdateProductLinkInvitationRequest,
-      Google.Ads.Googleads.V19.Services.UpdateProductLinkInvitationResponse
+  rpc(
+    :UpdateProductLinkInvitation,
+    Google.Ads.Googleads.V19.Services.UpdateProductLinkInvitationRequest,
+    Google.Ads.Googleads.V19.Services.UpdateProductLinkInvitationResponse
+  )
 
-  rpc :RemoveProductLinkInvitation,
-      Google.Ads.Googleads.V19.Services.RemoveProductLinkInvitationRequest,
-      Google.Ads.Googleads.V19.Services.RemoveProductLinkInvitationResponse
+  rpc(
+    :RemoveProductLinkInvitation,
+    Google.Ads.Googleads.V19.Services.RemoveProductLinkInvitationRequest,
+    Google.Ads.Googleads.V19.Services.RemoveProductLinkInvitationResponse
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.ProductLinkInvitationService.Stub do

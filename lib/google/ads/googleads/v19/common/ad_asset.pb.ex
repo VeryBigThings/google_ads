@@ -3,21 +3,24 @@ defmodule Google.Ads.Googleads.V19.Common.AdTextAsset do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :text, 4, type: :string
+  field(:text, 4, type: :string)
 
-  field :pinned_field, 2,
+  field(:pinned_field, 2,
     type: Google.Ads.Googleads.V19.Enums.ServedAssetFieldTypeEnum.ServedAssetFieldType,
     json_name: "pinnedField",
     enum: true
+  )
 
-  field :asset_performance_label, 5,
+  field(:asset_performance_label, 5,
     type: Google.Ads.Googleads.V19.Enums.AssetPerformanceLabelEnum.AssetPerformanceLabel,
     json_name: "assetPerformanceLabel",
     enum: true
+  )
 
-  field :policy_summary_info, 6,
+  field(:policy_summary_info, 6,
     type: Google.Ads.Googleads.V19.Common.AdAssetPolicySummary,
     json_name: "policySummaryInfo"
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.AdImageAsset do
@@ -25,7 +28,7 @@ defmodule Google.Ads.Googleads.V19.Common.AdImageAsset do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :asset, 2, type: :string
+  field(:asset, 2, type: :string)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.AdVideoAsset do
@@ -33,11 +36,12 @@ defmodule Google.Ads.Googleads.V19.Common.AdVideoAsset do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :asset, 2, type: :string
+  field(:asset, 2, type: :string)
 
-  field :ad_video_asset_info, 4,
+  field(:ad_video_asset_info, 4,
     type: Google.Ads.Googleads.V19.Common.AdVideoAssetInfo,
     json_name: "adVideoAssetInfo"
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.AdVideoAssetInfo do
@@ -45,9 +49,10 @@ defmodule Google.Ads.Googleads.V19.Common.AdVideoAssetInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :ad_video_asset_inventory_preferences, 1,
+  field(:ad_video_asset_inventory_preferences, 1,
     type: Google.Ads.Googleads.V19.Common.AdVideoAssetInventoryPreferences,
     json_name: "adVideoAssetInventoryPreferences"
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.AdVideoAssetInventoryPreferences do
@@ -55,9 +60,9 @@ defmodule Google.Ads.Googleads.V19.Common.AdVideoAssetInventoryPreferences do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :in_feed_preference, 1, type: :bool, json_name: "inFeedPreference"
-  field :in_stream_preference, 2, type: :bool, json_name: "inStreamPreference"
-  field :shorts_preference, 3, type: :bool, json_name: "shortsPreference"
+  field(:in_feed_preference, 1, type: :bool, json_name: "inFeedPreference")
+  field(:in_stream_preference, 2, type: :bool, json_name: "inStreamPreference")
+  field(:shorts_preference, 3, type: :bool, json_name: "shortsPreference")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.AdMediaBundleAsset do
@@ -65,7 +70,7 @@ defmodule Google.Ads.Googleads.V19.Common.AdMediaBundleAsset do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :asset, 2, type: :string
+  field(:asset, 2, type: :string)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.AdDemandGenCarouselCardAsset do
@@ -73,7 +78,7 @@ defmodule Google.Ads.Googleads.V19.Common.AdDemandGenCarouselCardAsset do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :asset, 1, type: :string
+  field(:asset, 1, type: :string)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.AdCallToActionAsset do
@@ -81,7 +86,7 @@ defmodule Google.Ads.Googleads.V19.Common.AdCallToActionAsset do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :asset, 1, type: :string
+  field(:asset, 1, type: :string)
 end
 
 defmodule Google.Ads.Googleads.V19.Common.AdAppDeepLinkAsset do
@@ -89,5 +94,5 @@ defmodule Google.Ads.Googleads.V19.Common.AdAppDeepLinkAsset do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :asset, 1, type: :string
+  field(:asset, 1, type: :string)
 end

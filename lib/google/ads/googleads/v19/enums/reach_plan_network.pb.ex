@@ -3,11 +3,11 @@ defmodule Google.Ads.Googleads.V19.Enums.ReachPlanNetworkEnum.ReachPlanNetwork d
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :UNSPECIFIED, 0
-  field :UNKNOWN, 1
-  field :YOUTUBE, 2
-  field :GOOGLE_VIDEO_PARTNERS, 3
-  field :YOUTUBE_AND_GOOGLE_VIDEO_PARTNERS, 4
+  field(:UNSPECIFIED, 0)
+  field(:UNKNOWN, 1)
+  field(:YOUTUBE, 2)
+  field(:GOOGLE_VIDEO_PARTNERS, 3)
+  field(:YOUTUBE_AND_GOOGLE_VIDEO_PARTNERS, 4)
 end
 
 defmodule Google.Ads.Googleads.V19.Enums.ReachPlanNetworkEnum do

@@ -3,12 +3,12 @@ defmodule Google.Ads.Googleads.V19.Enums.SmartCampaignNotEligibleReasonEnum.Smar
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :UNSPECIFIED, 0
-  field :UNKNOWN, 1
-  field :ACCOUNT_ISSUE, 2
-  field :BILLING_ISSUE, 3
-  field :BUSINESS_PROFILE_LOCATION_REMOVED, 4
-  field :ALL_ADS_DISAPPROVED, 5
+  field(:UNSPECIFIED, 0)
+  field(:UNKNOWN, 1)
+  field(:ACCOUNT_ISSUE, 2)
+  field(:BILLING_ISSUE, 3)
+  field(:BUSINESS_PROFILE_LOCATION_REMOVED, 4)
+  field(:ALL_ADS_DISAPPROVED, 5)
 end
 
 defmodule Google.Ads.Googleads.V19.Enums.SmartCampaignNotEligibleReasonEnum do

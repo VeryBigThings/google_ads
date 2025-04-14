@@ -3,12 +3,13 @@ defmodule Google.Ads.Googleads.V19.Services.CreateDataLinkRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :customer_id, 1, type: :string, json_name: "customerId", deprecated: false
+  field(:customer_id, 1, type: :string, json_name: "customerId", deprecated: false)
 
-  field :data_link, 2,
+  field(:data_link, 2,
     type: Google.Ads.Googleads.V19.Resources.DataLink,
     json_name: "dataLink",
     deprecated: false
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.CreateDataLinkResponse do
@@ -16,7 +17,7 @@ defmodule Google.Ads.Googleads.V19.Services.CreateDataLinkResponse do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
+  field(:resource_name, 1, type: :string, json_name: "resourceName", deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.RemoveDataLinkRequest do
@@ -24,8 +25,8 @@ defmodule Google.Ads.Googleads.V19.Services.RemoveDataLinkRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :customer_id, 1, type: :string, json_name: "customerId", deprecated: false
-  field :resource_name, 2, type: :string, json_name: "resourceName", deprecated: false
+  field(:customer_id, 1, type: :string, json_name: "customerId", deprecated: false)
+  field(:resource_name, 2, type: :string, json_name: "resourceName", deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.RemoveDataLinkResponse do
@@ -33,7 +34,7 @@ defmodule Google.Ads.Googleads.V19.Services.RemoveDataLinkResponse do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
+  field(:resource_name, 1, type: :string, json_name: "resourceName", deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.UpdateDataLinkRequest do
@@ -41,15 +42,16 @@ defmodule Google.Ads.Googleads.V19.Services.UpdateDataLinkRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :customer_id, 1, type: :string, json_name: "customerId", deprecated: false
+  field(:customer_id, 1, type: :string, json_name: "customerId", deprecated: false)
 
-  field :data_link_status, 2,
+  field(:data_link_status, 2,
     type: Google.Ads.Googleads.V19.Enums.DataLinkStatusEnum.DataLinkStatus,
     json_name: "dataLinkStatus",
     enum: true,
     deprecated: false
+  )
 
-  field :resource_name, 3, type: :string, json_name: "resourceName", deprecated: false
+  field(:resource_name, 3, type: :string, json_name: "resourceName", deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.UpdateDataLinkResponse do
@@ -57,7 +59,7 @@ defmodule Google.Ads.Googleads.V19.Services.UpdateDataLinkResponse do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :resource_name, 1, type: :string, json_name: "resourceName", deprecated: false
+  field(:resource_name, 1, type: :string, json_name: "resourceName", deprecated: false)
 end
 
 defmodule Google.Ads.Googleads.V19.Services.DataLinkService.Service do
@@ -67,17 +69,23 @@ defmodule Google.Ads.Googleads.V19.Services.DataLinkService.Service do
     name: "google.ads.googleads.v19.services.DataLinkService",
     protoc_gen_elixir_version: "0.14.1"
 
-  rpc :CreateDataLink,
-      Google.Ads.Googleads.V19.Services.CreateDataLinkRequest,
-      Google.Ads.Googleads.V19.Services.CreateDataLinkResponse
+  rpc(
+    :CreateDataLink,
+    Google.Ads.Googleads.V19.Services.CreateDataLinkRequest,
+    Google.Ads.Googleads.V19.Services.CreateDataLinkResponse
+  )
 
-  rpc :RemoveDataLink,
-      Google.Ads.Googleads.V19.Services.RemoveDataLinkRequest,
-      Google.Ads.Googleads.V19.Services.RemoveDataLinkResponse
+  rpc(
+    :RemoveDataLink,
+    Google.Ads.Googleads.V19.Services.RemoveDataLinkRequest,
+    Google.Ads.Googleads.V19.Services.RemoveDataLinkResponse
+  )
 
-  rpc :UpdateDataLink,
-      Google.Ads.Googleads.V19.Services.UpdateDataLinkRequest,
-      Google.Ads.Googleads.V19.Services.UpdateDataLinkResponse
+  rpc(
+    :UpdateDataLink,
+    Google.Ads.Googleads.V19.Services.UpdateDataLinkRequest,
+    Google.Ads.Googleads.V19.Services.UpdateDataLinkResponse
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Services.DataLinkService.Stub do

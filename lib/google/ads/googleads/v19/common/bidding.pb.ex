@@ -3,7 +3,7 @@ defmodule Google.Ads.Googleads.V19.Common.Commission do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :commission_rate_micros, 2, type: :int64, json_name: "commissionRateMicros"
+  field(:commission_rate_micros, 2, type: :int64, json_name: "commissionRateMicros")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.EnhancedCpc do
@@ -23,7 +23,7 @@ defmodule Google.Ads.Googleads.V19.Common.ManualCpc do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :enhanced_cpc_enabled, 2, type: :bool, json_name: "enhancedCpcEnabled"
+  field(:enhanced_cpc_enabled, 2, type: :bool, json_name: "enhancedCpcEnabled")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.ManualCpm do
@@ -43,9 +43,9 @@ defmodule Google.Ads.Googleads.V19.Common.MaximizeConversions do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :cpc_bid_ceiling_micros, 2, type: :int64, json_name: "cpcBidCeilingMicros"
-  field :cpc_bid_floor_micros, 3, type: :int64, json_name: "cpcBidFloorMicros"
-  field :target_cpa_micros, 4, type: :int64, json_name: "targetCpaMicros"
+  field(:cpc_bid_ceiling_micros, 2, type: :int64, json_name: "cpcBidCeilingMicros")
+  field(:cpc_bid_floor_micros, 3, type: :int64, json_name: "cpcBidFloorMicros")
+  field(:target_cpa_micros, 4, type: :int64, json_name: "targetCpaMicros")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.MaximizeConversionValue do
@@ -53,9 +53,9 @@ defmodule Google.Ads.Googleads.V19.Common.MaximizeConversionValue do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :target_roas, 2, type: :double, json_name: "targetRoas"
-  field :cpc_bid_ceiling_micros, 3, type: :int64, json_name: "cpcBidCeilingMicros"
-  field :cpc_bid_floor_micros, 4, type: :int64, json_name: "cpcBidFloorMicros"
+  field(:target_roas, 2, type: :double, json_name: "targetRoas")
+  field(:cpc_bid_ceiling_micros, 3, type: :int64, json_name: "cpcBidCeilingMicros")
+  field(:cpc_bid_floor_micros, 4, type: :int64, json_name: "cpcBidFloorMicros")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.TargetCpa do
@@ -63,9 +63,9 @@ defmodule Google.Ads.Googleads.V19.Common.TargetCpa do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :target_cpa_micros, 4, type: :int64, json_name: "targetCpaMicros"
-  field :cpc_bid_ceiling_micros, 5, type: :int64, json_name: "cpcBidCeilingMicros"
-  field :cpc_bid_floor_micros, 6, type: :int64, json_name: "cpcBidFloorMicros"
+  field(:target_cpa_micros, 4, type: :int64, json_name: "targetCpaMicros")
+  field(:cpc_bid_ceiling_micros, 5, type: :int64, json_name: "cpcBidCeilingMicros")
+  field(:cpc_bid_floor_micros, 6, type: :int64, json_name: "cpcBidFloorMicros")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.TargetCpm do
@@ -73,12 +73,13 @@ defmodule Google.Ads.Googleads.V19.Common.TargetCpm do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  oneof :goal, 0
+  oneof(:goal, 0)
 
-  field :target_frequency_goal, 1,
+  field(:target_frequency_goal, 1,
     type: Google.Ads.Googleads.V19.Common.TargetCpmTargetFrequencyGoal,
     json_name: "targetFrequencyGoal",
     oneof: 0
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.TargetCpmTargetFrequencyGoal do
@@ -86,12 +87,13 @@ defmodule Google.Ads.Googleads.V19.Common.TargetCpmTargetFrequencyGoal do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :target_count, 1, type: :int64, json_name: "targetCount"
+  field(:target_count, 1, type: :int64, json_name: "targetCount")
 
-  field :time_unit, 2,
+  field(:time_unit, 2,
     type: Google.Ads.Googleads.V19.Enums.TargetFrequencyTimeUnitEnum.TargetFrequencyTimeUnit,
     json_name: "timeUnit",
     enum: true
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.TargetImpressionShare do
@@ -99,13 +101,14 @@ defmodule Google.Ads.Googleads.V19.Common.TargetImpressionShare do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :location, 1,
+  field(:location, 1,
     type:
       Google.Ads.Googleads.V19.Enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation,
     enum: true
+  )
 
-  field :location_fraction_micros, 4, type: :int64, json_name: "locationFractionMicros"
-  field :cpc_bid_ceiling_micros, 5, type: :int64, json_name: "cpcBidCeilingMicros"
+  field(:location_fraction_micros, 4, type: :int64, json_name: "locationFractionMicros")
+  field(:cpc_bid_ceiling_micros, 5, type: :int64, json_name: "cpcBidCeilingMicros")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.TargetRoas do
@@ -113,9 +116,9 @@ defmodule Google.Ads.Googleads.V19.Common.TargetRoas do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :target_roas, 4, type: :double, json_name: "targetRoas"
-  field :cpc_bid_ceiling_micros, 5, type: :int64, json_name: "cpcBidCeilingMicros"
-  field :cpc_bid_floor_micros, 6, type: :int64, json_name: "cpcBidFloorMicros"
+  field(:target_roas, 4, type: :double, json_name: "targetRoas")
+  field(:cpc_bid_ceiling_micros, 5, type: :int64, json_name: "cpcBidCeilingMicros")
+  field(:cpc_bid_floor_micros, 6, type: :int64, json_name: "cpcBidFloorMicros")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.TargetSpend do
@@ -123,8 +126,8 @@ defmodule Google.Ads.Googleads.V19.Common.TargetSpend do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :target_spend_micros, 3, type: :int64, json_name: "targetSpendMicros", deprecated: true
-  field :cpc_bid_ceiling_micros, 4, type: :int64, json_name: "cpcBidCeilingMicros"
+  field(:target_spend_micros, 3, type: :int64, json_name: "targetSpendMicros", deprecated: true)
+  field(:cpc_bid_ceiling_micros, 4, type: :int64, json_name: "cpcBidCeilingMicros")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.PercentCpc do
@@ -132,8 +135,8 @@ defmodule Google.Ads.Googleads.V19.Common.PercentCpc do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :cpc_bid_ceiling_micros, 3, type: :int64, json_name: "cpcBidCeilingMicros"
-  field :enhanced_cpc_enabled, 4, type: :bool, json_name: "enhancedCpcEnabled"
+  field(:cpc_bid_ceiling_micros, 3, type: :int64, json_name: "cpcBidCeilingMicros")
+  field(:enhanced_cpc_enabled, 4, type: :bool, json_name: "enhancedCpcEnabled")
 end
 
 defmodule Google.Ads.Googleads.V19.Common.FixedCpm do
@@ -141,14 +144,15 @@ defmodule Google.Ads.Googleads.V19.Common.FixedCpm do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  oneof :goal_info, 0
+  oneof(:goal_info, 0)
 
-  field :goal, 1, type: Google.Ads.Googleads.V19.Enums.FixedCpmGoalEnum.FixedCpmGoal, enum: true
+  field(:goal, 1, type: Google.Ads.Googleads.V19.Enums.FixedCpmGoalEnum.FixedCpmGoal, enum: true)
 
-  field :target_frequency_info, 2,
+  field(:target_frequency_info, 2,
     type: Google.Ads.Googleads.V19.Common.FixedCpmTargetFrequencyGoalInfo,
     json_name: "targetFrequencyInfo",
     oneof: 0
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.FixedCpmTargetFrequencyGoalInfo do
@@ -156,13 +160,14 @@ defmodule Google.Ads.Googleads.V19.Common.FixedCpmTargetFrequencyGoalInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :target_count, 1, type: :int64, json_name: "targetCount"
+  field(:target_count, 1, type: :int64, json_name: "targetCount")
 
-  field :time_unit, 2,
+  field(:time_unit, 2,
     type:
       Google.Ads.Googleads.V19.Enums.FixedCpmTargetFrequencyTimeUnitEnum.FixedCpmTargetFrequencyTimeUnit,
     json_name: "timeUnit",
     enum: true
+  )
 end
 
 defmodule Google.Ads.Googleads.V19.Common.TargetCpv do

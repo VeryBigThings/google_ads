@@ -3,16 +3,16 @@ defmodule Google.Ads.Googleads.V19.Enums.UserListStringRuleItemOperatorEnum.User
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :UNSPECIFIED, 0
-  field :UNKNOWN, 1
-  field :CONTAINS, 2
-  field :EQUALS, 3
-  field :STARTS_WITH, 4
-  field :ENDS_WITH, 5
-  field :NOT_EQUALS, 6
-  field :NOT_CONTAINS, 7
-  field :NOT_STARTS_WITH, 8
-  field :NOT_ENDS_WITH, 9
+  field(:UNSPECIFIED, 0)
+  field(:UNKNOWN, 1)
+  field(:CONTAINS, 2)
+  field(:EQUALS, 3)
+  field(:STARTS_WITH, 4)
+  field(:ENDS_WITH, 5)
+  field(:NOT_EQUALS, 6)
+  field(:NOT_CONTAINS, 7)
+  field(:NOT_STARTS_WITH, 8)
+  field(:NOT_ENDS_WITH, 9)
 end
 
 defmodule Google.Ads.Googleads.V19.Enums.UserListStringRuleItemOperatorEnum do

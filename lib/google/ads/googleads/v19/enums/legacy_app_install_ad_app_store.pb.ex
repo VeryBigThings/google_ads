@@ -3,13 +3,13 @@ defmodule Google.Ads.Googleads.V19.Enums.LegacyAppInstallAdAppStoreEnum.LegacyAp
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
-  field :UNSPECIFIED, 0
-  field :UNKNOWN, 1
-  field :APPLE_APP_STORE, 2
-  field :GOOGLE_PLAY, 3
-  field :WINDOWS_STORE, 4
-  field :WINDOWS_PHONE_STORE, 5
-  field :CN_APP_STORE, 6
+  field(:UNSPECIFIED, 0)
+  field(:UNKNOWN, 1)
+  field(:APPLE_APP_STORE, 2)
+  field(:GOOGLE_PLAY, 3)
+  field(:WINDOWS_STORE, 4)
+  field(:WINDOWS_PHONE_STORE, 5)
+  field(:CN_APP_STORE, 6)
 end
 
 defmodule Google.Ads.Googleads.V19.Enums.LegacyAppInstallAdAppStoreEnum do
