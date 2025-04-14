@@ -21,7 +21,6 @@ defmodule GoogleAds.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:google_protos, "~> 0.4"},
       {:grpc, github: "VeryBigThings/grpc", branch: "elixir-grpc-master-4"}
     ]
   end
