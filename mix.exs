@@ -22,11 +22,11 @@ defmodule GoogleAds.MixProject do
   defp deps do
     [
       {:protobuf, "~> 0.14.1"},
-      {:google_protos, "~> 0.1"},
-      {:cowboy,
-       git: "https://github.com/elixir-grpc/cowboy.git", tag: "grpc-2.6.3", override: true},
-      {:cowlib,
-       git: "https://github.com/elixir-grpc/cowlib.git", tag: "grpc-2.7.3", override: true},
+      {:google_protos, "~> 0.4"},
+      # {:cowboy,
+      #  git: "https://github.com/elixir-grpc/cowboy.git", tag: "grpc-2.6.3", override: true},
+      # {:cowlib,
+      #  git: "https://github.com/elixir-grpc/cowlib.git", tag: "grpc-2.7.3", override: true},
       {:grpc, github: "VeryBigThings/grpc"}
 
       # {:dep_from_hexpm, "~> 0.3.0"},
