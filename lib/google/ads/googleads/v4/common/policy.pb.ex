@@ -2,11 +2,6 @@ defmodule Google.Ads.Googleads.V4.Common.PolicyViolationKey do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          policy_name: Google.Protobuf.StringValue.t() | nil,
-          violating_text: Google.Protobuf.StringValue.t() | nil
-        }
-  defstruct [:policy_name, :violating_text]
 
   field :policy_name, 1, type: Google.Protobuf.StringValue
   field :violating_text, 2, type: Google.Protobuf.StringValue
@@ -16,11 +11,6 @@ defmodule Google.Ads.Googleads.V4.Common.PolicyValidationParameter do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          ignorable_policy_topics: [Google.Protobuf.StringValue.t()],
-          exempt_policy_violation_keys: [Google.Ads.Googleads.V4.Common.PolicyViolationKey.t()]
-        }
-  defstruct [:ignorable_policy_topics, :exempt_policy_violation_keys]
 
   field :ignorable_policy_topics, 1, repeated: true, type: Google.Protobuf.StringValue
 
@@ -33,13 +23,6 @@ defmodule Google.Ads.Googleads.V4.Common.PolicyTopicEntry do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          topic: Google.Protobuf.StringValue.t() | nil,
-          type: Google.Ads.Googleads.V4.Enums.PolicyTopicEntryTypeEnum.PolicyTopicEntryType.t(),
-          evidences: [Google.Ads.Googleads.V4.Common.PolicyTopicEvidence.t()],
-          constraints: [Google.Ads.Googleads.V4.Common.PolicyTopicConstraint.t()]
-        }
-  defstruct [:topic, :type, :evidences, :constraints]
 
   field :topic, 1, type: Google.Protobuf.StringValue
 
@@ -58,10 +41,6 @@ defmodule Google.Ads.Googleads.V4.Common.PolicyTopicEvidence.TextList do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          texts: [Google.Protobuf.StringValue.t()]
-        }
-  defstruct [:texts]
 
   field :texts, 1, repeated: true, type: Google.Protobuf.StringValue
 end
@@ -70,10 +49,6 @@ defmodule Google.Ads.Googleads.V4.Common.PolicyTopicEvidence.WebsiteList do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          websites: [Google.Protobuf.StringValue.t()]
-        }
-  defstruct [:websites]
 
   field :websites, 1, repeated: true, type: Google.Protobuf.StringValue
 end
@@ -82,10 +57,6 @@ defmodule Google.Ads.Googleads.V4.Common.PolicyTopicEvidence.DestinationTextList
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          destination_texts: [Google.Protobuf.StringValue.t()]
-        }
-  defstruct [:destination_texts]
 
   field :destination_texts, 1, repeated: true, type: Google.Protobuf.StringValue
 end
@@ -94,14 +65,6 @@ defmodule Google.Ads.Googleads.V4.Common.PolicyTopicEvidence.DestinationMismatch
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          url_types: [
-            [
-              Google.Ads.Googleads.V4.Enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType.t()
-            ]
-          ]
-        }
-  defstruct [:url_types]
 
   field :url_types, 1,
     repeated: true,
@@ -114,14 +77,6 @@ defmodule Google.Ads.Googleads.V4.Common.PolicyTopicEvidence.DestinationNotWorki
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          reason: {atom, any},
-          expanded_url: Google.Protobuf.StringValue.t() | nil,
-          device:
-            Google.Ads.Googleads.V4.Enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice.t(),
-          last_checked_date_time: Google.Protobuf.StringValue.t() | nil
-        }
-  defstruct [:reason, :expanded_url, :device, :last_checked_date_time]
 
   oneof :reason, 0
 
@@ -147,10 +102,6 @@ defmodule Google.Ads.Googleads.V4.Common.PolicyTopicEvidence do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          value: {atom, any}
-        }
-  defstruct [:value]
 
   oneof :value, 0
 
@@ -178,11 +129,6 @@ defmodule Google.Ads.Googleads.V4.Common.PolicyTopicConstraint.CountryConstraint
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          total_targeted_countries: Google.Protobuf.Int32Value.t() | nil,
-          countries: [Google.Ads.Googleads.V4.Common.PolicyTopicConstraint.CountryConstraint.t()]
-        }
-  defstruct [:total_targeted_countries, :countries]
 
   field :total_targeted_countries, 1, type: Google.Protobuf.Int32Value
 
@@ -195,18 +141,12 @@ defmodule Google.Ads.Googleads.V4.Common.PolicyTopicConstraint.ResellerConstrain
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end
 
 defmodule Google.Ads.Googleads.V4.Common.PolicyTopicConstraint.CountryConstraint do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          country_criterion: Google.Protobuf.StringValue.t() | nil
-        }
-  defstruct [:country_criterion]
 
   field :country_criterion, 1, type: Google.Protobuf.StringValue
 end
@@ -215,10 +155,6 @@ defmodule Google.Ads.Googleads.V4.Common.PolicyTopicConstraint do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          value: {atom, any}
-        }
-  defstruct [:value]
 
   oneof :value, 0
 

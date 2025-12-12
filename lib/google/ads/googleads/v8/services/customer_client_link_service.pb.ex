@@ -2,11 +2,7 @@ defmodule Google.Ads.Googleads.V8.Services.GetCustomerClientLinkRequest do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          resource_name: String.t()
-        }
 
-  defstruct [:resource_name]
 
   field :resource_name, 1, required: true, type: :string
 end
@@ -15,13 +11,7 @@ defmodule Google.Ads.Googleads.V8.Services.MutateCustomerClientLinkRequest do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          customer_id: String.t(),
-          operation: Google.Ads.Googleads.V8.Services.CustomerClientLinkOperation.t() | nil,
-          validate_only: boolean
-        }
 
-  defstruct [:customer_id, :operation, :validate_only]
 
   field :customer_id, 1, required: true, type: :string
 
@@ -36,12 +26,7 @@ defmodule Google.Ads.Googleads.V8.Services.CustomerClientLinkOperation do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          operation: {atom, any},
-          update_mask: Google.Protobuf.FieldMask.t() | nil
-        }
 
-  defstruct [:operation, :update_mask]
 
   oneof :operation, 0
   field :update_mask, 4, optional: true, type: Google.Protobuf.FieldMask
@@ -61,11 +46,7 @@ defmodule Google.Ads.Googleads.V8.Services.MutateCustomerClientLinkResponse do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          result: Google.Ads.Googleads.V8.Services.MutateCustomerClientLinkResult.t() | nil
-        }
 
-  defstruct [:result]
 
   field :result, 1,
     optional: true,
@@ -76,11 +57,7 @@ defmodule Google.Ads.Googleads.V8.Services.MutateCustomerClientLinkResult do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          resource_name: String.t()
-        }
 
-  defstruct [:resource_name]
 
   field :resource_name, 1, optional: true, type: :string
 end

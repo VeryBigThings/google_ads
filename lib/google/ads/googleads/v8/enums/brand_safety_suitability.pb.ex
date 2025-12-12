@@ -2,14 +2,6 @@ defmodule Google.Ads.Googleads.V8.Enums.BrandSafetySuitabilityEnum.BrandSafetySu
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :EXPANDED_INVENTORY
-          | :STANDARD_INVENTORY
-          | :LIMITED_INVENTORY
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -24,7 +16,5 @@ end
 defmodule Google.Ads.Googleads.V8.Enums.BrandSafetySuitabilityEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

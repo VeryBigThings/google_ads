@@ -2,8 +2,6 @@ defmodule Google.Ads.Googleads.V7.Enums.ProductBiddingCategoryStatusEnum.Product
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t :: integer | :UNSPECIFIED | :UNKNOWN | :ACTIVE | :OBSOLETE
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :ACTIVE, 2
@@ -14,6 +12,4 @@ defmodule Google.Ads.Googleads.V7.Enums.ProductBiddingCategoryStatusEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

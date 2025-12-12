@@ -2,15 +2,6 @@ defmodule Google.Ads.Googleads.V8.Errors.InternalErrorEnum.InternalError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :INTERNAL_ERROR
-          | :ERROR_CODE_NOT_PUBLISHED
-          | :TRANSIENT_ERROR
-          | :DEADLINE_EXCEEDED
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -27,7 +18,5 @@ end
 defmodule Google.Ads.Googleads.V8.Errors.InternalErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

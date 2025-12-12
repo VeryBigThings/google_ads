@@ -2,11 +2,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Services.GetAccountLinkRequest d
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t()
-        }
 
-  defstruct [:resource_name]
 
   field :resource_name, 1, type: :string
 end
@@ -15,12 +11,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Services.CreateAccountLinkReques
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          customer_id: String.t(),
-          account_link: Google.Ads.Googleads.V8Availabilities.Resources.AccountLink.t() | nil
-        }
 
-  defstruct [:customer_id, :account_link]
 
   field :customer_id, 1, type: :string
   field :account_link, 2, type: Google.Ads.Googleads.V8Availabilities.Resources.AccountLink
@@ -30,11 +21,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Services.CreateAccountLinkRespon
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t()
-        }
 
-  defstruct [:resource_name]
 
   field :resource_name, 1, type: :string
 end
@@ -43,14 +30,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateAccountLinkReques
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          customer_id: String.t(),
-          operation: Google.Ads.Googleads.V8Availabilities.Services.AccountLinkOperation.t() | nil,
-          partial_failure: boolean,
-          validate_only: boolean
-        }
 
-  defstruct [:customer_id, :operation, :partial_failure, :validate_only]
 
   field :customer_id, 1, type: :string
   field :operation, 2, type: Google.Ads.Googleads.V8Availabilities.Services.AccountLinkOperation
@@ -62,12 +42,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Services.AccountLinkOperation do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          operation: {atom, any},
-          update_mask: Google.Protobuf.FieldMask.t() | nil
-        }
 
-  defstruct [:operation, :update_mask]
 
   oneof :operation, 0
 
@@ -80,11 +55,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateAccountLinkRespon
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          result: Google.Ads.Googleads.V8Availabilities.Services.MutateAccountLinkResult.t() | nil
-        }
 
-  defstruct [:result]
 
   field :result, 1, type: Google.Ads.Googleads.V8Availabilities.Services.MutateAccountLinkResult
 end
@@ -93,11 +64,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateAccountLinkResult
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t()
-        }
 
-  defstruct [:resource_name]
 
   field :resource_name, 1, type: :string
 end

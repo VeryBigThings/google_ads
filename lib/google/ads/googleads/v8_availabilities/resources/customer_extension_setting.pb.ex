@@ -2,15 +2,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.CustomerExtensionSetti
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          extension_type: Google.Ads.Googleads.V8Availabilities.Enums.ExtensionTypeEnum.ExtensionType.t(),
-          extension_feed_items: [String.t()],
-          device:
-            Google.Ads.Googleads.V8Availabilities.Enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice.t()
-        }
 
-  defstruct [:resource_name, :extension_type, :extension_feed_items, :device]
 
   field :resource_name, 1, type: :string
 

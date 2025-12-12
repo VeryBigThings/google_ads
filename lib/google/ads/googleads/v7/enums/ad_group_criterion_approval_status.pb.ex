@@ -2,15 +2,6 @@ defmodule Google.Ads.Googleads.V7.Enums.AdGroupCriterionApprovalStatusEnum.AdGro
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :APPROVED
-          | :DISAPPROVED
-          | :PENDING_REVIEW
-          | :UNDER_REVIEW
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :APPROVED, 2
@@ -23,6 +14,4 @@ defmodule Google.Ads.Googleads.V7.Enums.AdGroupCriterionApprovalStatusEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

@@ -2,16 +2,6 @@ defmodule Google.Ads.Googleads.V8.Enums.CampaignDraftStatusEnum.CampaignDraftSta
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :PROPOSED
-          | :REMOVED
-          | :PROMOTING
-          | :PROMOTED
-          | :PROMOTE_FAILED
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -30,7 +20,5 @@ end
 defmodule Google.Ads.Googleads.V8.Enums.CampaignDraftStatusEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

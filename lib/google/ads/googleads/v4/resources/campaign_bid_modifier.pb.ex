@@ -2,14 +2,6 @@ defmodule Google.Ads.Googleads.V4.Resources.CampaignBidModifier do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          criterion: {atom, any},
-          resource_name: String.t(),
-          campaign: Google.Protobuf.StringValue.t() | nil,
-          criterion_id: Google.Protobuf.Int64Value.t() | nil,
-          bid_modifier: Google.Protobuf.DoubleValue.t() | nil
-        }
-  defstruct [:criterion, :resource_name, :campaign, :criterion_id, :bid_modifier]
 
   oneof :criterion, 0
 

@@ -2,8 +2,6 @@ defmodule Google.Ads.Googleads.V7.Enums.SimulationModificationMethodEnum.Simulat
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t :: integer | :UNSPECIFIED | :UNKNOWN | :UNIFORM | :DEFAULT | :SCALING
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :UNIFORM, 2
@@ -15,6 +13,4 @@ defmodule Google.Ads.Googleads.V7.Enums.SimulationModificationMethodEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

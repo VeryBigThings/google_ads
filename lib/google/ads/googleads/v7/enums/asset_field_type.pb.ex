@@ -2,23 +2,6 @@ defmodule Google.Ads.Googleads.V7.Enums.AssetFieldTypeEnum.AssetFieldType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :HEADLINE
-          | :DESCRIPTION
-          | :MANDATORY_AD_TEXT
-          | :MARKETING_IMAGE
-          | :MEDIA_BUNDLE
-          | :YOUTUBE_VIDEO
-          | :BOOK_ON_GOOGLE
-          | :LEAD_FORM
-          | :PROMOTION
-          | :CALLOUT
-          | :STRUCTURED_SNIPPET
-          | :SITELINK
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :HEADLINE, 2
@@ -39,6 +22,4 @@ defmodule Google.Ads.Googleads.V7.Enums.AssetFieldTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

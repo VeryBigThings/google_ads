@@ -2,8 +2,6 @@ defmodule Google.Ads.Googleads.V7.Enums.AppUrlOperatingSystemTypeEnum.AppUrlOper
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t :: integer | :UNSPECIFIED | :UNKNOWN | :IOS | :ANDROID
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :IOS, 2
@@ -14,6 +12,4 @@ defmodule Google.Ads.Googleads.V7.Enums.AppUrlOperatingSystemTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

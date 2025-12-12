@@ -2,51 +2,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.Customer do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          id: integer,
-          descriptive_name: String.t(),
-          currency_code: String.t(),
-          time_zone: String.t(),
-          tracking_url_template: String.t(),
-          final_url_suffix: String.t(),
-          auto_tagging_enabled: boolean,
-          has_partners_badge: boolean,
-          manager: boolean,
-          test_account: boolean,
-          call_reporting_setting:
-            Google.Ads.Googleads.V8Availabilities.Resources.CallReportingSetting.t() | nil,
-          conversion_tracking_setting:
-            Google.Ads.Googleads.V8Availabilities.Resources.ConversionTrackingSetting.t() | nil,
-          remarketing_setting: Google.Ads.Googleads.V8Availabilities.Resources.RemarketingSetting.t() | nil,
-          pay_per_conversion_eligibility_failure_reasons: [
-            [
-              Google.Ads.Googleads.V8Availabilities.Enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason.t()
-            ]
-          ],
-          optimization_score: float | :infinity | :negative_infinity | :nan,
-          optimization_score_weight: float | :infinity | :negative_infinity | :nan
-        }
 
-  defstruct [
-    :resource_name,
-    :id,
-    :descriptive_name,
-    :currency_code,
-    :time_zone,
-    :tracking_url_template,
-    :final_url_suffix,
-    :auto_tagging_enabled,
-    :has_partners_badge,
-    :manager,
-    :test_account,
-    :call_reporting_setting,
-    :conversion_tracking_setting,
-    :remarketing_setting,
-    :pay_per_conversion_eligibility_failure_reasons,
-    :optimization_score,
-    :optimization_score_weight
-  ]
 
   field :resource_name, 1, type: :string
   field :id, 19, type: :int64
@@ -80,13 +36,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.CallReportingSetting d
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          call_reporting_enabled: boolean,
-          call_conversion_reporting_enabled: boolean,
-          call_conversion_action: String.t()
-        }
 
-  defstruct [:call_reporting_enabled, :call_conversion_reporting_enabled, :call_conversion_action]
 
   field :call_reporting_enabled, 10, type: :bool
   field :call_conversion_reporting_enabled, 11, type: :bool
@@ -97,12 +47,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.ConversionTrackingSett
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          conversion_tracking_id: integer,
-          cross_account_conversion_tracking_id: integer
-        }
 
-  defstruct [:conversion_tracking_id, :cross_account_conversion_tracking_id]
 
   field :conversion_tracking_id, 3, type: :int64
   field :cross_account_conversion_tracking_id, 4, type: :int64
@@ -112,11 +57,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.RemarketingSetting do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          google_global_site_tag: String.t()
-        }
 
-  defstruct [:google_global_site_tag]
 
   field :google_global_site_tag, 2, type: :string
 end

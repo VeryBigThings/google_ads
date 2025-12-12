@@ -2,21 +2,6 @@ defmodule Google.Ads.Googleads.V8Availabilities.Errors.CampaignDraftErrorEnum.Ca
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :DUPLICATE_DRAFT_NAME
-          | :INVALID_STATUS_TRANSITION_FROM_REMOVED
-          | :INVALID_STATUS_TRANSITION_FROM_PROMOTED
-          | :INVALID_STATUS_TRANSITION_FROM_PROMOTE_FAILED
-          | :CUSTOMER_CANNOT_CREATE_DRAFT
-          | :CAMPAIGN_CANNOT_CREATE_DRAFT
-          | :INVALID_DRAFT_CHANGE
-          | :INVALID_STATUS_TRANSITION
-          | :MAX_NUMBER_OF_DRAFTS_PER_CAMPAIGN_REACHED
-          | :LIST_ERRORS_FOR_PROMOTED_DRAFT_ONLY
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -45,7 +30,5 @@ end
 defmodule Google.Ads.Googleads.V8Availabilities.Errors.CampaignDraftErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

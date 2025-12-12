@@ -1,8 +1,6 @@
 defmodule Google.Ads.Googleads.V8Availabilities.Enums.ConversionCustomVariableStatusEnum.ConversionCustomVariableStatus do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
-  @type t :: integer | :UNSPECIFIED | :UNKNOWN | :ACTIVATION_NEEDED | :ENABLED | :PAUSED
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -17,7 +15,5 @@ end
 defmodule Google.Ads.Googleads.V8Availabilities.Enums.ConversionCustomVariableStatusEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

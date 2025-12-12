@@ -2,19 +2,6 @@ defmodule Google.Ads.Googleads.V4.Enums.AppPlaceholderFieldEnum.AppPlaceholderFi
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :STORE
-          | :ID
-          | :LINK_TEXT
-          | :URL
-          | :FINAL_URLS
-          | :FINAL_MOBILE_URLS
-          | :TRACKING_URL
-          | :FINAL_URL_SUFFIX
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :STORE, 2
@@ -31,6 +18,4 @@ defmodule Google.Ads.Googleads.V4.Enums.AppPlaceholderFieldEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

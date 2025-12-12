@@ -2,13 +2,6 @@ defmodule Google.Ads.Googleads.V7.Services.UploadConversionAdjustmentsRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          customer_id: String.t(),
-          conversion_adjustments: [Google.Ads.Googleads.V7.Services.ConversionAdjustment.t()],
-          partial_failure: boolean,
-          validate_only: boolean
-        }
-  defstruct [:customer_id, :conversion_adjustments, :partial_failure, :validate_only]
 
   field :customer_id, 1, type: :string
 
@@ -24,11 +17,6 @@ defmodule Google.Ads.Googleads.V7.Services.UploadConversionAdjustmentsResponse d
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          partial_failure_error: Google.Rpc.Status.t() | nil,
-          results: [Google.Ads.Googleads.V7.Services.ConversionAdjustmentResult.t()]
-        }
-  defstruct [:partial_failure_error, :results]
 
   field :partial_failure_error, 1, type: Google.Rpc.Status
 
@@ -41,21 +29,6 @@ defmodule Google.Ads.Googleads.V7.Services.ConversionAdjustment do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          conversion_identifier: {atom, any},
-          conversion_action: String.t(),
-          adjustment_date_time: String.t(),
-          adjustment_type:
-            Google.Ads.Googleads.V7.Enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType.t(),
-          restatement_value: Google.Ads.Googleads.V7.Services.RestatementValue.t() | nil
-        }
-  defstruct [
-    :conversion_identifier,
-    :conversion_action,
-    :adjustment_date_time,
-    :adjustment_type,
-    :restatement_value
-  ]
 
   oneof :conversion_identifier, 0
 
@@ -79,11 +52,6 @@ defmodule Google.Ads.Googleads.V7.Services.RestatementValue do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          adjusted_value: float | :infinity | :negative_infinity | :nan,
-          currency_code: String.t()
-        }
-  defstruct [:adjusted_value, :currency_code]
 
   field :adjusted_value, 3, type: :double
   field :currency_code, 4, type: :string
@@ -93,11 +61,6 @@ defmodule Google.Ads.Googleads.V7.Services.GclidDateTimePair do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          gclid: String.t(),
-          conversion_date_time: String.t()
-        }
-  defstruct [:gclid, :conversion_date_time]
 
   field :gclid, 3, type: :string
   field :conversion_date_time, 4, type: :string
@@ -107,14 +70,6 @@ defmodule Google.Ads.Googleads.V7.Services.ConversionAdjustmentResult do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          conversion_identifier: {atom, any},
-          conversion_action: String.t(),
-          adjustment_date_time: String.t(),
-          adjustment_type:
-            Google.Ads.Googleads.V7.Enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType.t()
-        }
-  defstruct [:conversion_identifier, :conversion_action, :adjustment_date_time, :adjustment_type]
 
   oneof :conversion_identifier, 0
 

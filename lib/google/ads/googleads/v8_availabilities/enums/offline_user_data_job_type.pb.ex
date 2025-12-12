@@ -2,15 +2,6 @@ defmodule Google.Ads.Googleads.V8Availabilities.Enums.OfflineUserDataJobTypeEnum
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :STORE_SALES_UPLOAD_FIRST_PARTY
-          | :STORE_SALES_UPLOAD_THIRD_PARTY
-          | :CUSTOMER_MATCH_USER_LIST
-          | :CUSTOMER_MATCH_WITH_ATTRIBUTES
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -27,7 +18,5 @@ end
 defmodule Google.Ads.Googleads.V8Availabilities.Enums.OfflineUserDataJobTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

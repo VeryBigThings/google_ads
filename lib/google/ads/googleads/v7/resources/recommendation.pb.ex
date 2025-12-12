@@ -2,13 +2,6 @@ defmodule Google.Ads.Googleads.V7.Resources.Recommendation.RecommendationImpact 
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          base_metrics:
-            Google.Ads.Googleads.V7.Resources.Recommendation.RecommendationMetrics.t() | nil,
-          potential_metrics:
-            Google.Ads.Googleads.V7.Resources.Recommendation.RecommendationMetrics.t() | nil
-        }
-  defstruct [:base_metrics, :potential_metrics]
 
   field :base_metrics, 1,
     type: Google.Ads.Googleads.V7.Resources.Recommendation.RecommendationMetrics
@@ -21,14 +14,6 @@ defmodule Google.Ads.Googleads.V7.Resources.Recommendation.RecommendationMetrics
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          impressions: float | :infinity | :negative_infinity | :nan,
-          clicks: float | :infinity | :negative_infinity | :nan,
-          cost_micros: integer,
-          conversions: float | :infinity | :negative_infinity | :nan,
-          video_views: float | :infinity | :negative_infinity | :nan
-        }
-  defstruct [:impressions, :clicks, :cost_micros, :conversions, :video_views]
 
   field :impressions, 6, type: :double
   field :clicks, 7, type: :double
@@ -41,11 +26,6 @@ defmodule Google.Ads.Googleads.V7.Resources.Recommendation.CampaignBudgetRecomme
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          budget_amount_micros: integer,
-          impact: Google.Ads.Googleads.V7.Resources.Recommendation.RecommendationImpact.t() | nil
-        }
-  defstruct [:budget_amount_micros, :impact]
 
   field :budget_amount_micros, 3, type: :int64
   field :impact, 2, type: Google.Ads.Googleads.V7.Resources.Recommendation.RecommendationImpact
@@ -55,14 +35,6 @@ defmodule Google.Ads.Googleads.V7.Resources.Recommendation.CampaignBudgetRecomme
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          current_budget_amount_micros: integer,
-          recommended_budget_amount_micros: integer,
-          budget_options: [
-            Google.Ads.Googleads.V7.Resources.Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption.t()
-          ]
-        }
-  defstruct [:current_budget_amount_micros, :recommended_budget_amount_micros, :budget_options]
 
   field :current_budget_amount_micros, 7, type: :int64
   field :recommended_budget_amount_micros, 8, type: :int64
@@ -77,11 +49,6 @@ defmodule Google.Ads.Googleads.V7.Resources.Recommendation.KeywordRecommendation
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          keyword: Google.Ads.Googleads.V7.Common.KeywordInfo.t() | nil,
-          recommended_cpc_bid_micros: integer
-        }
-  defstruct [:keyword, :recommended_cpc_bid_micros]
 
   field :keyword, 1, type: Google.Ads.Googleads.V7.Common.KeywordInfo
   field :recommended_cpc_bid_micros, 3, type: :int64
@@ -91,10 +58,6 @@ defmodule Google.Ads.Googleads.V7.Resources.Recommendation.CallExtensionRecommen
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          recommended_extensions: [Google.Ads.Googleads.V7.Common.CallFeedItem.t()]
-        }
-  defstruct [:recommended_extensions]
 
   field :recommended_extensions, 1,
     repeated: true,
@@ -105,12 +68,6 @@ defmodule Google.Ads.Googleads.V7.Resources.Recommendation.TextAdRecommendation 
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          ad: Google.Ads.Googleads.V7.Resources.Ad.t() | nil,
-          creation_date: String.t(),
-          auto_apply_date: String.t()
-        }
-  defstruct [:ad, :creation_date, :auto_apply_date]
 
   field :ad, 1, type: Google.Ads.Googleads.V7.Resources.Ad
   field :creation_date, 4, type: :string
@@ -121,22 +78,12 @@ defmodule Google.Ads.Googleads.V7.Resources.Recommendation.OptimizeAdRotationRec
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end
 
 defmodule Google.Ads.Googleads.V7.Resources.Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          goal:
-            Google.Ads.Googleads.V7.Enums.TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal.t(),
-          target_cpa_micros: integer,
-          required_campaign_budget_amount_micros: integer,
-          impact: Google.Ads.Googleads.V7.Resources.Recommendation.RecommendationImpact.t() | nil
-        }
-  defstruct [:goal, :target_cpa_micros, :required_campaign_budget_amount_micros, :impact]
 
   field :goal, 1,
     type:
@@ -152,13 +99,6 @@ defmodule Google.Ads.Googleads.V7.Resources.Recommendation.TargetCpaOptInRecomme
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          options: [
-            Google.Ads.Googleads.V7.Resources.Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption.t()
-          ],
-          recommended_target_cpa_micros: integer
-        }
-  defstruct [:options, :recommended_target_cpa_micros]
 
   field :options, 1,
     repeated: true,
@@ -172,13 +112,6 @@ defmodule Google.Ads.Googleads.V7.Resources.Recommendation.MoveUnusedBudgetRecom
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          excess_campaign_budget: String.t(),
-          budget_recommendation:
-            Google.Ads.Googleads.V7.Resources.Recommendation.CampaignBudgetRecommendation.t()
-            | nil
-        }
-  defstruct [:excess_campaign_budget, :budget_recommendation]
 
   field :excess_campaign_budget, 3, type: :string
 
@@ -190,18 +123,12 @@ defmodule Google.Ads.Googleads.V7.Resources.Recommendation.EnhancedCpcOptInRecom
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end
 
 defmodule Google.Ads.Googleads.V7.Resources.Recommendation.MaximizeConversionsOptInRecommendation do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          recommended_budget_amount_micros: integer
-        }
-  defstruct [:recommended_budget_amount_micros]
 
   field :recommended_budget_amount_micros, 2, type: :int64
 end
@@ -210,11 +137,6 @@ defmodule Google.Ads.Googleads.V7.Resources.Recommendation.TargetRoasOptInRecomm
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          recommended_target_roas: float | :infinity | :negative_infinity | :nan,
-          required_campaign_budget_amount_micros: integer
-        }
-  defstruct [:recommended_target_roas, :required_campaign_budget_amount_micros]
 
   field :recommended_target_roas, 1, type: :double
   field :required_campaign_budget_amount_micros, 2, type: :int64
@@ -224,18 +146,12 @@ defmodule Google.Ads.Googleads.V7.Resources.Recommendation.SearchPartnersOptInRe
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end
 
 defmodule Google.Ads.Googleads.V7.Resources.Recommendation.SitelinkExtensionRecommendation do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          recommended_extensions: [Google.Ads.Googleads.V7.Common.SitelinkFeedItem.t()]
-        }
-  defstruct [:recommended_extensions]
 
   field :recommended_extensions, 1,
     repeated: true,
@@ -246,10 +162,6 @@ defmodule Google.Ads.Googleads.V7.Resources.Recommendation.MaximizeClicksOptInRe
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          recommended_budget_amount_micros: integer
-        }
-  defstruct [:recommended_budget_amount_micros]
 
   field :recommended_budget_amount_micros, 2, type: :int64
 end
@@ -258,10 +170,6 @@ defmodule Google.Ads.Googleads.V7.Resources.Recommendation.CalloutExtensionRecom
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          recommended_extensions: [Google.Ads.Googleads.V7.Common.CalloutFeedItem.t()]
-        }
-  defstruct [:recommended_extensions]
 
   field :recommended_extensions, 1,
     repeated: true,
@@ -272,12 +180,6 @@ defmodule Google.Ads.Googleads.V7.Resources.Recommendation.KeywordMatchTypeRecom
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          keyword: Google.Ads.Googleads.V7.Common.KeywordInfo.t() | nil,
-          recommended_match_type:
-            Google.Ads.Googleads.V7.Enums.KeywordMatchTypeEnum.KeywordMatchType.t()
-        }
-  defstruct [:keyword, :recommended_match_type]
 
   field :keyword, 1, type: Google.Ads.Googleads.V7.Common.KeywordInfo
 
@@ -290,10 +192,6 @@ defmodule Google.Ads.Googleads.V7.Resources.Recommendation.ResponsiveSearchAdRec
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          ad: Google.Ads.Googleads.V7.Resources.Ad.t() | nil
-        }
-  defstruct [:ad]
 
   field :ad, 1, type: Google.Ads.Googleads.V7.Resources.Ad
 end
@@ -302,26 +200,6 @@ defmodule Google.Ads.Googleads.V7.Resources.Recommendation do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          recommendation: {atom, any},
-          resource_name: String.t(),
-          type: Google.Ads.Googleads.V7.Enums.RecommendationTypeEnum.RecommendationType.t(),
-          impact: Google.Ads.Googleads.V7.Resources.Recommendation.RecommendationImpact.t() | nil,
-          campaign_budget: String.t(),
-          campaign: String.t(),
-          ad_group: String.t(),
-          dismissed: boolean
-        }
-  defstruct [
-    :recommendation,
-    :resource_name,
-    :type,
-    :impact,
-    :campaign_budget,
-    :campaign,
-    :ad_group,
-    :dismissed
-  ]
 
   oneof :recommendation, 0
 

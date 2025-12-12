@@ -2,27 +2,6 @@ defmodule Google.Ads.Googleads.V8.Errors.FunctionErrorEnum.FunctionError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :INVALID_FUNCTION_FORMAT
-          | :DATA_TYPE_MISMATCH
-          | :INVALID_CONJUNCTION_OPERANDS
-          | :INVALID_NUMBER_OF_OPERANDS
-          | :INVALID_OPERAND_TYPE
-          | :INVALID_OPERATOR
-          | :INVALID_REQUEST_CONTEXT_TYPE
-          | :INVALID_FUNCTION_FOR_CALL_PLACEHOLDER
-          | :INVALID_FUNCTION_FOR_PLACEHOLDER
-          | :INVALID_OPERAND
-          | :MISSING_CONSTANT_OPERAND_VALUE
-          | :INVALID_CONSTANT_OPERAND_VALUE
-          | :INVALID_NESTING
-          | :MULTIPLE_FEED_IDS_NOT_SUPPORTED
-          | :INVALID_FUNCTION_FOR_FEED_WITH_FIXED_SCHEMA
-          | :INVALID_ATTRIBUTE_NAME
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -63,7 +42,5 @@ end
 defmodule Google.Ads.Googleads.V8.Errors.FunctionErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

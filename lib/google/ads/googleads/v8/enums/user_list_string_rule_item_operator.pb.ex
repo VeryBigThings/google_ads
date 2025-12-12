@@ -2,19 +2,6 @@ defmodule Google.Ads.Googleads.V8.Enums.UserListStringRuleItemOperatorEnum.UserL
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :CONTAINS
-          | :EQUALS
-          | :STARTS_WITH
-          | :ENDS_WITH
-          | :NOT_EQUALS
-          | :NOT_CONTAINS
-          | :NOT_STARTS_WITH
-          | :NOT_ENDS_WITH
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -39,7 +26,5 @@ end
 defmodule Google.Ads.Googleads.V8.Enums.UserListStringRuleItemOperatorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

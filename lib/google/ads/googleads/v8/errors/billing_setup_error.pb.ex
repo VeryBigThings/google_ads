@@ -2,28 +2,6 @@ defmodule Google.Ads.Googleads.V8.Errors.BillingSetupErrorEnum.BillingSetupError
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :CANNOT_USE_EXISTING_AND_NEW_ACCOUNT
-          | :CANNOT_REMOVE_STARTED_BILLING_SETUP
-          | :CANNOT_CHANGE_BILLING_TO_SAME_PAYMENTS_ACCOUNT
-          | :BILLING_SETUP_NOT_PERMITTED_FOR_CUSTOMER_STATUS
-          | :INVALID_PAYMENTS_ACCOUNT
-          | :BILLING_SETUP_NOT_PERMITTED_FOR_CUSTOMER_CATEGORY
-          | :INVALID_START_TIME_TYPE
-          | :THIRD_PARTY_ALREADY_HAS_BILLING
-          | :BILLING_SETUP_IN_PROGRESS
-          | :NO_SIGNUP_PERMISSION
-          | :CHANGE_OF_BILL_TO_IN_PROGRESS
-          | :PAYMENTS_PROFILE_NOT_FOUND
-          | :PAYMENTS_ACCOUNT_NOT_FOUND
-          | :PAYMENTS_PROFILE_INELIGIBLE
-          | :PAYMENTS_ACCOUNT_INELIGIBLE
-          | :CUSTOMER_NEEDS_INTERNAL_APPROVAL
-          | :PAYMENTS_ACCOUNT_INELIGIBLE_CURRENCY_CODE_MISMATCH
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -66,7 +44,5 @@ end
 defmodule Google.Ads.Googleads.V8.Errors.BillingSetupErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

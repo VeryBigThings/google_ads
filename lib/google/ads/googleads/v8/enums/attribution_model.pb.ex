@@ -2,18 +2,6 @@ defmodule Google.Ads.Googleads.V8.Enums.AttributionModelEnum.AttributionModel do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :EXTERNAL
-          | :GOOGLE_ADS_LAST_CLICK
-          | :GOOGLE_SEARCH_ATTRIBUTION_FIRST_CLICK
-          | :GOOGLE_SEARCH_ATTRIBUTION_LINEAR
-          | :GOOGLE_SEARCH_ATTRIBUTION_TIME_DECAY
-          | :GOOGLE_SEARCH_ATTRIBUTION_POSITION_BASED
-          | :GOOGLE_SEARCH_ATTRIBUTION_DATA_DRIVEN
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -36,7 +24,5 @@ end
 defmodule Google.Ads.Googleads.V8.Enums.AttributionModelEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

@@ -2,11 +2,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.AccessibleBiddingStrat
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          target_roas: float | :infinity | :negative_infinity | :nan
-        }
 
-  defstruct [:target_roas]
 
   field :target_roas, 1, type: :double
 end
@@ -15,11 +11,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.AccessibleBiddingStrat
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          target_cpa: integer
-        }
 
-  defstruct [:target_cpa]
 
   field :target_cpa, 1, type: :int64
 end
@@ -28,11 +20,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.AccessibleBiddingStrat
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          target_cpa_micros: integer
-        }
 
-  defstruct [:target_cpa_micros]
 
   field :target_cpa_micros, 1, type: :int64
 end
@@ -41,12 +29,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.AccessibleBiddingStrat
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          target_spend_micros: integer,
-          cpc_bid_ceiling_micros: integer
-        }
 
-  defstruct [:target_spend_micros, :cpc_bid_ceiling_micros]
 
   field :target_spend_micros, 1, type: :int64, deprecated: true
   field :cpc_bid_ceiling_micros, 2, type: :int64
@@ -56,14 +39,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.AccessibleBiddingStrat
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          location:
-            Google.Ads.Googleads.V8Availabilities.Enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation.t(),
-          location_fraction_micros: integer,
-          cpc_bid_ceiling_micros: integer
-        }
 
-  defstruct [:location, :location_fraction_micros, :cpc_bid_ceiling_micros]
 
   field :location, 1,
     type:
@@ -78,11 +54,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.AccessibleBiddingStrat
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          target_roas: float | :infinity | :negative_infinity | :nan
-        }
 
-  defstruct [:target_roas]
 
   field :target_roas, 1, type: :double
 end
@@ -91,25 +63,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.AccessibleBiddingStrat
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          scheme: {atom, any},
-          resource_name: String.t(),
-          id: integer,
-          name: String.t(),
-          type: Google.Ads.Googleads.V8Availabilities.Enums.BiddingStrategyTypeEnum.BiddingStrategyType.t(),
-          owner_customer_id: integer,
-          owner_descriptive_name: String.t()
-        }
 
-  defstruct [
-    :scheme,
-    :resource_name,
-    :id,
-    :name,
-    :type,
-    :owner_customer_id,
-    :owner_descriptive_name
-  ]
 
   oneof :scheme, 0
 

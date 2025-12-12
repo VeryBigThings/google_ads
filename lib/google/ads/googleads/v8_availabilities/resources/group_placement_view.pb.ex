@@ -2,15 +2,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.GroupPlacementView do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          placement: String.t(),
-          display_name: String.t(),
-          target_url: String.t(),
-          placement_type: Google.Ads.Googleads.V8Availabilities.Enums.PlacementTypeEnum.PlacementType.t()
-        }
 
-  defstruct [:resource_name, :placement, :display_name, :target_url, :placement_type]
 
   field :resource_name, 1, type: :string
   field :placement, 6, type: :string

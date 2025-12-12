@@ -2,23 +2,6 @@ defmodule Google.Ads.Googleads.V8.Enums.MimeTypeEnum.MimeType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :IMAGE_JPEG
-          | :IMAGE_GIF
-          | :IMAGE_PNG
-          | :FLASH
-          | :TEXT_HTML
-          | :PDF
-          | :MSWORD
-          | :MSEXCEL
-          | :RTF
-          | :AUDIO_WAV
-          | :AUDIO_MP3
-          | :HTML5_AD_ZIP
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -51,7 +34,5 @@ end
 defmodule Google.Ads.Googleads.V8.Enums.MimeTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

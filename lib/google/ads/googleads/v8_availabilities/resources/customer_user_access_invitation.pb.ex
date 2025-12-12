@@ -2,24 +2,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.CustomerUserAccessInvi
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          invitation_id: integer,
-          access_role: Google.Ads.Googleads.V8Availabilities.Enums.AccessRoleEnum.AccessRole.t(),
-          email_address: String.t(),
-          creation_date_time: String.t(),
-          invitation_status:
-            Google.Ads.Googleads.V8Availabilities.Enums.AccessInvitationStatusEnum.AccessInvitationStatus.t()
-        }
 
-  defstruct [
-    :resource_name,
-    :invitation_id,
-    :access_role,
-    :email_address,
-    :creation_date_time,
-    :invitation_status
-  ]
 
   field :resource_name, 1, type: :string
   field :invitation_id, 2, type: :int64

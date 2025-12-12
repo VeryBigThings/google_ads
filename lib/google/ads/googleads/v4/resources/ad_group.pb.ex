@@ -2,67 +2,6 @@ defmodule Google.Ads.Googleads.V4.Resources.AdGroup do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          id: Google.Protobuf.Int64Value.t() | nil,
-          name: Google.Protobuf.StringValue.t() | nil,
-          status: Google.Ads.Googleads.V4.Enums.AdGroupStatusEnum.AdGroupStatus.t(),
-          type: Google.Ads.Googleads.V4.Enums.AdGroupTypeEnum.AdGroupType.t(),
-          ad_rotation_mode:
-            Google.Ads.Googleads.V4.Enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode.t(),
-          base_ad_group: Google.Protobuf.StringValue.t() | nil,
-          tracking_url_template: Google.Protobuf.StringValue.t() | nil,
-          url_custom_parameters: [Google.Ads.Googleads.V4.Common.CustomParameter.t()],
-          campaign: Google.Protobuf.StringValue.t() | nil,
-          cpc_bid_micros: Google.Protobuf.Int64Value.t() | nil,
-          cpm_bid_micros: Google.Protobuf.Int64Value.t() | nil,
-          target_cpa_micros: Google.Protobuf.Int64Value.t() | nil,
-          cpv_bid_micros: Google.Protobuf.Int64Value.t() | nil,
-          target_cpm_micros: Google.Protobuf.Int64Value.t() | nil,
-          target_roas: Google.Protobuf.DoubleValue.t() | nil,
-          percent_cpc_bid_micros: Google.Protobuf.Int64Value.t() | nil,
-          explorer_auto_optimizer_setting:
-            Google.Ads.Googleads.V4.Common.ExplorerAutoOptimizerSetting.t() | nil,
-          display_custom_bid_dimension:
-            Google.Ads.Googleads.V4.Enums.TargetingDimensionEnum.TargetingDimension.t(),
-          final_url_suffix: Google.Protobuf.StringValue.t() | nil,
-          targeting_setting: Google.Ads.Googleads.V4.Common.TargetingSetting.t() | nil,
-          effective_target_cpa_micros: Google.Protobuf.Int64Value.t() | nil,
-          effective_target_cpa_source:
-            Google.Ads.Googleads.V4.Enums.BiddingSourceEnum.BiddingSource.t(),
-          effective_target_roas: Google.Protobuf.DoubleValue.t() | nil,
-          effective_target_roas_source:
-            Google.Ads.Googleads.V4.Enums.BiddingSourceEnum.BiddingSource.t(),
-          labels: [Google.Protobuf.StringValue.t()]
-        }
-  defstruct [
-    :resource_name,
-    :id,
-    :name,
-    :status,
-    :type,
-    :ad_rotation_mode,
-    :base_ad_group,
-    :tracking_url_template,
-    :url_custom_parameters,
-    :campaign,
-    :cpc_bid_micros,
-    :cpm_bid_micros,
-    :target_cpa_micros,
-    :cpv_bid_micros,
-    :target_cpm_micros,
-    :target_roas,
-    :percent_cpc_bid_micros,
-    :explorer_auto_optimizer_setting,
-    :display_custom_bid_dimension,
-    :final_url_suffix,
-    :targeting_setting,
-    :effective_target_cpa_micros,
-    :effective_target_cpa_source,
-    :effective_target_roas,
-    :effective_target_roas_source,
-    :labels
-  ]
 
   field :resource_name, 1, type: :string
   field :id, 3, type: Google.Protobuf.Int64Value

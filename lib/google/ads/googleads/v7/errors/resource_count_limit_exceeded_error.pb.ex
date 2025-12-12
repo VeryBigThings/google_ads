@@ -2,20 +2,6 @@ defmodule Google.Ads.Googleads.V7.Errors.ResourceCountLimitExceededErrorEnum.Res
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :ACCOUNT_LIMIT
-          | :CAMPAIGN_LIMIT
-          | :ADGROUP_LIMIT
-          | :AD_GROUP_AD_LIMIT
-          | :AD_GROUP_CRITERION_LIMIT
-          | :SHARED_SET_LIMIT
-          | :MATCHING_FUNCTION_LIMIT
-          | :RESPONSE_ROW_LIMIT_EXCEEDED
-          | :RESOURCE_LIMIT
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :ACCOUNT_LIMIT, 2
@@ -33,6 +19,4 @@ defmodule Google.Ads.Googleads.V7.Errors.ResourceCountLimitExceededErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

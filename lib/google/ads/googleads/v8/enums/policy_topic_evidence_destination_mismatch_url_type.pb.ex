@@ -2,16 +2,6 @@ defmodule Google.Ads.Googleads.V8.Enums.PolicyTopicEvidenceDestinationMismatchUr
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :DISPLAY_URL
-          | :FINAL_URL
-          | :FINAL_MOBILE_URL
-          | :TRACKING_URL
-          | :MOBILE_TRACKING_URL
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -30,7 +20,5 @@ end
 defmodule Google.Ads.Googleads.V8.Enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

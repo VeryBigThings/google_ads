@@ -1,8 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Enums.OptimizationGoalTypeEnum.OptimizationGoalType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
-  @type t :: integer | :UNSPECIFIED | :UNKNOWN | :CALL_CLICKS | :DRIVING_DIRECTIONS
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -15,7 +13,5 @@ end
 defmodule Google.Ads.Googleads.V8.Enums.OptimizationGoalTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

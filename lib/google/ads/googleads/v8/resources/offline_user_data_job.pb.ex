@@ -2,20 +2,7 @@ defmodule Google.Ads.Googleads.V8.Resources.OfflineUserDataJob do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          metadata: {atom, any},
-          resource_name: String.t(),
-          id: integer,
-          external_id: integer,
-          type:
-            Google.Ads.Googleads.V8.Enums.OfflineUserDataJobTypeEnum.OfflineUserDataJobType.t(),
-          status:
-            Google.Ads.Googleads.V8.Enums.OfflineUserDataJobStatusEnum.OfflineUserDataJobStatus.t(),
-          failure_reason:
-            Google.Ads.Googleads.V8.Enums.OfflineUserDataJobFailureReasonEnum.OfflineUserDataJobFailureReason.t()
-        }
 
-  defstruct [:metadata, :resource_name, :id, :external_id, :type, :status, :failure_reason]
 
   oneof :metadata, 0
   field :resource_name, 1, optional: true, type: :string

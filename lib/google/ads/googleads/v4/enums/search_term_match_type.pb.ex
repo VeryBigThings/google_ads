@@ -2,16 +2,6 @@ defmodule Google.Ads.Googleads.V4.Enums.SearchTermMatchTypeEnum.SearchTermMatchT
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :BROAD
-          | :EXACT
-          | :PHRASE
-          | :NEAR_EXACT
-          | :NEAR_PHRASE
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :BROAD, 2
@@ -25,6 +15,4 @@ defmodule Google.Ads.Googleads.V4.Enums.SearchTermMatchTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

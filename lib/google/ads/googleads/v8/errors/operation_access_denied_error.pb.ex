@@ -2,21 +2,6 @@ defmodule Google.Ads.Googleads.V8.Errors.OperationAccessDeniedErrorEnum.Operatio
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :ACTION_NOT_PERMITTED
-          | :CREATE_OPERATION_NOT_PERMITTED
-          | :REMOVE_OPERATION_NOT_PERMITTED
-          | :UPDATE_OPERATION_NOT_PERMITTED
-          | :MUTATE_ACTION_NOT_PERMITTED_FOR_CLIENT
-          | :OPERATION_NOT_PERMITTED_FOR_CAMPAIGN_TYPE
-          | :CREATE_AS_REMOVED_NOT_PERMITTED
-          | :OPERATION_NOT_PERMITTED_FOR_REMOVED_RESOURCE
-          | :OPERATION_NOT_PERMITTED_FOR_AD_GROUP_TYPE
-          | :MUTATE_NOT_PERMITTED_FOR_CUSTOMER
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -45,7 +30,5 @@ end
 defmodule Google.Ads.Googleads.V8.Errors.OperationAccessDeniedErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

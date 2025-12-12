@@ -2,17 +2,6 @@ defmodule Google.Ads.Googleads.V7.Enums.MediaTypeEnum.MediaType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :IMAGE
-          | :ICON
-          | :MEDIA_BUNDLE
-          | :AUDIO
-          | :VIDEO
-          | :DYNAMIC_IMAGE
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :IMAGE, 2
@@ -27,6 +16,4 @@ defmodule Google.Ads.Googleads.V7.Enums.MediaTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

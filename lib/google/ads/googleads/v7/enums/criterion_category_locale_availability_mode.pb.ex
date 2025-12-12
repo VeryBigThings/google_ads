@@ -2,15 +2,6 @@ defmodule Google.Ads.Googleads.V7.Enums.CriterionCategoryLocaleAvailabilityModeE
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :ALL_LOCALES
-          | :COUNTRY_AND_ALL_LANGUAGES
-          | :LANGUAGE_AND_ALL_COUNTRIES
-          | :COUNTRY_AND_LANGUAGE
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :ALL_LOCALES, 2
@@ -23,6 +14,4 @@ defmodule Google.Ads.Googleads.V7.Enums.CriterionCategoryLocaleAvailabilityModeE
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

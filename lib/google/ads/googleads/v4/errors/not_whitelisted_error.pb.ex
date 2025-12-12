@@ -2,8 +2,6 @@ defmodule Google.Ads.Googleads.V4.Errors.NotWhitelistedErrorEnum.NotWhitelistedE
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t :: integer | :UNSPECIFIED | :UNKNOWN | :CUSTOMER_NOT_WHITELISTED_FOR_THIS_FEATURE
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :CUSTOMER_NOT_WHITELISTED_FOR_THIS_FEATURE, 2
@@ -13,6 +11,4 @@ defmodule Google.Ads.Googleads.V4.Errors.NotWhitelistedErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

@@ -1,8 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Enums.DataDrivenModelStatusEnum.DataDrivenModelStatus do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
-  @type t :: integer | :UNSPECIFIED | :UNKNOWN | :AVAILABLE | :STALE | :EXPIRED | :NEVER_GENERATED
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -19,7 +17,5 @@ end
 defmodule Google.Ads.Googleads.V8.Enums.DataDrivenModelStatusEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

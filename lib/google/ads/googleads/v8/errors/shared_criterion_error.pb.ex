@@ -1,8 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Errors.SharedCriterionErrorEnum.SharedCriterionError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
-  @type t :: integer | :UNSPECIFIED | :UNKNOWN | :CRITERION_TYPE_NOT_ALLOWED_FOR_SHARED_SET_TYPE
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -13,7 +11,5 @@ end
 defmodule Google.Ads.Googleads.V8.Errors.SharedCriterionErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

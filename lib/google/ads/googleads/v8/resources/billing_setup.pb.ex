@@ -2,21 +2,7 @@ defmodule Google.Ads.Googleads.V8.Resources.BillingSetup.PaymentsAccountInfo do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          payments_account_id: String.t(),
-          payments_account_name: String.t(),
-          payments_profile_id: String.t(),
-          payments_profile_name: String.t(),
-          secondary_payments_profile_id: String.t()
-        }
 
-  defstruct [
-    :payments_account_id,
-    :payments_account_name,
-    :payments_profile_id,
-    :payments_profile_name,
-    :secondary_payments_profile_id
-  ]
 
   field :payments_account_id, 6, optional: true, type: :string
   field :payments_account_name, 7, optional: true, type: :string
@@ -29,26 +15,7 @@ defmodule Google.Ads.Googleads.V8.Resources.BillingSetup do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          start_time: {atom, any},
-          end_time: {atom, any},
-          resource_name: String.t(),
-          id: integer,
-          status: Google.Ads.Googleads.V8.Enums.BillingSetupStatusEnum.BillingSetupStatus.t(),
-          payments_account: String.t(),
-          payments_account_info:
-            Google.Ads.Googleads.V8.Resources.BillingSetup.PaymentsAccountInfo.t() | nil
-        }
 
-  defstruct [
-    :start_time,
-    :end_time,
-    :resource_name,
-    :id,
-    :status,
-    :payments_account,
-    :payments_account_info
-  ]
 
   oneof :start_time, 0
   oneof :end_time, 1

@@ -2,14 +2,6 @@ defmodule Google.Ads.Googleads.V7.Errors.NewResourceCreationErrorEnum.NewResourc
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :CANNOT_SET_ID_FOR_CREATE
-          | :DUPLICATE_TEMP_IDS
-          | :TEMP_ID_RESOURCE_HAD_ERRORS
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :CANNOT_SET_ID_FOR_CREATE, 2
@@ -21,6 +13,4 @@ defmodule Google.Ads.Googleads.V7.Errors.NewResourceCreationErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

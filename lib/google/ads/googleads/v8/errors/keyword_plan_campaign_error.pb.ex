@@ -2,17 +2,6 @@ defmodule Google.Ads.Googleads.V8.Errors.KeywordPlanCampaignErrorEnum.KeywordPla
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :INVALID_NAME
-          | :INVALID_LANGUAGES
-          | :INVALID_GEOS
-          | :DUPLICATE_NAME
-          | :MAX_GEOS_EXCEEDED
-          | :MAX_LANGUAGES_EXCEEDED
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -33,7 +22,5 @@ end
 defmodule Google.Ads.Googleads.V8.Errors.KeywordPlanCampaignErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

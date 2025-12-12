@@ -1,8 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Errors.CustomerErrorEnum.CustomerError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
-  @type t :: integer | :UNSPECIFIED | :UNKNOWN | :STATUS_CHANGE_DISALLOWED | :ACCOUNT_NOT_SET_UP
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -15,7 +13,5 @@ end
 defmodule Google.Ads.Googleads.V8.Errors.CustomerErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

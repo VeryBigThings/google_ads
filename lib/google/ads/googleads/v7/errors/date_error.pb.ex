@@ -2,21 +2,6 @@ defmodule Google.Ads.Googleads.V7.Errors.DateErrorEnum.DateError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :INVALID_FIELD_VALUES_IN_DATE
-          | :INVALID_FIELD_VALUES_IN_DATE_TIME
-          | :INVALID_STRING_DATE
-          | :INVALID_STRING_DATE_TIME_MICROS
-          | :INVALID_STRING_DATE_TIME_SECONDS
-          | :INVALID_STRING_DATE_TIME_SECONDS_WITH_OFFSET
-          | :EARLIER_THAN_MINIMUM_DATE
-          | :LATER_THAN_MAXIMUM_DATE
-          | :DATE_RANGE_MINIMUM_DATE_LATER_THAN_MAXIMUM_DATE
-          | :DATE_RANGE_MINIMUM_AND_MAXIMUM_DATES_BOTH_NULL
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :INVALID_FIELD_VALUES_IN_DATE, 2
@@ -35,6 +20,4 @@ defmodule Google.Ads.Googleads.V7.Errors.DateErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

@@ -2,10 +2,6 @@ defmodule Google.Ads.Googleads.V4.Services.GetFeedItemTargetRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t()
-        }
-  defstruct [:resource_name]
 
   field :resource_name, 1, type: :string
 end
@@ -14,11 +10,6 @@ defmodule Google.Ads.Googleads.V4.Services.MutateFeedItemTargetsRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          customer_id: String.t(),
-          operations: [Google.Ads.Googleads.V4.Services.FeedItemTargetOperation.t()]
-        }
-  defstruct [:customer_id, :operations]
 
   field :customer_id, 1, type: :string
 
@@ -31,10 +22,6 @@ defmodule Google.Ads.Googleads.V4.Services.FeedItemTargetOperation do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          operation: {atom, any}
-        }
-  defstruct [:operation]
 
   oneof :operation, 0
 
@@ -46,10 +33,6 @@ defmodule Google.Ads.Googleads.V4.Services.MutateFeedItemTargetsResponse do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          results: [Google.Ads.Googleads.V4.Services.MutateFeedItemTargetResult.t()]
-        }
-  defstruct [:results]
 
   field :results, 2,
     repeated: true,
@@ -60,10 +43,6 @@ defmodule Google.Ads.Googleads.V4.Services.MutateFeedItemTargetResult do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t()
-        }
-  defstruct [:resource_name]
 
   field :resource_name, 1, type: :string
 end

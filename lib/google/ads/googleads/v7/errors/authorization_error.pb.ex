@@ -2,24 +2,6 @@ defmodule Google.Ads.Googleads.V7.Errors.AuthorizationErrorEnum.AuthorizationErr
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :USER_PERMISSION_DENIED
-          | :DEVELOPER_TOKEN_NOT_ON_ALLOWLIST
-          | :DEVELOPER_TOKEN_PROHIBITED
-          | :PROJECT_DISABLED
-          | :AUTHORIZATION_ERROR
-          | :ACTION_NOT_PERMITTED
-          | :INCOMPLETE_SIGNUP
-          | :CUSTOMER_NOT_ENABLED
-          | :MISSING_TOS
-          | :DEVELOPER_TOKEN_NOT_APPROVED
-          | :INVALID_LOGIN_CUSTOMER_ID_SERVING_CUSTOMER_ID_COMBINATION
-          | :SERVICE_ACCESS_DENIED
-          | :ACCESS_DENIED_FOR_ACCOUNT_TYPE
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :USER_PERMISSION_DENIED, 2
@@ -41,6 +23,4 @@ defmodule Google.Ads.Googleads.V7.Errors.AuthorizationErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

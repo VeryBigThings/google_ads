@@ -2,44 +2,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.Ad do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          ad_data: {atom, any},
-          resource_name: String.t(),
-          id: integer,
-          final_urls: [String.t()],
-          final_app_urls: [Google.Ads.Googleads.V8Availabilities.Common.FinalAppUrl.t()],
-          final_mobile_urls: [String.t()],
-          tracking_url_template: String.t(),
-          final_url_suffix: String.t(),
-          url_custom_parameters: [Google.Ads.Googleads.V8Availabilities.Common.CustomParameter.t()],
-          display_url: String.t(),
-          type: Google.Ads.Googleads.V8Availabilities.Enums.AdTypeEnum.AdType.t(),
-          added_by_google_ads: boolean,
-          device_preference: Google.Ads.Googleads.V8Availabilities.Enums.DeviceEnum.Device.t(),
-          url_collections: [Google.Ads.Googleads.V8Availabilities.Common.UrlCollection.t()],
-          name: String.t(),
-          system_managed_resource_source:
-            Google.Ads.Googleads.V8Availabilities.Enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource.t()
-        }
 
-  defstruct [
-    :ad_data,
-    :resource_name,
-    :id,
-    :final_urls,
-    :final_app_urls,
-    :final_mobile_urls,
-    :tracking_url_template,
-    :final_url_suffix,
-    :url_custom_parameters,
-    :display_url,
-    :type,
-    :added_by_google_ads,
-    :device_preference,
-    :url_collections,
-    :name,
-    :system_managed_resource_source
-  ]
 
   oneof :ad_data, 0
 

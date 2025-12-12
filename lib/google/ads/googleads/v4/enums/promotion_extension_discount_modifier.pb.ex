@@ -2,8 +2,6 @@ defmodule Google.Ads.Googleads.V4.Enums.PromotionExtensionDiscountModifierEnum.P
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t :: integer | :UNSPECIFIED | :UNKNOWN | :UP_TO
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :UP_TO, 2
@@ -13,6 +11,4 @@ defmodule Google.Ads.Googleads.V4.Enums.PromotionExtensionDiscountModifierEnum d
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

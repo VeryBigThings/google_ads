@@ -2,13 +2,6 @@ defmodule Google.Ads.Googleads.V4.Resources.KeywordPlan do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          id: Google.Protobuf.Int64Value.t() | nil,
-          name: Google.Protobuf.StringValue.t() | nil,
-          forecast_period: Google.Ads.Googleads.V4.Resources.KeywordPlanForecastPeriod.t() | nil
-        }
-  defstruct [:resource_name, :id, :name, :forecast_period]
 
   field :resource_name, 1, type: :string
   field :id, 2, type: Google.Protobuf.Int64Value
@@ -20,10 +13,6 @@ defmodule Google.Ads.Googleads.V4.Resources.KeywordPlanForecastPeriod do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          interval: {atom, any}
-        }
-  defstruct [:interval]
 
   oneof :interval, 0
 

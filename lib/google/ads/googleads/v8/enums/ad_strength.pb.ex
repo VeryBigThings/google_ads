@@ -2,17 +2,6 @@ defmodule Google.Ads.Googleads.V8.Enums.AdStrengthEnum.AdStrength do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :PENDING
-          | :NO_ADS
-          | :POOR
-          | :AVERAGE
-          | :GOOD
-          | :EXCELLENT
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -33,7 +22,5 @@ end
 defmodule Google.Ads.Googleads.V8.Enums.AdStrengthEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

@@ -2,13 +2,6 @@ defmodule Google.Ads.Googleads.V8.Errors.AdGroupBidModifierErrorEnum.AdGroupBidM
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :CRITERION_ID_NOT_SUPPORTED
-          | :CANNOT_OVERRIDE_OPTED_OUT_CAMPAIGN_CRITERION_BID_MODIFIER
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -21,7 +14,5 @@ end
 defmodule Google.Ads.Googleads.V8.Errors.AdGroupBidModifierErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

@@ -2,16 +2,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.KeywordPlanCampaignKey
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          keyword_plan_campaign: String.t(),
-          id: integer,
-          text: String.t(),
-          match_type: Google.Ads.Googleads.V8Availabilities.Enums.KeywordMatchTypeEnum.KeywordMatchType.t(),
-          negative: boolean
-        }
 
-  defstruct [:resource_name, :keyword_plan_campaign, :id, :text, :match_type, :negative]
 
   field :resource_name, 1, type: :string
   field :keyword_plan_campaign, 8, type: :string

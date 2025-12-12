@@ -2,17 +2,6 @@ defmodule Google.Ads.Googleads.V8.Enums.UserListTypeEnum.UserListType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :REMARKETING
-          | :LOGICAL
-          | :EXTERNAL_REMARKETING
-          | :RULE_BASED
-          | :SIMILAR
-          | :CRM_BASED
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -33,7 +22,5 @@ end
 defmodule Google.Ads.Googleads.V8.Enums.UserListTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

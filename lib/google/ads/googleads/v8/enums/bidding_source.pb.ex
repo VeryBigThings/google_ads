@@ -2,14 +2,6 @@ defmodule Google.Ads.Googleads.V8.Enums.BiddingSourceEnum.BiddingSource do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :CAMPAIGN_BIDDING_STRATEGY
-          | :AD_GROUP
-          | :AD_GROUP_CRITERION
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -24,7 +16,5 @@ end
 defmodule Google.Ads.Googleads.V8.Enums.BiddingSourceEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

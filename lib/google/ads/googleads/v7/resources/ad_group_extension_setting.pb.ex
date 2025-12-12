@@ -2,15 +2,6 @@ defmodule Google.Ads.Googleads.V7.Resources.AdGroupExtensionSetting do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          extension_type: Google.Ads.Googleads.V7.Enums.ExtensionTypeEnum.ExtensionType.t(),
-          ad_group: String.t(),
-          extension_feed_items: [String.t()],
-          device:
-            Google.Ads.Googleads.V7.Enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice.t()
-        }
-  defstruct [:resource_name, :extension_type, :ad_group, :extension_feed_items, :device]
 
   field :resource_name, 1, type: :string
 

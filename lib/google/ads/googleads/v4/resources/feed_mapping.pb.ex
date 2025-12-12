@@ -2,14 +2,6 @@ defmodule Google.Ads.Googleads.V4.Resources.FeedMapping do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          target: {atom, any},
-          resource_name: String.t(),
-          feed: Google.Protobuf.StringValue.t() | nil,
-          attribute_field_mappings: [Google.Ads.Googleads.V4.Resources.AttributeFieldMapping.t()],
-          status: Google.Ads.Googleads.V4.Enums.FeedMappingStatusEnum.FeedMappingStatus.t()
-        }
-  defstruct [:target, :resource_name, :feed, :attribute_field_mappings, :status]
 
   oneof :target, 0
 
@@ -39,12 +31,6 @@ defmodule Google.Ads.Googleads.V4.Resources.AttributeFieldMapping do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          field: {atom, any},
-          feed_attribute_id: Google.Protobuf.Int64Value.t() | nil,
-          field_id: Google.Protobuf.Int64Value.t() | nil
-        }
-  defstruct [:field, :feed_attribute_id, :field_id]
 
   oneof :field, 0
 

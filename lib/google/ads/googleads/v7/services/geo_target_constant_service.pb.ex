@@ -2,10 +2,6 @@ defmodule Google.Ads.Googleads.V7.Services.GetGeoTargetConstantRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t()
-        }
-  defstruct [:resource_name]
 
   field :resource_name, 1, type: :string
 end
@@ -14,10 +10,6 @@ defmodule Google.Ads.Googleads.V7.Services.SuggestGeoTargetConstantsRequest.Loca
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          names: [String.t()]
-        }
-  defstruct [:names]
 
   field :names, 2, repeated: true, type: :string
 end
@@ -26,10 +18,6 @@ defmodule Google.Ads.Googleads.V7.Services.SuggestGeoTargetConstantsRequest.GeoT
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          geo_target_constants: [String.t()]
-        }
-  defstruct [:geo_target_constants]
 
   field :geo_target_constants, 2, repeated: true, type: :string
 end
@@ -38,12 +26,6 @@ defmodule Google.Ads.Googleads.V7.Services.SuggestGeoTargetConstantsRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          query: {atom, any},
-          locale: String.t(),
-          country_code: String.t()
-        }
-  defstruct [:query, :locale, :country_code]
 
   oneof :query, 0
 
@@ -63,12 +45,6 @@ defmodule Google.Ads.Googleads.V7.Services.SuggestGeoTargetConstantsResponse do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          geo_target_constant_suggestions: [
-            Google.Ads.Googleads.V7.Services.GeoTargetConstantSuggestion.t()
-          ]
-        }
-  defstruct [:geo_target_constant_suggestions]
 
   field :geo_target_constant_suggestions, 1,
     repeated: true,
@@ -79,14 +55,6 @@ defmodule Google.Ads.Googleads.V7.Services.GeoTargetConstantSuggestion do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          locale: String.t(),
-          reach: integer,
-          search_term: String.t(),
-          geo_target_constant: Google.Ads.Googleads.V7.Resources.GeoTargetConstant.t() | nil,
-          geo_target_constant_parents: [Google.Ads.Googleads.V7.Resources.GeoTargetConstant.t()]
-        }
-  defstruct [:locale, :reach, :search_term, :geo_target_constant, :geo_target_constant_parents]
 
   field :locale, 6, type: :string
   field :reach, 7, type: :int64

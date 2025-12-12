@@ -2,8 +2,6 @@ defmodule Google.Ads.Googleads.V7.Enums.ProductCustomAttributeIndexEnum.ProductC
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t :: integer | :UNSPECIFIED | :UNKNOWN | :INDEX0 | :INDEX1 | :INDEX2 | :INDEX3 | :INDEX4
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :INDEX0, 7
@@ -17,6 +15,4 @@ defmodule Google.Ads.Googleads.V7.Enums.ProductCustomAttributeIndexEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

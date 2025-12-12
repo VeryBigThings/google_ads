@@ -2,11 +2,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Services.GetCustomerManagerLinkR
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t()
-        }
 
-  defstruct [:resource_name]
 
   field :resource_name, 1, type: :string
 end
@@ -15,13 +11,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateCustomerManagerLi
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          customer_id: String.t(),
-          operations: [Google.Ads.Googleads.V8Availabilities.Services.CustomerManagerLinkOperation.t()],
-          validate_only: boolean
-        }
 
-  defstruct [:customer_id, :operations, :validate_only]
 
   field :customer_id, 1, type: :string
 
@@ -36,14 +26,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Services.MoveManagerLinkRequest 
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          customer_id: String.t(),
-          previous_customer_manager_link: String.t(),
-          new_manager: String.t(),
-          validate_only: boolean
-        }
 
-  defstruct [:customer_id, :previous_customer_manager_link, :new_manager, :validate_only]
 
   field :customer_id, 1, type: :string
   field :previous_customer_manager_link, 2, type: :string
@@ -55,12 +38,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Services.CustomerManagerLinkOper
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          operation: {atom, any},
-          update_mask: Google.Protobuf.FieldMask.t() | nil
-        }
 
-  defstruct [:operation, :update_mask]
 
   oneof :operation, 0
 
@@ -72,11 +50,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateCustomerManagerLi
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          results: [Google.Ads.Googleads.V8Availabilities.Services.MutateCustomerManagerLinkResult.t()]
-        }
 
-  defstruct [:results]
 
   field :results, 1,
     repeated: true,
@@ -87,11 +61,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Services.MoveManagerLinkResponse
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t()
-        }
 
-  defstruct [:resource_name]
 
   field :resource_name, 1, type: :string
 end
@@ -100,11 +70,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateCustomerManagerLi
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t()
-        }
 
-  defstruct [:resource_name]
 
   field :resource_name, 1, type: :string
 end

@@ -2,8 +2,6 @@ defmodule Google.Ads.Googleads.V7.Enums.UserListDateRuleItemOperatorEnum.UserLis
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t :: integer | :UNSPECIFIED | :UNKNOWN | :EQUALS | :NOT_EQUALS | :BEFORE | :AFTER
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :EQUALS, 2
@@ -16,6 +14,4 @@ defmodule Google.Ads.Googleads.V7.Enums.UserListDateRuleItemOperatorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

@@ -2,17 +2,6 @@ defmodule Google.Ads.Googleads.V7.Errors.FeedItemSetErrorEnum.FeedItemSetError d
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :FEED_ITEM_SET_REMOVED
-          | :CANNOT_CLEAR_DYNAMIC_FILTER
-          | :CANNOT_CREATE_DYNAMIC_FILTER
-          | :INVALID_FEED_TYPE
-          | :DUPLICATE_NAME
-          | :WRONG_DYNAMIC_FILTER_FOR_FEED_TYPE
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :FEED_ITEM_SET_REMOVED, 2
@@ -27,6 +16,4 @@ defmodule Google.Ads.Googleads.V7.Errors.FeedItemSetErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

@@ -2,12 +2,7 @@ defmodule Google.Ads.Googleads.V8.Common.YoutubeVideoAsset do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          youtube_video_id: String.t(),
-          youtube_video_title: String.t()
-        }
 
-  defstruct [:youtube_video_id, :youtube_video_title]
 
   field :youtube_video_id, 2, optional: true, type: :string
   field :youtube_video_title, 3, optional: true, type: :string
@@ -17,11 +12,7 @@ defmodule Google.Ads.Googleads.V8.Common.MediaBundleAsset do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          data: binary
-        }
 
-  defstruct [:data]
 
   field :data, 2, optional: true, type: :bytes
 end
@@ -30,14 +21,7 @@ defmodule Google.Ads.Googleads.V8.Common.ImageAsset do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          data: binary,
-          file_size: integer,
-          mime_type: Google.Ads.Googleads.V8.Enums.MimeTypeEnum.MimeType.t(),
-          full_size: Google.Ads.Googleads.V8.Common.ImageDimension.t() | nil
-        }
 
-  defstruct [:data, :file_size, :mime_type, :full_size]
 
   field :data, 5, optional: true, type: :bytes
   field :file_size, 6, optional: true, type: :int64
@@ -54,13 +38,7 @@ defmodule Google.Ads.Googleads.V8.Common.ImageDimension do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          height_pixels: integer,
-          width_pixels: integer,
-          url: String.t()
-        }
 
-  defstruct [:height_pixels, :width_pixels, :url]
 
   field :height_pixels, 4, optional: true, type: :int64
   field :width_pixels, 5, optional: true, type: :int64
@@ -71,11 +49,7 @@ defmodule Google.Ads.Googleads.V8.Common.TextAsset do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          text: String.t()
-        }
 
-  defstruct [:text]
 
   field :text, 2, optional: true, type: :string
 end
@@ -84,42 +58,7 @@ defmodule Google.Ads.Googleads.V8.Common.LeadFormAsset do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          business_name: String.t(),
-          call_to_action_type:
-            Google.Ads.Googleads.V8.Enums.LeadFormCallToActionTypeEnum.LeadFormCallToActionType.t(),
-          call_to_action_description: String.t(),
-          headline: String.t(),
-          description: String.t(),
-          privacy_policy_url: String.t(),
-          post_submit_headline: String.t(),
-          post_submit_description: String.t(),
-          fields: [Google.Ads.Googleads.V8.Common.LeadFormField.t()],
-          delivery_methods: [Google.Ads.Googleads.V8.Common.LeadFormDeliveryMethod.t()],
-          post_submit_call_to_action_type:
-            Google.Ads.Googleads.V8.Enums.LeadFormPostSubmitCallToActionTypeEnum.LeadFormPostSubmitCallToActionType.t(),
-          background_image_asset: String.t(),
-          desired_intent:
-            Google.Ads.Googleads.V8.Enums.LeadFormDesiredIntentEnum.LeadFormDesiredIntent.t(),
-          custom_disclosure: String.t()
-        }
 
-  defstruct [
-    :business_name,
-    :call_to_action_type,
-    :call_to_action_description,
-    :headline,
-    :description,
-    :privacy_policy_url,
-    :post_submit_headline,
-    :post_submit_description,
-    :fields,
-    :delivery_methods,
-    :post_submit_call_to_action_type,
-    :background_image_asset,
-    :desired_intent,
-    :custom_disclosure
-  ]
 
   field :business_name, 10, required: true, type: :string
 
@@ -160,13 +99,7 @@ defmodule Google.Ads.Googleads.V8.Common.LeadFormField do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          answers: {atom, any},
-          input_type:
-            Google.Ads.Googleads.V8.Enums.LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType.t()
-        }
 
-  defstruct [:answers, :input_type]
 
   oneof :answers, 0
 
@@ -185,11 +118,7 @@ defmodule Google.Ads.Googleads.V8.Common.LeadFormSingleChoiceAnswers do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          answers: [String.t()]
-        }
 
-  defstruct [:answers]
 
   field :answers, 1, repeated: true, type: :string
 end
@@ -198,11 +127,7 @@ defmodule Google.Ads.Googleads.V8.Common.LeadFormDeliveryMethod do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          delivery_details: {atom, any}
-        }
 
-  defstruct [:delivery_details]
 
   oneof :delivery_details, 0
 
@@ -216,13 +141,7 @@ defmodule Google.Ads.Googleads.V8.Common.WebhookDelivery do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          advertiser_webhook_url: String.t(),
-          google_secret: String.t(),
-          payload_schema_version: integer
-        }
 
-  defstruct [:advertiser_webhook_url, :google_secret, :payload_schema_version]
 
   field :advertiser_webhook_url, 4, optional: true, type: :string
   field :google_secret, 5, optional: true, type: :string
@@ -232,44 +151,14 @@ end
 defmodule Google.Ads.Googleads.V8.Common.BookOnGoogleAsset do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end
 
 defmodule Google.Ads.Googleads.V8.Common.PromotionAsset do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          discount_type: {atom, any},
-          promotion_trigger: {atom, any},
-          promotion_target: String.t(),
-          discount_modifier:
-            Google.Ads.Googleads.V8.Enums.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier.t(),
-          redemption_start_date: String.t(),
-          redemption_end_date: String.t(),
-          occasion:
-            Google.Ads.Googleads.V8.Enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion.t(),
-          language_code: String.t(),
-          start_date: String.t(),
-          end_date: String.t(),
-          ad_schedule_targets: [Google.Ads.Googleads.V8.Common.AdScheduleInfo.t()]
-        }
 
-  defstruct [
-    :discount_type,
-    :promotion_trigger,
-    :promotion_target,
-    :discount_modifier,
-    :redemption_start_date,
-    :redemption_end_date,
-    :occasion,
-    :language_code,
-    :start_date,
-    :end_date,
-    :ad_schedule_targets
-  ]
 
   oneof :discount_type, 0
   oneof :promotion_trigger, 1
@@ -311,14 +200,7 @@ defmodule Google.Ads.Googleads.V8.Common.CalloutAsset do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          callout_text: String.t(),
-          start_date: String.t(),
-          end_date: String.t(),
-          ad_schedule_targets: [Google.Ads.Googleads.V8.Common.AdScheduleInfo.t()]
-        }
 
-  defstruct [:callout_text, :start_date, :end_date, :ad_schedule_targets]
 
   field :callout_text, 1, optional: true, type: :string
   field :start_date, 2, optional: true, type: :string
@@ -333,12 +215,7 @@ defmodule Google.Ads.Googleads.V8.Common.StructuredSnippetAsset do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          header: String.t(),
-          values: [String.t()]
-        }
 
-  defstruct [:header, :values]
 
   field :header, 1, optional: true, type: :string
   field :values, 2, repeated: true, type: :string
@@ -348,23 +225,7 @@ defmodule Google.Ads.Googleads.V8.Common.SitelinkAsset do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          link_text: String.t(),
-          description1: String.t(),
-          description2: String.t(),
-          start_date: String.t(),
-          end_date: String.t(),
-          ad_schedule_targets: [Google.Ads.Googleads.V8.Common.AdScheduleInfo.t()]
-        }
 
-  defstruct [
-    :link_text,
-    :description1,
-    :description2,
-    :start_date,
-    :end_date,
-    :ad_schedule_targets
-  ]
 
   field :link_text, 1, optional: true, type: :string
   field :description1, 2, optional: true, type: :string

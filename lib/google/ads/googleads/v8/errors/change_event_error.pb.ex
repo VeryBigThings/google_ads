@@ -2,16 +2,6 @@ defmodule Google.Ads.Googleads.V8.Errors.ChangeEventErrorEnum.ChangeEventError d
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :START_DATE_TOO_OLD
-          | :CHANGE_DATE_RANGE_INFINITE
-          | :CHANGE_DATE_RANGE_NEGATIVE
-          | :LIMIT_NOT_SPECIFIED
-          | :INVALID_LIMIT_CLAUSE
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -30,7 +20,5 @@ end
 defmodule Google.Ads.Googleads.V8.Errors.ChangeEventErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

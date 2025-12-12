@@ -2,23 +2,6 @@ defmodule Google.Ads.Googleads.V7.Resources.FeedItemTarget do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          target: {atom, any},
-          resource_name: String.t(),
-          feed_item: String.t(),
-          feed_item_target_type:
-            Google.Ads.Googleads.V7.Enums.FeedItemTargetTypeEnum.FeedItemTargetType.t(),
-          feed_item_target_id: integer,
-          status: Google.Ads.Googleads.V7.Enums.FeedItemTargetStatusEnum.FeedItemTargetStatus.t()
-        }
-  defstruct [
-    :target,
-    :resource_name,
-    :feed_item,
-    :feed_item_target_type,
-    :feed_item_target_id,
-    :status
-  ]
 
   oneof :target, 0
 

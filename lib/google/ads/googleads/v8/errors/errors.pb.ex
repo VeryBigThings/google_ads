@@ -1,8 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Errors.QuotaErrorDetails.QuotaRateScope do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
-  @type t :: integer | :UNSPECIFIED | :UNKNOWN | :ACCOUNT | :DEVELOPER
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -16,12 +14,7 @@ defmodule Google.Ads.Googleads.V8.Errors.GoogleAdsFailure do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          errors: [Google.Ads.Googleads.V8.Errors.GoogleAdsError.t()],
-          request_id: String.t()
-        }
 
-  defstruct [:errors, :request_id]
 
   field :errors, 1, repeated: true, type: Google.Ads.Googleads.V8.Errors.GoogleAdsError
   field :request_id, 2, optional: true, type: :string
@@ -31,15 +24,7 @@ defmodule Google.Ads.Googleads.V8.Errors.GoogleAdsError do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          error_code: Google.Ads.Googleads.V8.Errors.ErrorCode.t() | nil,
-          message: String.t(),
-          trigger: Google.Ads.Googleads.V8.Common.Value.t() | nil,
-          location: Google.Ads.Googleads.V8.Errors.ErrorLocation.t() | nil,
-          details: Google.Ads.Googleads.V8.Errors.ErrorDetails.t() | nil
-        }
 
-  defstruct [:error_code, :message, :trigger, :location, :details]
 
   field :error_code, 1, optional: true, type: Google.Ads.Googleads.V8.Errors.ErrorCode
   field :message, 2, optional: true, type: :string
@@ -52,11 +37,7 @@ defmodule Google.Ads.Googleads.V8.Errors.ErrorCode do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          error_code: {atom, any}
-        }
 
-  defstruct [:error_code]
 
   oneof :error_code, 0
 
@@ -791,12 +772,7 @@ defmodule Google.Ads.Googleads.V8.Errors.ErrorLocation.FieldPathElement do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          field_name: String.t(),
-          index: integer
-        }
 
-  defstruct [:field_name, :index]
 
   field :field_name, 1, optional: true, type: :string
   field :index, 3, optional: true, type: :int32
@@ -806,11 +782,7 @@ defmodule Google.Ads.Googleads.V8.Errors.ErrorLocation do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          field_path_elements: [Google.Ads.Googleads.V8.Errors.ErrorLocation.FieldPathElement.t()]
-        }
 
-  defstruct [:field_path_elements]
 
   field :field_path_elements, 2,
     repeated: true,
@@ -821,22 +793,7 @@ defmodule Google.Ads.Googleads.V8.Errors.ErrorDetails do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          unpublished_error_code: String.t(),
-          policy_violation_details:
-            Google.Ads.Googleads.V8.Errors.PolicyViolationDetails.t() | nil,
-          policy_finding_details: Google.Ads.Googleads.V8.Errors.PolicyFindingDetails.t() | nil,
-          quota_error_details: Google.Ads.Googleads.V8.Errors.QuotaErrorDetails.t() | nil,
-          resource_count_details: Google.Ads.Googleads.V8.Errors.ResourceCountDetails.t() | nil
-        }
 
-  defstruct [
-    :unpublished_error_code,
-    :policy_violation_details,
-    :policy_finding_details,
-    :quota_error_details,
-    :resource_count_details
-  ]
 
   field :unpublished_error_code, 1, optional: true, type: :string
 
@@ -861,14 +818,7 @@ defmodule Google.Ads.Googleads.V8.Errors.PolicyViolationDetails do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          external_policy_description: String.t(),
-          key: Google.Ads.Googleads.V8.Common.PolicyViolationKey.t() | nil,
-          external_policy_name: String.t(),
-          is_exemptible: boolean
-        }
 
-  defstruct [:external_policy_description, :key, :external_policy_name, :is_exemptible]
 
   field :external_policy_description, 2, optional: true, type: :string
   field :key, 4, optional: true, type: Google.Ads.Googleads.V8.Common.PolicyViolationKey
@@ -880,11 +830,7 @@ defmodule Google.Ads.Googleads.V8.Errors.PolicyFindingDetails do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          policy_topic_entries: [Google.Ads.Googleads.V8.Common.PolicyTopicEntry.t()]
-        }
 
-  defstruct [:policy_topic_entries]
 
   field :policy_topic_entries, 1,
     repeated: true,
@@ -895,13 +841,7 @@ defmodule Google.Ads.Googleads.V8.Errors.QuotaErrorDetails do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          rate_scope: Google.Ads.Googleads.V8.Errors.QuotaErrorDetails.QuotaRateScope.t(),
-          rate_name: String.t(),
-          retry_delay: Google.Protobuf.Duration.t() | nil
-        }
 
-  defstruct [:rate_scope, :rate_name, :retry_delay]
 
   field :rate_scope, 1,
     optional: true,
@@ -916,15 +856,7 @@ defmodule Google.Ads.Googleads.V8.Errors.ResourceCountDetails do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          enclosing_id: String.t(),
-          enclosing_resource: String.t(),
-          limit: integer,
-          limit_type: Google.Ads.Googleads.V8.Enums.ResourceLimitTypeEnum.ResourceLimitType.t(),
-          existing_count: integer
-        }
 
-  defstruct [:enclosing_id, :enclosing_resource, :limit, :limit_type, :existing_count]
 
   field :enclosing_id, 1, optional: true, type: :string
   field :enclosing_resource, 5, optional: true, type: :string

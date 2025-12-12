@@ -2,17 +2,6 @@ defmodule Google.Ads.Googleads.V7.Resources.MediaFile do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          mediatype: {atom, any},
-          resource_name: String.t(),
-          id: integer,
-          type: Google.Ads.Googleads.V7.Enums.MediaTypeEnum.MediaType.t(),
-          mime_type: Google.Ads.Googleads.V7.Enums.MimeTypeEnum.MimeType.t(),
-          source_url: String.t(),
-          name: String.t(),
-          file_size: integer
-        }
-  defstruct [:mediatype, :resource_name, :id, :type, :mime_type, :source_url, :name, :file_size]
 
   oneof :mediatype, 0
 
@@ -33,12 +22,6 @@ defmodule Google.Ads.Googleads.V7.Resources.MediaImage do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          data: binary,
-          full_size_image_url: String.t(),
-          preview_size_image_url: String.t()
-        }
-  defstruct [:data, :full_size_image_url, :preview_size_image_url]
 
   field :data, 4, type: :bytes
   field :full_size_image_url, 2, type: :string
@@ -49,11 +32,6 @@ defmodule Google.Ads.Googleads.V7.Resources.MediaBundle do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          data: binary,
-          url: String.t()
-        }
-  defstruct [:data, :url]
 
   field :data, 3, type: :bytes
   field :url, 2, type: :string
@@ -63,10 +41,6 @@ defmodule Google.Ads.Googleads.V7.Resources.MediaAudio do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          ad_duration_millis: integer
-        }
-  defstruct [:ad_duration_millis]
 
   field :ad_duration_millis, 2, type: :int64
 end
@@ -75,13 +49,6 @@ defmodule Google.Ads.Googleads.V7.Resources.MediaVideo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          ad_duration_millis: integer,
-          youtube_video_id: String.t(),
-          advertising_id_code: String.t(),
-          isci_code: String.t()
-        }
-  defstruct [:ad_duration_millis, :youtube_video_id, :advertising_id_code, :isci_code]
 
   field :ad_duration_millis, 5, type: :int64
   field :youtube_video_id, 6, type: :string

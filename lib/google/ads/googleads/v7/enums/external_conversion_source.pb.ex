@@ -2,38 +2,6 @@ defmodule Google.Ads.Googleads.V7.Enums.ExternalConversionSourceEnum.ExternalCon
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :WEBPAGE
-          | :ANALYTICS
-          | :UPLOAD
-          | :AD_CALL_METRICS
-          | :WEBSITE_CALL_METRICS
-          | :STORE_VISITS
-          | :ANDROID_IN_APP
-          | :IOS_IN_APP
-          | :IOS_FIRST_OPEN
-          | :APP_UNSPECIFIED
-          | :ANDROID_FIRST_OPEN
-          | :UPLOAD_CALLS
-          | :FIREBASE
-          | :CLICK_TO_CALL
-          | :SALESFORCE
-          | :STORE_SALES_CRM
-          | :STORE_SALES_PAYMENT_NETWORK
-          | :GOOGLE_PLAY
-          | :THIRD_PARTY_APP_ANALYTICS
-          | :GOOGLE_ATTRIBUTION
-          | :STORE_SALES_DIRECT_UPLOAD
-          | :STORE_SALES
-          | :SEARCH_ADS_360
-          | :GOOGLE_HOSTED
-          | :FLOODLIGHT
-          | :ANALYTICS_SEARCH_ADS_360
-          | :FIREBASE_SEARCH_ADS_360
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :WEBPAGE, 2
@@ -69,6 +37,4 @@ defmodule Google.Ads.Googleads.V7.Enums.ExternalConversionSourceEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

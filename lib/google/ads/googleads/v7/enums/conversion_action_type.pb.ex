@@ -2,46 +2,6 @@ defmodule Google.Ads.Googleads.V7.Enums.ConversionActionTypeEnum.ConversionActio
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :AD_CALL
-          | :CLICK_TO_CALL
-          | :GOOGLE_PLAY_DOWNLOAD
-          | :GOOGLE_PLAY_IN_APP_PURCHASE
-          | :UPLOAD_CALLS
-          | :UPLOAD_CLICKS
-          | :WEBPAGE
-          | :WEBSITE_CALL
-          | :STORE_SALES_DIRECT_UPLOAD
-          | :STORE_SALES
-          | :FIREBASE_ANDROID_FIRST_OPEN
-          | :FIREBASE_ANDROID_IN_APP_PURCHASE
-          | :FIREBASE_ANDROID_CUSTOM
-          | :FIREBASE_IOS_FIRST_OPEN
-          | :FIREBASE_IOS_IN_APP_PURCHASE
-          | :FIREBASE_IOS_CUSTOM
-          | :THIRD_PARTY_APP_ANALYTICS_ANDROID_FIRST_OPEN
-          | :THIRD_PARTY_APP_ANALYTICS_ANDROID_IN_APP_PURCHASE
-          | :THIRD_PARTY_APP_ANALYTICS_ANDROID_CUSTOM
-          | :THIRD_PARTY_APP_ANALYTICS_IOS_FIRST_OPEN
-          | :THIRD_PARTY_APP_ANALYTICS_IOS_IN_APP_PURCHASE
-          | :THIRD_PARTY_APP_ANALYTICS_IOS_CUSTOM
-          | :ANDROID_APP_PRE_REGISTRATION
-          | :ANDROID_INSTALLS_ALL_OTHER_APPS
-          | :FLOODLIGHT_ACTION
-          | :FLOODLIGHT_TRANSACTION
-          | :GOOGLE_HOSTED
-          | :LEAD_FORM_SUBMIT
-          | :SALESFORCE
-          | :SEARCH_ADS_360
-          | :SMART_CAMPAIGN_AD_CLICKS_TO_CALL
-          | :SMART_CAMPAIGN_MAP_CLICKS_TO_CALL
-          | :SMART_CAMPAIGN_MAP_DIRECTIONS
-          | :SMART_CAMPAIGN_TRACKED_CALLS
-          | :STORE_VISITS
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :AD_CALL, 2
@@ -85,6 +45,4 @@ defmodule Google.Ads.Googleads.V7.Enums.ConversionActionTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

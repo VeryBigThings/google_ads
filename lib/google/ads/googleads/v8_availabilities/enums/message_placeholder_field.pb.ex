@@ -2,16 +2,6 @@ defmodule Google.Ads.Googleads.V8Availabilities.Enums.MessagePlaceholderFieldEnu
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :BUSINESS_NAME
-          | :COUNTRY_CODE
-          | :PHONE_NUMBER
-          | :MESSAGE_EXTENSION_TEXT
-          | :MESSAGE_TEXT
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -30,7 +20,5 @@ end
 defmodule Google.Ads.Googleads.V8Availabilities.Enums.MessagePlaceholderFieldEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

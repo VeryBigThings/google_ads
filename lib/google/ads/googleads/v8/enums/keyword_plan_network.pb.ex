@@ -1,8 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Enums.KeywordPlanNetworkEnum.KeywordPlanNetwork do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
-  @type t :: integer | :UNSPECIFIED | :UNKNOWN | :GOOGLE_SEARCH | :GOOGLE_SEARCH_AND_PARTNERS
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -15,7 +13,5 @@ end
 defmodule Google.Ads.Googleads.V8.Enums.KeywordPlanNetworkEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

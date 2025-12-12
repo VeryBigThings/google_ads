@@ -2,16 +2,6 @@ defmodule Google.Ads.Googleads.V7.Resources.CustomAudience do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          id: integer,
-          status: Google.Ads.Googleads.V7.Enums.CustomAudienceStatusEnum.CustomAudienceStatus.t(),
-          name: String.t(),
-          type: Google.Ads.Googleads.V7.Enums.CustomAudienceTypeEnum.CustomAudienceType.t(),
-          description: String.t(),
-          members: [Google.Ads.Googleads.V7.Resources.CustomAudienceMember.t()]
-        }
-  defstruct [:resource_name, :id, :status, :name, :type, :description, :members]
 
   field :resource_name, 1, type: :string
   field :id, 2, type: :int64
@@ -34,12 +24,6 @@ defmodule Google.Ads.Googleads.V7.Resources.CustomAudienceMember do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          value: {atom, any},
-          member_type:
-            Google.Ads.Googleads.V7.Enums.CustomAudienceMemberTypeEnum.CustomAudienceMemberType.t()
-        }
-  defstruct [:value, :member_type]
 
   oneof :value, 0
 

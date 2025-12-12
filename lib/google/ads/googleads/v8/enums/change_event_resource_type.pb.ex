@@ -2,23 +2,6 @@ defmodule Google.Ads.Googleads.V8.Enums.ChangeEventResourceTypeEnum.ChangeEventR
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :AD
-          | :AD_GROUP
-          | :AD_GROUP_CRITERION
-          | :CAMPAIGN
-          | :CAMPAIGN_BUDGET
-          | :AD_GROUP_BID_MODIFIER
-          | :CAMPAIGN_CRITERION
-          | :FEED
-          | :FEED_ITEM
-          | :CAMPAIGN_FEED
-          | :AD_GROUP_FEED
-          | :AD_GROUP_AD
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -51,7 +34,5 @@ end
 defmodule Google.Ads.Googleads.V8.Enums.ChangeEventResourceTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

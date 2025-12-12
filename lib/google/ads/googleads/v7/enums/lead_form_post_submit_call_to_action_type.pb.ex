@@ -2,8 +2,6 @@ defmodule Google.Ads.Googleads.V7.Enums.LeadFormPostSubmitCallToActionTypeEnum.L
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t :: integer | :UNSPECIFIED | :UNKNOWN | :VISIT_SITE | :DOWNLOAD | :LEARN_MORE | :SHOP_NOW
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :VISIT_SITE, 2
@@ -16,6 +14,4 @@ defmodule Google.Ads.Googleads.V7.Enums.LeadFormPostSubmitCallToActionTypeEnum d
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

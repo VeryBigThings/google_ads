@@ -2,11 +2,7 @@ defmodule Google.Ads.Googleads.V8.Services.GetFeedItemSetLinkRequest do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          resource_name: String.t()
-        }
 
-  defstruct [:resource_name]
 
   field :resource_name, 1, required: true, type: :string
 end
@@ -15,14 +11,7 @@ defmodule Google.Ads.Googleads.V8.Services.MutateFeedItemSetLinksRequest do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          customer_id: String.t(),
-          operations: [Google.Ads.Googleads.V8.Services.FeedItemSetLinkOperation.t()],
-          partial_failure: boolean,
-          validate_only: boolean
-        }
 
-  defstruct [:customer_id, :operations, :partial_failure, :validate_only]
 
   field :customer_id, 1, required: true, type: :string
 
@@ -38,11 +27,7 @@ defmodule Google.Ads.Googleads.V8.Services.FeedItemSetLinkOperation do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          operation: {atom, any}
-        }
 
-  defstruct [:operation]
 
   oneof :operation, 0
 
@@ -58,11 +43,7 @@ defmodule Google.Ads.Googleads.V8.Services.MutateFeedItemSetLinksResponse do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          results: [Google.Ads.Googleads.V8.Services.MutateFeedItemSetLinkResult.t()]
-        }
 
-  defstruct [:results]
 
   field :results, 1,
     repeated: true,
@@ -73,11 +54,7 @@ defmodule Google.Ads.Googleads.V8.Services.MutateFeedItemSetLinkResult do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          resource_name: String.t()
-        }
 
-  defstruct [:resource_name]
 
   field :resource_name, 1, optional: true, type: :string
 end

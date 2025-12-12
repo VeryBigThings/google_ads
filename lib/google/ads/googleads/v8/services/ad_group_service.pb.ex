@@ -2,11 +2,7 @@ defmodule Google.Ads.Googleads.V8.Services.GetAdGroupRequest do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          resource_name: String.t()
-        }
 
-  defstruct [:resource_name]
 
   field :resource_name, 1, required: true, type: :string
 end
@@ -15,16 +11,7 @@ defmodule Google.Ads.Googleads.V8.Services.MutateAdGroupsRequest do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          customer_id: String.t(),
-          operations: [Google.Ads.Googleads.V8.Services.AdGroupOperation.t()],
-          partial_failure: boolean,
-          validate_only: boolean,
-          response_content_type:
-            Google.Ads.Googleads.V8.Enums.ResponseContentTypeEnum.ResponseContentType.t()
-        }
 
-  defstruct [:customer_id, :operations, :partial_failure, :validate_only, :response_content_type]
 
   field :customer_id, 1, required: true, type: :string
   field :operations, 2, repeated: true, type: Google.Ads.Googleads.V8.Services.AdGroupOperation
@@ -41,12 +28,7 @@ defmodule Google.Ads.Googleads.V8.Services.AdGroupOperation do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          operation: {atom, any},
-          update_mask: Google.Protobuf.FieldMask.t() | nil
-        }
 
-  defstruct [:operation, :update_mask]
 
   oneof :operation, 0
   field :update_mask, 4, optional: true, type: Google.Protobuf.FieldMask
@@ -59,12 +41,7 @@ defmodule Google.Ads.Googleads.V8.Services.MutateAdGroupsResponse do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          partial_failure_error: Google.Rpc.Status.t() | nil,
-          results: [Google.Ads.Googleads.V8.Services.MutateAdGroupResult.t()]
-        }
 
-  defstruct [:partial_failure_error, :results]
 
   field :partial_failure_error, 3, optional: true, type: Google.Rpc.Status
   field :results, 2, repeated: true, type: Google.Ads.Googleads.V8.Services.MutateAdGroupResult
@@ -74,12 +51,7 @@ defmodule Google.Ads.Googleads.V8.Services.MutateAdGroupResult do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          ad_group: Google.Ads.Googleads.V8.Resources.AdGroup.t() | nil
-        }
 
-  defstruct [:resource_name, :ad_group]
 
   field :resource_name, 1, optional: true, type: :string
   field :ad_group, 2, optional: true, type: Google.Ads.Googleads.V8.Resources.AdGroup

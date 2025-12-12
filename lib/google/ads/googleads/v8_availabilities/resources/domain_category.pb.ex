@@ -2,29 +2,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.DomainCategory do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          campaign: String.t(),
-          category: String.t(),
-          language_code: String.t(),
-          domain: String.t(),
-          coverage_fraction: float | :infinity | :negative_infinity | :nan,
-          category_rank: integer,
-          has_children: boolean,
-          recommended_cpc_bid_micros: integer
-        }
 
-  defstruct [
-    :resource_name,
-    :campaign,
-    :category,
-    :language_code,
-    :domain,
-    :coverage_fraction,
-    :category_rank,
-    :has_children,
-    :recommended_cpc_bid_micros
-  ]
 
   field :resource_name, 1, type: :string
   field :campaign, 10, type: :string

@@ -2,10 +2,6 @@ defmodule Google.Ads.Googleads.V4.Errors.GoogleAdsFailure do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          errors: [Google.Ads.Googleads.V4.Errors.GoogleAdsError.t()]
-        }
-  defstruct [:errors]
 
   field :errors, 1, repeated: true, type: Google.Ads.Googleads.V4.Errors.GoogleAdsError
 end
@@ -14,14 +10,6 @@ defmodule Google.Ads.Googleads.V4.Errors.GoogleAdsError do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          error_code: Google.Ads.Googleads.V4.Errors.ErrorCode.t() | nil,
-          message: String.t(),
-          trigger: Google.Ads.Googleads.V4.Common.Value.t() | nil,
-          location: Google.Ads.Googleads.V4.Errors.ErrorLocation.t() | nil,
-          details: Google.Ads.Googleads.V4.Errors.ErrorDetails.t() | nil
-        }
-  defstruct [:error_code, :message, :trigger, :location, :details]
 
   field :error_code, 1, type: Google.Ads.Googleads.V4.Errors.ErrorCode
   field :message, 2, type: :string
@@ -34,10 +22,6 @@ defmodule Google.Ads.Googleads.V4.Errors.ErrorCode do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          error_code: {atom, any}
-        }
-  defstruct [:error_code]
 
   oneof :error_code, 0
 
@@ -611,11 +595,6 @@ defmodule Google.Ads.Googleads.V4.Errors.ErrorLocation.FieldPathElement do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          field_name: String.t(),
-          index: Google.Protobuf.Int64Value.t() | nil
-        }
-  defstruct [:field_name, :index]
 
   field :field_name, 1, type: :string
   field :index, 2, type: Google.Protobuf.Int64Value
@@ -625,10 +604,6 @@ defmodule Google.Ads.Googleads.V4.Errors.ErrorLocation do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          field_path_elements: [Google.Ads.Googleads.V4.Errors.ErrorLocation.FieldPathElement.t()]
-        }
-  defstruct [:field_path_elements]
 
   field :field_path_elements, 2,
     repeated: true,
@@ -639,13 +614,6 @@ defmodule Google.Ads.Googleads.V4.Errors.ErrorDetails do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          unpublished_error_code: String.t(),
-          policy_violation_details:
-            Google.Ads.Googleads.V4.Errors.PolicyViolationDetails.t() | nil,
-          policy_finding_details: Google.Ads.Googleads.V4.Errors.PolicyFindingDetails.t() | nil
-        }
-  defstruct [:unpublished_error_code, :policy_violation_details, :policy_finding_details]
 
   field :unpublished_error_code, 1, type: :string
   field :policy_violation_details, 2, type: Google.Ads.Googleads.V4.Errors.PolicyViolationDetails
@@ -656,13 +624,6 @@ defmodule Google.Ads.Googleads.V4.Errors.PolicyViolationDetails do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          external_policy_description: String.t(),
-          key: Google.Ads.Googleads.V4.Common.PolicyViolationKey.t() | nil,
-          external_policy_name: String.t(),
-          is_exemptible: boolean
-        }
-  defstruct [:external_policy_description, :key, :external_policy_name, :is_exemptible]
 
   field :external_policy_description, 2, type: :string
   field :key, 4, type: Google.Ads.Googleads.V4.Common.PolicyViolationKey
@@ -674,10 +635,6 @@ defmodule Google.Ads.Googleads.V4.Errors.PolicyFindingDetails do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          policy_topic_entries: [Google.Ads.Googleads.V4.Common.PolicyTopicEntry.t()]
-        }
-  defstruct [:policy_topic_entries]
 
   field :policy_topic_entries, 1,
     repeated: true,

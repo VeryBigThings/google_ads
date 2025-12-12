@@ -2,16 +2,6 @@ defmodule Google.Ads.Googleads.V4.Enums.AccessReasonEnum.AccessReason do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :OWNED
-          | :SHARED
-          | :LICENSED
-          | :SUBSCRIBED
-          | :AFFILIATED
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :OWNED, 2
@@ -25,6 +15,4 @@ defmodule Google.Ads.Googleads.V4.Enums.AccessReasonEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

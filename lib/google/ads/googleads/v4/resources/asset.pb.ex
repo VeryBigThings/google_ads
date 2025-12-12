@@ -2,14 +2,6 @@ defmodule Google.Ads.Googleads.V4.Resources.Asset do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          asset_data: {atom, any},
-          resource_name: String.t(),
-          id: Google.Protobuf.Int64Value.t() | nil,
-          name: Google.Protobuf.StringValue.t() | nil,
-          type: Google.Ads.Googleads.V4.Enums.AssetTypeEnum.AssetType.t()
-        }
-  defstruct [:asset_data, :resource_name, :id, :name, :type]
 
   oneof :asset_data, 0
 

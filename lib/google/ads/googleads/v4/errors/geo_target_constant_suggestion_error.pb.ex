@@ -2,15 +2,6 @@ defmodule Google.Ads.Googleads.V4.Errors.GeoTargetConstantSuggestionErrorEnum.Ge
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :LOCATION_NAME_SIZE_LIMIT
-          | :LOCATION_NAME_LIMIT
-          | :INVALID_COUNTRY_CODE
-          | :REQUEST_PARAMETERS_UNSET
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :LOCATION_NAME_SIZE_LIMIT, 2
@@ -23,6 +14,4 @@ defmodule Google.Ads.Googleads.V4.Errors.GeoTargetConstantSuggestionErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

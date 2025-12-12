@@ -2,12 +2,7 @@ defmodule Google.Ads.Googleads.V8.Services.MutateBatchJobRequest do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          customer_id: String.t(),
-          operation: Google.Ads.Googleads.V8.Services.BatchJobOperation.t() | nil
-        }
 
-  defstruct [:customer_id, :operation]
 
   field :customer_id, 1, required: true, type: :string
   field :operation, 2, required: true, type: Google.Ads.Googleads.V8.Services.BatchJobOperation
@@ -17,11 +12,7 @@ defmodule Google.Ads.Googleads.V8.Services.BatchJobOperation do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          operation: {atom, any}
-        }
 
-  defstruct [:operation]
 
   oneof :operation, 0
   field :create, 1, optional: true, type: Google.Ads.Googleads.V8.Resources.BatchJob, oneof: 0
@@ -31,11 +22,7 @@ defmodule Google.Ads.Googleads.V8.Services.MutateBatchJobResponse do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          result: Google.Ads.Googleads.V8.Services.MutateBatchJobResult.t() | nil
-        }
 
-  defstruct [:result]
 
   field :result, 1, optional: true, type: Google.Ads.Googleads.V8.Services.MutateBatchJobResult
 end
@@ -44,11 +31,7 @@ defmodule Google.Ads.Googleads.V8.Services.MutateBatchJobResult do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          resource_name: String.t()
-        }
 
-  defstruct [:resource_name]
 
   field :resource_name, 1, optional: true, type: :string
 end
@@ -57,11 +40,7 @@ defmodule Google.Ads.Googleads.V8.Services.GetBatchJobRequest do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          resource_name: String.t()
-        }
 
-  defstruct [:resource_name]
 
   field :resource_name, 1, required: true, type: :string
 end
@@ -70,11 +49,7 @@ defmodule Google.Ads.Googleads.V8.Services.RunBatchJobRequest do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          resource_name: String.t()
-        }
 
-  defstruct [:resource_name]
 
   field :resource_name, 1, required: true, type: :string
 end
@@ -83,13 +58,7 @@ defmodule Google.Ads.Googleads.V8.Services.AddBatchJobOperationsRequest do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          sequence_token: String.t(),
-          mutate_operations: [Google.Ads.Googleads.V8.Services.MutateOperation.t()]
-        }
 
-  defstruct [:resource_name, :sequence_token, :mutate_operations]
 
   field :resource_name, 1, required: true, type: :string
   field :sequence_token, 2, optional: true, type: :string
@@ -103,12 +72,7 @@ defmodule Google.Ads.Googleads.V8.Services.AddBatchJobOperationsResponse do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          total_operations: integer,
-          next_sequence_token: String.t()
-        }
 
-  defstruct [:total_operations, :next_sequence_token]
 
   field :total_operations, 1, optional: true, type: :int64
   field :next_sequence_token, 2, optional: true, type: :string
@@ -118,15 +82,7 @@ defmodule Google.Ads.Googleads.V8.Services.ListBatchJobResultsRequest do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          page_token: String.t(),
-          page_size: integer,
-          response_content_type:
-            Google.Ads.Googleads.V8.Enums.ResponseContentTypeEnum.ResponseContentType.t()
-        }
 
-  defstruct [:resource_name, :page_token, :page_size, :response_content_type]
 
   field :resource_name, 1, required: true, type: :string
   field :page_token, 2, optional: true, type: :string
@@ -142,12 +98,7 @@ defmodule Google.Ads.Googleads.V8.Services.ListBatchJobResultsResponse do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          results: [Google.Ads.Googleads.V8.Services.BatchJobResult.t()],
-          next_page_token: String.t()
-        }
 
-  defstruct [:results, :next_page_token]
 
   field :results, 1, repeated: true, type: Google.Ads.Googleads.V8.Services.BatchJobResult
   field :next_page_token, 2, optional: true, type: :string
@@ -157,14 +108,7 @@ defmodule Google.Ads.Googleads.V8.Services.BatchJobResult do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          operation_index: integer,
-          mutate_operation_response:
-            Google.Ads.Googleads.V8.Services.MutateOperationResponse.t() | nil,
-          status: Google.Rpc.Status.t() | nil
-        }
 
-  defstruct [:operation_index, :mutate_operation_response, :status]
 
   field :operation_index, 1, optional: true, type: :int64
 

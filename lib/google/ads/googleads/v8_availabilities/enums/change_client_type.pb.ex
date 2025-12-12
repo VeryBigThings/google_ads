@@ -2,23 +2,6 @@ defmodule Google.Ads.Googleads.V8Availabilities.Enums.ChangeClientTypeEnum.Chang
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :GOOGLE_ADS_WEB_CLIENT
-          | :GOOGLE_ADS_AUTOMATED_RULE
-          | :GOOGLE_ADS_SCRIPTS
-          | :GOOGLE_ADS_BULK_UPLOAD
-          | :GOOGLE_ADS_API
-          | :GOOGLE_ADS_EDITOR
-          | :GOOGLE_ADS_MOBILE_APP
-          | :GOOGLE_ADS_RECOMMENDATIONS
-          | :SEARCH_ADS_360_SYNC
-          | :SEARCH_ADS_360_POST
-          | :INTERNAL_TOOL
-          | :OTHER
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -51,7 +34,5 @@ end
 defmodule Google.Ads.Googleads.V8Availabilities.Enums.ChangeClientTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

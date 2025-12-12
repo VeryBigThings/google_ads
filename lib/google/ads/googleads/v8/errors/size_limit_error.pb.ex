@@ -2,13 +2,6 @@ defmodule Google.Ads.Googleads.V8.Errors.SizeLimitErrorEnum.SizeLimitError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :REQUEST_SIZE_LIMIT_EXCEEDED
-          | :RESPONSE_SIZE_LIMIT_EXCEEDED
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -21,7 +14,5 @@ end
 defmodule Google.Ads.Googleads.V8.Errors.SizeLimitErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

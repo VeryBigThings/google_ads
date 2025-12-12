@@ -2,14 +2,6 @@ defmodule Google.Ads.Googleads.V8.Enums.TargetImpressionShareLocationEnum.Target
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :ANYWHERE_ON_PAGE
-          | :TOP_OF_PAGE
-          | :ABSOLUTE_TOP_OF_PAGE
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -24,7 +16,5 @@ end
 defmodule Google.Ads.Googleads.V8.Enums.TargetImpressionShareLocationEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

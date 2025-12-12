@@ -2,30 +2,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.AccountBudget.PendingA
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          end_time: {atom, any},
-          spending_limit: {atom, any},
-          account_budget_proposal: String.t(),
-          proposal_type:
-            Google.Ads.Googleads.V8Availabilities.Enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType.t(),
-          name: String.t(),
-          start_date_time: String.t(),
-          purchase_order_number: String.t(),
-          notes: String.t(),
-          creation_date_time: String.t()
-        }
 
-  defstruct [
-    :end_time,
-    :spending_limit,
-    :account_budget_proposal,
-    :proposal_type,
-    :name,
-    :start_date_time,
-    :purchase_order_number,
-    :notes,
-    :creation_date_time
-  ]
 
   oneof :end_time, 0
   oneof :spending_limit, 1
@@ -60,46 +37,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.AccountBudget do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          proposed_end_time: {atom, any},
-          approved_end_time: {atom, any},
-          proposed_spending_limit: {atom, any},
-          approved_spending_limit: {atom, any},
-          adjusted_spending_limit: {atom, any},
-          resource_name: String.t(),
-          id: integer,
-          billing_setup: String.t(),
-          status: Google.Ads.Googleads.V8Availabilities.Enums.AccountBudgetStatusEnum.AccountBudgetStatus.t(),
-          name: String.t(),
-          proposed_start_date_time: String.t(),
-          approved_start_date_time: String.t(),
-          total_adjustments_micros: integer,
-          amount_served_micros: integer,
-          purchase_order_number: String.t(),
-          notes: String.t(),
-          pending_proposal:
-            Google.Ads.Googleads.V8Availabilities.Resources.AccountBudget.PendingAccountBudgetProposal.t() | nil
-        }
 
-  defstruct [
-    :proposed_end_time,
-    :approved_end_time,
-    :proposed_spending_limit,
-    :approved_spending_limit,
-    :adjusted_spending_limit,
-    :resource_name,
-    :id,
-    :billing_setup,
-    :status,
-    :name,
-    :proposed_start_date_time,
-    :approved_start_date_time,
-    :total_adjustments_micros,
-    :amount_served_micros,
-    :purchase_order_number,
-    :notes,
-    :pending_proposal
-  ]
 
   oneof :proposed_end_time, 0
   oneof :approved_end_time, 1

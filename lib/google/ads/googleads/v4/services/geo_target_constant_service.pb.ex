@@ -2,10 +2,6 @@ defmodule Google.Ads.Googleads.V4.Services.GetGeoTargetConstantRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t()
-        }
-  defstruct [:resource_name]
 
   field :resource_name, 1, type: :string
 end
@@ -14,10 +10,6 @@ defmodule Google.Ads.Googleads.V4.Services.SuggestGeoTargetConstantsRequest.Loca
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          names: [Google.Protobuf.StringValue.t()]
-        }
-  defstruct [:names]
 
   field :names, 1, repeated: true, type: Google.Protobuf.StringValue
 end
@@ -26,10 +18,6 @@ defmodule Google.Ads.Googleads.V4.Services.SuggestGeoTargetConstantsRequest.GeoT
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          geo_target_constants: [Google.Protobuf.StringValue.t()]
-        }
-  defstruct [:geo_target_constants]
 
   field :geo_target_constants, 1, repeated: true, type: Google.Protobuf.StringValue
 end
@@ -38,12 +26,6 @@ defmodule Google.Ads.Googleads.V4.Services.SuggestGeoTargetConstantsRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          query: {atom, any},
-          locale: Google.Protobuf.StringValue.t() | nil,
-          country_code: Google.Protobuf.StringValue.t() | nil
-        }
-  defstruct [:query, :locale, :country_code]
 
   oneof :query, 0
 
@@ -63,12 +45,6 @@ defmodule Google.Ads.Googleads.V4.Services.SuggestGeoTargetConstantsResponse do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          geo_target_constant_suggestions: [
-            Google.Ads.Googleads.V4.Services.GeoTargetConstantSuggestion.t()
-          ]
-        }
-  defstruct [:geo_target_constant_suggestions]
 
   field :geo_target_constant_suggestions, 1,
     repeated: true,
@@ -79,14 +55,6 @@ defmodule Google.Ads.Googleads.V4.Services.GeoTargetConstantSuggestion do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          locale: Google.Protobuf.StringValue.t() | nil,
-          reach: Google.Protobuf.Int64Value.t() | nil,
-          search_term: Google.Protobuf.StringValue.t() | nil,
-          geo_target_constant: Google.Ads.Googleads.V4.Resources.GeoTargetConstant.t() | nil,
-          geo_target_constant_parents: [Google.Ads.Googleads.V4.Resources.GeoTargetConstant.t()]
-        }
-  defstruct [:locale, :reach, :search_term, :geo_target_constant, :geo_target_constant_parents]
 
   field :locale, 1, type: Google.Protobuf.StringValue
   field :reach, 2, type: Google.Protobuf.Int64Value

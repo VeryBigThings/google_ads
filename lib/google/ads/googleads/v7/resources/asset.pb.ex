@@ -2,32 +2,6 @@ defmodule Google.Ads.Googleads.V7.Resources.Asset do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          asset_data: {atom, any},
-          resource_name: String.t(),
-          id: integer,
-          name: String.t(),
-          type: Google.Ads.Googleads.V7.Enums.AssetTypeEnum.AssetType.t(),
-          final_urls: [String.t()],
-          final_mobile_urls: [String.t()],
-          tracking_url_template: String.t(),
-          url_custom_parameters: [Google.Ads.Googleads.V7.Common.CustomParameter.t()],
-          final_url_suffix: String.t(),
-          policy_summary: Google.Ads.Googleads.V7.Resources.AssetPolicySummary.t() | nil
-        }
-  defstruct [
-    :asset_data,
-    :resource_name,
-    :id,
-    :name,
-    :type,
-    :final_urls,
-    :final_mobile_urls,
-    :tracking_url_template,
-    :url_custom_parameters,
-    :final_url_suffix,
-    :policy_summary
-  ]
 
   oneof :asset_data, 0
 
@@ -69,14 +43,6 @@ defmodule Google.Ads.Googleads.V7.Resources.AssetPolicySummary do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          policy_topic_entries: [Google.Ads.Googleads.V7.Common.PolicyTopicEntry.t()],
-          review_status:
-            Google.Ads.Googleads.V7.Enums.PolicyReviewStatusEnum.PolicyReviewStatus.t(),
-          approval_status:
-            Google.Ads.Googleads.V7.Enums.PolicyApprovalStatusEnum.PolicyApprovalStatus.t()
-        }
-  defstruct [:policy_topic_entries, :review_status, :approval_status]
 
   field :policy_topic_entries, 1,
     repeated: true,

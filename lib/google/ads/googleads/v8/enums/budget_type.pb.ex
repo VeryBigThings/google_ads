@@ -2,15 +2,6 @@ defmodule Google.Ads.Googleads.V8.Enums.BudgetTypeEnum.BudgetType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :STANDARD
-          | :HOTEL_ADS_COMMISSION
-          | :FIXED_CPA
-          | :SMART_CAMPAIGN
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -27,7 +18,5 @@ end
 defmodule Google.Ads.Googleads.V8.Enums.BudgetTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

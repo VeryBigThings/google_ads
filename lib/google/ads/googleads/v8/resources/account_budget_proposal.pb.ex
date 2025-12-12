@@ -2,47 +2,7 @@ defmodule Google.Ads.Googleads.V8.Resources.AccountBudgetProposal do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          proposed_start_time: {atom, any},
-          proposed_end_time: {atom, any},
-          approved_end_time: {atom, any},
-          proposed_spending_limit: {atom, any},
-          approved_spending_limit: {atom, any},
-          resource_name: String.t(),
-          id: integer,
-          billing_setup: String.t(),
-          account_budget: String.t(),
-          proposal_type:
-            Google.Ads.Googleads.V8.Enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType.t(),
-          status:
-            Google.Ads.Googleads.V8.Enums.AccountBudgetProposalStatusEnum.AccountBudgetProposalStatus.t(),
-          proposed_name: String.t(),
-          approved_start_date_time: String.t(),
-          proposed_purchase_order_number: String.t(),
-          proposed_notes: String.t(),
-          creation_date_time: String.t(),
-          approval_date_time: String.t()
-        }
 
-  defstruct [
-    :proposed_start_time,
-    :proposed_end_time,
-    :approved_end_time,
-    :proposed_spending_limit,
-    :approved_spending_limit,
-    :resource_name,
-    :id,
-    :billing_setup,
-    :account_budget,
-    :proposal_type,
-    :status,
-    :proposed_name,
-    :approved_start_date_time,
-    :proposed_purchase_order_number,
-    :proposed_notes,
-    :creation_date_time,
-    :approval_date_time
-  ]
 
   oneof :proposed_start_time, 0
   oneof :proposed_end_time, 1

@@ -2,19 +2,6 @@ defmodule Google.Ads.Googleads.V4.Errors.MutateErrorEnum.MutateError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :RESOURCE_NOT_FOUND
-          | :ID_EXISTS_IN_MULTIPLE_MUTATES
-          | :INCONSISTENT_FIELD_VALUES
-          | :MUTATE_NOT_ALLOWED
-          | :RESOURCE_NOT_IN_GOOGLE_ADS
-          | :RESOURCE_ALREADY_EXISTS
-          | :RESOURCE_DOES_NOT_SUPPORT_VALIDATE_ONLY
-          | :RESOURCE_READ_ONLY
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :RESOURCE_NOT_FOUND, 3
@@ -31,6 +18,4 @@ defmodule Google.Ads.Googleads.V4.Errors.MutateErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

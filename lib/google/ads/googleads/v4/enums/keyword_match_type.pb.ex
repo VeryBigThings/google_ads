@@ -2,8 +2,6 @@ defmodule Google.Ads.Googleads.V4.Enums.KeywordMatchTypeEnum.KeywordMatchType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t :: integer | :UNSPECIFIED | :UNKNOWN | :EXACT | :PHRASE | :BROAD
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :EXACT, 2
@@ -15,6 +13,4 @@ defmodule Google.Ads.Googleads.V4.Enums.KeywordMatchTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

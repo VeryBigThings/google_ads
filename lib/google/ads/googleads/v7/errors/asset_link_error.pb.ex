@@ -2,26 +2,6 @@ defmodule Google.Ads.Googleads.V7.Errors.AssetLinkErrorEnum.AssetLinkError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :PINNING_UNSUPPORTED
-          | :UNSUPPORTED_FIELD_TYPE
-          | :FIELD_TYPE_INCOMPATIBLE_WITH_ASSET_TYPE
-          | :FIELD_TYPE_INCOMPATIBLE_WITH_CAMPAIGN_TYPE
-          | :INCOMPATIBLE_ADVERTISING_CHANNEL_TYPE
-          | :IMAGE_NOT_WITHIN_SPECIFIED_DIMENSION_RANGE
-          | :INVALID_PINNED_FIELD
-          | :MEDIA_BUNDLE_ASSET_FILE_SIZE_TOO_LARGE
-          | :NOT_ENOUGH_AVAILABLE_ASSET_LINKS_FOR_VALID_COMBINATION
-          | :NOT_ENOUGH_AVAILABLE_ASSET_LINKS_WITH_FALLBACK
-          | :NOT_ENOUGH_AVAILABLE_ASSET_LINKS_WITH_FALLBACK_FOR_VALID_COMBINATION
-          | :YOUTUBE_VIDEO_REMOVED
-          | :YOUTUBE_VIDEO_TOO_LONG
-          | :YOUTUBE_VIDEO_TOO_SHORT
-          | :INVALID_STATUS
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :PINNING_UNSUPPORTED, 2
@@ -45,6 +25,4 @@ defmodule Google.Ads.Googleads.V7.Errors.AssetLinkErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

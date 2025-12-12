@@ -1,8 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Enums.FrequencyCapLevelEnum.FrequencyCapLevel do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
-  @type t :: integer | :UNSPECIFIED | :UNKNOWN | :AD_GROUP_AD | :AD_GROUP | :CAMPAIGN
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -17,7 +15,5 @@ end
 defmodule Google.Ads.Googleads.V8.Enums.FrequencyCapLevelEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

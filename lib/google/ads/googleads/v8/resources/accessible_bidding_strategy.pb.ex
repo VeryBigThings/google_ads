@@ -2,11 +2,7 @@ defmodule Google.Ads.Googleads.V8.Resources.AccessibleBiddingStrategy.MaximizeCo
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          target_roas: float | :infinity | :negative_infinity | :nan
-        }
 
-  defstruct [:target_roas]
 
   field :target_roas, 1, required: true, type: :double
 end
@@ -15,11 +11,7 @@ defmodule Google.Ads.Googleads.V8.Resources.AccessibleBiddingStrategy.MaximizeCo
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          target_cpa: integer
-        }
 
-  defstruct [:target_cpa]
 
   field :target_cpa, 1, required: true, type: :int64
 end
@@ -28,11 +20,7 @@ defmodule Google.Ads.Googleads.V8.Resources.AccessibleBiddingStrategy.TargetCpa 
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          target_cpa_micros: integer
-        }
 
-  defstruct [:target_cpa_micros]
 
   field :target_cpa_micros, 1, optional: true, type: :int64
 end
@@ -41,12 +29,7 @@ defmodule Google.Ads.Googleads.V8.Resources.AccessibleBiddingStrategy.TargetSpen
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          target_spend_micros: integer,
-          cpc_bid_ceiling_micros: integer
-        }
 
-  defstruct [:target_spend_micros, :cpc_bid_ceiling_micros]
 
   field :target_spend_micros, 1, optional: true, type: :int64, deprecated: true
   field :cpc_bid_ceiling_micros, 2, optional: true, type: :int64
@@ -56,14 +39,7 @@ defmodule Google.Ads.Googleads.V8.Resources.AccessibleBiddingStrategy.TargetImpr
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          location:
-            Google.Ads.Googleads.V8.Enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation.t(),
-          location_fraction_micros: integer,
-          cpc_bid_ceiling_micros: integer
-        }
 
-  defstruct [:location, :location_fraction_micros, :cpc_bid_ceiling_micros]
 
   field :location, 1,
     required: true,
@@ -79,11 +55,7 @@ defmodule Google.Ads.Googleads.V8.Resources.AccessibleBiddingStrategy.TargetRoas
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          target_roas: float | :infinity | :negative_infinity | :nan
-        }
 
-  defstruct [:target_roas]
 
   field :target_roas, 1, optional: true, type: :double
 end
@@ -92,25 +64,7 @@ defmodule Google.Ads.Googleads.V8.Resources.AccessibleBiddingStrategy do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          scheme: {atom, any},
-          resource_name: String.t(),
-          id: integer,
-          name: String.t(),
-          type: Google.Ads.Googleads.V8.Enums.BiddingStrategyTypeEnum.BiddingStrategyType.t(),
-          owner_customer_id: integer,
-          owner_descriptive_name: String.t()
-        }
 
-  defstruct [
-    :scheme,
-    :resource_name,
-    :id,
-    :name,
-    :type,
-    :owner_customer_id,
-    :owner_descriptive_name
-  ]
 
   oneof :scheme, 0
   field :resource_name, 1, optional: true, type: :string

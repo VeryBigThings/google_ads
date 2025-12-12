@@ -2,25 +2,6 @@ defmodule Google.Ads.Googleads.V4.Enums.AdGroupTypeEnum.AdGroupType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :SEARCH_STANDARD
-          | :DISPLAY_STANDARD
-          | :SHOPPING_PRODUCT_ADS
-          | :HOTEL_ADS
-          | :SHOPPING_SMART_ADS
-          | :VIDEO_BUMPER
-          | :VIDEO_TRUE_VIEW_IN_STREAM
-          | :VIDEO_TRUE_VIEW_IN_DISPLAY
-          | :VIDEO_NON_SKIPPABLE_IN_STREAM
-          | :VIDEO_OUTSTREAM
-          | :SEARCH_DYNAMIC_ADS
-          | :SHOPPING_COMPARISON_LISTING_ADS
-          | :PROMOTED_HOTEL_ADS
-          | :VIDEO_RESPONSIVE
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :SEARCH_STANDARD, 2
@@ -43,6 +24,4 @@ defmodule Google.Ads.Googleads.V4.Enums.AdGroupTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

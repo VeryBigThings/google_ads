@@ -2,8 +2,6 @@ defmodule Google.Ads.Googleads.V7.Enums.MatchingFunctionContextTypeEnum.Matching
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t :: integer | :UNSPECIFIED | :UNKNOWN | :FEED_ITEM_ID | :DEVICE_NAME | :FEED_ITEM_SET_ID
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :FEED_ITEM_ID, 2
@@ -15,6 +13,4 @@ defmodule Google.Ads.Googleads.V7.Enums.MatchingFunctionContextTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

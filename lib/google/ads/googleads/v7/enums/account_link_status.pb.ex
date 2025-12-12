@@ -2,17 +2,6 @@ defmodule Google.Ads.Googleads.V7.Enums.AccountLinkStatusEnum.AccountLinkStatus 
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :ENABLED
-          | :REMOVED
-          | :REQUESTED
-          | :PENDING_APPROVAL
-          | :REJECTED
-          | :REVOKED
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :ENABLED, 2
@@ -27,6 +16,4 @@ defmodule Google.Ads.Googleads.V7.Enums.AccountLinkStatusEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

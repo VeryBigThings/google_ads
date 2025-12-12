@@ -2,19 +2,6 @@ defmodule Google.Ads.Googleads.V8Availabilities.Errors.AccessInvitationErrorEnum
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :INVALID_EMAIL_ADDRESS
-          | :EMAIL_ADDRESS_ALREADY_HAS_ACCESS
-          | :INVALID_INVITATION_STATUS
-          | :GOOGLE_CONSUMER_ACCOUNT_NOT_ALLOWED
-          | :INVALID_INVITATION_ID
-          | :EMAIL_ADDRESS_ALREADY_HAS_PENDING_INVITATION
-          | :PENDING_INVITATIONS_LIMIT_EXCEEDED
-          | :EMAIL_DOMAIN_POLICY_VIOLATED
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -39,7 +26,5 @@ end
 defmodule Google.Ads.Googleads.V8Availabilities.Errors.AccessInvitationErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

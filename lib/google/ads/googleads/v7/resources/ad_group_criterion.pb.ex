@@ -2,21 +2,6 @@ defmodule Google.Ads.Googleads.V7.Resources.AdGroupCriterion.QualityInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          quality_score: integer,
-          creative_quality_score:
-            Google.Ads.Googleads.V7.Enums.QualityScoreBucketEnum.QualityScoreBucket.t(),
-          post_click_quality_score:
-            Google.Ads.Googleads.V7.Enums.QualityScoreBucketEnum.QualityScoreBucket.t(),
-          search_predicted_ctr:
-            Google.Ads.Googleads.V7.Enums.QualityScoreBucketEnum.QualityScoreBucket.t()
-        }
-  defstruct [
-    :quality_score,
-    :creative_quality_score,
-    :post_click_quality_score,
-    :search_predicted_ctr
-  ]
 
   field :quality_score, 5, type: :int32
 
@@ -37,20 +22,6 @@ defmodule Google.Ads.Googleads.V7.Resources.AdGroupCriterion.PositionEstimates d
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          first_page_cpc_micros: integer,
-          first_position_cpc_micros: integer,
-          top_of_page_cpc_micros: integer,
-          estimated_add_clicks_at_first_position_cpc: integer,
-          estimated_add_cost_at_first_position_cpc: integer
-        }
-  defstruct [
-    :first_page_cpc_micros,
-    :first_position_cpc_micros,
-    :top_of_page_cpc_micros,
-    :estimated_add_clicks_at_first_position_cpc,
-    :estimated_add_cost_at_first_position_cpc
-  ]
 
   field :first_page_cpc_micros, 6, type: :int64
   field :first_position_cpc_micros, 7, type: :int64
@@ -63,82 +34,6 @@ defmodule Google.Ads.Googleads.V7.Resources.AdGroupCriterion do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          criterion: {atom, any},
-          resource_name: String.t(),
-          criterion_id: integer,
-          display_name: String.t(),
-          status:
-            Google.Ads.Googleads.V7.Enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus.t(),
-          quality_info: Google.Ads.Googleads.V7.Resources.AdGroupCriterion.QualityInfo.t() | nil,
-          ad_group: String.t(),
-          type: Google.Ads.Googleads.V7.Enums.CriterionTypeEnum.CriterionType.t(),
-          negative: boolean,
-          system_serving_status:
-            Google.Ads.Googleads.V7.Enums.CriterionSystemServingStatusEnum.CriterionSystemServingStatus.t(),
-          approval_status:
-            Google.Ads.Googleads.V7.Enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus.t(),
-          disapproval_reasons: [String.t()],
-          labels: [String.t()],
-          bid_modifier: float | :infinity | :negative_infinity | :nan,
-          cpc_bid_micros: integer,
-          cpm_bid_micros: integer,
-          cpv_bid_micros: integer,
-          percent_cpc_bid_micros: integer,
-          effective_cpc_bid_micros: integer,
-          effective_cpm_bid_micros: integer,
-          effective_cpv_bid_micros: integer,
-          effective_percent_cpc_bid_micros: integer,
-          effective_cpc_bid_source:
-            Google.Ads.Googleads.V7.Enums.BiddingSourceEnum.BiddingSource.t(),
-          effective_cpm_bid_source:
-            Google.Ads.Googleads.V7.Enums.BiddingSourceEnum.BiddingSource.t(),
-          effective_cpv_bid_source:
-            Google.Ads.Googleads.V7.Enums.BiddingSourceEnum.BiddingSource.t(),
-          effective_percent_cpc_bid_source:
-            Google.Ads.Googleads.V7.Enums.BiddingSourceEnum.BiddingSource.t(),
-          position_estimates:
-            Google.Ads.Googleads.V7.Resources.AdGroupCriterion.PositionEstimates.t() | nil,
-          final_urls: [String.t()],
-          final_mobile_urls: [String.t()],
-          final_url_suffix: String.t(),
-          tracking_url_template: String.t(),
-          url_custom_parameters: [Google.Ads.Googleads.V7.Common.CustomParameter.t()]
-        }
-  defstruct [
-    :criterion,
-    :resource_name,
-    :criterion_id,
-    :display_name,
-    :status,
-    :quality_info,
-    :ad_group,
-    :type,
-    :negative,
-    :system_serving_status,
-    :approval_status,
-    :disapproval_reasons,
-    :labels,
-    :bid_modifier,
-    :cpc_bid_micros,
-    :cpm_bid_micros,
-    :cpv_bid_micros,
-    :percent_cpc_bid_micros,
-    :effective_cpc_bid_micros,
-    :effective_cpm_bid_micros,
-    :effective_cpv_bid_micros,
-    :effective_percent_cpc_bid_micros,
-    :effective_cpc_bid_source,
-    :effective_cpm_bid_source,
-    :effective_cpv_bid_source,
-    :effective_percent_cpc_bid_source,
-    :position_estimates,
-    :final_urls,
-    :final_mobile_urls,
-    :final_url_suffix,
-    :tracking_url_template,
-    :url_custom_parameters
-  ]
 
   oneof :criterion, 0
 

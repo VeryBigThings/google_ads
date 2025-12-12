@@ -2,12 +2,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Common.CriterionCategoryAvailabi
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          channel: Google.Ads.Googleads.V8Availabilities.Common.CriterionCategoryChannelAvailability.t() | nil,
-          locale: [Google.Ads.Googleads.V8Availabilities.Common.CriterionCategoryLocaleAvailability.t()]
-        }
 
-  defstruct [:channel, :locale]
 
   field :channel, 1, type: Google.Ads.Googleads.V8Availabilities.Common.CriterionCategoryChannelAvailability
 
@@ -20,25 +15,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Common.CriterionCategoryChannelA
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          availability_mode:
-            Google.Ads.Googleads.V8Availabilities.Enums.CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode.t(),
-          advertising_channel_type:
-            Google.Ads.Googleads.V8Availabilities.Enums.AdvertisingChannelTypeEnum.AdvertisingChannelType.t(),
-          advertising_channel_sub_type: [
-            [
-              Google.Ads.Googleads.V8Availabilities.Enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType.t()
-            ]
-          ],
-          include_default_channel_sub_type: boolean
-        }
 
-  defstruct [
-    :availability_mode,
-    :advertising_channel_type,
-    :advertising_channel_sub_type,
-    :include_default_channel_sub_type
-  ]
 
   field :availability_mode, 1,
     type:
@@ -61,14 +38,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Common.CriterionCategoryLocaleAv
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          availability_mode:
-            Google.Ads.Googleads.V8Availabilities.Enums.CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode.t(),
-          country_code: String.t(),
-          language_code: String.t()
-        }
 
-  defstruct [:availability_mode, :country_code, :language_code]
 
   field :availability_mode, 1,
     type:

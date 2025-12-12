@@ -2,12 +2,6 @@ defmodule Google.Ads.Googleads.V7.Resources.GeographicView do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          location_type: Google.Ads.Googleads.V7.Enums.GeoTargetingTypeEnum.GeoTargetingType.t(),
-          country_criterion_id: integer
-        }
-  defstruct [:resource_name, :location_type, :country_criterion_id]
 
   field :resource_name, 1, type: :string
 

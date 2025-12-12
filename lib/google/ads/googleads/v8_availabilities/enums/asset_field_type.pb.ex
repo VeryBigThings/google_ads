@@ -2,23 +2,6 @@ defmodule Google.Ads.Googleads.V8Availabilities.Enums.AssetFieldTypeEnum.AssetFi
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :HEADLINE
-          | :DESCRIPTION
-          | :MANDATORY_AD_TEXT
-          | :MARKETING_IMAGE
-          | :MEDIA_BUNDLE
-          | :YOUTUBE_VIDEO
-          | :BOOK_ON_GOOGLE
-          | :LEAD_FORM
-          | :PROMOTION
-          | :CALLOUT
-          | :STRUCTURED_SNIPPET
-          | :SITELINK
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -51,7 +34,5 @@ end
 defmodule Google.Ads.Googleads.V8Availabilities.Enums.AssetFieldTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

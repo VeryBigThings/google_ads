@@ -2,12 +2,7 @@ defmodule Google.Ads.Googleads.V8.Services.SuggestSmartCampaignBudgetOptionsRequ
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          suggestion_data: {atom, any},
-          customer_id: String.t()
-        }
 
-  defstruct [:suggestion_data, :customer_id]
 
   oneof :suggestion_data, 0
   field :customer_id, 1, required: true, type: :string
@@ -23,11 +18,7 @@ defmodule Google.Ads.Googleads.V8.Services.SmartCampaignSuggestionInfo.LocationL
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          locations: [Google.Ads.Googleads.V8.Common.LocationInfo.t()]
-        }
 
-  defstruct [:locations]
 
   field :locations, 1, repeated: true, type: Google.Ads.Googleads.V8.Common.LocationInfo
 end
@@ -36,23 +27,7 @@ defmodule Google.Ads.Googleads.V8.Services.SmartCampaignSuggestionInfo do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          geo_target: {atom, any},
-          final_url: String.t(),
-          business_location_id: integer,
-          language_code: String.t(),
-          ad_schedules: [Google.Ads.Googleads.V8.Common.AdScheduleInfo.t()],
-          keyword_themes: [Google.Ads.Googleads.V8.Common.KeywordThemeInfo.t()]
-        }
 
-  defstruct [
-    :geo_target,
-    :final_url,
-    :business_location_id,
-    :language_code,
-    :ad_schedules,
-    :keyword_themes
-  ]
 
   oneof :geo_target, 0
   field :final_url, 1, optional: true, type: :string
@@ -76,12 +51,7 @@ defmodule Google.Ads.Googleads.V8.Services.SuggestSmartCampaignBudgetOptionsResp
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          min_daily_clicks: integer,
-          max_daily_clicks: integer
-        }
 
-  defstruct [:min_daily_clicks, :max_daily_clicks]
 
   field :min_daily_clicks, 1, optional: true, type: :int64
   field :max_daily_clicks, 2, optional: true, type: :int64
@@ -91,14 +61,7 @@ defmodule Google.Ads.Googleads.V8.Services.SuggestSmartCampaignBudgetOptionsResp
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          daily_amount_micros: integer,
-          metrics:
-            Google.Ads.Googleads.V8.Services.SuggestSmartCampaignBudgetOptionsResponse.Metrics.t()
-            | nil
-        }
 
-  defstruct [:daily_amount_micros, :metrics]
 
   field :daily_amount_micros, 1, optional: true, type: :int64
 
@@ -111,19 +74,7 @@ defmodule Google.Ads.Googleads.V8.Services.SuggestSmartCampaignBudgetOptionsResp
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          low:
-            Google.Ads.Googleads.V8.Services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption.t()
-            | nil,
-          recommended:
-            Google.Ads.Googleads.V8.Services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption.t()
-            | nil,
-          high:
-            Google.Ads.Googleads.V8.Services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption.t()
-            | nil
-        }
 
-  defstruct [:low, :recommended, :high]
 
   field :low, 1,
     optional: true,

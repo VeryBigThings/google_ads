@@ -2,72 +2,7 @@ defmodule Google.Ads.Googleads.V8.Resources.AdGroup do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          id: integer,
-          name: String.t(),
-          status: Google.Ads.Googleads.V8.Enums.AdGroupStatusEnum.AdGroupStatus.t(),
-          type: Google.Ads.Googleads.V8.Enums.AdGroupTypeEnum.AdGroupType.t(),
-          ad_rotation_mode:
-            Google.Ads.Googleads.V8.Enums.AdGroupAdRotationModeEnum.AdGroupAdRotationMode.t(),
-          base_ad_group: String.t(),
-          tracking_url_template: String.t(),
-          url_custom_parameters: [Google.Ads.Googleads.V8.Common.CustomParameter.t()],
-          campaign: String.t(),
-          cpc_bid_micros: integer,
-          cpm_bid_micros: integer,
-          target_cpa_micros: integer,
-          cpv_bid_micros: integer,
-          target_cpm_micros: integer,
-          target_roas: float | :infinity | :negative_infinity | :nan,
-          percent_cpc_bid_micros: integer,
-          explorer_auto_optimizer_setting:
-            Google.Ads.Googleads.V8.Common.ExplorerAutoOptimizerSetting.t() | nil,
-          display_custom_bid_dimension:
-            Google.Ads.Googleads.V8.Enums.TargetingDimensionEnum.TargetingDimension.t(),
-          final_url_suffix: String.t(),
-          targeting_setting: Google.Ads.Googleads.V8.Common.TargetingSetting.t() | nil,
-          effective_target_cpa_micros: integer,
-          effective_target_cpa_source:
-            Google.Ads.Googleads.V8.Enums.BiddingSourceEnum.BiddingSource.t(),
-          effective_target_roas: float | :infinity | :negative_infinity | :nan,
-          effective_target_roas_source:
-            Google.Ads.Googleads.V8.Enums.BiddingSourceEnum.BiddingSource.t(),
-          labels: [String.t()],
-          excluded_parent_asset_field_types: [
-            [Google.Ads.Googleads.V8.Enums.AssetFieldTypeEnum.AssetFieldType.t()]
-          ]
-        }
 
-  defstruct [
-    :resource_name,
-    :id,
-    :name,
-    :status,
-    :type,
-    :ad_rotation_mode,
-    :base_ad_group,
-    :tracking_url_template,
-    :url_custom_parameters,
-    :campaign,
-    :cpc_bid_micros,
-    :cpm_bid_micros,
-    :target_cpa_micros,
-    :cpv_bid_micros,
-    :target_cpm_micros,
-    :target_roas,
-    :percent_cpc_bid_micros,
-    :explorer_auto_optimizer_setting,
-    :display_custom_bid_dimension,
-    :final_url_suffix,
-    :targeting_setting,
-    :effective_target_cpa_micros,
-    :effective_target_cpa_source,
-    :effective_target_roas,
-    :effective_target_roas_source,
-    :labels,
-    :excluded_parent_asset_field_types
-  ]
 
   field :resource_name, 1, optional: true, type: :string
   field :id, 34, optional: true, type: :int64

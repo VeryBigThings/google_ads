@@ -2,46 +2,6 @@ defmodule Google.Ads.Googleads.V4.Resources.AccountBudgetProposal do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          proposed_start_time: {atom, any},
-          proposed_end_time: {atom, any},
-          approved_end_time: {atom, any},
-          proposed_spending_limit: {atom, any},
-          approved_spending_limit: {atom, any},
-          resource_name: String.t(),
-          id: Google.Protobuf.Int64Value.t() | nil,
-          billing_setup: Google.Protobuf.StringValue.t() | nil,
-          account_budget: Google.Protobuf.StringValue.t() | nil,
-          proposal_type:
-            Google.Ads.Googleads.V4.Enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType.t(),
-          status:
-            Google.Ads.Googleads.V4.Enums.AccountBudgetProposalStatusEnum.AccountBudgetProposalStatus.t(),
-          proposed_name: Google.Protobuf.StringValue.t() | nil,
-          approved_start_date_time: Google.Protobuf.StringValue.t() | nil,
-          proposed_purchase_order_number: Google.Protobuf.StringValue.t() | nil,
-          proposed_notes: Google.Protobuf.StringValue.t() | nil,
-          creation_date_time: Google.Protobuf.StringValue.t() | nil,
-          approval_date_time: Google.Protobuf.StringValue.t() | nil
-        }
-  defstruct [
-    :proposed_start_time,
-    :proposed_end_time,
-    :approved_end_time,
-    :proposed_spending_limit,
-    :approved_spending_limit,
-    :resource_name,
-    :id,
-    :billing_setup,
-    :account_budget,
-    :proposal_type,
-    :status,
-    :proposed_name,
-    :approved_start_date_time,
-    :proposed_purchase_order_number,
-    :proposed_notes,
-    :creation_date_time,
-    :approval_date_time
-  ]
 
   oneof :proposed_start_time, 0
   oneof :proposed_end_time, 1

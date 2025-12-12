@@ -2,13 +2,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Common.TextAdInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          headline: String.t(),
-          description1: String.t(),
-          description2: String.t()
-        }
 
-  defstruct [:headline, :description1, :description2]
 
   field :headline, 4, type: :string
   field :description1, 5, type: :string
@@ -19,25 +13,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Common.ExpandedTextAdInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          headline_part1: String.t(),
-          headline_part2: String.t(),
-          headline_part3: String.t(),
-          description: String.t(),
-          description2: String.t(),
-          path1: String.t(),
-          path2: String.t()
-        }
 
-  defstruct [
-    :headline_part1,
-    :headline_part2,
-    :headline_part3,
-    :description,
-    :description2,
-    :path1,
-    :path2
-  ]
 
   field :headline_part1, 8, type: :string
   field :headline_part2, 9, type: :string
@@ -52,12 +28,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Common.ExpandedDynamicSearchAdIn
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          description: String.t(),
-          description2: String.t()
-        }
 
-  defstruct [:description, :description2]
 
   field :description, 3, type: :string
   field :description2, 4, type: :string
@@ -66,36 +37,26 @@ end
 defmodule Google.Ads.Googleads.V8Availabilities.Common.HotelAdInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end
 
 defmodule Google.Ads.Googleads.V8Availabilities.Common.ShoppingSmartAdInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end
 
 defmodule Google.Ads.Googleads.V8Availabilities.Common.ShoppingProductAdInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end
 
 defmodule Google.Ads.Googleads.V8Availabilities.Common.ShoppingComparisonListingAdInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          headline: String.t()
-        }
 
-  defstruct [:headline]
 
   field :headline, 2, type: :string
 end
@@ -104,28 +65,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Common.GmailAdInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          teaser: Google.Ads.Googleads.V8Availabilities.Common.GmailTeaser.t() | nil,
-          header_image: String.t(),
-          marketing_image: String.t(),
-          marketing_image_headline: String.t(),
-          marketing_image_description: String.t(),
-          marketing_image_display_call_to_action:
-            Google.Ads.Googleads.V8Availabilities.Common.DisplayCallToAction.t() | nil,
-          product_images: [Google.Ads.Googleads.V8Availabilities.Common.ProductImage.t()],
-          product_videos: [Google.Ads.Googleads.V8Availabilities.Common.ProductVideo.t()]
-        }
 
-  defstruct [
-    :teaser,
-    :header_image,
-    :marketing_image,
-    :marketing_image_headline,
-    :marketing_image_description,
-    :marketing_image_display_call_to_action,
-    :product_images,
-    :product_videos
-  ]
 
   field :teaser, 1, type: Google.Ads.Googleads.V8Availabilities.Common.GmailTeaser
   field :header_image, 10, type: :string
@@ -144,14 +84,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Common.GmailTeaser do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          headline: String.t(),
-          description: String.t(),
-          business_name: String.t(),
-          logo_image: String.t()
-        }
 
-  defstruct [:headline, :description, :business_name, :logo_image]
 
   field :headline, 5, type: :string
   field :description, 6, type: :string
@@ -163,13 +96,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Common.DisplayCallToAction do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          text: String.t(),
-          text_color: String.t(),
-          url_collection_id: String.t()
-        }
 
-  defstruct [:text, :text_color, :url_collection_id]
 
   field :text, 5, type: :string
   field :text_color, 6, type: :string
@@ -180,13 +107,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Common.ProductImage do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          product_image: String.t(),
-          description: String.t(),
-          display_call_to_action: Google.Ads.Googleads.V8Availabilities.Common.DisplayCallToAction.t() | nil
-        }
 
-  defstruct [:product_image, :description, :display_call_to_action]
 
   field :product_image, 4, type: :string
   field :description, 5, type: :string
@@ -197,11 +118,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Common.ProductVideo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          product_video: String.t()
-        }
 
-  defstruct [:product_video]
 
   field :product_video, 2, type: :string
 end
@@ -210,29 +127,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Common.ImageAdInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          image: {atom, any},
-          pixel_width: integer,
-          pixel_height: integer,
-          image_url: String.t(),
-          preview_pixel_width: integer,
-          preview_pixel_height: integer,
-          preview_image_url: String.t(),
-          mime_type: Google.Ads.Googleads.V8Availabilities.Enums.MimeTypeEnum.MimeType.t(),
-          name: String.t()
-        }
 
-  defstruct [
-    :image,
-    :pixel_width,
-    :pixel_height,
-    :image_url,
-    :preview_pixel_width,
-    :preview_pixel_height,
-    :preview_image_url,
-    :mime_type,
-    :name
-  ]
 
   oneof :image, 0
 
@@ -253,11 +148,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Common.VideoBumperInStreamAdInfo
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          companion_banner: String.t()
-        }
 
-  defstruct [:companion_banner]
 
   field :companion_banner, 2, type: :string
 end
@@ -266,11 +157,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Common.VideoNonSkippableInStream
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          companion_banner: String.t()
-        }
 
-  defstruct [:companion_banner]
 
   field :companion_banner, 2, type: :string
 end
@@ -279,13 +166,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Common.VideoTrueViewInStreamAdIn
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          action_button_label: String.t(),
-          action_headline: String.t(),
-          companion_banner: String.t()
-        }
 
-  defstruct [:action_button_label, :action_headline, :companion_banner]
 
   field :action_button_label, 4, type: :string
   field :action_headline, 5, type: :string
@@ -296,12 +177,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Common.VideoOutstreamAdInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          headline: String.t(),
-          description: String.t()
-        }
 
-  defstruct [:headline, :description]
 
   field :headline, 3, type: :string
   field :description, 4, type: :string
@@ -311,13 +187,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Common.VideoTrueViewDiscoveryAdI
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          headline: String.t(),
-          description1: String.t(),
-          description2: String.t()
-        }
 
-  defstruct [:headline, :description1, :description2]
 
   field :headline, 4, type: :string
   field :description1, 5, type: :string
@@ -328,12 +198,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Common.VideoAdInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          format: {atom, any},
-          media_file: String.t()
-        }
 
-  defstruct [:format, :media_file]
 
   oneof :format, 0
 
@@ -353,23 +218,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Common.VideoResponsiveAdInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          headlines: [Google.Ads.Googleads.V8Availabilities.Common.AdTextAsset.t()],
-          long_headlines: [Google.Ads.Googleads.V8Availabilities.Common.AdTextAsset.t()],
-          descriptions: [Google.Ads.Googleads.V8Availabilities.Common.AdTextAsset.t()],
-          call_to_actions: [Google.Ads.Googleads.V8Availabilities.Common.AdTextAsset.t()],
-          videos: [Google.Ads.Googleads.V8Availabilities.Common.AdVideoAsset.t()],
-          companion_banners: [Google.Ads.Googleads.V8Availabilities.Common.AdImageAsset.t()]
-        }
 
-  defstruct [
-    :headlines,
-    :long_headlines,
-    :descriptions,
-    :call_to_actions,
-    :videos,
-    :companion_banners
-  ]
 
   field :headlines, 1, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Common.AdTextAsset
   field :long_headlines, 2, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Common.AdTextAsset
@@ -383,14 +232,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Common.ResponsiveSearchAdInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          headlines: [Google.Ads.Googleads.V8Availabilities.Common.AdTextAsset.t()],
-          descriptions: [Google.Ads.Googleads.V8Availabilities.Common.AdTextAsset.t()],
-          path1: String.t(),
-          path2: String.t()
-        }
 
-  defstruct [:headlines, :descriptions, :path1, :path2]
 
   field :headlines, 1, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Common.AdTextAsset
   field :descriptions, 2, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Common.AdTextAsset
@@ -402,42 +244,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Common.LegacyResponsiveDisplayAd
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          short_headline: String.t(),
-          long_headline: String.t(),
-          description: String.t(),
-          business_name: String.t(),
-          allow_flexible_color: boolean,
-          accent_color: String.t(),
-          main_color: String.t(),
-          call_to_action_text: String.t(),
-          logo_image: String.t(),
-          square_logo_image: String.t(),
-          marketing_image: String.t(),
-          square_marketing_image: String.t(),
-          format_setting:
-            Google.Ads.Googleads.V8Availabilities.Enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting.t(),
-          price_prefix: String.t(),
-          promo_text: String.t()
-        }
 
-  defstruct [
-    :short_headline,
-    :long_headline,
-    :description,
-    :business_name,
-    :allow_flexible_color,
-    :accent_color,
-    :main_color,
-    :call_to_action_text,
-    :logo_image,
-    :square_logo_image,
-    :marketing_image,
-    :square_marketing_image,
-    :format_setting,
-    :price_prefix,
-    :promo_text
-  ]
 
   field :short_headline, 16, type: :string
   field :long_headline, 17, type: :string
@@ -464,23 +271,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Common.AppAdInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          mandatory_ad_text: Google.Ads.Googleads.V8Availabilities.Common.AdTextAsset.t() | nil,
-          headlines: [Google.Ads.Googleads.V8Availabilities.Common.AdTextAsset.t()],
-          descriptions: [Google.Ads.Googleads.V8Availabilities.Common.AdTextAsset.t()],
-          images: [Google.Ads.Googleads.V8Availabilities.Common.AdImageAsset.t()],
-          youtube_videos: [Google.Ads.Googleads.V8Availabilities.Common.AdVideoAsset.t()],
-          html5_media_bundles: [Google.Ads.Googleads.V8Availabilities.Common.AdMediaBundleAsset.t()]
-        }
 
-  defstruct [
-    :mandatory_ad_text,
-    :headlines,
-    :descriptions,
-    :images,
-    :youtube_videos,
-    :html5_media_bundles
-  ]
 
   field :mandatory_ad_text, 1, type: Google.Ads.Googleads.V8Availabilities.Common.AdTextAsset
   field :headlines, 2, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Common.AdTextAsset
@@ -497,14 +288,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Common.AppEngagementAdInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          headlines: [Google.Ads.Googleads.V8Availabilities.Common.AdTextAsset.t()],
-          descriptions: [Google.Ads.Googleads.V8Availabilities.Common.AdTextAsset.t()],
-          images: [Google.Ads.Googleads.V8Availabilities.Common.AdImageAsset.t()],
-          videos: [Google.Ads.Googleads.V8Availabilities.Common.AdVideoAsset.t()]
-        }
 
-  defstruct [:headlines, :descriptions, :images, :videos]
 
   field :headlines, 1, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Common.AdTextAsset
   field :descriptions, 2, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Common.AdTextAsset
@@ -516,16 +300,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Common.LegacyAppInstallAdInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          app_id: String.t(),
-          app_store:
-            Google.Ads.Googleads.V8Availabilities.Enums.LegacyAppInstallAdAppStoreEnum.LegacyAppInstallAdAppStore.t(),
-          headline: String.t(),
-          description1: String.t(),
-          description2: String.t()
-        }
 
-  defstruct [:app_id, :app_store, :headline, :description1, :description2]
 
   field :app_id, 6, type: :string
 
@@ -542,46 +317,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Common.ResponsiveDisplayAdInfo d
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          marketing_images: [Google.Ads.Googleads.V8Availabilities.Common.AdImageAsset.t()],
-          square_marketing_images: [Google.Ads.Googleads.V8Availabilities.Common.AdImageAsset.t()],
-          logo_images: [Google.Ads.Googleads.V8Availabilities.Common.AdImageAsset.t()],
-          square_logo_images: [Google.Ads.Googleads.V8Availabilities.Common.AdImageAsset.t()],
-          headlines: [Google.Ads.Googleads.V8Availabilities.Common.AdTextAsset.t()],
-          long_headline: Google.Ads.Googleads.V8Availabilities.Common.AdTextAsset.t() | nil,
-          descriptions: [Google.Ads.Googleads.V8Availabilities.Common.AdTextAsset.t()],
-          youtube_videos: [Google.Ads.Googleads.V8Availabilities.Common.AdVideoAsset.t()],
-          business_name: String.t(),
-          main_color: String.t(),
-          accent_color: String.t(),
-          allow_flexible_color: boolean,
-          call_to_action_text: String.t(),
-          price_prefix: String.t(),
-          promo_text: String.t(),
-          format_setting:
-            Google.Ads.Googleads.V8Availabilities.Enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting.t(),
-          control_spec: Google.Ads.Googleads.V8Availabilities.Common.ResponsiveDisplayAdControlSpec.t() | nil
-        }
 
-  defstruct [
-    :marketing_images,
-    :square_marketing_images,
-    :logo_images,
-    :square_logo_images,
-    :headlines,
-    :long_headline,
-    :descriptions,
-    :youtube_videos,
-    :business_name,
-    :main_color,
-    :accent_color,
-    :allow_flexible_color,
-    :call_to_action_text,
-    :price_prefix,
-    :promo_text,
-    :format_setting,
-    :control_spec
-  ]
 
   field :marketing_images, 1, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Common.AdImageAsset
 
@@ -614,27 +350,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Common.LocalAdInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          headlines: [Google.Ads.Googleads.V8Availabilities.Common.AdTextAsset.t()],
-          descriptions: [Google.Ads.Googleads.V8Availabilities.Common.AdTextAsset.t()],
-          call_to_actions: [Google.Ads.Googleads.V8Availabilities.Common.AdTextAsset.t()],
-          marketing_images: [Google.Ads.Googleads.V8Availabilities.Common.AdImageAsset.t()],
-          logo_images: [Google.Ads.Googleads.V8Availabilities.Common.AdImageAsset.t()],
-          videos: [Google.Ads.Googleads.V8Availabilities.Common.AdVideoAsset.t()],
-          path1: String.t(),
-          path2: String.t()
-        }
 
-  defstruct [
-    :headlines,
-    :descriptions,
-    :call_to_actions,
-    :marketing_images,
-    :logo_images,
-    :videos,
-    :path1,
-    :path2
-  ]
 
   field :headlines, 1, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Common.AdTextAsset
   field :descriptions, 2, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Common.AdTextAsset
@@ -650,13 +366,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Common.DisplayUploadAdInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          media_asset: {atom, any},
-          display_upload_product_type:
-            Google.Ads.Googleads.V8Availabilities.Enums.DisplayUploadProductTypeEnum.DisplayUploadProductType.t()
-        }
 
-  defstruct [:media_asset, :display_upload_product_type]
 
   oneof :media_asset, 0
 
@@ -671,12 +381,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Common.ResponsiveDisplayAdContro
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          enable_asset_enhancements: boolean,
-          enable_autogen_video: boolean
-        }
 
-  defstruct [:enable_asset_enhancements, :enable_autogen_video]
 
   field :enable_asset_enhancements, 1, type: :bool
   field :enable_autogen_video, 2, type: :bool
@@ -686,12 +391,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Common.SmartCampaignAdInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          headlines: [Google.Ads.Googleads.V8Availabilities.Common.AdTextAsset.t()],
-          descriptions: [Google.Ads.Googleads.V8Availabilities.Common.AdTextAsset.t()]
-        }
 
-  defstruct [:headlines, :descriptions]
 
   field :headlines, 1, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Common.AdTextAsset
   field :descriptions, 2, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Common.AdTextAsset
@@ -701,40 +401,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Common.CallAdInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          country_code: String.t(),
-          phone_number: String.t(),
-          business_name: String.t(),
-          headline1: String.t(),
-          headline2: String.t(),
-          description1: String.t(),
-          description2: String.t(),
-          call_tracked: boolean,
-          disable_call_conversion: boolean,
-          phone_number_verification_url: String.t(),
-          conversion_action: String.t(),
-          conversion_reporting_state:
-            Google.Ads.Googleads.V8Availabilities.Enums.CallConversionReportingStateEnum.CallConversionReportingState.t(),
-          path1: String.t(),
-          path2: String.t()
-        }
 
-  defstruct [
-    :country_code,
-    :phone_number,
-    :business_name,
-    :headline1,
-    :headline2,
-    :description1,
-    :description2,
-    :call_tracked,
-    :disable_call_conversion,
-    :phone_number_verification_url,
-    :conversion_action,
-    :conversion_reporting_state,
-    :path1,
-    :path2
-  ]
 
   field :country_code, 1, type: :string
   field :phone_number, 2, type: :string

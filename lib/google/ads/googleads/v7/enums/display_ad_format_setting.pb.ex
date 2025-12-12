@@ -2,8 +2,6 @@ defmodule Google.Ads.Googleads.V7.Enums.DisplayAdFormatSettingEnum.DisplayAdForm
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t :: integer | :UNSPECIFIED | :UNKNOWN | :ALL_FORMATS | :NON_NATIVE | :NATIVE
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :ALL_FORMATS, 2
@@ -15,6 +13,4 @@ defmodule Google.Ads.Googleads.V7.Enums.DisplayAdFormatSettingEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

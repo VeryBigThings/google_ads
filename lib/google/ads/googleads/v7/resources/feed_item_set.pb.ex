@@ -2,22 +2,6 @@ defmodule Google.Ads.Googleads.V7.Resources.FeedItemSet do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          dynamic_set_filter: {atom, any},
-          resource_name: String.t(),
-          feed: String.t(),
-          feed_item_set_id: integer,
-          display_name: String.t(),
-          status: Google.Ads.Googleads.V7.Enums.FeedItemSetStatusEnum.FeedItemSetStatus.t()
-        }
-  defstruct [
-    :dynamic_set_filter,
-    :resource_name,
-    :feed,
-    :feed_item_set_id,
-    :display_name,
-    :status
-  ]
 
   oneof :dynamic_set_filter, 0
 

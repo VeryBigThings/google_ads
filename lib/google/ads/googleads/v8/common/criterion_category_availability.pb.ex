@@ -2,12 +2,7 @@ defmodule Google.Ads.Googleads.V8.Common.CriterionCategoryAvailability do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          channel: Google.Ads.Googleads.V8.Common.CriterionCategoryChannelAvailability.t() | nil,
-          locale: [Google.Ads.Googleads.V8.Common.CriterionCategoryLocaleAvailability.t()]
-        }
 
-  defstruct [:channel, :locale]
 
   field :channel, 1,
     optional: true,
@@ -22,25 +17,7 @@ defmodule Google.Ads.Googleads.V8.Common.CriterionCategoryChannelAvailability do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          availability_mode:
-            Google.Ads.Googleads.V8.Enums.CriterionCategoryChannelAvailabilityModeEnum.CriterionCategoryChannelAvailabilityMode.t(),
-          advertising_channel_type:
-            Google.Ads.Googleads.V8.Enums.AdvertisingChannelTypeEnum.AdvertisingChannelType.t(),
-          advertising_channel_sub_type: [
-            [
-              Google.Ads.Googleads.V8.Enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType.t()
-            ]
-          ],
-          include_default_channel_sub_type: boolean
-        }
 
-  defstruct [
-    :availability_mode,
-    :advertising_channel_type,
-    :advertising_channel_sub_type,
-    :include_default_channel_sub_type
-  ]
 
   field :availability_mode, 1,
     optional: true,
@@ -65,14 +42,7 @@ defmodule Google.Ads.Googleads.V8.Common.CriterionCategoryLocaleAvailability do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          availability_mode:
-            Google.Ads.Googleads.V8.Enums.CriterionCategoryLocaleAvailabilityModeEnum.CriterionCategoryLocaleAvailabilityMode.t(),
-          country_code: String.t(),
-          language_code: String.t()
-        }
 
-  defstruct [:availability_mode, :country_code, :language_code]
 
   field :availability_mode, 1,
     optional: true,

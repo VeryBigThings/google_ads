@@ -2,31 +2,6 @@ defmodule Google.Ads.Googleads.V4.Enums.ConversionActionCategoryEnum.ConversionA
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :DEFAULT
-          | :PAGE_VIEW
-          | :PURCHASE
-          | :SIGNUP
-          | :LEAD
-          | :DOWNLOAD
-          | :ADD_TO_CART
-          | :BEGIN_CHECKOUT
-          | :SUBSCRIBE_PAID
-          | :PHONE_CALL_LEAD
-          | :IMPORTED_LEAD
-          | :SUBMIT_LEAD_FORM
-          | :BOOK_APPOINTMENT
-          | :REQUEST_QUOTE
-          | :GET_DIRECTIONS
-          | :OUTBOUND_CLICK
-          | :CONTACT
-          | :ENGAGEMENT
-          | :STORE_VISIT
-          | :STORE_SALE
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :DEFAULT, 2
@@ -55,6 +30,4 @@ defmodule Google.Ads.Googleads.V4.Enums.ConversionActionCategoryEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

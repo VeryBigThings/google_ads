@@ -2,12 +2,6 @@ defmodule Google.Ads.Googleads.V7.Services.UploadUserDataRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          metadata: {atom, any},
-          customer_id: String.t(),
-          operations: [Google.Ads.Googleads.V7.Services.UserDataOperation.t()]
-        }
-  defstruct [:metadata, :customer_id, :operations]
 
   oneof :metadata, 0
 
@@ -23,10 +17,6 @@ defmodule Google.Ads.Googleads.V7.Services.UserDataOperation do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          operation: {atom, any}
-        }
-  defstruct [:operation]
 
   oneof :operation, 0
 
@@ -38,11 +28,6 @@ defmodule Google.Ads.Googleads.V7.Services.UploadUserDataResponse do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          upload_date_time: String.t(),
-          received_operations_count: integer
-        }
-  defstruct [:upload_date_time, :received_operations_count]
 
   field :upload_date_time, 3, type: :string
   field :received_operations_count, 4, type: :int32

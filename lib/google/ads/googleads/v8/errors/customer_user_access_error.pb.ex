@@ -2,16 +2,6 @@ defmodule Google.Ads.Googleads.V8.Errors.CustomerUserAccessErrorEnum.CustomerUse
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :INVALID_USER_ID
-          | :REMOVAL_DISALLOWED
-          | :DISALLOWED_ACCESS_ROLE
-          | :LAST_ADMIN_USER_OF_SERVING_CUSTOMER
-          | :LAST_ADMIN_USER_OF_MANAGER
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -30,7 +20,5 @@ end
 defmodule Google.Ads.Googleads.V8.Errors.CustomerUserAccessErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

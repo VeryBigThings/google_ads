@@ -2,14 +2,7 @@ defmodule Google.Ads.Googleads.V8.Services.ListInvoicesRequest do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          customer_id: String.t(),
-          billing_setup: String.t(),
-          issue_year: String.t(),
-          issue_month: Google.Ads.Googleads.V8.Enums.MonthOfYearEnum.MonthOfYear.t()
-        }
 
-  defstruct [:customer_id, :billing_setup, :issue_year, :issue_month]
 
   field :customer_id, 1, required: true, type: :string
   field :billing_setup, 2, required: true, type: :string
@@ -25,11 +18,7 @@ defmodule Google.Ads.Googleads.V8.Services.ListInvoicesResponse do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          invoices: [Google.Ads.Googleads.V8.Resources.Invoice.t()]
-        }
 
-  defstruct [:invoices]
 
   field :invoices, 1, repeated: true, type: Google.Ads.Googleads.V8.Resources.Invoice
 end

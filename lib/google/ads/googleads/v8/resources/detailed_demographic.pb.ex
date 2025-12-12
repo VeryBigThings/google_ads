@@ -2,16 +2,7 @@ defmodule Google.Ads.Googleads.V8.Resources.DetailedDemographic do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          id: integer,
-          name: String.t(),
-          parent: String.t(),
-          launched_to_all: boolean,
-          availabilities: [Google.Ads.Googleads.V8.Common.CriterionCategoryAvailability.t()]
-        }
 
-  defstruct [:resource_name, :id, :name, :parent, :launched_to_all, :availabilities]
 
   field :resource_name, 1, optional: true, type: :string
   field :id, 2, optional: true, type: :int64

@@ -2,17 +2,6 @@ defmodule Google.Ads.Googleads.V8.Enums.AdNetworkTypeEnum.AdNetworkType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :SEARCH
-          | :SEARCH_PARTNERS
-          | :CONTENT
-          | :YOUTUBE_SEARCH
-          | :YOUTUBE_WATCH
-          | :MIXED
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -33,7 +22,5 @@ end
 defmodule Google.Ads.Googleads.V8.Enums.AdNetworkTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

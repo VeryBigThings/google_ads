@@ -2,23 +2,6 @@ defmodule Google.Ads.Googleads.V8Availabilities.Enums.VanityPharmaTextEnum.Vanit
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :PRESCRIPTION_TREATMENT_WEBSITE_EN
-          | :PRESCRIPTION_TREATMENT_WEBSITE_ES
-          | :PRESCRIPTION_DEVICE_WEBSITE_EN
-          | :PRESCRIPTION_DEVICE_WEBSITE_ES
-          | :MEDICAL_DEVICE_WEBSITE_EN
-          | :MEDICAL_DEVICE_WEBSITE_ES
-          | :PREVENTATIVE_TREATMENT_WEBSITE_EN
-          | :PREVENTATIVE_TREATMENT_WEBSITE_ES
-          | :PRESCRIPTION_CONTRACEPTION_WEBSITE_EN
-          | :PRESCRIPTION_CONTRACEPTION_WEBSITE_ES
-          | :PRESCRIPTION_VACCINE_WEBSITE_EN
-          | :PRESCRIPTION_VACCINE_WEBSITE_ES
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -51,7 +34,5 @@ end
 defmodule Google.Ads.Googleads.V8Availabilities.Enums.VanityPharmaTextEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

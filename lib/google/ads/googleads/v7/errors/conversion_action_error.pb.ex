@@ -2,21 +2,6 @@ defmodule Google.Ads.Googleads.V7.Errors.ConversionActionErrorEnum.ConversionAct
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :DUPLICATE_NAME
-          | :DUPLICATE_APP_ID
-          | :TWO_CONVERSION_ACTIONS_BIDDING_ON_SAME_APP_DOWNLOAD
-          | :BIDDING_ON_SAME_APP_DOWNLOAD_AS_GLOBAL_ACTION
-          | :DATA_DRIVEN_MODEL_WAS_NEVER_GENERATED
-          | :DATA_DRIVEN_MODEL_EXPIRED
-          | :DATA_DRIVEN_MODEL_STALE
-          | :DATA_DRIVEN_MODEL_UNKNOWN
-          | :CREATION_NOT_SUPPORTED
-          | :UPDATE_NOT_SUPPORTED
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :DUPLICATE_NAME, 2
@@ -35,6 +20,4 @@ defmodule Google.Ads.Googleads.V7.Errors.ConversionActionErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

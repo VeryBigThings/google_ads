@@ -2,27 +2,6 @@ defmodule Google.Ads.Googleads.V4.Resources.CampaignCriterion do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          criterion: {atom, any},
-          resource_name: String.t(),
-          campaign: Google.Protobuf.StringValue.t() | nil,
-          criterion_id: Google.Protobuf.Int64Value.t() | nil,
-          bid_modifier: Google.Protobuf.FloatValue.t() | nil,
-          negative: Google.Protobuf.BoolValue.t() | nil,
-          type: Google.Ads.Googleads.V4.Enums.CriterionTypeEnum.CriterionType.t(),
-          status:
-            Google.Ads.Googleads.V4.Enums.CampaignCriterionStatusEnum.CampaignCriterionStatus.t()
-        }
-  defstruct [
-    :criterion,
-    :resource_name,
-    :campaign,
-    :criterion_id,
-    :bid_modifier,
-    :negative,
-    :type,
-    :status
-  ]
 
   oneof :criterion, 0
 

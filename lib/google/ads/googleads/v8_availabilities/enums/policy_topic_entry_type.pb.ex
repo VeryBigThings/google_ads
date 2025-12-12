@@ -2,17 +2,6 @@ defmodule Google.Ads.Googleads.V8Availabilities.Enums.PolicyTopicEntryTypeEnum.P
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :PROHIBITED
-          | :LIMITED
-          | :FULLY_LIMITED
-          | :DESCRIPTIVE
-          | :BROADENING
-          | :AREA_OF_INTEREST_ONLY
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -33,7 +22,5 @@ end
 defmodule Google.Ads.Googleads.V8Availabilities.Enums.PolicyTopicEntryTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

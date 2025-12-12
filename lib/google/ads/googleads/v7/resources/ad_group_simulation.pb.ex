@@ -2,25 +2,6 @@ defmodule Google.Ads.Googleads.V7.Resources.AdGroupSimulation do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          point_list: {atom, any},
-          resource_name: String.t(),
-          ad_group_id: integer,
-          type: Google.Ads.Googleads.V7.Enums.SimulationTypeEnum.SimulationType.t(),
-          modification_method:
-            Google.Ads.Googleads.V7.Enums.SimulationModificationMethodEnum.SimulationModificationMethod.t(),
-          start_date: String.t(),
-          end_date: String.t()
-        }
-  defstruct [
-    :point_list,
-    :resource_name,
-    :ad_group_id,
-    :type,
-    :modification_method,
-    :start_date,
-    :end_date
-  ]
 
   oneof :point_list, 0
 

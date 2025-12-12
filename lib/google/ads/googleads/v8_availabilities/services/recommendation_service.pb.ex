@@ -2,11 +2,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Services.GetRecommendationReques
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t()
-        }
 
-  defstruct [:resource_name]
 
   field :resource_name, 1, type: :string
 end
@@ -15,13 +11,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Services.ApplyRecommendationRequ
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          customer_id: String.t(),
-          operations: [Google.Ads.Googleads.V8Availabilities.Services.ApplyRecommendationOperation.t()],
-          partial_failure: boolean
-        }
 
-  defstruct [:customer_id, :operations, :partial_failure]
 
   field :customer_id, 1, type: :string
 
@@ -36,11 +26,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Services.ApplyRecommendationOper
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          new_budget_amount_micros: integer
-        }
 
-  defstruct [:new_budget_amount_micros]
 
   field :new_budget_amount_micros, 2, type: :int64
 end
@@ -49,11 +35,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Services.ApplyRecommendationOper
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          ad: Google.Ads.Googleads.V8Availabilities.Resources.Ad.t() | nil
-        }
 
-  defstruct [:ad]
 
   field :ad, 1, type: Google.Ads.Googleads.V8Availabilities.Resources.Ad
 end
@@ -62,13 +44,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Services.ApplyRecommendationOper
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          ad_group: String.t(),
-          match_type: Google.Ads.Googleads.V8Availabilities.Enums.KeywordMatchTypeEnum.KeywordMatchType.t(),
-          cpc_bid_micros: integer
-        }
 
-  defstruct [:ad_group, :match_type, :cpc_bid_micros]
 
   field :ad_group, 4, type: :string
 
@@ -83,12 +59,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Services.ApplyRecommendationOper
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          target_cpa_micros: integer,
-          new_campaign_budget_amount_micros: integer
-        }
 
-  defstruct [:target_cpa_micros, :new_campaign_budget_amount_micros]
 
   field :target_cpa_micros, 3, type: :int64
   field :new_campaign_budget_amount_micros, 4, type: :int64
@@ -98,12 +69,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Services.ApplyRecommendationOper
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          target_roas: float | :infinity | :negative_infinity | :nan,
-          new_campaign_budget_amount_micros: integer
-        }
 
-  defstruct [:target_roas, :new_campaign_budget_amount_micros]
 
   field :target_roas, 1, type: :double
   field :new_campaign_budget_amount_micros, 2, type: :int64
@@ -113,11 +79,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Services.ApplyRecommendationOper
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          callout_extensions: [Google.Ads.Googleads.V8Availabilities.Common.CalloutFeedItem.t()]
-        }
 
-  defstruct [:callout_extensions]
 
   field :callout_extensions, 1,
     repeated: true,
@@ -128,11 +90,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Services.ApplyRecommendationOper
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          call_extensions: [Google.Ads.Googleads.V8Availabilities.Common.CallFeedItem.t()]
-        }
 
-  defstruct [:call_extensions]
 
   field :call_extensions, 1, repeated: true, type: Google.Ads.Googleads.V8Availabilities.Common.CallFeedItem
 end
@@ -141,11 +99,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Services.ApplyRecommendationOper
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          sitelink_extensions: [Google.Ads.Googleads.V8Availabilities.Common.SitelinkFeedItem.t()]
-        }
 
-  defstruct [:sitelink_extensions]
 
   field :sitelink_extensions, 1,
     repeated: true,
@@ -156,11 +110,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Services.ApplyRecommendationOper
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          budget_micros_to_move: integer
-        }
 
-  defstruct [:budget_micros_to_move]
 
   field :budget_micros_to_move, 2, type: :int64
 end
@@ -169,11 +119,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Services.ApplyRecommendationOper
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          ad: Google.Ads.Googleads.V8Availabilities.Resources.Ad.t() | nil
-        }
 
-  defstruct [:ad]
 
   field :ad, 1, type: Google.Ads.Googleads.V8Availabilities.Resources.Ad
 end
@@ -182,12 +128,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Services.ApplyRecommendationOper
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          apply_parameters: {atom, any},
-          resource_name: String.t()
-        }
 
-  defstruct [:apply_parameters, :resource_name]
 
   oneof :apply_parameters, 0
 
@@ -242,12 +183,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Services.ApplyRecommendationResp
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          results: [Google.Ads.Googleads.V8Availabilities.Services.ApplyRecommendationResult.t()],
-          partial_failure_error: Google.Rpc.Status.t() | nil
-        }
 
-  defstruct [:results, :partial_failure_error]
 
   field :results, 1,
     repeated: true,
@@ -260,11 +196,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Services.ApplyRecommendationResu
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t()
-        }
 
-  defstruct [:resource_name]
 
   field :resource_name, 1, type: :string
 end
@@ -273,11 +205,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Services.DismissRecommendationRe
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t()
-        }
 
-  defstruct [:resource_name]
 
   field :resource_name, 1, type: :string
 end
@@ -286,15 +214,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Services.DismissRecommendationRe
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          customer_id: String.t(),
-          operations: [
-            Google.Ads.Googleads.V8Availabilities.Services.DismissRecommendationRequest.DismissRecommendationOperation.t()
-          ],
-          partial_failure: boolean
-        }
 
-  defstruct [:customer_id, :operations, :partial_failure]
 
   field :customer_id, 1, type: :string
 
@@ -310,11 +230,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Services.DismissRecommendationRe
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t()
-        }
 
-  defstruct [:resource_name]
 
   field :resource_name, 1, type: :string
 end
@@ -323,14 +239,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Services.DismissRecommendationRe
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          results: [
-            Google.Ads.Googleads.V8Availabilities.Services.DismissRecommendationResponse.DismissRecommendationResult.t()
-          ],
-          partial_failure_error: Google.Rpc.Status.t() | nil
-        }
 
-  defstruct [:results, :partial_failure_error]
 
   field :results, 1,
     repeated: true,

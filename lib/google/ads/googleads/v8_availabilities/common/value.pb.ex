@@ -2,11 +2,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Common.Value do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          value: {atom, any}
-        }
 
-  defstruct [:value]
 
   oneof :value, 0
 

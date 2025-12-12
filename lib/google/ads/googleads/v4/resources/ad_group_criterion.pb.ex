@@ -2,21 +2,6 @@ defmodule Google.Ads.Googleads.V4.Resources.AdGroupCriterion.QualityInfo do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          quality_score: Google.Protobuf.Int32Value.t() | nil,
-          creative_quality_score:
-            Google.Ads.Googleads.V4.Enums.QualityScoreBucketEnum.QualityScoreBucket.t(),
-          post_click_quality_score:
-            Google.Ads.Googleads.V4.Enums.QualityScoreBucketEnum.QualityScoreBucket.t(),
-          search_predicted_ctr:
-            Google.Ads.Googleads.V4.Enums.QualityScoreBucketEnum.QualityScoreBucket.t()
-        }
-  defstruct [
-    :quality_score,
-    :creative_quality_score,
-    :post_click_quality_score,
-    :search_predicted_ctr
-  ]
 
   field :quality_score, 1, type: Google.Protobuf.Int32Value
 
@@ -37,20 +22,6 @@ defmodule Google.Ads.Googleads.V4.Resources.AdGroupCriterion.PositionEstimates d
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          first_page_cpc_micros: Google.Protobuf.Int64Value.t() | nil,
-          first_position_cpc_micros: Google.Protobuf.Int64Value.t() | nil,
-          top_of_page_cpc_micros: Google.Protobuf.Int64Value.t() | nil,
-          estimated_add_clicks_at_first_position_cpc: Google.Protobuf.Int64Value.t() | nil,
-          estimated_add_cost_at_first_position_cpc: Google.Protobuf.Int64Value.t() | nil
-        }
-  defstruct [
-    :first_page_cpc_micros,
-    :first_position_cpc_micros,
-    :top_of_page_cpc_micros,
-    :estimated_add_clicks_at_first_position_cpc,
-    :estimated_add_cost_at_first_position_cpc
-  ]
 
   field :first_page_cpc_micros, 1, type: Google.Protobuf.Int64Value
   field :first_position_cpc_micros, 2, type: Google.Protobuf.Int64Value
@@ -63,78 +34,6 @@ defmodule Google.Ads.Googleads.V4.Resources.AdGroupCriterion do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          criterion: {atom, any},
-          resource_name: String.t(),
-          criterion_id: Google.Protobuf.Int64Value.t() | nil,
-          status:
-            Google.Ads.Googleads.V4.Enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus.t(),
-          quality_info: Google.Ads.Googleads.V4.Resources.AdGroupCriterion.QualityInfo.t() | nil,
-          ad_group: Google.Protobuf.StringValue.t() | nil,
-          type: Google.Ads.Googleads.V4.Enums.CriterionTypeEnum.CriterionType.t(),
-          negative: Google.Protobuf.BoolValue.t() | nil,
-          system_serving_status:
-            Google.Ads.Googleads.V4.Enums.CriterionSystemServingStatusEnum.CriterionSystemServingStatus.t(),
-          approval_status:
-            Google.Ads.Googleads.V4.Enums.AdGroupCriterionApprovalStatusEnum.AdGroupCriterionApprovalStatus.t(),
-          disapproval_reasons: [Google.Protobuf.StringValue.t()],
-          bid_modifier: Google.Protobuf.DoubleValue.t() | nil,
-          cpc_bid_micros: Google.Protobuf.Int64Value.t() | nil,
-          cpm_bid_micros: Google.Protobuf.Int64Value.t() | nil,
-          cpv_bid_micros: Google.Protobuf.Int64Value.t() | nil,
-          percent_cpc_bid_micros: Google.Protobuf.Int64Value.t() | nil,
-          effective_cpc_bid_micros: Google.Protobuf.Int64Value.t() | nil,
-          effective_cpm_bid_micros: Google.Protobuf.Int64Value.t() | nil,
-          effective_cpv_bid_micros: Google.Protobuf.Int64Value.t() | nil,
-          effective_percent_cpc_bid_micros: Google.Protobuf.Int64Value.t() | nil,
-          effective_cpc_bid_source:
-            Google.Ads.Googleads.V4.Enums.BiddingSourceEnum.BiddingSource.t(),
-          effective_cpm_bid_source:
-            Google.Ads.Googleads.V4.Enums.BiddingSourceEnum.BiddingSource.t(),
-          effective_cpv_bid_source:
-            Google.Ads.Googleads.V4.Enums.BiddingSourceEnum.BiddingSource.t(),
-          effective_percent_cpc_bid_source:
-            Google.Ads.Googleads.V4.Enums.BiddingSourceEnum.BiddingSource.t(),
-          position_estimates:
-            Google.Ads.Googleads.V4.Resources.AdGroupCriterion.PositionEstimates.t() | nil,
-          final_urls: [Google.Protobuf.StringValue.t()],
-          final_mobile_urls: [Google.Protobuf.StringValue.t()],
-          final_url_suffix: Google.Protobuf.StringValue.t() | nil,
-          tracking_url_template: Google.Protobuf.StringValue.t() | nil,
-          url_custom_parameters: [Google.Ads.Googleads.V4.Common.CustomParameter.t()]
-        }
-  defstruct [
-    :criterion,
-    :resource_name,
-    :criterion_id,
-    :status,
-    :quality_info,
-    :ad_group,
-    :type,
-    :negative,
-    :system_serving_status,
-    :approval_status,
-    :disapproval_reasons,
-    :bid_modifier,
-    :cpc_bid_micros,
-    :cpm_bid_micros,
-    :cpv_bid_micros,
-    :percent_cpc_bid_micros,
-    :effective_cpc_bid_micros,
-    :effective_cpm_bid_micros,
-    :effective_cpv_bid_micros,
-    :effective_percent_cpc_bid_micros,
-    :effective_cpc_bid_source,
-    :effective_cpm_bid_source,
-    :effective_cpv_bid_source,
-    :effective_percent_cpc_bid_source,
-    :position_estimates,
-    :final_urls,
-    :final_mobile_urls,
-    :final_url_suffix,
-    :tracking_url_template,
-    :url_custom_parameters
-  ]
 
   oneof :criterion, 0
 

@@ -2,17 +2,6 @@ defmodule Google.Ads.Googleads.V8Availabilities.Enums.PriceExtensionPriceUnitEnu
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :PER_HOUR
-          | :PER_DAY
-          | :PER_WEEK
-          | :PER_MONTH
-          | :PER_YEAR
-          | :PER_NIGHT
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -33,7 +22,5 @@ end
 defmodule Google.Ads.Googleads.V8Availabilities.Enums.PriceExtensionPriceUnitEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

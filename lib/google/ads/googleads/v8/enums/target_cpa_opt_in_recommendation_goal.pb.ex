@@ -2,15 +2,6 @@ defmodule Google.Ads.Googleads.V8.Enums.TargetCpaOptInRecommendationGoalEnum.Tar
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :SAME_COST
-          | :SAME_CONVERSIONS
-          | :SAME_CPA
-          | :CLOSEST_CPA
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -27,7 +18,5 @@ end
 defmodule Google.Ads.Googleads.V8.Enums.TargetCpaOptInRecommendationGoalEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

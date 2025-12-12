@@ -2,15 +2,6 @@ defmodule Google.Ads.Googleads.V8Availabilities.Errors.SharedSetErrorEnum.Shared
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :CUSTOMER_CANNOT_CREATE_SHARED_SET_OF_THIS_TYPE
-          | :DUPLICATE_NAME
-          | :SHARED_SET_REMOVED
-          | :SHARED_SET_IN_USE
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -27,7 +18,5 @@ end
 defmodule Google.Ads.Googleads.V8Availabilities.Errors.SharedSetErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

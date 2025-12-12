@@ -2,18 +2,6 @@ defmodule Google.Ads.Googleads.V8Availabilities.Enums.AgeRangeTypeEnum.AgeRangeT
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :AGE_RANGE_18_24
-          | :AGE_RANGE_25_34
-          | :AGE_RANGE_35_44
-          | :AGE_RANGE_45_54
-          | :AGE_RANGE_55_64
-          | :AGE_RANGE_65_UP
-          | :AGE_RANGE_UNDETERMINED
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -36,7 +24,5 @@ end
 defmodule Google.Ads.Googleads.V8Availabilities.Enums.AgeRangeTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

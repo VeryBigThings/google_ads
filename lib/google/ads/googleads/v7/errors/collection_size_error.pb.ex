@@ -2,8 +2,6 @@ defmodule Google.Ads.Googleads.V7.Errors.CollectionSizeErrorEnum.CollectionSizeE
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t :: integer | :UNSPECIFIED | :UNKNOWN | :TOO_FEW | :TOO_MANY
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :TOO_FEW, 2
@@ -14,6 +12,4 @@ defmodule Google.Ads.Googleads.V7.Errors.CollectionSizeErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

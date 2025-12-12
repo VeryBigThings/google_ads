@@ -2,20 +2,6 @@ defmodule Google.Ads.Googleads.V8.Errors.LabelErrorEnum.LabelError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :CANNOT_APPLY_INACTIVE_LABEL
-          | :CANNOT_APPLY_LABEL_TO_DISABLED_AD_GROUP_CRITERION
-          | :CANNOT_APPLY_LABEL_TO_NEGATIVE_AD_GROUP_CRITERION
-          | :EXCEEDED_LABEL_LIMIT_PER_TYPE
-          | :INVALID_RESOURCE_FOR_MANAGER_LABEL
-          | :DUPLICATE_NAME
-          | :INVALID_LABEL_NAME
-          | :CANNOT_ATTACH_LABEL_TO_DRAFT
-          | :CANNOT_ATTACH_NON_MANAGER_LABEL_TO_CUSTOMER
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -42,7 +28,5 @@ end
 defmodule Google.Ads.Googleads.V8.Errors.LabelErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

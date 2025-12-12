@@ -2,26 +2,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.UserInterest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          taxonomy_type:
-            Google.Ads.Googleads.V8Availabilities.Enums.UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType.t(),
-          user_interest_id: integer,
-          name: String.t(),
-          user_interest_parent: String.t(),
-          launched_to_all: boolean,
-          availabilities: [Google.Ads.Googleads.V8Availabilities.Common.CriterionCategoryAvailability.t()]
-        }
 
-  defstruct [
-    :resource_name,
-    :taxonomy_type,
-    :user_interest_id,
-    :name,
-    :user_interest_parent,
-    :launched_to_all,
-    :availabilities
-  ]
 
   field :resource_name, 1, type: :string
 

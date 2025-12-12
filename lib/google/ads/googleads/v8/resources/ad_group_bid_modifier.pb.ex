@@ -2,26 +2,7 @@ defmodule Google.Ads.Googleads.V8.Resources.AdGroupBidModifier do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          criterion: {atom, any},
-          resource_name: String.t(),
-          ad_group: String.t(),
-          criterion_id: integer,
-          bid_modifier: float | :infinity | :negative_infinity | :nan,
-          base_ad_group: String.t(),
-          bid_modifier_source:
-            Google.Ads.Googleads.V8.Enums.BidModifierSourceEnum.BidModifierSource.t()
-        }
 
-  defstruct [
-    :criterion,
-    :resource_name,
-    :ad_group,
-    :criterion_id,
-    :bid_modifier,
-    :base_ad_group,
-    :bid_modifier_source
-  ]
 
   oneof :criterion, 0
   field :resource_name, 1, optional: true, type: :string

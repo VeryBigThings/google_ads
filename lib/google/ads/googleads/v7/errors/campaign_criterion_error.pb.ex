@@ -2,22 +2,6 @@ defmodule Google.Ads.Googleads.V7.Errors.CampaignCriterionErrorEnum.CampaignCrit
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :CONCRETE_TYPE_REQUIRED
-          | :INVALID_PLACEMENT_URL
-          | :CANNOT_EXCLUDE_CRITERIA_TYPE
-          | :CANNOT_SET_STATUS_FOR_CRITERIA_TYPE
-          | :CANNOT_SET_STATUS_FOR_EXCLUDED_CRITERIA
-          | :CANNOT_TARGET_AND_EXCLUDE
-          | :TOO_MANY_OPERATIONS
-          | :OPERATOR_NOT_SUPPORTED_FOR_CRITERION_TYPE
-          | :SHOPPING_CAMPAIGN_SALES_COUNTRY_NOT_SUPPORTED_FOR_SALES_CHANNEL
-          | :CANNOT_ADD_EXISTING_FIELD
-          | :CANNOT_UPDATE_NEGATIVE_CRITERION
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :CONCRETE_TYPE_REQUIRED, 2
@@ -37,6 +21,4 @@ defmodule Google.Ads.Googleads.V7.Errors.CampaignCriterionErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

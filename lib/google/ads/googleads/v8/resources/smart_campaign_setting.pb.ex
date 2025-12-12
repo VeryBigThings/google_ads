@@ -2,12 +2,7 @@ defmodule Google.Ads.Googleads.V8.Resources.SmartCampaignSetting.PhoneNumber do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          phone_number: String.t(),
-          country_code: String.t()
-        }
 
-  defstruct [:phone_number, :country_code]
 
   field :phone_number, 1, optional: true, type: :string
   field :country_code, 2, optional: true, type: :string
@@ -17,24 +12,7 @@ defmodule Google.Ads.Googleads.V8.Resources.SmartCampaignSetting do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          business_setting: {atom, any},
-          resource_name: String.t(),
-          campaign: String.t(),
-          phone_number:
-            Google.Ads.Googleads.V8.Resources.SmartCampaignSetting.PhoneNumber.t() | nil,
-          final_url: String.t(),
-          advertising_language_code: String.t()
-        }
 
-  defstruct [
-    :business_setting,
-    :resource_name,
-    :campaign,
-    :phone_number,
-    :final_url,
-    :advertising_language_code
-  ]
 
   oneof :business_setting, 0
   field :resource_name, 1, optional: true, type: :string

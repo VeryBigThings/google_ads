@@ -2,18 +2,6 @@ defmodule Google.Ads.Googleads.V8Availabilities.Enums.CustomerPayPerConversionEl
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :NOT_ENOUGH_CONVERSIONS
-          | :CONVERSION_LAG_TOO_HIGH
-          | :HAS_CAMPAIGN_WITH_SHARED_BUDGET
-          | :HAS_UPLOAD_CLICKS_CONVERSION
-          | :AVERAGE_DAILY_SPEND_TOO_HIGH
-          | :ANALYSIS_NOT_COMPLETE
-          | :OTHER
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -36,7 +24,5 @@ end
 defmodule Google.Ads.Googleads.V8Availabilities.Enums.CustomerPayPerConversionEligibilityFailureReasonEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

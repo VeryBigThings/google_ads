@@ -2,38 +2,6 @@ defmodule Google.Ads.Googleads.V7.Services.GenerateKeywordIdeasRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          seed: {atom, any},
-          customer_id: String.t(),
-          language: String.t(),
-          geo_target_constants: [String.t()],
-          include_adult_keywords: boolean,
-          page_token: String.t(),
-          page_size: integer,
-          keyword_plan_network:
-            Google.Ads.Googleads.V7.Enums.KeywordPlanNetworkEnum.KeywordPlanNetwork.t(),
-          keyword_annotation: [
-            [
-              Google.Ads.Googleads.V7.Enums.KeywordPlanKeywordAnnotationEnum.KeywordPlanKeywordAnnotation.t()
-            ]
-          ],
-          aggregate_metrics: Google.Ads.Googleads.V7.Common.KeywordPlanAggregateMetrics.t() | nil,
-          historical_metrics_options:
-            Google.Ads.Googleads.V7.Common.HistoricalMetricsOptions.t() | nil
-        }
-  defstruct [
-    :seed,
-    :customer_id,
-    :language,
-    :geo_target_constants,
-    :include_adult_keywords,
-    :page_token,
-    :page_size,
-    :keyword_plan_network,
-    :keyword_annotation,
-    :aggregate_metrics,
-    :historical_metrics_options
-  ]
 
   oneof :seed, 0
 
@@ -72,11 +40,6 @@ defmodule Google.Ads.Googleads.V7.Services.KeywordAndUrlSeed do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          url: String.t(),
-          keywords: [String.t()]
-        }
-  defstruct [:url, :keywords]
 
   field :url, 3, type: :string
   field :keywords, 4, repeated: true, type: :string
@@ -86,10 +49,6 @@ defmodule Google.Ads.Googleads.V7.Services.KeywordSeed do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          keywords: [String.t()]
-        }
-  defstruct [:keywords]
 
   field :keywords, 2, repeated: true, type: :string
 end
@@ -98,10 +57,6 @@ defmodule Google.Ads.Googleads.V7.Services.SiteSeed do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          site: String.t()
-        }
-  defstruct [:site]
 
   field :site, 2, type: :string
 end
@@ -110,10 +65,6 @@ defmodule Google.Ads.Googleads.V7.Services.UrlSeed do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          url: String.t()
-        }
-  defstruct [:url]
 
   field :url, 2, type: :string
 end
@@ -122,14 +73,6 @@ defmodule Google.Ads.Googleads.V7.Services.GenerateKeywordIdeaResponse do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          results: [Google.Ads.Googleads.V7.Services.GenerateKeywordIdeaResult.t()],
-          aggregate_metric_results:
-            Google.Ads.Googleads.V7.Common.KeywordPlanAggregateMetricResults.t() | nil,
-          next_page_token: String.t(),
-          total_size: integer
-        }
-  defstruct [:results, :aggregate_metric_results, :next_page_token, :total_size]
 
   field :results, 1,
     repeated: true,
@@ -146,13 +89,6 @@ defmodule Google.Ads.Googleads.V7.Services.GenerateKeywordIdeaResult do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          text: String.t(),
-          keyword_idea_metrics:
-            Google.Ads.Googleads.V7.Common.KeywordPlanHistoricalMetrics.t() | nil,
-          keyword_annotations: Google.Ads.Googleads.V7.Common.KeywordAnnotations.t() | nil
-        }
-  defstruct [:text, :keyword_idea_metrics, :keyword_annotations]
 
   field :text, 5, type: :string
 

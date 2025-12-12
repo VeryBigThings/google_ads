@@ -2,48 +2,6 @@ defmodule Google.Ads.Googleads.V7.Enums.PromotionExtensionOccasionEnum.Promotion
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :NEW_YEARS
-          | :CHINESE_NEW_YEAR
-          | :VALENTINES_DAY
-          | :EASTER
-          | :MOTHERS_DAY
-          | :FATHERS_DAY
-          | :LABOR_DAY
-          | :BACK_TO_SCHOOL
-          | :HALLOWEEN
-          | :BLACK_FRIDAY
-          | :CYBER_MONDAY
-          | :CHRISTMAS
-          | :BOXING_DAY
-          | :INDEPENDENCE_DAY
-          | :NATIONAL_DAY
-          | :END_OF_SEASON
-          | :WINTER_SALE
-          | :SUMMER_SALE
-          | :FALL_SALE
-          | :SPRING_SALE
-          | :RAMADAN
-          | :EID_AL_FITR
-          | :EID_AL_ADHA
-          | :SINGLES_DAY
-          | :WOMENS_DAY
-          | :HOLI
-          | :PARENTS_DAY
-          | :ST_NICHOLAS_DAY
-          | :CARNIVAL
-          | :EPIPHANY
-          | :ROSH_HASHANAH
-          | :PASSOVER
-          | :HANUKKAH
-          | :DIWALI
-          | :NAVRATRI
-          | :SONGKRAN
-          | :YEAR_END_GIFT
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :NEW_YEARS, 2
@@ -89,6 +47,4 @@ defmodule Google.Ads.Googleads.V7.Enums.PromotionExtensionOccasionEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

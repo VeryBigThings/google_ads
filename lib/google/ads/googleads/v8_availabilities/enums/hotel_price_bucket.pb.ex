@@ -2,15 +2,6 @@ defmodule Google.Ads.Googleads.V8Availabilities.Enums.HotelPriceBucketEnum.Hotel
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :LOWEST_UNIQUE
-          | :LOWEST_TIED
-          | :NOT_LOWEST
-          | :ONLY_PARTNER_SHOWN
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -27,7 +18,5 @@ end
 defmodule Google.Ads.Googleads.V8Availabilities.Enums.HotelPriceBucketEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

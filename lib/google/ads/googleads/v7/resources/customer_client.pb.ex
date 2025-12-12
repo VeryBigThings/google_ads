@@ -2,30 +2,6 @@ defmodule Google.Ads.Googleads.V7.Resources.CustomerClient do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          client_customer: String.t(),
-          hidden: boolean,
-          level: integer,
-          time_zone: String.t(),
-          test_account: boolean,
-          manager: boolean,
-          descriptive_name: String.t(),
-          currency_code: String.t(),
-          id: integer
-        }
-  defstruct [
-    :resource_name,
-    :client_customer,
-    :hidden,
-    :level,
-    :time_zone,
-    :test_account,
-    :manager,
-    :descriptive_name,
-    :currency_code,
-    :id
-  ]
 
   field :resource_name, 1, type: :string
   field :client_customer, 12, type: :string

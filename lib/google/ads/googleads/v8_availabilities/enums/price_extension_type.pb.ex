@@ -2,20 +2,6 @@ defmodule Google.Ads.Googleads.V8Availabilities.Enums.PriceExtensionTypeEnum.Pri
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :BRANDS
-          | :EVENTS
-          | :LOCATIONS
-          | :NEIGHBORHOODS
-          | :PRODUCT_CATEGORIES
-          | :PRODUCT_TIERS
-          | :SERVICES
-          | :SERVICE_CATEGORIES
-          | :SERVICE_TIERS
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -42,7 +28,5 @@ end
 defmodule Google.Ads.Googleads.V8Availabilities.Enums.PriceExtensionTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

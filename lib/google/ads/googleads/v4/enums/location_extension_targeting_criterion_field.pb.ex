@@ -2,17 +2,6 @@ defmodule Google.Ads.Googleads.V4.Enums.LocationExtensionTargetingCriterionField
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :ADDRESS_LINE_1
-          | :ADDRESS_LINE_2
-          | :CITY
-          | :PROVINCE
-          | :POSTAL_CODE
-          | :COUNTRY_CODE
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :ADDRESS_LINE_1, 2
@@ -27,6 +16,4 @@ defmodule Google.Ads.Googleads.V4.Enums.LocationExtensionTargetingCriterionField
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

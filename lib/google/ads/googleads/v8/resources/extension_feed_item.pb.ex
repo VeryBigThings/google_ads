@@ -2,35 +2,7 @@ defmodule Google.Ads.Googleads.V8.Resources.ExtensionFeedItem do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          extension: {atom, any},
-          serving_resource_targeting: {atom, any},
-          resource_name: String.t(),
-          id: integer,
-          extension_type: Google.Ads.Googleads.V8.Enums.ExtensionTypeEnum.ExtensionType.t(),
-          start_date_time: String.t(),
-          end_date_time: String.t(),
-          ad_schedules: [Google.Ads.Googleads.V8.Common.AdScheduleInfo.t()],
-          device: Google.Ads.Googleads.V8.Enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice.t(),
-          targeted_geo_target_constant: String.t(),
-          targeted_keyword: Google.Ads.Googleads.V8.Common.KeywordInfo.t() | nil,
-          status: Google.Ads.Googleads.V8.Enums.FeedItemStatusEnum.FeedItemStatus.t()
-        }
 
-  defstruct [
-    :extension,
-    :serving_resource_targeting,
-    :resource_name,
-    :id,
-    :extension_type,
-    :start_date_time,
-    :end_date_time,
-    :ad_schedules,
-    :device,
-    :targeted_geo_target_constant,
-    :targeted_keyword,
-    :status
-  ]
 
   oneof :extension, 0
   oneof :serving_resource_targeting, 1

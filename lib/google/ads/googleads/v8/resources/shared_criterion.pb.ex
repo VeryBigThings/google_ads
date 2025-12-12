@@ -2,15 +2,7 @@ defmodule Google.Ads.Googleads.V8.Resources.SharedCriterion do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          criterion: {atom, any},
-          resource_name: String.t(),
-          shared_set: String.t(),
-          criterion_id: integer,
-          type: Google.Ads.Googleads.V8.Enums.CriterionTypeEnum.CriterionType.t()
-        }
 
-  defstruct [:criterion, :resource_name, :shared_set, :criterion_id, :type]
 
   oneof :criterion, 0
   field :resource_name, 1, optional: true, type: :string

@@ -2,18 +2,6 @@ defmodule Google.Ads.Googleads.V4.Errors.MediaUploadErrorEnum.MediaUploadError d
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :FILE_TOO_BIG
-          | :UNPARSEABLE_IMAGE
-          | :ANIMATED_IMAGE_NOT_ALLOWED
-          | :FORMAT_NOT_ALLOWED
-          | :EXTERNAL_URL_NOT_ALLOWED
-          | :INVALID_URL_REFERENCE
-          | :MISSING_PRIMARY_MEDIA_BUNDLE_ENTRY
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :FILE_TOO_BIG, 2
@@ -29,6 +17,4 @@ defmodule Google.Ads.Googleads.V4.Errors.MediaUploadErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

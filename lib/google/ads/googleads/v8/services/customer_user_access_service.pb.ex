@@ -2,11 +2,7 @@ defmodule Google.Ads.Googleads.V8.Services.GetCustomerUserAccessRequest do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          resource_name: String.t()
-        }
 
-  defstruct [:resource_name]
 
   field :resource_name, 1, required: true, type: :string
 end
@@ -15,12 +11,7 @@ defmodule Google.Ads.Googleads.V8.Services.MutateCustomerUserAccessRequest do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          customer_id: String.t(),
-          operation: Google.Ads.Googleads.V8.Services.CustomerUserAccessOperation.t() | nil
-        }
 
-  defstruct [:customer_id, :operation]
 
   field :customer_id, 1, required: true, type: :string
 
@@ -33,12 +24,7 @@ defmodule Google.Ads.Googleads.V8.Services.CustomerUserAccessOperation do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          operation: {atom, any},
-          update_mask: Google.Protobuf.FieldMask.t() | nil
-        }
 
-  defstruct [:operation, :update_mask]
 
   oneof :operation, 0
   field :update_mask, 3, optional: true, type: Google.Protobuf.FieldMask
@@ -55,11 +41,7 @@ defmodule Google.Ads.Googleads.V8.Services.MutateCustomerUserAccessResponse do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          result: Google.Ads.Googleads.V8.Services.MutateCustomerUserAccessResult.t() | nil
-        }
 
-  defstruct [:result]
 
   field :result, 1,
     optional: true,
@@ -70,11 +52,7 @@ defmodule Google.Ads.Googleads.V8.Services.MutateCustomerUserAccessResult do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          resource_name: String.t()
-        }
 
-  defstruct [:resource_name]
 
   field :resource_name, 1, optional: true, type: :string
 end

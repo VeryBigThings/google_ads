@@ -2,19 +2,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.Campaign.NetworkSettin
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          target_google_search: boolean,
-          target_search_network: boolean,
-          target_content_network: boolean,
-          target_partner_search_network: boolean
-        }
 
-  defstruct [
-    :target_google_search,
-    :target_search_network,
-    :target_content_network,
-    :target_partner_search_network
-  ]
 
   field :target_google_search, 5, type: :bool
   field :target_search_network, 6, type: :bool
@@ -26,11 +14,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.Campaign.HotelSettingI
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          hotel_center_id: integer
-        }
 
-  defstruct [:hotel_center_id]
 
   field :hotel_center_id, 2, type: :int64
 end
@@ -39,14 +23,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.Campaign.DynamicSearch
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          domain_name: String.t(),
-          language_code: String.t(),
-          use_supplied_urls_only: boolean,
-          feeds: [String.t()]
-        }
 
-  defstruct [:domain_name, :language_code, :use_supplied_urls_only, :feeds]
 
   field :domain_name, 6, type: :string
   field :language_code, 7, type: :string
@@ -58,13 +35,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.Campaign.OptimizationG
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          optimization_goal_types: [
-            [Google.Ads.Googleads.V8Availabilities.Enums.OptimizationGoalTypeEnum.OptimizationGoalType.t()]
-          ]
-        }
 
-  defstruct [:optimization_goal_types]
 
   field :optimization_goal_types, 1,
     repeated: true,
@@ -76,14 +47,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.Campaign.ShoppingSetti
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          merchant_id: integer,
-          sales_country: String.t(),
-          campaign_priority: integer,
-          enable_local: boolean
-        }
 
-  defstruct [:merchant_id, :sales_country, :campaign_priority, :enable_local]
 
   field :merchant_id, 5, type: :int64
   field :sales_country, 6, type: :string
@@ -95,11 +59,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.Campaign.TrackingSetti
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          tracking_url: String.t()
-        }
 
-  defstruct [:tracking_url]
 
   field :tracking_url, 2, type: :string
 end
@@ -108,14 +68,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.Campaign.GeoTargetType
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          positive_geo_target_type:
-            Google.Ads.Googleads.V8Availabilities.Enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType.t(),
-          negative_geo_target_type:
-            Google.Ads.Googleads.V8Availabilities.Enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType.t()
-        }
 
-  defstruct [:positive_geo_target_type, :negative_geo_target_type]
 
   field :positive_geo_target_type, 1,
     type: Google.Ads.Googleads.V8Availabilities.Enums.PositiveGeoTargetTypeEnum.PositiveGeoTargetType,
@@ -130,12 +83,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.Campaign.LocalCampaign
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          location_source_type:
-            Google.Ads.Googleads.V8Availabilities.Enums.LocationSourceTypeEnum.LocationSourceType.t()
-        }
 
-  defstruct [:location_source_type]
 
   field :location_source_type, 1,
     type: Google.Ads.Googleads.V8Availabilities.Enums.LocationSourceTypeEnum.LocationSourceType,
@@ -146,14 +94,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.Campaign.VanityPharma 
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          vanity_pharma_display_url_mode:
-            Google.Ads.Googleads.V8Availabilities.Enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode.t(),
-          vanity_pharma_text:
-            Google.Ads.Googleads.V8Availabilities.Enums.VanityPharmaTextEnum.VanityPharmaText.t()
-        }
 
-  defstruct [:vanity_pharma_display_url_mode, :vanity_pharma_text]
 
   field :vanity_pharma_display_url_mode, 1,
     type: Google.Ads.Googleads.V8Availabilities.Enums.VanityPharmaDisplayUrlModeEnum.VanityPharmaDisplayUrlMode,
@@ -168,14 +109,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.Campaign.AppCampaignSe
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          bidding_strategy_goal_type:
-            Google.Ads.Googleads.V8Availabilities.Enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType.t(),
-          app_id: String.t(),
-          app_store: Google.Ads.Googleads.V8Availabilities.Enums.AppCampaignAppStoreEnum.AppCampaignAppStore.t()
-        }
 
-  defstruct [:bidding_strategy_goal_type, :app_id, :app_store]
 
   field :bidding_strategy_goal_type, 1,
     type:
@@ -193,11 +127,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.Campaign.SelectiveOpti
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          conversion_actions: [String.t()]
-        }
 
-  defstruct [:conversion_actions]
 
   field :conversion_actions, 2, repeated: true, type: :string
 end
@@ -206,103 +136,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.Campaign do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          campaign_bidding_strategy: {atom, any},
-          resource_name: String.t(),
-          id: integer,
-          name: String.t(),
-          status: Google.Ads.Googleads.V8Availabilities.Enums.CampaignStatusEnum.CampaignStatus.t(),
-          serving_status:
-            Google.Ads.Googleads.V8Availabilities.Enums.CampaignServingStatusEnum.CampaignServingStatus.t(),
-          ad_serving_optimization_status:
-            Google.Ads.Googleads.V8Availabilities.Enums.AdServingOptimizationStatusEnum.AdServingOptimizationStatus.t(),
-          advertising_channel_type:
-            Google.Ads.Googleads.V8Availabilities.Enums.AdvertisingChannelTypeEnum.AdvertisingChannelType.t(),
-          advertising_channel_sub_type:
-            Google.Ads.Googleads.V8Availabilities.Enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType.t(),
-          tracking_url_template: String.t(),
-          url_custom_parameters: [Google.Ads.Googleads.V8Availabilities.Common.CustomParameter.t()],
-          real_time_bidding_setting:
-            Google.Ads.Googleads.V8Availabilities.Common.RealTimeBiddingSetting.t() | nil,
-          network_settings: Google.Ads.Googleads.V8Availabilities.Resources.Campaign.NetworkSettings.t() | nil,
-          hotel_setting: Google.Ads.Googleads.V8Availabilities.Resources.Campaign.HotelSettingInfo.t() | nil,
-          dynamic_search_ads_setting:
-            Google.Ads.Googleads.V8Availabilities.Resources.Campaign.DynamicSearchAdsSetting.t() | nil,
-          shopping_setting: Google.Ads.Googleads.V8Availabilities.Resources.Campaign.ShoppingSetting.t() | nil,
-          targeting_setting: Google.Ads.Googleads.V8Availabilities.Common.TargetingSetting.t() | nil,
-          geo_target_type_setting:
-            Google.Ads.Googleads.V8Availabilities.Resources.Campaign.GeoTargetTypeSetting.t() | nil,
-          local_campaign_setting:
-            Google.Ads.Googleads.V8Availabilities.Resources.Campaign.LocalCampaignSetting.t() | nil,
-          app_campaign_setting:
-            Google.Ads.Googleads.V8Availabilities.Resources.Campaign.AppCampaignSetting.t() | nil,
-          labels: [String.t()],
-          experiment_type:
-            Google.Ads.Googleads.V8Availabilities.Enums.CampaignExperimentTypeEnum.CampaignExperimentType.t(),
-          base_campaign: String.t(),
-          campaign_budget: String.t(),
-          bidding_strategy_type:
-            Google.Ads.Googleads.V8Availabilities.Enums.BiddingStrategyTypeEnum.BiddingStrategyType.t(),
-          accessible_bidding_strategy: String.t(),
-          start_date: String.t(),
-          end_date: String.t(),
-          final_url_suffix: String.t(),
-          frequency_caps: [Google.Ads.Googleads.V8Availabilities.Common.FrequencyCapEntry.t()],
-          video_brand_safety_suitability:
-            Google.Ads.Googleads.V8Availabilities.Enums.BrandSafetySuitabilityEnum.BrandSafetySuitability.t(),
-          vanity_pharma: Google.Ads.Googleads.V8Availabilities.Resources.Campaign.VanityPharma.t() | nil,
-          selective_optimization:
-            Google.Ads.Googleads.V8Availabilities.Resources.Campaign.SelectiveOptimization.t() | nil,
-          optimization_goal_setting:
-            Google.Ads.Googleads.V8Availabilities.Resources.Campaign.OptimizationGoalSetting.t() | nil,
-          tracking_setting: Google.Ads.Googleads.V8Availabilities.Resources.Campaign.TrackingSetting.t() | nil,
-          payment_mode: Google.Ads.Googleads.V8Availabilities.Enums.PaymentModeEnum.PaymentMode.t(),
-          optimization_score: float | :infinity | :negative_infinity | :nan,
-          excluded_parent_asset_field_types: [
-            [Google.Ads.Googleads.V8Availabilities.Enums.AssetFieldTypeEnum.AssetFieldType.t()]
-          ]
-        }
 
-  defstruct [
-    :campaign_bidding_strategy,
-    :resource_name,
-    :id,
-    :name,
-    :status,
-    :serving_status,
-    :ad_serving_optimization_status,
-    :advertising_channel_type,
-    :advertising_channel_sub_type,
-    :tracking_url_template,
-    :url_custom_parameters,
-    :real_time_bidding_setting,
-    :network_settings,
-    :hotel_setting,
-    :dynamic_search_ads_setting,
-    :shopping_setting,
-    :targeting_setting,
-    :geo_target_type_setting,
-    :local_campaign_setting,
-    :app_campaign_setting,
-    :labels,
-    :experiment_type,
-    :base_campaign,
-    :campaign_budget,
-    :bidding_strategy_type,
-    :accessible_bidding_strategy,
-    :start_date,
-    :end_date,
-    :final_url_suffix,
-    :frequency_caps,
-    :video_brand_safety_suitability,
-    :vanity_pharma,
-    :selective_optimization,
-    :optimization_goal_setting,
-    :tracking_setting,
-    :payment_mode,
-    :optimization_score,
-    :excluded_parent_asset_field_types
-  ]
 
   oneof :campaign_bidding_strategy, 0
 

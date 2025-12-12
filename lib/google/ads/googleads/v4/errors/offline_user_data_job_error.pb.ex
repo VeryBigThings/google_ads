@@ -2,38 +2,6 @@ defmodule Google.Ads.Googleads.V4.Errors.OfflineUserDataJobErrorEnum.OfflineUser
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :INVALID_USER_LIST_ID
-          | :INVALID_USER_LIST_TYPE
-          | :NOT_WHITELISTED_FOR_USER_ID
-          | :INCOMPATIBLE_UPLOAD_KEY_TYPE
-          | :MISSING_USER_IDENTIFIER
-          | :INVALID_MOBILE_ID_FORMAT
-          | :TOO_MANY_USER_IDENTIFIERS
-          | :NOT_WHITELISTED_FOR_STORE_SALES_DIRECT
-          | :NOT_WHITELISTED_FOR_UNIFIED_STORE_SALES
-          | :INVALID_PARTNER_ID
-          | :INVALID_ENCODING
-          | :INVALID_COUNTRY_CODE
-          | :INCOMPATIBLE_USER_IDENTIFIER
-          | :FUTURE_TRANSACTION_TIME
-          | :INVALID_CONVERSION_ACTION
-          | :MOBILE_ID_NOT_SUPPORTED
-          | :INVALID_OPERATION_ORDER
-          | :CONFLICTING_OPERATION
-          | :EXTERNAL_UPDATE_ID_ALREADY_EXISTS
-          | :JOB_ALREADY_STARTED
-          | :REMOVE_NOT_SUPPORTED
-          | :REMOVE_ALL_NOT_SUPPORTED
-          | :INVALID_SHA256_FORMAT
-          | :CUSTOM_KEY_DISABLED
-          | :CUSTOM_KEY_NOT_PREDEFINED
-          | :CUSTOM_KEY_NOT_SET
-          | :CUSTOMER_NOT_ACCEPTED_CUSTOMER_DATA_TERMS
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :INVALID_USER_LIST_ID, 3
@@ -69,6 +37,4 @@ defmodule Google.Ads.Googleads.V4.Errors.OfflineUserDataJobErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

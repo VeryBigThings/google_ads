@@ -2,33 +2,6 @@ defmodule Google.Ads.Googleads.V4.Enums.ConversionActionTypeEnum.ConversionActio
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :AD_CALL
-          | :CLICK_TO_CALL
-          | :GOOGLE_PLAY_DOWNLOAD
-          | :GOOGLE_PLAY_IN_APP_PURCHASE
-          | :UPLOAD_CALLS
-          | :UPLOAD_CLICKS
-          | :WEBPAGE
-          | :WEBSITE_CALL
-          | :STORE_SALES_DIRECT_UPLOAD
-          | :STORE_SALES
-          | :FIREBASE_ANDROID_FIRST_OPEN
-          | :FIREBASE_ANDROID_IN_APP_PURCHASE
-          | :FIREBASE_ANDROID_CUSTOM
-          | :FIREBASE_IOS_FIRST_OPEN
-          | :FIREBASE_IOS_IN_APP_PURCHASE
-          | :FIREBASE_IOS_CUSTOM
-          | :THIRD_PARTY_APP_ANALYTICS_ANDROID_FIRST_OPEN
-          | :THIRD_PARTY_APP_ANALYTICS_ANDROID_IN_APP_PURCHASE
-          | :THIRD_PARTY_APP_ANALYTICS_ANDROID_CUSTOM
-          | :THIRD_PARTY_APP_ANALYTICS_IOS_FIRST_OPEN
-          | :THIRD_PARTY_APP_ANALYTICS_IOS_IN_APP_PURCHASE
-          | :THIRD_PARTY_APP_ANALYTICS_IOS_CUSTOM
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :AD_CALL, 2
@@ -59,6 +32,4 @@ defmodule Google.Ads.Googleads.V4.Enums.ConversionActionTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

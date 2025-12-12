@@ -2,28 +2,6 @@ defmodule Google.Ads.Googleads.V4.Enums.JobPlaceholderFieldEnum.JobPlaceholderFi
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :JOB_ID
-          | :LOCATION_ID
-          | :TITLE
-          | :SUBTITLE
-          | :DESCRIPTION
-          | :IMAGE_URL
-          | :CATEGORY
-          | :CONTEXTUAL_KEYWORDS
-          | :ADDRESS
-          | :SALARY
-          | :FINAL_URLS
-          | :FINAL_MOBILE_URLS
-          | :TRACKING_URL
-          | :ANDROID_APP_LINK
-          | :SIMILAR_JOB_IDS
-          | :IOS_APP_LINK
-          | :IOS_APP_STORE_ID
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :JOB_ID, 2
@@ -49,6 +27,4 @@ defmodule Google.Ads.Googleads.V4.Enums.JobPlaceholderFieldEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

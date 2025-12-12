@@ -2,29 +2,6 @@ defmodule Google.Ads.Googleads.V7.Resources.BiddingStrategy do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          scheme: {atom, any},
-          resource_name: String.t(),
-          id: integer,
-          name: String.t(),
-          status:
-            Google.Ads.Googleads.V7.Enums.BiddingStrategyStatusEnum.BiddingStrategyStatus.t(),
-          type: Google.Ads.Googleads.V7.Enums.BiddingStrategyTypeEnum.BiddingStrategyType.t(),
-          effective_currency_code: String.t(),
-          campaign_count: integer,
-          non_removed_campaign_count: integer
-        }
-  defstruct [
-    :scheme,
-    :resource_name,
-    :id,
-    :name,
-    :status,
-    :type,
-    :effective_currency_code,
-    :campaign_count,
-    :non_removed_campaign_count
-  ]
 
   oneof :scheme, 0
 

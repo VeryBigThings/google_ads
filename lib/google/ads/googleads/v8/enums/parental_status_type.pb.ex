@@ -1,8 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Enums.ParentalStatusTypeEnum.ParentalStatusType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
-  @type t :: integer | :UNSPECIFIED | :UNKNOWN | :PARENT | :NOT_A_PARENT | :UNDETERMINED
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -17,7 +15,5 @@ end
 defmodule Google.Ads.Googleads.V8.Enums.ParentalStatusTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

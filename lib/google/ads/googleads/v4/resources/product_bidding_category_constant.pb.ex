@@ -2,28 +2,6 @@ defmodule Google.Ads.Googleads.V4.Resources.ProductBiddingCategoryConstant do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          id: Google.Protobuf.Int64Value.t() | nil,
-          country_code: Google.Protobuf.StringValue.t() | nil,
-          product_bidding_category_constant_parent: Google.Protobuf.StringValue.t() | nil,
-          level:
-            Google.Ads.Googleads.V4.Enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel.t(),
-          status:
-            Google.Ads.Googleads.V4.Enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus.t(),
-          language_code: Google.Protobuf.StringValue.t() | nil,
-          localized_name: Google.Protobuf.StringValue.t() | nil
-        }
-  defstruct [
-    :resource_name,
-    :id,
-    :country_code,
-    :product_bidding_category_constant_parent,
-    :level,
-    :status,
-    :language_code,
-    :localized_name
-  ]
 
   field :resource_name, 1, type: :string
   field :id, 2, type: Google.Protobuf.Int64Value

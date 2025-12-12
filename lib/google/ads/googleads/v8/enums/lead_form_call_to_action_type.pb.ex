@@ -2,25 +2,6 @@ defmodule Google.Ads.Googleads.V8.Enums.LeadFormCallToActionTypeEnum.LeadFormCal
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :LEARN_MORE
-          | :GET_QUOTE
-          | :APPLY_NOW
-          | :SIGN_UP
-          | :CONTACT_US
-          | :SUBSCRIBE
-          | :DOWNLOAD
-          | :BOOK_NOW
-          | :GET_OFFER
-          | :REGISTER
-          | :GET_INFO
-          | :REQUEST_DEMO
-          | :JOIN_NOW
-          | :GET_STARTED
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -57,7 +38,5 @@ end
 defmodule Google.Ads.Googleads.V8.Enums.LeadFormCallToActionTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

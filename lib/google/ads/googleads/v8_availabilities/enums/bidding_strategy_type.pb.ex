@@ -2,26 +2,6 @@ defmodule Google.Ads.Googleads.V8Availabilities.Enums.BiddingStrategyTypeEnum.Bi
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :COMMISSION
-          | :ENHANCED_CPC
-          | :MANUAL_CPC
-          | :MANUAL_CPM
-          | :MANUAL_CPV
-          | :MAXIMIZE_CONVERSIONS
-          | :MAXIMIZE_CONVERSION_VALUE
-          | :PAGE_ONE_PROMOTED
-          | :PERCENT_CPC
-          | :TARGET_CPA
-          | :TARGET_CPM
-          | :TARGET_IMPRESSION_SHARE
-          | :TARGET_OUTRANK_SHARE
-          | :TARGET_ROAS
-          | :TARGET_SPEND
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -60,7 +40,5 @@ end
 defmodule Google.Ads.Googleads.V8Availabilities.Enums.BiddingStrategyTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

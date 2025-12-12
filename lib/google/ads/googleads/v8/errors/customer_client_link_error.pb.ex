@@ -2,19 +2,6 @@ defmodule Google.Ads.Googleads.V8.Errors.CustomerClientLinkErrorEnum.CustomerCli
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :CLIENT_ALREADY_INVITED_BY_THIS_MANAGER
-          | :CLIENT_ALREADY_MANAGED_IN_HIERARCHY
-          | :CYCLIC_LINK_NOT_ALLOWED
-          | :CUSTOMER_HAS_TOO_MANY_ACCOUNTS
-          | :CLIENT_HAS_TOO_MANY_INVITATIONS
-          | :CANNOT_HIDE_OR_UNHIDE_MANAGER_ACCOUNTS
-          | :CUSTOMER_HAS_TOO_MANY_ACCOUNTS_AT_MANAGER
-          | :CLIENT_HAS_TOO_MANY_MANAGERS
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -39,7 +26,5 @@ end
 defmodule Google.Ads.Googleads.V8.Errors.CustomerClientLinkErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

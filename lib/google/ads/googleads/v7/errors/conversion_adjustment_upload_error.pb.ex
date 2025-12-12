@@ -2,22 +2,6 @@ defmodule Google.Ads.Googleads.V7.Errors.ConversionAdjustmentUploadErrorEnum.Con
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :TOO_RECENT_CONVERSION_ACTION
-          | :INVALID_CONVERSION_ACTION
-          | :CONVERSION_ALREADY_RETRACTED
-          | :CONVERSION_NOT_FOUND
-          | :CONVERSION_EXPIRED
-          | :ADJUSTMENT_PRECEDES_CONVERSION
-          | :MORE_RECENT_RESTATEMENT_FOUND
-          | :TOO_RECENT_CONVERSION
-          | :CANNOT_RESTATE_CONVERSION_ACTION_THAT_ALWAYS_USES_DEFAULT_CONVERSION_VALUE
-          | :TOO_MANY_ADJUSTMENTS_IN_REQUEST
-          | :TOO_MANY_ADJUSTMENTS
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :TOO_RECENT_CONVERSION_ACTION, 2
@@ -37,6 +21,4 @@ defmodule Google.Ads.Googleads.V7.Errors.ConversionAdjustmentUploadErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

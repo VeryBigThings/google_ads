@@ -2,14 +2,6 @@ defmodule Google.Ads.Googleads.V8.Enums.LinkedAccountTypeEnum.LinkedAccountType 
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :THIRD_PARTY_APP_ANALYTICS
-          | :DATA_PARTNER
-          | :GOOGLE_ADS
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -24,7 +16,5 @@ end
 defmodule Google.Ads.Googleads.V8.Enums.LinkedAccountTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

@@ -1,8 +1,6 @@
 defmodule Google.Ads.Googleads.V8.Enums.BudgetPeriodEnum.BudgetPeriod do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
-  @type t :: integer | :UNSPECIFIED | :UNKNOWN | :DAILY | :CUSTOM_PERIOD
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -15,7 +13,5 @@ end
 defmodule Google.Ads.Googleads.V8.Enums.BudgetPeriodEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

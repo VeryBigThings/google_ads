@@ -2,19 +2,6 @@ defmodule Google.Ads.Googleads.V4.Enums.TargetingDimensionEnum.TargetingDimensio
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :KEYWORD
-          | :AUDIENCE
-          | :TOPIC
-          | :GENDER
-          | :AGE_RANGE
-          | :PLACEMENT
-          | :PARENTAL_STATUS
-          | :INCOME_RANGE
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :KEYWORD, 2
@@ -31,6 +18,4 @@ defmodule Google.Ads.Googleads.V4.Enums.TargetingDimensionEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

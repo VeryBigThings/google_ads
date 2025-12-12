@@ -2,19 +2,6 @@ defmodule Google.Ads.Googleads.V8Availabilities.Errors.FeedItemTargetErrorEnum.F
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :MUST_SET_TARGET_ONEOF_ON_CREATE
-          | :FEED_ITEM_TARGET_ALREADY_EXISTS
-          | :FEED_ITEM_SCHEDULES_CANNOT_OVERLAP
-          | :TARGET_LIMIT_EXCEEDED_FOR_GIVEN_TYPE
-          | :TOO_MANY_SCHEDULES_PER_DAY
-          | :CANNOT_HAVE_ENABLED_CAMPAIGN_AND_ENABLED_AD_GROUP_TARGETS
-          | :DUPLICATE_AD_SCHEDULE
-          | :DUPLICATE_KEYWORD
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -39,7 +26,5 @@ end
 defmodule Google.Ads.Googleads.V8Availabilities.Errors.FeedItemTargetErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

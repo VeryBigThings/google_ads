@@ -2,18 +2,6 @@ defmodule Google.Ads.Googleads.V4.Enums.SitelinkPlaceholderFieldEnum.SitelinkPla
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :TEXT
-          | :LINE_1
-          | :LINE_2
-          | :FINAL_URLS
-          | :FINAL_MOBILE_URLS
-          | :TRACKING_URL
-          | :FINAL_URL_SUFFIX
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :TEXT, 2
@@ -29,6 +17,4 @@ defmodule Google.Ads.Googleads.V4.Enums.SitelinkPlaceholderFieldEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

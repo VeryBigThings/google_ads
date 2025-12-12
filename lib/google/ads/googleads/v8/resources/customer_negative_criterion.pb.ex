@@ -2,14 +2,7 @@ defmodule Google.Ads.Googleads.V8.Resources.CustomerNegativeCriterion do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          criterion: {atom, any},
-          resource_name: String.t(),
-          id: integer,
-          type: Google.Ads.Googleads.V8.Enums.CriterionTypeEnum.CriterionType.t()
-        }
 
-  defstruct [:criterion, :resource_name, :id, :type]
 
   oneof :criterion, 0
   field :resource_name, 1, optional: true, type: :string

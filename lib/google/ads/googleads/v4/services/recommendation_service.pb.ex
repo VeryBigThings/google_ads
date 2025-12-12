@@ -2,10 +2,6 @@ defmodule Google.Ads.Googleads.V4.Services.GetRecommendationRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t()
-        }
-  defstruct [:resource_name]
 
   field :resource_name, 1, type: :string
 end
@@ -14,12 +10,6 @@ defmodule Google.Ads.Googleads.V4.Services.ApplyRecommendationRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          customer_id: String.t(),
-          operations: [Google.Ads.Googleads.V4.Services.ApplyRecommendationOperation.t()],
-          partial_failure: boolean
-        }
-  defstruct [:customer_id, :operations, :partial_failure]
 
   field :customer_id, 1, type: :string
 
@@ -34,10 +24,6 @@ defmodule Google.Ads.Googleads.V4.Services.ApplyRecommendationOperation.Campaign
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          new_budget_amount_micros: Google.Protobuf.Int64Value.t() | nil
-        }
-  defstruct [:new_budget_amount_micros]
 
   field :new_budget_amount_micros, 1, type: Google.Protobuf.Int64Value
 end
@@ -46,10 +32,6 @@ defmodule Google.Ads.Googleads.V4.Services.ApplyRecommendationOperation.TextAdPa
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          ad: Google.Ads.Googleads.V4.Resources.Ad.t() | nil
-        }
-  defstruct [:ad]
 
   field :ad, 1, type: Google.Ads.Googleads.V4.Resources.Ad
 end
@@ -58,12 +40,6 @@ defmodule Google.Ads.Googleads.V4.Services.ApplyRecommendationOperation.KeywordP
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          ad_group: Google.Protobuf.StringValue.t() | nil,
-          match_type: Google.Ads.Googleads.V4.Enums.KeywordMatchTypeEnum.KeywordMatchType.t(),
-          cpc_bid_micros: Google.Protobuf.Int64Value.t() | nil
-        }
-  defstruct [:ad_group, :match_type, :cpc_bid_micros]
 
   field :ad_group, 1, type: Google.Protobuf.StringValue
 
@@ -78,11 +54,6 @@ defmodule Google.Ads.Googleads.V4.Services.ApplyRecommendationOperation.TargetCp
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          target_cpa_micros: Google.Protobuf.Int64Value.t() | nil,
-          new_campaign_budget_amount_micros: Google.Protobuf.Int64Value.t() | nil
-        }
-  defstruct [:target_cpa_micros, :new_campaign_budget_amount_micros]
 
   field :target_cpa_micros, 1, type: Google.Protobuf.Int64Value
   field :new_campaign_budget_amount_micros, 2, type: Google.Protobuf.Int64Value
@@ -92,10 +63,6 @@ defmodule Google.Ads.Googleads.V4.Services.ApplyRecommendationOperation.CalloutE
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          callout_extensions: [Google.Ads.Googleads.V4.Common.CalloutFeedItem.t()]
-        }
-  defstruct [:callout_extensions]
 
   field :callout_extensions, 1,
     repeated: true,
@@ -106,10 +73,6 @@ defmodule Google.Ads.Googleads.V4.Services.ApplyRecommendationOperation.CallExte
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          call_extensions: [Google.Ads.Googleads.V4.Common.CallFeedItem.t()]
-        }
-  defstruct [:call_extensions]
 
   field :call_extensions, 1, repeated: true, type: Google.Ads.Googleads.V4.Common.CallFeedItem
 end
@@ -118,10 +81,6 @@ defmodule Google.Ads.Googleads.V4.Services.ApplyRecommendationOperation.Sitelink
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          sitelink_extensions: [Google.Ads.Googleads.V4.Common.SitelinkFeedItem.t()]
-        }
-  defstruct [:sitelink_extensions]
 
   field :sitelink_extensions, 1,
     repeated: true,
@@ -132,10 +91,6 @@ defmodule Google.Ads.Googleads.V4.Services.ApplyRecommendationOperation.MoveUnus
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          budget_micros_to_move: Google.Protobuf.Int64Value.t() | nil
-        }
-  defstruct [:budget_micros_to_move]
 
   field :budget_micros_to_move, 1, type: Google.Protobuf.Int64Value
 end
@@ -144,11 +99,6 @@ defmodule Google.Ads.Googleads.V4.Services.ApplyRecommendationOperation do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          apply_parameters: {atom, any},
-          resource_name: String.t()
-        }
-  defstruct [:apply_parameters, :resource_name]
 
   oneof :apply_parameters, 0
 
@@ -194,11 +144,6 @@ defmodule Google.Ads.Googleads.V4.Services.ApplyRecommendationResponse do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          results: [Google.Ads.Googleads.V4.Services.ApplyRecommendationResult.t()],
-          partial_failure_error: Google.Rpc.Status.t() | nil
-        }
-  defstruct [:results, :partial_failure_error]
 
   field :results, 1,
     repeated: true,
@@ -211,10 +156,6 @@ defmodule Google.Ads.Googleads.V4.Services.ApplyRecommendationResult do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t()
-        }
-  defstruct [:resource_name]
 
   field :resource_name, 1, type: :string
 end
@@ -223,10 +164,6 @@ defmodule Google.Ads.Googleads.V4.Services.DismissRecommendationRequest.DismissR
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t()
-        }
-  defstruct [:resource_name]
 
   field :resource_name, 1, type: :string
 end
@@ -235,14 +172,6 @@ defmodule Google.Ads.Googleads.V4.Services.DismissRecommendationRequest do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          customer_id: String.t(),
-          operations: [
-            Google.Ads.Googleads.V4.Services.DismissRecommendationRequest.DismissRecommendationOperation.t()
-          ],
-          partial_failure: boolean
-        }
-  defstruct [:customer_id, :operations, :partial_failure]
 
   field :customer_id, 1, type: :string
 
@@ -258,10 +187,6 @@ defmodule Google.Ads.Googleads.V4.Services.DismissRecommendationResponse.Dismiss
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t()
-        }
-  defstruct [:resource_name]
 
   field :resource_name, 1, type: :string
 end
@@ -270,13 +195,6 @@ defmodule Google.Ads.Googleads.V4.Services.DismissRecommendationResponse do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          results: [
-            Google.Ads.Googleads.V4.Services.DismissRecommendationResponse.DismissRecommendationResult.t()
-          ],
-          partial_failure_error: Google.Rpc.Status.t() | nil
-        }
-  defstruct [:results, :partial_failure_error]
 
   field :results, 1,
     repeated: true,

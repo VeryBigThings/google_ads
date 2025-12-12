@@ -2,16 +2,6 @@ defmodule Google.Ads.Googleads.V4.Enums.WebpageConditionOperandEnum.WebpageCondi
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :URL
-          | :CATEGORY
-          | :PAGE_TITLE
-          | :PAGE_CONTENT
-          | :CUSTOM_LABEL
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :URL, 2
@@ -25,6 +15,4 @@ defmodule Google.Ads.Googleads.V4.Enums.WebpageConditionOperandEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

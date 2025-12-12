@@ -2,11 +2,7 @@ defmodule Google.Ads.Googleads.V8.Services.GetKeywordPlanCampaignRequest do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          resource_name: String.t()
-        }
 
-  defstruct [:resource_name]
 
   field :resource_name, 1, required: true, type: :string
 end
@@ -15,14 +11,7 @@ defmodule Google.Ads.Googleads.V8.Services.MutateKeywordPlanCampaignsRequest do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          customer_id: String.t(),
-          operations: [Google.Ads.Googleads.V8.Services.KeywordPlanCampaignOperation.t()],
-          partial_failure: boolean,
-          validate_only: boolean
-        }
 
-  defstruct [:customer_id, :operations, :partial_failure, :validate_only]
 
   field :customer_id, 1, required: true, type: :string
 
@@ -38,12 +27,7 @@ defmodule Google.Ads.Googleads.V8.Services.KeywordPlanCampaignOperation do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          operation: {atom, any},
-          update_mask: Google.Protobuf.FieldMask.t() | nil
-        }
 
-  defstruct [:operation, :update_mask]
 
   oneof :operation, 0
   field :update_mask, 4, optional: true, type: Google.Protobuf.FieldMask
@@ -65,12 +49,7 @@ defmodule Google.Ads.Googleads.V8.Services.MutateKeywordPlanCampaignsResponse do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          partial_failure_error: Google.Rpc.Status.t() | nil,
-          results: [Google.Ads.Googleads.V8.Services.MutateKeywordPlanCampaignResult.t()]
-        }
 
-  defstruct [:partial_failure_error, :results]
 
   field :partial_failure_error, 3, optional: true, type: Google.Rpc.Status
 
@@ -83,11 +62,7 @@ defmodule Google.Ads.Googleads.V8.Services.MutateKeywordPlanCampaignResult do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          resource_name: String.t()
-        }
 
-  defstruct [:resource_name]
 
   field :resource_name, 1, optional: true, type: :string
 end

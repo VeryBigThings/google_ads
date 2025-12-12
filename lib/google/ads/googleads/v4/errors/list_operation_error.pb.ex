@@ -2,8 +2,6 @@ defmodule Google.Ads.Googleads.V4.Errors.ListOperationErrorEnum.ListOperationErr
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t :: integer | :UNSPECIFIED | :UNKNOWN | :REQUIRED_FIELD_MISSING | :DUPLICATE_VALUES
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :REQUIRED_FIELD_MISSING, 7
@@ -14,6 +12,4 @@ defmodule Google.Ads.Googleads.V4.Errors.ListOperationErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

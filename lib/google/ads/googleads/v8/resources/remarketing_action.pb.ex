@@ -2,14 +2,7 @@ defmodule Google.Ads.Googleads.V8.Resources.RemarketingAction do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          id: integer,
-          name: String.t(),
-          tag_snippets: [Google.Ads.Googleads.V8.Common.TagSnippet.t()]
-        }
 
-  defstruct [:resource_name, :id, :name, :tag_snippets]
 
   field :resource_name, 1, optional: true, type: :string
   field :id, 5, optional: true, type: :int64

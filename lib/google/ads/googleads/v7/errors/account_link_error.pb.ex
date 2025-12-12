@@ -2,8 +2,6 @@ defmodule Google.Ads.Googleads.V7.Errors.AccountLinkErrorEnum.AccountLinkError d
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t :: integer | :UNSPECIFIED | :UNKNOWN | :INVALID_STATUS
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :INVALID_STATUS, 2
@@ -13,6 +11,4 @@ defmodule Google.Ads.Googleads.V7.Errors.AccountLinkErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

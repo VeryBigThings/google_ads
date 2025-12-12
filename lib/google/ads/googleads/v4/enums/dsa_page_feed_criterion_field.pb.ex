@@ -2,8 +2,6 @@ defmodule Google.Ads.Googleads.V4.Enums.DsaPageFeedCriterionFieldEnum.DsaPageFee
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t :: integer | :UNSPECIFIED | :UNKNOWN | :PAGE_URL | :LABEL
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :PAGE_URL, 2
@@ -14,6 +12,4 @@ defmodule Google.Ads.Googleads.V4.Enums.DsaPageFeedCriterionFieldEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

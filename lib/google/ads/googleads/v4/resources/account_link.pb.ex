@@ -2,14 +2,6 @@ defmodule Google.Ads.Googleads.V4.Resources.AccountLink do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          linked_account: {atom, any},
-          resource_name: String.t(),
-          account_link_id: Google.Protobuf.Int64Value.t() | nil,
-          status: Google.Ads.Googleads.V4.Enums.AccountLinkStatusEnum.AccountLinkStatus.t(),
-          type: Google.Ads.Googleads.V4.Enums.LinkedAccountTypeEnum.LinkedAccountType.t()
-        }
-  defstruct [:linked_account, :resource_name, :account_link_id, :status, :type]
 
   oneof :linked_account, 0
 
@@ -33,12 +25,6 @@ defmodule Google.Ads.Googleads.V4.Resources.ThirdPartyAppAnalyticsLinkIdentifier
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          app_analytics_provider_id: Google.Protobuf.Int64Value.t() | nil,
-          app_id: Google.Protobuf.StringValue.t() | nil,
-          app_vendor: Google.Ads.Googleads.V4.Enums.MobileAppVendorEnum.MobileAppVendor.t()
-        }
-  defstruct [:app_analytics_provider_id, :app_id, :app_vendor]
 
   field :app_analytics_provider_id, 1, type: Google.Protobuf.Int64Value
   field :app_id, 2, type: Google.Protobuf.StringValue

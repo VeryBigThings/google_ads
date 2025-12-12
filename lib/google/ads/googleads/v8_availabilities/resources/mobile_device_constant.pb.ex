@@ -2,16 +2,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.MobileDeviceConstant d
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          id: integer,
-          name: String.t(),
-          manufacturer_name: String.t(),
-          operating_system_name: String.t(),
-          type: Google.Ads.Googleads.V8Availabilities.Enums.MobileDeviceTypeEnum.MobileDeviceType.t()
-        }
 
-  defstruct [:resource_name, :id, :name, :manufacturer_name, :operating_system_name, :type]
 
   field :resource_name, 1, type: :string
   field :id, 7, type: :int64

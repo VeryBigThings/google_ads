@@ -2,15 +2,6 @@ defmodule Google.Ads.Googleads.V7.Resources.LifeEvent do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          id: integer,
-          name: String.t(),
-          parent: String.t(),
-          launched_to_all: boolean,
-          availabilities: [Google.Ads.Googleads.V7.Common.CriterionCategoryAvailability.t()]
-        }
-  defstruct [:resource_name, :id, :name, :parent, :launched_to_all, :availabilities]
 
   field :resource_name, 1, type: :string
   field :id, 2, type: :int64

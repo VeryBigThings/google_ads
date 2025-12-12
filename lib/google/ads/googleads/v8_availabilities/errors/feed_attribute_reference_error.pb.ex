@@ -2,14 +2,6 @@ defmodule Google.Ads.Googleads.V8Availabilities.Errors.FeedAttributeReferenceErr
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :CANNOT_REFERENCE_REMOVED_FEED
-          | :INVALID_FEED_NAME
-          | :INVALID_FEED_ATTRIBUTE_NAME
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -24,7 +16,5 @@ end
 defmodule Google.Ads.Googleads.V8Availabilities.Errors.FeedAttributeReferenceErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

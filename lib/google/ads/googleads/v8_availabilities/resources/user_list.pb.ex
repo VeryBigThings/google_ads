@@ -2,56 +2,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.UserList do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          user_list: {atom, any},
-          resource_name: String.t(),
-          id: integer,
-          read_only: boolean,
-          name: String.t(),
-          description: String.t(),
-          membership_status:
-            Google.Ads.Googleads.V8Availabilities.Enums.UserListMembershipStatusEnum.UserListMembershipStatus.t(),
-          integration_code: String.t(),
-          membership_life_span: integer,
-          size_for_display: integer,
-          size_range_for_display:
-            Google.Ads.Googleads.V8Availabilities.Enums.UserListSizeRangeEnum.UserListSizeRange.t(),
-          size_for_search: integer,
-          size_range_for_search:
-            Google.Ads.Googleads.V8Availabilities.Enums.UserListSizeRangeEnum.UserListSizeRange.t(),
-          type: Google.Ads.Googleads.V8Availabilities.Enums.UserListTypeEnum.UserListType.t(),
-          closing_reason:
-            Google.Ads.Googleads.V8Availabilities.Enums.UserListClosingReasonEnum.UserListClosingReason.t(),
-          access_reason: Google.Ads.Googleads.V8Availabilities.Enums.AccessReasonEnum.AccessReason.t(),
-          account_user_list_status:
-            Google.Ads.Googleads.V8Availabilities.Enums.UserListAccessStatusEnum.UserListAccessStatus.t(),
-          eligible_for_search: boolean,
-          eligible_for_display: boolean,
-          match_rate_percentage: integer
-        }
 
-  defstruct [
-    :user_list,
-    :resource_name,
-    :id,
-    :read_only,
-    :name,
-    :description,
-    :membership_status,
-    :integration_code,
-    :membership_life_span,
-    :size_for_display,
-    :size_range_for_display,
-    :size_for_search,
-    :size_range_for_search,
-    :type,
-    :closing_reason,
-    :access_reason,
-    :account_user_list_status,
-    :eligible_for_search,
-    :eligible_for_display,
-    :match_rate_percentage
-  ]
 
   oneof :user_list, 0
 

@@ -2,16 +2,6 @@ defmodule Google.Ads.Googleads.V8.Enums.CallPlaceholderFieldEnum.CallPlaceholder
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :PHONE_NUMBER
-          | :COUNTRY_CODE
-          | :TRACKED
-          | :CONVERSION_TYPE_ID
-          | :CONVERSION_REPORTING_STATE
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -30,7 +20,5 @@ end
 defmodule Google.Ads.Googleads.V8.Enums.CallPlaceholderFieldEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

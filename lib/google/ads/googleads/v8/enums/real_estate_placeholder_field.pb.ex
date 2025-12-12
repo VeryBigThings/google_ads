@@ -2,29 +2,6 @@ defmodule Google.Ads.Googleads.V8.Enums.RealEstatePlaceholderFieldEnum.RealEstat
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :LISTING_ID
-          | :LISTING_NAME
-          | :CITY_NAME
-          | :DESCRIPTION
-          | :ADDRESS
-          | :PRICE
-          | :FORMATTED_PRICE
-          | :IMAGE_URL
-          | :PROPERTY_TYPE
-          | :LISTING_TYPE
-          | :CONTEXTUAL_KEYWORDS
-          | :FINAL_URLS
-          | :FINAL_MOBILE_URLS
-          | :TRACKING_URL
-          | :ANDROID_APP_LINK
-          | :SIMILAR_LISTING_IDS
-          | :IOS_APP_LINK
-          | :IOS_APP_STORE_ID
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -69,7 +46,5 @@ end
 defmodule Google.Ads.Googleads.V8.Enums.RealEstatePlaceholderFieldEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

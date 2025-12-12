@@ -2,8 +2,6 @@ defmodule Google.Ads.Googleads.V4.Enums.ProductChannelEnum.ProductChannel do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t :: integer | :UNSPECIFIED | :UNKNOWN | :ONLINE | :LOCAL
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :ONLINE, 2
@@ -14,6 +12,4 @@ defmodule Google.Ads.Googleads.V4.Enums.ProductChannelEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

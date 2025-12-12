@@ -2,18 +2,6 @@ defmodule Google.Ads.Googleads.V7.Errors.FieldErrorEnum.FieldError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :REQUIRED
-          | :IMMUTABLE_FIELD
-          | :INVALID_VALUE
-          | :VALUE_MUST_BE_UNSET
-          | :REQUIRED_NONEMPTY_LIST
-          | :FIELD_CANNOT_BE_CLEARED
-          | :BLOCKED_VALUE
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :REQUIRED, 2
@@ -29,6 +17,4 @@ defmodule Google.Ads.Googleads.V7.Errors.FieldErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

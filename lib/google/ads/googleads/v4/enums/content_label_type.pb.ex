@@ -2,26 +2,6 @@ defmodule Google.Ads.Googleads.V4.Enums.ContentLabelTypeEnum.ContentLabelType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :SEXUALLY_SUGGESTIVE
-          | :BELOW_THE_FOLD
-          | :PARKED_DOMAIN
-          | :JUVENILE
-          | :PROFANITY
-          | :TRAGEDY
-          | :VIDEO
-          | :VIDEO_RATING_DV_G
-          | :VIDEO_RATING_DV_PG
-          | :VIDEO_RATING_DV_T
-          | :VIDEO_RATING_DV_MA
-          | :VIDEO_NOT_YET_RATED
-          | :EMBEDDED_VIDEO
-          | :LIVE_STREAMING_VIDEO
-          | :SOCIAL_ISSUES
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :SEXUALLY_SUGGESTIVE, 2
@@ -45,6 +25,4 @@ defmodule Google.Ads.Googleads.V4.Enums.ContentLabelTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

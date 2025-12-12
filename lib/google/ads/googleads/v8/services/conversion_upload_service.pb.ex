@@ -2,14 +2,7 @@ defmodule Google.Ads.Googleads.V8.Services.UploadClickConversionsRequest do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          customer_id: String.t(),
-          conversions: [Google.Ads.Googleads.V8.Services.ClickConversion.t()],
-          partial_failure: boolean,
-          validate_only: boolean
-        }
 
-  defstruct [:customer_id, :conversions, :partial_failure, :validate_only]
 
   field :customer_id, 1, optional: true, type: :string
   field :conversions, 2, repeated: true, type: Google.Ads.Googleads.V8.Services.ClickConversion
@@ -21,12 +14,7 @@ defmodule Google.Ads.Googleads.V8.Services.UploadClickConversionsResponse do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          partial_failure_error: Google.Rpc.Status.t() | nil,
-          results: [Google.Ads.Googleads.V8.Services.ClickConversionResult.t()]
-        }
 
-  defstruct [:partial_failure_error, :results]
 
   field :partial_failure_error, 1, optional: true, type: Google.Rpc.Status
   field :results, 2, repeated: true, type: Google.Ads.Googleads.V8.Services.ClickConversionResult
@@ -36,14 +24,7 @@ defmodule Google.Ads.Googleads.V8.Services.UploadCallConversionsRequest do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          customer_id: String.t(),
-          conversions: [Google.Ads.Googleads.V8.Services.CallConversion.t()],
-          partial_failure: boolean,
-          validate_only: boolean
-        }
 
-  defstruct [:customer_id, :conversions, :partial_failure, :validate_only]
 
   field :customer_id, 1, required: true, type: :string
   field :conversions, 2, repeated: true, type: Google.Ads.Googleads.V8.Services.CallConversion
@@ -55,12 +36,7 @@ defmodule Google.Ads.Googleads.V8.Services.UploadCallConversionsResponse do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          partial_failure_error: Google.Rpc.Status.t() | nil,
-          results: [Google.Ads.Googleads.V8.Services.CallConversionResult.t()]
-        }
 
-  defstruct [:partial_failure_error, :results]
 
   field :partial_failure_error, 1, optional: true, type: Google.Rpc.Status
   field :results, 2, repeated: true, type: Google.Ads.Googleads.V8.Services.CallConversionResult
@@ -70,30 +46,7 @@ defmodule Google.Ads.Googleads.V8.Services.ClickConversion do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          gclid: String.t(),
-          conversion_action: String.t(),
-          conversion_date_time: String.t(),
-          conversion_value: float | :infinity | :negative_infinity | :nan,
-          currency_code: String.t(),
-          order_id: String.t(),
-          external_attribution_data:
-            Google.Ads.Googleads.V8.Services.ExternalAttributionData.t() | nil,
-          custom_variables: [Google.Ads.Googleads.V8.Services.CustomVariable.t()],
-          cart_data: Google.Ads.Googleads.V8.Services.CartData.t() | nil
-        }
 
-  defstruct [
-    :gclid,
-    :conversion_action,
-    :conversion_date_time,
-    :conversion_value,
-    :currency_code,
-    :order_id,
-    :external_attribution_data,
-    :custom_variables,
-    :cart_data
-  ]
 
   field :gclid, 9, optional: true, type: :string
   field :conversion_action, 10, optional: true, type: :string
@@ -117,25 +70,7 @@ defmodule Google.Ads.Googleads.V8.Services.CallConversion do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          caller_id: String.t(),
-          call_start_date_time: String.t(),
-          conversion_action: String.t(),
-          conversion_date_time: String.t(),
-          conversion_value: float | :infinity | :negative_infinity | :nan,
-          currency_code: String.t(),
-          custom_variables: [Google.Ads.Googleads.V8.Services.CustomVariable.t()]
-        }
 
-  defstruct [
-    :caller_id,
-    :call_start_date_time,
-    :conversion_action,
-    :conversion_date_time,
-    :conversion_value,
-    :currency_code,
-    :custom_variables
-  ]
 
   field :caller_id, 7, optional: true, type: :string
   field :call_start_date_time, 8, optional: true, type: :string
@@ -153,12 +88,7 @@ defmodule Google.Ads.Googleads.V8.Services.ExternalAttributionData do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          external_attribution_credit: float | :infinity | :negative_infinity | :nan,
-          external_attribution_model: String.t()
-        }
 
-  defstruct [:external_attribution_credit, :external_attribution_model]
 
   field :external_attribution_credit, 3, optional: true, type: :double
   field :external_attribution_model, 4, optional: true, type: :string
@@ -168,13 +98,7 @@ defmodule Google.Ads.Googleads.V8.Services.ClickConversionResult do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          gclid: String.t(),
-          conversion_action: String.t(),
-          conversion_date_time: String.t()
-        }
 
-  defstruct [:gclid, :conversion_action, :conversion_date_time]
 
   field :gclid, 4, optional: true, type: :string
   field :conversion_action, 5, optional: true, type: :string
@@ -185,14 +109,7 @@ defmodule Google.Ads.Googleads.V8.Services.CallConversionResult do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          caller_id: String.t(),
-          call_start_date_time: String.t(),
-          conversion_action: String.t(),
-          conversion_date_time: String.t()
-        }
 
-  defstruct [:caller_id, :call_start_date_time, :conversion_action, :conversion_date_time]
 
   field :caller_id, 5, optional: true, type: :string
   field :call_start_date_time, 6, optional: true, type: :string
@@ -204,12 +121,7 @@ defmodule Google.Ads.Googleads.V8.Services.CustomVariable do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          conversion_custom_variable: String.t(),
-          value: String.t()
-        }
 
-  defstruct [:conversion_custom_variable, :value]
 
   field :conversion_custom_variable, 1, optional: true, type: :string
   field :value, 2, optional: true, type: :string
@@ -219,13 +131,7 @@ defmodule Google.Ads.Googleads.V8.Services.CartData.Item do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          product_id: String.t(),
-          quantity: integer,
-          unit_price: float | :infinity | :negative_infinity | :nan
-        }
 
-  defstruct [:product_id, :quantity, :unit_price]
 
   field :product_id, 1, optional: true, type: :string
   field :quantity, 2, optional: true, type: :int32
@@ -236,21 +142,7 @@ defmodule Google.Ads.Googleads.V8.Services.CartData do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          merchant_id: String.t(),
-          feed_country_code: String.t(),
-          feed_language_code: String.t(),
-          local_transaction_cost: float | :infinity | :negative_infinity | :nan,
-          items: [Google.Ads.Googleads.V8.Services.CartData.Item.t()]
-        }
 
-  defstruct [
-    :merchant_id,
-    :feed_country_code,
-    :feed_language_code,
-    :local_transaction_cost,
-    :items
-  ]
 
   field :merchant_id, 1, optional: true, type: :string
   field :feed_country_code, 2, optional: true, type: :string

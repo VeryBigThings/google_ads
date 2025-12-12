@@ -2,25 +2,6 @@ defmodule Google.Ads.Googleads.V4.Enums.RecommendationTypeEnum.RecommendationTyp
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :CAMPAIGN_BUDGET
-          | :KEYWORD
-          | :TEXT_AD
-          | :TARGET_CPA_OPT_IN
-          | :MAXIMIZE_CONVERSIONS_OPT_IN
-          | :ENHANCED_CPC_OPT_IN
-          | :SEARCH_PARTNERS_OPT_IN
-          | :MAXIMIZE_CLICKS_OPT_IN
-          | :OPTIMIZE_AD_ROTATION
-          | :CALLOUT_EXTENSION
-          | :SITELINK_EXTENSION
-          | :CALL_EXTENSION
-          | :KEYWORD_MATCH_TYPE
-          | :MOVE_UNUSED_BUDGET
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :CAMPAIGN_BUDGET, 2
@@ -43,6 +24,4 @@ defmodule Google.Ads.Googleads.V4.Enums.RecommendationTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

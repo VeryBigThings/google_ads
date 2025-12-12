@@ -1,8 +1,6 @@
 defmodule Google.Ads.Googleads.V8Availabilities.Resources.FeedAttributeOperation.Operator do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
-  @type t :: integer | :UNSPECIFIED | :UNKNOWN | :ADD
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -14,13 +12,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.Feed.PlacesLocationFee
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          http_method: String.t(),
-          http_request_url: String.t(),
-          http_authorization_header: String.t()
-        }
 
-  defstruct [:http_method, :http_request_url, :http_authorization_header]
 
   field :http_method, 4, type: :string
   field :http_request_url, 5, type: :string
@@ -31,24 +23,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.Feed.PlacesLocationFee
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          oauth_info:
-            Google.Ads.Googleads.V8Availabilities.Resources.Feed.PlacesLocationFeedData.OAuthInfo.t() | nil,
-          email_address: String.t(),
-          business_account_id: String.t(),
-          business_name_filter: String.t(),
-          category_filters: [String.t()],
-          label_filters: [String.t()]
-        }
 
-  defstruct [
-    :oauth_info,
-    :email_address,
-    :business_account_id,
-    :business_name_filter,
-    :category_filters,
-    :label_filters
-  ]
 
   field :oauth_info, 1,
     type: Google.Ads.Googleads.V8Availabilities.Resources.Feed.PlacesLocationFeedData.OAuthInfo
@@ -64,13 +39,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.Feed.AffiliateLocation
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          chain_ids: [integer],
-          relationship_type:
-            Google.Ads.Googleads.V8Availabilities.Enums.AffiliateLocationFeedRelationshipTypeEnum.AffiliateLocationFeedRelationshipType.t()
-        }
 
-  defstruct [:chain_ids, :relationship_type]
 
   field :chain_ids, 3, repeated: true, type: :int64
 
@@ -84,27 +53,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.Feed do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          system_feed_generation_data: {atom, any},
-          resource_name: String.t(),
-          id: integer,
-          name: String.t(),
-          attributes: [Google.Ads.Googleads.V8Availabilities.Resources.FeedAttribute.t()],
-          attribute_operations: [Google.Ads.Googleads.V8Availabilities.Resources.FeedAttributeOperation.t()],
-          origin: Google.Ads.Googleads.V8Availabilities.Enums.FeedOriginEnum.FeedOrigin.t(),
-          status: Google.Ads.Googleads.V8Availabilities.Enums.FeedStatusEnum.FeedStatus.t()
-        }
 
-  defstruct [
-    :system_feed_generation_data,
-    :resource_name,
-    :id,
-    :name,
-    :attributes,
-    :attribute_operations,
-    :origin,
-    :status
-  ]
 
   oneof :system_feed_generation_data, 0
 
@@ -133,14 +82,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.FeedAttribute do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          id: integer,
-          name: String.t(),
-          type: Google.Ads.Googleads.V8Availabilities.Enums.FeedAttributeTypeEnum.FeedAttributeType.t(),
-          is_part_of_key: boolean
-        }
 
-  defstruct [:id, :name, :type, :is_part_of_key]
 
   field :id, 5, type: :int64
   field :name, 6, type: :string
@@ -156,12 +98,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.FeedAttributeOperation
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          operator: Google.Ads.Googleads.V8Availabilities.Resources.FeedAttributeOperation.Operator.t(),
-          value: Google.Ads.Googleads.V8Availabilities.Resources.FeedAttribute.t() | nil
-        }
 
-  defstruct [:operator, :value]
 
   field :operator, 1,
     type: Google.Ads.Googleads.V8Availabilities.Resources.FeedAttributeOperation.Operator,

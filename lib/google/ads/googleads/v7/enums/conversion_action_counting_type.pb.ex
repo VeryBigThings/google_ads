@@ -2,8 +2,6 @@ defmodule Google.Ads.Googleads.V7.Enums.ConversionActionCountingTypeEnum.Convers
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t :: integer | :UNSPECIFIED | :UNKNOWN | :ONE_PER_CLICK | :MANY_PER_CLICK
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :ONE_PER_CLICK, 2
@@ -14,6 +12,4 @@ defmodule Google.Ads.Googleads.V7.Enums.ConversionActionCountingTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

@@ -2,15 +2,7 @@ defmodule Google.Ads.Googleads.V8.Common.AdAssetPolicySummary do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          policy_topic_entries: [Google.Ads.Googleads.V8.Common.PolicyTopicEntry.t()],
-          review_status:
-            Google.Ads.Googleads.V8.Enums.PolicyReviewStatusEnum.PolicyReviewStatus.t(),
-          approval_status:
-            Google.Ads.Googleads.V8.Enums.PolicyApprovalStatusEnum.PolicyApprovalStatus.t()
-        }
 
-  defstruct [:policy_topic_entries, :review_status, :approval_status]
 
   field :policy_topic_entries, 1,
     repeated: true,

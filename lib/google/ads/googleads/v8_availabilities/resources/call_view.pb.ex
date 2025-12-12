@@ -2,31 +2,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.CallView do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          caller_country_code: String.t(),
-          caller_area_code: String.t(),
-          call_duration_seconds: integer,
-          start_call_date_time: String.t(),
-          end_call_date_time: String.t(),
-          call_tracking_display_location:
-            Google.Ads.Googleads.V8Availabilities.Enums.CallTrackingDisplayLocationEnum.CallTrackingDisplayLocation.t(),
-          type: Google.Ads.Googleads.V8Availabilities.Enums.CallTypeEnum.CallType.t(),
-          call_status:
-            Google.Ads.Googleads.V8Availabilities.Enums.GoogleVoiceCallStatusEnum.GoogleVoiceCallStatus.t()
-        }
 
-  defstruct [
-    :resource_name,
-    :caller_country_code,
-    :caller_area_code,
-    :call_duration_seconds,
-    :start_call_date_time,
-    :end_call_date_time,
-    :call_tracking_display_location,
-    :type,
-    :call_status
-  ]
 
   field :resource_name, 1, type: :string
   field :caller_country_code, 2, type: :string

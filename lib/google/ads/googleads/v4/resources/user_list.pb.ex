@@ -2,53 +2,6 @@ defmodule Google.Ads.Googleads.V4.Resources.UserList do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          user_list: {atom, any},
-          resource_name: String.t(),
-          id: Google.Protobuf.Int64Value.t() | nil,
-          read_only: Google.Protobuf.BoolValue.t() | nil,
-          name: Google.Protobuf.StringValue.t() | nil,
-          description: Google.Protobuf.StringValue.t() | nil,
-          membership_status:
-            Google.Ads.Googleads.V4.Enums.UserListMembershipStatusEnum.UserListMembershipStatus.t(),
-          integration_code: Google.Protobuf.StringValue.t() | nil,
-          membership_life_span: Google.Protobuf.Int64Value.t() | nil,
-          size_for_display: Google.Protobuf.Int64Value.t() | nil,
-          size_range_for_display:
-            Google.Ads.Googleads.V4.Enums.UserListSizeRangeEnum.UserListSizeRange.t(),
-          size_for_search: Google.Protobuf.Int64Value.t() | nil,
-          size_range_for_search:
-            Google.Ads.Googleads.V4.Enums.UserListSizeRangeEnum.UserListSizeRange.t(),
-          type: Google.Ads.Googleads.V4.Enums.UserListTypeEnum.UserListType.t(),
-          closing_reason:
-            Google.Ads.Googleads.V4.Enums.UserListClosingReasonEnum.UserListClosingReason.t(),
-          access_reason: Google.Ads.Googleads.V4.Enums.AccessReasonEnum.AccessReason.t(),
-          account_user_list_status:
-            Google.Ads.Googleads.V4.Enums.UserListAccessStatusEnum.UserListAccessStatus.t(),
-          eligible_for_search: Google.Protobuf.BoolValue.t() | nil,
-          eligible_for_display: Google.Protobuf.BoolValue.t() | nil
-        }
-  defstruct [
-    :user_list,
-    :resource_name,
-    :id,
-    :read_only,
-    :name,
-    :description,
-    :membership_status,
-    :integration_code,
-    :membership_life_span,
-    :size_for_display,
-    :size_range_for_display,
-    :size_for_search,
-    :size_range_for_search,
-    :type,
-    :closing_reason,
-    :access_reason,
-    :account_user_list_status,
-    :eligible_for_search,
-    :eligible_for_display
-  ]
 
   oneof :user_list, 0
 

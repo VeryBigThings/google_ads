@@ -2,8 +2,6 @@ defmodule Google.Ads.Googleads.V4.Enums.HotelDateSelectionTypeEnum.HotelDateSele
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t :: integer | :UNSPECIFIED | :UNKNOWN | :DEFAULT_SELECTION | :USER_SELECTED
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :DEFAULT_SELECTION, 50
@@ -14,6 +12,4 @@ defmodule Google.Ads.Googleads.V4.Enums.HotelDateSelectionTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

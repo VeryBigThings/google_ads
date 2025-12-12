@@ -2,21 +2,6 @@ defmodule Google.Ads.Googleads.V8.Enums.ChangeStatusResourceTypeEnum.ChangeStatu
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :AD_GROUP
-          | :AD_GROUP_AD
-          | :AD_GROUP_CRITERION
-          | :CAMPAIGN
-          | :CAMPAIGN_CRITERION
-          | :FEED
-          | :FEED_ITEM
-          | :AD_GROUP_FEED
-          | :CAMPAIGN_FEED
-          | :AD_GROUP_BID_MODIFIER
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -45,7 +30,5 @@ end
 defmodule Google.Ads.Googleads.V8.Enums.ChangeStatusResourceTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

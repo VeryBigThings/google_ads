@@ -2,18 +2,6 @@ defmodule Google.Ads.Googleads.V8.Errors.KeywordPlanAdGroupKeywordErrorEnum.Keyw
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :INVALID_KEYWORD_MATCH_TYPE
-          | :DUPLICATE_KEYWORD
-          | :KEYWORD_TEXT_TOO_LONG
-          | :KEYWORD_HAS_INVALID_CHARS
-          | :KEYWORD_HAS_TOO_MANY_WORDS
-          | :INVALID_KEYWORD_TEXT
-          | :NEGATIVE_KEYWORD_HAS_CPC_BID
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -36,7 +24,5 @@ end
 defmodule Google.Ads.Googleads.V8.Errors.KeywordPlanAdGroupKeywordErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

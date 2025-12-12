@@ -2,29 +2,6 @@ defmodule Google.Ads.Googleads.V4.Resources.AccountBudget.PendingAccountBudgetPr
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          end_time: {atom, any},
-          spending_limit: {atom, any},
-          account_budget_proposal: Google.Protobuf.StringValue.t() | nil,
-          proposal_type:
-            Google.Ads.Googleads.V4.Enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType.t(),
-          name: Google.Protobuf.StringValue.t() | nil,
-          start_date_time: Google.Protobuf.StringValue.t() | nil,
-          purchase_order_number: Google.Protobuf.StringValue.t() | nil,
-          notes: Google.Protobuf.StringValue.t() | nil,
-          creation_date_time: Google.Protobuf.StringValue.t() | nil
-        }
-  defstruct [
-    :end_time,
-    :spending_limit,
-    :account_budget_proposal,
-    :proposal_type,
-    :name,
-    :start_date_time,
-    :purchase_order_number,
-    :notes,
-    :creation_date_time
-  ]
 
   oneof :end_time, 0
   oneof :spending_limit, 1
@@ -59,45 +36,6 @@ defmodule Google.Ads.Googleads.V4.Resources.AccountBudget do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          proposed_end_time: {atom, any},
-          approved_end_time: {atom, any},
-          proposed_spending_limit: {atom, any},
-          approved_spending_limit: {atom, any},
-          adjusted_spending_limit: {atom, any},
-          resource_name: String.t(),
-          id: Google.Protobuf.Int64Value.t() | nil,
-          billing_setup: Google.Protobuf.StringValue.t() | nil,
-          status: Google.Ads.Googleads.V4.Enums.AccountBudgetStatusEnum.AccountBudgetStatus.t(),
-          name: Google.Protobuf.StringValue.t() | nil,
-          proposed_start_date_time: Google.Protobuf.StringValue.t() | nil,
-          approved_start_date_time: Google.Protobuf.StringValue.t() | nil,
-          total_adjustments_micros: Google.Protobuf.Int64Value.t() | nil,
-          amount_served_micros: Google.Protobuf.Int64Value.t() | nil,
-          purchase_order_number: Google.Protobuf.StringValue.t() | nil,
-          notes: Google.Protobuf.StringValue.t() | nil,
-          pending_proposal:
-            Google.Ads.Googleads.V4.Resources.AccountBudget.PendingAccountBudgetProposal.t() | nil
-        }
-  defstruct [
-    :proposed_end_time,
-    :approved_end_time,
-    :proposed_spending_limit,
-    :approved_spending_limit,
-    :adjusted_spending_limit,
-    :resource_name,
-    :id,
-    :billing_setup,
-    :status,
-    :name,
-    :proposed_start_date_time,
-    :approved_start_date_time,
-    :total_adjustments_micros,
-    :amount_served_micros,
-    :purchase_order_number,
-    :notes,
-    :pending_proposal
-  ]
 
   oneof :proposed_end_time, 0
   oneof :approved_end_time, 1

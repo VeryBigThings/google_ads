@@ -2,27 +2,6 @@ defmodule Google.Ads.Googleads.V4.Resources.KeywordPlanCampaign do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          keyword_plan: Google.Protobuf.StringValue.t() | nil,
-          id: Google.Protobuf.Int64Value.t() | nil,
-          name: Google.Protobuf.StringValue.t() | nil,
-          language_constants: [Google.Protobuf.StringValue.t()],
-          keyword_plan_network:
-            Google.Ads.Googleads.V4.Enums.KeywordPlanNetworkEnum.KeywordPlanNetwork.t(),
-          cpc_bid_micros: Google.Protobuf.Int64Value.t() | nil,
-          geo_targets: [Google.Ads.Googleads.V4.Resources.KeywordPlanGeoTarget.t()]
-        }
-  defstruct [
-    :resource_name,
-    :keyword_plan,
-    :id,
-    :name,
-    :language_constants,
-    :keyword_plan_network,
-    :cpc_bid_micros,
-    :geo_targets
-  ]
 
   field :resource_name, 1, type: :string
   field :keyword_plan, 2, type: Google.Protobuf.StringValue
@@ -45,10 +24,6 @@ defmodule Google.Ads.Googleads.V4.Resources.KeywordPlanGeoTarget do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          geo_target_constant: Google.Protobuf.StringValue.t() | nil
-        }
-  defstruct [:geo_target_constant]
 
   field :geo_target_constant, 1, type: Google.Protobuf.StringValue
 end

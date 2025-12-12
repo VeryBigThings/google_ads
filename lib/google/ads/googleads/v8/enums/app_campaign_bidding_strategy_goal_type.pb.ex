@@ -2,15 +2,6 @@ defmodule Google.Ads.Googleads.V8.Enums.AppCampaignBiddingStrategyGoalTypeEnum.A
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :OPTIMIZE_INSTALLS_TARGET_INSTALL_COST
-          | :OPTIMIZE_IN_APP_CONVERSIONS_TARGET_INSTALL_COST
-          | :OPTIMIZE_IN_APP_CONVERSIONS_TARGET_CONVERSION_COST
-          | :OPTIMIZE_RETURN_ON_ADVERTISING_SPEND
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -27,7 +18,5 @@ end
 defmodule Google.Ads.Googleads.V8.Enums.AppCampaignBiddingStrategyGoalTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

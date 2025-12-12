@@ -2,11 +2,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Services.GetCustomerUserAccessIn
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t()
-        }
 
-  defstruct [:resource_name]
 
   field :resource_name, 1, type: :string
 end
@@ -15,13 +11,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateCustomerUserAcces
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          customer_id: String.t(),
-          operation:
-            Google.Ads.Googleads.V8Availabilities.Services.CustomerUserAccessInvitationOperation.t() | nil
-        }
 
-  defstruct [:customer_id, :operation]
 
   field :customer_id, 1, type: :string
 
@@ -33,11 +23,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Services.CustomerUserAccessInvit
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          operation: {atom, any}
-        }
 
-  defstruct [:operation]
 
   oneof :operation, 0
 
@@ -49,12 +35,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateCustomerUserAcces
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          result:
-            Google.Ads.Googleads.V8Availabilities.Services.MutateCustomerUserAccessInvitationResult.t() | nil
-        }
 
-  defstruct [:result]
 
   field :result, 1,
     type: Google.Ads.Googleads.V8Availabilities.Services.MutateCustomerUserAccessInvitationResult
@@ -64,11 +45,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Services.MutateCustomerUserAcces
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t()
-        }
 
-  defstruct [:resource_name]
 
   field :resource_name, 1, type: :string
 end

@@ -2,28 +2,6 @@ defmodule Google.Ads.Googleads.V4.Resources.Invoice.AccountBudgetSummary do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          customer: Google.Protobuf.StringValue.t() | nil,
-          customer_descriptive_name: Google.Protobuf.StringValue.t() | nil,
-          account_budget: Google.Protobuf.StringValue.t() | nil,
-          account_budget_name: Google.Protobuf.StringValue.t() | nil,
-          purchase_order_number: Google.Protobuf.StringValue.t() | nil,
-          subtotal_amount_micros: Google.Protobuf.Int64Value.t() | nil,
-          tax_amount_micros: Google.Protobuf.Int64Value.t() | nil,
-          total_amount_micros: Google.Protobuf.Int64Value.t() | nil,
-          billable_activity_date_range: Google.Ads.Googleads.V4.Common.DateRange.t() | nil
-        }
-  defstruct [
-    :customer,
-    :customer_descriptive_name,
-    :account_budget,
-    :account_budget_name,
-    :purchase_order_number,
-    :subtotal_amount_micros,
-    :tax_amount_micros,
-    :total_amount_micros,
-    :billable_activity_date_range
-  ]
 
   field :customer, 1, type: Google.Protobuf.StringValue
   field :customer_descriptive_name, 2, type: Google.Protobuf.StringValue
@@ -40,48 +18,6 @@ defmodule Google.Ads.Googleads.V4.Resources.Invoice do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          id: Google.Protobuf.StringValue.t() | nil,
-          type: Google.Ads.Googleads.V4.Enums.InvoiceTypeEnum.InvoiceType.t(),
-          billing_setup: Google.Protobuf.StringValue.t() | nil,
-          payments_account_id: Google.Protobuf.StringValue.t() | nil,
-          payments_profile_id: Google.Protobuf.StringValue.t() | nil,
-          issue_date: Google.Protobuf.StringValue.t() | nil,
-          due_date: Google.Protobuf.StringValue.t() | nil,
-          service_date_range: Google.Ads.Googleads.V4.Common.DateRange.t() | nil,
-          currency_code: Google.Protobuf.StringValue.t() | nil,
-          invoice_level_adjustments_micros: Google.Protobuf.Int64Value.t() | nil,
-          subtotal_amount_micros: Google.Protobuf.Int64Value.t() | nil,
-          tax_amount_micros: Google.Protobuf.Int64Value.t() | nil,
-          total_amount_micros: Google.Protobuf.Int64Value.t() | nil,
-          corrected_invoice: Google.Protobuf.StringValue.t() | nil,
-          replaced_invoices: [Google.Protobuf.StringValue.t()],
-          pdf_url: Google.Protobuf.StringValue.t() | nil,
-          account_budget_summaries: [
-            Google.Ads.Googleads.V4.Resources.Invoice.AccountBudgetSummary.t()
-          ]
-        }
-  defstruct [
-    :resource_name,
-    :id,
-    :type,
-    :billing_setup,
-    :payments_account_id,
-    :payments_profile_id,
-    :issue_date,
-    :due_date,
-    :service_date_range,
-    :currency_code,
-    :invoice_level_adjustments_micros,
-    :subtotal_amount_micros,
-    :tax_amount_micros,
-    :total_amount_micros,
-    :corrected_invoice,
-    :replaced_invoices,
-    :pdf_url,
-    :account_budget_summaries
-  ]
 
   field :resource_name, 1, type: :string
   field :id, 2, type: Google.Protobuf.StringValue

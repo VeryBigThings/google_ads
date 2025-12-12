@@ -2,16 +2,6 @@ defmodule Google.Ads.Googleads.V7.Enums.AdServingOptimizationStatusEnum.AdServin
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :OPTIMIZE
-          | :CONVERSION_OPTIMIZE
-          | :ROTATE
-          | :ROTATE_INDEFINITELY
-          | :UNAVAILABLE
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :OPTIMIZE, 2
@@ -25,6 +15,4 @@ defmodule Google.Ads.Googleads.V7.Enums.AdServingOptimizationStatusEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

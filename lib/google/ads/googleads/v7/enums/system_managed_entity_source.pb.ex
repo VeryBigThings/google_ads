@@ -2,8 +2,6 @@ defmodule Google.Ads.Googleads.V7.Enums.SystemManagedResourceSourceEnum.SystemMa
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t :: integer | :UNSPECIFIED | :UNKNOWN | :AD_VARIATIONS
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :AD_VARIATIONS, 2
@@ -13,6 +11,4 @@ defmodule Google.Ads.Googleads.V7.Enums.SystemManagedResourceSourceEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

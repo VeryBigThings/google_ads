@@ -2,27 +2,6 @@ defmodule Google.Ads.Googleads.V7.Errors.AssetErrorEnum.AssetError do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :CUSTOMER_NOT_ON_ALLOWLIST_FOR_ASSET_TYPE
-          | :DUPLICATE_ASSET
-          | :DUPLICATE_ASSET_NAME
-          | :ASSET_DATA_IS_MISSING
-          | :CANNOT_MODIFY_ASSET_NAME
-          | :FIELD_INCOMPATIBLE_WITH_ASSET_TYPE
-          | :INVALID_CALL_TO_ACTION_TEXT
-          | :LEAD_FORM_INVALID_FIELDS_COMBINATION
-          | :LEAD_FORM_MISSING_AGREEMENT
-          | :INVALID_ASSET_STATUS
-          | :FIELD_CANNOT_BE_MODIFIED_FOR_ASSET_TYPE
-          | :SCHEDULES_CANNOT_OVERLAP
-          | :PROMOTION_CANNOT_SET_PERCENT_OFF_AND_MONEY_AMOUNT_OFF
-          | :PROMOTION_CANNOT_SET_PROMOTION_CODE_AND_ORDERS_OVER_AMOUNT
-          | :TOO_MANY_DECIMAL_PLACES_SPECIFIED
-          | :DUPLICATE_ASSETS_WITH_DIFFERENT_FIELD_VALUE
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :CUSTOMER_NOT_ON_ALLOWLIST_FOR_ASSET_TYPE, 13
@@ -47,6 +26,4 @@ defmodule Google.Ads.Googleads.V7.Errors.AssetErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

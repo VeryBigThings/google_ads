@@ -2,27 +2,6 @@ defmodule Google.Ads.Googleads.V8Availabilities.Enums.AdvertisingChannelSubTypeE
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :SEARCH_MOBILE_APP
-          | :DISPLAY_MOBILE_APP
-          | :SEARCH_EXPRESS
-          | :DISPLAY_EXPRESS
-          | :SHOPPING_SMART_ADS
-          | :DISPLAY_GMAIL_AD
-          | :DISPLAY_SMART_CAMPAIGN
-          | :VIDEO_OUTSTREAM
-          | :VIDEO_ACTION
-          | :VIDEO_NON_SKIPPABLE
-          | :APP_CAMPAIGN
-          | :APP_CAMPAIGN_FOR_ENGAGEMENT
-          | :LOCAL_CAMPAIGN
-          | :SHOPPING_COMPARISON_LISTING_ADS
-          | :SMART_CAMPAIGN
-          | :VIDEO_SEQUENCE
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -63,7 +42,5 @@ end
 defmodule Google.Ads.Googleads.V8Availabilities.Enums.AdvertisingChannelSubTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

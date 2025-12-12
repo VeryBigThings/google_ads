@@ -2,11 +2,7 @@ defmodule Google.Ads.Googleads.V8.Services.GetFeedItemTargetRequest do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          resource_name: String.t()
-        }
 
-  defstruct [:resource_name]
 
   field :resource_name, 1, required: true, type: :string
 end
@@ -15,16 +11,7 @@ defmodule Google.Ads.Googleads.V8.Services.MutateFeedItemTargetsRequest do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          customer_id: String.t(),
-          operations: [Google.Ads.Googleads.V8.Services.FeedItemTargetOperation.t()],
-          partial_failure: boolean,
-          response_content_type:
-            Google.Ads.Googleads.V8.Enums.ResponseContentTypeEnum.ResponseContentType.t(),
-          validate_only: boolean
-        }
 
-  defstruct [:customer_id, :operations, :partial_failure, :response_content_type, :validate_only]
 
   field :customer_id, 1, required: true, type: :string
 
@@ -46,11 +33,7 @@ defmodule Google.Ads.Googleads.V8.Services.FeedItemTargetOperation do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          operation: {atom, any}
-        }
 
-  defstruct [:operation]
 
   oneof :operation, 0
 
@@ -66,12 +49,7 @@ defmodule Google.Ads.Googleads.V8.Services.MutateFeedItemTargetsResponse do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          partial_failure_error: Google.Rpc.Status.t() | nil,
-          results: [Google.Ads.Googleads.V8.Services.MutateFeedItemTargetResult.t()]
-        }
 
-  defstruct [:partial_failure_error, :results]
 
   field :partial_failure_error, 3, optional: true, type: Google.Rpc.Status
 
@@ -84,12 +62,7 @@ defmodule Google.Ads.Googleads.V8.Services.MutateFeedItemTargetResult do
   @moduledoc false
   use Protobuf, syntax: :proto2
 
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          feed_item_target: Google.Ads.Googleads.V8.Resources.FeedItemTarget.t() | nil
-        }
 
-  defstruct [:resource_name, :feed_item_target]
 
   field :resource_name, 1, optional: true, type: :string
 

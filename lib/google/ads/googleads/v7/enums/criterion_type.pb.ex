@@ -2,43 +2,6 @@ defmodule Google.Ads.Googleads.V7.Enums.CriterionTypeEnum.CriterionType do
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :KEYWORD
-          | :PLACEMENT
-          | :MOBILE_APP_CATEGORY
-          | :MOBILE_APPLICATION
-          | :DEVICE
-          | :LOCATION
-          | :LISTING_GROUP
-          | :AD_SCHEDULE
-          | :AGE_RANGE
-          | :GENDER
-          | :INCOME_RANGE
-          | :PARENTAL_STATUS
-          | :YOUTUBE_VIDEO
-          | :YOUTUBE_CHANNEL
-          | :USER_LIST
-          | :PROXIMITY
-          | :TOPIC
-          | :LISTING_SCOPE
-          | :LANGUAGE
-          | :IP_BLOCK
-          | :CONTENT_LABEL
-          | :CARRIER
-          | :USER_INTEREST
-          | :WEBPAGE
-          | :OPERATING_SYSTEM_VERSION
-          | :APP_PAYMENT_MODEL
-          | :MOBILE_DEVICE
-          | :CUSTOM_AFFINITY
-          | :CUSTOM_INTENT
-          | :LOCATION_GROUP
-          | :CUSTOM_AUDIENCE
-          | :COMBINED_AUDIENCE
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :KEYWORD, 2
@@ -79,6 +42,4 @@ defmodule Google.Ads.Googleads.V7.Enums.CriterionTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

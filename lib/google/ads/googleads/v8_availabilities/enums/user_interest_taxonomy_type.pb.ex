@@ -2,16 +2,6 @@ defmodule Google.Ads.Googleads.V8Availabilities.Enums.UserInterestTaxonomyTypeEn
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :AFFINITY
-          | :IN_MARKET
-          | :MOBILE_APP_INSTALL_USER
-          | :VERTICAL_GEO
-          | :NEW_SMART_PHONE_USER
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -30,7 +20,5 @@ end
 defmodule Google.Ads.Googleads.V8Availabilities.Enums.UserInterestTaxonomyTypeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

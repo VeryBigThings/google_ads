@@ -2,19 +2,6 @@ defmodule Google.Ads.Googleads.V8.Enums.LocationPlaceholderFieldEnum.LocationPla
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :BUSINESS_NAME
-          | :ADDRESS_LINE_1
-          | :ADDRESS_LINE_2
-          | :CITY
-          | :PROVINCE
-          | :POSTAL_CODE
-          | :COUNTRY_CODE
-          | :PHONE_NUMBER
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -39,7 +26,5 @@ end
 defmodule Google.Ads.Googleads.V8.Enums.LocationPlaceholderFieldEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

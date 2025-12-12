@@ -2,29 +2,6 @@ defmodule Google.Ads.Googleads.V8.Enums.FeedItemQualityDisapprovalReasonEnum.Fee
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :PRICE_TABLE_REPETITIVE_HEADERS
-          | :PRICE_TABLE_REPETITIVE_DESCRIPTION
-          | :PRICE_TABLE_INCONSISTENT_ROWS
-          | :PRICE_DESCRIPTION_HAS_PRICE_QUALIFIERS
-          | :PRICE_UNSUPPORTED_LANGUAGE
-          | :PRICE_TABLE_ROW_HEADER_TABLE_TYPE_MISMATCH
-          | :PRICE_TABLE_ROW_HEADER_HAS_PROMOTIONAL_TEXT
-          | :PRICE_TABLE_ROW_DESCRIPTION_NOT_RELEVANT
-          | :PRICE_TABLE_ROW_DESCRIPTION_HAS_PROMOTIONAL_TEXT
-          | :PRICE_TABLE_ROW_HEADER_DESCRIPTION_REPETITIVE
-          | :PRICE_TABLE_ROW_UNRATEABLE
-          | :PRICE_TABLE_ROW_PRICE_INVALID
-          | :PRICE_TABLE_ROW_URL_INVALID
-          | :PRICE_HEADER_OR_DESCRIPTION_HAS_PRICE
-          | :STRUCTURED_SNIPPETS_HEADER_POLICY_VIOLATED
-          | :STRUCTURED_SNIPPETS_REPEATED_VALUES
-          | :STRUCTURED_SNIPPETS_EDITORIAL_GUIDELINES
-          | :STRUCTURED_SNIPPETS_HAS_PROMOTIONAL_TEXT
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -69,7 +46,5 @@ end
 defmodule Google.Ads.Googleads.V8.Enums.FeedItemQualityDisapprovalReasonEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

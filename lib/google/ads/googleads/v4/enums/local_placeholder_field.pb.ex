@@ -2,30 +2,6 @@ defmodule Google.Ads.Googleads.V4.Enums.LocalPlaceholderFieldEnum.LocalPlacehold
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :DEAL_ID
-          | :DEAL_NAME
-          | :SUBTITLE
-          | :DESCRIPTION
-          | :PRICE
-          | :FORMATTED_PRICE
-          | :SALE_PRICE
-          | :FORMATTED_SALE_PRICE
-          | :IMAGE_URL
-          | :ADDRESS
-          | :CATEGORY
-          | :CONTEXTUAL_KEYWORDS
-          | :FINAL_URLS
-          | :FINAL_MOBILE_URLS
-          | :TRACKING_URL
-          | :ANDROID_APP_LINK
-          | :SIMILAR_DEAL_IDS
-          | :IOS_APP_LINK
-          | :IOS_APP_STORE_ID
-
   field :UNSPECIFIED, 0
   field :UNKNOWN, 1
   field :DEAL_ID, 2
@@ -53,6 +29,4 @@ defmodule Google.Ads.Googleads.V4.Enums.LocalPlaceholderFieldEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{}
-  defstruct []
 end

@@ -2,46 +2,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Resources.CampaignBudget do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          id: integer,
-          name: String.t(),
-          amount_micros: integer,
-          total_amount_micros: integer,
-          status: Google.Ads.Googleads.V8Availabilities.Enums.BudgetStatusEnum.BudgetStatus.t(),
-          delivery_method:
-            Google.Ads.Googleads.V8Availabilities.Enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod.t(),
-          explicitly_shared: boolean,
-          reference_count: integer,
-          has_recommended_budget: boolean,
-          recommended_budget_amount_micros: integer,
-          period: Google.Ads.Googleads.V8Availabilities.Enums.BudgetPeriodEnum.BudgetPeriod.t(),
-          recommended_budget_estimated_change_weekly_clicks: integer,
-          recommended_budget_estimated_change_weekly_cost_micros: integer,
-          recommended_budget_estimated_change_weekly_interactions: integer,
-          recommended_budget_estimated_change_weekly_views: integer,
-          type: Google.Ads.Googleads.V8Availabilities.Enums.BudgetTypeEnum.BudgetType.t()
-        }
 
-  defstruct [
-    :resource_name,
-    :id,
-    :name,
-    :amount_micros,
-    :total_amount_micros,
-    :status,
-    :delivery_method,
-    :explicitly_shared,
-    :reference_count,
-    :has_recommended_budget,
-    :recommended_budget_amount_micros,
-    :period,
-    :recommended_budget_estimated_change_weekly_clicks,
-    :recommended_budget_estimated_change_weekly_cost_micros,
-    :recommended_budget_estimated_change_weekly_interactions,
-    :recommended_budget_estimated_change_weekly_views,
-    :type
-  ]
 
   field :resource_name, 1, type: :string
   field :id, 19, type: :int64

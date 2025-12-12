@@ -2,13 +2,6 @@ defmodule Google.Ads.Googleads.V7.Resources.TopicConstant do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          resource_name: String.t(),
-          id: integer,
-          topic_constant_parent: String.t(),
-          path: [String.t()]
-        }
-  defstruct [:resource_name, :id, :topic_constant_parent, :path]
 
   field :resource_name, 1, type: :string
   field :id, 5, type: :int64

@@ -2,14 +2,6 @@ defmodule Google.Ads.Googleads.V8.Enums.CriterionCategoryChannelAvailabilityMode
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :ALL_CHANNELS
-          | :CHANNEL_TYPE_AND_ALL_SUBTYPES
-          | :CHANNEL_TYPE_AND_SUBSET_SUBTYPES
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -24,7 +16,5 @@ end
 defmodule Google.Ads.Googleads.V8.Enums.CriterionCategoryChannelAvailabilityModeEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

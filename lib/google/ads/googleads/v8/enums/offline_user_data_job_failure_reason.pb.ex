@@ -2,13 +2,6 @@ defmodule Google.Ads.Googleads.V8.Enums.OfflineUserDataJobFailureReasonEnum.Offl
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :INSUFFICIENT_MATCHED_TRANSACTIONS
-          | :INSUFFICIENT_TRANSACTIONS
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -21,7 +14,5 @@ end
 defmodule Google.Ads.Googleads.V8.Enums.OfflineUserDataJobFailureReasonEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

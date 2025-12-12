@@ -2,14 +2,6 @@ defmodule Google.Ads.Googleads.V8.Errors.YoutubeVideoRegistrationErrorEnum.Youtu
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :VIDEO_NOT_FOUND
-          | :VIDEO_NOT_ACCESSIBLE
-          | :VIDEO_NOT_ELIGIBLE
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -24,7 +16,5 @@ end
 defmodule Google.Ads.Googleads.V8.Errors.YoutubeVideoRegistrationErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

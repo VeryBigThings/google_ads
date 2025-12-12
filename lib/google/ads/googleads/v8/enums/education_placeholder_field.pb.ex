@@ -2,28 +2,6 @@ defmodule Google.Ads.Googleads.V8.Enums.EducationPlaceholderFieldEnum.EducationP
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :PROGRAM_ID
-          | :LOCATION_ID
-          | :PROGRAM_NAME
-          | :AREA_OF_STUDY
-          | :PROGRAM_DESCRIPTION
-          | :SCHOOL_NAME
-          | :ADDRESS
-          | :THUMBNAIL_IMAGE_URL
-          | :ALTERNATIVE_THUMBNAIL_IMAGE_URL
-          | :FINAL_URLS
-          | :FINAL_MOBILE_URLS
-          | :TRACKING_URL
-          | :CONTEXTUAL_KEYWORDS
-          | :ANDROID_APP_LINK
-          | :SIMILAR_PROGRAM_IDS
-          | :IOS_APP_LINK
-          | :IOS_APP_STORE_ID
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -66,7 +44,5 @@ end
 defmodule Google.Ads.Googleads.V8.Enums.EducationPlaceholderFieldEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

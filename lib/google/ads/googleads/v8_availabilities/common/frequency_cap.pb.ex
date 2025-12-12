@@ -2,12 +2,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Common.FrequencyCapEntry do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          key: Google.Ads.Googleads.V8Availabilities.Common.FrequencyCapKey.t() | nil,
-          cap: integer
-        }
 
-  defstruct [:key, :cap]
 
   field :key, 1, type: Google.Ads.Googleads.V8Availabilities.Common.FrequencyCapKey
   field :cap, 3, type: :int32
@@ -17,16 +12,7 @@ defmodule Google.Ads.Googleads.V8Availabilities.Common.FrequencyCapKey do
   @moduledoc false
   use Protobuf, syntax: :proto3
 
-  @type t :: %__MODULE__{
-          level: Google.Ads.Googleads.V8Availabilities.Enums.FrequencyCapLevelEnum.FrequencyCapLevel.t(),
-          event_type:
-            Google.Ads.Googleads.V8Availabilities.Enums.FrequencyCapEventTypeEnum.FrequencyCapEventType.t(),
-          time_unit:
-            Google.Ads.Googleads.V8Availabilities.Enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit.t(),
-          time_length: integer
-        }
 
-  defstruct [:level, :event_type, :time_unit, :time_length]
 
   field :level, 1,
     type: Google.Ads.Googleads.V8Availabilities.Enums.FrequencyCapLevelEnum.FrequencyCapLevel,

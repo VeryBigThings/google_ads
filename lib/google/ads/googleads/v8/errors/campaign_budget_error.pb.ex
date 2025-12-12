@@ -2,27 +2,6 @@ defmodule Google.Ads.Googleads.V8.Errors.CampaignBudgetErrorEnum.CampaignBudgetE
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto2
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :CAMPAIGN_BUDGET_CANNOT_BE_SHARED
-          | :CAMPAIGN_BUDGET_REMOVED
-          | :CAMPAIGN_BUDGET_IN_USE
-          | :CAMPAIGN_BUDGET_PERIOD_NOT_AVAILABLE
-          | :CANNOT_MODIFY_FIELD_OF_IMPLICITLY_SHARED_CAMPAIGN_BUDGET
-          | :CANNOT_UPDATE_CAMPAIGN_BUDGET_TO_IMPLICITLY_SHARED
-          | :CANNOT_UPDATE_CAMPAIGN_BUDGET_TO_EXPLICITLY_SHARED_WITHOUT_NAME
-          | :CANNOT_UPDATE_CAMPAIGN_BUDGET_TO_EXPLICITLY_SHARED
-          | :CANNOT_USE_IMPLICITLY_SHARED_CAMPAIGN_BUDGET_WITH_MULTIPLE_CAMPAIGNS
-          | :DUPLICATE_NAME
-          | :MONEY_AMOUNT_IN_WRONG_CURRENCY
-          | :MONEY_AMOUNT_LESS_THAN_CURRENCY_MINIMUM_CPC
-          | :MONEY_AMOUNT_TOO_LARGE
-          | :NEGATIVE_MONEY_AMOUNT
-          | :NON_MULTIPLE_OF_MINIMUM_CURRENCY_UNIT
-          | :TOTAL_BUDGET_AMOUNT_MUST_BE_UNSET_FOR_BUDGET_PERIOD_DAILY
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -63,7 +42,5 @@ end
 defmodule Google.Ads.Googleads.V8.Errors.CampaignBudgetErrorEnum do
   @moduledoc false
   use Protobuf, syntax: :proto2
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end

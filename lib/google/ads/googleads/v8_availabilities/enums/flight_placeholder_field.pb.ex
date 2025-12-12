@@ -2,28 +2,6 @@ defmodule Google.Ads.Googleads.V8Availabilities.Enums.FlightPlaceholderFieldEnum
   @moduledoc false
   use Protobuf, enum: true, syntax: :proto3
 
-  @type t ::
-          integer
-          | :UNSPECIFIED
-          | :UNKNOWN
-          | :DESTINATION_ID
-          | :ORIGIN_ID
-          | :FLIGHT_DESCRIPTION
-          | :ORIGIN_NAME
-          | :DESTINATION_NAME
-          | :FLIGHT_PRICE
-          | :FORMATTED_PRICE
-          | :FLIGHT_SALE_PRICE
-          | :FORMATTED_SALE_PRICE
-          | :IMAGE_URL
-          | :FINAL_URLS
-          | :FINAL_MOBILE_URLS
-          | :TRACKING_URL
-          | :ANDROID_APP_LINK
-          | :SIMILAR_DESTINATION_IDS
-          | :IOS_APP_LINK
-          | :IOS_APP_STORE_ID
-
   field :UNSPECIFIED, 0
 
   field :UNKNOWN, 1
@@ -66,7 +44,5 @@ end
 defmodule Google.Ads.Googleads.V8Availabilities.Enums.FlightPlaceholderFieldEnum do
   @moduledoc false
   use Protobuf, syntax: :proto3
-  @type t :: %__MODULE__{}
 
-  defstruct []
 end
