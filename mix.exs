@@ -21,7 +21,7 @@ defmodule GoogleAds.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:protobuf, "~> 0.7.1"},
+      {:protobuf, "~> 0.10.0"},
       {:google_protos, "~> 0.1"},
       {:cowboy,
        git: "https://github.com/elixir-grpc/cowboy.git", tag: "grpc-2.6.3", override: true},
